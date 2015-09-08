@@ -119,29 +119,20 @@ documents:
   - Integrate into the CI Server
   - Run the container
 ---
-topic: Testing
+topic: Sandboxes
 documents:
-- title: Manual Browser Testing
+- title: Browser Sandbox
   sections: []
-- title: Selenium Testing
+- title: SQL Sandbox
+  sections: []
+- title: Selenium Sandbox
   sections:
   - Debugging Tests
   - Integrating Turbo with an Existing Grid
   - Testing Internal Sites
   - Testing Internet Explorer
+  - Test Reports
   - Common Issues and Troubleshooting
-- title: SQL Sandbox
-  sections: []
-- title: JS Unit Testing
-  sections:
-  - Getting Started - Karma
-  - Getting Started - Mocha/Mochify
-- title: Test Reports
-  sections: []
-- title: Testing with CI
-  sections: []
-- title: Nightly Builds
-  sections: []
 ---
 topic: Deploying
 documents:

@@ -14,8 +14,8 @@ Things we love to see:
 
 - Additions, fixes, or improvements to our tutorials and documentation.
 - Build scripts, recipes, and walkthroughs for new images and containers.
-- New projects built with Turbo's Windows containers in mind. Like [PowerSpoon](https://github.com/turboapps/powerspoon), a community-made PowerShell module for our CLI!
+- New projects built with Turbo's Windows containers in mind.
 
-If you have an idea for an improvement but lack the time to make a pull request, ping us on our [user group](https://groups.google.com/forum/#!forum/turbo-users), tweet [@turboapps](http://twitter.com/turboapps), or email us at [support@turbo.net](mailto:support@turbo.net).
+If you have an idea for an improvement but lack the time to make a pull request, tweet [@turboapps](http://twitter.com/turboapps), or email us at [support@turbo.net](mailto:support@turbo.net).
 
 If you want to join the Turbo team, check out our [careers page](/careers)! We're hiring ;)
