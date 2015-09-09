@@ -1,4 +1,4 @@
-## Reporting
+## Test Reports
 
 Though all tests execute locally in containers, test reports and screenshots are logged and saved on your Turbo.net account for easy sharing and access.
 
