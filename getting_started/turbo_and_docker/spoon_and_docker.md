@@ -40,7 +40,7 @@ In this code, the contents of the `git` container will *not* be present in the o
 
 #### Multi-base image support
 
-Layering can be used in the `turbo.me` automated build script to build containers on top of *multiple* base images. For example, in SpoonScript the following is valid:
+Layering can be used in the `turbo.me` automated build script to build containers on top of *multiple* base images. For example, in TurboScript the following is valid:
 
     layer java, mongodb, redis
 
@@ -95,7 +95,7 @@ app virtualization engine, which operates on top of (rather than within) the OS 
 
 ### Toolchain
 
-Like Docker, Turbo provides command-line interfaces (`turbo`) and a scripting language (**SpoonScript**) for automating build processes. Turbo also provides a number of rich GUI- and web-based tools and services for building, configuring, and managing virtual environments.
+Like Docker, Turbo provides command-line interfaces (`turbo`) and a scripting language (**TurboScript**) for automating build processes. Turbo also provides a number of rich GUI- and web-based tools and services for building, configuring, and managing virtual environments.
 
 **[Spoon Studio](/docs/building/working-with-turbo-studio)** provides a visual design environment and easy-to-use wizards for creating images. Spoon Studio also includes a [Desktop Scan](/docs/building/working-with-turbo-studio#desktop-scan) tool that automatically detects and captures settings for any applications that are locally installed on a desktop.
 

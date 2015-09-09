@@ -24,7 +24,7 @@ The Turbo containerization system includes:
 
 * **Turbo Command Processor:** The `turbo` console command provides a command-line interface for standard container
   operations such as creating, stopping, committing, and pushing containers.
-* **SpoonScript:** SpoonScript is a scripting language that supports automation of container creation and maintenance tasks. SpoonScript
+* **TurboScript:** TurboScript is a scripting language that supports automation of container creation and maintenance tasks. TurboScript
   supports all command-line options plus higher order primitives such as **using**, the ability to modify 
 * **SpoonDB:** SpoonDB is a deduplicated storage system optimized to support efficient storage, versioning, rollback, and 
   delta-based transactioning of container and image state. Turbo uses a novel differential synchronization protocol that supports rapid synchronization over wide area networks such as the Internet.

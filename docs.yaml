@@ -14,7 +14,7 @@ documents:
   - Container Skinning
   - Share Development Environments
   - Network Virtualization
-  - SpoonScript Automation
+  - TurboScript Automation
   - Migrate Containers Between Devices
   - Zero Footprint Testing
   - Import ThinApp Packages
@@ -115,7 +115,7 @@ documents:
   - Building from the Command Line
 - title: Continuous Integration
   sections:
-  - Create SpoonScript
+  - Create TurboScript
   - Integrate into the CI Server
   - Run the container
 ---
@@ -192,7 +192,7 @@ documents:
   - version
   - vm
   - vms
-- title: SpoonScript
+- title: TurboScript
   sections:
   - batch
   - cmd

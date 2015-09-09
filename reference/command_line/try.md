@@ -184,7 +184,7 @@ Container links also work between containers running in different virtual networ
 
 #### Using Startup Triggers
 
-Images can be created with SpoonScript that have multiple startup files. Collections of startup files can be linked together by a trigger name and executed together.
+Images can be created with TurboScript that have multiple startup files. Collections of startup files can be linked together by a trigger name and executed together.
 
 ```
 # in turbo.me file to create "test-trigger" image...

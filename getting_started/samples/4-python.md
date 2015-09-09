@@ -1,12 +1,12 @@
 ### Python
 
-In this tutorial, we'll walk you through how to create and containerize a basic Python web application. We'll also show you how to automate the creation of new images of your web application using **SpoonScripts** and walk you through some of the basics of the Turbo containerization network stack. 
+In this tutorial, we'll walk you through how to create and containerize a basic Python web application. We'll also show you how to automate the creation of new images of your web application using **TurboScripts** and walk you through some of the basics of the Turbo containerization network stack.
 
 **Topics Covered**
 
 - The basic container/image creation path
 - Copying local files into a container
-- Automating image creation with SpoonScript
+- Automating image creation with TurboScript
 - The Turbo network stack
 
 #### Create the App

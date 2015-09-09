@@ -24,7 +24,7 @@ foo="bar"
 path="c:\path to executables;C:\WINDOWS\system32;C:\WINDOWS"
 ```
 
-Variables can be reset within the same SpoonScript by repeating the `env` command for the same variable name. The last value will be stored in the image. To remove the variable from the image, use the following command:
+Variables can be reset within the same TurboScript by repeating the `env` command for the same variable name. The last value will be stored in the image. To remove the variable from the image, use the following command:
 
 ```
 env foo=
