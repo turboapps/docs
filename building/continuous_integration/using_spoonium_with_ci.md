@@ -7,11 +7,11 @@ Existing CI servers may have many varying libraries, runtimes, custom settings, 
 
 With Turbo no installed dependencies are required on the CI server. All dependencies are built into containers providing consistent environments and a dependency-free CI server.  This eliminates the possibility of dependency collision and makes automated build configuration very simple.
 
-The basic steps for integrating Turbo into a CI server are to create a SpoonScript, integrate it into an automated build on a CI server, and finally run and test the container.
+The basic steps for integrating Turbo into a CI server are to create a TurboScript, integrate it into an automated build on a CI server, and finally run and test the container.
 
-### Create SpoonScript
+### Create TurboScript
 
-The SpoonScript contains all the steps necessary to build the container.
+The TurboScript contains all the steps necessary to build the container.
 
 ```
 # Creates a new container from the specified images
@@ -25,11 +25,11 @@ CMD git clone https://github.com/project/repo c:\root
 CMD cd c:\root\server & npm install
 ```
 
-Save your script as a `.me` file. See the [SpoonScript reference](/docs/reference/spoonscript) for more information on SpoonScript script instructions.
+Save your script as a `.me` file. See the [TurboScript reference](/docs/reference/turboscript) for more information on TurboScript script instructions.
 
 ### Integrate into the CI server
 
-The next step is to configure an automated build on the CI server that will execute the SpoonScript and create an image.  You'll need to configure the necessary triggers, schedules, notifications, etc., which will vary between CI servers.
+The next step is to configure an automated build on the CI server that will execute the TurboScript and create an image.  You'll need to configure the necessary triggers, schedules, notifications, etc., which will vary between CI servers.
 
 Now add the follow commands to your automated CI build script:
 
@@ -37,7 +37,7 @@ Now add the follow commands to your automated CI build script:
 # Log in if images from a hub repository are specified
 turbo login <username> <password>
 
-# Execute the SpoonScript and build a new image
+# Execute the TurboScript and build a new image
 turbo build -n=<name> C:\path\to\turbo.me
 
 # Export the image to a location on the host system

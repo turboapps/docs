@@ -1,10 +1,10 @@
-## SpoonScript
+## TurboScript
 
-Turbo command processor can act as an automated builder by reading instructions from a `.me` file to create a new image. Turbo Shell can act as an interactive interpreter of SpoonScript.
+Turbo command processor can act as an automated builder by reading instructions from a `.me` file to create a new image. Turbo Shell can act as an interactive interpreter of TurboScript.
 
 A `.me` script is a text file containing a set of **instructions** that the Turbo command processor or the Turbo Shell follows to create a container. In Turbo command processor, at the end of the script, a new image is created from the container and the container is deleted.
 
-The syntax of a SpoonScript generally follows the pattern: 
+The syntax of a TurboScript generally follows the pattern:
 
 	instruction <arg 1> <arg 2> ...
 	instruction <arg 1> <arg 2> ...
@@ -16,7 +16,7 @@ All scripts have an implicit `commit` at the end of the script. After the last i
 
 ### Syntax Rules
 
-1. SpoonScript are line-delimited and must only contain 1 instruction per line. Line continuation is not supported. 
+1. TurboScript are line-delimited and must only contain 1 instruction per line. Line continuation is not supported.
 2. All lines must follow the general structure: `instruction <args>`
 3. Inline comments are not supported. Comments must be applied at the beginning of a line and are applied to the entire line. 
 
@@ -36,7 +36,7 @@ layer node/node  # This is not a valid comment
 
 ### Conditions
 
-Any SpoonScript instruction can have an optional `when` clause at the end of the line to specify the conditions which must be met before the instruction will be executed. The general form is `instuction when expression`.
+Any TurboScript instruction can have an optional `when` clause at the end of the line to specify the conditions which must be met before the instruction will be executed. The general form is `instuction when expression`.
 
 ```
 cmd "echo This is Windows7" when host has os:Windows7

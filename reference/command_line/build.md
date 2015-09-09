@@ -1,6 +1,6 @@
 ### build
 
-The `build` command is used to automate the creation of images. The `build` command can build images from a SpoonScript or a **.xappl** configuration file. 
+The `build` command is used to automate the creation of images. The `build` command can build images from a TurboScript or a **.xappl** configuration file.
 
 ```
 Usage: turbo build <options> <path>
@@ -21,9 +21,9 @@ Usage: turbo build <options> <path>
 
 To build an image from an existing container, use the `commit` command.
 
-#### Using SpoonScript
+#### Using TurboScript
 
-A SpoonScript is a list of instructions that Turbo will follow to create a container. After the last instruction in a script, Turbo will automatically run `turbo commit` on the recently created container, creating a new image. 
+A TurboScript is a list of instructions that Turbo will follow to create a container. After the last instruction in a script, Turbo will automatically run `turbo commit` on the recently created container, creating a new image.
 
 When building from a **.me** script, Turbo will take the following steps: 
 
@@ -32,7 +32,7 @@ When building from a **.me** script, Turbo will take the following steps:
 3. Commit the container to a new image
 4. Remove the container from the local machine
 
-If there are any conflicts between a SpoonScript instruction and a command-line flag then the SpoonScript instruction will take precedence. 
+If there are any conflicts between a TurboScript instruction and a command-line flag then the TurboScript instruction will take precedence.
 
 #### Using .xappl Files
 
@@ -45,7 +45,7 @@ Environment variables can be added to the container through the `-e` or `--env-f
 To create multiple environment variables in the container, use multiple `-e` flags. For example, the following command would add two environment variables, VAR1 with value 1 and VAR2 with value 2, to the built image. 
 
 ```
-> turbo build -e=VAR1=1 -e=VAR2=2 C:\SpoonScript
+> turbo build -e=VAR1=1 -e=VAR2=2 C:\TurboScript
 ```
 
 Alternatively, use the `--env-file` flag and specify all of the environment variables you wish to add to the image in a line-delimited text file. For example, the previous command could be replicated using the following command: 

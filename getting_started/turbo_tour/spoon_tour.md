@@ -90,9 +90,9 @@ No more "localhost:8080".
 </div>
 
 
-### SpoonScript Automation
+### TurboScript Automation
 
-Powerful SpoonScript primitives allow automated configuration of containers and integration into continuous integration processes. Higher-order operators such as using allow transient consumption of containers within scripted build environments.
+Powerful TurboScript primitives allow automated configuration of containers and integration into continuous integration processes. Higher-order operators such as using allow transient consumption of containers within scripted build environments.
 
 <div style="width: 605px; margin: 0 8px; background-color: #292929; color: #949799; padding: 15px; border-radius: 4px; margin-bottom: 28px;">
    <p style="font-size: 13px; margin-bottom: 0; color: #00FF00; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;"># Use git and sbt to download and build the project sources</p>

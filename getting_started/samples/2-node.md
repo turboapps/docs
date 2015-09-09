@@ -128,7 +128,7 @@ Visit the [hub](/hub) to see the details of the image you just pushed.
 
 #### Optional: Automated Image Creation
 
-The above container creation and configuration can also be automated using a SpoonScript file.
+The above container creation and configuration can also be automated using a TurboScript file.
 
 Create a new text file and copy/paste this text:
 
@@ -152,9 +152,9 @@ cmd npm install
 boot file node app.js
 ```
 
-See the [SpoonScript reference](/docs/reference/spoonscript) for more information on SpoonScript syntax.
+See the [TurboScript reference](/docs/reference/turboscript) for more information on TurboScript syntax.
 
-Save the file as SpoonScript in **C:\\spoon\aIRChat**.
+Save the file as TurboScript in **C:\\spoon\aIRChat**.
 
 ```
 # Now build the script to create a new image called aIRChat

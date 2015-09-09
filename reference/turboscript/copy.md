@@ -1,6 +1,6 @@
 ### copy
 
-The `copy` instruction is used to copy a file or directory from a SpoonScript or an XAPPL configuration directory.
+The `copy` instruction is used to copy a file or directory from a TurboScript or an XAPPL configuration directory.
 
 ```
 copy <source> <destination>

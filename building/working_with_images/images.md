@@ -23,7 +23,7 @@ See a more detailed example [here](/docs/building/working-with-containers).
 
 #### Automatic Builds
 
-You can automatically build images using a SpoonScript, which is a set of instructions that recreate the steps of configuring a container. See more information on [SpoonScript](/docs/reference/spoonscript) verbage and syntax.
+You can automatically build images using a TurboScript, which is a set of instructions that recreate the steps of configuring a container. See more information on [TurboScript](/docs/reference/turboscript) verbage and syntax.
 
 ```
 # Example script to automatically build a 7-Zip image
