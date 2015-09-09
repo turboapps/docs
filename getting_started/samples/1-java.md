@@ -60,15 +60,15 @@ By default, this will create a new images that includes the base git/git and ora
 > turbo commit --no-base 3df234f3 simple-java-webserver
 ```
 
-**Optional**: Tag the Image
+**Optional**: Release the Image
 
-A given image has two pieces of publicly available metadata attached to it: it's **name** and it's **tag**. A tag is similar to a version and should be used to mark major branches or releases of a project. 
+A given image has two pieces of publicly available metadata attached to it: it's **name** and it's **release**. A release is similar to a version and should be used to mark major branches or releases of a project. 
 
-To illustrate this idea, we'll tag our newly created image as **1.0**.
+To illustrate this idea, we'll release our newly created image as **1.0**.
 
 ```
-# Create a new tag of 1.0 for the image
-> turbo tag simple-java-webserver 1.0
+# Create a new release of 1.0 for the image
+> turbo release simple-java-webserver 1.0
 ```
 
 When `turbo images` is executed, you should now see a new entry for **simple-java-webserver:1.0**.
@@ -76,12 +76,12 @@ When `turbo images` is executed, you should now see a new entry for **simple-jav
 ```
 > turbo images
 
-ID            Name                   Tag   Created                Size
---            ----                   ---   -------                ----
-7a85fe8f7ad1  oracle/jdk 		 	 7.65  8/22/2014 11:34:19 AM  74.3 MB
-9iejrk2a34hd  git/git 		         1.94  8/21/2014 11:32:00 AM  50.4 MB
-3j24fjdk3kj4  simple-java-webserver        8/22/2014 11:52:32 AM  20.2 MB
-3j24fjdk3kj4  simple-java-webserver  1.0   8/22/2014 11:59:59 AM  20.2 MB
+ID            Name                   Release   Created                Size
+--            ----                   -------   -------                ----
+7a85fe8f7ad1  oracle/jdk 		 	 7.65      8/22/2014 11:34:19 AM  74.3 MB
+9iejrk2a34hd  git/git 		         1.94      8/21/2014 11:32:00 AM  50.4 MB
+3j24fjdk3kj4  simple-java-webserver            8/22/2014 11:52:32 AM  20.2 MB
+3j24fjdk3kj4  simple-java-webserver  1.0       8/22/2014 11:59:59 AM  20.2 MB
 ```
 
 #### Push to the Turbo Hub
@@ -95,4 +95,4 @@ We'll finish this tutorial by pushing the newly created **simple-java-webserver*
 
 This will create a new repository in your Turbo Hub account called **simple-java-webserver**, where the newly-pushed image will be placed. 
 
-Note that if you tagged your image in the previous section, use the command: `turbo push simple-java-webserver:1.0`. 
+Note that if you released your image in the previous section, use the command: `turbo push simple-java-webserver:1.0`. 

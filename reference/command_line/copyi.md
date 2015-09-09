@@ -3,7 +3,7 @@
 The `copyi` command copies an image to another repository on your local machine. `cpi` is an alias for this command.
 
 ```
-Usage: turbo copyi <options> <image> [<repository>/]<image>[:<tag>]
+Usage: turbo copyi <options> <image> [<repository>/]<image>[:<release>]
 
 <options> available:
       --format=VALUE         Use json format for output
@@ -20,7 +20,7 @@ If the repository specified in the command does not already exist, a new one is 
 
 Output image: my-node
 
-# Copy the image to the existing repository with a new tag
+# Copy the image to the existing repository with a new release
 > turbo copyi node/node my-node:1.0
 ```
 

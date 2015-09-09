@@ -11,7 +11,7 @@ Private repositories are not searchable, and they can only be accessed, pulled, 
 The homepage for a repository is located at **http://turbo.net/hub/[profile]/[repo]**, where **profile** is the username of the repository owner and **repo** is the name of the repository. The homepage contains 3 sections:
 
 1. **About** - Provides an overview of the repository. 
-2. **Releases** - Lists all tagged versions of the image.
+2. **Releases** - Lists all released versions of the image.
 3. **History** - Lists the full version history of the image.
 
 On your repository's **About** page, you can edit the description, Readme, icon, URL, and steps for getting started with your project.

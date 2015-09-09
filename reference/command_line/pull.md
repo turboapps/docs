@@ -3,7 +3,7 @@
 The `pull` command syncs an image from a remote registry to your local registry. 
 
 ```
-Usage: turbo pull <options> [<namespace>/]<image>[:<tag>]
+Usage: turbo pull <options> [<namespace>/]<image>[:<release>]
 
 <options> available:
       --format=VALUE         Use json format for output
@@ -15,11 +15,11 @@ The image to pull can be specified with up to 3 identifiers, only 1 of which (th
 
 - Namespace (user or org on the remote hub)
 - Name of the remote repository
-- Tag
+- Release
 
 If a namespace is not specified then it will default to that of the current user. 
 
-If a tag is not specified then the **head** tag is applied. 
+If a release is not specified then the **head** release is applied. 
 
 #### JSON output
 

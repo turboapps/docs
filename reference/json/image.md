@@ -13,7 +13,7 @@ Image object contains following data:
 * `id` - id of image (name with namespace)
 * `namespace` - namespace of image (can be null)
 * `name` - name of image
-* `tag` - tag of image
+* `tag` - release of image
 * `description` - description of image (available only on `search` in `images` array)
 
 This object is available for following commands:
@@ -24,4 +24,4 @@ This object is available for following commands:
 * `pull` - contains just pulled image
 * `register` - contains just registered image
 * `unregister` - contains just unregistered image
-* `tag` - contains just tagged image
+* `release` - contains just released image

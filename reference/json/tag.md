@@ -12,4 +12,4 @@ Tag object contains following data:
 * `version` - version string for image
 * `isLocal` - if true, image is available locally, if false, image is available on hub
 
-This object is not available by itself in any of turbo commands, but is used in `tags` and `vms` arrays.
+This object is not available by itself in any of turbo commands, but is used in `releases` and `vms` arrays.
