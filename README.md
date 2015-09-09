@@ -57,7 +57,7 @@ building "my image" from /path/to/turbo.me
 
 ```
 # GitHub location
-https://github.com/spoonium/docs/tree/master/doc/getting_started/tour_ii/image.png
+https://github.com/turboapps/docs/tree/master/doc/getting_started/tour_ii/image.png
 
 # Markdown would be
 ![](/components/docs/getting_started/tour_ii/image.png)
@@ -77,7 +77,7 @@ Some basic terminology:
 The directory to store your document should be /[topic]/[document title]. 
 If the topic and title of the document contains illegal file system characters, it must be normalized.
 This is done by lower casing the path, replacing spaces with '_', and deleting illegal windows file system characters.
-For example, the "What is Turbo?" document under the topic "Getting Started" is stored in the directory "/getting_started/what_is_Spoon". The md file names inside of the directory can be *.md
+For example, the "What is Turbo?" document under the topic "Getting Started" is stored in the directory "/getting_started/what_is_turbo". The md file names inside of the directory can be *.md
 
 #### Creating a New Topic
 
