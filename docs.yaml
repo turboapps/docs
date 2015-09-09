@@ -46,7 +46,7 @@ documents:
 - title: Samples
   sections:
   - Java
-  - Node
+  - Node.js
   - .NET
   - Python
 - title: Installation
