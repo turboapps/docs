@@ -1,26 +1,26 @@
 ### Administration
 
-The Spoon Server Administration Site enables you to manage and control all aspects of your Spoon Server. The default location of the Administration Site is: http://localhost:81, and consists of the following links:
+The Turbo Server Administration Site enables you to manage and control all aspects of your Turbo Server. The default location of the Administration Site is: http://localhost:81, and consists of the following links:
 
-- **Home**: This is the default page for the Spoon Server Administration Site and also is the Spoon Server Dashboard. For more information refer to Spoon Server Dashboard.
+- **Home**: This is the default page for the Turbo Server Administration Site and also is the Turbo Server Dashboard. For more information refer to Turbo Server Dashboard.
 
-- **Apps**: This page lists all applications currently on your Spoon Server, enables you to add new applications and application versions, and manage categories. For more information refer to Managing Applications and Managing Categories.
+- **Apps**: This page lists all applications currently on your Turbo Server, enables you to add new applications and application versions, and manage categories. For more information refer to Managing Applications and Managing Categories.
 
-- **Users**: This page provides a list of active and inactive users on your Spoon Server, along with a license summary. For more information refer to Managing Users.
+- **Users**: This page provides a list of active and inactive users on your Turbo Server, along with a license summary. For more information refer to Managing Users.
 
-- **Servers**: This page lists all servers associated with Spoon Server, including the primary server as well as any additional external sites or third party web collaboration portals. For more information refer to Managing Servers.
+- **Servers**: This page lists all servers associated with Turbo Server, including the primary server as well as any additional external sites or third party web collaboration portals. For more information refer to Managing Servers.
 
 - **Reports**: This page provides preconfigured customizable analytics reports, sorted according to Administration, Apps, and Users. For more information refer to Reports.
 
-- **Admin**: This page contains a summary of your Spoon Server license, and information and options for configuring Spoon Server. For more information refer to Configuration and Customization.
+- **Admin**: This page contains a summary of your Turbo Server license, and information and options for configuring Turbo Server. For more information refer to Configuration and Customization.
 
 #### Administrator Dashboard
 
-The Spoon Server Dashboard provides an overview of the Spoon Server over a given time period. You can adjust this time period using **Date Range Control**. The dashboard is split into five sections: Top Apps, Volume, Key Statistics, Usage Breakdown, and Recent Activity. You can locate the dashboard by selecting the **Home** link from the Administration Site (it is also the default page for the Administration Site).
+The Turbo Server Dashboard provides an overview of the Turbo Server over a given time period. You can adjust this time period using **Date Range Control**. The dashboard is split into five sections: Top Apps, Volume, Key Statistics, Usage Breakdown, and Recent Activity. You can locate the dashboard by selecting the **Home** link from the Administration Site (it is also the default page for the Administration Site).
 
 ##### Volume
 
-The Volume graph charts the total number of launches for your Spoon Server over a specific date range. These are broken down into one day periods on the horizontal axis. Launches for unpublished application versions are not included.
+The Volume graph charts the total number of launches for your Turbo Server over a specific date range. These are broken down into one day periods on the horizontal axis. Launches for unpublished application versions are not included.
 
 ##### Key Statistics
 
@@ -58,15 +58,15 @@ Recent Activity provides a log of the most recent application launches, includin
 
 #### Manage Applications
 
-All applications on Spoon Server are managed from the **Applications** page of the Administration Site. Each new application is added to Spoon Server in the form of a Spoon Virtual Machine, or SVM. For more information about SVMs and Turbo Virtualization Technology refer to Spoon Server Technology.
+All applications on Turbo Server are managed from the **Applications** page of the Administration Site. Each new application is added to Turbo Server in the form of a Spoon Virtual Machine, or SVM. For more information about SVMs and Turbo Virtualization Technology refer to Turbo Server Technology.
 
 ##### Applications and Application Versions
 
-Spoon Server manages Spoon Virtual Machines (**SVMs**) using two entities: **applications** and **application versions**. Each application can contain one or more application versions. For example, Firefox can have child application versions for Firefox 3, Firefox 3.5 and Firefox 4. Each application version corresponds to a specific **SVM**.
+Turbo Server manages Spoon Virtual Machines (**SVMs**) using two entities: **applications** and **application versions**. Each application can contain one or more application versions. For example, Firefox can have child application versions for Firefox 3, Firefox 3.5 and Firefox 4. Each application version corresponds to a specific **SVM**.
 
 ##### Adding an Application
 
-Complete the following steps to add a new application to Spoon Server:
+Complete the following steps to add a new application to Turbo Server:
 
 1. Navigate to the **Applications** page of the Administration Site.
 
@@ -130,7 +130,7 @@ Complete the following steps to add an application version to an existing applic
 
 4. Select **Next**. If you chose an SVM file for the application version, this starts the upload process.
 
-**Note:** When uploading SVM files, upload time is heavily dependent on file size. For any files over 500MB, there may be a long delay at the end of the upload process. For files over 2GB, the file will be too large to upload through the web interface. For these larger SVM files, use the command-line interface to upload the file (see Manage Spoon Server from the Command Line).
+**Note:** When uploading SVM files, upload time is heavily dependent on file size. For any files over 500MB, there may be a long delay at the end of the upload process. For files over 2GB, the file will be too large to upload through the web interface. For these larger SVM files, use the command-line interface to upload the file (see Manage Turbo Server from the Command Line).
 
 5. Another application version configuration page will appear, where you can test, optimize and publish your application version. See "Managing an Application Version" for more information.
 
@@ -156,7 +156,7 @@ This page also contains the following sections:
 
 **Note:** The "Spoon_Id" JavaScript variable is composed from the following, *<Application Slug>-<Major Version Number>-<Minor Version Number>*.
 
-**Note:** The embed code may not be backwards compatible between versions of Spoon Server. Please update and test the embed code for existing applications that are embedded on other sites when upgrading Spoon Server.
+**Note:** The embed code may not be backwards compatible between versions of Turbo Server. Please update and test the embed code for existing applications that are embedded on other sites when upgrading Turbo Server.
 
 - **Recent Activity**: Provides a log of recent activity associated with the application version.
 
@@ -178,7 +178,7 @@ Complete the following steps to optimize an application version:
 
 4. At least one profile should be taken from each platform users will run the application version from **(optional)**.  For example, if users are launching applications only on Microsoft Windows 7 and Microsoft Vista machines, at least one profile should be taken on each of those platforms. Repeat the first three steps on various platforms as needed.
 
-**Note:** When uploading SVM files, upload time is heavily dependent on file size. For any files over 500MB, there may be a long delay at the end of the upload process. For files over 2GB, the file will be too large to upload through the web interface. For these larger SVM files, use the command-line interface to upload the file (see Manage Spoon Server from the Command Line).
+**Note:** When uploading SVM files, upload time is heavily dependent on file size. For any files over 500MB, there may be a long delay at the end of the upload process. For files over 2GB, the file will be too large to upload through the web interface. For these larger SVM files, use the command-line interface to upload the file (see Manage Turbo Server from the Command Line).
 
 5. Once all profiles are completed, navigate back to the **Optimize** page.
 
@@ -190,7 +190,7 @@ After the Model Status changes to **Requested** the model can take a few minutes
 
 ##### Managing an Entry Point
 
-The initial set of entry points corresponds the the **Shortcuts** specified in the application configuration before building the **SVM** package. Although specific entry points available to an application are determined when creating an **SVM** file, the appearance of the entry point can be managed in Spoon Server.
+The initial set of entry points corresponds the the **Shortcuts** specified in the application configuration before building the **SVM** package. Although specific entry points available to an application are determined when creating an **SVM** file, the appearance of the entry point can be managed in Turbo Server.
 
 Complete the following steps to manage an entry point:
 
@@ -242,7 +242,7 @@ Categories can be managed at the bottom of the **Apps** page. To revise the name
 
 #### Manage Users
 
-Spoon Server users are tracked and managed via the Administration Site. Users are entered manually or via automated import from LDAP or Active Directory directory services. Users can be viewed and managed on the **Users** page. You can also place users into groups to assign application permissions to multiple users at once. The **Users** page contains a list of existing users and user groups. From this page you can view user directories, status, recent activity and available actions. Displayed above the user list is the total number of licenses available and the number of licenses currently in use.
+Turbo Server users are tracked and managed via the Administration Site. Users are entered manually or via automated import from LDAP or Active Directory directory services. Users can be viewed and managed on the **Users** page. You can also place users into groups to assign application permissions to multiple users at once. The **Users** page contains a list of existing users and user groups. From this page you can view user directories, status, recent activity and available actions. Displayed above the user list is the total number of licenses available and the number of licenses currently in use.
 
 ##### Managing Users
 
@@ -254,7 +254,7 @@ To manage a user, select the user name from the list on the **Users** page. The 
 
 - **Directory Information**: Information about the directory service for the user if the user was imported from an external directory service.
 
-- **Enabled**: Determines whether a user can launch applications from Spoon Server. After a user is disabled he no longer consumes a seat.
+- **Enabled**: Determines whether a user can launch applications from Turbo Server. After a user is disabled he no longer consumes a seat.
 
 - **Quota**: Determines the maximum amount of data which can be stored by this user. For the given user, this setting will override the default quota setting for all users.
 
@@ -276,11 +276,11 @@ To create a user group select **Add Group**.  The **Add User Group** screen disp
 
 - **Permissions**: Special permissions associated with this group. Add permissions by selecting Add.
 
-Spoon Server automatically creates an Anonymous Users group. Users discovered when the authentication mode is set to Anonymous are added to the Anonymous Users group. You can assign special permissions to these users by selecting **Manage Anonymous Users** at the top of the **Users** page.
+Turbo Server automatically creates an Anonymous Users group. Users discovered when the authentication mode is set to Anonymous are added to the Anonymous Users group. You can assign special permissions to these users by selecting **Manage Anonymous Users** at the top of the **Users** page.
 
 ##### Managing User Permissions
 
-**User Permissions** enable you to allow or block users from running certain applications. These rules override default permissions. For example, you can block Firefox by default but allow user John Doe to launch the application. Spoon Server also supports nested groups: permissions for one group apply to users and groups within that group.
+**User Permissions** enable you to allow or block users from running certain applications. These rules override default permissions. For example, you can block Firefox by default but allow user John Doe to launch the application. Turbo Server also supports nested groups: permissions for one group apply to users and groups within that group.
 
 You can manage permissions from the user's or the group's Details page. Navigate to the Details page by selecting the user or group name on the Users page. Complete the following steps to manage permissions:
 
@@ -316,9 +316,9 @@ To delete all user licenses for an application, navigate to the application page
 
 ##### Adding an External Directory Service
 
-Using Spoon Server you can add an external directory service, such as Active Directory. This enables you to manage users with the touch of a button and easily import existing users and groups into Spoon Server. Complete the following steps to add an external directory service:
+Using Turbo Server you can add an external directory service, such as Active Directory. This enables you to manage users with the touch of a button and easily import existing users and groups into Turbo Server. Complete the following steps to add an external directory service:
 
-1. Open a Spoon Server administration site page in your web browser.
+1. Open a Turbo Server administration site page in your web browser.
 
 2. Choose the **Users** category from the top navigation bar.
 
@@ -326,9 +326,9 @@ Using Spoon Server you can add an external directory service, such as Active Dir
 
 4. Select **Add Service**. The **Add Directory Service** screen displays.
 
-5. Enter your specific settings into Spoon Server. Each section is detailed below.
+5. Enter your specific settings into Turbo Server. Each section is detailed below.
 
-**Note**: When synchronizing external directory-services containing of over 5,000 users, the command-line utility, Server.exe, should be used instead of the Administrator web site. For more information on using Server.exe, see Manage Spoon Server from the Command Line.
+**Note**: When synchronizing external directory-services containing of over 5,000 users, the command-line utility, Server.exe, should be used instead of the Administrator web site. For more information on using Server.exe, see Manage Turbo Server from the Command Line.
 
 <table>
       <tr>
@@ -367,7 +367,7 @@ Using Spoon Server you can add an external directory service, such as Active Dir
       </tr>
       <tr>
          <td colspan="1"><strong>Type</strong></td>
-         <td colspan="1">In the <strong>Type</strong> section you can choose the type of the directory service from which to import users and groups. <br> There is variability in location, security, and schema settings for directory services. Spoon Server provides two templates: <strong>Active Directory</strong> and <strong>Other LDAP</strong>. The local Active Directory can be found by selecting <strong>Try Local.</strong> When found, working connection settings are set automatically. <br class="atl-forced-newline"> To synchronize with the local Microsoft Windows domain's Active Directory service, select <strong>Try Local</strong>. This loads default settings into the <strong>Connection</strong> and <strong>Directory Schema</strong> fields. For large directories this can take several minutes. <br class="atl-forced-newline"> If the operation is unsuccessful, continue to the <strong>Choosing Your Connection Settings</strong> section. <br class="atl-forced-newline"> If the operation is successful, continue to the <strong>Choosing the Directories to Synchronize</strong> section.</td>
+         <td colspan="1">In the <strong>Type</strong> section you can choose the type of the directory service from which to import users and groups. <br> There is variability in location, security, and schema settings for directory services. Turbo Server provides two templates: <strong>Active Directory</strong> and <strong>Other LDAP</strong>. The local Active Directory can be found by selecting <strong>Try Local.</strong> When found, working connection settings are set automatically. <br class="atl-forced-newline"> To synchronize with the local Microsoft Windows domain's Active Directory service, select <strong>Try Local</strong>. This loads default settings into the <strong>Connection</strong> and <strong>Directory Schema</strong> fields. For large directories this can take several minutes. <br class="atl-forced-newline"> If the operation is unsuccessful, continue to the <strong>Choosing Your Connection Settings</strong> section. <br class="atl-forced-newline"> If the operation is successful, continue to the <strong>Choosing the Directories to Synchronize</strong> section.</td>
       </tr>
       <tr>
          <td colspan="1"><strong>Server</strong></td>
@@ -389,11 +389,11 @@ Using Spoon Server you can add an external directory service, such as Active Dir
       </tr>
       <tr>
          <td colspan="1"><strong>Directory Schema</strong></td>
-         <td colspan="1">&nbsp;Allows the administrator to specify which names in the LDAP directory will be imported into the Spoon Server user information. For more information, see <strong>Directory Schema</strong>, further down this page</td>
+         <td colspan="1">&nbsp;Allows the administrator to specify which names in the LDAP directory will be imported into the Turbo Server user information. For more information, see <strong>Directory Schema</strong>, further down this page</td>
       </tr>
       <tr>
          <td colspan="1"><strong>Synchronized Items</strong></td>
-         <td colspan="1">Used to identify items in the directory tree that should be synchronized with Spoon Server. For more information, see <strong>Choosing Items to Synchronize</strong>, further down this page.</td>
+         <td colspan="1">Used to identify items in the directory tree that should be synchronized with Turbo Server. For more information, see <strong>Choosing Items to Synchronize</strong>, further down this page.</td>
       </tr>
 </table>
 
@@ -429,7 +429,7 @@ Directory schema settings are customizable within any directory service; you can
 
 3. If you know the correct schema name for the given properties, you can enter it manually. If there are more than one name for the same value you can  enter each name separated by a semicolon. Each is searched during synchronization.
 
-4. To reset the settings to the Spoon Server default, select Defaults.
+4. To reset the settings to the Turbo Server default, select Defaults.
 
 **Choosing Items to Synchronize**
 
@@ -449,7 +449,7 @@ Your directory service might contain some subdirectories that have useful inform
 
 *Choosing groups*
 
-You may have a specific subset of existing users that will use Spoon Server, in a group or groups native to your directory service. You can choose which groups to synchronize using **Synchronized Items**, selecting the **Groups** option. Complete the following steps to use **Synchronized Items**:
+You may have a specific subset of existing users that will use Turbo Server, in a group or groups native to your directory service. You can choose which groups to synchronize using **Synchronized Items**, selecting the **Groups** option. Complete the following steps to use **Synchronized Items**:
 
 1. Select **Refresh to use the current connection and directory schema settings to scan your directory service. Information about discovered group is available via **tooltip popups**. For large directories this operation can take several seconds to complete.
 
@@ -459,11 +459,11 @@ You may have a specific subset of existing users that will use Spoon Server, in 
 
 	b. Check groups to include. All members of that group will be synchronized, including contained groups and all of their members.
 
-When you are satisfied with your settings, select **Save**. At this point, the users and groups in your directory service are not synchronized with Spoon Server. From the **Manage Directory Services** page, click the synchronization button and verify there are positive counts for users and/or groups when it has finished. For large directories this can take several seconds.
+When you are satisfied with your settings, select **Save**. At this point, the users and groups in your directory service are not synchronized with Turbo Server. From the **Manage Directory Services** page, click the synchronization button and verify there are positive counts for users and/or groups when it has finished. For large directories this can take several seconds.
 
 #### Manage Servers
 
-Depending on the scope of your Spoon Server implementation you can add additional servers to distribute the workload and improve performance. If you are deploying applications from an external site on another server, you must add that server to Spoon Server.
+Depending on the scope of your Turbo Server implementation you can add additional servers to distribute the workload and improve performance. If you are deploying applications from an external site on another server, you must add that server to Turbo Server.
 
 ##### Adding a Server
 
@@ -561,11 +561,11 @@ The **Reports** page provides pre-configured, detailed analytic reports, broken-
 
 - **Session Logs Report**: Provides a detailed record of all session events, including launching or stopping an application.
 
-- **Alert Report**: Presents a record of all Spoon Server alerts. Common alerts include errors, creation of applications, application versions, categories.
+- **Alert Report**: Presents a record of all Turbo Server alerts. Common alerts include errors, creation of applications, application versions, categories.
 
 ##### Application Reports
 
-- **App Inventory Report**: Provides detailed information for each application in your Spoon Server.
+- **App Inventory Report**: Provides detailed information for each application in your Turbo Server.
 
 - **App Session Report**: Presents a detailed record of each application session.
 
@@ -598,15 +598,15 @@ Use the toolbar located at the top of the **Report Viewer** to perform the follo
 
 #### Configuration and Customization
 
-The **Admin** page provides options to configure and customize Spoon Server. The page is divided into the following sections:
+The **Admin** page provides options to configure and customize Turbo Server. The page is divided into the following sections:
 
-- **License**: Provides an overview of information associated with the current Spoon Server license, including number of seats, allowed portals,  computer name, and machine identifier. If server users are licensed to run applications on more than one machine, this number is reflected here. This section also contains a link to add a **New License**; you can use this to update an existing license as well.
+- **License**: Provides an overview of information associated with the current Turbo Server license, including number of seats, allowed portals,  computer name, and machine identifier. If server users are licensed to run applications on more than one machine, this number is reflected here. This section also contains a link to add a **New License**; you can use this to update an existing license as well.
 
 - **Sync**: Configures client synchronization settings.
 
-- **Administrator Email**: Users are directed to this email address if they encounter any errors or issues while using Spoon Server.
+- **Administrator Email**: Users are directed to this email address if they encounter any errors or issues while using Turbo Server.
 
-- **Administrators**: The administrative web pages can be restricted to a subset of the users known to the Spoon Server. If no users are contained in this group, access will be open to anyone able to access the port of the administration site. When at least one user is contained in the group, a login form is presented to any user who hasn't already been authenticated from his browser. Only the members of the administrators group (including members of groups that are members of the administrators group) are allowed access. Note that this group appears in the standard user groups list and is editable from there as well. SSL access to the administration site can be enabled by editing the primary server settings, exactly as it is done for a portal site.
+- **Administrators**: The administrative web pages can be restricted to a subset of the users known to the Turbo Server. If no users are contained in this group, access will be open to anyone able to access the port of the administration site. When at least one user is contained in the group, a login form is presented to any user who hasn't already been authenticated from his browser. Only the members of the administrators group (including members of groups that are members of the administrators group) are allowed access. Note that this group appears in the standard user groups list and is editable from there as well. SSL access to the administration site can be enabled by editing the primary server settings, exactly as it is done for a portal site.
 
 - **Logo**: This image appears at the top of the Portal site. The image is resized to a width of 185 pixels (with the aspect ratio maintained), and is converted to .PNG format.
 

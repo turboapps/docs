@@ -15,7 +15,7 @@ The available plans include:
 
 - `build-test` - All of the features of the `build` subscription plus unlimited selenium testing.
 
-- `build-test-deploy` - All the features of the `build-test` subscription plus on-premise capabilities with Spoon Server.
+- `build-test-deploy` - All the features of the `build-test` subscription plus on-premise capabilities with Turbo Server.
 
 #### JSON output
 
