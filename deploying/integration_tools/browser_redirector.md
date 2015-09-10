@@ -4,7 +4,7 @@ Browser redirection is a service that automatically opens the page or resource a
 
 Browser redirection prevents errors when accessing legacy web resources on newer systems, creating a more seamless and efficient web experience for the end user.
 
-**Note**: Browser Redirector is currently only available to use with standalone EXEs and MSIs built with Spoon Studio.
+**Note**: Browser Redirector is currently only available to use with standalone EXEs and MSIs built with Turbo Studio.
 
 #### Installation
 

@@ -97,7 +97,7 @@ app virtualization engine, which operates on top of (rather than within) the OS 
 
 Like Docker, Turbo provides command-line interfaces (`turbo`) and a scripting language (**TurboScript**) for automating build processes. Turbo also provides a number of rich GUI- and web-based tools and services for building, configuring, and managing virtual environments.
 
-**[Spoon Studio](/docs/building/working-with-turbo-studio)** provides a visual design environment and easy-to-use wizards for creating images. Spoon Studio also includes a [Desktop Scan](/docs/building/working-with-turbo-studio#desktop-scan) tool that automatically detects and captures settings for any applications that are locally installed on a desktop.
+**[Turbo Studio](/docs/building/working-with-turbo-studio)** provides a visual design environment and easy-to-use wizards for creating images. Turbo Studio also includes a [Desktop Scan](/docs/building/working-with-turbo-studio#desktop-scan) tool that automatically detects and captures settings for any applications that are locally installed on a desktop.
 
 **[Spoon Server](http://turbo.net/server)** is an on-premises version of Turbo.net that	provides the same functionality in a behind-firewall environment. In addition, Spoon Server provides enterprise-specific such as a web application portal, Active Directory and LDAP integration, centralized management, user data synchronization, license management, and usage analytics.
 
@@ -107,9 +107,9 @@ Turbo also maintains an online database of validated application templates and i
 
 In addition to dynamic configuration via a console or script, Turbo also supports configuration via a static XML-based specification that declares the files, registry keys, environment variables, and other virtual machine states that will be presented to the container. 
 
-To assist in building static configurations, Turbo offers a graphical **Spoon Studio** interface, as well as both a graphical- and command line-based *snapshot* configuration.
+To assist in building static configurations, Turbo offers a graphical **Turbo Studio** interface, as well as both a graphical- and command line-based *snapshot* configuration.
 
-For more information on Spoon Studio and snapshot tools, see the [Building](/docs/building) section in this documentation.
+For more information on Turbo Studio and snapshot tools, see the [Building](/docs/building) section in this documentation.
 
 ### Streaming
 
