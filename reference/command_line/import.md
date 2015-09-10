@@ -31,7 +31,7 @@ turbo import -n=old-thinapp-image thinapp C:\s\package.ini
 turbo import svm C:\s\old-image.svm
 ```
 
-**Spoon Studio** users can use this command to import their existing components. 
+**Turbo Studio** users can use this command to import their existing components.
 
 #### JSON output
 

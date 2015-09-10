@@ -45,8 +45,8 @@ turbo run
 
 wget,7-zip,node:0.10.33
 
-# Unlike the Hello World sample, we have omitted the "owner/" namespace from image names. Omitting the namespace causes Spoon Studio to first search for the named images on your local machine's image repository.
-# If it doesn't find a match locally, Spoon Studio automatically searches for the approved images on the Turbo Hub, as it did in this example.
+# Unlike the Hello World sample, we have omitted the "owner/" namespace from image names. Omitting the namespace causes Turbo Studio to first search for the named images on your local machine's image repository.
+# If it doesn't find a match locally, Turbo Studio automatically searches for the approved images on the Turbo Hub, as it did in this example.
 ```
 
 In your container, make a directory for the Ghost web application.

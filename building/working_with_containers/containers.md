@@ -1,4 +1,4 @@
-In this section you'll learn a variety of methods for managing and building containers and images with Spoon Studio and the command-line interface. You'll also learn how to integrate containerization with your continuous integration server.
+In this section you'll learn a variety of methods for managing and building containers and images with Turbo Studio and the command-line interface. You'll also learn how to integrate containerization with your continuous integration server.
 
 ## Working with Containers
 

@@ -3,7 +3,7 @@
 The Turbo platform includes both an **application virtualization** engine and a **containerization** engine. The Turbo container implementation is
 built *on top of* the Turbo application virtualization (usually called "app virtualization") engine, but includes many additional components.
 
-Turbo's traditional app virtualization tool is called **[Spoon Studio](/studio)**. As with other app virtualization systems, Spoon Studio
+Turbo's traditional app virtualization tool is called **[Turbo Studio](/studio)**. As with other app virtualization systems, Turbo Studio
 is based on a "static" model of virtual application configuration. Virtual machine state is created by capturing snapshots of a physical
 (or virtual physical) system. This is similar to the processes used by other products in this category such as Microsoft App-V and VMware ThinApp.
 A major disadvantage of this approach is the requirement to have a clean physical or virtual machine available to use as a target

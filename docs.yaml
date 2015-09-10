@@ -73,7 +73,7 @@ documents:
   - Containers
   - Images
   - Hub
-  - Spoon Studio and Command Line
+  - Turbo Studio and Command Line
   - Spoon Server
   - Company
   - Contact
@@ -102,7 +102,7 @@ documents:
   - Creating Images
   - Forking, Renaming, and Tagging
   - Push to a Remote Repository
-- title: Working with Spoon Studio
+- title: Working with Turbo Studio
   sections:
   - UI Basics
   - Virtual Filesystem

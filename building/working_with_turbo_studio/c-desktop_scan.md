@@ -1,5 +1,5 @@
 ### Desktop Scan
-Spoon Studio can scan the machine where it is installed and build virtual application packages using the content and settings from that machine. The Desktop Scan supports applications available in the Turbo library of applications.
+Turbo Studio can scan the machine where it is installed and build virtual application packages using the content and settings from that machine. The Desktop Scan supports applications available in the Turbo library of applications.
 
 #### Running a Desktop Scan
 
@@ -26,7 +26,7 @@ Applications packaged with this method retain users settings that were in place 
 
 **Optional**: Import to local registry using the command-line interface
 
-Images built with Spoon Studio can also be used with the command-line interface and the hub.
+Images built with Turbo Studio can also be used with the command-line interface and the hub.
 
 ```
 # Import the image to your local registry

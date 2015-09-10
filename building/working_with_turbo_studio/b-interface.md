@@ -1,12 +1,12 @@
 ### UI Basics
 
-Using Spoon Studio enables you to configure the filesystem and registry of a virtual application, embed external runtimes and components, take application snapshots, and create Spoon Virtual Machine (SVM) or executable files. The primary interface consists of a ribbon bar along the top and several panes accessed by buttons on the left.
+Using Turbo Studio enables you to configure the filesystem and registry of a virtual application, embed external runtimes and components, take application snapshots, and create Turbo Virtual Machine (SVM) or executable files. The primary interface consists of a ribbon bar along the top and several panes accessed by buttons on the left.
 
 #### Title Bar
 
 - The Start Menu button, or the circle at the top left of the window, enables virtual application configurations to be created, opened, saved, imported, applied, and closed.
-- The Options bar provides Spoon Studio customization options, the ability to set proxy settings, and install certificates.
-- The Help bar provides access to Spoon Studio documentation.
+- The Options bar provides Turbo Studio customization options, the ability to set proxy settings, and install certificates.
+- The Help bar provides access to Turbo Studio documentation.
 
 #### Ribbon Bar
 
@@ -24,11 +24,11 @@ Using Spoon Studio enables you to configure the filesystem and registry of a vir
 - The **Setup** pane enables you to configure the MSI setup package, shortcuts, and other shell integration options.
 - The **Expiration** pane enables you to configure application expiration options.
 
-**Note:** Spoon Studio users are responsible for any third-party licensing compliance for redistributable components included using virtualization.
+**Note:** Turbo Studio users are responsible for any third-party licensing compliance for redistributable components included using virtualization.
 
 ### Virtual Filesystem
 
-Spoon Studio enables you to embed a *virtual filesystem* into your executable. Embedded files are accessible by your Turbo-processed application as if they were present in the actual filesystem. Virtual files are isolated from the host device. Virtual files do not require security privileges on the host device regardless of whether the virtual files reside in a privileged directory. Because virtual files are embedded in the application executable, shared DLLs do not interfere with those installed by other applications on the host device. 
+Turbo Studio enables you to embed a *virtual filesystem* into your executable. Embedded files are accessible by your Turbo-processed application as if they were present in the actual filesystem. Virtual files are isolated from the host device. Virtual files do not require security privileges on the host device regardless of whether the virtual files reside in a privileged directory. Because virtual files are embedded in the application executable, shared DLLs do not interfere with those installed by other applications on the host device.
 
 In the event of a conflict between a file in the virtual filesystem and a file present on the host device, the file in the virtual filesystem takes precedence.
 
@@ -51,17 +51,17 @@ Folders may be virtualized in **Full**, **Merge**, **Write Copy**, or **Hide** m
 	**Note**: The **Hidden Flag** is NOT the same as the **Hide** isolation mode. Enabling the **Hidden Flag** prevents a file or folder from displaying in browse dialogs or from directory enumeration APIs; it does not prevent the application (and potentially the end-user) from accessing the folder or file contents by direct binding. To prevent the file or folder from being found by the application, enable **Hide** isolation mode.
 - **Read Only**: Flagging files and folders as read-only prevents the application from modifying the file or folder contents. To make a file or folder read-only, select the checkbox in the **Read Only** column next to the desired file or folder.
 - **No Upgrade**: By default, files in the virtual filesystem can be upgraded with patches (refer to "Updating Registration Settings" in the **Register Virtual Applications in the Windows Shell** section for more information). If there are files in the virtual filesystem that should not be upgraded, such as user data files, select the checkbox in the **No Upgrade** column next to the desired file or folder.
-- **No Sync**: This feature only applies to virtual applications that are delivered and managed by Spoon Virtual Desktop Server. By default, files in the virtual filesystem can be synchronized to a user's Turbo account. This enables the application state to be maintained across different devices that are Turbo enabled. If there are folders in the virtual filesystem that should not be synchronized and remain only on the local device, select the checkbox in the **No Sync** column next to the desired file or folder. This setting is managed on a folder level and applies to all files within that folder.
+- **No Sync**: This feature only applies to virtual applications that are delivered and managed by Turbo Virtual Desktop Server. By default, files in the virtual filesystem can be synchronized to a user's Turbo account. This enables the application state to be maintained across different devices that are Turbo enabled. If there are folders in the virtual filesystem that should not be synchronized and remain only on the local device, select the checkbox in the **No Sync** column next to the desired file or folder. This setting is managed on a folder level and applies to all files within that folder.
 
 #### Filesystem Compression
 
-To reduce executable size, Spoon Studio can compress virtual filesystem contents. This reduces virtual application size by approximately 50% but also prevents profiling and streaming of the application. By default, the **Compress Payload** option in the **Process Configuration** area of the **Settings** panel is unchecked. Leave this box unchecked during the build process if the application will be optimized for streaming from Spoon Virtual Desktop Server.
+To reduce executable size, Turbo Studio can compress virtual filesystem contents. This reduces virtual application size by approximately 50% but also prevents profiling and streaming of the application. By default, the **Compress Payload** option in the **Process Configuration** area of the **Settings** panel is unchecked. Leave this box unchecked during the build process if the application will be optimized for streaming from Turbo Virtual Desktop Server.
 
 **Note**: Disabling payload compression may significantly increase the size of the virtual application binary.
 
 ### Virtual Registry
 
-Spoon Studio enables you to embed a virtual registry into your executable. Embedded registry keys are accessible by your Turbo-processed application as if they were present in the actual registry. Virtual registry keys are isolated from the host device. Virtual registry keys do not require security privileges on the host device regardless of whether the virtual files reside in a privileged directory. Because virtual registry entries are embedded in the application executable, other applications are unable to disrupt application execution by inadvertent modification of registry entries.
+Turbo Studio enables you to embed a virtual registry into your executable. Embedded registry keys are accessible by your Turbo-processed application as if they were present in the actual registry. Virtual registry keys are isolated from the host device. Virtual registry keys do not require security privileges on the host device regardless of whether the virtual files reside in a privileged directory. Because virtual registry entries are embedded in the application executable, other applications are unable to disrupt application execution by inadvertent modification of registry entries.
 
 The **Classes** root, **Current User** root, **Local Machine** root, and **Users** root folders correspond to the **HKEY\_CLASSES\_ROOT**, **HKEY\_CURRENT\_USER**, **HKEY\_LOCAL\_MACHINE**, and **HKEY\_USERS** keys on the host machine. 
 
@@ -80,15 +80,15 @@ Keys may be virtualized in **Full**, **Merge**, **Write Copy**, or **Hide** mode
 
 	**Tip**: To apply selected isolation modes to all subkeys, right-click on the key, choose **Isolation**, select the checkbox for **Apply to Subkeys**, then **OK**.
 
-- **No Sync**: This feature only applies to virtual applications that are delivered and managed by Spoon Virtual Desktop Server. By default, keys and values in the virtual registry can be synchronized to a user's Turbo account. This enables the application state to be maintained across different devices that are Turbo enabled. If there are keys in the virtual registry that should not be synchronized and remain only on the local device, select the checkbox in the **No Sync** column next to the desired key. This setting is managed on a key level and applies to all values within that folder.
+- **No Sync**: This feature only applies to virtual applications that are delivered and managed by Turbo Virtual Desktop Server. By default, keys and values in the virtual registry can be synchronized to a user's Turbo account. This enables the application state to be maintained across different devices that are Turbo enabled. If there are keys in the virtual registry that should not be synchronized and remain only on the local device, select the checkbox in the **No Sync** column next to the desired key. This setting is managed on a key level and applies to all values within that folder.
 
 #### Importing Registry Hive Files
 
-Spoon Studio can import registry hive (.reg) files into the virtual registry. To import a .reg file, select the **Import** button in the **Registry** panel, then choose the registry hive file to import.
+Turbo Studio can import registry hive (.reg) files into the virtual registry. To import a .reg file, select the **Import** button in the **Registry** panel, then choose the registry hive file to import.
 
 ### Runtimes and Components
 
-Many components and runtime systems consist of large, complex sets of filesystem entries and registry settings. Spoon Studio contains a collection of pre-configured component settings which can be added to your virtual application with a single click. For example, if your application is a .NET Framework 4.0 application, then selecting the .NET Framework 4.0 component will allow your executable to run on machines without the .NET Framework installed.
+Many components and runtime systems consist of large, complex sets of filesystem entries and registry settings. Turbo Studio contains a collection of pre-configured component settings which can be added to your virtual application with a single click. For example, if your application is a .NET Framework 4.0 application, then selecting the .NET Framework 4.0 component will allow your executable to run on machines without the .NET Framework installed.
 
 Additional runtimes and components are added to the virtual application during the snapshot process, before the after snapshot is taken.
 
@@ -106,10 +106,10 @@ To add a runtime or component:
 
 To limit conflicts with installed .NET runtimes, the .NET runtime packages are isolated from the native file system. If the application requires access to multiple .NET versions, it is necessary to include all of the required runtimes in the virtual package. For example, including only the .NET 4 runtime will hide visibility to the .NET 3.5 runtime on the native file system. This is fine if the application only requires the .NET 4 components, but would be problematic if it also requires earlier versions of .NET.
 
-An alternative approach would be to use the snapshot feature of Spoon Studio to build a custom .NET component for the application. This approach provides visibility into the files and registry keys that are available and allows for custom isolation settings.
+An alternative approach would be to use the snapshot feature of Turbo Studio to build a custom .NET component for the application. This approach provides visibility into the files and registry keys that are available and allows for custom isolation settings.
 
 #### Configuring the Java Runtime
 
-Spoon Studio provides specialized support for the Java runtime. If your application is based on Java runtime, select the Sun Java Runtime button on the Runtimes ribbon bar. This displays the Java configuration menu.
+Turbo Studio provides specialized support for the Java runtime. If your application is based on Java runtime, select the Sun Java Runtime button on the Runtimes ribbon bar. This displays the Java configuration menu.
 
 Select the appropriate version of the Java runtime from the Java runtime version drop-down menu. If you deploy your application as a set of .class files, select Class from the Startup Type drop-down menu; if you deploy within a .jar file, select Jar. Enter the startup class name or Jar name in the appropriate textbox, along with any additional Java runtime options.

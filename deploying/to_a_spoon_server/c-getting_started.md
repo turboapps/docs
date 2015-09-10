@@ -176,6 +176,6 @@ When upgrading Spoon Server, the Windows service will restart. Be sure to alert 
 
 After upgrading, the previous Turbo Console must also be uninstalled. Applications that are registered to users’ desktops with the old console are not compatible with the new console. When the old console is uninstalled these applications will be unregistered, removing old shortcuts, and will need to be registered from the new console. With the new console this process can be automated on application launch by enabling Desktop Registration > Register on Launch on the Application Detail page from the Administrator Site.
 
-**Note:** After upgrading, all preexisting applications need to be updated with a new application version for Windows 8 compatibility. This does not require a new SVM file to be packaged in Spoon Studio -- a new application version with the same SVM file is sufficient.
+**Note:** After upgrading, all preexisting applications need to be updated with a new application version for Windows 8 compatibility. This does not require a new SVM file to be packaged in Turbo Studio -- a new application version with the same SVM file is sufficient.
 
 **Note:** If your Spoon Server was previously set to access an external database, your connection to the database will have to be manually reset after upgrading. For information on how to reset your connection to an external database, see Manually Configure Spoon Server.
