@@ -110,7 +110,7 @@ operating system.
 
 **Does Turbo provide a mechanism to track licenses?**
 
-[Spoon Server](/server) includes a licensing module which will actively track and/or enforce licensing. For example, you can grant/deny privileges based on Active Directory or LDAP membership and define licensing constraints on a total user, total device, concurrent user, or concurrent device basis. Spoon Server also provides an analytics module that allows administrators to track application consumption and validate compliance
+[Turbo Server](/server) includes a licensing module which will actively track and/or enforce licensing. For example, you can grant/deny privileges based on Active Directory or LDAP membership and define licensing constraints on a total user, total device, concurrent user, or concurrent device basis. Turbo Server also provides an analytics module that allows administrators to track application consumption and validate compliance
 with licensing requirements.
 
 **Where is the Turbo container hub?**
@@ -124,7 +124,7 @@ See [Pricing and Plans](/pricing) for more information on Turbo plan options.
 
 **What if I don't want to host my repositories hosted on Turbo.net?**
 
-Turbo is available as an on-premises enterprise server. Please see **[Spoon Server](/server)** for more information or to request
+Turbo is available as an on-premises enterprise server. Please see **[Turbo Server](/server)** for more information or to request
 an evaluation license.
 
 

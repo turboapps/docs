@@ -1,14 +1,14 @@
 ### Advanced Topics
 
-This section describes advanced topics you may encounter when implementing Spoon Server.
+This section describes advanced topics you may encounter when implementing Turbo Server.
 
 #### Running Applications when Offline
 
-Applications can be enabled to be run offline through the **Desktop Registration** setting in an application's settings page on the Spoon Server Administrator portal. To enable **Desktop Registration**, see the instructions at Manage Applications.
+Applications can be enabled to be run offline through the **Desktop Registration** setting in an application's settings page on the Turbo Server Administrator portal. To enable **Desktop Registration**, see the instructions at Manage Applications.
 
 For an application to be registered to the user's machine, either the **Register on Launch** check-box must be checked in the **Desktop Registration** setting for the given application; or the user must register the application themselves in the Turbo Console. If an application is set to **Register on Launch**, then the first time a user opens the application it will be registered to the user's machine and added to their Windows Start Menu. If this setting is not enabled, the user must register the application to the desktop from the console. This can be done by following the steps, below:
 
-1. Sign into the Spoon Server from the plug-in.
+1. Sign into the Turbo Server from the plug-in.
 
 2. Navigate to **All Applications**
 
@@ -36,23 +36,23 @@ To check that the application has been fully cached:
 
 The context menu should show Available Offline. If this is not the case, reopen the application or continue to leave it open.
 
-#### Manually Configure Spoon Server
+#### Manually Configure Turbo Server
 
-Spoon Server enables you to manually configure settings during setup. Using this process you can control the database connection strings used by Spoon Server and the domain names for the Administration and Portal Sites. Spoon Server supports the use of any connection string format used by Microsoft SQL Server.
+Turbo Server enables you to manually configure settings during setup. Using this process you can control the database connection strings used by Turbo Server and the domain names for the Administration and Portal Sites. Turbo Server supports the use of any connection string format used by Microsoft SQL Server.
 
-Complete the following steps to install Spoon Server:
+Complete the following steps to install Turbo Server:
 
-1. Download the Spoon Server setup file and save it locally.
+1. Download the Turbo Server setup file and save it locally.
 
 2. Open a Microsoft Windows Command Prompt and navigate to the directory of the saved setup file.
 
 3. Enter the following command: **Setup.exe /noprovision**. This brings up a file installation wizard. Navigate through the prompts until file installation is complete, and then select **Finish**.
 
-Complete the following steps to manually configure Spoon Server:
+Complete the following steps to manually configure Turbo Server:
 
-1. Return to the Microsoft Windows Command Prompt and navigate to the directory where the installation files are saved. You specified this location in the previous step; the default location is C:\Program Files\Spoon Server.
+1. Return to the Microsoft Windows Command Prompt and navigate to the directory where the installation files are saved. You specified this location in the previous step; the default location is C:\Program Files\Turbo Server.
 
-2. To manually configure Spoon Server, type the command: **Server.exe /provision [ADMINISTRATOR EMAIL]**. Add any of the optional command-line arguments from the following table. Omitting any command-line arguments causes the default setting to apply.
+2. To manually configure Turbo Server, type the command: **Server.exe /provision [ADMINISTRATOR EMAIL]**. Add any of the optional command-line arguments from the following table. Omitting any command-line arguments causes the default setting to apply.
 
 <table>
       <tr>
@@ -105,21 +105,21 @@ The following is a sample command to set all four settings:
 	
 	server.exe /provision admin@acme.com /dblibrary "Integrated Security=true;Data Source=acme;Initial Catalog=Library;" /dbmanager "Integrated Security=true;Data Source=acme;Initial Catalog=Manager;" /wwwsite http://www.acme.com /adminsite http://www.acme.com:81
 
-**Note**: The Microsoft SQL Server connection string will depend on the Microsoft SQL Server configuration. For more information about the connection string, contact the database administrator. Before configuring the Spoon Server, confirm that the running user for the Windows service has appropriate access rights to the database. The service runs under the Local System account by default but the running user can be changed in the Windows services settings.
+**Note**: The Microsoft SQL Server connection string will depend on the Microsoft SQL Server configuration. For more information about the connection string, contact the database administrator. Before configuring the Turbo Server, confirm that the running user for the Windows service has appropriate access rights to the database. The service runs under the Local System account by default but the running user can be changed in the Windows services settings.
 
 Select **Enter** to submit the command and choose **Y** to proceed.
 
 Fully-qualified domain names can be specified on the **Servers** page of the Administration Site. For more information about modifying servers refer to Managing Servers.
 
-#### Configure Spoon Server Security
+#### Configure Turbo Server Security
 
-This section explains how to configure Spoon Server's security settings on common Microsoft Windows platforms. These settings restrict external connections to the Administration Site, enable external connections to the Portal Site and enable the Turbo JavaScript API for use with external web portals.
+This section explains how to configure Turbo Server's security settings on common Microsoft Windows platforms. These settings restrict external connections to the Administration Site, enable external connections to the Portal Site and enable the Turbo JavaScript API for use with external web portals.
 
 **Note**: To enable remote administration for external connections apply the instructions below.
 
 ##### Microsoft Windows Server 2003, Microsoft Windows XP, and Microsoft Windows Vista
 
-To configure Spoon Server security on Microsoft Windows Server 2003, Microsoft Windows XP, or Microsoft Windows Vista, you must enable Microsoft Windows Firewall. The default settings of Microsoft Windows Firewall block all external connections to the Administration Site (assigned to port 81 by default) and Portal Site (assigned to port 80 by default). After Microsoft Windows Firewall is enabled, you must add exceptions to the default settings to provide licensed users access the Portal Site and the Turbo JavaScript API.
+To configure Turbo Server security on Microsoft Windows Server 2003, Microsoft Windows XP, or Microsoft Windows Vista, you must enable Microsoft Windows Firewall. The default settings of Microsoft Windows Firewall block all external connections to the Administration Site (assigned to port 81 by default) and Portal Site (assigned to port 80 by default). After Microsoft Windows Firewall is enabled, you must add exceptions to the default settings to provide licensed users access the Portal Site and the Turbo JavaScript API.
 
 Complete the following steps to enable Microsoft Windows Firewall on Microsoft Windows Server 2003 with licensed access to the Portal Site:
 
@@ -135,7 +135,7 @@ Complete the following steps to enable Microsoft Windows Firewall on Microsoft W
 
 ##### Microsoft Windows Server 2008 and Microsoft Windows 7
 
-To secure the Spoon Server Administration Site on Microsoft Windows Server 2008 and Microsoft Windows 7, enable Microsoft Windows Firewall with Advanced Security. The default settings of Microsoft Windows Firewall with Advanced Security block all external connections to the Administration Site (assigned to port 81 by default) and the Portal Site (assigned to port 80 by default). After Microsoft Windows Firewall with Advanced Security is enabled, add exceptions to the default settings to provide licensed users with access the Portal Site and the Turbo JavaScript API.
+To secure the Turbo Server Administration Site on Microsoft Windows Server 2008 and Microsoft Windows 7, enable Microsoft Windows Firewall with Advanced Security. The default settings of Microsoft Windows Firewall with Advanced Security block all external connections to the Administration Site (assigned to port 81 by default) and the Portal Site (assigned to port 80 by default). After Microsoft Windows Firewall with Advanced Security is enabled, add exceptions to the default settings to provide licensed users with access the Portal Site and the Turbo JavaScript API.
 
 Complete the following steps to enable Microsoft Windows Firewall with Advanced Security on Microsoft Windows Server 2008 with licensed access to the Portal Site:
 
@@ -155,9 +155,9 @@ Complete the following steps to enable Microsoft Windows Firewall with Advanced 
 
 8. Add a name and description.
 
-#### Manage Spoon Server from the Command Line
+#### Manage Turbo Server from the Command Line
 
-`Server.exe`, located in the installation directory of Spoon Server (usually C:\Program Files\Spoon Server), can be used as a command-line tool by specifying the admin option. This tool enables you to add and update applications to the Spoon Server library from the command line, and add large applications (over 2GB) to the Spoon Server. The Spoon Server administrator portal does not support uploading SVM files over 2GB.
+`Server.exe`, located in the installation directory of Turbo Server (usually C:\Program Files\Spoon Server), can be used as a command-line tool by specifying the admin option. This tool enables you to add and update applications to the Turbo Server library from the command line, and add large applications (over 2GB) to the Turbo Server. The Turbo Server administrator portal does not support uploading SVM files over 2GB.
 
 ##### Requirements for Using Server.exe
 
@@ -1228,7 +1228,7 @@ For example: If you are using local version of Microsoft Office Outlook and a vi
 		
 		**Note**: The value reflects what is called a Program ID. You can find the correct Program ID in the configuration file by searching for the section labeled ProgID.
 		
-#### Spoon Server Authorization Web Service
+#### Turbo Server Authorization Web Service
 
 When integrating with existing permissions systems, Turbo provides a web service for granting and revoking access to applications. The web service is available as a REST API with the following capabilities:
 
@@ -1251,21 +1251,21 @@ When integrating with existing permissions systems, Turbo provides a web service
          <td>View Application Access</td>
          <td>
             <p><u>HTTP GET</u><br>URL: <em><span>http://[SERVER]:[PORT]/0.1/lib/app/[APPLICATION]/permissions</span></em></p>
-            <p><u>HTTP HEADERS</u><br>X-Spoon-User: [Spoon Server Administrator]<br> X-Spoon-Password: [Password]</p>
+            <p><u>HTTP HEADERS</u><br>X-Spoon-User: [Turbo Server Administrator]<br> X-Spoon-Password: [Password]</p>
          </td>
       </tr>
       <tr>
          <td>View Category Access</td>
          <td>
             <p><u>HTTP GET</u><br>URL:<em> <span>http://[SERVER]:[PORT]/0.1/lib/cat/[CATEGORY]/permissions</span></em></p>
-            <p><u>HTTP HEADERS</u><br>X-Spoon-User: [Spoon Server Administrator]<br> X-Spoon-Password: [Password]</p>
+            <p><u>HTTP HEADERS</u><br>X-Spoon-User: [Turbo Server Administrator]<br> X-Spoon-Password: [Password]</p>
          </td>
       </tr>
       <tr>
          <td>Grant Application Access</td>
          <td>
             <p><u>HTTP POST<br></u>URL: <em>h<span>ttp://[SERVER]:[PORT]/0.1/lib/app/[APPLICATION]/permissions</span></em></p>
-            <p><u>HTTP HEADERS<br></u>X-Spoon-User: [<span class="confluence-link">Spoon Server Administrator</span>]<br>X-Spoon-Password: [Password]</p>
+            <p><u>HTTP HEADERS<br></u>X-Spoon-User: [<span class="confluence-link">Turbo Server Administrator</span>]<br>X-Spoon-Password: [Password]</p>
             <p><u>HTTP BODY</u><br>{"_id":"[LOGIN].[DIRECTORY PREFIX]","permitted":"true"}</p>
          </td>
       </tr>
@@ -1273,7 +1273,7 @@ When integrating with existing permissions systems, Turbo provides a web service
          <td>Grant Category Access</td>
          <td>
             <p><u>HTTP POST</u> <br>URL: <em><span>http://[SERVER]:[PORT]/0.1/lib/cat/[CATEGORY]/permissions</span></em></p>
-            <p><u>HTTP HEADERS</u> <br>X-Spoon-User: [Spoon Server Administrator] <br>X-Spoon-Password: [Password]</p>
+            <p><u>HTTP HEADERS</u> <br>X-Spoon-User: [Turbo Server Administrator] <br>X-Spoon-Password: [Password]</p>
             <p><u>HTTP BODY</u> <br>{"_id":"[LOGIN].[DIRECTORY PREFIX]","permitted":"true"}</p>
          </td>
       </tr>
@@ -1281,7 +1281,7 @@ When integrating with existing permissions systems, Turbo provides a web service
          <td>Revoke Application Access</td>
          <td>
             <p><u>HTTP POST</u> <br>URL: <a rel="nofollow">http://[SERVER]:[PORT]/0.1/lib/app/[APPLICATION]/permissions</a></p>
-            <p><u>HTTP HEADERS</u> <br>X-Spoon-User: [Spoon Server Administrator]<br> X-Spoon-Password: [Password]</p>
+            <p><u>HTTP HEADERS</u> <br>X-Spoon-User: [Turbo Server Administrator]<br> X-Spoon-Password: [Password]</p>
             <p><u>HTTP BODY</u><br> {"_id":"[LOGIN].[DIRECTORY PREFIX]","permitted":"false"}</p>
          </td>
       </tr>
@@ -1289,13 +1289,13 @@ When integrating with existing permissions systems, Turbo provides a web service
          <td>Revoke Category Access</td>
          <td>
             <p><u>HTTP POST</u> <br>URL: <em><span>http://[SERVER]:[PORT]/0.1/lib/cat/[CATEGORY]/permissions</span></em></p>
-            <p><u>HTTP HEADERS</u> <br>X-Spoon-User: [Spoon Server Administrator]<br> X-Spoon-Password: [Password]</p>
+            <p><u>HTTP HEADERS</u> <br>X-Spoon-User: [Turbo Server Administrator]<br> X-Spoon-Password: [Password]</p>
             <p><u>HTTP BODY<br></u>{"_id":"[LOGIN].[DIRECTORY PREFIX]","permitted":"false"}</p>
          </td>
       </tr>
 </table>
 <br>
-**Note**: [CATEGORY] refers to the Slug field in the "Category Details" page on the Spoon Server administrator portal. [APPLICATION] refers to the Slug field on "Application Details" page on the Spoon Server administrator portal.
+**Note**: [CATEGORY] refers to the Slug field in the "Category Details" page on the Turbo Server administrator portal. [APPLICATION] refers to the Slug field on "Application Details" page on the Turbo Server administrator portal.
 
 #### Migrating Sync Data When Changing the Storage Path
 
@@ -1303,7 +1303,7 @@ When specifying a new storage path for sync data, the existing data is not autom
 
 In order to migrate existing data, follow the steps, below:
 
-1. Log onto the Spoon Server Administrator portal
+1. Log onto the Turbo Server Administrator portal
 
 2. Click on the **Admin** button at the top of the portal
 
@@ -1313,19 +1313,19 @@ In order to migrate existing data, follow the steps, below:
 
 	c. Click **Save**
 
-3. Stop Spoon Server. This can be done by opening a Windows Command Prompt as an adminstrator, and entering the command **net stop turbo**
+3. Stop Turbo Server. This can be done by opening a Windows Command Prompt as an adminstrator, and entering the command **net stop turbo**
 
 4. Copy all of the data from the current storage path to the new storage path.
 
-5. Restart Spoon Server. This can be done by opening a Windows Command Prompt as an administrator and entering the command **net start turbo**
+5. Restart Turbo Server. This can be done by opening a Windows Command Prompt as an administrator and entering the command **net start turbo**
 
 #### Testing HTTPS (SSL) with a Self-Signed Certificate
 
-Follow these steps to test Spoon Server with SSL enabled using a self-signed certificate.
+Follow these steps to test Turbo Server with SSL enabled using a self-signed certificate.
 
 1. Configure the virtual application server to use HTTPS/SSL:
 
-	a. Log into the Spoon Server Administrator portal and navigate to the "Servers" page
+	a. Log into the Turbo Server Administrator portal and navigate to the "Servers" page
 
 	b. Click on the name of the server HTTPS/SSL will be enabled on.
 

@@ -6,7 +6,7 @@ After virtualizing an application with Turbo Virtual Application Studio, you can
 
 SpoonReg also enables you to create, reset, and remove application sandboxes: virtual environment "bubbles" where virtualized applications reside. Sandbox management provides control over application linking and intercommunication.
 
-Spoon Server users and administrators can use SpoonReg to register applications to the desktop. For specialized deployment scenarios, contact your Turbo representative to learn how to obtain your own version of the SpoonReg.exe utility.
+Turbo Server users and administrators can use SpoonReg to register applications to the desktop. For specialized deployment scenarios, contact your Turbo representative to learn how to obtain your own version of the SpoonReg.exe utility.
 
 #### Command-Line Syntax
 

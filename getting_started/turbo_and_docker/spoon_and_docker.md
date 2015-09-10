@@ -99,7 +99,7 @@ Like Docker, Turbo provides command-line interfaces (`turbo`) and a scripting la
 
 **[Turbo Studio](/docs/building/working-with-turbo-studio)** provides a visual design environment and easy-to-use wizards for creating images. Turbo Studio also includes a [Desktop Scan](/docs/building/working-with-turbo-studio#desktop-scan) tool that automatically detects and captures settings for any applications that are locally installed on a desktop.
 
-**[Spoon Server](http://turbo.net/server)** is an on-premises version of Turbo.net that	provides the same functionality in a behind-firewall environment. In addition, Spoon Server provides enterprise-specific such as a web application portal, Active Directory and LDAP integration, centralized management, user data synchronization, license management, and usage analytics.
+**[Turbo Server](http://turbo.net/server)** is an on-premises version of Turbo.net that	provides the same functionality in a behind-firewall environment. In addition, Turbo Server provides enterprise-specific such as a web application portal, Active Directory and LDAP integration, centralized management, user data synchronization, license management, and usage analytics.
 
 Turbo also maintains an online database of validated application templates and images for thousands of popular software applications.
 

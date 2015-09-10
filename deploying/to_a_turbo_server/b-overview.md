@@ -1,6 +1,6 @@
-## Spoon Server
+## Turbo Server
 
-Spoon Server is an application deployment tool that enables you to launch applications instantly from websites, portals and client desktops. Unlike traditional deployment methods, applications streamed from Spoon Server do not require download, installation, rebooting, administrative privileges, or separate setup steps. Applications hosted on Spoon Server launch after less than ten percent of the application is transferred. Spoon Server's speed and efficiency are possible thanks to two technologies: Virtualization and Predictive Streaming.
+Turbo Server is an application deployment tool that enables you to launch applications instantly from websites, portals and client desktops. Unlike traditional deployment methods, applications streamed from Turbo Server do not require download, installation, rebooting, administrative privileges, or separate setup steps. Applications hosted on Turbo Server launch after less than ten percent of the application is transferred. Turbo Server's speed and efficiency are possible thanks to two technologies: Virtualization and Predictive Streaming.
 
 #### Technology
 
@@ -22,11 +22,11 @@ You can register applications to the local device after transfers complete. Regi
 
 #### Features
 
-Spoon Server enables you to accomplish the following goals:
+Turbo Server enables you to accomplish the following goals:
 
-- Host virtual applications on the web. You can stream Turbo virtual applications from the Spoon Server portal site, custom external sites via HTML, or third-party collaborative web portals such as Microsoft SharePoint, IBM WebSphere, and Novell Teaming.
+- Host virtual applications on the web. You can stream Turbo virtual applications from the Turbo Server portal site, custom external sites via HTML, or third-party collaborative web portals such as Microsoft SharePoint, IBM WebSphere, and Novell Teaming.
 
-- Provide your organization with a single access point to your application portfolio. Instead of moving desktop-to-desktop to upgrade or install software, you can publish an application to Spoon Server's portal site; this provides licensed end-users with immediate access and full functionality.
+- Provide your organization with a single access point to your application portfolio. Instead of moving desktop-to-desktop to upgrade or install software, you can publish an application to Turbo Server's portal site; this provides licensed end-users with immediate access and full functionality.
 
 - Launch applications faster over the Internet and intranets. Turbo streamed applications launch five to twenty times faster than traditional downloadable applications. Turbo Stream does not require any special ports or proprietary protocols.
 
@@ -38,7 +38,7 @@ Spoon Server enables you to accomplish the following goals:
 
 #### Supported Platforms
 
-Spoon Server is compatible with the following platforms:
+Turbo Server is compatible with the following platforms:
 
 - Microsoft Windows Server 2003 (except R2)
 - Microsoft Windows Vista (all editions)
@@ -50,6 +50,6 @@ Spoon Server is compatible with the following platforms:
 - Microsoft Windows 8
 - Microsoft Windows 8.1
 
-Spoon Server supports x86 (32-bit) and x64 (64-bit) processor architectures. End-users can access Spoon Server from Microsoft XP, Microsoft Windows 2003, Microsoft Windows Vista, Microsoft Windows 7, Microsoft Windows 8, and Microsoft Windows 8.1 platforms. Spoon Server supports Microsoft Internet Explorer, Firefox, Safari, Google Chrome, Opera, and all other browsers built with the Gecko API.
+Turbo Server supports x86 (32-bit) and x64 (64-bit) processor architectures. End-users can access Turbo Server from Microsoft XP, Microsoft Windows 2003, Microsoft Windows Vista, Microsoft Windows 7, Microsoft Windows 8, and Microsoft Windows 8.1 platforms. Turbo Server supports Microsoft Internet Explorer, Firefox, Safari, Google Chrome, Opera, and all other browsers built with the Gecko API.
 
 **Note:** Versions of Internet Explorer prior to Internet Explorer 8 are not supported. If you are accessing the Portal Site with a newer version of Internet Explorer, but experiencing problems, be sure to disable compatibility mode. This feature is enabled automatically for intranet sites and serves to emulate Internet Explorer 7 which is not supported by the Portal Site.
