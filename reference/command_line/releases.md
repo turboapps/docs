@@ -21,4 +21,4 @@ head (local)
 
 #### JSON output
 
-When `--format=json` option was passed this command will provide output in JSON format. It will contain either `releases` array with list of available releases or an `error` object if command failed.
+When `--format=json` option was passed this command will provide output in JSON format. It will contain either `tags` array with list of available releases or an `error` object if command failed.

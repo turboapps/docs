@@ -38,7 +38,7 @@ ID 			  Name  				Release	 Created 				Size
 
 > turbo rmi chocolatey/chocolatey
 
-Image chocolatey/chocolatey was untagged
+Image chocolatey/chocolatey was unreleased
 
 > turbo images
 
