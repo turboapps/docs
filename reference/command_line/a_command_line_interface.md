@@ -1,6 +1,6 @@
 ## Command Line
 
-The Turbo command-line interface is accessible from the Windows command prompt using the `turbo`, `spn`, or `turbo` command. 
+The Turbo command-line interface is accessible from the Windows command prompt using the `turbo` command.
 
 ### help
 
