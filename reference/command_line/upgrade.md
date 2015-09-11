@@ -11,11 +11,13 @@ Usage: turbo upgrade <plan>
 
 The available plans include:
 
-- `build` - Unlimited public and private repositories, automated builds and access to the browser sandbox.
+- `pro` - Unlimited container storage, unlimited concurrent VMs and 5 private repos
 
-- `build-test` - All of the features of the `build` subscription plus unlimited selenium testing.
+- `dev` - All of the features of the `pro` subscription. Plus unlimited private repos and online sandbox tools (Browser-, SQL- and Selenium sandbox)
 
-- `build-test-deploy` - All the features of the `build-test` subscription plus on-premise capabilities with Turbo Server.
+- `team` - All the features of the `dev` subscription. Plus 3 users included.
+
+For details, see [Pricing](https://turbo.net/pricing)
 
 #### JSON output
 
