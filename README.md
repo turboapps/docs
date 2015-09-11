@@ -37,7 +37,7 @@ When contributing to the docs on Turbo, please take the following style guidelin
 building "my image" from /path/to/turbo.me
 ```
 
-- Always use `turbo` not `spn` in the command line documentation.
+- Always use `turbo` not `spoon` in the command line documentation.
 - All code blocks should be 'fenced' with 3 backticks (a la [GFM](http://github.com/github-flavored-markdown)). Inline code styles (i.e. this is a sample command: `turbo run`) only use 1 backtick. The syntax highlighting to use can be specified after the top 3 backticks (not available for inline code). 
 - Use inline code styles sparingly. 
 

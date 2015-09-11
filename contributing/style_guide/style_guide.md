@@ -22,7 +22,7 @@ When contributing to turbo.net/docs, please take the following style guidelines 
 
 #### Syntax notes
 
-- Always use `turbo` not `spn` in the command line documentation.
+- Always use `turbo` not `spoon` in the command line documentation.
 - All code blocks should be 'fenced' with 3 backticks (a la [GFM](http://github.com/github-flavored-markdown)). Inline code styles (i.e. this is a sample command: `turbo run`) only use 1 backtick.
 - Syntax highlighting can be specified after the top 3 backticks (not available for inline code). 
 - Use inline code styles sparingly.
