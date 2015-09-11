@@ -27,8 +27,6 @@ With Turbo, testers can:
 - Test in multiple client, server, and browser environments concurrently on a single physical device
 - Accelerate test cycles by eliminating the need to install application dependencies and modify configuration
 
-In addition to container functionality, Turbo offers a number of premium test services, such as manual and automated browser testing, Selenium testing, and CI integration. For more information, see [Testing](/docs/testing).
-
 #### For IT Managers
 
 With Turbo, system administrators can:
@@ -37,8 +35,6 @@ With Turbo, system administrators can:
 - Allow users to test out new or beta versions of applications without interfering with existing versions
 - Simplify deployment of desktop applications by eliminating dependencies (.NET, Java, Flash) and conflicts
 - Improve security by locking down desktop and server environments while preserving application access
-
-And Turbo works seamlessly with [Turbo.net](http://turbo.net), an application hosting service that provides an application portal, desktop console, data synchronization, cloud storage, and more.
 
 ### How does it work?
 
