@@ -27,7 +27,9 @@ With Turbo, testers can:
 - Test in multiple client, server, and browser environments concurrently on a single physical device
 - Accelerate test cycles by eliminating the need to install application dependencies and modify configuration
 
-In addition to container functionality, Turbo offers a number of premium test services, such as manual and automated browser testing, Selenium testing, and CI integration. For more information, see [Testing](/docs/testing).
+In addition to container functionality, Turbo powers Spoon.net.
+Spoon offers a number of premium test services, such as manual and automated browser testing,
+Selenium testing, and SQL Sandboxes. For more information, see [spoon.net](https://spoon.net/docs/sandboxes).
 
 #### For IT Managers
 
