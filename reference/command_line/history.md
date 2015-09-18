@@ -18,8 +18,8 @@ The most used recent images are listed first.
 # List the recently used images
 > turbo history
 
-ID            Last used             Name            Tag
---            ---------             ----            ---
+ID            Last used             Name            Release
+--            ---------             ----            -------
 73dfe6973074  8/29/2014 4:51:08 PM  node/node      
 07b66f57ed8d  8/29/2014 4:50:33 PM  git/git       
 ```

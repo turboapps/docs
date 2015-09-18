@@ -7,7 +7,7 @@ Contains information about logged in user.
 		"loggedInDate" : 2015-02-18T20:17:28.97Z
 	}
 
-Tag object contains following data:
+User object contains following data:
 
 * `login` - user login
 * `loggedInDate` - date when user logged in to Turbo

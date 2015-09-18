@@ -4,4 +4,4 @@ Contains array of `tag` objects.
 
 This array is available for following commands:
 
-* `tags` - contains list of all available tags for given image
+* `releases` - contains list of all available releases for given image

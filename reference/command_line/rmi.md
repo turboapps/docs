@@ -26,25 +26,25 @@ Image my-image was removed
 All images have been removed
 ```
 
-If the same image is forked or tagged multiple times then the `rmi` command will only untag the specified name, not remove the image itself. 
+If the same image is forked or released multiple times then the `rmi` command will only unrelease the specified name, not remove the image itself. 
 
 ```
 > turbo images
 
-ID 			  Name  				Tag	 Created 				Size
--- 			  ----  				---  -------    			----
-7a85fe8f7ad1  chocolatey/chocolatey      8/22/2014 11:34:19 AM  3.6 MB
-7a85fe8f7ad1  chocolatey-forked		1.0  8/22/2014 12:00:01 PM  3.6 MB
+ID 			  Name  				Release	 Created 				Size
+-- 			  ----  				-------  -------    			----
+7a85fe8f7ad1  chocolatey/chocolatey          8/22/2014 11:34:19 AM  3.6 MB
+7a85fe8f7ad1  chocolatey-forked		1.0      8/22/2014 12:00:01 PM  3.6 MB
 
 > turbo rmi chocolatey/chocolatey
 
-Image chocolatey/chocolatey was untagged
+Image chocolatey/chocolatey was unreleased
 
 > turbo images
 
-ID 			  Name  				Tag	 Created 				Size
--- 			  ----  				---  -------    			----
-7a85fe8f7ad1  chocolatey-forked		1.0  8/22/2014 12:00:01 PM  3.6 MB
+ID 			  Name  				Release	 Created 				Size
+-- 			  ----  				-------  -------    			----
+7a85fe8f7ad1  chocolatey-forked		1.0      8/22/2014 12:00:01 PM  3.6 MB
 
 > turbo rmi chocolatey-forked:1.0
 

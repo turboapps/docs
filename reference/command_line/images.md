@@ -21,9 +21,9 @@ The `--csv` flag can be specified to return the output as a tab-separated table.
 # List all images in local registry
 > turbo images
 
-ID 			  Name  				  Tag	 Created 				Size
--- 			  ----  				  ---    -------    			----
-7a85fe8f7ad1  chocolatey/chocolatey          8/22/2014 11:34:19 AM  3.6 MB
+ID 			  Name  				  Release	 Created 				Size
+-- 			  ----  				  -------    -------    			----
+7a85fe8f7ad1  chocolatey/chocolatey              8/22/2014 11:34:19 AM  3.6 MB
 ```
 
 #### JSON output

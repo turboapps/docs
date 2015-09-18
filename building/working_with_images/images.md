@@ -51,8 +51,8 @@ Save the script as a .me file and then use `turbo build` command:
 # New image is now saved in the local registry
 > turbo images
 
-Name   Tag   ID            Created               Size
-7-zip  9.20  95sdf1245239  8/18/2014 2:21:32 PM  25.4MB
+Name   Release   ID            Created               Size
+7-zip  9.20      95sdf1245239  8/18/2014 2:21:32 PM  25.4MB
 ```
 
 #### Building from a XAPPL File
@@ -90,9 +90,9 @@ Use the appropriate file type parameter:
 > turbo import thinapp <path to package.ini> 
 ```
 
-### Forking, Renaming, and Tagging
+### Forking, Renaming, and Releasing
 
-Images can be forked using the `turbo fork` command. This creates a link to the specified image with a new name and tag. It does not affect the original image.
+Images can be forked using the `turbo fork` command. This creates a link to the specified image with a new name and release. It does not affect the original image.
 
 ```
 # Pull an image
@@ -101,32 +101,32 @@ Images can be forked using the `turbo fork` command. This creates a link to the 
 # Check the image
 > turbo images
 
-Name            Tag  ID            Created               Size
-account/image        14wed2165141  8/18/2014 1:55:23 PM  1.9MB
+Name            Release  ID            Created               Size
+account/image            14wed2165141  8/18/2014 1:55:23 PM  1.9MB
 
-# Fork to a new image name and tag
+# Fork to a new image name and release
 > turbo fork account/image tester/test1:1.0
 
 # New image is added
 > turbo images
 
-Name            Tag  ID            Created               Size
-account/image        14wed2165141  8/18/2014 1:55:23 PM  1.9MB
-tester/test1    1.0  14wed2165141  8/18/2014 1:55:23 PM  1.9MB
+Name            Release  ID            Created               Size
+account/image            14wed2165141  8/18/2014 1:55:23 PM  1.9MB
+tester/test1    1.0      14wed2165141  8/18/2014 1:55:23 PM  1.9MB
 ```
 
-The `turbo tag` command can also retag images.
+The `turbo release` command can also rerelease images.
 
 ```
-# Specify the image you want to tag and the new tag
-> turbo tag tester/test1:1.0 2.0
+# Specify the image you want to release and the new release
+> turbo release tester/test1:1.0 2.0
 
-# Check the tag
+# Check the release
 > turbo images
 
-Name            Tag  ID            Created               Size
-account/image        14wed2165141  8/18/2014 1:55:23 PM  1.9MB
-tester/test1    2.0  14wed2165141  8/18/2014 1:55:23 PM  1.9MB
+Name            Release  ID            Created               Size
+account/image            14wed2165141  8/18/2014 1:55:23 PM  1.9MB
+tester/test1    2.0      14wed2165141  8/18/2014 1:55:23 PM  1.9MB
 ```
 
 ### Push to a Remote Repository
@@ -137,11 +137,11 @@ Images in a local registry can be copied to a remote repository on the [hub](/hu
 # Specify the image you want to push
 > turbo push sample
 
-# Or push to a specific namespace and tag
+# Or push to a specific namespace and release
 > turbo push spoontest/sample:latest
 ```
 
-If unspecified, the image will be pushed to the logged-in user's namespace with the tag head.
+If unspecified, the image will be pushed to the logged-in user's namespace with the release head.
 
 For basic users, pushed images will be public by default. For paid users, pushed images will be private by default until the private repository limit is reached. Visit [the hub](/hub) to change these defaults.
 

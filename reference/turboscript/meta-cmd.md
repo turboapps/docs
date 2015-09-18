@@ -14,7 +14,7 @@ Standard metadata properties are listed below:
 * Website
 * Version
 
-Additionally, metadata can be used to control namespace, name, and tag of the output image.
+Additionally, metadata can be used to control namespace, name, and release of the output image.
 
 Custom metadata can be specified using other name-value pairs. 
 
@@ -24,7 +24,7 @@ meta title="application name"
 
 meta namespace="organization"
 meta name="application"
-meta tag="0.1"
+meta release="0.1"
 
 # Add custom metadata
 meta internal-name="new-name"

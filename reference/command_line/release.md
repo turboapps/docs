@@ -1,18 +1,18 @@
-### tag
+### release
 
-The `tag` command applies a new tag to an image.
+The `release` command applies a new release to an image.
 
 ```
-Usage: turbo tag <image> <tag>
+Usage: turbo release <image> <release>
 
 <options> available:
      --format=VALUE         Use json format for output
 ```
 
-Apply a new tag to the head version of an image. 
+Apply a new release to the head version of an image. 
 
 ```
-> turbo tag my-image 1.0
+> turbo release my-image 1.0
 Output image: my-image:1.0
 ```
 

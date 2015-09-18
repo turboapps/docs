@@ -81,7 +81,7 @@ Error: The image already exists. You can overwrite with the --overwrite flag
 ...
 Output Image: my-new-image
 
-# Tags can be optionally added to the -n flag
+# Release can be optionally added to the -n flag
 > turbo build -n=my-new-image:1.0 C:\turbo.me
 ...
 Output Image: my-new-image:1.0

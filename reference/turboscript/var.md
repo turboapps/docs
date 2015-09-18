@@ -39,5 +39,5 @@ using wget
   cmd wget https://example.com/application-%version%.exe
 
 meta name = "application"
-meta tag = version
+meta release = version
 ```
