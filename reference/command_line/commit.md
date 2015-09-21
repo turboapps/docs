@@ -6,7 +6,7 @@ The `commit` command builds an image from a container. The image is built from t
 Usage: turbo commit <options> <container> <image>
 
 <options> available:
-      --arg=VALUE            Argument to startup file in commited image
+      --args                 Start of arguments to startup file in commited image
       --format=VALUE         Use json format for output
       --no-base              Do not merge the base image(s) into the new image
       --overwrite            Overwrite existing image
@@ -29,7 +29,7 @@ However, if the same container were committed with the command `turbo commit --n
 
 #### Startup file
 
-To alter the selected startup file, apply the new value with `--startup-file` parameter. To alter argument to the selected startup file, apply one or more values with `--arg` parameter.
+To alter the selected startup file, apply the new value with `--startup-file` parameter. To alter argument to the selected startup file, apply one or more values after `--args` flag.
 
 #### JSON output
 
