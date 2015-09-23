@@ -1,13 +1,13 @@
 ### register
 
-The `register` command creates shortcut for specified container in **Start Menu**
+The `register` command creates a shortcut for the specified container in the **Start Menu**
 
 Usage: turbo register <options> <container>
 
 <options> available:
       --format=VALUE         Use json format for output
 
-Desktop registration integrates the container into the Windows shell by **Start Menu** shortcut for the specified container.
+Desktop registration integrates the container into the Windows shell by adding a **Start Menu** shortcut for the specified container.
 
 Use the `turbo containers --no-trunc` command to see the list of registered containers.
 
