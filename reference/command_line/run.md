@@ -27,6 +27,7 @@ Usage: turbo run <options> <image>[+skin(color)] [<parameters>...]
       --private              Synchronize this container privately, visible only to me
       --public               Synchronize this container publicly, visible to everyone
       --pull                 Pulls base images from hub before running, if they exist
+  -r, --register             Create shortcut for created container in Start Menu
       --route-add=VALUE      Add a TCP or UDP mapping, format: [<hostPort>]:<containerPort>[/tcp|udp]
       --route-block=VALUE    Isolate all ports of specified protocol (TCP or UDP) by default
       --startup-file=VALUE   Override the default startup file and save it to the committed image
