@@ -1,15 +1,15 @@
-### unregister
+### unregisteri
 
-The `unregister` command will remove shortcuts and file associations for the specified image from the host device.
+The `unregisteri` command will remove shortcuts and file associations for the specified image from the host device.
 
 ```
-Usage: turbo unregister <image>
+Usage: turbo unregisteri <image>
 
 <options> available:
      --format=VALUE         Use json format for output
 ```
 
-If the specified image has not been previously registered to the host device using the `turbo register` command, then no action will be taken. 
+If the specified image has not been previously registered to the host device using the `turbo registeri` command, then no action will be taken. 
 
 #### JSON output
 
