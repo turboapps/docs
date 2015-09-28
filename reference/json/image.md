@@ -22,6 +22,4 @@ This object is available for following commands:
 * `checkout` - contains just checked-out image
 * `fork` - contains just created image
 * `pull` - contains just pulled image
-* `register` - contains just registered image
-* `unregister` - contains just unregistered image
 * `tag` - contains just tagged image
