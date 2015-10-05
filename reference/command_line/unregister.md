@@ -1,6 +1,6 @@
-### unregisteri
+### unregister
 
-The `unregister` command will remove shortcut for specified container from **Start Menu**
+The `unregister` command will remove the **Start Menu** shortcut for the specified container
 
 Usage: turbo.exe unregister <options> <container>
 
