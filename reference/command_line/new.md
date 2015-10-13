@@ -1,9 +1,9 @@
-### run
+### new
 
-The `run` command creates a new container from an image or continues the most recently used container with the same parameters.
+The `new` command creates a new container.
 
 ```
-Usage: turbo run <options> <image>[+skin(color)] [<parameters>...]
+Usage: turbo new <options> <image>[+skin(color)] [<parameters>...]
 
 <options> available:
   -a, --attach               Attach to stdin, stdout, and stderr of the container
@@ -41,24 +41,24 @@ Usage: turbo run <options> <image>[+skin(color)] [<parameters>...]
       --with-root=VALUE      Set the containers root directory
 ```
 
-Turbo `run` can be used to specify multiple images by separating each image with a comma. If the same file, registry entry, or environment variable exists in multiple images, then the one from whichever image was specified last will win the conflict and be used in the virtual environment. Virtual machine settings are taken from the last specified image. Due to this "layering" approach, it is a good practice to specify images with newer versions of applications or libraries after images with older versions.
+Turbo `new` can be used to specify multiple images by separating each image with a comma. If the same file, registry entry, or environment variable exists in multiple images, then the one from whichever image was specified last will win the conflict and be used in the virtual environment. Virtual machine settings are taken from the last specified image. Due to this "layering" approach, it is a good practice to specify images with newer versions of applications or libraries after images with older versions.
 
 ```
 # Create a container with the apache/apache image
-> turbo run apache/apache
+> turbo new apache/apache
 
 # Create a container with apache and mysql
-> turbo run apache/apache,mysql/mysql
+> turbo new apache/apache,mysql/mysql
 
 # Create a container with .NET 3 and 4
-> turbo run microsoft/dotnet:4.0.3,microsoft/dotnet:3.5.1
+> turbo new microsoft/dotnet:4.0.3,microsoft/dotnet:3.5.1
 ```
 
 To use images temporarily, without committing them to the final image, use the `--using` switch. This is handy for a tool like 7zip and Git that may only needed during the build process.
 
 ```
 # Create a container using git temporarily to get a project
-> turbo run --using git/git clean
+> turbo new --using git/git clean
 
 # Clone a git project
 (0x3842xd) C:\> git clone https://github.com/JodaOrg/joda-time.git C:\root
@@ -75,32 +75,32 @@ Containers are started with the startup file specified in the last passed image.
 	
 ```
 # Default startup file is used to start container
-> turbo run oracle/jdk
+> turbo new oracle/jdk
 
 # Override the startup file to use the command prompt
-> turbo run --startup-file=cmd.exe oracle/jdk
+> turbo new --startup-file=cmd.exe oracle/jdk
 ```
 
 When passing arguments to a startup file or command, we recommend separating these arguments from the rest of the command with a `--`. Arguments specified after the `--` mark are passed directly to the startup file/command.
 
-If a `--` mark is not used, any argument matching a `run` command flag will be interpreted by Turbo which may lead to unexpected behavior. 
+If a `--` mark is not used, any argument matching a `new` command flag will be interpreted by Turbo which may lead to unexpected behavior. 
 
 ```
   # Turbo will interpret the /d flag and execute a container in detached mode
-  > turbo run spoonbrew/clean /d
+  > turbo new spoonbrew/clean /d
   
   # /d flag is passed to cmd.exe, disabling execution of AutoRun commands from the registry
-  > turbo run spoonbrew/clean -- /d 
+  > turbo new spoonbrew/clean -- /d 
 ```
 
 A container's standard streams (stdin/out/err) can be redirected to either the current command prompt or the background using the `--attach` and `--detach` flags. 
 
 ```
 # Redict standard streams to current command prompt
-> turbo run -a <image>
+> turbo new -a <image>
 
 # Detach the container from the native prompt
-> turbo run -d <image>
+> turbo new -d <image>
 ```
 
 Detaching from a container will allow further work to be done in the native prompt while the container is running.  
@@ -109,12 +109,12 @@ The initial working directory for the container can be set with the `workdir` in
 
 ```
 # By default, a container's working directory matches the host's working directory
-C:\Users> turbo run git/git
+C:\Users> turbo new git/git
 
 (0x3842xd) C:\Users>
 
 # This sets the working directory to the root of the C drive
-C:\Users> turbo run -w="C:\" git/git
+C:\Users> turbo new -w="C:\" git/git
 
 (0x3842xd) C:\> 
 
@@ -124,7 +124,7 @@ Containerized applications can be distinguished from normal apps with skin layer
 
 ```
 # Opens detached, containerized notepad with blue border around its window
-turbo run --startup-file=notepad -d clean+skin(blue)
+turbo new --startup-file=notepad -d clean+skin(blue)
 ```
 
 Spoon VM settings can be enabled or disabled with the `--enable` and `--disable` flags, respectively. For a list of Spoon VM settings, see **VM Settings** section of the documentation.
@@ -139,10 +139,10 @@ Environment variables can be added to a container with the `-e` or `--env-file` 
 
 ```
 # Add environment variable 'foo' with value 'bar'
-> turbo run -e=foo=bar <image>
+> turbo new -e=foo=bar <image>
 
 # Specify multiple env vars with multiple flags
-> turbo run -e=foo=bar -e=x=2 <image>
+> turbo new -e=foo=bar -e=x=2 <image>
 ```
 
 If your container requires several environment variables then we recommend creating an **env-file**. An **env-file** is a line-delimited text file that lists all the environment variables to add to the container. The example file below lists 3 environment variables: 
@@ -160,7 +160,7 @@ Environment variables are always expanded on the host system before they are add
 
 C:\Windows\system32;C:\Windows;
 
-> turbo run -e=%PATH%;C:\Users <image>
+> turbo new -e=%PATH%;C:\Users <image>
 
 (2fedfja3) > echo %PATH%
 C:\Windows\system32;C:\Windows;C:\Users	
@@ -172,13 +172,13 @@ By default, containers run in the host network, meaning that any services expose
 
 ```
 # Launch a new container in the host network context (the default)
-> turbo run --network=host <image>
+> turbo new --network=host <image>
 
 # Launch two containers in a "mynet" virtual network
-> turbo run -d --network=mynet --name=web <image>
+> turbo new -d --network=mynet --name=web <image>
 web
 
-> turbo run -d --network=mynet myself/webbrowser http://web
+> turbo new -d --network=mynet myself/webbrowser http://web
 dd73e48aec024a7b9e15d2cf6599394f
 
 # The former will accessible by its name "web" within the network,
@@ -193,25 +193,25 @@ All network operations (opening/closing ports, for example) are passed through t
 
 ```
 # Map container tcp port 8080 to local port 80
-> turbo run --route-add=80:8080 <image>
+> turbo new --route-add=80:8080 <image>
 
 # Map udp traffic on container port 8080 to local port 80
-> turbo run --route-add=80:8080/udp <image>
+> turbo new --route-add=80:8080/udp <image>
 
 # Map container tcp port 80 to random port on local machine
 # The random port can be later queried using the netstat command
-> turbo run --route-add=:80 <image>
+> turbo new --route-add=:80 <image>
 ```
 
 The default policy of allowing containers to bind to any port on the local machine can be changed with the `--route-block` flag. It isolates all services bound to container ports on specified protocols (tcp or udp). They can only be opened using the `--route-add` flag.
 
 ```
 # Isolate all tcp services of a container
-> turbo run --route-block=tcp <image>
+> turbo new --route-block=tcp <image>
 
 # Isolate all tcp and udp services, but allow container tcp port 3486
 # be bound to port 80 on local machine
-> turbo run --route-block=tcp,udp --route-add=80:3486 <image>
+> turbo new --route-block=tcp,udp --route-add=80:3486 <image>
 ```
 
 #### Adding Custom Name Resolution Entries
@@ -221,18 +221,18 @@ All containers use name resolution provided by the host operating system. You ca
 ```
 # Make name my-test-service resolve to whatever the name
 # test-service-43 resolves
-> turbo run --hosts=my-test-service:test-service-43 <image>
+> turbo new --hosts=my-test-service:test-service-43 <image>
 
 # Make name mysite.net resolve to IPv4 address 127.0.0.1 and
 # name ipv6.mysite.net resolve to IPv6 address ::1
-> turbo run --hosts=127.0.0.1:mysite.net --hosts=::1:ipv6.mysite.net <image>
+> turbo new --hosts=127.0.0.1:mysite.net --hosts=::1:ipv6.mysite.net <image>
 ```
 
 #### Container-to-Container Links
 
 If you decided to not expose any services running in a container to the public by specifying the `--route-block` flag and not `--route-add`, you may still want to be able to connect to the services in your container from another container on the same machine. Although this is best achieved by running the containers in the same virtual network using the `--network` flag, container linking can be used for this purpose as well.
 
-When creating a container with the `turbo run` command, you can use the `--link` flag to link it to any existing containers and the new container will be able to connect to any services exposed by the linked containers. Such connection creates a parent-child relationship where the newly created container is the parent.
+When creating a container with the `turbo new` command, you can use the `--link` flag to link it to any existing containers and the new container will be able to connect to any services exposed by the linked containers. Such connection creates a parent-child relationship where the newly created container is the parent.
 
 With each link, an alias name must be specified. Name resolution overrides are added to the parent container so it can refer to its children by these names. Note how with container links the name that a container will use to refer to another container is defined by the former (the parent) using a parameter, instead of by the name of the container as is the case with virtual networks (the `--network` flag).
 
@@ -244,11 +244,11 @@ Container links also work between containers running in different virtual networ
 First create two containers, each exposing web sites on private port 80, but with no services exposed outside the containers. Run them in detached mode.
 
 ```
-> turbo run --route-block tcp,udp -d <image>
+> turbo new --route-block tcp,udp -d <image>
 
 05bf1aa429204d1586487f4015e1428c
 
-> turbo run --route-block tcp,udp -d <image>
+> turbo new --route-block tcp,udp -d <image>
 
 94a38820b45443c9ac74792215e33a00
 ```
@@ -256,7 +256,7 @@ First create two containers, each exposing web sites on private port 80, but wit
 Then create a web browser container linked to the previously created containers.
 
 ```
-> turbo run --link 05bf:web1 --link 94a3:web2 myself/webbrowser http://web1 http://web2
+> turbo new --link 05bf:web1 --link 94a3:web2 myself/webbrowser http://web1 http://web2
 ```
 
 You will be able to browse websites served by the linked containers even though they are not publically available.
@@ -275,10 +275,10 @@ startup file doc=[("c:\windows\system32\notepad.exe", "c:\doc\welcome.txt"), ("c
 # from command-prompt...
 
 # launch both notepad and regedit are launched
-> turbo run test-trigger
+> turbo new test-trigger
 
 # launch welcome.txt and howto.txt in notepad
-> turbo run test-trigger --trigger=doc
+> turbo new test-trigger --trigger=doc
 ```
 
 #### Using Mount
@@ -289,24 +289,24 @@ If the source folder doesn't exist, the `mount` option is ignored. If the target
 Example for mounting a folder.
 
 ```
-turbo run --mount "C:\FolderOnHostSystem=C:\FolderInContainer" clean
+turbo new --mount "C:\FolderOnHostSystem=C:\FolderInContainer" clean
 ```
 
 Mounts are useful to share a cache folder, like a local Maven repository:
 ```
-turbo run --mount "%USERPROFILE%\.m2=%USERPROFILE%\.m2" jdk,maven
+turbo new --mount "%USERPROFILE%\.m2=%USERPROFILE%\.m2" jdk,maven
 ```
 
 Mounting multiple folder is done by repeating the mount parameter:
 
 ```
-turbo run --mount "C:\Mount1=C:\InContainer1" --mount "C:\Mount2=C:\InContainer2" clean
+turbo new --mount "C:\Mount1=C:\InContainer1" --mount "C:\Mount2=C:\InContainer2" clean
 ```
 
 It is also possible to mount a folder from another container:
 
 ```
-turbo run --mount <containerid>:"C:\FolderInSourceContainer=C:\FolderInTargetContainer" clean
+turbo new --mount <containerid>:"C:\FolderInSourceContainer=C:\FolderInTargetContainer" clean
 ```
 
 #### Exit code
