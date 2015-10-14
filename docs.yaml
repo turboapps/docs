@@ -162,6 +162,7 @@ documents:
   - export
   - fork
   - history
+  - install
   - images
   - import
   - inspect
@@ -173,7 +174,6 @@ documents:
   - ps
   - pull
   - push
-  - register
   - resume
   - revert
   - rm
@@ -187,8 +187,8 @@ documents:
   - tags
   - top
   - try
-  - unregister
   - upgrade
+  - uninstall
   - version
   - vm
   - vms
