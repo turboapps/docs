@@ -8,6 +8,7 @@ Usage: turbo containers <options>
 <options> available:
       --csv                  Print output with tab-separated columns
       --format=VALUE         Use json format for output
+      --include=VALUE        Specify a column that is to be returned
   -l, --latest               List the most recently created container
   -n=VALUE                   List the 'n' most recently created containers
       --no-trunc             Don't truncate output
