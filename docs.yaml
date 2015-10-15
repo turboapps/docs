@@ -170,6 +170,7 @@ documents:
   - logout
   - logs
   - netstat
+  - new
   - pause
   - ps
   - pull
