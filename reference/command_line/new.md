@@ -20,6 +20,7 @@ Usage: turbo new <options> <image>[+skin(color)] [<parameters>...]
       --format=VALUE         Use json format for output
       --hosts=VALUE          Add an entry to the virtual /etc/hosts file (<redirect>:<name>)
       --install              Create a shortcut for the newly created container in the Start Menu
+      --isolate              Specify the level of isolation from the host (full|writecopy|merge)
       --link=VALUE           Add link to another container (<container>:<alias>)
       --mount VALUE          Mount a host folder into the container, format: [other-container:]<source>=<target>
   -n, --name=VALUE           Give a name to the container
@@ -309,6 +310,16 @@ It is also possible to mount a folder from another container:
 ```
 turbo new --mount <containerid>:"C:\FolderInSourceContainer=C:\FolderInTargetContainer" clean
 ```
+
+#### Isolation Settings
+
+The `isolate` parameter enables different levels of visibility and access from the vm to the host environment. The `full` isolation setting prevents read and write to the host system and registry. This is the preferred setting if you want the vm to run like a clean, completely isolated system.
+
+The `writecopy` isolation setting allows the vm to read the host file system and registry but not write to the host. This is the preferred setting if you want the vm to be able to access host applications and settings, but not alter the host in any way.
+
+The `merge` isolation setting allows read and write access to the host system. This is the preferred setting for applications like Gimp or Notepad++ where you want to allow the vm to edit and save files to the host file system.  
+
+Note that the vm isolation setting does not override *more restrictive* isolation settings that already exist in the image. For example, if you created an image in Turbo Studio and set specific folders and keys to `full` isolation, those settings would be preserved even if the vm isolation is set to `merge`. 
 
 #### Exit code
 
