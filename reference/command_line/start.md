@@ -3,7 +3,7 @@
 The `start` command restarts a container which is not currently running. 
 
 ```
-Usage: turbo.exe start <options> <container>
+Usage: turbo start <options> <container>
 
 <options> available:
   -a, --attach               Attach to stdin, stdout, and stderr of the
