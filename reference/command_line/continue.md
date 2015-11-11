@@ -3,7 +3,7 @@
 The `continue` command downloads the last state of a container and then starts it.
 
 ```
-Usage: turbo.exe continue <options> <state-id>
+Usage: turbo continue <options> <state-id>
 
 <options> available:
   -a, --attach               Attach to stdin, stdout, and stderr of the
