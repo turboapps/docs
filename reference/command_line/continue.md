@@ -3,18 +3,44 @@
 The `continue` command downloads the last state of a container and then starts it.
 
 ```
-Usage: turbo continue <options> <container>
+Usage: turbo.exe continue <options> <state-id>
 
 <options> available:
- -d, --detach               Run the container in the background
-     --diagnostic           Enable diagnotic logging
-     --disable-sync         Automatic container pushes are disabled
-     --format=VALUE         Use json format for output
-     --private              Synchronize this container privately, visible only to me
-     --public               Synchronize this container publicly, visible to everyone
-     --wait-after-error     Leave program open after error
-     --wait-after-exit      Leave program open after it exits
-     --with-root=VALUE      Set the containers root directory
+  -a, --attach               Attach to stdin, stdout, and stderr of the
+                               container
+      --admin                Run the container as admin user
+  -d, --detach               Run the container in the background
+      --diagnostic           Enable diagnotic logging
+      --disable=VALUE        Disable the specified Turbo VM setting
+      --disable-sync         Disable container synchronization
+  -e, --env=VALUE            Set environment variables inside the container
+      --enable=VALUE         Enable the specified Turbo VM setting
+      --enable-sync          Enable container synchronization
+      --env-file=VALUE       Read in a line delimited file of ENV variables
+      --format=VALUE         Use json format for output
+      --hosts=VALUE          Add an entry to the virtual /etc/hosts file
+                               (<redirect>:<name>)
+  -i, --isolate=VALUE        Set isolation level: full, write-copy or merge
+      --link=VALUE           Add link to another container
+                               (<container>:<alias>)
+      --mount=VALUE          Mount a host folder into the container. Format:
+                               [other-container:]SourceFolder[=TargetFolder]
+      --private              Synchronize this container privately, visible
+                               only to me
+      --public               Synchronize this container publicly, visible to
+                               everyone
+      --route-add=VALUE      Add a TCP or UDP mapping
+                               format: [<hostPort>]:<containerPort>[/tcp|udp]
+      --route-block=VALUE    Isolate all ports of specified protocol (TCP or
+                               UDP) by default
+      --startup-file=VALUE   Override the default startup file
+      --startup-verb=VALUE   Override the default startup verb
+      --trigger=VALUE        Execute named group of startup files
+      --using=VALUE          Use selected images as a temporary dependency
+      --vm=VALUE             The Turbo VM version to run the container with
+      --wait-after-error     Leave program open after error
+      --wait-after-exit      Leave program open after it exits
+      --with-root=VALUE      Set the containers root directory
 ```
 
 If the `continue` command is run against an already-running container then no action will be taken. 
