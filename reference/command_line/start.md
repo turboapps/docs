@@ -12,7 +12,6 @@ Usage: turbo start <options> <container>
   -d, --detach               Run the container in the background
       --diagnostic           Enable diagnotic logging
       --disable=VALUE        Disable the specified Turbo VM setting
-      --disable-sync         Disable container synchronization
   -e, --env=VALUE            Set environment variables inside the container
       --enable=VALUE         Enable the specified Turbo VM setting
       --enable-sync          Enable container synchronization

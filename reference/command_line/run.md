@@ -11,7 +11,6 @@ Usage: turbo run <options> <image>[+skin(color)] [<parameters>...]
   -d, --detach               Run the container in the background
       --diagnostic           Enable diagnotic logging
       --disable=VALUE        Disable the specified Spoon VM setting
-      --disable-sync         Automatic container pushes are disabled
   -e, --env=VALUE            Set environment variables inside the container
       --enable=VALUE         Enable the specified Spoon VM setting
       --enable-log-stream    Enable web streaming of logs
