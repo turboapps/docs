@@ -24,4 +24,4 @@ Turbo Studio supports both 32- and 64-bit applications. Both 32-bit (under 32-bi
 
 **Note:** Turbo Studio does not support creation of 16-bit executables. To run 16-bit DOS applications, virtualize an appropriate emulator with the application and launch the application through the emulator.
 
-Download a free 30-day trial [here](/studio) or try the free, [express version](http://turbo.net/studio-express). 
+Download a free 30-day trial [here](/studio) or try the free, [express version](/studio/download). 
