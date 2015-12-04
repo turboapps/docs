@@ -16,11 +16,11 @@ Usage: turbo export <options> <image> <path>
 #### Examples:
 
 ```
-# Copy an image to the local machine
-> turbo export my-new-image C:\
+# Export an image to the local file system
+> turbo export image C:\path\to\image.svm
 
-# Copy an image to a network share
-> turbo export my-new-image \\server\folder
+# Export an image to a network share
+> turbo export image \\server\folder\image.svm
 ```
 
 #### JSON output
