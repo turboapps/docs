@@ -25,7 +25,6 @@ Usage: turbo new <options> <image>[+skin(color)] [<parameters>...]
       --mount VALUE          Mount a host folder into the container, format: [other-container:]<source>=<target>
   -n, --name=VALUE           Give a name to the container
       --network=VALUE        Run container in specified virtual network
-      --no-run               Create container but do not execute it
       --no-stream            Force no streaming even when stream is available
       --private              Synchronize this container privately, visible only to me
       --public               Synchronize this container publicly, visible to everyone
