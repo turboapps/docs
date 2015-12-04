@@ -175,6 +175,8 @@ documents:
   - ps
   - pull
   - push
+  - release
+  - releases
   - resume
   - revert
   - rm
@@ -184,8 +186,6 @@ documents:
   - start
   - states
   - stop
-  - tag
-  - tags
   - top
   - try
   - upgrade
