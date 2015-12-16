@@ -2,10 +2,12 @@
 
 The `install` command creates a shortcut for the specified container in the **Start Menu**
 
+```
 Usage: turbo install <options> <container>
 
 <options> available:
       --format=VALUE         Use json format for output
+```
 
 Installation integrates the container into the Windows shell by adding a **Start Menu** shortcut for the specified container.
 
