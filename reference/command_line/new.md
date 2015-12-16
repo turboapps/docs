@@ -19,12 +19,13 @@ Usage: turbo new <options> <image>[+skin(color)] [<parameters>...]
       --env-file=VALUE       Read in a line delimited file of ENV variables
       --format=VALUE         Use json format for output
       --hosts=VALUE          Add an entry to the virtual /etc/hosts file (<redirect>:<name>)
+  -i, --isolate              Specify the level of isolation from the host (full|writecopy|merge)
       --install              Create a shortcut for the newly created container in the Start Menu
-      --isolate              Specify the level of isolation from the host (full|writecopy|merge)
       --link=VALUE           Add link to another container (<container>:<alias>)
       --mount VALUE          Mount a host folder into the container, format: [other-container:]<source>=<target>
   -n, --name=VALUE           Give a name to the container
       --network=VALUE        Run container in specified virtual network
+      --no-run               Create container but do not execute it
       --no-stream            Force no streaming even when stream is available
       --private              Synchronize this container privately, visible only to me
       --public               Synchronize this container publicly, visible to everyone

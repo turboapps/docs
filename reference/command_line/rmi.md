@@ -7,8 +7,7 @@ Usage: turbo rmi <options> <image>
 
 <options> available:
   -a, --all                  Remove all images from the local machine
-  -f, --force                Force removal of the image
-     --format=VALUE         Use json format for output
+      --format=VALUE         Use json format for output
 
 ```
 

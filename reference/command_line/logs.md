@@ -16,8 +16,6 @@ Usage: turbo logs <options> <container>
       --stdout               Only show the stdout logs
   -t                         Show timestamps of log entries
       --tail=VALUE           Only show the last VALUE lines of each log file
-      --wait-after-error     Leave program open after error
-      --wait-after-exit      Leave program open after exit
 ```
 
 Only the standard streams for a container are recorded and logged. To enable more comprehensive logging, use the `--diagnostic` flag of the `run` command when the container is created or of the `start` command when the container is restarted. 
