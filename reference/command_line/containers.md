@@ -10,7 +10,7 @@ Usage: turbo containers <options>
       --format=VALUE         Use json format for output
       --include=VALUE        Specify a column that is to be returned
   -l, --latest               List the most recently created container
-  -n, --number=VALUE                   List the 'n' most recently created containers
+  -n, --number=VALUE         List the 'n' most recently created containers
       --no-trunc             Don't truncate output
 ```
 

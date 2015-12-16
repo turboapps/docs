@@ -9,7 +9,7 @@ Usage: turbo states [<container-prefix>] <options>
       --csv                  Print output with tab-separated columns
       --format=VALUE         Use json format for output
   -l, --latest               List the most recently created container state
-  -n, --number=VALUE                   List the 'n' most recently created container states
+  -n, --number=VALUE         List the 'n' most recently created container states
       --no-trunc             Don't truncate output
 ```
 
