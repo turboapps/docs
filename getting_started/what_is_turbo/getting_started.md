@@ -113,14 +113,13 @@ with licensing requirements.
 
 The public Turbo Hub is hosted at [http://turbo.net/hub](http://turbo.net/hub).
 
-**What is the Turbo pricing model?**
+**What is the Turbo.net pricing model?**
 
-Turbo.net is free to use for public repositories. Private repositories and other advanced features and tools are available in paid subscriptions.
-See [Pricing and Plans](/pricing) for more information on Turbo plan options.
+Turbo.net is a subscription service and can be purchased for individuals or an organization. There is a seven day trial period on all new accounts. See [Pricing and Plans](/pricing) for more information on Turbo.net plan options.  
 
 **What if I don't want to host my repositories hosted on Turbo.net?**
 
-Turbo is available as an on-premises enterprise server. Please see **[Turbo Server](/server)** for more information or to request
+Turbo is also available as an on-premises enterprise server. Please see **[Turbo Server](/server)** for more information or to request
 an evaluation license.
 
 
