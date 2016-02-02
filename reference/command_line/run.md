@@ -1,44 +1,53 @@
 ### run
 
-The `run` command creates a new container from an image or continues the most recently used container with the same parameters.
+The `run` command creates a new container from an image or start the most recently used container with the same parameters.
 
 ```
-Usage: turbo run <options> <image>[+skin(color)] [<parameters>...]
+Usage: run <options> [<image>][+skin(color)] [<parameters>...]
 
 <options> available:
+      --                     Parameters after -- are passed directly to container process
   -a, --attach               Attach to stdin, stdout, and stderr of the container
-      --admin                Run the container as an administrator
+      --ad-domain-allow=VALUE
+                             Active Directory domain which is alowed to run
+      --ad-domain-deny=VALUE Active Directory domain which is denied from running
+      --ad-group-allow=VALUE Active Directory group membership which is allows to run
+      --ad-group-deny=VALUE  Active Directory group membership which is denied from running
+      --admin                Run the container as admin user
   -d, --detach               Run the container in the background
       --diagnostic           Enable diagnotic logging
-      --disable=VALUE        Disable the specified Spoon VM setting
+      --disable=VALUE        Disable the specified Turbo VM setting
   -e, --env=VALUE            Set environment variables inside the container
-      --enable=VALUE         Enable the specified Spoon VM setting
+      --enable=VALUE         Enable the specified Turbo VM setting
       --enable-log-stream    Enable web streaming of logs
+      --enable-screencast    Enable web streaming of screenshots
       --enable-sync          Enable container synchronization
       --env-file=VALUE       Read in a line delimited file of ENV variables
       --format=VALUE         Use json format for output
       --hosts=VALUE          Add an entry to the virtual /etc/hosts file (<redirect>:<name>)
-      --install              Create a shortcut for the newly created container in the Start Menu
-      --isolate              Specify the level of isolation from the host (full|writecopy|merge)
+  -i, --isolate=VALUE        Set isolation level: full, write-copy or merge
+      --install              Create shortcut for created container in Start Menu
       --link=VALUE           Add link to another container (<container>:<alias>)
-      --mount VALUE          Mount a host folder into the container, format: [other-container:]<source>=<target>
-  -n, --name=VALUE           Give a name to the container
-      --network=VALUE        Run container in specified virtual network
-      --no-stream            Force no streaming even when stream is available
+      --mount=VALUE          Mount a host folder into the container. Format: [other-container:]SourceFolder[=TargetFolder]
+  -n, --name=VALUE           Name of created container
+      --network=VALUE        Run container in specified named network
       --private              Synchronize this container privately, visible only to me
       --public               Synchronize this container publicly, visible to everyone
       --pull                 Pulls base images from hub before running, if they exist
-      --route-add=VALUE      Add a TCP or UDP mapping, format: [<hostPort>]:<containerPort>[/tcp|udp]
+      --route-add=VALUE      Add a TCP or UDP mapping. Format: [<hostPort>]:<containerPort>[/tcp|udp]
       --route-block=VALUE    Isolate all ports of specified protocol (TCP or UDP) by default
-      --startup-file=VALUE   Override the default startup file and save it to the committed image
-      --temp                 Remove container when it exists
+      --startup-file=VALUE   Override the default startup file
+      --startup-file-default=VALUE
+                             Overrides the default startup file if the main image does not have one
+      --startup-verb=VALUE   Override the default startup verb
+      --temp                 Remove container when it exits
       --trigger=VALUE        Execute named group of startup files
+      --upgrade-from=VALUE   Upgrade from specified container, when images have changed
       --using=VALUE          Use specified images as a temporary dependency
-      --vm=VALUE             The Spoon VM version to run the container with
+      --vm=VALUE             The Turbo VM version to run the container with
   -w, --working-dir=VALUE    Set the initial working directory inside the container
       --wait-after-error     Leave program open after error
       --wait-after-exit      Leave program open after it exits
-      --with-root=VALUE      Set the containers root directory
 ```
 
 Turbo `run` can be used to specify multiple images by separating each image with a comma. If the same file, registry entry, or environment variable exists in multiple images, then the one from whichever image was specified last will win the conflict and be used in the virtual environment. Virtual machine settings are taken from the last specified image. Due to this "layering" approach, it is a good practice to specify images with newer versions of applications or libraries after images with older versions.
