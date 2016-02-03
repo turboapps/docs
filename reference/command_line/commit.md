@@ -3,15 +3,26 @@
 The `commit` command builds an image from a container. The image is built from the container's most recent state. 
 
 ```
-Usage: turbo commit <options> <container> <image>
+Usage: commit <options> [<container>] [<image>]
 
 <options> available:
+      --ad-domain-allow=VALUE
+                             Active Directory domain which is alowed to run
+      --ad-domain-deny=VALUE Active Directory domain which is denied from running
+      --ad-group-allow=VALUE Active Directory group membership which is allows to run
+      --ad-group-deny=VALUE  Active Directory group membership which is denied from running
+  -e, --env=VALUE            Set environment variables inside the container
+      --env-file=VALUE       Read in a line delimited file of ENV variables
       --format=VALUE         Use json format for output
-      --no-base              Do not merge the base image(s) into the new image
+      --hosts=VALUE          Add an entry to the virtual /etc/hosts file (<redirect>:<name>)
+      --no-base              Do not merge the base image into the new image
       --overwrite            Overwrite existing image
+      --route-add=VALUE      Add a TCP or UDP mapping. Format: [<hostPort>]:<containerPort>[/tcp|udp]
+      --route-block=VALUE    Isolate all ports of specified protocol (TCP or UDP) by default
       --startup-file=VALUE   Override the default startup file and save it to the committed image
+      --trigger=VALUE        Execute named group of startup files
       --wait-after-error     Leave program open after error
-      --wait-after-exit      Leave program open after exit
+      --wait-after-exit      Leave program open after it exits
 ```
 
 #### Merging Images
