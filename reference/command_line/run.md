@@ -209,7 +209,7 @@ All network operations (opening/closing ports, for example) are passed through t
 
 # Map container tcp port 80 to random port on local machine
 # The random port can be later queried using the netstat command
-> turbo new --route-add=tcp://80:0 <image>
+> turbo run --route-add=tcp://80:0 <image>
 
 ```
 
