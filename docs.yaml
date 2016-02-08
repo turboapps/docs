@@ -184,10 +184,15 @@ documents:
   - start
   - states
   - stop
+  - subscribe
+  - subscription
+  - subscriptions
   - top
   - try
   - upgrade
   - uninstall
+  - uninstalli
+  - unsubscribe
   - version
   - vm
   - vms
