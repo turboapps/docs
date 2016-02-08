@@ -1,6 +1,6 @@
 ### run
 
-The `run` command creates a new container from an image or start the most recently used container with the same parameters.
+The `run` command creates a new container from an image or starts the container with the same name and images.
 
 ```
 Usage: run <options> [<image>][+skin(color)] [<parameters>...]
