@@ -224,20 +224,6 @@ The default policy of allowing containers to bind to any port on the local machi
 > turbo run --route-block=tcp,udp --route-add=tcp://3486:80 <image>
 ```
 
-#### Adding Custom Name Resolution Entries
-
-All containers use name resolution provided by the host operating system. You can add specific name resolution overrides using the `--hosts` flag. The syntax is similar to that of the `hosts` file of the operating system.
-
-```
-# Make name my-test-service resolve to whatever the name
-# test-service-43 resolves
-> turbo run --hosts=my-test-service:test-service-43 <image>
-
-# Make name mysite.net resolve to IPv4 address 127.0.0.1 and
-# name ipv6.mysite.net resolve to IPv6 address ::1
-> turbo run --hosts=127.0.0.1:mysite.net --hosts=::1:ipv6.mysite.net <image>
-```
-
 #### Container-to-Container Links
 
 If you decided to not expose any services running in a container to the public by specifying the `--route-block` flag and not `--route-add`, you may still want to be able to connect to the services in your container from another container on the same machine. Although this is best achieved by running the containers in the same virtual network using the `--network` flag, container linking can be used for this purpose as well.
@@ -270,6 +256,50 @@ Then create a web browser container linked to the previously created containers.
 ```
 
 You will be able to browse websites served by the linked containers even though they are not publically available.
+
+#### Controlling Outbound Traffic
+
+The `--route-add` and `--route-block` flags allow to define not only rules that apply to inbound network traffic with the `tcp` and `udp` protocols, but also rules that apply to outbound network traffic. For this, the `ip` protocol is used. The routes can be used to implement whitelist or blacklist approaches. As an added convenience, it is also possible to reroute traffic to one IP address to another IP address, effectively defining an IP address alias.
+
+##### Examples
+
+Create a PuTTY container with all outbound access blocked except to IP address 10.0.0.34 (whitelist approach):
+
+```
+> turbo run --route-block=ip --route-add=ip://10.0.0.34 putty
+```
+
+In addition to the above, reroute all traffic to 1.1.1.1 to 10.0.0.34, making it possible to connect to host at 10.0.0.34 typing address 1.1.1.1 in PuTTY:
+
+```
+> turbo run --route-block=ip --route-add=ip://10.0.0.34 --route-add=ip://1.1.1.1:10.0.0.34 putty
+```
+
+It is also possible to use IP ranges using the CIDR notation. The following command allows PuTTY in the container to connect only to hosts in the 192.168.1.0/24 network:
+
+```
+> turbo run --route-block=ip --route-add=ip://192.168.1.0/24 putty
+```
+
+To disallow the app to connect to a set of specific IP addresses, simply specify them in the `--route-block` flags:
+
+```
+> turbo run --route-block=ip://192.168.1.55 --route-block=ip://192.168.1.57  putty
+```
+
+#### Adding Custom Name Resolution Entries
+
+All containers use name resolution provided by the host operating system. You can add specific name resolution overrides using the `--hosts` flag. The syntax is similar to that of the `hosts` file of the operating system.
+
+```
+# Make name my-test-service resolve to whatever the name
+# test-service-43 resolves
+> turbo run --hosts=my-test-service:test-service-43 <image>
+
+# Make name mysite.net resolve to IPv4 address 127.0.0.1 and
+# name ipv6.mysite.net resolve to IPv6 address ::1
+> turbo run --hosts=127.0.0.1:mysite.net --hosts=::1:ipv6.mysite.net <image>
+```
 
 
 #### Using Startup Triggers
