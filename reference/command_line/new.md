@@ -62,7 +62,7 @@ Turbo `new` can be used to specify multiple images by separating each image with
 > turbo new apache/apache,mysql/mysql
 
 # Create a container with .NET 3 and 4
-> turbo new microsoft/dotnet:4.0.3,microsoft/dotnet:3.5.1
+> turbo new microsoft/dotnet:3.5.1,microsoft/dotnet:4.0.3
 ```
 
 To use images temporarily, without committing them to the final image, use the `--using` switch. This is handy for a tool like 7zip and Git that may only needed during the build process.
