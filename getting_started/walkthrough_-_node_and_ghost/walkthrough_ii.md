@@ -160,7 +160,7 @@ However, with the help of port mapping, we can run multiple instances of the Gho
 C:\> turbo run -d --route-add=tcp://2368:8080 ghost:0.5.1
 8bc1c8a0774e452391d6be6255d9d13e
 
-# Create a container that maps port 2368 on the host to port 8081 on the container.
+# Create a container that maps port 8081 on the host to port 2368 on the container.
 C:\> turbo run -d --route-add=tcp://2368:8081 ghost:0.5.1
 8a524a9fd6a047778bc88f3169a90780
 

@@ -12,7 +12,7 @@ Usage: turbo netstat <container>
 #### Examples:
 
 ```
-> turbo run --route-add=tcp://8080:80 --hosts=localhost:lhost --link=0218:service -d <image> 63621076457c4b4fb7fff3fcbfda06b1
+> turbo run --route-add=tcp://80:0 --route-add=tcp://8081:0 --hosts=localhost:lhost --link=0218:service -d <image> 63621076457c4b4fb7fff3fcbfda06b1
 > turbo netstat 6362
 
 Active port mappings:
@@ -25,7 +25,7 @@ Container links:
 021833f5b86c4a80980eff9e5e9f39e2 as service
 ```
 
-**Note**: only active port mappings are printed. Since the container in the example did not expose any service on tcp port 8081, the mapping corresponding to flag `--route-add=:8081` was not present in the output.
+**Note**: only active port mappings are printed. Since the container in the example did not expose any service on tcp port 8081, the mapping corresponding to flag `--route-add=tcp://8081:0` was not present in the output.
 
 #### JSON output
 

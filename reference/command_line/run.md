@@ -198,7 +198,7 @@ dd73e48aec024a7b9e15d2cf6599394f
 
 #### Port Mapping
 
-All network operations (opening/closing ports, for example) are passed through to the local machine when running in the host network context. To remap container ports to other ports on the local machine, use the `--route-add` flag. This flag also works when running in a virtualized network environment (by specifying the `--network` flag). Specific protocols (tcp or udp) can be mapped by specifying a `/[protocol]` after the mapping. If no protocol is specified, tcp is assumed.
+All network operations (opening/closing ports, for example) are passed through to the local machine when running in the host network context. To remap container ports to other ports on the local machine, use the `--route-add` flag. This flag also works when running in a virtualized network environment (by specifying the `--network` flag).
 
 ```
 # Map container tcp port 8080 to local port 80
@@ -206,6 +206,10 @@ All network operations (opening/closing ports, for example) are passed through t
 
 # Map udp traffic on container port 8080 to local port 80
 > turbo run --route-add=udp://8080:80 <image>
+
+# Map container tcp port 80 to random port on local machine
+# The random port can be later queried using the netstat command
+> turbo new --route-add=tcp://80:0 <image>
 
 ```
 
@@ -250,11 +254,11 @@ Container links also work between containers running in different virtual networ
 First create two containers, each exposing web sites on private port 80, but with no services exposed outside the containers. Run them in detached mode.
 
 ```
-> turbo run --route-block tcp,udp -d <image>
+> turbo run --route-block=tcp,udp -d <image>
 
 05bf1aa429204d1586487f4015e1428c
 
-> turbo run --route-block tcp,udp -d <image>
+> turbo run --route-block=tcp,udp -d <image>
 
 94a38820b45443c9ac74792215e33a00
 ```
