@@ -1,6 +1,6 @@
 ### subscriptions
 
-The `subscriptions` command lists all subscriptions.
+The `subscriptions` command lists the subscriptions that are currently registered on the device.
 
 ```
 Usage: subscriptions <options>
@@ -11,4 +11,6 @@ Usage: subscriptions <options>
       --no-trunc             Don't truncate output
 ```
 
-The 'subscription' command shows more details about the listed subscription.
+The `subscriptions` command provides some basic information about the subscriptions registered on the device including the name, last updated time and a list of applications.
+
+For more detailed information about a specific subscription, use the `subscription` command.

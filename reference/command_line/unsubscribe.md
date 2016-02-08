@@ -1,6 +1,6 @@
-### subscribe
+### unsubscribe
 
-The `unsubscribe` command unsubscribes for the specified channel. It uninstalls the shortcuts and the update task.
+The `unsubscribe` command unsubscribes the specified channel. It uninstalls the shortcuts and removes the update task.
 
 ```
 Usage: unsubscribe <options> <channel>
@@ -11,3 +11,5 @@ Usage: unsubscribe <options> <channel>
       --wait-after-error     Leave process open after error
       --wait-after-exit      Leave process open after it exits
 ```
+
+The `unsubscribe` command will unsubscribe all users if the `subscribe` command specified `--all-users`. In this case, the command would need to be run as an Administrator. 

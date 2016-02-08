@@ -37,7 +37,7 @@ For example, if a container were created with the command `turbo run git/git,nug
 
 However, if the same container were committed with the command `turbo commit --no-base <container id> my-new-image`, `my-new-image` would only contain the files and registry keys created or modified in the container. The `git/git` and `nuget/nuget` images are included as a dependency at runtime.
 
-#### Startup file
+#### Startup File
 
 To alter the selected startup file, apply the new value with `--startup-file` parameter.
 

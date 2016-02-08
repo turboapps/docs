@@ -1,6 +1,6 @@
 ### subscription
 
-The `subscription` command prints details, updates, suspends and resumes subscriptions to a channel. 
+The `subscription` command is used to update, suspend, resume and print the details of a subscription. 
 
 ```
 Usage: subscription <options> [action] <name>
@@ -8,12 +8,20 @@ Usage: subscription <options> [action] <name>
 
 <options> available:
       --format=VALUE         Use the specified format for output. Supported values: json
-      --no-pull              Updates subscription without pulling images
+      --no-pull              Update the subscription without pulling images
       --wait-after-error     Leave process open after error
       --wait-after-exit      Leave process open after it exits
 ```
 
-The actions are `print`, `update`, `suspend` and `resume`.
+The available actions are `update`, `suspend`, `resume` and `print`.
+
+#### Update a Subscription
+The `update` action updates all of the images in the subscription to the latest version.  
+
+Use the `--no-pull` option to update the subscription without pulling new image versions, instead the images will be streamed on demand.
+
+#### Suspend and Resume a Subscription
+The `suspend` action suspends updates for the specified subscription. The `resume` command will resume updates.
 
 #### Listing Details
 The `print` action shows details about the subscription.
@@ -28,10 +36,3 @@ The `print` action shows details about the subscription.
     Mozilla Firefox & Flash Latest  mozilla/firefox  Installed  44.0      adobe/flash:20.0.0.267
     Mozilla Firefox Latest          mozilla/firefox  Installed  44.0      
 ```
-
-#### Update a Subscription
-The `update` action updates a subscription to the latest images. 
-`--no-pull` updates the subscription without pulling the images, instead images are downloaded on demand.
-
-#### Suspend and Resume a Subscription
-The `suspend` action suspends receiving updates for the specified subscription. The `resume` action resumes it again.

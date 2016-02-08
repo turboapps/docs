@@ -13,7 +13,7 @@ Usage: turbo import <options> <type> <path>
       --wait-after-exit      Leave program open after exit
 ```
 
-The filetype must be specified when importing external files into the Turbo registry. 
+The type must be specified when importing external configurations into the Turbo registry. 
 
 ```
 svm           Turbo image
@@ -25,10 +25,10 @@ You can optionally specify a name for the newly-imported image. Use the `--overw
 
 ```
 # Import a thinapp config
-turbo import -n=old-thinapp-image thinapp C:\s\package.ini
+turbo import -n=my-thinapp-image thinapp C:\s\package.ini
 
 # Import a turbo image
-turbo import svm C:\s\old-image.svm
+turbo import -n=my-svm-image svm C:\s\my-image.svm
 ```
 
 **Turbo Studio** users can use this command to import their existing components.

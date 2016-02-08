@@ -166,7 +166,7 @@ Container links also work between containers running in different virtual networ
 
 #### Controlling Outbound Traffic
 
-The `--route-add` and `--route-block` flags allow to define not only rules that apply to inbound network traffic with the `tcp` and `udp` protocols, but also rules that apply to outbound network traffic. For this, the `ip` protocol is used. The routes can be used to implement whitelist or blacklist approaches. As an added convenience, it is also possible to reroute traffic to one IP address to another IP address, effectively defining an IP address alias.
+The `--route-add` and `--route-block` not only provide a way to create rules that apply to inbound network traffic with the `tcp` and `udp` protocols, but also rules that apply to outbound network traffic. For the outbound rules, the `ip` protocol is used. The rules can be implemented using a whitelist or a blacklist approach. It is also possible to reroute traffic from one IP address to another, effectively defining an IP address alias.
 
 ##### Examples
 
@@ -188,7 +188,7 @@ It is also possible to use IP ranges using the CIDR notation. The following comm
 > turbo try --route-block=ip --route-add=ip://192.168.1.0/24 putty
 ```
 
-To disallow the app to connect to a set of specific IP addresses, simply specify them in the `--route-block` flags:
+To disallow the app to connect to a set of specific IP addresses (blacklist approach), simply specify them in the `--route-block` flags:
 
 ```
 > turbo try --route-block=ip://192.168.1.55 --route-block=ip://192.168.1.57  putty
