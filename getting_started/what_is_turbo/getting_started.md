@@ -88,7 +88,7 @@ Yes. Please enjoy responsibly.
 
 **Does Turbo support virtual networking?**
 
-Yes. See the `--route-add`, `--route-block`, `--link`, `--hosts`, and `--network` commands.
+Yes. Controlling both inbound and outbound traffic is supported. See the `--route-add`, `--route-block`, `--link`, `--hosts`, and `--network` commands.
 
 **Does Turbo support linking multiple containers?**
 
