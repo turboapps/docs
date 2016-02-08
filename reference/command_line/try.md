@@ -22,8 +22,8 @@ Usage: turbo try <options> <image> [<parameters>...]
       --network=VALUE        Run container in specified virtual network
       --no-stream            Force no streaming even when stream is available
       --pull                 Pulls base images from hub before running, if they exist
-      --route-add=VALUE      Add a TCP or UDP mapping, format: [<hostPort>]:<containerPort>[/tcp|udp]
-      --route-block=VALUE    Isolate all ports of specified protocol (TCP or UDP) by default
+      --route-add=VALUE      Add route mapping. Supported protocols: ip, pipe, tcp, udp
+      --route-block=VALUE    Block specified route or protocol. Supported protocols: ip, tcp, udp
       --startup-file=VALUE   Override the default startup file
       --trigger=VALUE        Execute named group of startup files
       --using=VALUE          Use specified images as a temporary dependency
@@ -135,15 +135,12 @@ dd73e48aec024a7b9e15d2cf6599394f
 All network operations (opening/closing ports, for example) are passed through to the local machine when running in the host network context. To remap container ports to other ports on the local machine, use the `--route-add` flag. This flag also works when running in a virtualized network environment (by specifying the `--network` flag). Specific protocols (tcp or udp) can be mapped by specifying a `/[protocol]` after the mapping. If no protocol is specified, tcp is assumed.
 
 ```
-# Map container tcp port 8080 to local port 80
-> turbo try --route-add=80:8080 <image>
+# Isolate all tcp services of a container
+> turbo try --route-block=tcp <image>
 
-# Map udp traffic on container port 8080 to local port 80
-> turbo try --route-add=80:8080/udp <image>
-
-# Map container tcp port 80 to random port on local machine
-# The random port can be later queried using the netstat command
-> turbo try --route-add=:80 <image>
+# Isolate all tcp and udp services, but allow container tcp port 3486
+# be bound to port 80 on local machine
+> turbo try --route-block=tcp,udp --route-add=tcp://3486:80 <image>
 ```
 
 The default policy of allowing containers to bind to any port on the local machine can be changed with the `--route-block` flag. It isolates all services bound to container ports on specified protocols (tcp or udp). They can only be opened using the `--route-add` flag.
@@ -154,7 +151,7 @@ The default policy of allowing containers to bind to any port on the local machi
 
 # Isolate all tcp and udp services, but allow container tcp port 3486
 # be bound to port 80 on local machine
-> turbo try --route-block=tcp,udp --route-add=80:3486 <image>
+> turbo try --route-block=tcp,udp --route-add=tcp://3486:80 <image>
 ```
 
 #### Adding Custom Name Resolution Entries
