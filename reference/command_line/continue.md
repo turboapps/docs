@@ -29,10 +29,8 @@ Usage: turbo continue <options> <state-id>
                                only to me
       --public               Synchronize this container publicly, visible to
                                everyone
-      --route-add=VALUE      Add a TCP or UDP mapping
-                               format: [<hostPort>]:<containerPort>[/tcp|udp]
-      --route-block=VALUE    Isolate all ports of specified protocol (TCP or
-                               UDP) by default
+      --route-add=VALUE      Add route mapping. Supported protocols: ip, pipe, tcp, udp
+      --route-block=VALUE    Block specified route or protocol. Supported protocols: ip, tcp, udp
       --startup-file=VALUE   Override the default startup file
       --startup-verb=VALUE   Override the default startup verb
       --trigger=VALUE        Execute named group of startup files

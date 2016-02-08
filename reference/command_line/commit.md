@@ -17,8 +17,8 @@ Usage: commit <options> [<container>] [<image>]
       --hosts=VALUE          Add an entry to the virtual /etc/hosts file (<redirect>:<name>)
       --no-base              Do not merge the base image into the new image
       --overwrite            Overwrite existing image
-      --route-add=VALUE      Add a TCP or UDP mapping. Format: [<hostPort>]:<containerPort>[/tcp|udp]
-      --route-block=VALUE    Isolate all ports of specified protocol (TCP or UDP) by default
+      --route-add=VALUE      Add route mapping. Supported protocols: ip, pipe, tcp, udp
+      --route-block=VALUE    Block specified route or protocol. Supported protocols: ip, tcp, udp
       --startup-file=VALUE   Override the default startup file and save it to the committed image
       --trigger=VALUE        Execute named group of startup files
       --wait-after-error     Leave program open after error
