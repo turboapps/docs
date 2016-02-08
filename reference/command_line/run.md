@@ -34,8 +34,8 @@ Usage: run <options> [<image>][+skin(color)] [<parameters>...]
       --private              Synchronize this container privately, visible only to me
       --public               Synchronize this container publicly, visible to everyone
       --pull                 Pulls base images from hub before running, if they exist
-      --route-add=VALUE            Add route mapping. Supported protocols: ip, pipe, tcp, udp
-      --route-block=VALUE          Block specified route or protocol. Supported protocols: ip, tcp, udp
+      --route-add=VALUE      Add route mapping. Supported protocols: ip, pipe, tcp, udp
+      --route-block=VALUE    Block specified route or protocol. Supported protocols: ip, tcp, udp
       --startup-file=VALUE   Override the default startup file
       --startup-file-default=VALUE
                              Overrides the default startup file if the main image does not have one
