@@ -44,7 +44,7 @@ Turbo `try` can be used to specify multiple images by separating each image with
 > turbo try apache/apache,mysql/mysql
 
 # Create a container with .NET 3 and 4
-> turbo try microsoft/dotnet:4.0.3,microsoft/dotnet:3.5.1
+> turbo try microsoft/dotnet:3.5.1,microsoft/dotnet:4.0.3
 ```
 
 Containers are started with the startup file specified in the last passed image. If a startup file is not set in the base image then `cmd.exe /k` is used.
