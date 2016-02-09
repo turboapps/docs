@@ -1,9 +1,9 @@
 ### unsubscribe
 
-The `unsubscribe` command unsubscribes the specified channel. It uninstalls the shortcuts and removes the update task.
+The `unsubscribe` command unsubscribes a specified subscription or all subscriptions. It uninstalls shortcuts and removes the update task.
 
 ```
-Usage: unsubscribe <options> <channel>
+Usage: unsubscribe <options> <subscription>
 
 <options> available:
   -a, --all                  Unsubscribes all subscriptions on the local machine
@@ -12,4 +12,6 @@ Usage: unsubscribe <options> <channel>
       --wait-after-exit      Leave process open after it exits
 ```
 
-The `unsubscribe` command will unsubscribe all users if the `subscribe` command specified `--all-users`. In this case, the command would need to be run as an Administrator. 
+If the `--all-users` option was used during, the `unsubscribe` command will unsubscribe all users. In this case, the command needs to be run as an Administrator. 
+
+To unsubscribe from all subscriptions, use the `--all` option.

@@ -1,6 +1,6 @@
 ### uninstalli
 
-The `uninstalli` removes images from the start menu for the specified image.
+The `uninstalli` removes the Start menu shortcuts for the image and disables the subscription update process for the image.
 
 ```
 Usage: uninstalli <options> <image>
@@ -13,6 +13,5 @@ Usage: uninstalli <options> <image>
       --wait-after-exit      Leave process open after it exits
 ```
 
-#### Uninstalling a Subscription's Image
-A image removed by `uninstalli` will not be updated and reinstalled by a subscription. 
-It can be reinstalled with the `subscribe` command.
+#### Uninstalling an Image that is Part of a Subscription
+An image removed by `uninstalli` will not be updated or reinstalled during the subscription update process. However, it can be reinstalled by running the `subscribe` command again.
