@@ -6,8 +6,13 @@ The `fork` command creates a copy of an existing container.
 Usage: turbo fork  <existing container> [<new container name>]
 
 <options> available:
-      --format=VALUE         Use json format for output
+      --format=VALUE         Use the specified format for output. Supported values: json
+      --images=VALUE         Use specified images for new container
+      --wait-after-error     Leave process open after error
+      --wait-after-exit      Leave process open after it exits
 ```
+
+When `--images' is specified, those images are used in the copied container.
 
 #### Examples:
 
@@ -17,6 +22,9 @@ Usage: turbo fork  <existing container> [<new container name>]
 
 # Create a named copy of a container
 > turbo fork test-container copy-of-test-container
+
+# Create a copy with Java & Firefox as new main images
+> turbo fork chrome-container --images=oracle/jre,mozilla/firefox
 
 ```
 
