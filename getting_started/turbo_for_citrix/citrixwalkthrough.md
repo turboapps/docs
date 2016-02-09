@@ -34,7 +34,7 @@ Click **Edit** and choose an option to upload your organization's logo
 
 ![](/components/docs/getting_started/turbo_for_citrix/Corg4.png)
 
-Enter a **Full Name** and **Email address** for your organization. Optionally enter a **Description**. **Social Accounts** can be entered for **Twitter** and **GitHub**, only enter the organization's account username, a URL is not required. Optionally, you can also enter a URL for your organizations **Website**.
+Enter a **Full Name** and **Email address** for your organization. Optionally enter a **Description**. Optionally enter a username for **Twitter** and **GitHub**, only enter the organization's account username, a URL is not required. Optionally, you can also enter a URL for your organizations **Website**.
 
 Click **Update**
 
