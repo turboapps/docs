@@ -5,33 +5,33 @@ The Turbo subscription feature provides the ability to select applications from 
 
 ![](/components/docs/getting_started/turbo_for_citrix/Step1.png)
 
-Navigate to **[https://www.turbo.net](https://www.turbo.net/)** Click on Sign In
+Navigate to **[https://www.turbo.net](https://www.turbo.net/)** Click on **Sign In**
 
 ![](/components/docs/getting_started/turbo_for_citrix/Step2.png)
 
-Enter your username and password and then click the Sign In button.  If you do not have a Turbo account, click the Sign Up link to create an account.
+Enter your username and password and then click the **Sign In** button.  If you do not have a Turbo account, click the **Sign Up** link to create an account.
 
 ![](/components/docs/getting_started/turbo_for_citrix/Step3.png)
 
-After logging in, click on any of the available categories under All Applications to browse the applications on the Turbo.net hub. 
+After logging in, click on any of the available categories under **All Applications** to browse the applications on the Turbo.net hub. 
 
 ![](/components/docs/getting_started/turbo_for_citrix/Step4.png)
 
-When you identify an application that you would like to add to your subscription, simply hover your mouse over the application and click on the star icon beside its name to mark it as a favorite.  You can have both self-updating applications and legacy versions of applications depending on your specific needs.  In the above screenshot, you can see Chrome Latest and Chrome 43 have been selected as favorites.  Select a Latest version, such as Chrome Latest, to ensure that your version is always the latest available.  Select a specific version, such as Chrome 43, to ensure that your version is always the same.   
+When you identify an application that you would like to add to your subscription, simply hover your mouse over the application and click on the star icon beside its name to mark it as a **favorite**.  You can have both self-updating applications and legacy versions of applications depending on your specific needs.  In the above screenshot, you can see **Chrome Latest** and **Chrome 43** have been selected as favorites.  Select a **Latest** version, such as **Chrome Latest**, to ensure that your version is always the latest available.  Select a specific version, such as **Chrome 43**, to ensure that your version is always the same.   
 
 ![](/components/docs/getting_started/turbo_for_citrix/Step5.png)
 
-If you have previously installed the Turbo Client, uninstall it before proceeding.
+If you have previously installed the **Turbo Client**, uninstall it before proceeding.
 
 Launch the Command Prompt
 
 ![](/components/docs/getting_started/turbo_for_citrix/Step6.png)
 
-Download the latest Turbo Client from http://start.turbo.net/install.  Install turboplugin.exe with --all-users to make the client available for all users on the machine.  This is critical in a shared user environment such as XenApp or RDS. 
+Download the latest **Turbo Client** from **[http://start.turbo.net/install](http://start.turbo.net/install)**. Install **turbo-plugin.exe** with **--all-users** to make the client available for all users on the machine.  This is critical in a shared user environment such as XenApp or RDS. 
 
 ![](/components/docs/getting_started/turbo_for_citrix/Step7.png)
 
-Enter turbo subscribe --all-users <username> in the command prompt to subscribe to your applications.  The --all-users flag makes your applications available for all users on the machine.
+Enter **turbo subscribe --all-users <username>** in the command prompt to subscribe to your applications.  The --all-users flag makes your applications available for all users on the machine.
 
 ![](/components/docs/getting_started/turbo_for_citrix/Step8.png)
 
@@ -39,7 +39,7 @@ Shortcuts for all subscribed applications will be created in your Start menu.
 
 ![](/components/docs/getting_started/turbo_for_citrix/Step9.png)
 
-In Citrix Studio, click Create Application to go through the application wizard.
+In **Citrix Studio**, click **Create Application** to go through the application wizard.
 
 ![](/components/docs/getting_started/turbo_for_citrix/Step10.png)
 
