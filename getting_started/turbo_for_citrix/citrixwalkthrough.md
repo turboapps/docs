@@ -1,7 +1,12 @@
-## Getting Started - Turbo for Citrix
+## Turbo for Citrix
 
 The Turbo subscription feature provides the ability to select applications from the Turbo.net hub and have them automatically update as new versions are released. This is ideal for RDS and XenApp servers as you can add this to your automated server builds for seamless integration with your existing infrastructure.   To try the Turbo subscription feature for yourself, follow this step-by-step guide.
 
+### Topics Covered
+
+1. Creating an Organization on Turbo.net
+2. Setting up a list of applications
+3. Subscribing on the client
 
 ![](/components/docs/getting_started/turbo_for_citrix/Step1.png)
 
