@@ -1,0 +1,1 @@
+Turbo for Citrix guide coming soon

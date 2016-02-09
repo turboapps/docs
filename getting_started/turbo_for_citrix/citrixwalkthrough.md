@@ -8,6 +8,8 @@ The Turbo subscription feature provides the ability to select applications from 
 2. Setting up a list of applications
 3. Subscribing on the client
 
+### Creating an Organization on Turbo.net
+
 ![](/components/docs/getting_started/turbo_for_citrix/Step1.png)
 
 Navigate to **[https://www.turbo.net](https://www.turbo.net/)** Click on **Sign In**
@@ -16,13 +18,51 @@ Navigate to **[https://www.turbo.net](https://www.turbo.net/)** Click on **Sign 
 
 Enter your username and password and then click the **Sign In** button.  If you do not have a Turbo account, click the **Sign Up** link to create an account.
 
-![](/components/docs/getting_started/turbo_for_citrix/Step3.png)
+![](/components/docs/getting_started/turbo_for_citrix/Corg1.png)
 
-After logging in, click on any of the available categories under **All Applications** to browse the applications on the Turbo.net hub. 
+Navigate to **[https://turbo.net/proto/enterprise/signup](https://turbo.net/proto/enterprise/signup)** 
 
-![](/components/docs/getting_started/turbo_for_citrix/Step4.png)
+Enter an **Organization name** and **Organization email** and then click **Create Organization**
 
-When you identify an application that you would like to add to your subscription, simply hover your mouse over the application and click on the star icon beside its name to mark it as a **favorite**.  You can have both self-updating applications and legacy versions of applications depending on your specific needs.  In the above screenshot, you can see **Chrome Latest** and **Chrome 43** have been selected as favorites.  Select a **Latest** version, such as **Chrome Latest**, to ensure that your version is always the latest available.  Select a specific version, such as **Chrome 43**, to ensure that your version is always the same.   
+![](/components/docs/getting_started/turbo_for_citrix/Corg2.png)
+
+Click **Manage Organization**
+
+![](/components/docs/getting_started/turbo_for_citrix/Corg3.png)
+
+Click **Edit** and choose an option to upload your organization's logo
+
+![](/components/docs/getting_started/turbo_for_citrix/Corg4.png)
+
+Enter a **Full Name** and **Email address** for your organization. Optionally enter a **Description**. **Social Accounts** can be entered for **Twitter** and **GitHub**, only enter the organization's account username, a URL is not required. Optionally, you can also enter a URL for your organizations **Website**.
+
+Click **Update**
+
+![](/components/docs/getting_started/turbo_for_citrix/Corg7.png)
+
+Update account information such as **Payment Information** by browsing the options see in the above image.
+
+
+### Setting up a list of applications
+
+![](/components/docs/getting_started/turbo_for_citrix/Corg6.png)
+
+Navigate to **Hub**. From here you can browse thorough the applications on the Turbo.net hub. Click on **Browsers**Enter your username and password and then click the **Sign In** button.  If you do not have a Turbo account, click the **Sign Up** link to create an account.
+
+![](/components/docs/getting_started/turbo_for_citrix/Corg8.png)
+
+When you identify an application that you would like to add to your subscription, simply hover your mouse over the application and click on the star icon beside its name to mark it as a **favorite**.  You can have both self-updating applications and legacy versions of applications depending on your specific needs.  In the above screenshot, you can see **Chrome Latest** and **Chrome 43** have been selected as favorites.  Select a **Latest** version, such as **Chrome Latest**, to ensure that your version is always the latest available.  Select a specific version, such as **Chrome 43**, to ensure that your version is always the same. 
+
+![](/components/docs/getting_started/turbo_for_citrix/Corg9.png)
+
+Click **Save**
+
+![](/components/docs/getting_started/turbo_for_citrix/Corg10.png)
+
+Navigate to **Home**. All application added appear in this list.
+
+  
+### Subscribing on the client
 
 ![](/components/docs/getting_started/turbo_for_citrix/Step5.png)
 
@@ -40,11 +80,17 @@ Download the latest **Turbo Client** from **[http://start.turbo.net/install](htt
 
 ```	
 # Run Turbo subscribe
-C:\> turbo subscribe --all-users <username>
+C:\> turbo subscribe --all-users <org\user>
 
 ```
 
-Enter **turbo subscribe --all-users <username>** in the command prompt to subscribe to your applications.  The --all-users flag makes your applications available for all users on the machine.
+Enter **turbo subscribe --all-users <org>** in the command prompt to subscribe to your organization's applications.  
+
+Or
+
+Enter **turbo subscribe --all-users <user>** in the command prompt to subscribe to your applications.
+
+The --all-users flag makes your applications available for all users on the machine.
 
 ![](/components/docs/getting_started/turbo_for_citrix/Step8.png)
 
