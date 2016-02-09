@@ -30,11 +30,19 @@ If you have previously installed the **Turbo Client**, uninstall it before proce
 
 Launch the Command Prompt
 
-![](/components/docs/getting_started/turbo_for_citrix/Step6.png)
+```	
+# Install the Turbo Client for all users
+C:\> turbo-plugin.exe --all-users
+
+```
 
 Download the latest **Turbo Client** from **[http://start.turbo.net/install](http://start.turbo.net/install)**. Install **turbo-plugin.exe** with **--all-users** to make the client available for all users on the machine.  This is critical in a shared user environment such as XenApp or RDS. 
 
-![](/components/docs/getting_started/turbo_for_citrix/Step7.png)
+```	
+# Run Turbo subscribe
+C:\> turbo subscribe --all-users <username>
+
+```
 
 Enter **turbo subscribe --all-users <username>** in the command prompt to subscribe to your applications.  The --all-users flag makes your applications available for all users on the machine.
 
