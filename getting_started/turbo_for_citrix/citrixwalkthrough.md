@@ -1,14 +1,14 @@
 ## Turbo for Citrix
 
-The Turbo subscription feature provides the ability to select applications from the Turbo.net hub and have them automatically update as new versions are released. This is ideal for RDS and XenApp servers as you can add this to your automated server builds for seamless integration with your existing infrastructure.   To try the Turbo subscription feature for yourself, follow this step-by-step guide.
+The Turbo subscription feature provides the ability to select applications from the Turbo.net hub and have them automatically update as new versions are released. This is ideal for RDS and XenApp servers as you can add this to your automated server builds for seamless integration with your existing infrastructure. To try the Turbo subscription feature for yourself, follow this step-by-step guide.
 
 ### Topics Covered
 
-1. Creating an Organization on Turbo.net
-2. Setting up a list of applications
-3. Subscribing on the client
+1. Creating an organization on Turbo.net
+2. Setting up a channel
+3. Subscribing to the channel
 
-### Creating an Organization on Turbo.net
+### Creating an organization on Turbo.net
 
 ![](/components/docs/getting_started/turbo_for_citrix/Step1.png)
 
@@ -22,7 +22,7 @@ Enter your username and password and then click the **Sign In** button.  If you 
 
 Navigate to **[https://turbo.net/proto/enterprise/signup](https://turbo.net/proto/enterprise/signup)** 
 
-Enter an **Organization name** and **Organization email** and then click **Create Organization**
+Enter an **Organization name** and an **Organization email** and then click **Create Organization**
 
 ![](/components/docs/getting_started/turbo_for_citrix/Corg2.png)
 
@@ -34,24 +34,25 @@ Click **Edit** and choose an option to upload your organization's logo
 
 ![](/components/docs/getting_started/turbo_for_citrix/Corg4.png)
 
-Enter a **Full Name** and **Email address** for your organization. Optionally enter a **Description**. Optionally enter a username for **Twitter** and **GitHub**. (Only enter the organization's account username, a URL is not required.) Optionally, you can also enter a URL for your organizations **Website**.
+Enter a **Full Name** and an **Email address** for your organization. Optionally enter a **Website**, **Description**, **Twitter** account and **GitHub** account for your organization. 
 
 Click **Update**
 
 ![](/components/docs/getting_started/turbo_for_citrix/Corg7.png)
 
-Update account information such as **Payment Information** by browsing the options seen in the above image.
+Update account information such as **Payment Information** using the other options in the organization settings.
 
+### Setting up a channel
 
-### Setting up a list of applications
+Now that the organization is configured, we need to set up the applications that will be part of the subscription.
 
 ![](/components/docs/getting_started/turbo_for_citrix/Corg6.png)
 
-Navigate to **Hub**. From here you can browse through the applications on the Turbo.net hub. Click on **Browsers**.
+From the **Hub**, select **Browsers** and add some browsers to the channel.
 
 ![](/components/docs/getting_started/turbo_for_citrix/Corg8.png)
 
-When you identify an application that you would like to add to your subscription, simply hover your mouse over the application and click on the **favorite** button.  You can have both self-updating applications and legacy versions of applications depending on your specific needs.  In the above image, you can see **Chrome Latest** and **Chrome 43** have been selected as favorites.  Select a **Latest** version, such as **Chrome Latest**, to ensure that your version is always the latest available.  Select a specific version, such as **Chrome 43**, to ensure that your version is always the same. 
+When you identify an application that you would like to add to your subscription, hover your mouse over the application and click **Add**. You can have both self-updating applications and legacy versions of applications depending on your specific needs. In the above image, you can see **Chrome Latest** and **Chrome 43** have been selected. Select a **Latest** version, to receive automatic updates so that Chrome is always patched.  Select a specific version, such as **Chrome 43**, to keep the version unchanged. 
 
 ![](/components/docs/getting_started/turbo_for_citrix/Corg9.png)
 
@@ -59,10 +60,11 @@ Click **Save**
 
 ![](/components/docs/getting_started/turbo_for_citrix/Corg10.png)
 
-Navigate to **Home**. All applications added appear in this list.
-
+Navigate to **Home** to see the full list of applications in the channel.
   
-### Subscribing on the client
+### Subscribing to the channel
+
+Great, now that the organization is ready and we have a channel configured, let's subscribe to the channel on the XenApp server.
 
 ![](/components/docs/getting_started/turbo_for_citrix/Step5.png)
 
