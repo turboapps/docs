@@ -4,7 +4,7 @@ The Turbo subscription feature provides the ability to select applications from 
 
 ### Topics Covered
 
-1. Creating an organization on Turbo.net
+1. Creating an organization
 2. Setting up a channel
 3. Subscribing to the channel
 
