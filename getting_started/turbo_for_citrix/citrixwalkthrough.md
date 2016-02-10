@@ -4,7 +4,7 @@ The Turbo subscription feature provides the ability to select applications from 
 
 ### Topics Covered
 
-1. Creating an organization
+1. Creating an Organization					
 2. Setting up a channel
 3. Subscribing to the channel
 
@@ -42,7 +42,7 @@ Click **Update**
 
 Update account information such as **Payment Information** using the other options in the organization settings.
 
-### Setting up a channel
+### Setting up a Channel
 
 Now that the organization is configured, we need to set up the applications that will be part of the subscription.
 
@@ -62,7 +62,7 @@ Click **Save**
 
 Navigate to **Home** to see the full list of applications in the channel.
   
-### Subscribing to the channel
+### Subscribing to the Channel
 
 Great, now that the organization is ready and we have a channel configured, let's subscribe to the channel on the XenApp server.
 
