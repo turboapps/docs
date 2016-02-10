@@ -12,7 +12,7 @@ The Turbo subscription feature provides the ability to select applications from 
 
 ![](/components/docs/getting_started/turbo_for_citrix/Step1.png)
 
-Navigate to **[https://www.turbo.net](https://www.turbo.net/)** Click on **Sign In**
+Navigate to **[https://www.turbo.net](https://www.turbo.net/)** and then Click on **Sign In**.
 
 ![](/components/docs/getting_started/turbo_for_citrix/Step2.png)
 
@@ -34,24 +34,24 @@ Click **Edit** and choose an option to upload your organization's logo
 
 ![](/components/docs/getting_started/turbo_for_citrix/Corg4.png)
 
-Enter a **Full Name** and **Email address** for your organization. Optionally enter a **Description**. Optionally enter a username for **Twitter** and **GitHub**, only enter the organization's account username, a URL is not required. Optionally, you can also enter a URL for your organizations **Website**.
+Enter a **Full Name** and **Email address** for your organization. Optionally enter a **Description**. Optionally enter a username for **Twitter** and **GitHub**. (Only enter the organization's account username, a URL is not required.) Optionally, you can also enter a URL for your organizations **Website**.
 
 Click **Update**
 
 ![](/components/docs/getting_started/turbo_for_citrix/Corg7.png)
 
-Update account information such as **Payment Information** by browsing the options see in the above image.
+Update account information such as **Payment Information** by browsing the options seen in the above image.
 
 
 ### Setting up a list of applications
 
 ![](/components/docs/getting_started/turbo_for_citrix/Corg6.png)
 
-Navigate to **Hub**. From here you can browse thorough the applications on the Turbo.net hub. Click on **Browsers**Enter your username and password and then click the **Sign In** button.  If you do not have a Turbo account, click the **Sign Up** link to create an account.
+Navigate to **Hub**. From here you can browse through the applications on the Turbo.net hub. Click on **Browsers**.
 
 ![](/components/docs/getting_started/turbo_for_citrix/Corg8.png)
 
-When you identify an application that you would like to add to your subscription, simply hover your mouse over the application and click on the star icon beside its name to mark it as a **favorite**.  You can have both self-updating applications and legacy versions of applications depending on your specific needs.  In the above screenshot, you can see **Chrome Latest** and **Chrome 43** have been selected as favorites.  Select a **Latest** version, such as **Chrome Latest**, to ensure that your version is always the latest available.  Select a specific version, such as **Chrome 43**, to ensure that your version is always the same. 
+When you identify an application that you would like to add to your subscription, simply hover your mouse over the application and click on the **favorite** button.  You can have both self-updating applications and legacy versions of applications depending on your specific needs.  In the above image, you can see **Chrome Latest** and **Chrome 43** have been selected as favorites.  Select a **Latest** version, such as **Chrome Latest**, to ensure that your version is always the latest available.  Select a specific version, such as **Chrome 43**, to ensure that your version is always the same. 
 
 ![](/components/docs/getting_started/turbo_for_citrix/Corg9.png)
 
@@ -59,7 +59,7 @@ Click **Save**
 
 ![](/components/docs/getting_started/turbo_for_citrix/Corg10.png)
 
-Navigate to **Home**. All application added appear in this list.
+Navigate to **Home**. All applications added appear in this list.
 
   
 ### Subscribing on the client
@@ -76,7 +76,9 @@ C:\> turbo-plugin.exe --all-users
 
 ```
 
-Download the latest **Turbo Client** from **[http://start.turbo.net/install](http://start.turbo.net/install)**. Install **turbo-plugin.exe** with **--all-users** to make the client available for all users on the machine.  This is critical in a shared user environment such as XenApp or RDS. 
+Download the latest **Turbo Client** from **[http://start.turbo.net/install](http://start.turbo.net/install)**. 
+
+Install **turbo-plugin.exe** with **--all-users** to make the client available for all users on the machine.  This is critical in a shared user environment such as XenApp or RDS. 
 
 ```	
 # Run Turbo subscribe
