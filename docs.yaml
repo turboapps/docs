@@ -57,9 +57,9 @@ documents:
 - title: Turbo for Citrix
   sections:
   - Topics Covered
-  - Creating an organization
-  - Setting up a channel
-  - Subscribing to the channel
+  - Creating an Organization
+  - Setting up a Channel
+  - Subscribing to the Channel
 - title: Turbo and App Virtualization
   sections: []
 - title: Turbo and Docker
