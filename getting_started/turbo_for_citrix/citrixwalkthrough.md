@@ -28,7 +28,7 @@ Click **New Organization**
 
 ![](/components/docs/getting_started/turbo_for_citrix/MOrg3.png)
 
-Enter an **Organization name** and *Organization email* then click **Create Organization**.
+Enter an **Organization name** and **Organization email** then click **Create Organization**.
 
 ![](/components/docs/getting_started/turbo_for_citrix/MOrg4.png)
 
