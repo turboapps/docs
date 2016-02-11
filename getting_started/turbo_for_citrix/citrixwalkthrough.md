@@ -96,7 +96,7 @@ Or
 
 Enter **turbo subscribe --all-users &lt;user&gt;** in the command prompt to subscribe to your applications.
 
-The --all-users flag makes your applications available for all users on the machine.
+The **--all-users** flag makes your applications available for all users on the machine.
 
 ![](/components/docs/getting_started/turbo_for_citrix/Step8.png)
 
