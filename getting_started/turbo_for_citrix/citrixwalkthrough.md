@@ -18,19 +18,21 @@ Navigate to **[https://www.turbo.net](https://www.turbo.net/)** and then Click o
 
 Enter your username and password and then click the **Sign In** button.  If you do not have a Turbo account, click the **Sign Up** link to create an account.
 
-![](/components/docs/getting_started/turbo_for_citrix/Corg1.png)
+![](/components/docs/getting_started/turbo_for_citrix/MOrg1.png)
 
-Navigate to **[https://turbo.net/proto/enterprise/signup](https://turbo.net/proto/enterprise/signup)** 
+Navigate to your profile and click **Manage Organizations**.
 
-Enter an **Organization name** and an **Organization email** and then click **Create Organization**
+![](/components/docs/getting_started/turbo_for_citrix/MOrg2.png)
 
-![](/components/docs/getting_started/turbo_for_citrix/Corg2.png)
+Click **New Organization**
 
-Click **Manage Organization**
+![](/components/docs/getting_started/turbo_for_citrix/MOrg3.png)
 
-![](/components/docs/getting_started/turbo_for_citrix/Corg3.png)
+Enter an **Organization name** and *Organization email* then click **Create Organization**.
 
-Click **Edit** and choose an option to upload your organization's logo
+![](/components/docs/getting_started/turbo_for_citrix/MOrg4.png)
+
+Click **Edit** and choose an option to upload your organization's logo.
 
 ![](/components/docs/getting_started/turbo_for_citrix/Corg4.png)
 
@@ -38,7 +40,7 @@ Enter a **Full Name** and an **Email address** for your organization. Optionally
 
 Click **Update**
 
-![](/components/docs/getting_started/turbo_for_citrix/Corg7.png)
+![](/components/docs/getting_started/turbo_for_citrix/MOrg10.png)
 
 Update account information such as **Payment Information** using the other options in the organization settings.
 
@@ -46,19 +48,19 @@ Update account information such as **Payment Information** using the other optio
 
 Now that the organization is configured, we need to set up the applications that will be part of the subscription.
 
-![](/components/docs/getting_started/turbo_for_citrix/Corg6.png)
+![](/components/docs/getting_started/turbo_for_citrix/MOrg6.png)
 
 From the **Hub**, select **Browsers** and add some browsers to the channel.
 
-![](/components/docs/getting_started/turbo_for_citrix/Corg8.png)
+![](/components/docs/getting_started/turbo_for_citrix/MOrg7.png)
 
 When you identify an application that you would like to add to your subscription, hover your mouse over the application and click **Add**. You can have both self-updating applications and legacy versions of applications depending on your specific needs. In the above image, you can see **Chrome Latest** and **Chrome 43** have been selected. Select a **Latest** version, to receive automatic updates so that Chrome is always patched.  Select a specific version, such as **Chrome 43**, to keep the version unchanged. 
 
-![](/components/docs/getting_started/turbo_for_citrix/Corg9.png)
+![](/components/docs/getting_started/turbo_for_citrix/MOrg8.png)
 
 Click **Save**
 
-![](/components/docs/getting_started/turbo_for_citrix/Corg10.png)
+![](/components/docs/getting_started/turbo_for_citrix/MOrg9.png)
 
 Navigate to **Home** to see the full list of applications in the channel.
   
@@ -88,11 +90,11 @@ C:\> turbo subscribe --all-users <org\user>
 
 ```
 
-Enter **turbo subscribe --all-users <org>** in the command prompt to subscribe to your organization's applications.  
+Enter **turbo subscribe --all-users &lt;org&gt;** in the command prompt to subscribe to your organization's applications.  
 
 Or
 
-Enter **turbo subscribe --all-users <user>** in the command prompt to subscribe to your applications.
+Enter **turbo subscribe --all-users &lt;user&gt;** in the command prompt to subscribe to your applications.
 
 The --all-users flag makes your applications available for all users on the machine.
 
