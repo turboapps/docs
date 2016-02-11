@@ -4,7 +4,7 @@ The Turbo subscription feature provides the ability to select applications from 
 
 ### Topics Covered
 
-1. Creating an Organization					
+1. Creating an organization					
 2. Setting up a channel
 3. Subscribing to the channel
 
@@ -32,17 +32,17 @@ Enter an **Organization name** and **Organization email** then click **Create Or
 
 ![](/components/docs/getting_started/turbo_for_citrix/MOrg4.png)
 
-Click **Edit** and choose an option to upload your organization's logo.
+Click **Edit** to upload your organization's logo.
 
 ![](/components/docs/getting_started/turbo_for_citrix/Corg4.png)
 
-Enter a **Full Name** and an **Email address** for your organization. Optionally enter a **Website**, **Description**, **Twitter** account and **GitHub** account for your organization. 
+Enter a **Full Name** and **Email address** for your organization. Optionally you may also enter a **Description** and information for your **Social Accounts**.
 
 Click **Update**
 
 ![](/components/docs/getting_started/turbo_for_citrix/MOrg10.png)
 
-Update account information such as **Payment Information** using the other options in the organization settings.
+Update account information, such as **Payment Information**, by browsing the other management settings.
 
 ### Setting up a Channel
 
@@ -58,7 +58,7 @@ When you identify an application that you would like to add to your subscription
 
 ![](/components/docs/getting_started/turbo_for_citrix/MOrg8.png)
 
-Click **Save**
+Various configuration options can be set, which we will explain in an upcoming article. For this guide just click **Save**.
 
 ![](/components/docs/getting_started/turbo_for_citrix/MOrg9.png)
 
