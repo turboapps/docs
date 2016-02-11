@@ -30,7 +30,7 @@ Click **New Organization**
 
 Enter an **Organization name** and **Organization email** then click **Create Organization**.
 
-![](/components/docs/getting_started/turbo_for_citrix/MOrg4.png)
+![](/components/docs/getting_started/turbo_for_citrix/EditIcon.png)
 
 Click **Edit** to upload your organization's logo.
 
@@ -98,7 +98,7 @@ Enter **turbo subscribe --all-users &lt;user&gt;** in the command prompt to subs
 
 The **--all-users** flag makes your applications available for all users on the machine.
 
-![](/components/docs/getting_started/turbo_for_citrix/Step8.png)
+![](/components/docs/getting_started/turbo_for_citrix/SMenu.png)
 
 Shortcuts for all subscribed applications will be created in your Start menu. 
 
