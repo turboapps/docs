@@ -54,7 +54,7 @@ From the **Hub**, select **Browsers** and add some browsers to the channel.
 
 ![](/components/docs/getting_started/turbo_for_citrix/MOrg7.png)
 
-When you identify an application that you would like to add to your subscription, hover your mouse over the application and click **Add**. You can have both self-updating applications and legacy versions of applications depending on your specific needs. In the above image, you can see **Chrome Latest**, by expanding this you will see all available versionf of Chrome. When adding applications, select a **Latest** version, to receive automatic updates so that application is always patched.  Select a specific version, such as **Chrome 43**, to keep the version unchanged. 
+When you identify an application that you would like to add to your subscription, hover your mouse over the application and click **Add**. You can have both self-updating applications and legacy versions of applications depending on your specific needs. In the above image, you can see **Chrome Latest**, by expanding this you will see all available versions of Chrome. When adding applications, select a **Latest** version, to receive automatic updates so that application is always patched.  Select a specific version, such as **Chrome 43**, to keep the version unchanged. 
 
 ![](/components/docs/getting_started/turbo_for_citrix/MOrg8.png)
 
