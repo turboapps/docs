@@ -12,7 +12,7 @@ Usage: turbo fork  <existing container> [<new container name>]
       --wait-after-exit      Leave process open after it exits
 ```
 
-When `--images' is specified, those images are used in the copied container.
+The `--images' flag replaces all images in the new container with the ones that are specified. Any images from the original container that are required in the new container would need to be specified again.
 
 #### Examples:
 
