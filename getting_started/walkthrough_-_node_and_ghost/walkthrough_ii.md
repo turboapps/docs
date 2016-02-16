@@ -265,11 +265,11 @@ Imagine that you have a live environment with a production, testing, and develop
 
 ```
 # Create a Ghost 0.5.0 instance using the same database and config on port 9090
-C:\> turbo run -d --route-add=tcp://2368:9090 ghost:0.5.0,ghost-db,ghost-config
+C:\> turbo new -d --route-add=tcp://2368:9090 ghost:0.5.0,ghost-db,ghost-config
 
 # Create a Ghost 0.5.1 instance using the same database and config on port 9091
-C:\> turbo run -d --route-add=tcp://2368:9091 ghost:0.5.1,ghost-db,ghost-config
+C:\> turbo new -d --route-add=tcp://2368:9091 ghost:0.5.1,ghost-db,ghost-config
 
 # Create a Ghost 0.5.2 instance using the same database and config on port 9092
-C:\> turbo run -d --route-add=tcp://2368:9092 ghost:0.5.2,ghost-db,ghost-config
+C:\> turbo new -d --route-add=tcp://2368:9092 ghost:0.5.2,ghost-db,ghost-config
 ```
