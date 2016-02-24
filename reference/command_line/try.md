@@ -229,19 +229,6 @@ Or, to run a Chrome container disallowing access to the facebook.com domain and 
 > turbo try --route-block=ip://*.facebook.com chrome
 ```
 
-#### Adding Custom Name Resolution Entries
-
-All containers use name resolution provided by the host operating system. You can add specific name resolution overrides using the `--hosts` flag. The syntax is similar to that of the `hosts` file of the operating system.
-
-```
-# Make name my-test-service resolve to whatever the name
-# test-service-43 resolves
-> turbo try --hosts=my-test-service:test-service-43 <image>
-
-# Make name mysite.net resolve to IPv4 address 127.0.0.1 and
-# name ipv6.mysite.net resolve to IPv6 address ::1
-> turbo try --hosts=127.0.0.1:mysite.net --hosts=::1:ipv6.mysite.net <image>
-```
 An ini-based **route-file** defines in a header protocol and action describing how following rules should be interpreted. The example file below blocks all traffic and unblock local network 192.168.198.0/24 and all turbo.net and spoon.net subdomains:
 ```
 [ip-block]
@@ -254,6 +241,19 @@ An ini-based **route-file** defines in a header protocol and action describing h
 To run firefox container with above **route-file** you can use below command:
 ```
 turbo try --route-file=c:\turbo-rules.txt firefox https://turbo.net
+```
+#### Adding Custom Name Resolution Entries
+
+All containers use name resolution provided by the host operating system. You can add specific name resolution overrides using the `--hosts` flag. The syntax is similar to that of the `hosts` file of the operating system.
+
+```
+# Make name my-test-service resolve to whatever the name
+# test-service-43 resolves
+> turbo try --hosts=my-test-service:test-service-43 <image>
+
+# Make name mysite.net resolve to IPv4 address 127.0.0.1 and
+# name ipv6.mysite.net resolve to IPv6 address ::1
+> turbo try --hosts=127.0.0.1:mysite.net --hosts=::1:ipv6.mysite.net <image>
 ```
 
 #### Using Startup Triggers
