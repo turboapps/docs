@@ -14,6 +14,7 @@ Usage: turbo build <options> <path>
   -n, --name=VALUE           Name of the image
       --no-base              Do not merge the base image into the new image
       --overwrite            Overwrite existing image
+      --route-file=VALUE     Read in a INI file of routing configuration
       --vm=VALUE             The Spoon VM version to run the container with
       --wait-after-error     Leave program open after error
       --wait-after-exit      Leave program open after it exits

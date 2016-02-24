@@ -24,6 +24,7 @@ Usage: turbo try <options> <image> [<parameters>...]
       --pull                 Pulls base images from hub before running, if they exist
       --route-add=VALUE      Add route mapping. Supported protocols: ip, pipe, tcp, udp
       --route-block=VALUE    Block specified route or protocol. Supported protocols: ip, tcp, udp
+      --route-file=VALUE     Read in a INI file of routing configuration
       --startup-file=VALUE   Override the default startup file
       --trigger=VALUE        Execute named group of startup files
       --using=VALUE          Use specified images as a temporary dependency
@@ -166,7 +167,11 @@ Container links also work between containers running in different virtual networ
 
 #### Controlling Outbound Traffic
 
-The `--route-add` and `--route-block` not only provide a way to create rules that apply to inbound network traffic with the `tcp` and `udp` protocols, but also rules that apply to outbound network traffic. For the outbound rules, the `ip` protocol is used. The rules can be implemented using a whitelist or a blacklist approach. It is also possible to reroute traffic from one IP address to another, effectively defining an IP address alias.
+The `--route-add` and `--route-block` not only provide a way to create rules that apply to inbound network traffic with the `tcp` and `udp` protocols, but also rules that apply to outbound network traffic. For the outbound rules, the `ip` protocol is used. The rules can be implemented using a whitelist or a blacklist approach. It is also possible to reroute traffic from one IP address/host to another, effectively defining an IP address alias.
+
+Routes can be defined using IPv4, IPv6 addresses, or based on hostnames. Note however that you cannot specify a host name on the right side of a `--route-add` mapping since the result would be ambiguous if the host name resolved to multiple IP addresses.
+
+If your container requires several routing rules then we recommend creating a **route-file**. A **route-file** is a INI based, line-delimited text file that lists all the routing rules to add to the container. It can be added with `--route-file` flag.
 
 ##### Examples
 
@@ -194,6 +199,49 @@ To disallow the app to connect to a set of specific IP addresses (blacklist appr
 > turbo try --route-block=ip://192.168.1.55 --route-block=ip://192.168.1.57  putty
 ```
 
+When working with IPv6 addresses, it is necessary to enclose them in square brackets:
+
+Block LOCALHOST address:
+```
+> turbo try --route-block=ip://[::1] putty
+````
+Block all IP traffic, except link local IPv6 space
+```
+> turbo try --route-block=ip --route-add=ip://[fe80::c218:85ff:febd:5c01/64] putty
+```
+Redirect traffic from one IPv6 address to LOCALHOST
+```
+> turbo try --route-block=ip --route-add=ip://[2001:cdba::3257:9652]:[::1] putty
+```
+
+To simplify working with mutliple IP addresses it is possible to use hostnames on the left side of all commands. 
+
+For example, to run a Chrome container allowing only access to the turbo.net and blog.turbo.net domains, you can use the command:
+```
+> turbo try --route-block=ip --route-add=ip://turbo.net --route-add=ip://blog.turbo.net chrome https://turbo.net
+```
+Wildcards are supported in host name routing. So, for example, to unblock turbo.net and all of its subdomains, use the expression:
+```
+> turbo try --route-block=ip --route-add=ip://*.turbo.net chrome https://blog.turbo.net
+```
+Or, to run a Chrome container disallowing access to the facebook.com domain and all of its subdomains:
+```
+> turbo try --route-block=ip://*.facebook.com chrome
+```
+
+An ini-based **route-file** defines in a header protocol and action describing how following rules should be interpreted. The example file below blocks all traffic and unblock local network 192.168.198.0/24 and all turbo.net and spoon.net subdomains:
+```
+[ip-block]
+*
+[ip-add]
+192.168.198.0/24
+*.turbo.net
+*.spoon.net
+```
+To run firefox container with above **route-file** you can use below command:
+```
+turbo try --route-file=c:\turbo-rules.txt firefox https://turbo.net
+```
 #### Adding Custom Name Resolution Entries
 
 All containers use name resolution provided by the host operating system. You can add specific name resolution overrides using the `--hosts` flag. The syntax is similar to that of the `hosts` file of the operating system.
@@ -207,7 +255,6 @@ All containers use name resolution provided by the host operating system. You ca
 # name ipv6.mysite.net resolve to IPv6 address ::1
 > turbo try --hosts=127.0.0.1:mysite.net --hosts=::1:ipv6.mysite.net <image>
 ```
-
 
 #### Using Startup Triggers
 
