@@ -322,7 +322,7 @@ Or, to run a Chrome container disallowing access to the facebook.com domain and 
 > turbo run --route-block=ip://*.facebook.com chrome
 ```
 
-An ini-based **route-file** defines in a header protocol and action describing how following rules should be interpreted. The example file below blocks all traffic and unblock local network 192.168.198.0/8 and all turbo.net and spoon.net subdomains:
+An ini-based **route-file** defines in a header protocol and action describing how following rules should be interpreted. The example file below blocks all traffic and unblock local network 192.168.198.0/24 and all turbo.net and spoon.net subdomains:
 ```
 [ip-block]
 *
