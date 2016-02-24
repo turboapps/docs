@@ -166,7 +166,9 @@ Container links also work between containers running in different virtual networ
 
 #### Controlling Outbound Traffic
 
-The `--route-add` and `--route-block` not only provide a way to create rules that apply to inbound network traffic with the `tcp` and `udp` protocols, but also rules that apply to outbound network traffic. For the outbound rules, the `ip` protocol is used. The rules can be implemented using a whitelist or a blacklist approach. It is also possible to reroute traffic from one IP address to another, effectively defining an IP address alias.
+The `--route-add` and `--route-block` not only provide a way to create rules that apply to inbound network traffic with the `tcp` and `udp` protocols, but also rules that apply to outbound network traffic. For the outbound rules, the `ip` protocol is used. The rules can be implemented using a whitelist or a blacklist approach. It is also possible to reroute traffic from one IP address/host to another, effectively defining an IP address alias.
+
+Routes can be defined using IPv4, IPv6 addresses, or based on hostnames. Note however that you cannot specify a host name on the right side of a `--route-add` mapping since the result would be ambiguous if the host name resolved to multiple IP addresses.
 
 ##### Examples
 
@@ -192,6 +194,36 @@ To disallow the app to connect to a set of specific IP addresses (blacklist appr
 
 ```
 > turbo try --route-block=ip://192.168.1.55 --route-block=ip://192.168.1.57  putty
+```
+
+When working with IPv6 addresses, it is necessary to enclose them in square brackets:
+
+Block LOCALHOST address:
+```
+> turbo try --route-block=ip://[::1] putty
+````
+Block all IP traffic, except link local IPv6 space
+```
+> turbo try --route-block=ip --route-add=ip://[fe80::c218:85ff:febd:5c01/64] putty
+```
+Redirect traffic from one IPv6 address to LOCALHOST
+```
+> turbo try --route-block=ip --route-add=ip://[2001:cdba::3257:9652]:[::1] putty
+```
+
+To simplify working with mutliple IP addresses it is possible to use hostnames on the left side of all commands. 
+
+For example, to run a Chrome container allowing only access to the turbo.net and blog.turbo.net domains, you can use the command:
+```
+> turbo try --route-block=ip --route-add=ip://turbo.net --route-add=ip://blog.turbo.net chrome https://turbo.net
+```
+Wildcards are supported in host name routing. So, for example, to unblock turbo.net and all of its subdomains, use the expression:
+```
+> turbo try --route-block=ip --route-add=ip://*.turbo.net chrome https://blog.turbo.net
+```
+Or, to run a Chrome container disallowing access to the facebook.com domain and all of its subdomains:
+```
+> turbo try --route-block=ip://*.facebook.com chrome
 ```
 
 #### Adding Custom Name Resolution Entries
