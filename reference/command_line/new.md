@@ -297,14 +297,19 @@ To disallow the app to connect to a set of specific IP addresses (blacklist appr
 When working with IPv6 addresses, it is necessary to enclose them in square brackets:
 
 Block LOCALHOST address:
+
 ```
 > turbo new --route-block=ip://[::1] putty
-````
+```
+
 Block all IP traffic, except link local IPv6 space
+
 ```
 > turbo new --route-block=ip --route-add=ip://[fe80::c218:85ff:febd:5c01/64] putty
 ```
+
 Redirect traffic from one IPv6 address to LOCALHOST
+
 ```
 > turbo new --route-block=ip --route-add=ip://[2001:cdba::3257:9652]:[::1] putty
 ```
@@ -312,19 +317,24 @@ Redirect traffic from one IPv6 address to LOCALHOST
 To simplify working with mutliple IP addresses it is possible to use hostnames on the left side of all commands. 
 
 For example, to run a Chrome container allowing only access to the turbo.net and blog.turbo.net domains, you can use the command:
+
 ```
 > turbo new --route-block=ip --route-add=ip://turbo.net --route-add=ip://blog.turbo.net chrome https://turbo.net
 ```
+
 Wildcards are supported in host name routing. So, for example, to unblock turbo.net and all of its subdomains, use the expression:
+
 ```
 > turbo new --route-block=ip --route-add=ip://*.turbo.net chrome https://blog.turbo.net
 ```
+
 Or, to run a Chrome container disallowing access to the facebook.com domain and all of its subdomains:
 ```
 > turbo new --route-block=ip://*.facebook.com chrome
 ```
 
 Another options is to use an INI based **route-file** which defines rules for blocking and allowing network traffic. The example below blocks all network traffic and then unblocks 192.168.198.0/24 and all turbo.net and spoon.net subdomains:
+
 ```
 [ip-block]
 *
@@ -333,7 +343,9 @@ Another options is to use an INI based **route-file** which defines rules for bl
 *.turbo.net
 *.spoon.net
 ```
+
 To create a firefox container with above **route-file** use this command:
+
 ```
 turbo new --route-file=c:\turbo-rules.txt firefox https://turbo.net
 ```
