@@ -31,7 +31,7 @@ Usage: turbo continue <options> <state-id>
                                everyone
       --route-add=VALUE      Add route mapping. Supported protocols: ip, pipe, tcp, udp
       --route-block=VALUE    Block specified route or protocol. Supported protocols: ip, tcp, udp
-      --route-file=VALUE     Read in a INI file of routing configuration
+      --route-file=VALUE     Specify a routing rules file
       --startup-file=VALUE   Override the default startup file
       --startup-verb=VALUE   Override the default startup verb
       --trigger=VALUE        Execute named group of startup files

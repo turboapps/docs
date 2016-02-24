@@ -19,7 +19,7 @@ Usage: commit <options> [<container>] [<image>]
       --overwrite            Overwrite existing image
       --route-add=VALUE      Add route mapping. Supported protocols: ip, pipe, tcp, udp
       --route-block=VALUE    Block specified route or protocol. Supported protocols: ip, tcp, udp
-      --route-file=VALUE     Read in a INI file of routing configuration
+      --route-file=VALUE     Specify a routing rules file
       --startup-file=VALUE   Override the default startup file and save it to the committed image
       --trigger=VALUE        Execute named group of startup files
       --wait-after-error     Leave program open after error

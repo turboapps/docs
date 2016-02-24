@@ -38,7 +38,7 @@ Usage: new <options> [<image>] [--name=<name>]
       --pull                 Pulls base images from hub before running, if they exist
       --route-add=VALUE      Add route mapping. Supported protocols: ip, pipe, tcp, udp
       --route-block=VALUE    Block specified route or protocol. Supported protocols: ip, tcp, udp
-      --route-file=VALUE     Read in a INI file of routing configuration
+      --route-file=VALUE     Specify a routing rules file
       --startup-file=VALUE   Override the default startup file
       --startup-file-default=VALUE
                              Overrides the default startup file if the main image does not have one
@@ -266,7 +266,7 @@ The `--route-add` and `--route-block` not only provide a way to create rules tha
 
 Routes can be defined using IPv4, IPv6 addresses, or based on hostnames. Note however that you cannot specify a host name on the right side of a `--route-add` mapping since the result would be ambiguous if the host name resolved to multiple IP addresses.
 
-If your container requires several routing rules then we recommend creating a **route-file**. A **route-file** is a INI based, line-delimited text file that lists all the routing rules to add to the container. It can be added with `--route-file` flag.
+If your container requires several routing rules then we recommend creating a **route-file**. A **route-file** is an INI based, line-delimited text file that lists all the routing rules to add to the container. It can be added with `--route-file` flag.
 
 ##### Examples
 
@@ -324,7 +324,7 @@ Or, to run a Chrome container disallowing access to the facebook.com domain and 
 > turbo new --route-block=ip://*.facebook.com chrome
 ```
 
-An ini-based **route-file** defines in a header protocol and action describing how following rules should be interpreted. The example file below blocks all traffic and unblock local network 192.168.198.0/24 and all turbo.net and spoon.net subdomains:
+Another options is to use an INI based **route-file** which defines rules for blocking and allowing network traffic. The example below blocks all network traffic and then unblocks 192.168.198.0/24 and all turbo.net and spoon.net subdomains:
 ```
 [ip-block]
 *
@@ -333,7 +333,7 @@ An ini-based **route-file** defines in a header protocol and action describing h
 *.turbo.net
 *.spoon.net
 ```
-To run firefox container with above **route-file** you can use below command:
+To create a firefox container with above **route-file** use this command:
 ```
 turbo new --route-file=c:\turbo-rules.txt firefox https://turbo.net
 ```
