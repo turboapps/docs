@@ -35,6 +35,7 @@ Usage: run <options> [<image>][+skin(color)] [<parameters>...]
       --public               Synchronize this container publicly, visible to everyone
       --pull                 Pulls base images from hub before running, if they exist
       --route-add=VALUE      Add route mapping. Supported protocols: ip, pipe, tcp, udp
+      --route-file=VALUE     Read in a INI file of routing configuration
       --route-block=VALUE    Block specified route or protocol. Supported protocols: ip, tcp, udp
       --startup-file=VALUE   Override the default startup file
       --startup-file-default=VALUE
