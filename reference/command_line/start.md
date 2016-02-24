@@ -34,6 +34,7 @@ Usage: start <options> <container>
       --pull                 Pulls base images from hub before running, if they exist
       --route-add=VALUE      Add route mapping. Supported protocols: ip, pipe, tcp, udp
       --route-block=VALUE    Block specified route or protocol. Supported protocols: ip, tcp, udp
+      --route-file=VALUE     Read in a INI file of routing configuration
       --startup-file=VALUE   Override the default startup file
       --startup-file-default=VALUE
                              Overrides the default startup file if the main image does not have one
