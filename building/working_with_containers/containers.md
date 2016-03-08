@@ -112,7 +112,7 @@ Test the new InstEd image.
 
 You may notice when attempting to open an MSI on your local machine, you will not have access to it. Similarly, when creating a new MSI and attempting to save to a local machine directory, you will not be able to save locally. This is expected behavior. By default containers run in full isolation. Use the **--isolate** flag to launch a new instance of InstEd with isolation set to merge with the local system.
 
-### Launch application with access to local files
+Launch application with access to local files.
 
 ```
 # Launch instedit image
