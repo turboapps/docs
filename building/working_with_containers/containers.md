@@ -4,45 +4,207 @@ In this section you'll learn a variety of methods for managing and building cont
 
 ### Creating Containers
 
-The `turbo run` command starts new containers. You must specify a base image to provide the virtual filesystem and registry for the container. If no files or registry keys are necessary, use the empty clean image.
+The `turbo new` command starts new containers. You must specify a base image to provide the virtual filesystem and registry for the container. If no files or registry keys are necessary, use the empty clean image.
 
 ```
 # Launch a command window in a new container with clean as the base image
-> turbo run spoonbrew/clean
+> turbo new clean
 ```
 
-Operations executed in the new command window are applied to the container, not the host system.
+Operations executed in the new command window are applied to the container, not the host system. This means you do not have access to local files, the container is fully isolated.
 
-To avoid confusion, the prompt is prepended by the first 8 characters of the container ID when a command window is running in a container.
+To avoid confusion, the prompt is prepended by the image name and the first 8 characters of the container ID when a command window is running in a container. Alternatively, a container can be assigned a name, this will be illustrated in the Installing MSI Packages in Containers section.
 
 ```
 # Host command window
-> turbo run spoonbrew/clean
+> turbo new clean
 
 # Container command window
-(8dpp9eb5) >
+(clean#0bad25c4) >
 ```
 
 Edit and modify the container's virtual filesystem and registry using the same command-line interfaces available in Windows Command Prompt.
 
 ### Installing MSI Packages in Containers
 
-Installing MSI packages in containers is supported, but a current limitation of the Spoon VM requires running a virtualized instance of the Windows Installer service with administrative privileges. To make things easier, the container automatically detects when an MSI installer is started and pops up a UAC consent dialog if needed. Accepting the dialog is required for the installer to start.
+Installing MSI packages in containers is supported, but in some instances an install may fail e.g. a custom action may attempt to runs but fails when run in the fully isolated Turbo VM.
+If an MSI install fails, try creating the container using [Turbo Studio](/docs/building/working_with_turbo_studio).
 
-If the container instance is running as a standard user (i.e. not member of the Administrators group) or the installer is not detected as an MSI by the container, no UAC consent dialog will be shown. If you hit this issue, you can start the whole container elevated using the `--admin` flag as shown below.
+This section will detail steps for creating a container for InstEd, a popular MSI editor.
+
+Begin by downloading the application [here](http://www.instedit.com/download2.html?file=InstEd-1.5.15.26.msi)
+
+
+Copy the MSI to a new directory: C:\Installers on your local machine.
+
+![](/components/docs/building/working_with_containers/CMD1.png)
+
+
+By design the Turbo VM is fully isolated and does not permit access to local files. In order to use the MSI in your local C:\Installers directory, you must poke a hole in the isolation.
+This can be accomplished by using the **--mount** flag. Set a name for the container by using the **-n** flag:
 
 ```
-# Start the container elevated
-> turbo run wget --admin
-
-# Download the installer
-(493a3d01) > wget http://example.com/installer.msi
-
-# Run it
-(493a3d01) > installer.msi
+# Poke a hole in isolation
+> turbo new clean --mount="C:\Installers" -n=instedcont
 ```
 
-### Managing Containers
+Launch the install:
+
+```
+# Install InstEd
+(instedcont#95c15a32) > cd C:\Installers\InstEd-1.5.15.26.msi
+
+```
+
+When prompted, click **Next**:
+
+![](/components/docs/building/working_with_containers/INSTALL1.png)
+
+Click on the checkbox to agree to **accept the terms in the license agreement** and then click **Next**:
+
+![](/components/docs/building/working_with_containers/INSTALL2.png)
+
+Click **Next**:
+
+![](/components/docs/building/working_with_containers/INSTALL3.png)
+
+Click **Next**:
+
+![](/components/docs/building/working_with_containers/INSTALL4.png)
+
+Click **Finish**:
+
+![](/components/docs/building/working_with_containers/INSTALL5.png)
+
+Exit the Turbo VM from the launched command prompt:
+
+```
+# Close Turbo VM
+(instedcont#95c15a32) > exit
+
+```
+
+Once you're finished editing a container, it can be saved and distributed in the form of images. For more information on images, read on [here](/docs/building/working-with-images).
+
+Ensure the **--startup-file** flag is set to the application's main executable. Provide an image name, in this example use **instedit**:
+
+```
+# Commit container into an image
+> turbo commit instedcont --startup-file="C:\Program Files (x86)\instedit.com\InstEd\InstEd.exe" instedit
+
+```
+
+By default, the `commit` command merges sandbox changes with the base images and builds a new image from these merged layers. Specifying the "--no-base" option builds a new image of the sandbox changes without merging the base images.
+
+Test the new InstEd image:
+
+```
+# Launch a new instance of Insted using the instedit image
+> turbo new instedit
+
+```
+
+![](/components/docs/building/working_with_containers/INSTEDIT1.png)
+
+### Launch application with access to local files
+
+![](/components/docs/building/working_with_containers/INSTEDIT2.png)
+
+You may notice when attempting to open an MSI on your local machine, you will not have access to it. Similarly, when creating a new MSI and attempting to save to a local machine directory, you will not be able to save locally. This is expected behavior. By default containers run in full isolation. You can launch a new instance of InstEd using the **--isolate** flag.
+
+
+```
+# Launch instedit image
+> turbo new instedit --isolate=merge
+
+```
+You will now have access to any local files.
+
+![](/components/docs/building/working_with_containers/INSTEDIT3.png)
+
+
+### Push image to your Turbo.net hub
+
+We created an image which can be pushed to our hub and run by anybody. To do this, we must first login to Turbo.net from the command prompt. Enter **turbo login** and enter your turbo username and password when prompted:
+
+```
+# Login
+> turbo login
+
+```
+
+Push the image by entering turbo push <imagename>:
+
+```
+# Login
+> turbo push instedit
+
+```
+
+
+
+### Publish Applications
+
+![](/components/docs/building/working_with_containers/SIGNIN1.png)
+
+Our image has been pushed to the hub. We can configure the repo settings and other publishing settings by navigating to [Turbo.net](https://turbo.net) and clicking **Sign In**.
+
+![](/components/docs/building/working_with_containers/SIGNIN2.png)
+
+If you do not have a Turbo.net account click **Sign Up** to create a new account. If you do have a Turbo.net account, enter your Turbo.net username and password and then click **Sign In**. 
+
+![](/components/docs/building/working_with_containers/PUBLISH1.png)
+
+After logging into Turbo.net you are presented with your home screen that contains your applications. Click on instedit.
+
+![](/components/docs/building/working_with_containers/PUBLISH2.png)
+
+Begin to configure the appearance of the hub by hovering over the large icon in the header of the page. Upload a suitable image. A bried descriptin can also be entered by hovering just below the instedit text in the banner and clicking **edit**.
+
+![](/components/docs/building/working_with_containers/PUBLISH3.png)
+
+On the same page, hover beside the **description** heading and click **edit** to provide a description of the application. When complete, hover over the **readme** heading and click **edit** to provide information useful to people who may try to use your image. e.g. what commands should be used.
+
+![](/components/docs/building/working_with_containers/PUBLISH4.png)
+
+Navigate to **Settings**. A default display name is set, you can change this to something more appropriate such as Instedit or Insted.
+
+Optionally, under **Repo Information** enter a build script URL if you have one. For more information on how to create a build script read on [here](/docs/building/continuous_integration). Enter a **Developer website** and **Support website** if desired. This information will be display on the application's repo page.
+
+![](/components/docs/building/working_with_containers/PUBLISH5.png)
+
+The Turbo.net hub provides the ability to create custom run pages for applications. For an example of this, click [here](https://turbo.net/run/instedit/insted).
+The run page provides a great presentation and end user experience. This run page can also be embedded within a website or blog, if enabled. For an example of an embedded run page click [here](https://blog.turbo.net/creating-sql-test-lab-environments/) and scroll to the bottom of the page.
+
+Enter a **Heading**, which will be the application name displayed to the end users. Enter a **SubHeading** which should be a brief description of the application. Optionally enter an **Article URL** which will provide a hyperlink to a source page e.g. if you choose to host an application you created, you can link to your own hosted blog about the application.
+
+Click on **Choose File** to upload a **Splash image**. (1033 x 752 px is a good size for this) This could be a static screenshot of the application or possibly an animated gif of the application being used. Click on **Choose File** to upload a **Background image**. Optionally repated these steps to upload a **Splash thumbnail** and **Background thumbnail** image.
+
+Optionally, enter a **Run button color** and **Background image color**. This may be useful if the background you choose conflicts with the color of the button.
+
+If you do not wish to use a **Splash image** you may choose to enable a **Background banner**. This will present a banner across the run page containing your run page information.
+
+![](/components/docs/building/working_with_containers/PUBLISH6.png)
+
+Navigate to **Icon Settings** and set a **Background color**. If the icon you uploaded has a white background, it is best to enter transparent as the value for the **Background color**. Optionally select if the icon should **Padded**. This will trim the edges of the image. This can be make certain icons look much better.
+
+![](/components/docs/building/working_with_containers/PUBLISH7.png)
+
+Navigate to **Launch Configuration**. If any additional flags are required for the application to function, enter these here. For a list of available flags read [here](/docs/reference). Enter additional **Image layers** if you wish to launch the application with other dependent images. Always ensure the application you wish to launch is in the last image in the list. Seperate each image you wish to layer with a comma.
+
+To force the use of a certain version of the Turbo VM enter the version number under **Stable VM version**.
+
+In the above example, InstEd require local file access. This can be permitted by setting **File Isolation** to **Write Copy** of **Merge**.
+
+Enable **Isolate network** to isolate all tcp,udp and named object calls within the container.
+
+![](/components/docs/building/working_with_containers/PUBLISH8.png)
+
+Navigate to **Admin Settings**. Under **Shortcut Icon (.ico)** click **Choose File** to upload an icon file for the application. Click on the dropdown menu for **Categories** to assign the relevant categories for the application to appear in on the Turbo.net hub.
+
+Enable the application as **Official** to ensure it can be found in Turbo Launcher and when searching the Turbo.net Hub. Click **Embeddable** to allow the run page to be embedded on websites and blogs.
+
+When complete. Click **Update**. 
 
 Once created, track and manage containers with these commands.
 
@@ -106,14 +268,3 @@ Please note that enabling diagnostic mode will cause your container to run slowe
 # Similarly you can revert changes to get the container back to a running state or to debug changes
 > turbo revert 8dpp9eb5
 ```
-
-### Building Images from Containers
-
-Once you're finished editing a container, it can be saved and distributed in the form of images. For more information on images, read on [here](/docs/building/working-with-images).
-
-```
-# Create a new image from a container, specify the container ID and a name for the new image
-> turbo commit 52hd888xa3 test
-```
-
-By default, the `commit` command merges sandbox changes with the base images and builds a new image from these merged layers. Specifying the "--no-base" option builds a new image of the sandbox changes without merging the base images.
