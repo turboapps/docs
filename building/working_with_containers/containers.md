@@ -52,7 +52,7 @@ Launch the install:
 
 ```
 # Install InstEd
-(instedcont#95c15a32) > cd C:\Installers\InstEd-1.5.15.26.msi
+(instedcont#95c15a32) > C:\Installers\InstEd-1.5.15.26.msi
 
 ```
 
