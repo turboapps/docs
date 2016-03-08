@@ -28,7 +28,7 @@ Edit and modify the container's virtual filesystem and registry using the same c
 ### Installing MSI Packages in Containers
 
 Installing MSI packages in containers is supported, but in some instances an install may fail e.g. a custom action may attempt to runs but fails when run in the fully isolated Turbo VM.
-If an MSI install fails, try creating the container using [Turbo Studio](/building/working-with-turbo-studio).
+If an MSI install fails, try creating the container using [Turbo Studio](/docs/building/working-with-turbo-studio).
 
 This section will detail steps for creating a container for InstEd, a popular MSI editor.
 
