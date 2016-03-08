@@ -48,7 +48,7 @@ This can be accomplished by using the **--mount** flag. Set a name for the conta
 > turbo new clean --mount="C:\Installers" -n=instedcont
 ```
 
-Launch the install:
+Launch the install.
 
 ```
 # Install InstEd
