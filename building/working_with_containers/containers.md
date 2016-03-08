@@ -171,7 +171,7 @@ On the same page, hover beside the **description** heading and click **edit** to
 
 Navigate to **Settings**. A default display name is set, you can change this to something more appropriate such as Instedit or Insted.
 
-Optionally, under **Repo Information** enter a build script URL if you have one. For more information on how to create a build script read on [here](/docs/building/continuous-integration). Enter a **Developer website** and **Support website** if desired. This information will be displayed on the application's repo page.
+Optionally, under **Repo Information** enter a build script URL if you have one. For more information on how to create a build script read on [here](/docs/building/continuous-integration). Enter a **Developer website** and **Support website** if desired. This information will be displayed on the application's repo page. When using a free account, click **Update** as there will be no other options available for you.
 
 ![](/components/docs/building/working_with_containers/PUBLISH5.png)
 
