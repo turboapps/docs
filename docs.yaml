@@ -99,6 +99,9 @@ documents:
   sections:
   - Creating Containers
   - Installing MSI Packages in Containers
+  - Launch application with access to local files
+  - Push image to your Turbo.net hub
+  - Publish Applications
   - Managing Containers
   - Processes and Stopping Containers
   - Debugging
