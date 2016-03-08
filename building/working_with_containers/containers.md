@@ -84,7 +84,7 @@ Exit the Turbo VM from the launched command prompt.
 
 ```
 
-Once you're finished editing a container, it can be saved and distributed in the form of images. For more information on images, read on [here](/docs/building/working-with-images).
+Once you finish editing a container, it can be saved and distributed in the form of images. For more information on images, read on [here](/docs/building/working-with-images).
 
 Ensure the **--startup-file** flag is set to the application's main executable. Provide an image name, in this example use **instedit**.
 
@@ -126,7 +126,7 @@ You will now have access to any local files.
 
 ### Push image to your Turbo.net hub
 
-We created an image which can be pushed to our hub and run by anybody. To do this, we must first login to Turbo.net from the command prompt. Enter **turbo login** and then enter your turbo username and password when prompted.
+We created an image which can be pushed to our hub and run by anybody. To do this, we must first login to Turbo.net from the command prompt. Enter `turbo login` and then enter your turbo username and password when prompted.
 
 ```
 # Login
@@ -134,7 +134,7 @@ We created an image which can be pushed to our hub and run by anybody. To do thi
 
 ```
 
-Push the image by entering turbo push <imagename>.
+Push the image by entering `turbo push` <imagename>.
 
 ```
 # Login
