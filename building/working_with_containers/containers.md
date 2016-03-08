@@ -231,7 +231,7 @@ Note that running containers must be stopped before being removed.
 
 ### Processes and Stopping Containers
 
-The life cycle of a container is controlled by the processes within that container. Processes in a container spawn as child processes of the **Spoon VM** executable, which manages the container environment.
+The life cycle of a container is controlled by the processes within that container. Processes in a container spawn as child processes of the **Turbo VM** executable, which manages the container environment.
 
 When a process within a container exits or completes, the container exits as well.
 
@@ -240,7 +240,7 @@ When a process within a container exits or completes, the container exits as wel
 > turbo stop <container id>
 ```
 
-This command kills the **Spoon VM** managing process along with any child processes.
+This command kills the **Turbo VM** managing process along with any child processes.
 
 You can also explicitly shut down a container from a command window running in the container by typing `exit` or entering Ctrl+C.
 
