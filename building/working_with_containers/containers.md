@@ -25,7 +25,7 @@ To avoid confusion, the prompt is prepended by the image name and the first 8 ch
 
 Edit and modify the container's virtual filesystem and registry using the same command-line interfaces available in Windows Command Prompt.
 
-### Installing MSI Packages in Containers
+### Installing MSI Packages
 
 Installing MSI packages in containers is supported, but in some instances an install may fail e.g. a custom action may attempt to runs but fails when run in the fully isolated Turbo VM.
 If an MSI install fails, try creating the container using [Turbo Studio](/docs/building/working-with-turbo-studio).
@@ -106,7 +106,7 @@ Test the new InstEd image.
 
 ![](/components/docs/building/working_with_containers/INSTEDIT1.png)
 
-### Launch application with access to local files
+### Accessing Local Files
 
 ![](/components/docs/building/working_with_containers/INSTEDIT2.png)
 
@@ -124,9 +124,9 @@ You will now have access to any local files.
 ![](/components/docs/building/working_with_containers/INSTEDIT3.png)
 
 
-### Push image to your Turbo.net hub
+### Pushing Images
 
-We created an image which can be pushed to our hub and run by anybody. To do this, we must first login to Turbo.net from the command prompt. Enter `turbo login` and then enter your turbo username and password when prompted.
+We created an image which can be pushed to our Hub and run by anybody. To do this, we must first login to Turbo.net from the command prompt. Enter `turbo login` and then enter your turbo username and password when prompted.
 
 ```
 # Login
@@ -148,7 +148,7 @@ Push the image by entering `turbo push` <imagename>.
 
 ![](/components/docs/building/working_with_containers/SIGNIN1.png)
 
-Our image has been pushed to the hub. Now we will configure the repo settings and other publishing settings. 
+Our image has been pushed to the Hub. Now we will configure the repo settings and other publishing settings. 
 Navigate to [Turbo.net](https://turbo.net) and clicking **Sign In**.
 
 ![](/components/docs/building/working_with_containers/SIGNIN2.png)
@@ -175,7 +175,7 @@ Optionally, under **Repo Information** enter a build script URL if you have one.
 
 ![](/components/docs/building/working_with_containers/PUBLISH5.png)
 
-The Turbo.net hub provides the ability to create custom run pages for applications. For an example of this, click [here](https://turbo.net/run/instedit/insted).
+The Turbo.net Hub provides the ability to create custom run pages for applications. For an example of this, click [here](https://turbo.net/run/instedit/insted).
 The run page provides a great presentation and end user experience. If enabled, this run page can also be embedded within a website or blog. For an example of an embedded run page click [here](https://blog.turbo.net/creating-sql-test-lab-environments/) and scroll to the bottom of the page.
 
 Enter a **Heading**, which will be the application name displayed to the end users. Enter a **SubHeading** which should contain a brief description of the application. Optionally enter an **Article URL** which will provide a hyperlink to a source page e.g. if you choose to host an application you created, you can link to your own hosted blog with information about the application.
@@ -202,7 +202,7 @@ Enable **Isolate network** to isolate all tcp,udp and named object calls within 
 
 ![](/components/docs/building/working_with_containers/PUBLISH8.png)
 
-Navigate to **Admin Settings**. Under **Shortcut Icon (.ico)** click **Choose File** to upload an icon file for the application. Click on the dropdown menu for **Categories** to assign the relevant categories for the application to appear in on the Turbo.net hub.
+Navigate to **Admin Settings**. Under **Shortcut Icon (.ico)** click **Choose File** to upload an icon file for the application. Click on the dropdown menu for **Categories** to assign the relevant categories for the application to appear in on the Turbo.net Hub.
 
 Enable the application as **Official** to ensure it can be found in Turbo Launcher and from a search on the Turbo.net Hub. Click **Embeddable** to allow the run page to be embedded on websites and blogs.
 
