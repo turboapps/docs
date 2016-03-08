@@ -41,7 +41,7 @@ Copy the MSI to a new directory: C:\Installers on your local machine.
 
 
 By design the Turbo VM is fully isolated and does not permit access to local files. In order to use the MSI in your local C:\Installers directory, you must poke a hole in the isolation.
-This can be accomplished by using the **--mount** flag. Set a name for the container by using the **-n** flag.
+Use the **--mount** flag to poke a hole in the isolation. Use the **-n** flag to set a name for the container.
 
 ```
 # Poke a hole in isolation
@@ -110,7 +110,7 @@ Test the new InstEd image.
 
 ![](/components/docs/building/working_with_containers/INSTEDIT2.png)
 
-You may notice when attempting to open an MSI on your local machine, you will not have access to it. Similarly, when creating a new MSI and attempting to save to a local machine directory, you will not be able to save locally. This is expected behavior. By default containers run in full isolation. You can launch a new instance of InstEd using the **--isolate** flag.
+You may notice when attempting to open an MSI on your local machine, you will not have access to it. Similarly, when creating a new MSI and attempting to save to a local machine directory, you will not be able to save locally. This is expected behavior. By default containers run in full isolation. Use the **--isolate** flag to launch a new instance of InstEd with isolation set to merge with the local system.
 
 ### Launch application with access to local files
 
@@ -126,7 +126,7 @@ You will now have access to any local files.
 
 ### Push image to your Turbo.net hub
 
-We created an image which can be pushed to our hub and run by anybody. To do this, we must first login to Turbo.net from the command prompt. Enter **turbo login** and enter your turbo username and password when prompted.
+We created an image which can be pushed to our hub and run by anybody. To do this, we must first login to Turbo.net from the command prompt. Enter **turbo login** and then enter your turbo username and password when prompted.
 
 ```
 # Login
@@ -148,7 +148,8 @@ Push the image by entering turbo push <imagename>.
 
 ![](/components/docs/building/working_with_containers/SIGNIN1.png)
 
-Our image has been pushed to the hub. We can configure the repo settings and other publishing settings by navigating to [Turbo.net](https://turbo.net) and clicking **Sign In**.
+Our image has been pushed to the hub. Now we will configure the repo settings and other publishing settings. 
+Navigate to [Turbo.net](https://turbo.net) and clicking **Sign In**.
 
 ![](/components/docs/building/working_with_containers/SIGNIN2.png)
 
@@ -160,7 +161,7 @@ After logging into Turbo.net you are presented with your home screen that contai
 
 ![](/components/docs/building/working_with_containers/PUBLISH2.png)
 
-Begin to configure the appearance of the hub by hovering over the large icon in the header of the page. Upload a suitable image. A bried descriptin can also be entered by hovering just below the instedit text in the banner and clicking **edit**.
+Hover over the large icon in the header of the page to upload a suitable image for the application. Hover just below the instedit text in the banner and click **edit** to provide a description.
 
 ![](/components/docs/building/working_with_containers/PUBLISH3.png)
 
@@ -170,14 +171,14 @@ On the same page, hover beside the **description** heading and click **edit** to
 
 Navigate to **Settings**. A default display name is set, you can change this to something more appropriate such as Instedit or Insted.
 
-Optionally, under **Repo Information** enter a build script URL if you have one. For more information on how to create a build script read on [here](/docs/building/continuous-integration). Enter a **Developer website** and **Support website** if desired. This information will be display on the application's repo page.
+Optionally, under **Repo Information** enter a build script URL if you have one. For more information on how to create a build script read on [here](/docs/building/continuous-integration). Enter a **Developer website** and **Support website** if desired. This information will be displayed on the application's repo page.
 
 ![](/components/docs/building/working_with_containers/PUBLISH5.png)
 
 The Turbo.net hub provides the ability to create custom run pages for applications. For an example of this, click [here](https://turbo.net/run/instedit/insted).
-The run page provides a great presentation and end user experience. This run page can also be embedded within a website or blog, if enabled. For an example of an embedded run page click [here](https://blog.turbo.net/creating-sql-test-lab-environments/) and scroll to the bottom of the page.
+The run page provides a great presentation and end user experience. If enabled, this run page can also be embedded within a website or blog. For an example of an embedded run page click [here](https://blog.turbo.net/creating-sql-test-lab-environments/) and scroll to the bottom of the page.
 
-Enter a **Heading**, which will be the application name displayed to the end users. Enter a **SubHeading** which should be a brief description of the application. Optionally enter an **Article URL** which will provide a hyperlink to a source page e.g. if you choose to host an application you created, you can link to your own hosted blog about the application.
+Enter a **Heading**, which will be the application name displayed to the end users. Enter a **SubHeading** which should contain a brief description of the application. Optionally enter an **Article URL** which will provide a hyperlink to a source page e.g. if you choose to host an application you created, you can link to your own hosted blog with information about the application.
 
 Click on **Choose File** to upload a **Splash image**. (1033 x 752 px is a good size for this) This could be a static screenshot of the application or possibly an animated gif of the application being used. Click on **Choose File** to upload a **Background image**. Optionally repated these steps to upload a **Splash thumbnail** and **Background thumbnail** image.
 
@@ -187,7 +188,7 @@ If you do not wish to use a **Splash image** you may choose to enable a **Backgr
 
 ![](/components/docs/building/working_with_containers/PUBLISH6.png)
 
-Navigate to **Icon Settings** and set a **Background color**. If the icon you uploaded has a white background, it is best to enter transparent as the value for the **Background color**. Optionally select if the icon should **Padded**. This will trim the edges of the image. This can be make certain icons look much better.
+Navigate to **Icon Settings** and set a **Background color**. If the icon you uploaded has a white background, it is best to enter transparent as the value for the **Background color**. Optionally select if the icon should **Padded**. This will trim the edges of the image. In some cases, this can make certain icons look much better.
 
 ![](/components/docs/building/working_with_containers/PUBLISH7.png)
 
@@ -195,7 +196,7 @@ Navigate to **Launch Configuration**. If any additional flags are required for t
 
 To force the use of a certain version of the Turbo VM enter the version number under **Stable VM version**.
 
-In the above example, InstEd require local file access. This can be permitted by setting **File Isolation** to **Write Copy** of **Merge**.
+In the above example, InstEd requires local file access. This can be permitted by setting **File Isolation** to **Write Copy** of **Merge**.
 
 Enable **Isolate network** to isolate all tcp,udp and named object calls within the container.
 
@@ -203,7 +204,7 @@ Enable **Isolate network** to isolate all tcp,udp and named object calls within 
 
 Navigate to **Admin Settings**. Under **Shortcut Icon (.ico)** click **Choose File** to upload an icon file for the application. Click on the dropdown menu for **Categories** to assign the relevant categories for the application to appear in on the Turbo.net hub.
 
-Enable the application as **Official** to ensure it can be found in Turbo Launcher and when searching the Turbo.net Hub. Click **Embeddable** to allow the run page to be embedded on websites and blogs.
+Enable the application as **Official** to ensure it can be found in Turbo Launcher and from a search on the Turbo.net Hub. Click **Embeddable** to allow the run page to be embedded on websites and blogs.
 
 When complete. Click **Update**. 
 
