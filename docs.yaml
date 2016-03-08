@@ -100,7 +100,7 @@ documents:
   - Creating Containers
   - Installing MSI Packages
   - Accessing Local Files
-  - Push Images to the Hub
+  - Pushing Images to the Hub
   - Publishing Images
   - Managing Containers
   - Processes and Stopping Containers
