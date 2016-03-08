@@ -144,7 +144,7 @@ Push the image by entering `turbo push` <imagename>.
 
 
 
-### Publish Applications
+### Publishing Images to the Hub
 
 ![](/components/docs/building/working_with_containers/SIGNIN1.png)
 
