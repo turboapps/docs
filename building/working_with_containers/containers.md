@@ -124,7 +124,7 @@ You will now have access to any local files.
 ![](/components/docs/building/working_with_containers/INSTEDIT3.png)
 
 
-### Pushing Images
+### Pushing Images to the Hub
 
 We created an image which can be pushed to our Hub and run by anybody. To do this, we must first login to Turbo.net from the command prompt. Enter `turbo login` and then enter your turbo username and password when prompted.
 
@@ -144,7 +144,7 @@ Push the image by entering `turbo push` <imagename>.
 
 
 
-### Publishing Images to the Hub
+### Publishing Images
 
 ![](/components/docs/building/working_with_containers/SIGNIN1.png)
 
