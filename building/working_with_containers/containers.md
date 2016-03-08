@@ -41,7 +41,7 @@ Copy the MSI to a new directory: C:\Installers on your local machine.
 
 
 By design the Turbo VM is fully isolated and does not permit access to local files. In order to use the MSI in your local C:\Installers directory, you must poke a hole in the isolation.
-This can be accomplished by using the **--mount** flag. Set a name for the container by using the **-n** flag:
+This can be accomplished by using the **--mount** flag. Set a name for the container by using the **-n** flag.
 
 ```
 # Poke a hole in isolation
@@ -56,27 +56,27 @@ Launch the install:
 
 ```
 
-When prompted, click **Next**:
+When prompted, click **Next**.
 
 ![](/components/docs/building/working_with_containers/INSTALL1.png)
 
-Click on the checkbox to agree to **accept the terms in the license agreement** and then click **Next**:
+Click on the checkbox to agree to **accept the terms in the license agreement** and then click **Next**.
 
 ![](/components/docs/building/working_with_containers/INSTALL2.png)
 
-Click **Next**:
+Click **Next**.
 
 ![](/components/docs/building/working_with_containers/INSTALL3.png)
 
-Click **Install**:
+Click **Install**.
 
 ![](/components/docs/building/working_with_containers/INSTALL4.png)
 
-Click **Finish**:
+Click **Finish**.
 
 ![](/components/docs/building/working_with_containers/INSTALL5.png)
 
-Exit the Turbo VM from the launched command prompt:
+Exit the Turbo VM from the launched command prompt.
 
 ```
 # Close Turbo VM
@@ -86,7 +86,7 @@ Exit the Turbo VM from the launched command prompt:
 
 Once you're finished editing a container, it can be saved and distributed in the form of images. For more information on images, read on [here](/docs/building/working-with-images).
 
-Ensure the **--startup-file** flag is set to the application's main executable. Provide an image name, in this example use **instedit**:
+Ensure the **--startup-file** flag is set to the application's main executable. Provide an image name, in this example use **instedit**.
 
 ```
 # Commit container into an image
@@ -96,7 +96,7 @@ Ensure the **--startup-file** flag is set to the application's main executable. 
 
 By default, the `commit` command merges sandbox changes with the base images and builds a new image from these merged layers. Specifying the "--no-base" option builds a new image of the sandbox changes without merging the base images.
 
-Test the new InstEd image:
+Test the new InstEd image.
 
 ```
 # Launch a new instance of Insted using the instedit image
@@ -125,7 +125,7 @@ You will now have access to any local files.
 
 ### Push image to your Turbo.net hub
 
-We created an image which can be pushed to our hub and run by anybody. To do this, we must first login to Turbo.net from the command prompt. Enter **turbo login** and enter your turbo username and password when prompted:
+We created an image which can be pushed to our hub and run by anybody. To do this, we must first login to Turbo.net from the command prompt. Enter **turbo login** and enter your turbo username and password when prompted.
 
 ```
 # Login
@@ -133,7 +133,7 @@ We created an image which can be pushed to our hub and run by anybody. To do thi
 
 ```
 
-Push the image by entering turbo push <imagename>:
+Push the image by entering turbo push <imagename>.
 
 ```
 # Login
