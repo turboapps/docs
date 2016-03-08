@@ -1,4 +1,4 @@
-In this section you'll learn a variety of methods for managing and building containers and images with Turbo Studio and the command-line interface. You'll also learn how to integrate containerization with your continuous integration server.
+In this section you'll learn a variety of methods for managing and building containers and images with TurboStudio and the command-line interface. You'll also learn how to integrate containerization with your continuous integration server.
 
 ## Working with Containers
 
@@ -28,19 +28,19 @@ Edit and modify the container's virtual filesystem and registry using the same c
 ### Installing MSI Packages
 
 Installing MSI packages in containers is supported, but in some instances an install may fail e.g. a custom action may attempt to runs but fails when run in the fully isolated Turbo VM.
-If an MSI install fails, try creating the container using [Turbo Studio](/docs/building/working-with-turbo-studio).
+If an MSI install fails, try creating the container using [TurboStudio](/docs/building/working-with-turbo-studio).
 
 This section will detail steps for creating a container for InstEd, a popular MSI editor.
 
 Begin by downloading the application [here](http://www.instedit.com/download2.html?file=InstEd-1.5.15.26.msi)
 
 
-Copy the MSI to a new directory: C:\Installers on your local machine.
+Copy the MSI to a new directory: **C:\Installers** on your local machine.
 
 ![](/components/docs/building/working_with_containers/CMD1.png)
 
 
-By design the Turbo VM is fully isolated and does not permit access to local files. In order to use the MSI in your local C:\Installers directory, you must poke a hole in the isolation.
+By design the Turbo VM is fully isolated and does not permit access to local files. In order to use the MSI in your local **C:\Installers** directory, you must poke a hole in the isolation.
 Use the **--mount** flag to poke a hole in the isolation. Use the **-n** flag to set a name for the container.
 
 ```
