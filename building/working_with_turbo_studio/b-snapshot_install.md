@@ -1,6 +1,6 @@
-#### Snapshotting an Install
+### Snapshotting an Install
 
-### Start with a Clean Virtual Machine
+#### Start with a Clean Virtual Machine
 
 ![](/components/docs/building/working_with_turbo_studio/VM1.png)
 
