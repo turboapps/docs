@@ -159,6 +159,10 @@ Click Ok to finish and close TurboStudio.
 
 ![](/components/docs/building/working_with_turbo_studio/SNAPSHOT21.png)
 
+Copy the created **Chrome** foldeer that contains the svm file from your VM to a fileshare. 
+
+Read [http://stage.turbo.net/docs/deploying](http://stage.turbo.net/docs/deploying) for information about deploying the application.
+
 #### UI Basics
 
 TurboStudio enables you to embed a *virtual filesystem* into your executable. Embedded files are accessible by your Turbo-processed application as if they were present in the actual filesystem. Virtual files are isolated from the host device. Virtual files do not require security privileges on the host device regardless of whether the virtual files reside in a privileged directory. Because virtual files are embedded in the application executable, shared DLLs do not interfere with those installed by other applications on the host device.
