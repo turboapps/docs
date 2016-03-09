@@ -8,7 +8,7 @@ When using the snapshot method to containerize an application, it is important t
 
 The snapshot process can be performed on a virtual machine or a physical machine. Typically a virtual machine is used so that the system can easily be reset in case the process needs to be repeated.
 
-There are many options for virtual machine software including VMWare Workstation, Oracle Virtual Box (free) and Microsoft Virtual PC. In this example I’ll be using Oracle Virtual Box.
+There are many options for virtual machine software including VMWare Workstation, Oracle Virtual Box (free) and Microsoft Virtual PC. In this example I will be using Oracle Virtual Box.
 
 TurboStudio can be downloaded from [https://turbo.net/studio](https://turbo.net/studio)
 
@@ -21,7 +21,7 @@ Select the third option in the Wizard, **Snapshot a third-party application or c
 
 ![](/components/docs/building/working_with_turbo_studio/SNAPSHOT1.png)
 
-Select **Next** on the following screen to capture the “before” snapshot.
+Select **Next** on the following screen to capture the "before" snapshot.
 
 ![](/components/docs/building/working_with_turbo_studio/SNAPSHOT2.png)
 
