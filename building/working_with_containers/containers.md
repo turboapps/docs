@@ -208,6 +208,8 @@ Enable the application as **Official** to ensure it can be found in Turbo Launch
 
 When complete. Click **Update**. 
 
+We are always looking for new applications to host on the Turbo.net Hub. If you would like to share your work with everybody, please reach out to us via Twitter: [@turbohq](https://twitter.com/turbohq) or alternatively send us an e-mail to: [support@turbo.net](mailto:support@turbo.net).
+
 ### Managing Containers
 
 Once created, track and manage containers with these commands.
