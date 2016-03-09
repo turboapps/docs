@@ -12,6 +12,8 @@ There are many options for virtual machine software including VMWare Workstation
 
 TurboStudio can be downloaded from [https://turbo.net/studio](https://turbo.net/studio)
 
+In this example I will be creating a snapshot of Google Chrome.
+
 ![](/components/docs/building/working_with_turbo_studio/VM2.png)
 
 
