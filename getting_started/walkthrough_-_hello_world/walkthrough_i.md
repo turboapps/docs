@@ -34,8 +34,8 @@ Pull complete
 Let's analyze this command:
 
 ```
-turbo pull			# The pull command adds an image to your Turbo account.
-spoonbrew/clean	    # Specify the repository owner, "spoonbrew," and the image name, "clean."
+turbo pull       # The pull command adds an image to your Turbo account.
+spoonbrew/clean  # Specify the repository owner, "spoonbrew," and the image name, "clean."
 ```
 
 There you go! If it worked as expected, you just pulled the **clean** image into your account; the clean image is completely empty and roughly equivalent to a freshly-installed, clean OS. You're ready to create your first container!
