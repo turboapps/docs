@@ -1,6 +1,6 @@
 #### Snapshotting an Install
 
-## Start with a Clean Virtual Machine
+### Start with a Clean Virtual Machine
 
 ![](/components/docs/building/working_with_turbo_studio/VM1.png)
 
@@ -15,7 +15,7 @@ TurboStudio can be downloaded from [https://turbo.net/studio](https://turbo.net/
 ![](/components/docs/building/working_with_turbo_studio/VM2.png)
 
 
-## Using the Wizard to Capture the Application Install
+### Using the Wizard to Capture the Application Install
 
 Select the third option in the Wizard, **Snapshot a third-party application or component**.
 
