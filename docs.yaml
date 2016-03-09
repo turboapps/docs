@@ -113,6 +113,7 @@ documents:
   - Push to a Remote Repository
 - title: Working with Turbo Studio
   sections:
+  - Snapshotting an Install
   - UI Basics
   - Virtual Filesystem
   - Virtual Registry
