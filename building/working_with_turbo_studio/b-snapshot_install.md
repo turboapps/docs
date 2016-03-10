@@ -10,9 +10,9 @@ The snapshot process can be performed on a virtual machine or a physical machine
 
 There are many options for virtual machine software including VMWare Workstation, Oracle Virtual Box (free) and Microsoft Virtual PC. In this example I will be using Oracle Virtual Box.
 
-TurboStudio can be downloaded from [https://turbo.net/studio](https://turbo.net/studio)
+TurboStudio can be downloaded from [https://turbo.net/studio](https://turbo.net/studio).
 
-In this example I will be creating a snapshot of Google Chrome.
+In this example we will be creating a snapshot of Google Chrome.
 
 ![](/components/docs/building/working_with_turbo_studio/VM2.png)
 
@@ -29,7 +29,9 @@ Select **Next** on the following screen to capture the "before" snapshot.
 
 Chrome can be installed in two different locations on the system. The standard location is underneath the Current User profile. There is another enterprise installer available on the Google website for installing Chrome under Program Files.  In this example the enterprise location will be used, but both approaches will be discussed in the following steps.
 
-Launch Chrome. Close the open tabs and then exit Chrome (ensure it is not running in the background by checking the system tray and task manager) .
+Launch **Chrome**. 
+
+Close the open tabs and then exit **Chrome** (ensure it is not running in the background by checking the system tray and task manager) .
 
 ![](/components/docs/building/working_with_turbo_studio/SNAPSHOT3.png)
 
@@ -98,14 +100,6 @@ Click **Next**.
 Click **Next**.
 
 ![](/components/docs/building/working_with_turbo_studio/SNAPSHOT10.png)
-
-Click **Next**.
-
-![](/components/docs/building/working_with_turbo_studio/SNAPSHOT11.png)
-
-Click **Save**.
-
-![](/components/docs/building/working_with_turbo_studio/SNAPSHOT12.png)
 
 Click **Next**.
 
