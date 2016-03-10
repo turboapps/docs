@@ -58,56 +58,56 @@ Navigate to [Turbo.net](https://turbo.net) and **Sign In**.
 
 Navigate to the **Hub** tab and click on **Web**.
 
-![](/components/docs/deploying/to_the_hub/ADD1.png)
+![](/components/docs/deploying/to_the_hub/ADDAPP1.png)
 
 Hover over Chrome and click **ADD**.
 
-![](/components/docs/deploying/to_the_hub/ADD2.png)
+![](/components/docs/deploying/to_the_hub/ADDAPP2.png)
 
 Enter a **Display Name**. In this example the default was accepted.
 
-![](/components/docs/deploying/to_the_hub/ADD3.png)
+![](/components/docs/deploying/to_the_hub/ADDAPP3.png)
 
 Navigate to the **Isolation** tab. Select **Merge** from the drop down to allow access to the local files on your system.
 
-![](/components/docs/deploying/to_the_hub/ADD4.png)
+![](/components/docs/deploying/to_the_hub/ADDAPP4.png)
 
 Navigate to the **Network** tab. Optionally, enter an **IP route** to explicitly allow or deny access to a site. In this example I have entered **ip://gmail.com**.
 
-![](/components/docs/deploying/to_the_hub/ADD5.png)
+![](/components/docs/deploying/to_the_hub/ADDAPP5.png)
 
 In this example I added another route: **ip://*.thepiratebay.se** and set both to **Deny**. This ensures users of this browser will not be able to access the Gmail homepage, they also won't be able to access Pirate Bay or any of it's subdomains.
 
-![](/components/docs/deploying/to_the_hub/ADD6.png)
+![](/components/docs/deploying/to_the_hub/ADDAPP6.png)
 
 Navigate to the **Layers** tab. Optionally, add any available image to layer with your browser as a dependency. In this example, I have not selected to add a layer.
 
-![](/components/docs/deploying/to_the_hub/ADD7.png)
+![](/components/docs/deploying/to_the_hub/ADDAPP7.png)
 
 Navigate to the **Updates** tab. You can see a history of the versions released for this application. At any time you select a specific older revision and roll back to it on demand. When complete, click **Save**.
 
-![](/components/docs/deploying/to_the_hub/ADD8.png)
+![](/components/docs/deploying/to_the_hub/ADDAPP8.png)
 
 
 Note: Applications can also be expanded to select a specific version. This is will add the version to the subscription but will not automatically update it. This is useful when a legacy version is required.
 
-![](/components/docs/deploying/to_the_hub/ADD12.png)
+![](/components/docs/deploying/to_the_hub/ADDAPP12.png)
 
 Repeat this process for any application you would like to subscribe to from the Turbo.net Hub. When ready, click **Sync Device**.
 
-![](/components/docs/deploying/to_the_hub/ADD9.png)
+![](/components/docs/deploying/to_the_hub/ADDAPP9.png)
 
 The **Sync Device** button will update to show the syncing has begun.
 
-![](/components/docs/deploying/to_the_hub/ADD10.png)
+![](/components/docs/deploying/to_the_hub/ADDAPP10.png)
 
 When complete we receive a prompt to confirm **Applications synced to Device** with an instruction that shortcuts have also been created in the start menu.
 
-![](/components/docs/deploying/to_the_hub/ADD11.png)
+![](/components/docs/deploying/to_the_hub/ADDAPP11.png)
 
 On your machine you will notice that a scheduled task has been created. The scheduled task will perform the application updates. Modify the schedule to ensure the applications are only updated when you want them to. Optionally, **run** the task to cache the applications. If you do not run the task, launching an application will present a buffer dialog on first launch.
 
-![](/components/docs/deploying/to_the_hub/ADD13.png)
+![](/components/docs/deploying/to_the_hub/ADDAPP13.png)
 
 ```
 # Import the SVM into your local registry with the name "myimage"
