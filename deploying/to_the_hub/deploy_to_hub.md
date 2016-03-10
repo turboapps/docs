@@ -50,7 +50,7 @@ Once the push is complete you can verify that the image is available on the Hub 
 
 #### Sync Device
 
-The **Sync Device** feature on the Turbo.net hub provides the ability to select applications from the Hub and have shortcuts created in your start menu and also have the applications automatically update as new versions are released.
+The **Sync Device** feature on the Turbo.net Hub provides the ability to select applications from the Hub and have shortcuts created in your start menu and also have the applications automatically update as new versions are released.
 
 Navigate to [Turbo.net](https://turbo.net) and **Sign In**. 
 
