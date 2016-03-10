@@ -105,18 +105,7 @@ When complete we receive a prompt to confirm **Applications synced to Device** w
 
 ![](/components/docs/deploying/to_the_hub/ADDAPP11.png)
 
-On your machine you will notice that a scheduled task has been created. The scheduled task will perform the application updates. Modify the schedule to ensure the applications are only updated when you want them to. Optionally, **run** the task to cache the applications. If you do not run the task, launching an application will present a buffer dialog on first launch.
+On your machine you will notice that a scheduled task has been created. The scheduled task will perform the application updates. Modify the schedule to ensure the applications are only updated when you want them to. Optionally, **Run** the task to cache the applications. If you do not run the task, launching an application will present a buffer dialog on first launch.
 
 ![](/components/docs/deploying/to_the_hub/ADDAPP13.png)
 
-```
-# Import the SVM into your local registry with the name "myimage"
-> turbo import -n=myimage svm \path\to\app.svm
-
-# Verify that the image is now in your local registry
-> turbo images
-
-# Push the image to the Hub
-> turbo push myimage
-```
-Once the push is complete you can verify that the image is available on the Hub by going to the [Hub](/hub) in your browser.
