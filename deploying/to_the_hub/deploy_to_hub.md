@@ -55,7 +55,7 @@ The **Sync Device** feature on the Turbo.net Hub provides the ability to deploy 
 1.) Add the applications you want
 2.) Sync to your device
 
-It's possible to add the latest version of any application, which will automatically update the application on your device as a new version is released. In this example, we will add the latest version of an application and deploy to our desktop using **Sync Device**.
+It's possible to add the latest version of any application, which will automatically update the application on your device as a new version is released. In this example, we will add the **latest** version of an **Chrome** and deploy it to our desktop using **Sync Device**.
 
 Navigate to [Turbo.net](https://turbo.net) and **Sign In**. 
 
