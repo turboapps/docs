@@ -89,7 +89,7 @@ Click **Next**.
 
 ![](/components/docs/building/working_with_turbo_studio/SNAPSHOT7.png)
 
-Create a folder named **Chrome** and Click **OK**
+Create a folder named **Chrome** and Click **OK**.
 
 ![](/components/docs/building/working_with_turbo_studio/SNAPSHOT8.png)
 
