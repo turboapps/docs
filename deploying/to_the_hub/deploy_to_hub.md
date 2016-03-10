@@ -50,7 +50,12 @@ Once the push is complete you can verify that the image is available on the Hub 
 
 #### Sync Device
 
-The **Sync Device** feature on the Turbo.net Hub provides the ability to select applications from the Hub and have shortcuts created in your start menu and also have the applications automatically update as new versions are released.
+The **Sync Device** feature on the Turbo.net Hub provides the ability to deploy applications directly to your desktop in two simple steps:
+
+1.) Add the applications you want
+2.) Sync to your device
+
+It's possible to add the latest version of any application, which will automatically update the application on your device as a new version is released. In this example, we will add the latest version of an application and deploy to our desktop using **Sync Device**.
 
 Navigate to [Turbo.net](https://turbo.net) and **Sign In**. 
 
