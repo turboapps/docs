@@ -50,7 +50,7 @@ Once the push is complete you can verify that the image is available on the Hub 
 
 #### Sync Device
 
-The **Sync Device** feature on the Turbo.net Hub provides the ability to deploy applications directly to your desktop in two simple steps:
+The **Sync Device** feature on the Turbo.net Hub provides the ability to deploy applications directly to your desktop from the Hub in two simple steps:
 
 1.) Add the applications you want
 2.) Sync to your device
