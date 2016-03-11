@@ -1,9 +1,9 @@
 ### Desktop Scan
-Turbo Studio can scan the machine where it is installed and build virtual application packages using the content and settings from that machine. The Desktop Scan supports applications available in the Turbo library of applications.
+TurboStudio can scan the machine where it is installed and build container packages using the content and settings from that machine. The Desktop Scan supports applications available in the Turbo library of applications.
 
 #### Running a Desktop Scan
 
-1. Open the Configuration Wizard from the **Virtual Application** tab.
+1. Open the Configuration Wizard from the **container** tab.
 
 2. Click the button next to **Scan desktop for installed applications**.
 
@@ -26,7 +26,7 @@ Applications packaged with this method retain users settings that were in place 
 
 **Optional**: Import to local registry using the command-line interface
 
-Images built with Turbo Studio can also be used with the command-line interface and the hub.
+Images built with TurboStudio can also be used with the command-line interface and the hub.
 
 ```
 # Import the image to your local registry

@@ -1,6 +1,6 @@
-### Virtual Application Settings
+### Container Settings
 
-The following is a table of the definitions and uses of features available in Turbo Studio. These features allow you to edit and customize the settings for an image or virtual application configuration.
+The following is a table of the definitions and uses of features available in TurboStudio. These features allow you to edit and customize the settings for an image or virtual application configuration.
 
 <table>
 	<tr>
@@ -13,7 +13,7 @@ The following is a table of the definitions and uses of features available in Tu
 	</tr>
 	<tr>
 		<td><b>Output File</b></td>
-		<td>The name of the output file from Turbo Studio build process.</td>
+		<td>The name of the output file from TurboStudio build process.</td>
 	</tr>
 	<tr>
 		<td nowrap><b>Project Type</b></td>
@@ -21,7 +21,7 @@ The following is a table of the definitions and uses of features available in Tu
 	</tr>
 	<tr>
 		<td><b>Executable Metadata</b></td>
-		<td><b>Standard metadata</b> includes information such as product title, publisher, description, icon, web site URL, and version. By default, Turbo Studio applies metadata inherited from the virtual application startup file to the output virtual application executable. To override the default meta data, uncheck the <b>Inherit Properties</b> box.<br/><br/><b>Custom metadata</b> can be used by specialized external executable viewer applications, inventory scanners, and other asset and licensing management systems. For information on custom executable metadata, consult the Microsoft Windows Software Development Kit.</td>
+		<td><b>Standard metadata</b> includes information such as product title, publisher, description, icon, web site URL, and version. By default, TurboStudio applies metadata inherited from the virtual application startup file to the output virtual application executable. To override the default meta data, uncheck the <b>Inherit Properties</b> box.<br/><br/><b>Custom metadata</b> can be used by specialized external executable viewer applications, inventory scanners, and other asset and licensing management systems. For information on custom executable metadata, consult the Microsoft Windows Software Development Kit.</td>
 	</tr>
 	<tr>
 		<td><b>Startup Image</b></td>
@@ -29,11 +29,11 @@ The following is a table of the definitions and uses of features available in Tu
 	</tr>
 	<tr>
 		<td><b>Startup Shim</b></td>
-		<td>Startup shims are used to perform customized licensing checks and other initialization tasks. The shim must conform to Turbo Studio interface in order to validate.<br/><br/>The startup shim must compile with an <b>OnInitialize</b> method.<br/><br/><b>C-style startup shim signature</b><br/><br/>typedef BOOL (__stdcall *FnOnInititialize) (LPCWSTR pwcsInitilizationToken);<br/><br/>The return value indicates whether virtual machine execution proceeds.<br/><br/>Methods are acquired via <b>::LoadLibrary</b> followed by <b>::GetProcAddress</b> calls. <br/><br/><b>Example</b><pre>LPCWSTR pwcsInitToken = "VendorSpecificToken";<br/>HMODULE hShim = ::LoadLibrary("Shim.dll");<br/>FnOnInititialize fnOnInit = (FnOnInititialize)::GetProcAddress(hShim, "OnInitialize");<br/>BOOL fResult = fnOnInit(pwcsInitToken);</pre></td>
+		<td>Startup shims are used to perform customized licensing checks and other initialization tasks. The shim must conform to TurboStudio interface in order to validate.<br/><br/>The startup shim must compile with an <b>OnInitialize</b> method.<br/><br/><b>C-style startup shim signature</b><br/><br/>typedef BOOL (__stdcall *FnOnInititialize) (LPCWSTR pwcsInitilizationToken);<br/><br/>The return value indicates whether virtual machine execution proceeds.<br/><br/>Methods are acquired via <b>::LoadLibrary</b> followed by <b>::GetProcAddress</b> calls. <br/><br/><b>Example</b><pre>LPCWSTR pwcsInitToken = "VendorSpecificToken";<br/>HMODULE hShim = ::LoadLibrary("Shim.dll");<br/>FnOnInititialize fnOnInit = (FnOnInititialize)::GetProcAddress(hShim, "OnInitialize");<br/>BOOL fResult = fnOnInit(pwcsInitToken);</pre></td>
 	</tr>
 	<tr>
 		<td><b>Directory Binding</b></td>
-		<td>Turbo Studio enables you to limit where an application will run, based on queries to an Active Directory Domain Controller.</td>
+		<td>TurboStudio enables you to limit where an application will run, based on queries to an Active Directory Domain Controller.</td>
 	</tr>
 	<tr>
 		<td><b>Command Line Arguments</b></td>
@@ -41,7 +41,7 @@ The following is a table of the definitions and uses of features available in Tu
 	</tr>
 	<tr>
 		<td><b>Sandbox Location</b></td>
-		<td>By default, the sandbox is placed in the <b>@APPDATALOCAL@\Spoon\Sandbox\@TITLE@\@VERSION@</b> folder, where <b>@APPDATALOCAL@</b> represents the <b>local Application Data</b> folder, and <b>@TITLE@</b> and <b>@VERSION@</b> represent the application title and version. In addition to the standard root folder variables, the sandbox location can contain the following variables:<br/><br/><b>@TITLE@</b>: Product title<br/><b>@PUBLISHER@</b>:  Product publisher<br/><b>@VERSION@</b>:  Full version string, in dotted quad format<br/><b>@WEBSITE@</b>:  Publisher website<br/><b>@BUILDTIME@</b>: Virtual application build time, in a format similar to <b>2008.02.01T08.00</b>.<br/><br/>With the exception of the <b>@BUILDTIME@</b> variable (set automatically), these variables are based on the values specified in the <b>Properties</b> section of <b>Settings</b>.</td>
+		<td>By default, the sandbox is placed in the <b>@APPDATALOCAL@\Turbo.net\Sandbox\@TITLE@\@VERSION@</b> folder, where <b>@APPDATALOCAL@</b> represents the <b>local Application Data</b> folder, and <b>@TITLE@</b> and <b>@VERSION@</b> represent the application title and version. In addition to the standard root folder variables, the sandbox location can contain the following variables:<br/><br/><b>@TITLE@</b>: Product title<br/><b>@PUBLISHER@</b>:  Product publisher<br/><b>@VERSION@</b>:  Full version string, in dotted quad format<br/><b>@WEBSITE@</b>:  Publisher website<br/><b>@BUILDTIME@</b>: Virtual application build time, in a format similar to <b>2008.02.01T08.00</b>.<br/><br/>With the exception of the <b>@BUILDTIME@</b> variable (set automatically), these variables are based on the values specified in the <b>Properties</b> section of <b>Settings</b>.</td>
 	</tr>
 	<tr>
 		<td><b>Working Directory</b></td>
@@ -49,7 +49,7 @@ The following is a table of the definitions and uses of features available in Tu
 	</tr>
 	<tr>
 		<td><b>Application Type</b></td>
-		<td>If you select an executable startup file, Turbo Studio automatically configures the virtual application to run in the same subsystem as the startup file. If you select a non-executable startup file, you must manually override the application type. Most applications execute in the GUI subsystem. To override the application type, select the mode from the Application Type menu in the Process Configuration section of the Settings panel. The Inherit mode sets the application type based on the type of the startup file.</td>
+		<td>If you select an executable startup file, TurboStudio automatically configures the virtual application to run in the same subsystem as the startup file. If you select a non-executable startup file, you must manually override the application type. Most applications execute in the GUI subsystem. To override the application type, select the mode from the Application Type menu in the Process Configuration section of the Settings panel. The Inherit mode sets the application type based on the type of the startup file.</td>
 	</tr>
 	<tr>
 		<td><b>Target Architecture</b></td>
@@ -61,7 +61,7 @@ The following is a table of the definitions and uses of features available in Tu
 	</tr>
 	<tr>
 		<td><b>Virtual Services</b></td>
-		<td>Windows services are specialized applications that run in the background. They are typically responsible for providing system services such as database services, network traffic handling, web request processing, and other server functionality. Many applications install and require specific services in order to function properly. Turbo Studio fully supports virtualization of certain Windows services. <br/> <br/> Service installation and settings are captured automatically during the snapshot process. The primary exception occurs with virtualized applications intended to run as background worker services (for example, virtualized web servers); in this case, it is often required to enable the <b>Keep Alive</b> option.</td>
+		<td>Windows services are specialized applications that run in the background. They are typically responsible for providing system services such as database services, network traffic handling, web request processing, and other server functionality. Many applications install and require specific services in order to function properly. TurboStudio fully supports virtualization of certain Windows services. <br/> <br/> Service installation and settings are captured automatically during the snapshot process. The primary exception occurs with virtualized applications intended to run as background worker services (for example, virtualized web servers); in this case, it is often required to enable the <b>Keep Alive</b> option.</td>
 	</tr>
 	<tr>
 		<td><b>SVMs</b></td>
