@@ -1,10 +1,10 @@
 ### SpoonReg
 
-SpoonReg is a tool that provides a command-line interface for deploying virtual applications and managing the virtual desktop environment. Users and administrators can use SpoonReg to register virtual applications for a single user or, in the case of administrators, a group of users or devices. SpoonReg can be used to deploy and manage virtual applications and layers built using Turbo Virtual Application Studio. 
+SpoonReg is a tool that provides a command-line interface for deploying containers and managing the virtual desktop environment. Users and administrators can use SpoonReg to register containers for a single user or, in the case of administrators, a group of users or devices. SpoonReg can be used to deploy and manage containers and layers built using TurboStudio. 
 
-After virtualizing an application with Turbo Virtual Application Studio, you can make the Start Menu icons, shortcuts, and file associations available on a user's desktop. SpoonReg enables you to register Turbo virtual applications in the shell, creating associations that generally are created during a standard installation process. Unlike an installation, registration and un-registration are performed instantaneously.
+After containerizing an application with TurboStudio, you can make the Start Menu icons, shortcuts, and file associations available on a user's desktop. SpoonReg enables you to register Turbo containers in the shell, creating associations that generally are created during a standard installation process. Unlike an installation, registration and un-registration are performed instantaneously.
 
-SpoonReg also enables you to create, reset, and remove application sandboxes: virtual environment "bubbles" where virtualized applications reside. Sandbox management provides control over application linking and intercommunication.
+SpoonReg also enables you to create, reset, and remove application sandboxes: virtual environment "bubbles" where containerized applications reside. Sandbox management provides control over application linking and intercommunication.
 
 Turbo Server users and administrators can use SpoonReg to register applications to the desktop. For specialized deployment scenarios, contact your Turbo representative to learn how to obtain your own version of the SpoonReg.exe utility.
 
@@ -18,7 +18,7 @@ The following table lists the different naming conventions used with SpoonReg:
 	</tr>
 	<tr>
 		<th>AppSpec</th>
-		<td>Path (relative or fully-qualified) to a virtual executable or layer built with Turbo Virtual Application Studio</td>
+		<td>Path (relative or fully-qualified) to a virtual executable or layer built with TurboStudio</td>
 	</tr>
 	<tr>
 		<th>SandboxSpec</th>
@@ -26,7 +26,7 @@ The following table lists the different naming conventions used with SpoonReg:
 	</tr>
 </table>
 
-#### Registering a Virtual Application
+#### Registering a container
 
 To register an application, use the following command:
 
@@ -34,13 +34,13 @@ To register an application, use the following command:
 SpoonReg.exe AppSpec
 ```
 
-This command creates all Start Menu items, Desktop shortcuts and file associations used with the virtual application executable. By default, registration creates a local cached copy of the virtual application executable and uses the local profile as the sandbox location.
+This command creates all Start Menu items, Desktop shortcuts and file associations used with the container executable. By default, registration creates a local cached copy of the container executable and uses the local profile as the sandbox location.
 
-Note: The sandbox location specified during the virtual application build is ignored when registering applications using the SpoonReg tool.
+Note: The sandbox location specified during the container build is ignored when registering applications using the SpoonReg tool.
 
 #### Advanced Registration Options
 
-Command-line parameters control caching behavior and sandbox where the virtual application should be registered:
+Command-line parameters control caching behavior and sandbox where the container should be registered:
 
 ```
 SpoonReg.exe [Options] AppSpec[@SandboxSpec]
@@ -53,7 +53,7 @@ SpoonReg.exe [Options] AppSpec[@SandboxSpec]
 	</tr>
 	<tr>
 		<th>/nocache</th>
-		<td>The virtual application executable will not be copied to a client machine. All shortcuts and file associations point to the full path as given by AppSpec.</td>
+		<td>The container executable will not be copied to a client machine. All shortcuts and file associations point to the full path as given by AppSpec.</td>
 	</tr>
 	<tr>
 		<th>/id {00000000-0000-0000-0000-000000000000}</th>
@@ -80,7 +80,7 @@ SpoonReg.exe [Option] AppSpec[@SandboxSpec]
 	</tr>
 	<tr>
 		<th>/nocache</th>
-		<td>The virtual application executable will not be copied to a client machine. All shortcuts and file associations point to the full path as given by AppSpec.</td>
+		<td>The container executable will not be copied to a client machine. All shortcuts and file associations point to the full path as given by AppSpec.</td>
 	</tr>
 	<tr>
 		<th>/cache</th>
@@ -88,11 +88,11 @@ SpoonReg.exe [Option] AppSpec[@SandboxSpec]
 	</tr>
 </table>
 
-#### Un-registering a Virtual Application
+#### Un-registering a Container
 
-Un-registering a virtual application reverses the registration process, removing the virtual application, Start Menu icons, shortcuts, and file associations.
+Un-registering a container reverses the registration process, removing the container, Start Menu icons, shortcuts, and file associations.
 
-To un-register a virtual application, use the following command:
+To un-register a container, use the following command:
 
 ```
 SpoonReg.exe /unregister AppSpec[@SandboxSpec]

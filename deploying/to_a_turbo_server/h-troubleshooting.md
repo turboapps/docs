@@ -1,6 +1,6 @@
 ### Troubleshooting
 
-This section provides information to help troubleshoot common issues you might encounter while using Turbo Server.
+This section provides information to help troubleshoot common issues you might encounter while using TurboServer.
 
 #### Common Issues
 
@@ -20,19 +20,19 @@ The following table lists common issues/questions and their solutions:
          </th>
       </tr>
       <tr>
-         <td colspan="1">There is an error during installation: Turbo Server installation failed, please contact the administrator.</td>
-         <td colspan="1">This may occur if there is a timeout when starting or accessing the database services. Go to <em>Control Panel &gt; Administrative Tools &gt; Services</em> and try restarting the Turbo Server service.</td>
+         <td colspan="1">There is an error during installation: TurboServer installation failed, please contact the administrator.</td>
+         <td colspan="1">This may occur if there is a timeout when starting or accessing the database services. Go to <em>Control Panel &gt; Administrative Tools &gt; Services</em> and try restarting the TurboServer service.</td>
       </tr>
       <tr>
-         <td colspan="1">The Turbo Server service fails to start.</td>
-         <td colspan="1">This may occur if there is a timeout when starting or accessing the database services. Go to Control Panel &gt; Administrative Tools &gt; Services and try restarting the Turbo Server service.</td>
+         <td colspan="1">The TurboServer service fails to start.</td>
+         <td colspan="1">This may occur if there is a timeout when starting or accessing the database services. Go to Control Panel &gt; Administrative Tools &gt; Services and try restarting the TurboServer service.</td>
       </tr>
       <tr>
          <td>
             <p>I am unable to access the Administration Site or Portal Site from another machine.</p>
          </td>
          <td>
-            <p>Microsoft Windows security settings might be restricting external connections to the ports assigned to the Administration and/or Portal sites. For information about configuring Turbo Server security settings, refer to&nbsp;Configuring Turbo Server Security.</p>
+            <p>Microsoft Windows security settings might be restricting external connections to the ports assigned to the Administration and/or Portal sites. For information about configuring TurboServer security settings, refer to&nbsp;Configuring TurboServer Security.</p>
          </td>
       </tr>
       <tr>
@@ -48,7 +48,7 @@ The following table lists common issues/questions and their solutions:
             <p>My application will not launch from my external portal site.</p>
          </td>
          <td>
-            <p>You may see the following warning message: <em>The application is not available from this web site.</em> If this site is hosted on external server, verify that the server is added to the&nbsp;<strong>Servers</strong>&nbsp;page on the Administration Site. For more information about adding servers refer to Managing Servers. After adding a new server verify that you are accessing the site with the specified server web address. If the application still does not launch Turbo Server might be unable to resolve the host name for the external server. To make the host name fully resolvable, add an entry to the <strong>hosts</strong> file on the machine hosting Turbo Server. The host file can be found at C:\Windows\System32\drivers\etc\hosts, and should be in the format: [external server IP address] [external server host name] somename.somecompany.com If the application still does not launch, verify that the security settings for Turbo Server are correctly configured. Improper security settings can restrict access to the Turbo JavaScript API. For more information about how to configure security settings, refer to <span style="text-decoration: underline;"><a href="/display/spoondoc/Configure+Turbo+Server+Security"><span style="text-decoration: underline;">Configuring Turbo Server Security</span></a></span>.</p>
+            <p>You may see the following warning message: <em>The application is not available from this web site.</em> If this site is hosted on external server, verify that the server is added to the&nbsp;<strong>Servers</strong>&nbsp;page on the Administration Site. For more information about adding servers refer to Managing Servers. After adding a new server verify that you are accessing the site with the specified server web address. If the application still does not launch TurboServer might be unable to resolve the host name for the external server. To make the host name fully resolvable, add an entry to the <strong>hosts</strong> file on the machine hosting TurboServer. The host file can be found at C:\Windows\System32\drivers\etc\hosts, and should be in the format: [external server IP address] [external server host name] somename.somecompany.com If the application still does not launch, verify that the security settings for TurboServer are correctly configured. Improper security settings can restrict access to the Turbo JavaScript API. For more information about how to configure security settings, refer to <span style="text-decoration: underline;"><a href="/display/spoondoc/Configure+Turbo+Server+Security"><span style="text-decoration: underline;">Configuring TurboServer Security</span></a></span>.</p>
          </td>
       </tr>
       <tr>
@@ -76,13 +76,13 @@ The following table lists common issues/questions and their solutions:
          </td>
       </tr>
       <tr>
-         <td colspan="1">Turbo Server is no longer accessible after making a Network Configuration change</td>
-         <td colspan="1">Turbo Server may need to be restarted after making a network configuration change. This can be done through the command line tool, Server.exe, as described here.</td>
+         <td colspan="1">TurboServer is no longer accessible after making a Network Configuration change</td>
+         <td colspan="1">TurboServer may need to be restarted after making a network configuration change. This can be done through the command line tool, Server.exe, as described here.</td>
       </tr>
       <tr>
          <td colspan="1">I am unable to add an application to the Start Menu.</td>
          <td colspan="1">
-            <p>Verify that <strong>Desktop Registration</strong> is enabled on the Turbo Server administrator site.</p>
+            <p>Verify that <strong>Desktop Registration</strong> is enabled on the TurboServer administrator site.</p>
             <p>Verify that the user is logging into the Turbo Console with the exact server name that is specified under "Servers" on the administrator site.</p>
          </td>
       </tr>
@@ -108,7 +108,7 @@ The following table lists common issues/questions and their solutions:
                   </div>
                </div>
             </div>
-            <p>To increase the memory available, one must add a new "PortalJavaParams" parameter to the settings.xml file located in C:\ProgramData\Turbo Server. This parameter will set the maximum heap size for the Java process. For an example, see below:</p>
+            <p>To increase the memory available, one must add a new "PortalJavaParams" parameter to the settings.xml file located in C:\ProgramData\TurboServer. This parameter will set the maximum heap size for the Java process. For an example, see below:</p>
             <div class="code panel pdl" style="border-width: 1px;">
                <div class="codeContent panelContent pdl">
                   <div>
@@ -155,9 +155,9 @@ When troubleshooting an issue related to launching applications from the web, Tu
 
 5. When the application is launched again with Turbo, the DbgView Output displays debugging logs.
 
-##### Turbo Server
+##### TurboServer
 
-When troubleshooting an issue related to the general administration of Turbo Server, enable diagnostic mode for Turbo Server. Complete the following steps to enable diagnostic mode for Turbo Server:
+When troubleshooting an issue related to the general administration of TurboServer, enable diagnostic mode for TurboServer. Complete the following steps to enable diagnostic mode for TurboServer:
 
 1. Open a Windows Command Prompt as an administrator (cmd.exe).
 
@@ -178,22 +178,22 @@ When troubleshooting an issue related to the general administration of Turbo Ser
 
 5. Enter the following command: **net start turbo**
 
-6. Upon restarting Turbo Server (with the previous command), debug logs are written to a text file located at **C:\Program Files\Spoon Server**. This log file is assigned a name based on the date and time when Turbo Server restarted. A new log file is created on subsequent restarts of Turbo Server.
+6. Upon restarting TurboServer (with the previous command), debug logs are written to a text file located at **C:\Program Files\Spoon Server**. This log file is assigned a name based on the date and time when TurboServer restarted. A new log file is created on subsequent restarts of TurboServer.
 
 #### Locating Log Files
 
-There are several types of logs available for Turbo Server, including logs for the installation process, Apache, and SQL Server. The log file locations are dependent on the install location of Turbo Server. The default location is "C:\Program Files\Turbo Server".
+There are several types of logs available for TurboServer, including logs for the installation process, Apache, and SQL Server. The log file locations are dependent on the install location of TurboServer. The default location is "C:\Program Files\TurboServer".
 
-**Turbo Server Installation Logs**
+**TurboServer Installation Logs**
 
 - __Install Directory_\logs\Setup.log_
 
-**Turbo Server Runtime Logs**
+**TurboServer Runtime Logs**
 
 - __Install Directory_\logs\*.log*_
 - __Install Directory_\Sandbox\MODIFIED\@PROGRAMFILESX86@\Spoon Server\Web\logs\*.log_
 
-**Turbo Server Jetty Logs**
+**TurboServer Jetty Logs**
 
 - __Install Directory_\Sandbox\roaming\modified\@PROGRAMFILESX86@\Spoon Server\jetty\logs_
 
@@ -205,9 +205,9 @@ There are several types of logs available for Turbo Server, including logs for t
 
 - __Install Directory_\Sandbox\MODIFIED\@PROGRAMFILESX86@\Apache Software Foundation\Apache2.2\logs\error.log_
 
-#### Starting and Stopping the Turbo Server Service
+#### Starting and Stopping the TurboServer Service
 
-Oftentimes, troubleshooting and fixing problems in Turbo Server requires the Turbo Server service be restarted.
+Oftentimes, troubleshooting and fixing problems in TurboServer requires the TurboServer service be restarted.
 
 There are currently two ways of doing this, through either the Control Panel or the Command Prompt. Each method is listed, below:
 
@@ -215,20 +215,20 @@ There are currently two ways of doing this, through either the Control Panel or 
 
 	a. Navigate to *Control Panel > Administrative Tools > Services* or *Control Panel > System and Security > Administrative Tools > Services*
 
-	b. Restart the **Spoon Server** service
+	b. Restart the **Turbo Server** service
 
 2. Via the **Command Prompt** using the **net** command
 
 	a. Run a new command prompt (cmd.exe) as Administrator
 	
-	b. Type the command net stop turbo to stop the Turbo Server service
+	b. Type the command net stop turbo to stop the TurboServer service
 	
 	The expected output for this command is:
 	
-		The Spoon Server service is stopping.
-		The Spoon Server service was stopped successfully.
+		The Turbo Server service is stopping.
+		The Turbo Server service was stopped successfully.
 		
-	c. Type the command net start turbo to start the Turbo Server service
+	c. Type the command net start turbo to start the TurboServer service
 
 	The expected output for this command is:
 
@@ -237,4 +237,4 @@ There are currently two ways of doing this, through either the Control Panel or 
 		
 #### Windows Event Viewer
 
-The Windows Event Viewer is another useful source of information. If there is an issue starting the Windows service for Turbo Server there may be information reported in the Window Event Viewer to help diagnose the problem.
+The Windows Event Viewer is another useful source of information. If there is an issue starting the Windows service for TurboServer there may be information reported in the Window Event Viewer to help diagnose the problem.

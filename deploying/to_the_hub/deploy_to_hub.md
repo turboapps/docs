@@ -1,4 +1,4 @@
-Turbo supports deploying containers as standalone executables, MSIs and Spoon Virtual Machines (SVMs). Read this section to find out more about which deployment option and tools best fit your needs.
+Turbo supports deploying containers as standalone executables, MSIs and Turbo Virtual Machines (SVMs). Read this section to find out more about which deployment option and tools best fit your needs.
 
 ## To the Hub
 
