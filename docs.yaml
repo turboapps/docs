@@ -95,7 +95,7 @@ documents:
 ---
 topic: Building
 documents:
-- title: Working with Containers
+- title: Containers
   sections:
   - Creating Containers
   - Installing MSI Packages
@@ -106,12 +106,12 @@ documents:
   - Processes and Stopping Containers
   - Debugging
   - Building Images from Containers
-- title: Working with Images
+- title: Images
   sections:
   - Creating Images
   - Forking, Renaming, and Tagging
   - Push to a Remote Repository
-- title: Working with Turbo Studio
+- title: TurboStudio
   sections:
   - Snapshotting an Install
   - UI Basics
@@ -120,7 +120,7 @@ documents:
   - Runtimes and Components
   - Desktop Scan
   - Snapshotting
-  - Virtual Application Settings
+  - Container Settings
   - MSI Settings
   - Building from the Command Line
 - title: Continuous Integration
@@ -140,7 +140,7 @@ documents:
   - Basic Walkthrough
   - Getting Started
   - Administration
-  - Manage Applications
+  - Manage Containers
   - Advanced Topics
   - Turbo Plugin and Console
   - Troubleshooting
