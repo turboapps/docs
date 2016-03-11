@@ -1,6 +1,6 @@
 In this section you'll learn a variety of methods for managing and building containers and images with TurboStudio and the command-line interface. You'll also learn how to integrate containerization with your continuous integration server.
 
-## Containers
+## Working with Containers
 
 ### Creating Containers
 
