@@ -1,6 +1,6 @@
 ## Images
 
-### Creating Images
+### Working with Creating Images
 
 There are four ways to create an image:
 
