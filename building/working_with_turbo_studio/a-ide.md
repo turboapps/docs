@@ -1,4 +1,4 @@
-## Working with TurboStudio
+## TurboStudio
 
 TurboStudio is a desktop application that allows you to convert any Windows application into a self-contained virtual application. Virtual applications can be delivered as standalone executables, MSIs or Turbo images.
 
