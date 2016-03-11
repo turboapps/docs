@@ -1,4 +1,4 @@
-## Working with Images
+## Images
 
 ### Creating Images
 
