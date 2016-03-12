@@ -1,4 +1,4 @@
-Turbo supports deploying containers from the Turbo.net hub directly to a desktop using the **Sync Device** feature.
+Turbo supports deploying containers from the Turbo.net hub to your desktop using the **Sync Device** feature. Add the **latest** version of an application to enable auto-patching of that application. This ensures you get the latest updates to the selected applications as they are released.
 
 ## To a Desktop
 
