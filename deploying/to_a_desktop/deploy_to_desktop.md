@@ -4,7 +4,7 @@ Turbo supports deploying containers from the Turbo.net hub to your desktop using
 
 #### Sync Device
 
-The **Sync Device** feature on the Turbo.net Hub provides the ability to deploy applications directly to your desktop from the Hub in two simple steps. Add applications in the Turbo.net hub, when complete just click **Sync Device** on your user or organization homepage.
+The **Sync Device** feature on the Turbo.net Hub provides the ability to deploy applications directly to your desktop from the Hub in two simple steps: Add applications in the Turbo.net hub, when complete just click **Sync Device** on your user or organization homepage.
 
 ![](/components/docs/deploying/to_the_hub/ADDAPP9.png)
 
