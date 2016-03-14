@@ -433,3 +433,8 @@ A specific VM version can be selected by using the `--vm=version` flag. If the s
 #### JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain either a `container` array with information about created container or an `error` object if command failed.
+
+#### Auto Update
+The `new` command checks once a day for new image releases. Specify the `--pull` option to force checking for the latest release.
+Updates are download within the specified release: `turbo new firefox` updates to the latest Firefox. 
+`turbo new firefox:42` updates to the Firefox within release 42, like 42.0, 42.1 42.2 etc.
