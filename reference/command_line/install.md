@@ -6,7 +6,8 @@ The `install` command creates a shortcut for the specified container in the **St
 Usage: turbo install <options> <container>
 
 <options> available:
-      --format=VALUE         Use json format for output
+      --format=VALUE         Use the specified format for output. Supported values: json
+      --register-extensions  Register file associations for installed applications
 ```
 
 Installation integrates the container into the Windows shell by adding a **Start Menu** shortcut for the specified container.
