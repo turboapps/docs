@@ -416,11 +416,17 @@ turbo new --mount <containerid>:"C:\FolderInSourceContainer=C:\FolderInTargetCon
 
 The `isolate` parameter enables different levels of visibility and access from the vm to the host environment. The `full` isolation setting prevents read and write to the host system and registry. This is the preferred setting if you want the vm to run like a clean, completely isolated system.
 
-The `writecopy` isolation setting allows the vm to read the host file system and registry but not write to the host. This is the preferred setting if you want the vm to be able to access host applications and settings, but not alter the host in any way.
+The `write-copy` isolation setting allows the vm to read the host file system and registry but not write to the host. This is the preferred setting if you want the vm to be able to access host applications and settings, but not alter the host in any way.
 
-The `merge` isolation setting allows read and write access to the host system. This is the preferred setting for applications like Gimp or Notepad++ where you want to allow the vm to edit and save files to the host file system.  
+The `merge` isolation setting allows read and write access to the host system.
 
 Note that the vm isolation setting does not override *more restrictive* isolation settings that already exist in the image. For example, if you created an image in Turbo Studio and set specific folders and keys to `full` isolation, those settings would be preserved even if the vm isolation is set to `merge`. 
+
+For applications like Gimp or Notepad++ where you want to allow the vm to edit and save files you work with to the host file system, but otherwise do not want to let the application litter the host system for example with settings stored in the file system or the registry, there is the `+merge-user` isolation modifier. Used as `full+merge-user` or `write-copy+merge-user`, it uses merge isolation for user folders like Desktop or Documents, but keeps the base `full` or `write-copy` isolation for the rest of the system, making sure that the host system is kept clean. The preferred mode is `full+merge-user`.
+
+The well-known root folders affected by the `+merge-user` modifier are: `@DESKTOP@`, `@DESKTOPCOMMON@`, `@DOCUMENTS@`, `@PICTURES@`, `@DOWNLOADS@`, `@MUSIC@`, `@VIDEOS@`, and `@TEMPLATES`.
+
+As a separate convenience feature, if the startup verb is not empty, the startup file of the container is set to merge isolation, regardless of the isolation level that it would otherwise have. This way, when executing a shell operation like opening a file on the host system through a Turbo application that has host system file associations set, it is possible for the virtualized application to access and make changes to the file. The `MergeStartupDir` vm flag takes this feature one step further and sets the isolation level to merge for the whole parent folder of the startup file and all its subfolders except well-known root folders. For example, if the startup file was `C:\myproject.proj` and the flag was enabled, the folder `C:\myproject-files` would have merge isolation, but e.g., `C:\Windows` or `C:\Program Files`, being well-known root folders, would have isolation level unchanged.
 
 #### Exit code
 
