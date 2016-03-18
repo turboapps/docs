@@ -152,8 +152,6 @@ documents:
   sections:
   - EXE
   - MSI
-- title: MSI
-  sections: []
 - title: Integration Tools
   sections:
   - Browser Redirector
