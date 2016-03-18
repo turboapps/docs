@@ -1,4 +1,8 @@
-## EXE
+## Portable EXEs and MSIs
+
+TurboStudio can be used to package virtual applications as portable EXEs and MSIs.
+
+### EXE
 
 A popular option for organizations that have an existing endpoint management solution like LANDesk Management Suite &reg;, Microsoft System Center, or Novell ZENworks is to deploy containerized applications as standalone executables. These executables are built on the SVM architecture and work just like a container. 
 
@@ -8,7 +12,7 @@ To produce an executable output, set the **Project Type** to **Application** in 
 
 An enterprise license for TurboStudio is required to enable executable outputs. Contact our [sales team](mailto:sales@turbo.net) for more information.
 
-## MSI
+### MSI
 
 MSI outputs simply wrap the portable exe into an MSI package to add support for shell integrations such as file associations, Start Menu shortcuts and ProgIds. MSIs are a common deployment option for organizations that are using AdminStudio or for integrating with existing desktop management solutions. 
 
