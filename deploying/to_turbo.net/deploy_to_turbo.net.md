@@ -1,6 +1,6 @@
 Turbo supports deploying containers as standalone executables, MSIs and Turbo Virtual Machines (SVMs). Read this section to find out more about which deployment option and tools best fit your needs.
 
-## To the Hub
+## The Hub
 
 The Hub is an online registry of Turbo images and provides a central location to archive and distribute applications. Once an application is packaged into a Turbo image using Turbo Studio or the command-line interface, the image can be uploaded to the Hub and made available publicly or privately to a specified set of users.
 
@@ -49,3 +49,8 @@ Here is an example of how you would deploy an SVM to the Hub.
 Once the push is complete you can verify that the image is available on the Hub by going to the [Hub](/hub) in your browser.
 
 
+## Using TurboStudio
+
+TurboStudio provides a feature to deploy applications directly to your Turbo.net account. After completing the build process, see the [Build](/docs/building/working-with-turbo-studio) section for details, click on the **Publish to Turbo.net** option on the ribbon menu.
+
+You will be prompted to log in with your Turbo.net account information and then application will be added to your profile. Once the application has been added to your Turbo.net account, it will be accessible from any Turbo enabled device.
