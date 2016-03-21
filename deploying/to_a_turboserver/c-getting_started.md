@@ -1,4 +1,4 @@
-﻿### Getting Started
+### Getting Started
 
 In this section you will learn about system requirements and instructions for installing, configuring and running TurboServer.
 
