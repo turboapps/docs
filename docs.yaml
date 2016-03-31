@@ -222,6 +222,7 @@ documents:
   - isolate
   - layer
   - meta
+  - route
   - setworkdir
   - startup file
   - using
