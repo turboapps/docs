@@ -180,7 +180,7 @@ C:\Windows\system32;C:\Windows;C:\Users
 
 #### Virtual Networks
 
-By default, containers run in the host network, meaning that any services exposed by a container can be accessible to the outside world just as if the application was running natively on the host. However, it is possible to run containers in virtualized network environments by specifying a network name other than "host" with the `--network` flag. Running a container in virtualized network environment prevents it from exposing services to the outside world (unless `--route-add` flag is used appropriately) while allowing for easy communication between containers running in the same virtualized network environment. In a virtual network, containers can connect to each other using their names as specified with the `--name` flag if there was any or the first 8 characters of the container ID otherwise.
+By default, containers run in the host network, meaning that any services exposed by a container can be accessible to the outside world just as if the application was running natively on the host. However, it is possible to run containers in virtualized network environments by specifying a network name other than "host" with the `--network` flag. Running a container in virtualized network environment prevents it from exposing services to the outside world (unless `--route-add` flag is used appropriately) while allowing for easy communication between containers running in the same virtualized network environment. In a virtual network, containers can connect to each other using their names as specified with the `--name` flag if there was any or auto-generated from the image name otherwise.
 
 ```
 # Launch a new container in the host network context (the default)
@@ -188,13 +188,13 @@ By default, containers run in the host network, meaning that any services expose
 
 # Launch two containers in a "mynet" virtual network
 > turbo new -d --network=mynet --name=web <image>
-web
+web#88e3bb0e
 
 > turbo new -d --network=mynet myself/webbrowser http://web
-dd73e48aec024a7b9e15d2cf6599394f
+webbrowser#dd73e48a
 
 # The former will accessible by its name "web" within the network,
-# and the latter by its short ID: "dd73e48a"
+# and the latter by its auto-generated name: "webbrowser"
 ```
 
 **Note:** When connecting, always use the container name and not the network name. After all, what should your application connect to if there were two separate containers exposing the same services on the same virtual network if you connected by network name instead of container name?
@@ -245,17 +245,17 @@ First create two containers, each exposing web sites on private port 80, but wit
 ```
 > turbo new --route-block=tcp,udp -d <image>
 
-05bf1aa429204d1586487f4015e1428c
+image#05bf1aa4
 
 > turbo new --route-block=tcp,udp -d <image>
 
-94a38820b45443c9ac74792215e33a00
+image#94a38820
 ```
 
 Then create a web browser container linked to the previously created containers.
 
 ```
-> turbo new --link 05bf:web1 --link 94a3:web2 myself/webbrowser http://web1 http://web2
+> turbo new --link=05bf:web1 --link=94a3:web2 myself/webbrowser http://web1 http://web2
 ```
 
 You will be able to browse websites served by the linked containers even though they are not publically available.
@@ -296,7 +296,7 @@ To disallow the app to connect to a set of specific IP addresses (blacklist appr
 
 When working with IPv6 addresses, it is necessary to enclose them in square brackets:
 
-Block LOCALHOST address:
+Block IPv6 localhost address:
 
 ```
 > turbo new --route-block=ip://[::1] putty
@@ -308,13 +308,13 @@ Block all IP traffic, except link local IPv6 space
 > turbo new --route-block=ip --route-add=ip://[fe80::c218:85ff:febd:5c01/64] putty
 ```
 
-Redirect traffic from one IPv6 address to LOCALHOST
+Redirect traffic from one IPv6 address to localhost
 
 ```
 > turbo new --route-block=ip --route-add=ip://[2001:cdba::3257:9652]:[::1] putty
 ```
 
-To simplify working with mutliple IP addresses it is possible to use hostnames on the left side of all commands. 
+To simplify working with mutliple IP addresses it is possible to use hostnames on the left side of all commands.  When a hostname is specified with `ip` `--route-add` or `--route-block`, it is resolved to an IP address when the container starts, and the behavior is effectively the same as if the IP address was specified in place of the hostname. Additionally, all DNS resolves are intercepted and whenever a known hostname resolves to a previously unknown IP address, the IP address is added to the appropriate route table. This feature is what allows wildcard hostnames to work, since otherwise it would not be possible to infer the IP addresses of all possible subdomains.
 
 For example, to run a Chrome container allowing only access to the turbo.net and blog.turbo.net domains, you can use the command:
 
@@ -329,11 +329,12 @@ Wildcards are supported in host name routing. So, for example, to unblock turbo.
 ```
 
 Or, to run a Chrome container disallowing access to the facebook.com domain and all of its subdomains:
+
 ```
 > turbo new --route-block=ip://*.facebook.com chrome
 ```
 
-Another options is to use an INI based **route-file** which defines rules for blocking and allowing network traffic. The example below blocks all network traffic and then unblocks 192.168.198.0/24 and all turbo.net and spoon.net subdomains:
+Another option is to use an INI based **route-file** which defines rules for blocking and allowing network traffic. The example below blocks all network traffic and then unblocks 192.168.198.0/24 and all turbo.net and spoon.net subdomains:
 
 ```
 [ip-block]
@@ -348,6 +349,17 @@ To create a firefox container with above **route-file** use this command:
 
 ```
 turbo new --route-file=c:\turbo-rules.txt firefox https://turbo.net
+```
+
+If a large list of hostnames is used, such as in the `turbobrowsers/block-ad-routes` image, the default behavior as described above of resolving all of them to IP addresses at the start of the container would cause container startup to take too long. It can be overriden with the `PreResolveHostNames=false` setting in a route file, as shown below:
+
+```
+[settings]
+PreResolveHostNames=false`
+[ip-block]
+adserver1.com
+adserver2.com
+...
 ```
 
 #### Adding Custom Name Resolution Entries
