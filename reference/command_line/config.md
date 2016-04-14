@@ -6,9 +6,18 @@ The `config` command displays and allows modification of the current configurati
 Usage: turbo config <options>
 
 <options> available:
-      --format=VALUE         Use json format for output
-      --hub=VALUE            The hub server to log into
-      --reset                Reset configuration to default values
+      --container-path=VALUE       Overrides container storage to the specified path
+      --debug-vm-path=VALUE        Path to debug VM
+      --disable-redirector         Disable browser redirection
+      --enable-redirector          Enable browser redirection
+      --format=VALUE               Use the specified format for output. Supported values: json
+      --hub=VALUE                  The remote hub to log into
+      --reset                      Reset configuration to default values
+      --startup-file-default=VALUE Overrides the default startup file if the main image does not have one
+      --storage-path=VALUE         Path to local container and image storage
+      --using=VALUE                Use specified images as temporary dependencies
+      --wait-after-error           Leave process open after error
+      --wait-after-exit            Leave process open after it exits
 ```
 
 If `turbo config` is executed without command line parameters then the current settings are returned. 
