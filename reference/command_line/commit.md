@@ -3,27 +3,27 @@
 The `commit` command builds an image from a container. The image is built from the container's most recent state. 
 
 ```
-Usage: commit <options> [<container>] [<image>]
+Usage: commit <options> <container> <image> [--args <startup file params>]
 
 <options> available:
-      --ad-domain-allow=VALUE
-                             Active Directory domain which is alowed to run
-      --ad-domain-deny=VALUE Active Directory domain which is denied from running
-      --ad-group-allow=VALUE Active Directory group membership which is allows to run
-      --ad-group-deny=VALUE  Active Directory group membership which is denied from running
-  -e, --env=VALUE            Set environment variables inside the container
-      --env-file=VALUE       Read in a line delimited file of ENV variables
-      --format=VALUE         Use json format for output
-      --hosts=VALUE          Add an entry to the virtual /etc/hosts file (<redirect>:<name>)
-      --no-base              Do not merge the base image into the new image
-      --overwrite            Overwrite existing image
-      --route-add=VALUE      Add route mapping. Supported protocols: ip, pipe, tcp, udp
-      --route-block=VALUE    Block specified route or protocol. Supported protocols: ip, tcp, udp
-      --route-file=VALUE     Specify a routing rules file
-      --startup-file=VALUE   Override the default startup file and save it to the committed image
-      --trigger=VALUE        Execute named group of startup files
-      --wait-after-error     Leave program open after error
-      --wait-after-exit      Leave program open after it exits
+      --ad-domain-allow=VALUE Allow execution from the Active Directory domain
+      --ad-domain-deny=VALUE  Disallow execution from the Active Directory domain
+      --ad-group-allow=VALUE  Allow execution for members of the Active Directory group
+      --ad-group-deny=VALUE   Disallow execution for members of the Active Directory group
+  -e, --env=VALUE             Set environment variables inside the container
+      --env-file=VALUE        Read in a line delimited file of ENV variables
+      --format=VALUE          Use the specified format for output. Supported values: json
+      --hosts=VALUE           Add an entry to the virtual /etc/hosts file (<redirect>:<name>)
+      --no-base               Do not merge the base image into the new image
+      --no-base-file-assocs   Do not merge the file associations from the base image into the new image
+      --overwrite             Overwrite existing image
+      --route-add=VALUE       Add route mapping. Supported protocols: ip, pipe, tcp, udp
+      --route-block=VALUE     Block specified route or protocol. Supported protocols: ip, tcp, udp
+      --route-file=VALUE      Read in a INI file of routing configuration
+      --startup-file=VALUE    Override the default startup file and save it to the committed image
+      --trigger=VALUE         Execute named group of startup files
+      --wait-after-error      Leave process open after error
+      --wait-after-exit       Leave process open after it exits
 ```
 
 #### Merging Images
@@ -40,7 +40,7 @@ However, if the same container were committed with the command `turbo commit --n
 
 #### Startup File
 
-To alter the selected startup file, apply the new value with `--startup-file` parameter.
+To alter the selected startup file, apply the new value with `--startup-file` parameter. All parameters which are passed after the `--args` flag will be used as parameters to the startup file.
 
 #### JSON output
 
