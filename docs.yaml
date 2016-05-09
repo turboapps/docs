@@ -60,6 +60,12 @@ documents:
   - Creating an Organization
   - Setting up a Channel
   - Subscribing to the Channel
+- title: Turbo URL Redirection
+  sections:
+  - Topics Covered
+  - Enabling Turbo URL Redirection
+  - Defining Redirection Rules
+  - Deploying Turbo URL Redirection via Group Policy
 - title: Turbo and App Virtualization
   sections: []
 - title: Turbo and Docker
