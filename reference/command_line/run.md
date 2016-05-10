@@ -80,7 +80,9 @@ To use images temporarily, without committing them to the final image, use the `
 # Git will not be part of the container after shutdown
 ```
 
-Containers are started with the startup file specified in the last passed image. If a startup file is not set in the base image then `cmd.exe /k` is used.
+Containers are started with the startup file specified in the last passed image that is not a modifier layer.  A modifier layer is an image that has no startup file or services defined. Regardless of its position on the command line, it is never used as the entry point to the container.
+
+If a startup file is not set in the base image then `cmd.exe /k` is used.
 	
 ```
 # Default startup file is used to start container
