@@ -10,7 +10,7 @@ The Turbo URL Redirector for Internet Explorer is implemented in the **Turbo.net
 2. Defining Redirection Rules
 3. Deploying Turbo URL Redirection via Group Policy
 
-### Enabling Turbo URL Redirection
+### <a name="enabling-turbo-url-redirection"></a>Enabling Turbo URL Redirection
 
 The Turbo URL Redirector is disabled by default, because its installation requires elevated permissions to copy IE Browser Helper binaries to **%ProgramFiles(x86)%**.
 
@@ -38,7 +38,7 @@ The **Turbo.net Browser Helper** will be displayed in the list of currently load
 
 Install and enable the [Turbo.net Extension](https://chrome.google.com/webstore/detail/turbonet-extension/ldibmiofagdkgiphkcokpooepankmacl).
 
-For information how to enable the extension for all users see [Deploying Turbo URL Redirection via Group Policy](### Deploying Turbo URL Redirection via Group Policy).
+For information how to enable the extension for all users see [Deploying Turbo URL Redirection via Group Policy](#deploying-turbo-url-redirection-via-group-policy).
 
 ### Defining Redirection Rules
 
@@ -70,7 +70,7 @@ Go to [www.facebook.com](https://www.facebook.com/) using navigation bar in the 
 
 The Turbo URL Redirector will display a notification explaining that the domain will be opened in a separate window and the Facebook app will open in a few moments.
 
-### Deploying Turbo URL Redirection via Group Policy
+### <a name="deploying-turbo-url-redirection-via-group-policy"></a>Deploying Turbo URL Redirection via Group Policy
 
 This section explains how to enable the Turbo URL Redirector for all users of Internet Explorer and Chrome.
 
@@ -82,7 +82,7 @@ Hub server: https://turbo.net/
 Browser redirection is enabled
 ```
 
-If the browser redirection feature is disabled, see [enabling Turbo URL Redirection](### Enabling Turbo URL Redirector).
+If the browser redirection feature is disabled, see [enabling Turbo URL Redirection](#enabling-turbo-url-redirection).
 
 #### Enable the Turbo Browser Helper Object for All IE Users
 
