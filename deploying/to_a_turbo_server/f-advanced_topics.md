@@ -726,9 +726,11 @@ Examples:
 
 	Server.exe admin /server web-address https://acme/turbo
 
-- **Set the SSL certificate file path**:
+- **Set the path for SSL certificate files**:
 
-	Server.exe admin /server ssl-certificate-file c:\programdata\acme\cert.txt
+	Server.exe admin /server ssl-certificate-file c:\programdata\acme\cert-file.crt
+	Server.exe admin /server ssl-certificate-key-file c:\programdata\acme\key-file.key
+	Server.exe admin /server ssl-certificate-chain-file c:\programdata\acme\chain-file.crt
 
 
 **Server.exe admin /sync**
