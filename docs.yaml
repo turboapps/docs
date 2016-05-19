@@ -79,16 +79,6 @@ documents:
   - Configuration
   - Streaming
   - Support
-- title: About
-  sections:
-  - Virtual Machine
-  - Containers
-  - Images
-  - Hub
-  - Turbo Studio and Command Line
-  - Turbo Server
-  - Company
-  - Contact
 ---
 topic: Hub
 documents:
