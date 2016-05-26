@@ -163,22 +163,22 @@ documents:
   - config
   - containers
   - continue
+  - copyi
   - cp
   - diff
   - export
   - fork
   - history
-  - install
-  - installi
   - images
   - import
   - inspect
+  - install
+  - installi
   - login
   - logout
   - logs
   - netstat
   - new
-  - pause
   - ps
   - pull
   - push
@@ -196,12 +196,12 @@ documents:
   - subscribe
   - subscription
   - subscriptions
-  - top
+  - suspend
   - try
-  - upgrade
   - uninstall
   - uninstalli
   - unsubscribe
+  - upgrade
   - version
   - vm
   - vms
