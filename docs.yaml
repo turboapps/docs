@@ -57,7 +57,7 @@ documents:
 - title: Turbo for Citrix
   sections:
   - Topics Covered
-  - Creating an Organization
+  - Creating an organization on Turbo.net
   - Setting up a Channel
   - Subscribing to the Channel
 - title: Turbo URL Redirection
@@ -101,7 +101,6 @@ documents:
   - Managing Containers
   - Processes and Stopping Containers
   - Debugging
-  - Building Images from Containers
 - title: Working with Images
   sections:
   - Creating Images
@@ -110,15 +109,15 @@ documents:
 - title: Working with Turbo Studio
   sections:
   - Snapshotting an Install
-  - UI Basics
   - Virtual Filesystem
   - Virtual Registry
   - Runtimes and Components
   - Desktop Scan
+  - UI Basics
   - Snapshotting
-  - Container Settings
   - MSI Settings
   - Building from the Command Line
+  - Container Settings
 - title: Continuous Integration
   sections:
   - Create TurboScript
