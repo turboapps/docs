@@ -1026,26 +1026,7 @@ When publishing applications to external sites, Turbo provides a JavaScript API 
          </td>
          <td>
             <p>Launches an application based on a string which denotes the absolute URL to an application configuration. <br>There is an optional Boolean parameter which indicates whether or not the application should be deployed to the users' desktop. <br>Example configuration URL:</p>
-            <div class="code panel pdl" style="border-style: none;border-width: 1px;">
-               <div class="codeContent panelContent pdl">
-                  <div>
-                     <div id="highlighter_738223" class="syntaxhighlighter nogutter  java">
-                        <div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div>
-                        <table border="0" cellpadding="0" cellspacing="0">
-                           <tbody>
-                              <tr>
-                                 <td class="code">
-                                    <div class="container" title="Hint: double-click to select code">
-                                       <div class="line number1 index0 alt2"><code class="java plain">http:</code><code class="java comments">//[SERVER_NAME]/Config/?a=[APPLICATION_NAME]&amp;v=[VERSION_NUMBER]&amp;e=[ENTRY_POINT_NAME]</code></div>
-                                    </div>
-                                 </td>
-                              </tr>
-                           </tbody>
-                        </table>
-                     </div>
-                  </div>
-               </div>
-            </div>
+            <pre><code>http://[SERVER_NAME]/Config/?a=[APPLICATION_NAME]&amp;v=[VERSION_NUMBER]&amp;e=[ENTRY_POINT_NAME]</code></pre>
          </td>
       </tr>
       <tr>

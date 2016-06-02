@@ -90,49 +90,12 @@ The following table lists common issues/questions and their solutions:
          <td colspan="1">The portal site fails to load.</td>
          <td colspan="1">
             <p>This may be due to an out of memory error in the Java runtime. <br>To verify this, look for the following error in the Jetty logs (see Locating Log Files):</p>
-            <div class="code panel pdl" style="border-width: 1px;">
-               <div class="codeContent panelContent pdl">
-                  <div>
-                     <div id="highlighter_979976" class="syntaxhighlighter nogutter  java">
-                        <div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div>
-                        <table border="0" cellpadding="0" cellspacing="0">
-                           <tbody>
-                              <tr>
-                                 <td class="code">
-                                       <div><code>java.lang.OutOfMemoryError: Java heap space</code></div>
-                                 </td>
-                              </tr>
-                           </tbody>
-                        </table>
-                     </div>
-                  </div>
-               </div>
-            </div>
+            <pre><code>java.lang.OutOfMemoryError: Java heap space</code></pre>
+            
             <p>To increase the memory available, one must add a new "PortalJavaParams" parameter to the settings.xml file located in C:\ProgramData\TurboServer. This parameter will set the maximum heap size for the Java process. For an example, see below:</p>
-            <div class="code panel pdl" style="border-width: 1px;">
-               <div class="codeContent panelContent pdl">
-                  <div>
-                     <div id="highlighter_965323" class="syntaxhighlighter nogutter  java">
-                        <div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div>
-                        <table border="0" cellpadding="0" cellspacing="0">
-                           <tbody>
-                              <tr>
-                                 <td class="code">
-                                    <div class="container" title="Hint: double-click to select code">
-                                       <div class="line number1 index0 alt2"><code class="java plain">&lt;Settings&gt;</code></div>
-                                       <div class="line number2 index1 alt1">&nbsp;</div>
-                                       <div class="line number5 index4 alt2"><code class="java plain">&lt;PortalJavaParams&gt;-Xmx1200M&lt;/PortalJavaParams&gt;</code></div>
-                                       <div class="line number6 index5 alt1">&nbsp;</div>
-                                       <div class="line number9 index8 alt2"><code class="java plain">&lt;/Settings&gt;</code></div>
-                                    </div>
-                                 </td>
-                              </tr>
-                           </tbody>
-                        </table>
-                     </div>
-                  </div>
-               </div>
-            </div>
+            <pre><code class="java plain">&lt;Settings&gt;
+             &lt;PortalJavaParams&gt;-Xmx1200M&lt;/PortalJavaParams&gt;
+             &lt;/Settings&gt;</code></pre>
          </td>
       </tr>
 </table>
