@@ -94,8 +94,8 @@ The following table lists common issues/questions and their solutions:
             
             <p>To increase the memory available, one must add a new "PortalJavaParams" parameter to the settings.xml file located in C:\ProgramData\TurboServer. This parameter will set the maximum heap size for the Java process. For an example, see below:</p>
             <pre><code class="java plain">&lt;Settings&gt;
-             &lt;PortalJavaParams&gt;-Xmx1200M&lt;/PortalJavaParams&gt;
-             &lt;/Settings&gt;</code></pre>
+&lt;PortalJavaParams&gt;-Xmx1200M&lt;/PortalJavaParams&gt;
+&lt;/Settings&gt;</code></pre>
          </td>
       </tr>
 </table>
