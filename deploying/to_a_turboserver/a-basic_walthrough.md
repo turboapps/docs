@@ -4,7 +4,7 @@ TurboServer is an on-premise application delivery solution. See the quick walkth
 
 ### Basic Walkthrough
 
-To read more about this process and TurboServer, please refer to the [full TurboServer documentation](/docs/deploying/to-a-turbo-server#getting-started).
+To read more about this process and TurboServer, please refer to the [full TurboServer documentation](/docs/deploying/to-a-turboserver#getting-started).
 
 #### Create a Virtual Application
 
