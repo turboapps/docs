@@ -30,7 +30,6 @@ They can **Pull** the image to their local registry. This button will execute th
 > turbo pull [profile]/[repo]
 ```
 
-
 They can **Open** a console window in a fresh container with your image as the base. These same actions can also be completed from the command-line interface:
 
 ```
@@ -38,14 +37,7 @@ They can **Open** a console window in a fresh container with your image as the b
 > turbo run [profile]/[repo] cmd
 ```
 
-Repositories can also be forked to your profile by clicking the **Fork** button on a repository's homepage. Forking creates a copy of the repository under your profile. Similarly, from the command-line interface:
-
-```
-# Fork a repository
-> turbo fork [repo] [profile]/[repo]
-```
-
-You can also create a new repository from the command-line interface by pushing it to the Hub from your local registry:
+You can create a new repository from the command-line interface by pushing it to the Hub from your local registry:
 
 ```
 # First run a container
@@ -59,5 +51,3 @@ You can also create a new repository from the command-line interface by pushing 
 
 # The image is now pushed to the logged-in profile
 ```
-
-Now go to the repository details page on the Hub and favorite your project with the **Star** button.
