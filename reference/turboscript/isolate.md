@@ -10,7 +10,6 @@ Supported object types:
 
 * kernel - kernel objects (full isolation only)
 * file - file system
-* registry - registry value
 * window - window objects
 
 Supported isolation types:
