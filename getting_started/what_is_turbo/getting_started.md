@@ -42,7 +42,7 @@ Turbo containers are built on top of the **Spoon Virtual Machine Engine** (SVM),
 
 The image below illustrates how the SVM is isolated from the host environment.
 
-![](/components/docs/getting_started/what_is_turbo/turbo-vm.png)
+![](/docs/getting_started/what_is_turbo/turbo-vm.png)
 
 The Spoon VM is required to implement containerization on the Windows platform since the underlying OS does not provide appropriate containerization primitives. Put another way, Spoon VM plays the same role for Turbo containers as LXC does for Docker containers.
 

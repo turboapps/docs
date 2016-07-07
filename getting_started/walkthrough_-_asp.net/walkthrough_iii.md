@@ -57,15 +57,15 @@ Enter 'Q' to stop IIS Express
 
 Go to `http://localhost:8080` and test the application.
 
-![](/components/docs/getting_started/walkthrough_-_asp.net/miniblog.png)
+![](/docs/getting_started/walkthrough_-_asp.net/miniblog.png)
 
 Login using demo/demo.
 
-![](/components/docs/getting_started/walkthrough_-_asp.net/miniblog-signin.png)
+![](/docs/getting_started/walkthrough_-_asp.net/miniblog-signin.png)
 
 Create a new post.
 
-![](/components/docs/getting_started/walkthrough_-_asp.net/savedpost.png)
+![](/docs/getting_started/walkthrough_-_asp.net/savedpost.png)
 
 ### Resume Testing on a New Machine 
 Stop the IIS service and exit the container.
@@ -78,7 +78,7 @@ Process exited with status 0
 
 Go to a new machine and login to [Turbo.net](http://turbo.net).  Go to your containers and click the **Continue** button for the container that you want to resume.
 
-![](/components/docs/getting_started/walkthrough_-_asp.net/continue-from-spoonnet.png)
+![](/docs/getting_started/walkthrough_-_asp.net/continue-from-spoonnet.png)
 
 ```
 Creating container 249c4f3e and continuing execution in state f478518f
@@ -100,7 +100,7 @@ Verify that the web application is in the same state even though you are on a co
 
 Go to `http://localhost:8080` and you can see that the post we created earlier is still there.
 
-![](/components/docs/getting_started/walkthrough_-_asp.net/same-post-new-system.png)
+![](/docs/getting_started/walkthrough_-_asp.net/same-post-new-system.png)
 
 
 ### Next Steps 

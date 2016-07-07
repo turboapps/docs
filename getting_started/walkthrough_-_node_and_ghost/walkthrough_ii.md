@@ -131,7 +131,7 @@ Go ahead and make your first post! :) Don't forget to save and publish it.
 
 Your Ghost web application can then be used via any browser at **http://localhost:2368**.
 
-![](/components/docs/getting_started/walkthrough_-_node_and_ghost/ghost-first-post.png)
+![](/docs/getting_started/walkthrough_-_node_and_ghost/ghost-first-post.png)
 
 When you are done, press **Ctrl+C** to stop the server, then `exit` the container.
 
@@ -182,7 +182,7 @@ In each of the three Ghost containers, start the NodeJS server to make all three
 
 At this point, you should have three containers using the same image. Each Ghost instance operates on the 2368 port internally, but is accessible via the 808x port that is assigned to it on the host.
 
-![](/components/docs/getting_started/walkthrough_-_node_and_ghost/multiple.png)
+![](/docs/getting_started/walkthrough_-_node_and_ghost/multiple.png)
 
 ### Saving a Database to a Layer
 
@@ -229,7 +229,7 @@ Start the NodeJS server and verify that the blog has the database.
 (9a82febf) C:\> cd ghost & npm start
 ```
 
-![](/components/docs/getting_started/walkthrough_-_node_and_ghost/ghost-first-post-2.png)
+![](/docs/getting_started/walkthrough_-_node_and_ghost/ghost-first-post-2.png)
 
 ### Reverting the Container
 
@@ -255,7 +255,7 @@ Change directory to Ghost and start the server.
 # When you visit the website, the Ghost web application should be reverted to its original state.
 ```
 
-![](/components/docs/getting_started/walkthrough_-_node_and_ghost/ghost-revert.png)
+![](/docs/getting_started/walkthrough_-_node_and_ghost/ghost-revert.png)
 
 This command is especially useful if your database was somehow corrupted or an unrecoverable error made your web application unusable. Instead of trying to figure out where the problem is and attempting to clean your environment, which can take hours to do, you can simply `revert` the container to its original state with the `turbo revert` command.
 

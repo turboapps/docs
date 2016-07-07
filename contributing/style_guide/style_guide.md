@@ -42,7 +42,7 @@ When contributing to turbo.net/docs, please take the following style guidelines 
 https://github.com/turboapps/docs/tree/master/doc/getting_started/tour_ii/image.png
 
 # Markdown would be
-![](/components/docs/getting_started/tour_ii/image.png)
+![](/docs/getting_started/tour_ii/image.png)
 ```
 
 ### Contributing 

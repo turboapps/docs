@@ -60,7 +60,7 @@ building "my image" from /path/to/turbo.me
 https://github.com/turboapps/docs/tree/master/doc/getting_started/tour_ii/image.png
 
 # Markdown would be
-![](/components/docs/getting_started/tour_ii/image.png)
+![](/docs/getting_started/tour_ii/image.png)
 ```
 
 ### Contributing 

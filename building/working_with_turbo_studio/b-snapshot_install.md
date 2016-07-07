@@ -2,7 +2,7 @@
 
 #### Start with a Clean Virtual Machine
 
-![](/components/docs/building/working_with_turbo_studio/VM1.png)
+![](/docs/building/working_with_turbo_studio/VM1.png)
 
 When using the snapshot method to containerize an application, it is important to start with a clean system so that no components are missed during the capture and diff process. 
 
@@ -14,18 +14,18 @@ TurboStudio can be downloaded from [https://turbo.net/studio](https://turbo.net/
 
 In this example we will be creating a snapshot of Google Chrome.
 
-![](/components/docs/building/working_with_turbo_studio/VM2.png)
+![](/docs/building/working_with_turbo_studio/VM2.png)
 
 
 ### Using the Wizard to Capture the Application Install
 
 Select the third option in the Wizard, **Snapshot a third-party application or component**.
 
-![](/components/docs/building/working_with_turbo_studio/SNAPSHOT1.png)
+![](/docs/building/working_with_turbo_studio/SNAPSHOT1.png)
 
 Select **Next** on the following screen to capture the "before" snapshot.
 
-![](/components/docs/building/working_with_turbo_studio/SNAPSHOT2.png)
+![](/docs/building/working_with_turbo_studio/SNAPSHOT2.png)
 
 Chrome can be installed in two different locations on the system. The standard location is underneath the Current User profile. There is another enterprise installer available on the Google website for installing Chrome under Program Files.  In this example the enterprise location will be used, but both approaches will be discussed in the following steps.
 
@@ -33,11 +33,11 @@ Launch **Chrome**.
 
 Close the open tabs and then exit **Chrome** (ensure it is not running in the background by checking the system tray and task manager) .
 
-![](/components/docs/building/working_with_turbo_studio/SNAPSHOT3.png)
+![](/docs/building/working_with_turbo_studio/SNAPSHOT3.png)
 
 Navigate to **Services**. Disable both Google Chrome update services.
 
-![](/components/docs/building/working_with_turbo_studio/SNAPSHOT4.png)
+![](/docs/building/working_with_turbo_studio/SNAPSHOT4.png)
 
 Open **%LOCALAPPDATA%\Google\Chrome\User Data\Default\Preferences** with **Notepad**. Configure the preferences as you see fit. In this example, we set the following configuration:
 
@@ -79,51 +79,51 @@ Open **%LOCALAPPDATA%\Google\Chrome\User Data\Default\Preferences** with **Notep
 ```
 
 
-![](/components/docs/building/working_with_turbo_studio/SNAPSHOT5.png)
+![](/docs/building/working_with_turbo_studio/SNAPSHOT5.png)
 
 Return to the TurboStudio wizard. Click **Next**.
 
-![](/components/docs/building/working_with_turbo_studio/SNAPSHOT6.png)
+![](/docs/building/working_with_turbo_studio/SNAPSHOT6.png)
 
 Click **Next**.
 
-![](/components/docs/building/working_with_turbo_studio/SNAPSHOT7.png)
+![](/docs/building/working_with_turbo_studio/SNAPSHOT7.png)
 
 Create a folder named **Chrome** and Click **OK**.
 
-![](/components/docs/building/working_with_turbo_studio/SNAPSHOT8.png)
+![](/docs/building/working_with_turbo_studio/SNAPSHOT8.png)
 
 Click **Next**.
 
-![](/components/docs/building/working_with_turbo_studio/SNAPSHOT9.png)
+![](/docs/building/working_with_turbo_studio/SNAPSHOT9.png)
 
 Click **Next**.
 
-![](/components/docs/building/working_with_turbo_studio/SNAPSHOT10.png)
+![](/docs/building/working_with_turbo_studio/SNAPSHOT10.png)
 
 Click **Next**.
 
-![](/components/docs/building/working_with_turbo_studio/SNAPSHOT11.png)
+![](/docs/building/working_with_turbo_studio/SNAPSHOT11.png)
 
 Enter **filename** as **chrome49** and then click **Save**.
 
-![](/components/docs/building/working_with_turbo_studio/SNAPSHOT12.png)
+![](/docs/building/working_with_turbo_studio/SNAPSHOT12.png)
 
 Navigate to **FileSystem** and delete the **Update** folder found in the install directory.
 
-![](/components/docs/building/working_with_turbo_studio/SNAPSHOT13.png)
+![](/docs/building/working_with_turbo_studio/SNAPSHOT13.png)
 
 Delete the **Installer** folder.
 
-![](/components/docs/building/working_with_turbo_studio/SNAPSHOT14.png)
+![](/docs/building/working_with_turbo_studio/SNAPSHOT14.png)
 
 Navigate to Local Application Data (Low Integrity). Delete the **Microsoft** folder, if it exists.
 
-![](/components/docs/building/working_with_turbo_studio/SNAPSHOT15.png)
+![](/docs/building/working_with_turbo_studio/SNAPSHOT15.png)
 
 Navigate to Application Data. Delete the **Microsoft** folder, if it exists.
 
-![](/components/docs/building/working_with_turbo_studio/SNAPSHOT16.png)
+![](/docs/building/working_with_turbo_studio/SNAPSHOT16.png)
 
 Navigate to **Registry** then navigate to **current user root > software**. Delete the **Microsoft** folder.
 
@@ -132,28 +132,28 @@ Repeat this step for:
 **local machine root\SOFTWARE\Wow6432Node\Microsoft**
 **local machine root\SOFTWARE\Microsoft**
 
-![](/components/docs/building/working_with_turbo_studio/SNAPSHOT17.png)
+![](/docs/building/working_with_turbo_studio/SNAPSHOT17.png)
 
 Navigate to **Registry** then navigate to **current user root > SOFTWARE** and set the **Google** key's **isolation** setting to **Full**.
 
 Repeat this for:
 **local machine root\SOFTWARE\Wow6432Node\Google**
 
-![](/components/docs/building/working_with_turbo_studio/SNAPSHOT18.png)
+![](/docs/building/working_with_turbo_studio/SNAPSHOT18.png)
 
 Navigate to **Settings->Process Configuration**.
 
 Check the checkboxes for **Enable windows class isolation** and **Always launch child processes as current user**.
 
-![](/components/docs/building/working_with_turbo_studio/SNAPSHOT19.png)
+![](/docs/building/working_with_turbo_studio/SNAPSHOT19.png)
 
 Set the **project type** to **component** and then click **Build**.
 
-![](/components/docs/building/working_with_turbo_studio/SNAPSHOT20.png)
+![](/docs/building/working_with_turbo_studio/SNAPSHOT20.png)
 
 Click Ok to finish and close TurboStudio.
 
-![](/components/docs/building/working_with_turbo_studio/SNAPSHOT21.png)
+![](/docs/building/working_with_turbo_studio/SNAPSHOT21.png)
 
 Copy the created **Chrome** foldeer that contains the svm file from your VM to a fileshare. 
 

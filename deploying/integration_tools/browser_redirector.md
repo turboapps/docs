@@ -34,7 +34,7 @@ Registry-based rules can be located in `HKCU\Software\Code Systems\Turbo` or `HK
 
 The `Redirect` key also must contain a string value that indicates the redirector version number. By default, this will be `1.0`. See the screenshot below for proper setup of the version number value.
 
-![](/components/docs/deploying/integration_tools/redirect_version.png)
+![](/docs/deploying/integration_tools/redirect_version.png)
 
 Registry-based rule key values have a specific format that must be followed in order for redirection to function correctly. There are three values within a normal rule key: `Action`, `Match`, and `Path`. All values are string (`REG_SZ`) values.
 
@@ -61,7 +61,7 @@ http://turbo.net
  
 This screenshot shows a fully set up rule key.
 
-![](/components/docs/deploying/integration_tools/redirect_rule.png)
+![](/docs/deploying/integration_tools/redirect_rule.png)
 
 #### Additional Information
 
@@ -75,4 +75,4 @@ When a virtual browser is located on a network location or anywhere not on the u
 
 The warning can be suppressed by setting the environment variable SEE\_MASK\_NOZONECHECKS to 1.
 
-![](/components/docs/deploying/integration_tools/nozonechecks.png)
+![](/docs/deploying/integration_tools/nozonechecks.png)
