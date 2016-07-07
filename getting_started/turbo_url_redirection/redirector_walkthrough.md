@@ -7,10 +7,12 @@ The Turbo URL Redirector for Internet Explorer is implemented in the **Turbo.net
 ### Topics Covered
 
 1. Enabling Turbo URL Redirector
-2. Defining Redirection Rules
-3. Deploying Turbo URL Redirection via Group Policy
+2. Defining Redirection Rules in Turbo.net
+3. Defining Redirection Rules in the Windows Registry
+4. Deploying Turbo URL Redirection via Group Policy
 
-### <a name="enabling-turbo-url-redirection"></a>Enabling Turbo URL Redirection
+<a name="enabling-turbo-url-redirection"></a>
+### Enabling Turbo URL Redirection
 
 The Turbo URL Redirector is disabled by default, because its installation requires elevated permissions to copy IE Browser Helper binaries to **%ProgramFiles(x86)%**.
 
@@ -40,7 +42,7 @@ Install and enable the [Turbo.net Extension](https://chrome.google.com/webstore/
 
 For information how to enable the extension for all users see [Deploying Turbo URL Redirection via Group Policy](#deploying-turbo-url-redirection-via-group-policy).
 
-### Defining Redirection Rules
+### Defining Redirection Rules in Turbo.net
 
 Sign in to the [Turbo.net](https://turbo.net/) website and go to the **Home** tab.
 
@@ -70,7 +72,20 @@ Go to [www.facebook.com](https://www.facebook.com/) using navigation bar in the 
 
 The Turbo URL Redirector will display a notification explaining that the domain will be opened in a separate window and the Facebook app will open in a few moments.
 
-### <a name="deploying-turbo-url-redirection-via-group-policy"></a>Deploying Turbo URL Redirection via Group Policy
+### Defining Redirection Rules in the Windows Registry
+
+Redirection rules can also be set in the Windows registry in cases where Turbo.net subscriptions are not used.
+
+Rules are added to the "HKLM\Software\Code Systems\Turbo\Redirector" hive ("HKLM\Software\Wow6432node\Code Systems\Turbo\Redirector" for 64-bit operating systems).
+
+![](/components/docs/getting_started/turbo_url_redirection/12_registry_rules.png)
+
+Create a key under the **Redirector** hive, setting the name of the new key to the url pattern to match. In the example above, the pattern is "yahoo.com" which matches any url that contains "yahoo.com".
+
+Within the new rule key, registry values are used to describe the command to execute if a url is encountered which matches the pattern. There are two ways to describe the redirection response, with **Command** or **TurboCommand** string values. A **Command** value is set to the full path to the command to execute. In the example above, the command is set to "c:\turbo\ie8-win10.exe". A **TurboCommand** value is set to the command to execute via turbo.exe. An example value would be "run ie8" which would execute "turbo.exe run ie8". For either of these command types, the url which matched the pattern is appeneded to the end of the command to be passed as a parameter.
+
+<a name="deploying-turbo-url-redirection-via-group-policy"></a>
+### Deploying Turbo URL Redirection via Group Policy
 
 This section explains how to enable the Turbo URL Redirector for all users of Internet Explorer and Chrome.
 
