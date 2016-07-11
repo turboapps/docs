@@ -30,10 +30,10 @@ If the same image is forked or tagged multiple times then the `rmi` command will
 ```
 > turbo images
 
-ID 			  Name  				Tag	 Created 				Size
--- 			  ----  				---  -------    			----
-7a85fe8f7ad1  chocolatey/chocolatey      8/22/2014 11:34:19 AM  3.6 MB
-7a85fe8f7ad1  chocolatey-forked		1.0  8/22/2014 12:00:01 PM  3.6 MB
+ID            Name                    Tag  Created                Size
+--            ----                    ---  -------                ----
+7a85fe8f7ad1  chocolatey/chocolatey        8/22/2014 11:34:19 AM  3.6 MB
+7a85fe8f7ad1  chocolatey-forked       1.0  8/22/2014 12:00:01 PM  3.6 MB
 
 > turbo rmi chocolatey/chocolatey
 
@@ -41,9 +41,9 @@ Image chocolatey/chocolatey was untagged
 
 > turbo images
 
-ID 			  Name  				Tag	 Created 				Size
--- 			  ----  				---  -------    			----
-7a85fe8f7ad1  chocolatey-forked		1.0  8/22/2014 12:00:01 PM  3.6 MB
+ID            Name                Tag  Created                Size
+--            ----                ---  -------                ----
+7a85fe8f7ad1  chocolatey-forked   1.0  8/22/2014 12:00:01 PM  3.6 MB
 
 > turbo rmi chocolatey-forked:1.0
 
