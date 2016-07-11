@@ -73,6 +73,7 @@ No more "localhost:8080".
 	# Run a Firefox browser instance in the same virtual network
 	# environment and connect to the WordPress server
 	> turbo run --network=wp firefox http://web:8080
+	
 	# It is also possible to map a different domain name than
 	# the container name by setting up a container-to-container link
 	> turbo run --link=web:awesome.com firefox http://awesome.com:8080
