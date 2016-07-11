@@ -97,11 +97,11 @@ When passing arguments to a startup file or command, we recommend separating the
 If a `--` mark is not used, any argument matching a `run` command flag will be interpreted by Turbo which may lead to unexpected behavior. 
 
 ```
-  # Turbo will interpret the /d flag and execute a container in detached mode
-  > turbo run spoonbrew/clean /d
+# Turbo will interpret the /d flag and execute a container in detached mode
+> turbo run spoonbrew/clean /d
   
-  # /d flag is passed to cmd.exe, disabling execution of AutoRun commands from the registry
-  > turbo run spoonbrew/clean -- /d 
+# /d flag is passed to cmd.exe, disabling execution of AutoRun commands from the registry
+> turbo run spoonbrew/clean -- /d 
 ```
 
 A container's standard streams (stdin/out/err) can be redirected to either the current command prompt or the background using the `--attach` and `--detach` flags. 
