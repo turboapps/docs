@@ -97,11 +97,11 @@ When passing arguments to a startup file or command, we recommend separating the
 If a `--` mark is not used, any argument matching a `run` command flag will be interpreted by Turbo which may lead to unexpected behavior. 
 
 ```
-  # Turbo will interpret the /d flag and execute a container in detached mode
-  > turbo run spoonbrew/clean /d
+# Turbo will interpret the /d flag and execute a container in detached mode
+> turbo run spoonbrew/clean /d
   
-  # /d flag is passed to cmd.exe, disabling execution of AutoRun commands from the registry
-  > turbo run spoonbrew/clean -- /d 
+# /d flag is passed to cmd.exe, disabling execution of AutoRun commands from the registry
+> turbo run spoonbrew/clean -- /d 
 ```
 
 A container's standard streams (stdin/out/err) can be redirected to either the current command prompt or the background using the `--attach` and `--detach` flags. 
@@ -128,7 +128,6 @@ C:\Users> turbo run git/git
 C:\Users> turbo run -w="C:\" git/git
 
 (0x3842xd) C:\> 
-
 ```
 
 Containerized applications can be distinguished from normal apps with skin layering. Passing `+skin(color)` switch after image names pulls skin layer from hub. Skin layer paints colored border around all containerized application windows.
@@ -212,7 +211,6 @@ All network operations (opening/closing ports, for example) are passed through t
 # Map container tcp port 80 to random port on local machine
 # The random port can be later queried using the netstat command
 > turbo run --route-add=tcp://80:0 <image>
-
 ```
 
 The default policy of allowing containers to bind to any port on the local machine can be changed with the `--route-block` flag. It isolates all services bound to container ports on specified protocols (tcp or udp). They can only be opened using the `--route-add` flag.

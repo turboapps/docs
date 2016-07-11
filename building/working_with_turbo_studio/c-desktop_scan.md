@@ -34,7 +34,6 @@ Images built with TurboStudio can also be used with the command-line interface a
     
 # Push it to the hub
 > turbo push desktopapp
-
 ```
 
 #### Best Practices

@@ -81,7 +81,6 @@ Exit the Turbo VM from the launched command prompt.
 ```
 # Close Turbo VM
 (instedcont#95c15a32) > exit
-
 ```
 
 Once you finish editing a container, it can be saved and distributed in the form of images. For more information on images, read on [here](/docs/building/working-with-images).
@@ -91,7 +90,6 @@ Ensure the **--startup-file** flag is set to the application's main executable. 
 ```
 # Commit container into an image
 > turbo commit instedcont --startup-file="C:\Program Files (x86)\instedit.com\InstEd\InstEd.exe" instedit
-
 ```
 
 By default, the `commit` command merges sandbox changes with the base images and builds a new image from these merged layers. Specifying the "--no-base" option builds a new image of the sandbox changes without merging the base images.
@@ -101,7 +99,6 @@ Test the new InstEd image.
 ```
 # Launch a new instance of Insted using the instedit image
 > turbo new instedit
-
 ```
 
 ![](/docs/building/working_with_containers/INSTEDIT1.png)
@@ -117,7 +114,6 @@ Launch application with access to local files.
 ```
 # Launch instedit image
 > turbo new instedit --isolate=merge
-
 ```
 You will now have access to any local files.
 
@@ -131,7 +127,6 @@ We created an image which can be pushed to our Hub and run by anybody. To do thi
 ```
 # Login
 > turbo login
-
 ```
 
 Push the image by entering `turbo push` <imagename>.
@@ -139,7 +134,6 @@ Push the image by entering `turbo push` <imagename>.
 ```
 # Login
 > turbo push instedit
-
 ```
 
 
@@ -218,9 +212,9 @@ Once created, track and manage containers with these commands.
 # List containers with base images, commands, creation date, and status
 > turbo containers
 
-ID           Images              Command       Created          Status
+ID           Images            Command       Created          Status
 03bddd8bef   spoonbrew/clean   cmd           8/14/2014 1:03   Stopped
-52hd888xa3   local/server-app    startup.bat   8/14/2014 1:00   Running
+52hd888xa3   local/server-app  startup.bat   8/14/2014 1:00   Running
 
 # Remove a specific container from the host system
 > turbo rm 03bddd8bef
