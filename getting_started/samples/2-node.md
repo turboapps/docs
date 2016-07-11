@@ -21,9 +21,9 @@ aIRChat has a few prerequisites. We'll need the Node.js image and the Git image,
 # Use the next command to verify the downloads
 > turbo images
 
-Name  				Size 		Created
-git/git 		32.1MB   	7/16/2014 3:44:27 PM
-node/node		10.2MB   	7/16/2014 3:45:10 PM
+Name        Size      Created
+git/git     32.1MB    7/16/2014 3:44:27 PM
+node/node   10.2MB    7/16/2014 3:45:10 PM
 ```
 
 Now start a new container using the `turbo run` command, specifying the Node.js and Gt images and the start-up file `cmd` to launch the container in a new command window.
@@ -89,8 +89,8 @@ To verify the container information, us the `containers` command.
 ```
 > turbo containers
 
-ID  								Images							Command   						Created
-1be755fcfafc4cf0b8e1c0667f6d13f0	git/git,node/node   	        C:\Windows\System32\cmd.exe   	7/16/2014 3:54:59 PM
+ID                                Images                        Command                         Created
+1be755fcfafc4cf0b8e1c0667f6d13f0  git/git,node/node             C:\Windows\System32\cmd.exe     7/16/2014 3:54:59 PM
 ```
 
 If you need to access the container again in its current state to make changes, use `turbo start` command followed by the ID.
@@ -113,10 +113,10 @@ commit complete
 # Verify that your container was saved as a new image
 > turbo images
 
-Name  				Size 			Created
-aIRChat 		    120.8MB  		7/16/2014 4:05:12 PM
-git/git 		    32.1MB   		7/16/2014 3:44:27 PM
-node/node		    10.2MB   		7/16/2014 3:45:10 PM
+Name            Size        Created
+aIRChat         120.8MB     7/16/2014 4:05:12 PM
+git/git         32.1MB      7/16/2014 3:44:27 PM
+node/node       10.2MB      7/16/2014 3:45:10 PM
 
 # Push your container up to the Turbo Hub
 > turbo push aIRChat
