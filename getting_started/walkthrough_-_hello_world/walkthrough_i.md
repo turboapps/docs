@@ -70,11 +70,11 @@ Hello World!
 Let's break down what just happened:
 
 ```
-turbo run			# Here we tell Turbo to kick off a new container with a specified image.
-spoonbrew/clean	    # Our desired repo owner, "spoonbrew," and the repo/image name, "clean."
-echo Hello World!	# Command your container to start up with "Hello World!"
-exit				# This closes your container and generates your container ID.
-25fdso88...			# This output identifies the specific container you just ran.
+turbo run            # Here we tell Turbo to kick off a new container with a specified image.
+spoonbrew/clean      # Our desired repo owner, "spoonbrew," and the repo/image name, "clean."
+echo Hello World!    # Command your container to start up with "Hello World!"
+exit                 # This closes your container and generates your container ID.
+25fdso88...          # This output identifies the specific container you just ran.
 ```
 
 Congratulations! You just ran your first container.
@@ -158,8 +158,8 @@ Now it's time to memorialize and share your changes by creating a new image from
 ```
 > turbo containers
 	
-ID            Images                    Command  		    Created
-87ddvf5455lp  spoonbrew/clean         echo Hello Wor  7/31/2014 9:20:18 AM
+ID            Images                  Command             Created
+87ddvf5455lp  spoonbrew/clean         echo Hello Wor      7/31/2014 9:20:18 AM
 ```
 
 Turn your container into a new image with `turbo commit`.
@@ -174,9 +174,9 @@ Commit complete
 Let's analyze what just happened:
 
 ```
-turbo commit	# The `commit` command creates a new image from a specified container.
-87ddv			# Specify the container with at least 2 digits of the container ID.
-helloworld		# The name you'd like for your new image.
+turbo commit            # The `commit` command creates a new image from a specified container.
+87ddv                   # Specify the container with at least 2 digits of the container ID.
+helloworld              # The name you'd like for your new image.
 ```
 
 View the newly created image with the `turbo images` command, which returns a list of all images present on the local machine.
@@ -184,9 +184,9 @@ View the newly created image with the `turbo images` command, which returns a li
 ```
 > turbo images
 	
-Name                    Created					Size
-helloworld		 		7/31/2014 9:29:27 AM	0.1MB
-spoonbrew/clean	 	    7/31/2014 9:20:26 AM	0.0MB
+Name                        Created                     Size
+helloworld                  7/31/2014 9:29:27 AM        0.1MB
+spoonbrew/clean             7/31/2014 9:20:26 AM        0.0MB
 ```
 
 Upload the **helloworld** image to the Turbo Hub with the `turbo push` command.
@@ -202,9 +202,9 @@ Image is public
 Congrats on your first push! What just happened?
 
 ```
-turbo push		# The push command commits any image to the Turbo Hub.
-Push complete	# Signals the image has uploaded.
-Image is public	# Pushed images are publicly added to the account of the logged-in user.
+turbo push       # The push command commits any image to the Turbo Hub.
+Push complete    # Signals the image has uploaded.
+Image is public  # Pushed images are publicly added to the account of the logged-in user.
 ```
 
 Once the `Push complete` message appears in your command prompt, the image is on the [Turbo Hub](/hub), which functions similarly to a remote repository in Git - it allows your work to be accessed from any computer with access to the remote. You can view your new image by going to https://turbo.net/hub/[*username*]/helloworld.
