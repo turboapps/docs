@@ -78,8 +78,8 @@ When `turbo images` is executed, you should now see a new entry for **simple-jav
 
 ID            Name                   Tag   Created                Size
 --            ----                   ---   -------                ----
-7a85fe8f7ad1  oracle/jdk 		 	 7.65  8/22/2014 11:34:19 AM  74.3 MB
-9iejrk2a34hd  git/git 		         1.94  8/21/2014 11:32:00 AM  50.4 MB
+7a85fe8f7ad1  oracle/jdk             7.65  8/22/2014 11:34:19 AM  74.3 MB
+9iejrk2a34hd  git/git                1.94  8/21/2014 11:32:00 AM  50.4 MB
 3j24fjdk3kj4  simple-java-webserver        8/22/2014 11:52:32 AM  20.2 MB
 3j24fjdk3kj4  simple-java-webserver  1.0   8/22/2014 11:59:59 AM  20.2 MB
 ```
