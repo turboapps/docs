@@ -36,34 +36,36 @@ layer node/node  # This is not a valid comment
 
 ### Conditions
 
-Any TurboScript instruction can have an optional `when` clause at the end of the line to specify the conditions which must be met before the instruction will be executed. The general form is `instuction when expression`.
+Any TurboScript instruction can have an optional `when` clause at the end of the line to specify the conditions which must be met before the instruction will be executed. The general form is `instruction when expression`.
 
 ```
 cmd "echo This is Windows7" when host has os:Windows7
 ```
 
 These are the currently supported expressions:
--host has architecture:x86
--host has architecture:x64
--host has os:WindowsXP
--host has os:Windows2003
--host has os:WindowsVista
--host has os:Windows2008
--host has os:Windows7
--host has os:Windows2008r2
--host has os:Windows8
--host has os:Windows2012
--host has os:Windows8.1
--host has os:Windows2012r2
--host has os:Windows10
+
+* host has architecture:x86
+* host has architecture:x64
+* host has os:WindowsXP
+* host has os:Windows2003
+* host has os:WindowsVista
+* host has os:Windows2008
+* host has os:Windows7
+* host has os:Windows2008r2
+* host has os:Windows8
+* host has os:Windows2012
+* host has os:Windows8.1
+* host has os:Windows2012r2
+* host has os:Windows10
 
 Note that client OSes are not differentiated from server OSes so "WindowsXP" is equivilent to "Windows2003", etc.
 
 Expressions can be combined with AND, OR, NOT, and parenthesis.
 
 ```
-from clean when (host has os:windows7 and host has architecture:x86) or (not host has os:windowsxp and host has architecture:x64)
+layer clean when (not host has os:windows7 and not host has os:windows8.1)
+layer spoonbrew/iis7-base when host has os:windows7
+layer spoonbrew/iis8-base when host has os:windows8.1
 ```
-
 
 ### Command Reference
