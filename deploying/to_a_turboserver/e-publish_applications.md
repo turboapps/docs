@@ -129,6 +129,7 @@ This section outlines the possible parameters for the Turbo Feed.
       </tr>
 </table>
 <br>
+
 **Feed Sizing**
 
 Feeds have only certain valid values for the FeedWidth and FeedHeight. Currently, those values are as follows:

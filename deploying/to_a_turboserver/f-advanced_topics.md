@@ -224,6 +224,7 @@ Complete the following steps to enable Microsoft Windows Firewall with Advanced 
       </tr>
 </table>
 <br>
+
 ##### Server.exe admin Command Format
 
 Server.exe can also be used to create and update applications, as well as to manage other server settings. This is done by specifying any of the given topics after the Server.exe admin command.
@@ -441,7 +442,8 @@ Examples:
       </tr>
 </table>
 <br>
-**Server.exe admin /directory-service <login prefix>**
+
+**Server.exe admin /directory-service &lt;login prefix&gt;**
 
 <table>
       <tr>
@@ -780,6 +782,7 @@ Examples:
       </tr>
 </table>
 <br>
+
 There are 2 properties associated with the **/sync** command:
 
 1. **storage-path**: This is the physical path to the location where sync data will be stored. For example, `\\myhost\sync\`
@@ -1276,6 +1279,7 @@ When integrating with existing permissions systems, Turbo provides a web service
       </tr>
 </table>
 <br>
+
 **Note**: [CATEGORY] refers to the Slug field in the "Category Details" page on the TurboServer administrator portal. [APPLICATION] refers to the Slug field on "Application Details" page on the TurboServer administrator portal.
 
 #### Migrating Sync Data When Changing the Storage Path

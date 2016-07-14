@@ -451,7 +451,7 @@ Your directory service might contain some subdirectories that have useful inform
 
 You may have a specific subset of existing users that will use TurboServer, in a group or groups native to your directory service. You can choose which groups to synchronize using **Synchronized Items**, selecting the **Groups** option. Complete the following steps to use **Synchronized Items**:
 
-1. Select **Refresh to use the current connection and directory schema settings to scan your directory service. Information about discovered group is available via **tooltip popups**. For large directories this operation can take several seconds to complete.
+1. Select **Refresh** to use the current connection and directory schema settings to scan your directory service. Information about discovered group is available via **tooltip popups**. For large directories this operation can take several seconds to complete.
 
 2. To narrow the scope of your synchronization to specific groups complete the following:
 
@@ -571,7 +571,7 @@ The **Reports** page provides pre-configured, detailed analytic reports, broken-
 
 - **App Usage Report**: Provides a detailed breakdown and comparison of the usage for each application.
 
-#####User Reports
+##### User Reports
 
 - **User App Usage Report**: Provides a record of all application usage, broken-down by user.
 
