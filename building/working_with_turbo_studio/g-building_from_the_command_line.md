@@ -58,6 +58,49 @@ The command-line version of TurboStudio is called <b>XStudio.exe</b> and can be 
             <p>/o - Path to where the <span>XAPPL configuration file is saved.</span></p>
         </td>
     </tr>
+    <tr>
+        <td>
+             <p><strong>/sandboxmerge</strong></p>
+        </td>
+        <td>/i &lt;input-config&gt; /o &lt;output-config&gt; &lt;sandbox-path&gt;</td>
+        <td>
+            <p>Merge configuration and sandbox.</p>
+            <p>/i - Path to source configuration file.</p>
+            <p>/o - Path to output merged configuration file.</p>
+            <p>sandbox-path - Path to sandbox.</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+             <p><strong>/vmsettings</strong></p>
+        </td>
+        <td>/i &lt;input-file-xappl-exe-svm&gt [name]</td>
+        <td>
+            <p>Getting virtualization settings from the configurations file or application.</p>
+            <p>/i - Path to the configuration file (xappl, exe or svm).</p>
+            <p>name - Name of settings or empty for all settings.</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+             <p><strong>/pathreplace</strong></p>
+        </td>
+        <td>[/reg] [/revert] &lt;path&gt</td>
+        <td>
+            <p>Replace path from native to virtual format.</p>
+            <p>/reg - Path is a register path instead of filesystem path.</p>
+            <p>/revert - Revert path from virtual to native format.</p>
+            <p>path - Path to replace.</p>
+        </td>
+    </tr>
+        <td>
+             <p><strong>/nologo</strong></p>
+        </td>
+        <td></td>
+        <td>
+            <p>Switch for suppress printing copyrigth and logo information.</p>
+        </td>
+    </tr>
 </table>
 <br>
 **Note:** Configuration files that are generated from the command-line after using the **/after** flag do not have an output file specified in the **XAPPL** configuration file. When using scripting for snapshots, it may be necessary to apply changes to the generated **XAPPL** file, either manually or programmatically.
