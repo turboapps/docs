@@ -1,4 +1,4 @@
-## TurboStudio
+## Working with TurboStudio
 
 TurboStudio is a desktop application that allows you to convert any Windows application into a self-contained virtual application. Virtual applications can be delivered as standalone executables, MSIs or Turbo images.
 
@@ -16,7 +16,7 @@ TurboStudio offers a user interface to manage custom images and virtual applicat
 
 <!--TODO: add a brief section on when you would want to use TurboStudio vs. the CLI -->
 
-#### System requirements and download
+### System requirements and download
 
 TurboStudio runs on any Windows operating system, including systems running within VMware and Microsoft hardware virtualization and hypervisor environments. TurboStudio has limited support for the Windows Preinstallation Environment (WinPE), though certain applications (depending on operating system features unavailable in WinPE) may not function properly.
 

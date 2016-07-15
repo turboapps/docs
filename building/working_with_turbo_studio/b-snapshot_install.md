@@ -17,7 +17,7 @@ In this example we will be creating a snapshot of Google Chrome.
 ![](/docs/building/working_with_turbo_studio/VM2.png)
 
 
-### Using the Wizard to Capture the Application Install
+#### Using the Wizard to Capture the Application Install
 
 Select the third option in the Wizard, **Snapshot a third-party application or component**.
 
@@ -167,13 +167,13 @@ TurboStudio enables you to embed a *virtual filesystem* into your executable. Em
 - The Options bar provides TurboStudio customization options, the ability to set proxy settings, and install certificates.
 - The Help bar provides access to TurboStudio documentation.
 
-#### Ribbon Bar
+##### Ribbon Bar
 
 - The Virtual Application tab provides access to the snapshot, build features, and output configuration options such as the startup file, output directory, and diagnostic-mode selection.
 - The Runtimes tab provides a selection of auto-configurable runtime engines which can be embedded into your application. These include .NET Framework, Java, Flash, Shockwave, Acrobat Reader, and SQL Server 2005 Express.
 - The Advanced tab provides functions such as Platform Merge and Streaming.
 
-#### Left-side Button Panes
+##### Left-side Button Panes
 
 - The **Filesystem** pane displays the application virtual filesystem and enables you to add and remove virtual files and directories.
 - The **Registry** pane displays the application virtual registry and enables you to add and remove virtual registry keys and data values.
@@ -185,7 +185,7 @@ TurboStudio enables you to embed a *virtual filesystem* into your executable. Em
 
 **Note:** TurboStudio users are responsible for any third-party licensing compliance for redistributable components included using virtualization.
 
-### Virtual Filesystem
+#### Virtual Filesystem
 
 TurboStudio enables you to embed a *virtual filesystem* into your executable. Embedded files are accessible by your Turbo-processed application as if they were present in the actual filesystem. Virtual files are isolated from the host device. Virtual files do not require security privileges on the host device regardless of whether the virtual files reside in a privileged directory. Because virtual files are embedded in the application executable, shared DLLs do not interfere with those installed by other applications on the host device.
 
@@ -193,7 +193,7 @@ In the event of a conflict between a file in the virtual filesystem and a file p
 
 **Note:** When running a virtual application on Windows 7, the **All Users Directory\Application Data** and **All Users Directory** root folders will map to the same folder at runtime. To prevent one setting from overriding another, verify that the isolation settings for these folders are the same.
 
-#### Isolation Modes
+##### Isolation Modes
 
 Folders may be virtualized in **Full**, **Merge**, **Write Copy**, or **Hide** mode.
 
@@ -204,7 +204,7 @@ Folders may be virtualized in **Full**, **Merge**, **Write Copy**, or **Hide** m
 
 **Tip**: To apply selected isolation modes to all subfolders, right-click on the folder, choose Isolation, select the checkbox for **Apply to Subfolders**, then select **OK**.
 
-#### File Attributes
+##### File Attributes
 
 - **Hidden**: Files and folders can be hidden from shell browse dialogs and other applications. This is used to prevent internal components and data files from being displayed to the user. To hide a file or folder, select the checkbox in the **Hidden** column adjacent to the desired file or folder.
 	**Note**: The **Hidden Flag** is NOT the same as the **Hide** isolation mode. Enabling the **Hidden Flag** prevents a file or folder from displaying in browse dialogs or from directory enumeration APIs; it does not prevent the application (and potentially the end-user) from accessing the folder or file contents by direct binding. To prevent the file or folder from being found by the application, enable **Hide** isolation mode.
@@ -212,13 +212,13 @@ Folders may be virtualized in **Full**, **Merge**, **Write Copy**, or **Hide** m
 - **No Upgrade**: By default, files in the virtual filesystem can be upgraded with patches (refer to "Updating Registration Settings" in the **Register Virtual Applications in the Windows Shell** section for more information). If there are files in the virtual filesystem that should not be upgraded, such as user data files, select the checkbox in the **No Upgrade** column next to the desired file or folder.
 - **No Sync**: This feature only applies to virtual applications that are delivered and managed by Turbo Virtual Desktop Server. By default, files in the virtual filesystem can be synchronized to a user's Turbo account. This enables the application state to be maintained across different devices that are Turbo enabled. If there are folders in the virtual filesystem that should not be synchronized and remain only on the local device, select the checkbox in the **No Sync** column next to the desired file or folder. This setting is managed on a folder level and applies to all files within that folder.
 
-#### Filesystem Compression
+##### Filesystem Compression
 
 To reduce executable size, TurboStudio can compress virtual filesystem contents. This reduces virtual application size by approximately 50% but also prevents profiling and streaming of the application. By default, the **Compress Payload** option in the **Process Configuration** area of the **Settings** panel is unchecked. Leave this box unchecked during the build process if the application will be optimized for streaming from Turbo Virtual Desktop Server.
 
 **Note**: Disabling payload compression may significantly increase the size of the virtual application binary.
 
-### Virtual Registry
+#### Virtual Registry
 
 TurboStudio enables you to embed a virtual registry into your executable. Embedded registry keys are accessible by your Turbo-processed application as if they were present in the actual registry. Virtual registry keys are isolated from the host device. Virtual registry keys do not require security privileges on the host device regardless of whether the virtual files reside in a privileged directory. Because virtual registry entries are embedded in the application executable, other applications are unable to disrupt application execution by inadvertent modification of registry entries.
 
@@ -228,7 +228,7 @@ Registry string values can include well-known variables such as **@WINDIR@**, **
 
 In the event of a conflict between a key or value in the virtual registry and data present on the host device registry, information in the virtual registry takes precedence. 
 
-#### Isolation Modes
+##### Isolation Modes
 
 Keys may be virtualized in **Full**, **Merge**, **Write Copy**, or **Hide** mode.
 
@@ -241,11 +241,11 @@ Keys may be virtualized in **Full**, **Merge**, **Write Copy**, or **Hide** mode
 
 - **No Sync**: This feature only applies to virtual applications that are delivered and managed by Turbo Virtual Desktop Server. By default, keys and values in the virtual registry can be synchronized to a user's Turbo account. This enables the application state to be maintained across different devices that are Turbo enabled. If there are keys in the virtual registry that should not be synchronized and remain only on the local device, select the checkbox in the **No Sync** column next to the desired key. This setting is managed on a key level and applies to all values within that folder.
 
-#### Importing Registry Hive Files
+##### Importing Registry Hive Files
 
 TurboStudio can import registry hive (.reg) files into the virtual registry. To import a .reg file, select the **Import** button in the **Registry** panel, then choose the registry hive file to import.
 
-### Runtimes and Components
+#### Runtimes and Components
 
 Many components and runtime systems consist of large, complex sets of filesystem entries and registry settings. TurboStudio contains a collection of pre-configured component settings which can be added to your virtual application with a single click. For example, if your application is a .NET Framework 4.0 application, then selecting the .NET Framework 4.0 component will allow your executable to run on machines without the .NET Framework installed.
 
@@ -261,7 +261,7 @@ To add a runtime or component:
 
 **Note:** You are responsible for compliance with licensing for any third-party redistributable components included in your virtualized application.
 
-#### Using .NET Runtimes
+##### Using .NET Runtimes
 
 To limit conflicts with installed .NET runtimes, the .NET runtime packages are isolated from the native file system. If the application requires access to multiple .NET versions, it is necessary to include all of the required runtimes in the virtual package. For example, including only the .NET 4 runtime will hide visibility to the .NET 3.5 runtime on the native file system. This is fine if the application only requires the .NET 4 components, but would be problematic if it also requires earlier versions of .NET.
 
