@@ -2,13 +2,11 @@
 topic: Getting Started
 documents:
 - title: What is Turbo?
-- title: Turbo Tour
 - title: Walkthrough - Hello World
 - title: Walkthrough - ASP.NET
 - title: Walkthrough - Node and Ghost
 - title: Samples
 - title: Installation
-- title: Turbo for Citrix
 - title: Turbo URL Redirection
 - title: Turbo and App Virtualization
 - title: Turbo and Docker
