@@ -7,6 +7,7 @@ Usage: turbo logout
 
 <options> available:
      --format=VALUE         Use json format for output
+     --all-users            Logout from the shared user credentials. Requires admin privilege.
 ```
 
 #### Examples:
@@ -15,7 +16,12 @@ Usage: turbo logout
 # Logout the current user
 > turbo logout
 
-spoonuser logged out at 8/25/2014 5:55:50 PM
+spoonuser logged out
+
+# Logout from shared user credentials
+> turbo logout --all-users
+
+spoonuser logged out
 
 # No action taken if a user isn't currently logged in
 > turbo logout
