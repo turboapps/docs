@@ -2,11 +2,11 @@
 
 In this section you'll learn how to manage containers and deploy them with TurboServer.
 
-### Create Applications
+#### Create Applications
 
 In this section you will learn how to create Turbo applications that can deploy from TurboServer. Turbo applications are created from existing applications by converting them into **SVM** file format. For more information about adding an existing **SVM** file to TurboServer, refer to Managing Applications.
 
-#### Virtualize Application with TurboStudio
+##### Virtualize Application with TurboStudio
 
 To be hosted on TurboServer applications must be converted into Turbo containers (**SVM** files) using the TurboStudio. The TurboStudio monitors the installation of your application, analyzes the installation, and constructs a virtual package which you can upload to TurboServer. Experienced users can convert most applications for Turbo in minutes.
 
@@ -14,17 +14,17 @@ To create an **SVM** using TurboStudio, Project Type must be set to **Component*
 
 Refer to the TurboStudio help documentation for detailed instructions on how to create a Turbo application.
 
-### Publish Applications
+#### Publish Applications
 
 In this section you will learn about deploying applications to users with TurboServer.
 
-#### Publish to the TurboServer Portal
+##### Publish to the TurboServer Portal
 
 The TurboServer Portal Site is the default mechanism for delivering streaming applications to your users. The Portal Site automatically configures during TurboServer setup and can be customized via the Administration Site.The default location of the site is: http://localhost/.
 
 To make an application visible on the Portal Site, publish an application version on the Administration Site. For more information refer to Managing Applications.
 
-#### Publish to an External Site
+##### Publish to an External Site
 
 TurboServer supports delivery from custom external websites with additional license certification. Standard TurboServer licenses allow two sites by default: the Administration and Portal Sites. You can upgrade license certificates to enable application delivery from external sites: contact your Turbo sales representative at sales@turbo.net.
 
@@ -142,7 +142,7 @@ Feeds have only certain valid values for the FeedWidth and FeedHeight. Currently
 
 A Turbo Button has no limit on the maximum width and height.
 
-#### Publish Using Third-Party Software
+##### Publish Using Third-Party Software
 
 You can integrate TurboServer third-party web collaboration tools and portal software, such as:
 
