@@ -32,7 +32,7 @@ You may see an Internet Explorer Security alert explaining that the Turbo Sandbo
 
 Go to **Tools** (Alt + X) and **Manage add-ons** (M).
 
-![](/docs/getting_started/turbo_url_redirection/0_enable_redirector.png)
+![](/docs/deploying/turbo_url_redirection/0_enable_redirector.png)
 
 The **Turbo.net Browser Helper** will be displayed in the list of currently loaded add-ons. Change the status of the add-on to **Enabled** if required and close the dialog.
 
@@ -46,21 +46,21 @@ For information how to enable the extension for all users see [Deploying Turbo U
 
 Sign in to the [Turbo.net](https://turbo.net/) website and go to the **Home** tab.
 
-![](/docs/getting_started/turbo_url_redirection/1_home_my_applications.png)
+![](/docs/deploying/turbo_url_redirection/1_home_my_applications.png)
 
 Filter the **Web** category using the list on the right.
 
 Select the **Facebook** app and press **Install**.
 
-![](/docs/getting_started/turbo_url_redirection/2_web_facebook.png)
+![](/docs/deploying/turbo_url_redirection/2_web_facebook.png)
 
 Go back to the **Home** tab and click **Customize** to display the **Settings** dialog.
 
-![](/docs/getting_started/turbo_url_redirection/3_my_applications_more_customize.png)
+![](/docs/deploying/turbo_url_redirection/3_my_applications_more_customize.png)
 
 Look at the **URL Redirections** section.
 
-![](/docs/getting_started/turbo_url_redirection/4_subscription_settings_dialog.png)
+![](/docs/deploying/turbo_url_redirection/4_subscription_settings_dialog.png)
 
 The Facebook application defines a default redirection for the facebook.com domain.
 
@@ -78,7 +78,7 @@ Redirection rules can also be set in the Windows registry in cases where Turbo.n
 
 Rules are added to the "HKLM\Software\Code Systems\Turbo\Redirector" hive ("HKLM\Software\Wow6432node\Code Systems\Turbo\Redirector" for 64-bit operating systems).
 
-![](/docs/getting_started/turbo_url_redirection/12_registry_rules.png)
+![](/docs/deploying/turbo_url_redirection/12_registry_rules.png)
 
 Create a key under the **Redirector** hive, setting the name of the new key to the url pattern to match. In the example above, the pattern is "yahoo.com" which matches any url that contains "yahoo.com".
 
@@ -111,11 +111,11 @@ First open the Local Group Policy Editor:
 
 Select the **Add-on Management** node under **Computer Configuration/Administrative Templates/Windows Components/Internet Explorer/Security Features** in the **Local Computer Policy** panel.
 
-![](/docs/getting_started/turbo_url_redirection/6_ie_local_group_policy_editor.png)
+![](/docs/deploying/turbo_url_redirection/6_ie_local_group_policy_editor.png)
 
 Double click **Add-on List** in the detailed view.
 
-![](/docs/getting_started/turbo_url_redirection/7_ie_add_on_list.png)
+![](/docs/deploying/turbo_url_redirection/7_ie_add_on_list.png)
 
 Select **Enabled** and click the **Show** button in the **Options** panel.
 
@@ -131,7 +131,7 @@ If the Turbo Sandbox Manager is not running you may see an Internet Explorer Sec
 
 Go to **Tools** (Alt + X) and open **Manage Add-ons** (M).
 
-![](/docs/getting_started/turbo_url_redirection/8_ie_enable_redirector.png)
+![](/docs/deploying/turbo_url_redirection/8_ie_enable_redirector.png)
 
 Turbo.net Browser Helper should be included in the list of currently loaded add-ons and be enabled. Note that actions to change the status of the Turbo.net Browser Helper are disabled.
 
@@ -159,7 +159,7 @@ Run the Local Group Policy Editor:
 
 Select **Extensions** node under **Computer Configuration/Administrative Templates/Google/Google Chrome** in the **Local Computer Policy** panel.
 
-![](/docs/getting_started/turbo_url_redirection/9_chrome_local_group_policy_editor.png)
+![](/docs/deploying/turbo_url_redirection/9_chrome_local_group_policy_editor.png)
 
 Double click on the **Configure the list of force-installed apps and extensions** in the detailed view.
 
@@ -173,7 +173,7 @@ ldibmiofagdkgiphkcokpooepankmacl;https://clients2.google.com/service/update2/crx
 
 The first component is the Id of the Turbo.net Extension. The URL points to the standard [Chrome Web Store](https://chrome.google.com/webstore) update service.
 
-![](/docs/getting_started/turbo_url_redirection/10_chrome_show_contents.png)
+![](/docs/deploying/turbo_url_redirection/10_chrome_show_contents.png)
 
 Click **OK** to save options and close the dialog.
 
@@ -181,7 +181,7 @@ Press the **Apply** button to update the policy settings and **OK** to close the
 
 To verify that local policy settings are applied correctly launch Google Chrome and go to **chrome://extensions** URL.
 
-![](/docs/getting_started/turbo_url_redirection/11_chrome_extensions.png)
+![](/docs/deploying/turbo_url_redirection/11_chrome_extensions.png)
 
 The Turbo.net Extension should be listed on the page with the **Enabled** checkbox set, but not available for user interaction and a badge informing that the extension was installed by enterprise policy.
 
