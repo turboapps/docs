@@ -4,10 +4,8 @@ documents:
 - title: Table of Contents
 - title: What is Turbo?
 - title: Walkthrough - ASP.NET
-- title: Walkthrough - Node and Ghost
 - title: Samples
 - title: Installation
-- title: Turbo URL Redirection
 - title: Turbo and App Virtualization
 - title: Turbo and Docker
 ---
@@ -31,6 +29,7 @@ documents:
 - title: To a TurboServer
 - title: Portable EXEs and MSIs
 - title: Integration Tools
+- title: Turbo URL Redirection
 ---
 topic: Reference
 documents:
