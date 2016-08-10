@@ -15,14 +15,14 @@ The TurboScript contains all the steps necessary to build the container.
 
 ```
 # Creates a new container from the specified images
-FROM node/node git/git
+layer node/node git/git
 
 # Clone a project in the container
-CMD mkdir c:\root
-CMD git clone https://github.com/project/repo c:\root
+cmd mkdir c:\root
+cmd git clone https://github.com/project/repo c:\root
 
 # Install Node.js depencies 
-CMD cd c:\root\server & npm install
+cmd cd c:\root\server & npm install
 ```
 
 Save your script as a `.me` file. See the [TurboScript reference](/docs/reference/turboscript) for more information on TurboScript script instructions.
@@ -72,10 +72,10 @@ We would like to run the tests of a project inside a turbo container, all within
 Let's assume we have an ready-built image, pushed to the hub, containing the project source code and all the development dependencies: jdk,maven,git.
 
 ```
-FROM jdk,maven,git
+layer jdk,maven,git
 
-CMD mkdir c:\root
-CMD git clone https://github.com/JodaOrg/joda-time.git C:\root
+cmd mkdir c:\root
+cmd git clone https://github.com/JodaOrg/joda-time.git C:\root
 ```
 
 The CI server job that runs the tests inside a turbo container would look like this:
