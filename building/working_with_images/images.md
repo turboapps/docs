@@ -29,17 +29,17 @@ You can automatically build images using a TurboScript, which is a set of instru
 # Example script to automatically build a 7-Zip image
 
 # Pull dependency images
-FROM gnu/wget
+layer gnu/wget
 
 # Prepare environmnet
-CMD mkdir c:\7zip
+cmd mkdir c:\7zip
 
 # Download installation media
-WORKDIR C:\7zip
-CMD wget http://downloads.sourceforge.net/sevenzip/7z920.exe
+workdir C:\7zip
+cmd wget http://downloads.sourceforge.net/sevenzip/7z920.exe
 
 # Install 7-Zip
-CMD 7z920.exe /S /D=C:\7zip
+cmd 7z920.exe /S /D=C:\7zip
 ```
 
 Save the script as a .me file and then use `turbo build` command:
