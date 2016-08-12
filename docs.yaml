@@ -3,8 +3,6 @@ topic: Getting Started
 documents:
 - title: Table of Contents
 - title: What is Turbo?
-- title: Walkthrough - ASP.NET
-- title: Samples
 - title: Turbo and App Virtualization
 - title: Turbo and Docker
 ---
