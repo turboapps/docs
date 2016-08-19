@@ -31,12 +31,13 @@ The hub server that Turbo will connect to, and thus push to and pull from, can b
 By default, Turbo is configured to connect to **https://turbo.net/hub**.
 
 #### Change the Storage Path
-The storage path points to the root directory where images and containers are saved. Use `--storage-path` flag to set the storage path to a different location.
+The storage path points to the directory where images and containers are saved. By default, images and containers are saved in **%LOCALAPPDATA%\Spoon\Containers**.  Use `--storage-path` flag to set the storage path to a different location.
 
-By default, images and containers are saved in **%LOCALAPPDATA%\Spoon\Containers**.
+It may be more efficient to share a repository of images in multi-user environment while keeping container storage in a separate, per user location. 
 
-It may be cost effective to share a local repository of images in multi-user environment and keep container storage in a separate, user defined location. Use `--container-path` flag to change the storage path only for containers.
-Finally, the storage path can be overwritten by the `TURBOREPO` environment variable which may be useful for administration related activities and testing. 
+Use the `--container-path` flag to specify a new location for container storage.
+
+Finally, the storage path can also be overwritten by the `TURBOREPO` environment variable which may be useful for testing an alternate location quickly without updating the client configuration. 
 
 ##### Example
 
