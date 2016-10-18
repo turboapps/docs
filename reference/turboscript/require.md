@@ -11,6 +11,7 @@ The following requirements are supported:
 * privilege:admin
 * architecture:x86
 * architecture:x64
+* minosver:6.1.7601
 
 Example:
 ```
