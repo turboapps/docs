@@ -3,7 +3,7 @@
 The `states` command lists all of the container states on the Turbo.net Hub.  
 
 ```
-Usage: turbo states [<container-prefix>] <options>
+Usage: turbo states <options>
 
 <options> available:
       --csv                  Print output with tab-separated columns
@@ -16,13 +16,6 @@ Usage: turbo states [<container-prefix>] <options>
 Command line flags can be used to filter or limit the results. 
 
 ```
-# Use a container prefix to show states for containers that match
-> turbo states cf6ba
-
-Container  Created              State     Visibility
----------  -------              -----     ----------
-cf6ba018   2014-12-01 18:34:55  5f2b7843  Public
-
 # Show the last state created
 > turbo states -l
 
