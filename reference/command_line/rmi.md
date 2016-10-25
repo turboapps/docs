@@ -3,11 +3,11 @@
 The `rmi` command removes images from the local registry. 
 
 ```
-Usage: turbo rmi <options> <image>
-
 <options> available:
-  -a, --all                  Remove all images from the local machine
-      --format=VALUE         Use json format for output
+  -a, --all                  Remove all images from the local machine or all matching images if argument is specified
+      --all-users            Applies command to images stored in all users folder
+  -f, --force                Attempts to stop running images
+      --format=VALUE         Use the specified format for output. Supported values: json
 
 ```
 
