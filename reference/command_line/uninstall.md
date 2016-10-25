@@ -2,10 +2,12 @@
 
 The `uninstall` command will remove the **Start Menu** shortcut for the specified container
 
+```
 Usage: turbo.exe uninstall <options> <container>
 
 <options> available:
       --format=VALUE         Use json format for output
+```
 	  
 If the specified container has not been previously registered to the host device using the `turbo install` command, then no action will be taken. 
 
