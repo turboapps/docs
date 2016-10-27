@@ -1,6 +1,6 @@
 ### save
 
-The `save` command saves the given container state to the hub.
+The `save` command saves specified container to the hub.
 
 ```
 Usage: turbo.exe save <options> <container>
@@ -11,5 +11,4 @@ Usage: turbo.exe save <options> <container>
       --wait-after-exit      Leave process open after it exits
 ```
 
-The `save` command takes a exact snapshot of the current container state. 
-This state can be restored with the `continue` command.
+Use the `continue` command to restore the saved container.
