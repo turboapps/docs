@@ -12,6 +12,7 @@ Usage: turbo config <options>
       --enable-redirector          Enable browser redirection
       --format=VALUE               Use the specified format for output. Supported values: json
       --hub=VALUE                  The remote hub to log into
+	  --image-path=VALUE           Overrides image storage to the specified path. Supported values: full path, or "allusers" to use the system wide shared folder
       --reset                      Reset configuration to default values
       --startup-file-default=VALUE Overrides the default startup file if the main image does not have one
       --storage-path=VALUE         Path to local container and image storage
@@ -42,10 +43,10 @@ Finally, the storage path can also be overwritten by the `TURBOREPO` environment
 ##### Example
 
 ```
-# Set storage path to C:\ProgramData\Spoon\Containers
+# Set container and image root path to C:\ProgramData\Spoon\Containers
 > turbo config --storage-path=C:\ProgramData\Spoon\Containers
 
-# Set container storage path to %LOCALAPPDATA%\Spoon\Containers\sandboxes
+# Set the container storage path to %LOCALAPPDATA%\Spoon\Containers\sandboxes
 > turbo config --container-path=%LOCALAPPDATA%\Spoon\Containers\sandboxes
 
 > turbo config
@@ -57,6 +58,9 @@ Browser redirection is enabled
 # Switch storage path to %LOCALAPPDATA%\Spoon\Containers\repo\images
 # Keep container storage path in %LOCALAPPDATA%\Spoon\Containers\sandboxes
 > SET TURBOREPO=%LOCALAPPDATA%\Spoon\Containers
+
+# Sets the image repository storage path to C:\ProgramData\Spoon\Containers for all users
+> turbo config --image-path=allusers --all-users
 ```
 
 #### Resetting Config Settings
