@@ -27,7 +27,7 @@ Running the Turbo Client installer with these command line flags can change the 
     </tr>
     <tr>
        <td><p><strong>--all-users</strong></p></td>
-       <td><p>Installs the Turbo Client to **%programfiles(x86)%\spoon** so that it is accessible for all users on the machine. This is required for running certain Turbo command for all users (such as `subscribe` or `installi`)</p></td>
+       <td><p>Installs the Turbo Client to <strong>%programfiles(x86)%\spoon</strong> so that it is accessible for all users on the machine. This is required for running certain Turbo command for all users (such as `subscribe` or `installi`)</p></td>
     </tr>
     <tr>
        <td><p><strong>--no-auto-start</strong></p></td>
