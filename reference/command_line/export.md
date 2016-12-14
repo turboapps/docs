@@ -9,6 +9,7 @@ Usage: turbo export <options> <image> <path>
 
 <options> available:
       --format=VALUE         Use json format for output
+      --type=VALUE           Export image type. Supported values: svm,exe
       --wait-after-error     Leave program open after error
       --wait-after-exit      Leave program open after exit
 ```
@@ -22,6 +23,9 @@ Usage: turbo export <options> <image> <path>
 # Export an image to a network share
 > turbo export image \\server\folder\image.svm
 ```
+
+# Export an image to a portable exe
+> turbo export --type=exe image C:\path\to\image.exe
 
 #### JSON output
 
