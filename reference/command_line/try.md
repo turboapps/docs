@@ -230,19 +230,19 @@ To disallow the app to connect to a set of specific IP addresses (blacklist appr
 
 When working with IPv6 addresses, it is necessary to enclose them in square brackets:
 
-Block IPv6 localhost address:
+Block an IPv6 address:
 
 ```
-> turbo try --route-block=ip://[::1] putty
+> turbo try --route-block=ip://[2001:4860:4860::8888] putty
 ```
 
-Block all IP traffic, except link local IPv6 space
+Block all IP traffic, except link local IPv6 space:
 
 ```
 > turbo try --route-block=ip --route-add=ip://[fe80::c218:85ff:febd:5c01/64] putty
 ```
 
-Redirect traffic from one IPv6 address to localhost
+Reroute traffic to an IPv6 address to localhost:
 
 ```
 > turbo try --route-block=ip --route-add=ip://[2001:cdba::3257:9652]:[::1] putty

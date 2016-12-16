@@ -266,6 +266,8 @@ The `--route-add` and `--route-block` not only provide a way to create rules tha
 
 Routes can be defined using IPv4, IPv6 addresses, or based on hostnames. Note however that you cannot specify a host name on the right side of a `--route-add` mapping since the result would be ambiguous if the host name resolved to multiple IP addresses.
 
+Routes cannot be used to restrict traffic to loopback addresses like 127.0.0.1.
+
 If your container requires several routing rules then we recommend creating a **route-file**. A **route-file** is an INI based, line-delimited text file that lists all the routing rules to add to the container. It can be added with `--route-file` flag.
 
 ##### Examples
@@ -296,19 +298,19 @@ To disallow the app to connect to a set of specific IP addresses (blacklist appr
 
 When working with IPv6 addresses, it is necessary to enclose them in square brackets:
 
-Block IPv6 localhost address:
+Block an IPv6 address:
 
 ```
-> turbo new --route-block=ip://[::1] putty
+> turbo new --route-block=ip://[2001:4860:4860::8888] putty
 ```
 
-Block all IP traffic, except link local IPv6 space
+Block all IP traffic, except link local IPv6 space:
 
 ```
 > turbo new --route-block=ip --route-add=ip://[fe80::c218:85ff:febd:5c01/64] putty
 ```
 
-Redirect traffic from one IPv6 address to localhost
+Reroute traffic to an IPv6 address to localhost:
 
 ```
 > turbo new --route-block=ip --route-add=ip://[2001:cdba::3257:9652]:[::1] putty
