@@ -125,7 +125,7 @@ If the plugin is installed for a single user profile, the install location is in
 
 The Turbo Plugin installs an application called Turbo Sandbox Manager that runs on startup. This application can be found in the install directory of the Turbo Plugin. There is a command line interface for this application.
 
-**Turbo-Sandbox.exe [Option]**
+**Spoon-Sandbox.exe [Option]**
 
 <table>
       <tr>
@@ -142,6 +142,38 @@ The Turbo Plugin installs an application called Turbo Sandbox Manager that runs 
          </td>
          <td>
             <p>Uninstalls the Turbo Plugin. Close all web browsers before uninstalling.</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>/silent</p>
+         </td>
+         <td>
+            <p>Used with /uninstall to perform a silent uninstall.</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>/delete-user-data</p>
+         </td>
+         <td>
+            <p>Used with /uninstall and /silent to remove user container data during uninstall.</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>/uninstall-launcher</p>
+         </td>
+         <td>
+            <p>Uninstalls the TurboLauncher but leaves the rest of the client.</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>/uninstall-redirector</p>
+         </td>
+         <td>
+            <p>Uninstalls the TurboRedirector but leaves the rest of the client.</p>
          </td>
       </tr>
 </table>
