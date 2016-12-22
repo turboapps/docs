@@ -9,7 +9,7 @@ Usage: turbo export <options> <image> <path>
 
 <options> available:
       --format=VALUE         Use json format for output
-      --type=VALUE           Export image type. Supported values: svm,exe
+      --type=VALUE           Export image type. Supported values: svm, exe
       --wait-after-error     Leave program open after error
       --wait-after-exit      Leave program open after exit
 ```
@@ -24,8 +24,9 @@ Usage: turbo export <options> <image> <path>
 > turbo export image \\server\folder\image.svm
 ```
 
-# Export an image to a portable exe
-> turbo export --type=exe image C:\path\to\image.exe
+### Export Types
+- svm: The image format used by the turbo command and Turbo Studio. Can be imported again with `turbo import svm <file>`
+- exe: A portable executable. This executable runs directly installing anything first.
 
 #### JSON output
 
