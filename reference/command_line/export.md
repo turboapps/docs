@@ -3,15 +3,15 @@
 The `export` command copies an image from the local registry to a specified path on your local machine or network. 
 
 ```
-export - Export an image from the local registry to the specified path
+export - Export an image from the local repository to the specified path
 
-Usage: turbo export <options> <image> <path>
+Usage: turbo.exe export <options> <image> <path>
 
 <options> available:
-      --format=VALUE         Use json format for output
-      --type=VALUE           Export image type. Supported values: svm,exe
-      --wait-after-error     Leave program open after error
-      --wait-after-exit      Leave program open after exit
+      --format=VALUE         Use the specified format for output. Supported values: json
+      --type=VALUE           Export image type. Supported values: svm, exe
+      --wait-after-error     Leave process open after error
+      --wait-after-exit      Leave process open after it exits
 ```
 
 #### Examples:
