@@ -12,6 +12,7 @@ sync enable|diable "<path>"
 ```
 # Disable synchronization for the app-settings directory
 sync disable C:\apps-settings
+
 # Enable synchronization for the sub directory
 sync enable C:\app-settings\important-settings
 ```
