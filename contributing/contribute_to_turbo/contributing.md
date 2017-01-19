@@ -6,7 +6,7 @@ All build scripts for Turbo images are open sourced, so please contribute! You'r
 
 During our beta period, users who submit pull requests will be sent a Turbo swag kit filled with shirts, caps, hoodies, and other Turbo gear.
 
-You can contribute **image build scripts** [**here**](https://github.com/turboapps/spoonme).
+You can contribute **image build scripts** [**here**](https://github.com/turboapps/turbome).
 
 You can add and edit **turbo.net/docs** [**here**](https://github.com/turboapps/docs).
 
@@ -16,6 +16,6 @@ Things we love to see:
 - Build scripts, recipes, and walkthroughs for new images and containers.
 - New projects built with Turbo's Windows containers in mind.
 
-If you have an idea for an improvement but lack the time to make a pull request, tweet [@turboapps](http://twitter.com/turboapps), or email us at [support@turbo.net](mailto:support@turbo.net).
+If you have an idea for an improvement but lack the time to make a pull request, tweet [@turbohq](http://twitter.com/turbohq), or email us at [support@turbo.net](mailto:support@turbo.net).
 
 If you want to join the Turbo team, check out our [careers page](/careers)! We're hiring ;)
