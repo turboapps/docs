@@ -13,4 +13,3 @@ Example:
 # Run TurboScript in elevated command prompt
 requires privilege:admin
 ```
-
