@@ -6,7 +6,7 @@ This section summarizes some of the substantial differences for those that are f
 
 ### Platform
 
-Turbo was designed for the Windows platform and its containerization system is built on top of the Turbo application virtualization engine. Docker was designed for use on Linux environments and is built on top of the LXC application virtualization system. Put another way, the Spoon VM plays the same role for Turbo containers as LXC does for Docker. In fact, LXC can be viewed as a type of application virtualization implementation.
+Turbo was designed for the Windows platform and its containerization system is built on top of the Turbo application virtualization engine. Docker was designed for use on Linux environments and is built on top of the LXC application virtualization system. Put another way, the Turbo VM plays the same role for Turbo containers as LXC does for Docker. In fact, LXC can be viewed as a type of application virtualization implementation.
 
 Turbo **supports both desktop and server Windows applications**, and works on **all desktop and server editions of Windows** from Windows XP
 forward. Turbo does not require modifications to the base operating system kernel and Turbo does not execute a parallel copy of the base
@@ -14,7 +14,7 @@ operating system.
 
 For more information about the differences between application and OS virtualization, see the article [How Turbo is different from hardware virtualization](/docs/getting-started/what-is-turbo#how-does-it-work).
 
-Via the Spoon VM, Turbo containers support many Windows-specific constructs, such as Windows Services, COM/DCOM components, named kernel object isolation, WinSxS side-by-side versioning, shell registration, clipboard data, and other mechanisms that do not directly apply to Linux operating systems. 
+Via the Turbo VM, Turbo containers support many Windows-specific constructs, such as Windows Services, COM/DCOM components, named kernel object isolation, WinSxS side-by-side versioning, shell registration, clipboard data, and other mechanisms that do not directly apply to Linux operating systems. 
 
 Turbo also provides a desktop client with many features (GUI tool to launch applications, file extension associations, Start Menu integration) that allow containerized applications to interact with the user in the same way as traditionally installed desktop applications. Turbo also provides a small browser plugin that allows users to launch and stream containerized applications directly from any web browser.
 

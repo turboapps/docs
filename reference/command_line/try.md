@@ -9,9 +9,9 @@ Usage: turbo try <options> <image> [<parameters>...]
   -a, --attach               Attach to stdin, stdout, and stderr of the container
       --admin                Run the container as admin user
   -d, --detach               Run the container in the background
-      --disable=VALUE        Disable the specified Spoon VM setting
+      --disable=VALUE        Disable the specified Turbo VM setting
   -e, --env=VALUE            Set environment variables inside the container
-      --enable=VALUE         Enable the specified Spoon VM setting
+      --enable=VALUE         Enable the specified Turbo VM setting
       --enable-log-stream    Enable web streaming of logs
       --env-file=VALUE       Read in a line delimited file of ENV variables
       --format=VALUE         Use json format for output
@@ -28,7 +28,7 @@ Usage: turbo try <options> <image> [<parameters>...]
       --startup-file=VALUE   Override the default startup file
       --trigger=VALUE        Execute named group of startup files
       --using=VALUE          Use specified images as a temporary dependency
-      --vm=VALUE             The Spoon VM version to run the container with
+      --vm=VALUE             The Turbo VM version to run the container with
   -w, --working-dir=VALUE    Set the initial working directory inside the container
       --wait-after-error     Leave program open after error
       --wait-after-exit      Leave program open after it exits
@@ -75,7 +75,7 @@ C:\Users> turbo try -w="C:\" git/git
 
 ```
 
-Spoon VM settings can be enabled or disabled with the `--enable` and `--disable` flags, respectively. For a list of Spoon VM settings, see **VM Settings** section of the documentation.
+Turbo VM settings can be enabled or disabled with the `--enable` and `--disable` flags, respectively. For a list of Turbo VM settings, see **VM Settings** section of the documentation.
 
 Please note that `turbo.exe` always runs outside of the container on the host even if executed from within the container.
 

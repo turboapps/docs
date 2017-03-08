@@ -1,6 +1,6 @@
 ### vm
 
-The `vm` command displays the most recent version of the Spoon VM which is available on the local machine. 
+The `vm` command displays the most recent version of the Turbo VM which is available on the local machine. 
 
 ```
 Usage: turbo vm
@@ -9,13 +9,13 @@ Usage: turbo vm
      --format=VALUE         Use json format for output
 ```
 
-If there is a user logged in to a remote registry then this command will also display the latest version of the Spoon VM available in that registry. 
+If there is a user logged in to a remote registry then this command will also display the latest version of the Turbo VM available in that registry. 
 
 ```
 > turbo vm
 
-The latest local version of the Spoon VM is 11.6.213
-The latest version of the Spoon VM is 11.6.215
+The latest local version of the Turbo VM is 11.6.213
+The latest version of the Turbo VM is 11.6.215
 ```
 
 #### JSON output

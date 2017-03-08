@@ -126,7 +126,7 @@ When troubleshooting an issue related to the general administration of TurboServ
 
 2. Enter the following command: **net stop turbo**
 
-3. Navigate to **C:\ProgramData\Spoon Server** and open **settings.xml** with Notepad or another text editor.
+3. Navigate to **C:\ProgramData\Turbo Server** and open **settings.xml** with Notepad or another text editor.
 
 4. Add a new element called **TraceLevel** with value **Debug** as a child element to **Settings**; after adding this element the file should resemble the following:
 
@@ -154,11 +154,11 @@ There are several types of logs available for TurboServer, including logs for th
 **TurboServer Runtime Logs**
 
 - __Install Directory_\logs\*.log*_
-- __Install Directory_\Sandbox\MODIFIED\@PROGRAMFILESX86@\Spoon Server\Web\logs\*.log_
+- __Install Directory_\Sandbox\MODIFIED\@PROGRAMFILESX86@\Turbo Server\Web\logs\*.log_
 
 **TurboServer Jetty Logs**
 
-- __Install Directory_\Sandbox\roaming\modified\@PROGRAMFILESX86@\Spoon Server\jetty\logs_
+- __Install Directory_\Sandbox\roaming\modified\@PROGRAMFILESX86@\Turbo Server\jetty\logs_
 
 **SQL Server Logs (Embedded SQL Server Express)**
 

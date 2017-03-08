@@ -2,7 +2,7 @@
 
 **Layering**
 
-The Spoon VM is capable of running multiple images in a single virtual machine container by layering the file system and registry of each image.
+The Turbo VM is capable of running multiple images in a single virtual machine container by layering the file system and registry of each image.
 
 This allow's users to create modular components that can be reused by larger projects. 
 

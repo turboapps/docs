@@ -15,7 +15,7 @@ Usage: turbo build <options> <path>
       --no-base              Do not merge the base image into the new image
       --overwrite            Overwrite existing image
       --route-file=VALUE     Specify a routing rules file
-      --vm=VALUE             The Spoon VM version to run the container with
+      --vm=VALUE             The Turbo VM version to run the container with
       --wait-after-error     Leave program open after error
       --wait-after-exit      Leave program open after it exits
 ```
@@ -88,10 +88,10 @@ Output Image: my-new-image
 Output Image: my-new-image:1.0
 ```
 
-The build command will create the intermediate container and output image using the latest version of the **Spoon VM**. To use a legacy version, specify the version number you wish to use with the `--vm` flag. 
+The build command will create the intermediate container and output image using the latest version of the **Turbo VM**. To use a legacy version, specify the version number you wish to use with the `--vm` flag. 
 
 ```
-# Build the image using version 11.6.205 of the Spoon VM
+# Build the image using version 11.6.205 of the Turbo VM
 > turbo build --vm=11.6.205 C:\turbo.me 
 ```
 

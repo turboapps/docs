@@ -32,7 +32,7 @@ The Turbo containerization system includes:
   Hub also provides container state synchronization, allowing continuation of container execution across different devices. (See the `continue`
   command for more information on continuation.)
 
-In addition, the Spoon VM has been substantially enhanced to support the additional primitives required by the containerization engine.
+In addition, the Turbo VM has been substantially enhanced to support the additional primitives required by the containerization engine.
 Turbo's application compatibility footprint was expanded to provide support for additional server applications.
 
 *How is Turbo different from App-V or ThinApp?*

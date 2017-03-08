@@ -1,6 +1,6 @@
 ### vms
 
-The `vms` command lists all the available versions of the Spoon VM. 
+The `vms` command lists all the available versions of the Turbo VM. 
 
 ```
 Usage: turbo vms
@@ -11,7 +11,7 @@ Usage: turbo vms
 
 If a user is logged in to a remote registry then all versions which are available both locally and remotely will be displayed. 
 
-If no user is logged in then only local versions of the Spoon VM are displayed. 
+If no user is logged in then only local versions of the Turbo VM are displayed. 
 
 #### JSON output
 

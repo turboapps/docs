@@ -157,7 +157,7 @@ Complete the following steps to enable Microsoft Windows Firewall with Advanced 
 
 #### Manage TurboServer from the Command Line
 
-`Server.exe`, located in the installation directory of TurboServer (usually C:\Program Files\Spoon Server), can be used as a command-line tool by specifying the admin option. This tool enables you to add and update applications to the TurboServer library from the command line, and add large applications (over 2GB) to the TurboServer. The TurboServer administrator portal does not support uploading SVM files over 2GB.
+`Server.exe`, located in the installation directory of TurboServer (usually C:\Program Files\Turbo Server), can be used as a command-line tool by specifying the admin option. This tool enables you to add and update applications to the TurboServer library from the command line, and add large applications (over 2GB) to the TurboServer. The TurboServer administrator portal does not support uploading SVM files over 2GB.
 
 ##### Requirements for Using Server.exe
 

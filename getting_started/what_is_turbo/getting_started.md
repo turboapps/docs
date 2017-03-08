@@ -2,7 +2,7 @@
 
 Turbo allows you to package applications and their dependencies into a lightweight, isolated virtual environment called a "container." Containerized applications can then be run on any Windows machine that has Turbo installed, no matter the underlying infrastructure. This eliminates installs, conflicts, breaks, and missing dependencies.
 
-Turbo containers are built on top of the Spoon Virtual Machine, an *application virtualization* engine that provides lightweight
+Turbo containers are built on top of the Turbo Virtual Machine, an *application virtualization* engine that provides lightweight
 namespace isolation of core operating system objects such as the filesystem, registry, process, networking, and threading subsystems.
 
 ### Why use Turbo?
@@ -38,15 +38,15 @@ With Turbo, system administrators can:
 
 ### How does it work?
 
-Turbo containers are built on top of the **Spoon Virtual Machine Engine** (SVM), an application virtualization engine which provides lightweight implementation of core operating system APIs, including the filesystem, registry, process, networking, and threading subsystems. Applications executing within the Turbo virtual machine interact with a virtualized filesystem, registry, network, and process environment supplied by the SVM, rather than directly with the host device operating system. 
+Turbo containers are built on top of the **Turbo Virtual Machine Engine** (SVM), an application virtualization engine which provides lightweight implementation of core operating system APIs, including the filesystem, registry, process, networking, and threading subsystems. Applications executing within the Turbo virtual machine interact with a virtualized filesystem, registry, network, and process environment supplied by the SVM, rather than directly with the host device operating system. 
 
 The image below illustrates how the SVM is isolated from the host environment.
 
 ![](/docs/getting_started/what_is_turbo/turbo-vm.png)
 
-The Spoon VM is required to implement containerization on the Windows platform since the underlying OS does not provide appropriate containerization primitives. Put another way, Spoon VM plays the same role for Turbo containers as LXC does for Docker containers.
+The Turbo VM is required to implement containerization on the Windows platform since the underlying OS does not provide appropriate containerization primitives. Put another way, Turbo VM plays the same role for Turbo containers as LXC does for Docker containers.
 
-Unlike hardware virtualization systems like Microsoft Virtual PC and VMWare, or hypervisor systems such as Hyper-V, Spoon VM operates on top of the base operating on the execution stack and virtualizes specific operating system features required for application execution. This enables virtualized applications to operate efficiently, with the same performance characteristics as native executables.
+Unlike hardware virtualization systems like Microsoft Virtual PC and VMWare, or hypervisor systems such as Hyper-V, Turbo VM operates on top of the base operating on the execution stack and virtualizes specific operating system features required for application execution. This enables virtualized applications to operate efficiently, with the same performance characteristics as native executables.
 
 There are several advantages in choosing Turbo containers over hardware virtualization systems:
 
@@ -64,7 +64,7 @@ There are several advantages in choosing Turbo containers over hardware virtuali
 
 **Do Turbo containers work by running a full OS virtual machine?**
 
-No. Turbo containers use a special, lightweight *application-level VM* called Spoon VM. Spoon VM runs in user mode on top of a single instance
+No. Turbo containers use a special, lightweight *application-level VM* called Turbo VM. Turbo VM runs in user mode on top of a single instance
 of the base operating system.
 
 **How long does it take to start Turbo containers?**

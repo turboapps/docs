@@ -137,7 +137,7 @@ Containerized applications can be distinguished from normal apps with skin layer
 turbo run --startup-file=notepad -d clean+skin(blue)
 ```
 
-Spoon VM settings can be enabled or disabled with the `--enable` and `--disable` flags, respectively. For a list of Spoon VM settings, see **VM Settings** section of the documentation.
+Turbo VM settings can be enabled or disabled with the `--enable` and `--disable` flags, respectively. For a list of Turbo VM settings, see **VM Settings** section of the documentation.
 
 When the `--diagnostic` flag is used, the container will generate diagnostic logs that detail all of the operations that occur within the container. These diagnostic logs can later be viewed using the `turbo logs` command and be used to troubleshoot errors and configuration issues. 
 

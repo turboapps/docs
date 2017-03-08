@@ -8,7 +8,7 @@ TurboServer is an application deployment tool that enables you to launch applica
 
 Unlike other virtualization solutions that require an entire copy of the host operating system, Turbo's container technology only emulates the features required to run application. Turbo containers have the same performance characteristics as native applications, but without any changes to system infrastructure.
 
-The core of Turbo Virtualization Technology is the Spoon Virtual Machine (VM) kernel. Occupying less than a megabyte of storage and almost zero performance overhead, Turbo kernel is a lightweight implementation of core operating system APIs, including file system, registry, process, and threading subsystems. Turbo kernel is implemented entirely within the user-mode space, meaning Turbo applications can run without any driver installation or administrative privileges.
+The core of Turbo Virtualization Technology is the Turbo Virtual Machine (VM) kernel. Occupying less than a megabyte of storage and almost zero performance overhead, Turbo kernel is a lightweight implementation of core operating system APIs, including file system, registry, process, and threading subsystems. Turbo kernel is implemented entirely within the user-mode space, meaning Turbo applications can run without any driver installation or administrative privileges.
 
 Turbo containers interact with a virtualized file system, registry, and process environment contained in the kernel, rather than directly with the host device operating system. Requests are handled internally within the virtualized environment, but can also be redirected or overridden based on your configuration.
 
