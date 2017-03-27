@@ -1,4 +1,4 @@
-The [Hub](/hub) is the distribution component of Turbo. Using the Hub you can store and share images that you have created. All Turbo accounts allow for the creation of unlimited public repositories and can be [upgraded](/pricing) to create private repositories on the Hub.
+The [Hub](/hub) is the distribution component of Turbo. Using the Hub you can store and share images that you have created. All Turbo accounts allow for the creation of unlimited private repositories.
 
 ## Creating a Profile
 
@@ -12,4 +12,4 @@ If you are working with a group of collaborators, [create an organization](/pric
 
 The owner of the organization can add or remove users and manage the organization's subscription from [the dashboard](/dashboard).
 
-Similar to individual accounts, organizations may have unlimited public repositories and can be [upgraded](/pricing) for private repositories.
+Organizations may have unlimited private repositories that can be used by its members.
