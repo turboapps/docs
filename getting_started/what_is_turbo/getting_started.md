@@ -122,6 +122,6 @@ Turbo.net is a subscription service and can be purchased for individuals or an o
 Turbo is also available as an on-premises enterprise server. Please see **[Turbo Server](/server)** for more information or to request
 an evaluation license.
 
+**Does Turbo support file associations and shell extensions?
 
-
-
+Yes. Turbo images and containers with shell extensions or file associations can be installed onto the host operation system. Use the `installi` or `install` command with the `--register-extensions` flag.
