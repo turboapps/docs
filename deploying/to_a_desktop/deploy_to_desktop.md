@@ -22,7 +22,7 @@ On your machine you will notice that a scheduled task has been created. The sche
 
 ### Shell Registration
 
-Containers can also be integrated with the Windows shell. The `install` command will create Start Menu shortcuts and file associations in the shell for the image so that it behaves similar to an installed application.
+Containers can also be integrated with the Windows shell. The `install` or 'installi' command will create Start Menu shortcuts, file associations, and shell extensions in the shell for the image so that it behaves similar to an installed application.
 
 ```
 # Create a VLC container
