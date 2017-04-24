@@ -22,6 +22,6 @@ An enterprise license for TurboStudio is required to enable MSI outputs. Contact
 
 ### Turbo EXE
 
-A Turbo EXE is a portable executable that packages the application with the Turbo client. When an application is published as a Turbo EXE, the application is pushed to the [Hub](/hub) which enables features such as deploying application updates to users. See the [hub docs](/docs/hub]) for additional features.
+A Turbo EXE is a portable executable that packages the application with the Turbo client. When an application is published as a Turbo EXE, the application is pushed to the [Hub](/hub) which enables features such as deploying application updates to users. See the [hub docs](/docs/hub) for additional features.
 
 To produce a Turbo exe, set the **Project Type** to **Portable Application** in TurboStudio. A [Turbo.net](https://turbo.net) account is required.
