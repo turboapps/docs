@@ -18,4 +18,4 @@ Things we love to see:
 
 If you have an idea for an improvement but lack the time to make a pull request, tweet [@turbohq](http://twitter.com/turbohq), or email us at [support@turbo.net](mailto:support@turbo.net).
 
-If you want to join the Turbo team, check out our [careers page](/careers)! We're hiring ;)
+If you want to join the Turbo team, check out our [jobs page](/jobs)! We're hiring ;)
