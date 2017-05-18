@@ -31,7 +31,7 @@ Layers can be applied dynamically and programmatically, so you can present disti
 Turbo layering also enables *partial rollback* during container builds via the `using` command. This is especially useful when an external tool is required *during* the build process, but is *not* desired in the ultimate container. For example:
 
     using git
-      # pull in content using git
+    # pull in content using git
     
     # (git content no longer present in the container)
     # use the content to complete container setup
