@@ -84,7 +84,7 @@ Turbo then stores deltas on top of the base images as the container state evolve
 
 **Does Turbo support virtual networking?**
 
-Yes. Controlling both inbound and outbound traffic is supported. See the `--route-add`, `--route-block`, `--link`, `--hosts`, and `--network` commands. For details relating to binding and routing container ports or IPs read [https://blog.turbo.net/ip-routing-in-turbo-containers](https://blog.turbo.net/ip-routing-in-turbo-containers/), [https://blog.turbo.net/ip-routing-in-turbo-containers-ii](https://blog.turbo.net/ip-routing-in-turbo-containers-ii), and [https://blog.turbo.net/ip-routing-in-turbo-containers-iii](https://blog.turbo.net/ip-routing-in-turbo-containers-iii/).
+Yes. Controlling both inbound and outbound traffic is supported. See the `--route-add`, `--route-block`, `--link`, `--hosts`, and `--network` commands. For details relating to binding and routing container ports or IPs see [IP Routing in Turbo Containers](https://blog.turbo.net/ip-routing-in-turbo-containers/), [part 2](https://blog.turbo.net/ip-routing-in-turbo-containers-ii), and [part 3](https://blog.turbo.net/ip-routing-in-turbo-containers-iii/).
 
 **Does Turbo support linking multiple containers?**
 
