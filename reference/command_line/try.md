@@ -3,36 +3,56 @@
 The `try` command creates a new, temporary container which is removed once it is closed.
 
 ```
-Usage: turbo try <options> <image> [<parameters>...]
+Usage: turbo.exe try <options> <image>[+skin(color)] [<parameters>...]
 
 <options> available:
-  -a, --attach               Attach to stdin, stdout, and stderr of the container
-      --admin                Run the container as admin user
-  -d, --detach               Run the container in the background
-      --disable=VALUE        Disable the specified Turbo VM setting
-  -e, --env=VALUE            Set environment variables inside the container
-      --enable=VALUE         Enable the specified Turbo VM setting
-      --enable-log-stream    Enable web streaming of logs
-      --env-file=VALUE       Read in a line delimited file of ENV variables
-      --format=VALUE         Use json format for output
-      --hosts=VALUE          Add an en to the virtual /etc/hosts file (<redirect>:<name>)
-      --link=VALUE           Add link to another container (<container>:<alias>)
-      --mount VALUE          Mount a host folder into the container, format: [other-container:]<source>=<target>
-  -n, --name=VALUE           Name of created container
-      --network=VALUE        Run container in specified virtual network
-      --no-stream            Force no streaming even when stream is available
-      --pull                 Pulls base images from hub before running, if they exist
-      --route-add=VALUE      Add route mapping. Supported protocols: ip, pipe, tcp, udp
-      --route-block=VALUE    Block specified route or protocol. Supported protocols: ip, tcp, udp
-      --route-file=VALUE     Specify a routing rules file
-      --startup-file=VALUE   Override the default startup file
-      --trigger=VALUE        Execute named group of startup files
-      --using=VALUE          Use specified images as a temporary dependency
-      --vm=VALUE             The Turbo VM version to run the container with
-  -w, --working-dir=VALUE    Set the initial working directory inside the container
-      --wait-after-error     Leave program open after error
-      --wait-after-exit      Leave program open after it exits
-      --with-root=VALUE      Set the containers root directory
+      --                           Parameters after -- are passed directly to the container process
+  -a, --attach                     Attach to stdin, stdout, and stderr of the container
+      --ad-domain-allow=VALUE      Allow execution from the Active Directory domain
+      --ad-domain-deny=VALUE       Disallow execution from the Active Directory domain
+      --ad-group-allow=VALUE       Allow execution for members of the Active Directory group
+      --ad-group-deny=VALUE        Disallow execution for members of the Active Directory group
+      --admin                      Run the container with administrative permissions
+  -d, --detach                     Run the container in the background
+      --diagnostic                 Enable diagnostic logging
+      --disable=VALUE              Disable the specified Turbo VM setting
+  -e, --env=VALUE                  Set environment variables inside the container
+      --enable=VALUE               Enable the specified Turbo VM setting
+      --enable-log-stream          Enable web streaming of logs
+      --enable-screencast          Enable web streaming of screenshots
+      --enable-sync                Enable container synchronization
+      --env-file=VALUE             Read in a line delimited file of ENV variables
+      --format=VALUE               Use the specified format for output. Supported values: json
+      --hosts=VALUE                Add an entry to the virtual /etc/hosts file (<redirect>:<name>)
+  -i, --isolate=VALUE              Set isolation level: full, write-copy, merge or merge-user.
+      --install                    Register the container to the desktop
+      --link=VALUE                 Add link to another container (<container>:<alias>)
+      --mount=VALUE                Mount a host folder into the container. Format: [other-container:]SourceFolder[=TargetFolder]
+  -n, --name=VALUE                 Name of created container
+      --network=VALUE              Run container in specified named network
+      --no-pull                    Uses local images if to run the container if possible.  If not present, will pull from the hub.
+      --private                    Synchronize this container privately, visible only to me
+      --proxy-password=VALUE       Proxy password
+      --proxy-server=VALUE         Proxy server. Format: [socks5|http|https]://yourproxy:port
+      --proxy-username=VALUE       Proxy username
+      --public                     Synchronize this container publicly, visible to everyone
+      --pull                       Pulls base images from hub before running, if they exist
+      --route-add=VALUE            Add route mapping. Supported protocols: ip, pipe, tcp, udp
+      --route-block=VALUE          Block specified route or protocol. Supported protocols: ip, tcp, udp
+      --route-file=VALUE           Read in a INI file of routing configuration
+      --show-window=VALUE          Controls how window is shown. Supported values: max, default
+      --startup-file=VALUE         Override the default startup file
+      --startup-file-default=VALUE Overrides the default startup file if the main image does not have one
+      --startup-verb=VALUE         Override the default startup verb
+      --stream                     Enable streaming of the image if available
+      --temp                       Remove container when it exits
+      --trigger=VALUE              Execute named group of startup files
+      --upgrade-from=VALUE         Upgrade from specified container, when images have changed
+      --using=VALUE                Use specified images as a temporary dependency
+      --vm=VALUE                   Use the specified Turbo VM version for execution
+  -w, --working-dir=VALUE          Set the initial working directory inside the container
+      --wait-after-error           Leave process open after error
+      --wait-after-exit            Leave process open after it exits
 ```
 
 Turbo `try` can be used to specify multiple images by separating each image with a comma. If the same file, registry entry, or environment variable exists in multiple images, then the one from whichever image was specified last will win the conflict and be used in the virtual environment. Virtual machine settings are taken from the last specified image. Due to this "layering" approach, it is a good practice to specify images with newer versions of applications or libraries after images with older versions.
