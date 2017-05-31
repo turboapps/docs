@@ -82,10 +82,6 @@ Running with multiple base images creates a single container with all of the bas
 
 Turbo then stores deltas on top of the base images as the container state evolves. The `,` operator works left-to-right, so files or settings in later arguments override files or settings in previous arguments.
 
-**Wow, that's amazing!**
-
-Yes. Please enjoy responsibly.
-
 **Does Turbo support virtual networking?**
 
 Yes. Controlling both inbound and outbound traffic is supported. See the `--route-add`, `--route-block`, `--link`, `--hosts`, and `--network` commands.
@@ -125,3 +121,7 @@ an evaluation license.
 **Does Turbo support file associations and shell extensions?**
 
 Yes. Turbo images and containers with shell extensions or file associations can be installed onto the host operation system. Use the `installi` or `install` command with the `--register-extensions` flag.
+
+**How do I pass parameters/arguments to the underlying container's cli?
+
+Pass the arguments directly after the image or containers name: `turbo run clean ping google.com`. If the command line interface uses dash flags which requires escaping use `--` to pass parameters directly: `turbo run chrome -- -incognito`. This applies to the `run`, `try`, and `start` commands.
