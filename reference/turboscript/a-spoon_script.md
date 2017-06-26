@@ -58,7 +58,7 @@ These are the currently supported expressions:
 * host has os:Windows2012r2
 * host has os:Windows10
 
-Note that client OSes are not differentiated from server OSes so "WindowsXP" is equivilent to "Windows2003", etc.
+Note that client OSes are not differentiated from server OSes so "WindowsXP" is equivalent to "Windows2003", etc.
 
 Expressions can be combined with AND, OR, NOT, and parenthesis.
 
