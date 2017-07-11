@@ -15,13 +15,13 @@ Usage: turbo copyi <options> <image> [<repository>/]<image>[:<tag>]
 If the repository specified in the command does not already exist, a new one is automatically created.  
 
 ```
-# Copy node/node to a new repository
-> turbo copyi node/node my-node
+# Copy nodejs/nodejs to a new repository
+> turbo copyi nodejs/nodejs my-node
 
 Output image: my-node
 
 # Copy the image to the existing repository with a new tag
-> turbo copyi node/node my-node:1.0
+> turbo copyi nodejs/nodejs my-node:1.0
 ```
 
 #### JSON output

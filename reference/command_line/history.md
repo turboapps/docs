@@ -20,7 +20,7 @@ The most used recent images are listed first.
 
 ID            Last used             Name            Tag
 --            ---------             ----            ---
-73dfe6973074  8/29/2014 4:51:08 PM  node/node      
+73dfe6973074  8/29/2014 4:51:08 PM  nodejs/nodejs      
 07b66f57ed8d  8/29/2014 4:50:33 PM  git/git       
 ```
     

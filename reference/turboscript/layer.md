@@ -15,8 +15,8 @@ Due to this "layering" approach, it is a good practice to specify images with ne
 ```
 layer <image 1> <image 2>
 
-# Start container with git and node
-layer git/git node/node
+# Start container with git and node.js
+layer git/git nodejs/nodejs
 ```
 
 **Note**: To initialize an empty container, use the `clean` image

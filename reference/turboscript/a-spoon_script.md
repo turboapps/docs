@@ -31,7 +31,7 @@ Comments cannot be made inline with a command. Comments must be specified at the
 ```
 # This is a valid comment
 
-layer node/node  # This is not a valid comment
+layer nodejs/nodejs  # This is not a valid comment
 ```
 
 ### Conditions

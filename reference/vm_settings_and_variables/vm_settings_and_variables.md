@@ -7,7 +7,7 @@ The behaviour of containers and images can be modified by changing VM settings a
 Effect the settings flags below using the `--enable=VALUE` or `--disable=VALUE` flags with the `turbo run` or `turbo build` command.
 
     # Example
-    turbo run --enable=IsolateWindowsClasses node cmd
+    turbo run --enable=IsolateWindowsClasses nodejs cmd
 
 Altering VM settings for a container will override the settings of the base image(s).
 

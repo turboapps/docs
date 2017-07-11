@@ -18,16 +18,16 @@ In most scenarios, image layers will define unique resources that do not conflic
 
 If multiple layers define different isolation modes for the same path, the first layer that defines the isolation mode will be used. 
 
-For example, if a container includes a "git" image with **c:\git** set to full isolation and a "node" image with **c:\git** set to merge isolation, the conflict between the isolation settings will be resolved by the ordering of the layers.
+For example, if a container includes a "git" image with **c:\git** set to full isolation and a "nodejs" image with **c:\git** set to merge isolation, the conflict between the isolation settings will be resolved by the ordering of the layers.
 
 The following command will create a container with the folder **c:\git** set to full isolation.
 
 ```
-> turbo run git,node
+> turbo run git,nodejs
 ```
 
 The following command will create a container with the folder **c:\git** set to merge isolation.
 
 ```
-> turbo run node,git
+> turbo run nodejs,git
 ```

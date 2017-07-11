@@ -15,7 +15,7 @@ The TurboScript contains all the steps necessary to build the container.
 
 ```
 # Creates a new container from the specified images
-layer node/node git/git
+layer nodejs/nodejs git/git
 
 # Clone a project in the container
 cmd mkdir c:\root

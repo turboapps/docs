@@ -13,8 +13,8 @@ Images are pushed to the Hub using the command-line interface. The most common s
 Before pushing a container to the Hub, it needs to be committed to the local registry and converted into an image. Here is an example of the process of creating a container and publishing it on the Turbo Hub.
 
 ```
-# Create a container with Java, Node and Git support
-> turbo run oracle/jdk,node/node,git/git
+# Create a container with Java, Node.js and Git support
+> turbo run oracle/jdk,nodejs/nodejs,git/git
 
 # Shut down the container by typing exit into the new command window
 > exit
