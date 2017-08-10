@@ -51,3 +51,10 @@ You can create a new repository from the command-line interface by pushing it to
 
 # The image is now pushed to the logged-in profile
 ```
+
+To push a repository to an organization, include the name of the organization you are pushing to:
+
+```
+# Push image to organization
+> turbo push <image> <org>/<reponame>
+```
