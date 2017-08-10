@@ -31,11 +31,13 @@ Before pushing a container to the Hub, it needs to be committed to the local reg
 # Push the image to the Hub
 > turbo push myimage
 ```
+
 To push a repository to an organization, include the name of the organization you are pushing to:
 
 ```
 # Push image to organization myorg
 > turbo push myimage orgname/reponame
+```
 
 Once the push is complete you can verify that the image is available on the Hub by going to the [Hub](/hub) in your browser.
 
@@ -53,6 +55,7 @@ Here is an example of how you would deploy an SVM to the Hub.
 # Push the image to the Hub
 > turbo push myimage
 ```
+
 Once the push is complete you can verify that the image is available on the Hub by going to the [Hub](/hub) in your browser.
 
 
