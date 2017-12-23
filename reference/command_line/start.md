@@ -36,7 +36,6 @@ Usage: start <options> <container>
       --route-block=VALUE          Block specified route or protocol. Supported protocols: ip, tcp, udp
       --route-file=VALUE           Read in a INI file of routing configuration
       --startup-file=VALUE         Override the default startup file
-      --startup-file-default=VALUE Overrides the default startup file if the main image does not have one
       --startup-verb=VALUE         Override the default startup verb
       --trigger=VALUE              Execute named group of startup files
       --using=VALUE                Use specified images as a temporary dependency

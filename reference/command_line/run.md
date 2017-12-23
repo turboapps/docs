@@ -38,7 +38,6 @@ Usage: run <options> [<image>][+skin(color)] [<parameters>...]
       --route-block=VALUE          Block specified route or protocol. Supported protocols: ip, tcp, udp
       --route-file=VALUE           Read in a INI file of routing configuration
       --startup-file=VALUE         Override the default startup file
-      --startup-file-default=VALUE Overrides the default startup file if the main image does not have one
       --startup-verb=VALUE         Override the default startup verb
       --temp                       Remove container when it exits
       --trigger=VALUE              Execute named group of startup files
