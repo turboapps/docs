@@ -6,13 +6,13 @@ The latest Turbo Client may be downloaded from [https://turbo.net/download](http
 
 **Installing Turbo Client for a Single User**
 
-To install the Turbo Client using default settings, double-click on the installer. This will configure the client for the current user and place the client components in the **%localappdir%\turbo** user directory. Shortcuts will be added to the Start Menu in the **Turbo.net** folder for quick access to the **TurboLauncher** and **TurboShell**. In addition, shortcuts will be added to the Startup folder to automatically start the Turbo Client.
+To install the Turbo Client using default settings, double-click on the installer. This will configure the client for the current user and place the client components in the **%LOCALAPPDATA%\Turbo** user directory. Shortcuts will be added to the Start Menu in the **Turbo.net** folder for quick access to the **TurboLauncher** and **TurboShell**. In addition, shortcuts will be added to the Startup folder to automatically start the Turbo Client.
 
 The Turbo.net Extension is required when using the client with the Chrome browser. It may be found in the Chrome Web Store at [https://chrome.google.com/webstore/detail/turbonet-extension/ldibmiofagdkgiphkcokpooepankmacl] (https://chrome.google.com/webstore/detail/turbonet-extension/ldibmiofagdkgiphkcokpooepankmacl).
 
 **Installing Turbo Client for All Users**
 
-The Turbo Client can be installed for all users on the machine with the `--all-users` flag, which will place the client components in the **%programfiles(x86)%\turbo** directory and register the shortcuts for all users on the system.
+The Turbo Client can be installed for all users on the machine with the `--all-users` flag, which will place the client components in the **%PROGRAMFILES(x86)%\turbo** directory and register the shortcuts for all users on the system.
 
 Note that if users on the machine already have the Turbo Client installed in their user directories, then their single user installs will be overriden by the all user install. Additional updates to the Turbo Client will occur for the all users installation even if the `--all-users` flag is omitted.
 
@@ -37,7 +37,7 @@ Running the Turbo Client installer with these command line flags can change the 
     </tr>
     <tr>
        <td><p><strong>--all-users</strong></p></td>
-       <td><p>Installs the Turbo Client to <strong>%programfiles(x86)%\turbo</strong> so that it is accessible for all users on the machine. This is required for running certain Turbo command for all users (such as `subscribe` or `installi`)</p></td>
+       <td><p>Installs the Turbo Client to <strong>%PROGRAMFILES(x86)%\turbo</strong> so that it is accessible for all users on the machine. This is required for running certain Turbo command for all users (such as `subscribe` or `installi`)</p></td>
     </tr>
     <tr>
        <td><p><strong>--no-auto-start</strong></p></td>
@@ -61,15 +61,11 @@ Running the Turbo Client installer with these command line flags can change the 
 
 **Uninstalling Turbo Client via Control Panel**
 
-You can uninstall the Turbo Client or the TurboLauncher specifically from the Windows **Uninstall or change a program** screen (formally **Add/Remove Programs**).
+You can uninstall the Turbo Client or the TurboLauncher specifically from the Windows **Uninstall or change a program** screen (previously called **Add/Remove Programs**).
 
 **Uninstalling Turbo Client via the Command Line**
 
-To uninstall the Turbo.net Sandbox Manager, you may pass the `/uninstall` flag to the Turbo-Sandbox.exe in the **%localappdir%\turbo\[client-version]** directory for single user installs or **%programfiles(x86)%\turbo\[client-version]** for all user installs.
-
-For unattended or scripted uninstalls, pass the `/silent` flag in addition.
-
-Note that if the client is installed for all users, you would have to run from an elevated command prompt or the command will fail with insufficient privileges.
+To uninstall the Turbo.net Sandbox Manager, you may pass the `/uninstall` flag to the Turbo-Sandbox.exe in the **%LOCALAPPDATA%\turbo\[client-version]** directory for single user installs or **%PROGRAMFILES(x86)%\turbo\[client-version]** for all user installs.
 
 ```
 # Uninstall for single user
@@ -78,6 +74,10 @@ C:\> "%LOCALAPPDATA%\Turbo\[client-version]\Turbo-Sandbox.exe" /uninstall /silen
 # Uninstall for all users
 C:\> "C:\Program Files (x86)\Turbo\[client-version]\Turbo-Sandbox.exe" /uninstall /silent
 ```
+
+For unattended or scripted uninstalls, pass the `/silent` flag in addition.
+
+Note that if the client is installed for all users, you would have to run from an elevated command prompt or the command will fail with insufficient privileges.
 
 **Turbo-Sandbox.exe Uninstall Flags**
 
