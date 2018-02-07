@@ -30,9 +30,9 @@ This will show the **Extensions** menu.
 
 **Step 5:** Click on **Load Extensions** and select the path to the Turbo.net Edge extension in the client install directory, which may be at one of the following locations depending on your environment:
 
-- **c:\users\[user]\appdata\local\spoon\[version]\edge**
-- **c:\program files\spoon\[version]\edge**
-- **c:\program files (x86)\spoon\[version]\edge**
+- **c:\users\[user]\appdata\local\turbo\[version]\edge**
+- **c:\program files\turbo\[version]\edge**
+- **c:\program files (x86)\turbo\[version]\edge**
 
 ![](/docs/reference/turbo_client/edge-load-ext.png)
 
