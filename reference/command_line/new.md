@@ -31,7 +31,6 @@ Usage: new <options> [<image>] [--name=<name>]
   -n, --name=VALUE                 Name of created container
       --network=VALUE              Run container in specified named network
       --no-pull                    Uses local images if to run the container if possible.  If not present, will pull from the hub.
-      --no-run                     Create container but do not execute it
       --private                    Synchronize this container privately, visible only to me
       --public                     Synchronize this container publicly, visible to everyone
       --pull                       Pulls base images from hub before running, if they exist

@@ -25,11 +25,8 @@ On your machine you will notice that a scheduled task has been created. The sche
 Containers can also be integrated with the Windows shell. The `install` or 'installi' command will create Start Menu shortcuts, file associations, and shell extensions in the shell for the image so that it behaves similar to an installed application.
 
 ```
-# Create a VLC container
-> turbo new --no-run --name=vlc videolan/vlc
-
 # Install the VLC container to the shell
-> turbo install vlc --register-extensions
+> turbo installi --name=vlc videolan/vlc --register-extensions
 ```
 
 Configuring shortcuts and file associations for an image is done in TurboStudio. See the [reference](/docs/reference/turbo-studio) section for more details.
