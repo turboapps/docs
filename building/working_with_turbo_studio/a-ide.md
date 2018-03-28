@@ -24,4 +24,6 @@ TurboStudio supports both 32- and 64-bit applications. Both 32-bit (under 32-bit
 
 **Note:** TurboStudio does not support creation of 16-bit executables. To run 16-bit DOS applications, virtualize an appropriate emulator with the application and launch the application through the emulator.
 
+**Note:** TurboStudio cannot access the turbo.net hub on Windows XP or Windows Server 2003 because the platforms do not support TLS1.2 which is required to access the web resources. Snapshot, build, and other features are not affected.
+
 Download a free 30-day trial [here](/studio) or try the free, [express version](/studio/download). 
