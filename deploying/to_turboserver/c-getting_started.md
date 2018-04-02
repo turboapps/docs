@@ -1,6 +1,6 @@
 ### Getting Started
 
-In this section you will learn about system requirements and instructions for installing, configuring and running TurboServer.
+In this section you will learn about system requirements and instructions for installing, configuring and running Turbo Server.
 
 #### System Requirements
 
@@ -15,11 +15,11 @@ Larger enterprise deployments may require additional processing power, memory, a
 
 #### Database Requirements
 
-TurboServer is installed with an embedded SQL Express database. However, we recommend this database only be used for demonstration or testing purposes. When using TurboServer in production, we recommend connecting TurboServer to an external SQL database.
+Turbo Server is installed with an embedded SQL Express database. However, we recommend this database only be used for demonstration or testing purposes. When using Turbo Server in production, we recommend connecting Turbo Server to an external SQL database.
 
 #### Disk Space Requirements
 
-The initial installation of TurboServer requires 1.05 GB of free space on your hard drive.
+The initial installation of Turbo Server requires 1.05 GB of free space on your hard drive.
 
 The amount of disk space required varies based on how many applications your server hosts as well as how many users you have. We recommend using the following guidelines when planning how much disk space you will require:
 
@@ -30,21 +30,21 @@ Turbo DB uses data deduplication to minimize storage consumption when multiple c
 
 #### Setup
 
-In this section you will learn how to use the Setup Wizard to automatically configure TurboServer. For details regarding manual configuration of TurboServer, refer to Manually Configuring TurboServer.
+In this section you will learn how to use the Setup Wizard to automatically configure Turbo Server. For details regarding manual configuration of Turbo Server, refer to Manually Configuring Turbo Server.
 
-Complete the following steps to set up TurboServer:
+Complete the following steps to set up Turbo Server:
 
-1. Run the TurboServer setup application.
+1. Run the Turbo Server setup application.
 
 2. Select **Next** to start the installation wizard.
 
 3. Read the End User License Agreement, check the box and select **Next**.
 
-4. Use **Destination Folder** to choose where TurboServer files are installed and select Install.
+4. Use **Destination Folder** to choose where Turbo Server files are installed and select Install.
 
 5. After the installation process completes, choose the following configuration options:
 
-    a. **Administrator email address**: This is typically the TurboServer system administrator's email address. Users are directed to this email address if they encounter any errors or issues while using TurboServer.
+    a. **Administrator email address**: This is typically the Turbo Server system administrator's email address. Users are directed to this email address if they encounter any errors or issues while using Turbo Server.
 
     b. **Port assignments**:
 
@@ -52,35 +52,35 @@ Complete the following steps to set up TurboServer:
 
 	**Portal site**: The port used to access the Portal Site.  For more information, refer to the Portal Site topic. If Microsoft IIS is already on the machine port 80 is already in use. Verify that the ports assigned to the Administration and Portal sites are not already in use.
 		
-    c. Click the **Advanced** button to specify connection information to an external SQL Server Database. When using an external SQL Server Database, be sure that the "Log On" user for the TurboServer Windows Service has the appropriate access to the database. It may be necessary to modify the Log On user for the service by editing the service details after installing TurboServer.
+    c. Click the **Advanced** button to specify connection information to an external SQL Server Database. When using an external SQL Server Database, be sure that the "Log On" user for the Turbo Server Windows Service has the appropriate access to the database. It may be necessary to modify the Log On user for the service by editing the service details after installing Turbo Server.
     
-	**Note:** TurboServer supports all versions of Microsoft SQL Server 2005 or newer. Any connection string format supported by Microsoft SQL Server may be used.
+	**Note:** Turbo Server supports all versions of Microsoft SQL Server 2005 or newer. Any connection string format supported by Microsoft SQL Server may be used.
 
-6. Select **Setup** to begin configuring TurboServer.
+6. Select **Setup** to begin configuring Turbo Server.
 
 7. After setup is complete the Administration Site automatically opens and displays a web page where you can apply your license. Both evaluation and retail licenses are applied here. To obtain an evaluation license, login or create an account on http://turbo.net. For information on purchasing a retail license, refer to the Licensing topic. When purchasing or activating a retail license, note the Machine Identifier displayed on the License section of the Administration tab. This is necessary to complete license activation.
 
-8. Open the ports for the Administration and Portal sites (the Microsoft Windows Firewall blocks external connections to TurboServer by default). For instructions on opening the ports, and for recommendations on how to best secure TurboServer, refer to Configuring TurboServer Security.
+8. Open the ports for the Administration and Portal sites (the Microsoft Windows Firewall blocks external connections to Turbo Server by default). For instructions on opening the ports, and for recommendations on how to best secure Turbo Server, refer to Configuring Turbo Server Security.
 
-9. Start using TurboServer!
+9. Start using Turbo Server!
 
 #### Licensing
 
-The standard TurboServer license, **TurboServer Enterprise Edition**, consists of a server license and a custom number of unique or simultaneous end-users or devices. The standard license enables an unlimited number of applications to be hosted on TurboServer.
+The standard Turbo Server license, **Turbo Server Enterprise Edition**, consists of a server license and a custom number of unique or simultaneous end-users or devices. The standard license enables an unlimited number of applications to be hosted on Turbo Server.
 
-Users are typically accounted for with a username and password. However, you can use anonymous users. In this case, each user is defined by the domain of the hosted TurboServer and a specific username, such as SomeCompany\SomeUser. Any user may access the system on any number of machines within the same domain as the hosted TurboServer without using additional user licenses. A separate license is used each time an application launches from a new machine outside of the domain with the hosted TurboServer, regardless of the user login.
+Users are typically accounted for with a username and password. However, you can use anonymous users. In this case, each user is defined by the domain of the hosted Turbo Server and a specific username, such as SomeCompany\SomeUser. Any user may access the system on any number of machines within the same domain as the hosted Turbo Server without using additional user licenses. A separate license is used each time an application launches from a new machine outside of the domain with the hosted Turbo Server, regardless of the user login.
 
 A user can only run applications from one device at a time.
 
-**Tip:** Minimize the number of seats consumed by having users login with the same domain as your TurboServer.
+**Tip:** Minimize the number of seats consumed by having users login with the same domain as your Turbo Server.
 
-The TurboServer administrator can activate and deactivate users as needed, or add additional allowed users or devices by upgrading the license. For more information about managing users refer to Managing Users. For instructions on applying a new license to TurboServer, refer to Configuration and Customization.
+The Turbo Server administrator can activate and deactivate users as needed, or add additional allowed users or devices by upgrading the license. For more information about managing users refer to Managing Users. For instructions on applying a new license to Turbo Server, refer to Configuration and Customization.
 
-Turbo offers discounts for qualified educational customers (K-12, university, and trade schools) and non-profit organizations, as well as custom licensing options. For more information about Turbo licensing and pricing, or to purchase your own TurboServer license, visit http://turbo.net/server/ or contact us at sales@turbo.net.
+Turbo offers discounts for qualified educational customers (K-12, university, and trade schools) and non-profit organizations, as well as custom licensing options. For more information about Turbo licensing and pricing, or to purchase your own Turbo Server license, visit http://turbo.net/server/ or contact us at sales@turbo.net.
 
 #### Administration Site
 
-TurboServer has an administration site interface that enables TurboServer administrators to manage and control all aspects of a TurboServer instance, including:
+Turbo Server has an administration site interface that enables Turbo Server administrators to manage and control all aspects of a Turbo Server instance, including:
 
 - Licensing
 - Applications
@@ -89,11 +89,11 @@ TurboServer has an administration site interface that enables TurboServer admini
 - Servers
 - Customization
 
-The Administration Site also provides detailed application usage analytics via pre-configured reports and a full-featured dashboard. The administration site is automatically configured during TurboServer setup, and is assigned to port 81 by default. For more information about how to administer TurboServer, refer to TurboServer Administration.
+The Administration Site also provides detailed application usage analytics via pre-configured reports and a full-featured dashboard. The administration site is automatically configured during Turbo Server setup, and is assigned to port 81 by default. For more information about how to administer Turbo Server, refer to Turbo Server Administration.
 
 #### Portal Site
 
-The TurboServer portal site is users access and stream applications from. After applications are published they are displayed on the Portal Site, giving users one-click access to your entire application library. The Portal Site automatically configures during TurboServer setup and can be customized via the Administration Site. The Portal Site is assigned to port 80 by default.
+The Turbo Server portal site is users access and stream applications from. After applications are published they are displayed on the Portal Site, giving users one-click access to your entire application library. The Portal Site automatically configures during Turbo Server setup and can be customized via the Administration Site. The Portal Site is assigned to port 80 by default.
 
 ##### Logging In
 
@@ -101,7 +101,7 @@ If the server has an Authentication Type that enables anonymous access, users ca
 
 If you are a user and need to log in but do not know your username and password, contact an your Administrator to retrieve your credentials.
 
-If the TurboServer has more than one directory service, the directory prefix must be specified as part of the username. For exmaple, if a user is under the Acme Directory Service with login prefix "ACME" and a username "aaron," the would use the following login:
+If the Turbo Server has more than one directory service, the directory prefix must be specified as part of the username. For exmaple, if a user is under the Acme Directory Service with login prefix "ACME" and a username "aaron," the would use the following login:
 
 - Username: ACME\aaron
 - Password: *******
@@ -118,7 +118,7 @@ Turbo Web Desktop contains the following links:
 
 ##### Logging Out
 
-Authenticated users can logout of the TurboServer Portal Site by selecting Logout in the upper right corner of the webpage.
+Authenticated users can logout of the Turbo Server Portal Site by selecting Logout in the upper right corner of the webpage.
  
 ##### Signing In and Out via Turbo Console
 
@@ -133,7 +133,7 @@ When specifying the server URL in the login form, use one of the conventions, be
 
 #### Quick Start
 
-TurboServer includes free, preconfigured applications that are immediately available from the Portal Site after setup is complete. Prior to launching Turbo applications for the first time, end-users must download and install the Turbo Plugin.
+Turbo Server includes free, preconfigured applications that are immediately available from the Portal Site after setup is complete. Prior to launching Turbo applications for the first time, end-users must download and install the Turbo Plugin.
 
 ##### Installing the Turbo Plugin
 
@@ -168,14 +168,14 @@ Complete the following steps to change system proxy settings on the host device:
 
 #### Upgrading
 
-The new version of TurboServer includes a new TurboServer Console, an updated Portal Site, and many other new features.
+The new version of Turbo Server includes a new Turbo Server Console, an updated Portal Site, and many other new features.
 
-Database settings and application information will be migrated from the previous TurboServer. To make changes to these settings, a fresh install is recommended.
+Database settings and application information will be migrated from the previous Turbo Server. To make changes to these settings, a fresh install is recommended.
 
-When upgrading TurboServer, the Windows service will restart. Be sure to alert users that the system is under maintenance before upgrading.
+When upgrading Turbo Server, the Windows service will restart. Be sure to alert users that the system is under maintenance before upgrading.
 
 After upgrading, the previous Turbo Console must also be uninstalled. Applications that are registered to users’ desktops with the old console are not compatible with the new console. When the old console is uninstalled these applications will be unregistered, removing old shortcuts, and will need to be registered from the new console. With the new console this process can be automated on application launch by enabling Desktop Registration > Register on Launch on the Application Detail page from the Administrator Site.
 
 **Note:** After upgrading, all preexisting applications need to be updated with a new application version for Windows 8 compatibility. This does not require a new SVM file to be packaged in Turbo Studio -- a new application version with the same SVM file is sufficient.
 
-**Note:** If your TurboServer was previously set to access an external database, your connection to the database will have to be manually reset after upgrading. For information on how to reset your connection to an external database, see Manually Configure TurboServer.
+**Note:** If your Turbo Server was previously set to access an external database, your connection to the database will have to be manually reset after upgrading. For information on how to reset your connection to an external database, see Manually Configure Turbo Server.

@@ -1,6 +1,6 @@
 ## Deploying
 
-The Turbo URL Redirector is a native browser extension that assists in web navigation by processing clicked hyperlinks and URLs entered in the navigation bar. The extension can be configured to open specified domains using a browser available on [Turbo.net](https://turbo.net/) or a local TurboServer.
+The Turbo URL Redirector is a native browser extension that assists in web navigation by processing clicked hyperlinks and URLs entered in the navigation bar. The extension can be configured to open specified domains using a browser available on [Turbo.net](https://turbo.net/) or a local Turbo Server.
 
 The Turbo URL Redirector for Internet Explorer is implemented in the **Turbo.net Browser Helper Object** (Turbo-IEBrowserHelper.dll or Turbo-IEBrowserHelper-x64.dll depending on the processor architecture of the host machine) and supports IE versions 8, 9, 10 and 11. The [Turbo.net Extension](https://chrome.google.com/webstore/detail/turbonet-extension/ldibmiofagdkgiphkcokpooepankmacl) provides the same experience for users of Chrome 42 and above. To try the Turbo URL Redirector feature for yourself, follow this step-by-step guide.
 

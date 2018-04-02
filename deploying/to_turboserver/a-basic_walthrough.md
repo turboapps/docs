@@ -1,14 +1,14 @@
-## To TurboServer
+## To Turbo Server
 
-TurboServer is an on-premise application delivery solution. See the quick walkthrough below for instructions on adding an application to your Server.
+Turbo Server is an on-premise application delivery solution. See the quick walkthrough below for instructions on adding an application to your Server.
 
 ### Basic Walkthrough
 
-To read more about this process and TurboServer, please refer to the [full TurboServer documentation](/docs/deploying/to-turboserver#getting-started).
+To read more about this process and Turbo Server, please refer to the [full Turbo Server documentation](/docs/deploying/to-turboserver#getting-started).
 
 #### Create a Virtual Application
 
-Adding an Application to TurboServer requires you to create a virtual version of the Application using the Desktop Scan from TurboServer or using the TurboStudio packaging tool.
+Adding an Application to Turbo Server requires you to create a virtual version of the Application using the Desktop Scan from Turbo Server or using the TurboStudio packaging tool.
 
 To create a Turbo Virtual Machine (SVM) of standard software like Microsoft Office using the Desktop Scan:
 
@@ -22,9 +22,9 @@ To create a Turbo Virtual Machine (SVM) for your Application using the TurboStud
 
 The evaluation version of TurboStudio creates time trial containers. To create containers that do not expire, obtain a retail license for the TurboStudio.
 
-#### Add the Application to TurboServer
+#### Add the Application to Turbo Server
 
-After the **SVM** is created add the Application to TurboServer. For more information on managing Applications and Application versions in TurboServer, refer to Managing Applications. Complete the following steps to add a new Application to TurboServer:
+After the **SVM** is created add the Application to Turbo Server. For more information on managing Applications and Application versions in Turbo Server, refer to Managing Applications. Complete the following steps to add a new Application to Turbo Server:
 
 1. Navigate to the **Applications** page of the Administration Site.
 
@@ -50,7 +50,7 @@ After the **SVM** is created add the Application to TurboServer. For more inform
 
 4. Select **Save**.
 
-After the Application is added to TurboServer, create a specific Application version and upload the SVM. Complete the following steps to upload the SVM file as a new Application version:
+After the Application is added to Turbo Server, create a specific Application version and upload the SVM. Complete the following steps to upload the SVM file as a new Application version:
 
 1. Navigate to the **Applications** page of the Administration Site.
 
@@ -70,7 +70,7 @@ After the Application is added to TurboServer, create a specific Application ver
 
 	- **Sandbox Sync**: Automatically synchronizes Application settings and state across client computers. This is only Applicationlicable to authenticated users.
 
-4. Select **Save**. The **SVM** file will upload to TurboServer. Depending on the size of the Application this can take several minutes.
+4. Select **Save**. The **SVM** file will upload to Turbo Server. Depending on the size of the Application this can take several minutes.
 
 #### Optimize the Application Version (Optional)
 
@@ -102,7 +102,7 @@ To add additional profiles to the model, simply navigate back to the **Optimize*
 
 #### Publish the Application
 
-TurboServer enables administrators to test Application versions prior to publishing. Complete the following to test the Application version:
+Turbo Server enables administrators to test Application versions prior to publishing. Complete the following to test the Application version:
 
 1. Navigate to the **Applications** page of the Administration Site.
 
