@@ -8,7 +8,7 @@ End-users must download and install the Turbo Plugin prior to launching Turbo ap
 
 To install the Turbo Plugin, click the "Run" button for an application on the Turbo.net website. A window will open indicating the plugin is not installed. Select **OK** to download and install the Turbo Plugin. Select **Run**, or **Save** the executable to your computer and then run it to launch the Turbo Plugin installer. 
 
-If you already have the Turbo Plugin and are installing an update Turbo automatically uninstalls older versions if they have been idle for more than 30 days. If there are mutiple instances of the Sandbox Manager, you can manually uninstall older versions of the plugin from Add/Remove Programs (Windows XP) or Programs and Features from the Control Panel.
+If you already have the Turbo Plugin and are installing an update Turbo automatically uninstalls older versions if they have been idle for more than 30 days. If there are mutiple instances of the Sandbox Manager, you can manually uninstall older versions of the plugin from Programs and Features from the Control Panel.
 
 After the Turbo Plugin is installed complete the following steps to launch an application:
 
@@ -115,11 +115,7 @@ If the Turbo Plugin was installed for all users, the install location is in one 
 
 - For x64 platforms: **C:\Program Files (x86)\Turbo**
 
-If the plugin is installed for a single user profile, the install location is in one of the following locations.
-
-- For Windows XP: **C:\Documents and Settings\<profile>\Local Settings\Application Data\Turbo**
-
-- For Windows Vista or newer: **C:\Users\<profile>\AppData\Local\Turbo**
+If the plugin is installed for a single user profile, the install location is in the following locations: **C:\Users\<profile>\AppData\Local\Turbo**
 
 ##### Command line flags
 

@@ -117,11 +117,11 @@ This section explains how to configure Turbo Server's security settings on commo
 
 **Note**: To enable remote administration for external connections apply the instructions below.
 
-##### Microsoft Windows Server 2003, Microsoft Windows XP, and Microsoft Windows Vista
+##### Microsoft Windows Vista
 
-To configure Turbo Server security on Microsoft Windows Server 2003, Microsoft Windows XP, or Microsoft Windows Vista, you must enable Microsoft Windows Firewall. The default settings of Microsoft Windows Firewall block all external connections to the Administration Site (assigned to port 81 by default) and Portal Site (assigned to port 80 by default). After Microsoft Windows Firewall is enabled, you must add exceptions to the default settings to provide licensed users access the Portal Site and the Turbo JavaScript API.
+To configure Turbo Server security on Microsoft Windows Vista, you must enable Microsoft Windows Firewall. The default settings of Microsoft Windows Firewall block all external connections to the Administration Site (assigned to port 81 by default) and Portal Site (assigned to port 80 by default). After Microsoft Windows Firewall is enabled, you must add exceptions to the default settings to provide licensed users access the Portal Site and the Turbo JavaScript API.
 
-Complete the following steps to enable Microsoft Windows Firewall on Microsoft Windows Server 2003 with licensed access to the Portal Site:
+Complete the following steps to enable Microsoft Windows Firewall with licensed access to the Portal Site:
 
 1. Open the **Control Panel** and select **Microsoft Windows Firewall**.
 
@@ -1202,7 +1202,7 @@ For example: If you are using local version of Microsoft Office Outlook and a vi
 
 	- Open the Start menu
 
-	- In the Search box (Run... on Windows XP), type regedit
+	- In the Search box, type regedit
 
 	- Search for any of the file extension or protocol values, such as http or.html
 

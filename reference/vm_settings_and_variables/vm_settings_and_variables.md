@@ -114,7 +114,7 @@ Altering VM settings for a container will override the settings of the base imag
 
 ### Variables
 
-The Turbo engine remaps well-known root folders, such as Documents and Program Files, based on the host operating system at runtime. This ensures that Documents folder will be mapped to \User\USER NAME\Documents when running on recent versions of Microsoft Windows or \Documents and Settings\USER NAME\My Documents for Microsoft Windows XP and 2003 Server.
+The Turbo engine remaps well-known root folders, such as Documents and Program Files, based on the host operating system at runtime. 
 
 These variables may also be used in Turbo Scripts and as part of command-line arguments when building images or starting Turbo containers.
 

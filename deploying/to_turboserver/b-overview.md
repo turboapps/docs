@@ -50,6 +50,6 @@ Turbo Server is compatible with the following platforms:
 - Microsoft Windows 8
 - Microsoft Windows 8.1
 
-Turbo Server supports x86 (32-bit) and x64 (64-bit) processor architectures. End-users can access Turbo Server from Microsoft XP, Microsoft Windows 2003, Microsoft Windows Vista, Microsoft Windows 7, Microsoft Windows 8, and Microsoft Windows 8.1 platforms. Turbo Server supports Microsoft Internet Explorer, Firefox, Safari, Google Chrome, Opera, and all other browsers built with the Gecko API.
+Turbo Server supports x86 (32-bit) and x64 (64-bit) processor architectures. End-users can access Turbo Server from Microsoft Windows Vista, Microsoft Windows 7, Microsoft Windows 8, and Microsoft Windows 8.1 platforms. Turbo Server supports Microsoft Internet Explorer, Firefox, Safari, Google Chrome, Opera, and all other browsers built with the Gecko API.
 
 **Note:** Versions of Internet Explorer prior to Internet Explorer 8 are not supported. If you are accessing the Portal Site with a newer version of Internet Explorer, but experiencing problems, be sure to disable compatibility mode. This feature is enabled automatically for intranet sites and serves to emulate Internet Explorer 7 which is not supported by the Portal Site.
