@@ -8,7 +8,7 @@ This section summarizes some of the substantial differences for those that are f
 
 Turbo was designed for the Windows platform and its containerization system is built on top of the Turbo application virtualization engine. Docker was designed for use on Linux environments and is built on top of the LXC application virtualization system. Put another way, the Turbo VM plays the same role for Turbo containers as LXC does for Docker. In fact, LXC can be viewed as a type of application virtualization implementation.
 
-Turbo **supports both desktop and server Windows applications**, and works on **all desktop and server editions of Windows** from Windows XP
+Turbo **supports both desktop and server Windows applications**, and works on **all desktop and server editions of Windows** from Windows Vista
 forward. Turbo does not require modifications to the base operating system kernel and Turbo does not execute a parallel copy of the base
 operating system.
 

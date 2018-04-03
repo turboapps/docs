@@ -38,7 +38,7 @@ Images built with TurboStudio can also be used with the command-line interface a
 
 #### Best Practices
 
-- Users should run the desktop scan on the oldest operating system version available. For example, if users use both Windows XP and Windows 7, it is advised to run the desktop scan on the Windows XP machine.
+- Users should run the desktop scan on the oldest operating system version available. For example, if users use both Windows 7 and Windows 10, it is advised to run the desktop scan on the Windows 7 machine.
 
 - The exception is with Microsoft Office. For the Microsoft Office Suite, it is recommended to run the scan from the operating system where it is intended to be used.
 
@@ -46,7 +46,7 @@ Images built with TurboStudio can also be used with the command-line interface a
 
 - Applications packaged with the desktop scan may retain settings from the local machine used during the packaging process.
 
-- Adobe Creative Suite (all versions) will not complete correctly when scanned from Windows Vista. When using the desktop scan to package Adobe Creative Suite, Windows XP or Windows 7 is recommended.
+- Adobe Creative Suite (all versions) will not complete correctly when scanned from Windows Vista. When using the desktop scan to package Adobe Creative Suite, Windows 7 is recommended.
 
 - When using the desktop scan with browsers, ensure that any plugins that are installed outside the browser, such as Windows Media Player, are already installed when the scan is run. This is important because some plugins are installed using the msiexec.exe process and won't be recognized within the virtualized browser. Plugins that are installed from within the browser, such as Adobe Flash, do not have this problem.
 
