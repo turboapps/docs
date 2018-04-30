@@ -6,11 +6,13 @@ The GUI allows users to easily edit complex configurations for applications that
 
 Once created with TurboStudio, the command-line interface builds these XAPPL files into images that you can push to the Turbo Hub. Click [here](/docs/building/working-with-images) for a specific example.
 
-TurboStudio also provides two unique methods for creating images and virtual applications:
+TurboStudio also provides three unique methods for creating images and virtual applications:
 
-1. **Desktop scan for installed applications**: This option will scan your desktop for installed applications and build an image or virtual application using content and settings from the desktop.
+1. **Snapshot an application or component**: In this method, snapshots capture the system state before and after an application is installed. Based on the observed system changes, the virtual application settings are automatically configured. This method is ideal for virtualizing off-the-shelf applications or ones that use complex MSI installer packages that would be incompatible with the command-line interface.
 
-2. **Snapshot an application or component**: In this method, snapshots capture the system state before and after an application is installed. Based on the observed system changes, the virtual application settings are automatically configured. This method is ideal for virtualizing off-the-shelf applications or ones that use complex MSI installer packages that would be incompatible with the command-line interface.
+2. **Build application from a template**: Download configurations from the Turbo.net Hub, allowing you to quickly customize and build working applications.
+
+3. **Install application into a container**: With this option, you would run the application installer in a clean container environment. When the installer completes, the contents of the container will be used to generate the application configuration.
 
 TurboStudio offers a user interface to manage custom images and virtual applications as well as additional creation methods not available in the command-line interface.
 

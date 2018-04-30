@@ -8,15 +8,11 @@ To read more about this process and Turbo Server, please refer to the [full Turb
 
 #### Create a Virtual Application
 
-Adding an Application to Turbo Server requires you to create a virtual version of the Application using the Desktop Scan from Turbo Server or using the TurboStudio packaging tool.
+Adding an Application to Turbo Server requires you to create a virtual version of the Application using the Turbo Studio packaging tool.
 
-To create a Turbo Virtual Machine (SVM) of standard software like Microsoft Office using the Desktop Scan:
+To create a Turbo Virtual Machine (SVM) for your Application using the Turbo Studio:
 
-- Go to Applications -> Import from Desktop and follow the wizard.
-
-To create a Turbo Virtual Machine (SVM) for your Application using the TurboStudio:
-
-- Visit https://turbo.net/studio to learn about how your enterprise can obtain a license for TurboStudio.
+- Visit https://turbo.net/studio to learn about how your enterprise can obtain a license for Turbo Studio.
 
 - Use the TurboStudio to create an SVM using the snapshot or template process. Refer to the Turbo IDE help documentation for detailed instructions on creating virtual Applications.
 

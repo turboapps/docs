@@ -551,7 +551,7 @@ Here is a table that describes the purpose of each of the tags you see in XAPPL 
          <p><strong>HarvestSettings</strong></p>
       </td>
       <td>
-         <p>The <strong>HarvestSettings</strong> element only appears in Desktop Scan configurations, or recipes. This section tells the configuration which files, folders, and registry keys to add or delete from the build.</p>
+         <p>The <strong>HarvestSettings</strong> element only appears in recipes. This section tells the configuration which files, folders, and registry keys to add or delete from the build.</p>
       </td>
    </tr>
    <tr>
