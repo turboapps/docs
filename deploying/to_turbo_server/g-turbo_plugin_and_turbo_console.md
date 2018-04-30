@@ -75,7 +75,7 @@ The Turbo Console is what end-users see when they select the Turbo icon from the
 
 - To restart a shut-down Turbo Console, select **Start > All Programs > Startup > Turbo Sandbox Manager**, and then the most recent version. Launching an application from a Turbo host via a web browser restarts the Turbo Console.
 
-- Any Turbo user can sign in to a host using the Turbo Console. This includes users with turbo.net accounts and users with accounts on private TurboServers.
+- Any Turbo user can sign in to a host using the Turbo Console. This includes users with turbo.net accounts and users with accounts on private Turbo Servers.
 
 - To be "signed in" means that applications will run without prompting for a username and a password, application settings data are saved, and settings for that user can be viewed and edited.
 
