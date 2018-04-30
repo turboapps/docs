@@ -104,9 +104,9 @@ The following table lists common issues/questions and their solutions:
 
 Enabling diagnostic mode generates debug output logs. These can be used to help the Turbo support staff diagnose and debug issues.
 
-##### Turbo Plugin
+##### Turbo Client
 
-When troubleshooting an issue related to launching applications from the web, Turbo recommends enabling diagnostic mode for the Turbo Plugin. Complete the following steps to enable diagnostic mode and capture debug output logs for the Turbo Plugin:
+When troubleshooting an issue related to launching applications from the web, Turbo recommends enabling diagnostic mode for the Turbo Client. Complete the following steps to enable diagnostic mode and capture debug output logs for the Turbo Client:
 
 1. Download and run the DebugView application from: http://technet.microsoft.com/en-us/sysinternals/bb896647.aspx
 
@@ -114,7 +114,7 @@ When troubleshooting an issue related to launching applications from the web, Tu
 
 3. Add the following **String** value to the registry key: HKEY_CURRENT_USER\Software\Code Systems\Turbo with the name set to TraceLevel, and the value set to Debug.
 
-4. Restart the Turbo Plugin by selecting **Start > All Programs > Startup > Turbo Sandbox Manager** ***n.nn***. If multiple versions of the Turbo Sandbox Manager exist, restart each.
+4. Restart the Turbo Client by selecting **Start > All Programs > Startup > Turbo Sandbox Manager** ***n.nn***. If multiple versions of the Turbo Sandbox Manager exist, restart each.
 
 5. When the application is launched again with Turbo, the DbgView Output displays debugging logs.
 

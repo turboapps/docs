@@ -108,7 +108,7 @@ If the Turbo Server has more than one directory service, the directory prefix mu
 
 ##### Using the Homepage
 
-On the homepage for the Portal Site users see the Turbo Web Desktop, which contains available published applications and (if they are an authenticated user) their synchronized folders. Users can navigate the web desktop through the links on the side panel. Users must install the Turbo Plugin. For more information refer to Install the Turbo Plugin.
+On the homepage for the Portal Site users see the Turbo Web Desktop, which contains available published applications and (if they are an authenticated user) their synchronized folders. Users can navigate the web desktop through the links on the side panel. Users must install the Turbo Client. For more information refer to Install the Turbo Client.
 
 Turbo Web Desktop contains the following links:
 
@@ -133,21 +133,21 @@ When specifying the server URL in the login form, use one of the conventions, be
 
 #### Quick Start
 
-Turbo Server includes free, preconfigured applications that are immediately available from the Portal Site after setup is complete. Prior to launching Turbo applications for the first time, end-users must download and install the Turbo Plugin.
+Turbo Server includes free, preconfigured applications that are immediately available from the Portal Site after setup is complete. Prior to launching Turbo applications for the first time, end-users must download and install the Turbo Client.
 
-##### Installing the Turbo Plugin
+##### Installing the Turbo Client
 
-The Turbo Plugin interacts with the Turbo VM kernel to enable container streaming. The Portal Site automatically prompts users to download the plugin when they select an application.
+The Turbo Client interacts with the Turbo VM kernel to enable container streaming. The Portal Site automatically prompts users to download the plugin when they select an application.
 
-Complete the following steps to install the Turbo Plugin:
+Complete the following steps to install the Turbo Client:
 
 1. Select an application visible in the Turbo Web Desktop. A window displays will display that indicates you do not have the plugin installed.
-2. Select OK to begin downloading and installing the Turbo Plugin.
-3. Your browser will ask you to Run or Save the executable.  Select Run. Save the executable to your computer and then run it to launch the Turbo Plugin installer. 
+2. Select OK to begin downloading and installing the Turbo Client.
+3. Your browser will ask you to Run or Save the executable.  Select Run. Save the executable to your computer and then run it to launch the Turbo Client installer. 
 
-If you are updating the Turbo Plugin on your machine, Turbo automatically uninstalls older versions if they have been idle for more than thirty days.
+If you are updating the Turbo Client on your machine, Turbo automatically uninstalls older versions if they have been idle for more than thirty days.
 
-After the Turbo Plugin is installed on your device, complete the following steps to launch an application:
+After the Turbo Client is installed on your device, complete the following steps to launch an application:
 
 1. Navigate to the Portal Site in a web browser.
 2. Select any application in the Portal Site and it will instantly stream to your desktop. Once the application is buffered, it launches automatically.
@@ -157,7 +157,7 @@ After the Turbo Plugin is installed on your device, complete the following steps
 
 ##### Proxy Settings
 
-The Turbo Plugin has limited support for proxy settings. The Plugin uses proxy settings of the local device on which it is installed by default. These proxy settings can need to be changed to enable compatibility with the Turbo Plugin. End-users running Microsoft Internet Explorer can change proxy settings for the host device directly from within the browser. Users of other browsers must change proxy settings on the host device itself.
+The Turbo Client has limited support for proxy settings. The Plugin uses proxy settings of the local device on which it is installed by default. These proxy settings can need to be changed to enable compatibility with the Turbo Client. End-users running Microsoft Internet Explorer can change proxy settings for the host device directly from within the browser. Users of other browsers must change proxy settings on the host device itself.
 
 Complete the following steps to change system proxy settings on the host device:
 

@@ -97,7 +97,7 @@ Pass the following flags to the Turbo-Sandbox.exe to uninstall specific componen
             <p>/uninstall</p>
          </td>
          <td>
-            <p>Uninstalls the Turbo Plugin. Close all web browsers before uninstalling.</p>
+            <p>Uninstalls the Turbo Client. Close all web browsers before uninstalling.</p>
          </td>
       </tr>
       <tr>

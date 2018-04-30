@@ -1008,7 +1008,7 @@ Examples:
 
 #### Turbo JavaScript API
 
-When publishing applications to external sites, Turbo provides a JavaScript API to enable control over the Turbo Plugin installation, launching applications and deploying applications to the desktop. The following table lists and describes the method calls available in the JavaScript API.
+When publishing applications to external sites, Turbo provides a JavaScript API to enable control over the Turbo Client installation, launching applications and deploying applications to the desktop. The following table lists and describes the method calls available in the JavaScript API.
 
 <table>
       <tr>
@@ -1037,7 +1037,7 @@ When publishing applications to external sites, Turbo provides a JavaScript API 
             <p><strong>SpoonEntry. IsPluginInstalled ()</strong></p>
          </td>
          <td>
-            <p>Checks whether the Turbo Plugin is installed on the client machine.</p>
+            <p>Checks whether the Turbo Client is installed on the client machine.</p>
          </td>
       </tr>
       <tr>
@@ -1045,7 +1045,7 @@ When publishing applications to external sites, Turbo provides a JavaScript API 
             <p><strong>SpoonEntry. RedirectToInstaller ()</strong></p>
          </td>
          <td>
-            <p>Prompts user to install the Turbo Plugin.</p>
+            <p>Prompts user to install the Turbo Client.</p>
          </td>
       </tr>
 </table>
@@ -1069,7 +1069,7 @@ Use the following code to reference the Turbo JavaScript API:
 	<script language="javascript" src="http://[SERVER]/Plugin/Api/" type="text/javascript"></script>
 	<a href="#" onclick="(new SpoonEntry()).RunApp('http://[SERVER]/Config/?a=Firefox5&v=5.0.0.0'); return false;">Launch Firefox</a>
 	
-**Example**: Prompt the user to install the Turbo Plugin if it is not already installed on the machine.
+**Example**: Prompt the user to install the Turbo Client if it is not already installed on the machine.
 
 	<script language="javascript" src="http://[SERVER]/Plugin/Api/" type="text/javascript"></script>
 	<script language="javascript" type="text/javascript">

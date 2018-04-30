@@ -1,26 +1,26 @@
-### Turbo Plugin and Console
+### Turbo Client and Console
 
-In the following pages you will learn about how to use Turbo Plugin and the Turbo Launcher.
+In the following pages you will learn about how to use Turbo Client and the Turbo Launcher.
 
 #### Install the Plugin
 
-End-users must download and install the Turbo Plugin prior to launching Turbo applications for the first time.
+End-users must download and install the Turbo Client prior to launching Turbo applications for the first time.
 
-To install the Turbo Plugin, click the "Run" button for an application on the Turbo.net website. A window will open indicating the plugin is not installed. Select **OK** to download and install the Turbo Plugin. Select **Run**, or **Save** the executable to your computer and then run it to launch the Turbo Plugin installer. 
+To install the Turbo Client, click the "Run" button for an application on the Turbo.net website. A window will open indicating the plugin is not installed. Select **OK** to download and install the Turbo Client. Select **Run**, or **Save** the executable to your computer and then run it to launch the Turbo Client installer. 
 
-If you already have the Turbo Plugin and are installing an update Turbo automatically uninstalls older versions if they have been idle for more than 30 days. If there are mutiple instances of the Sandbox Manager, you can manually uninstall older versions of the plugin from Programs and Features from the Control Panel.
+If you already have the Turbo Client and are installing an update Turbo automatically uninstalls older versions if they have been idle for more than 30 days. If there are mutiple instances of the Sandbox Manager, you can manually uninstall older versions of the plugin from Programs and Features from the Control Panel.
 
-After the Turbo Plugin is installed complete the following steps to launch an application:
+After the Turbo Client is installed complete the following steps to launch an application:
 
 1. Select any application and it will begin streaming to your desktop. Once the application buffers it launches automatically.
 
 2. After you finish using the application close it as you would a natively installed application.
 
-The Turbo Plugin will continue to run in the background to optimize the launch of Turbo applications. The Turbo-Sandbox.exe process manages the sandboxes of any running virtual applications launched with the plugin. If that process closes, all Turbo applications will also close.
+The Turbo Client will continue to run in the background to optimize the launch of Turbo applications. The Turbo-Sandbox.exe process manages the sandboxes of any running virtual applications launched with the plugin. If that process closes, all Turbo applications will also close.
 
 ##### Command line flags
 
-When installing the Turbo plugin for a managed environment, there are command line flags that may be useful.
+When installing the Turbo Client for a managed environment, there are command line flags that may be useful.
 
 **Turbo-plugin.exe [Option]**
 
@@ -38,7 +38,7 @@ When installing the Turbo plugin for a managed environment, there are command li
             <p> <strong>/Silent</strong> </p>
          </td>
          <td>
-            <p> Installs the Turbo plugin silently. </p>
+            <p> Installs the Turbo Client silently. </p>
          </td>
       </tr>
       <tr>
@@ -46,14 +46,14 @@ When installing the Turbo plugin for a managed environment, there are command li
             <p> <strong>/AllUsers</strong> </p>
          </td>
          <td>
-            <p> Installs the Turbo plugin under the <strong>All Users</strong> profile, so it is available to all profiles on the machine.  This is only available if the running user has administrator rights on the machine. </p>
+            <p> Installs the Turbo Client under the <strong>All Users</strong> profile, so it is available to all profiles on the machine.  This is only available if the running user has administrator rights on the machine. </p>
          </td>
       </tr>
 </table>
 
 ##### Proxy Settings
 
-The Turbo Plugin uses the proxy settings of the local device by default. End-users using Microsoft Internet Explorer can change proxy settings from within the browser. Users of other browsers must change proxy settings on the host device itself.
+The Turbo Client uses the proxy settings of the local device by default. End-users using Microsoft Internet Explorer can change proxy settings from within the browser. Users of other browsers must change proxy settings on the host device itself.
 
 Complete the following steps to change system proxy settings on the host device:
 
@@ -109,7 +109,7 @@ Clicking on any of the **Documents**, **Desktop**, **Music**, **Pictures** or **
 
 ##### Install location
 
-If the Turbo Plugin was installed for all users, the install location is in one of the following locations.
+If the Turbo Client was installed for all users, the install location is in one of the following locations.
 
 - For x86 platforms: **C:\Program Files\Turbo**
 
@@ -119,7 +119,7 @@ If the plugin is installed for a single user profile, the install location is in
 
 ##### Command line flags
 
-The Turbo Plugin installs an application called Turbo Sandbox Manager that runs on startup. This application can be found in the install directory of the Turbo Plugin. There is a command line interface for this application.
+The Turbo Client installs an application called Turbo Sandbox Manager that runs on startup. This application can be found in the install directory of the Turbo Client. There is a command line interface for this application.
 
 **Spoon-Sandbox.exe [Option]**
 
@@ -137,7 +137,7 @@ The Turbo Plugin installs an application called Turbo Sandbox Manager that runs 
             <p>/uninstall</p>
          </td>
          <td>
-            <p>Uninstalls the Turbo Plugin. Close all web browsers before uninstalling.</p>
+            <p>Uninstalls the Turbo Client. Close all web browsers before uninstalling.</p>
          </td>
       </tr>
       <tr>
@@ -181,7 +181,7 @@ XLaunch is an internal application used to execute virtual applications that hav
 **Install location**
 
 - Location when installed by SpoonReg: @APPDATALOCAL@\Spoon\XLaunch\_version_\XLaunch.exe 
-- Location when installed by Turbo plugin: @APPDATALOCAL@\Spoon\Client\Components\_version_\XLaunch.exe
+- Location when installed by Turbo Client: @APPDATALOCAL@\Spoon\Client\Components\_version_\XLaunch.exe
 
 **Command line reference**
 
