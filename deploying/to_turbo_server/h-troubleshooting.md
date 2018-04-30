@@ -83,7 +83,7 @@ The following table lists common issues/questions and their solutions:
          <td colspan="1">I am unable to add an application to the Start Menu.</td>
          <td colspan="1">
             <p>Verify that <strong>Desktop Registration</strong> is enabled on the Turbo Server administrator site.</p>
-            <p>Verify that the user is logging into the Turbo Console with the exact server name that is specified under "Servers" on the administrator site.</p>
+            <p>Verify that the user is logging into the Turbo Launcher with the exact server name that is specified under "Servers" on the administrator site.</p>
          </td>
       </tr>
       <tr>

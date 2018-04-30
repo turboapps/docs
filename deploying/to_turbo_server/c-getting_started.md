@@ -120,9 +120,9 @@ Turbo Web Desktop contains the following links:
 
 Authenticated users can logout of the Turbo Server Portal Site by selecting Logout in the upper right corner of the webpage.
  
-##### Signing In and Out via Turbo Console
+##### Signing In and Out via Turbo Launcher
 
-Users can also log in or out via the Turbo Console after it is installed on their local machine. Users can bring up the Turbo Console by either going to the System Tray or hitting the keys "Alt + Windows." If the user is not logged in already, a login form will be available. If logged in, the user can click on the arrow in the lower-left corner of the Console and select "Sign Out" or "Exit." 
+Users can also log in or out via the Turbo Launcher after it is installed on their local machine. Users can bring up the Turbo Launcher by either going to the System Tray or hitting the keys "Alt + Windows." If the user is not logged in already, a login form will be available. If logged in, the user can click on the arrow in the lower-left corner of the Console and select "Sign Out" or "Exit." 
 
 When specifying the server URL in the login form, use one of the conventions, below, as appropriate:
 
@@ -174,7 +174,7 @@ Database settings and application information will be migrated from the previous
 
 When upgrading Turbo Server, the Windows service will restart. Be sure to alert users that the system is under maintenance before upgrading.
 
-After upgrading, the previous Turbo Console must also be uninstalled. Applications that are registered to users’ desktops with the old console are not compatible with the new console. When the old console is uninstalled these applications will be unregistered, removing old shortcuts, and will need to be registered from the new console. With the new console this process can be automated on application launch by enabling Desktop Registration > Register on Launch on the Application Detail page from the Administrator Site.
+After upgrading, the previous Turbo Launcher must also be uninstalled. Applications that are registered to users’ desktops with the old console are not compatible with the new console. When the old console is uninstalled these applications will be unregistered, removing old shortcuts, and will need to be registered from the new console. With the new console this process can be automated on application launch by enabling Desktop Registration > Register on Launch on the Application Detail page from the Administrator Site.
 
 **Note:** After upgrading, all preexisting applications need to be updated with a new application version for Windows 8 compatibility. This does not require a new SVM file to be packaged in Turbo Studio -- a new application version with the same SVM file is sufficient.
 

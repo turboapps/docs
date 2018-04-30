@@ -1,6 +1,6 @@
 ### Turbo Plugin and Console
 
-In the following pages you will learn about how to use Turbo Plugin and the Turbo Console.
+In the following pages you will learn about how to use Turbo Plugin and the Turbo Launcher.
 
 #### Install the Plugin
 
@@ -65,17 +65,17 @@ Complete the following steps to change system proxy settings on the host device:
 
 4. Enter the proxy settings specified by your network administrator.
 
-#### Using the Turbo Console
+#### Using the Turbo Launcher
 
-##### The Turbo Console 
+##### The Turbo Launcher 
 
-The Turbo Console is what end-users see when they select the Turbo icon from the system tray. From here users can log in or out of accounts, register applications to the desktop, synchronize files and folders across desktops, add credit card information, and shut-down the plugin. Note the following Turbo Console features:
+The Turbo Launcher is what end-users see when they select the Turbo icon from the system tray. From here users can log in or out of accounts, register applications to the desktop, synchronize files and folders across desktops, add credit card information, and shut-down the plugin. Note the following Turbo Launcher features:
 
-- Turbo Console automatically runs on Microsoft Windows startup and runs in the background until manually shut-down. The process is represented in the Microsoft Windows systray by a Turbo icon. Select the icon brings up a more detailed window from which all other settings are available. Closing this window does not end the background activity; only choosing **Shut Down** from the **Options** menu shuts down background activity.
+- Turbo Launcher automatically runs on Microsoft Windows startup and runs in the background until manually shut-down. The process is represented in the Microsoft Windows systray by a Turbo icon. Select the icon brings up a more detailed window from which all other settings are available. Closing this window does not end the background activity; only choosing **Shut Down** from the **Options** menu shuts down background activity.
 
-- To restart a shut-down Turbo Console, select **Start > All Programs > Startup > Turbo Sandbox Manager**, and then the most recent version. Launching an application from a Turbo host via a web browser restarts the Turbo Console.
+- To restart a shut-down Turbo Launcher, select **Start > All Programs > Startup > Turbo Sandbox Manager**, and then the most recent version. Launching an application from a Turbo host via a web browser restarts the Turbo Launcher.
 
-- Any Turbo user can sign in to a host using the Turbo Console. This includes users with turbo.net accounts and users with accounts on private Turbo Servers.
+- Any Turbo user can sign in to a host using the Turbo Launcher. This includes users with turbo.net accounts and users with accounts on private Turbo Servers.
 
 - To be "signed in" means that applications will run without prompting for a username and a password, application settings data are saved, and settings for that user can be viewed and edited.
 
@@ -85,7 +85,7 @@ The Turbo Console is what end-users see when they select the Turbo icon from the
 
 - Folder synchronization occurs in the name of, and under the quota of, one Turbo account. That user must sign in to this account to enable folder synchronization.
 
-- Connecting the local device enables it to be seen by Turbo Consoles on other machines signed in to the same Turbo account. Disconnecting it removes it from view, although files are still uploaded to the synchronization account's server.
+- Connecting the local device enables it to be seen by Turbo Launchers on other machines signed in to the same Turbo account. Disconnecting it removes it from view, although files are still uploaded to the synchronization account's server.
 
 ##### Console Overview
 
@@ -95,15 +95,15 @@ The status bar shows whether a user is signed in, when Turbo is synchronizing da
 
 **Main Console**
 
-The Turbo Console contains links to the logged in user's favorite applications and files and folders that have been synchronized to their Turbo.net account.
+The Turbo Launcher contains links to the logged in user's favorite applications and files and folders that have been synchronized to their Turbo.net account.
 
 Users can click on **All Applications** to open the application list. Users can click on the application name to open a new menu that allows them to launch the application as well as add or remove the applications from the start menu. Users can return to the main console menu by clicking the **Home** link at the top of the console.
 
-When launching an application hosted on Turbo Server that has been added to the start menu, the Turbo Console will check to see if there is a new version available. If a new version is available, the user will be prompted for which version they would like to start.
+When launching an application hosted on Turbo Server that has been added to the start menu, the Turbo Launcher will check to see if there is a new version available. If a new version is available, the user will be prompted for which version they would like to start.
 
 Clicking on any of the **Documents**, **Desktop**, **Music**, **Pictures** or **Videos** folder names will open the folder access menu. Users can add or remove the folders from their current device from this menu. Clicking on a device name will open the folder and allow the user to add, copy or remove files from that folder on the named device upon the next synchronization if the folder is synchronized on all devices. If the folder is only synchronized from one device, the folder will open in the user's web browser, either on their Turbo.net account or in the Turbo Server instance the plugin is connected to.
 
-**Note**: When viewing the files and folders connected via the Turbo Console, the browser's Internet Security settings can effect what is displayed on the web desktop. More restrictive settings can prevent files and folders from displaying and synchronizing.
+**Note**: When viewing the files and folders connected via the Turbo Launcher, the browser's Internet Security settings can effect what is displayed on the web desktop. More restrictive settings can prevent files and folders from displaying and synchronizing.
 
 #### Advanced Plugin Topics
 
@@ -249,7 +249,7 @@ XLaunch is an internal application used to execute virtual applications that hav
 
 ##### XClient file
 
-The XClient file is an XML file that provides information about applications that are registered to the user's machine. Registering and applications can be done using the SpoonReg command line tool (Register Virtual Applications in the Windows Shell), through the Turbo Console by clicking "Add to Start Menu" (Using the Turbo Console), or through the Turbo JavaScript API.
+The XClient file is an XML file that provides information about applications that are registered to the user's machine. Registering and applications can be done using the SpoonReg command line tool (Register Virtual Applications in the Windows Shell), through the Turbo Launcher by clicking "Add to Start Menu" (Using the Turbo Launcher), or through the Turbo JavaScript API.
 
 **File location**
 

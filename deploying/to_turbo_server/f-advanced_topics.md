@@ -6,7 +6,7 @@ This section describes advanced topics you may encounter when implementing Turbo
 
 Applications can be enabled to be run offline through the **Desktop Registration** setting in an application's settings page on the Turbo Server Administrator portal. To enable **Desktop Registration**, see the instructions at Manage Applications.
 
-For an application to be registered to the user's machine, either the **Register on Launch** check-box must be checked in the **Desktop Registration** setting for the given application; or the user must register the application themselves in the Turbo Console. If an application is set to **Register on Launch**, then the first time a user opens the application it will be registered to the user's machine and added to their Windows Start Menu. If this setting is not enabled, the user must register the application to the desktop from the console. This can be done by following the steps, below:
+For an application to be registered to the user's machine, either the **Register on Launch** check-box must be checked in the **Desktop Registration** setting for the given application; or the user must register the application themselves in the Turbo Launcher. If an application is set to **Register on Launch**, then the first time a user opens the application it will be registered to the user's machine and added to their Windows Start Menu. If this setting is not enabled, the user must register the application to the desktop from the console. This can be done by following the steps, below:
 
 1. Sign into the Turbo Server from the plug-in.
 
@@ -28,7 +28,7 @@ In order for an application to be available offline, it must be registered to th
 
 To check that the application has been fully cached:
 
-1. Navigate to **All Applications** in the Turbo Console.
+1. Navigate to **All Applications** in the Turbo Launcher.
 
 2. Click on the desired application.
 
@@ -1342,7 +1342,7 @@ Follow these steps to test Turbo Server with SSL enabled using a self-signed cer
 
 	c. A printout should appear: **Certificate was added to keystore**
 	
-5. If applicable, install the Turbo Console
+5. If applicable, install the Turbo Launcher
 
 6. Run an application with **Sandbox Sync** enabled to verify that the application streams and synchronizes over HTTPS/SSL
 
