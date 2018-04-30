@@ -29,4 +29,4 @@ Containers can also be integrated with the Windows shell. The `install` or 'inst
 > turbo installi --name=vlc videolan/vlc --register-extensions
 ```
 
-Configuring shortcuts and file associations for an image is done in TurboStudio. See the [reference](/docs/reference/turbo-studio) section for more details.
+Configuring shortcuts and file associations for an image is done in Turbo Studio. See the [reference](/docs/reference/turbo-studio) section for more details.

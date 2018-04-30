@@ -6,7 +6,7 @@ There are four ways to create an image:
 
 1. Commit a container
 2. Automatically create with a build script
-3. Build images from XAPPL configuration files created with TurboStudio
+3. Build images from XAPPL configuration files created with Turbo Studio
 4. Import and convert various file types to images
 
 #### Commit a Container
@@ -57,7 +57,7 @@ Name   Tag   ID            Created               Size
 
 #### Building from a XAPPL File
 
-XAPPL files are static configuration files originally created using TurboStudio that specify the files, registry keys, and virtual machine settings for an image. The command-line interface can also build images based on XAPPL configuration files using `turbo build` command.
+XAPPL files are static configuration files originally created using Turbo Studio that specify the files, registry keys, and virtual machine settings for an image. The command-line interface can also build images based on XAPPL configuration files using `turbo build` command.
 
 ```
 # Build an image and specify a name
@@ -66,7 +66,7 @@ XAPPL files are static configuration files originally created using TurboStudio 
 
 #### Import
 
-If you have an existing image (file type `.svm`) on your local machine or a network drive (perhaps built with TurboStudio or a legacy version of TurboStudio), you can import it to your local registry.
+If you have an existing image (file type `.svm`) on your local machine or a network drive (perhaps built with Turbo Studio or a legacy version of Turbo Studio), you can import it to your local registry.
 
 ```
 # Specify the new name, file type, and path to the image

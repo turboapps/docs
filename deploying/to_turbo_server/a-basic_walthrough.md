@@ -14,9 +14,9 @@ To create a Turbo Virtual Machine (SVM) for your Application using the Turbo Stu
 
 - Visit https://turbo.net/studio to learn about how your enterprise can obtain a license for Turbo Studio.
 
-- Use the TurboStudio to create an SVM using the snapshot or template process. Refer to the Turbo IDE help documentation for detailed instructions on creating virtual Applications.
+- Use the Turbo Studio to create an SVM using the snapshot or template process. Refer to the Turbo IDE help documentation for detailed instructions on creating virtual Applications.
 
-The evaluation version of TurboStudio creates time trial containers. To create containers that do not expire, obtain a retail license for the TurboStudio.
+The evaluation version of Turbo Studio creates time trial containers. To create containers that do not expire, obtain a retail license for the Turbo Studio.
 
 #### Add the Application to Turbo Server
 

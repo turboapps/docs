@@ -1,6 +1,6 @@
 ### MSI Settings
 
-The following is a table of descriptions of the settings that you can use for MSI outputs from TurboStudio.
+The following is a table of descriptions of the settings that you can use for MSI outputs from Turbo Studio.
 
 <table>
 	<tr>

@@ -6,13 +6,13 @@ In this section you'll learn how to manage containers and deploy them with Turbo
 
 In this section you will learn how to create Turbo applications that can deploy from Turbo Server. Turbo applications are created from existing applications by converting them into **SVM** file format. For more information about adding an existing **SVM** file to Turbo Server, refer to Managing Applications.
 
-##### Virtualize Application with TurboStudio
+##### Virtualize Application with Turbo Studio
 
-To be hosted on Turbo Server applications must be converted into Turbo containers (**SVM** files) using the TurboStudio. The TurboStudio monitors the installation of your application, analyzes the installation, and constructs a virtual package which you can upload to Turbo Server. Experienced users can convert most applications for Turbo in minutes.
+To be hosted on Turbo Server applications must be converted into Turbo containers (**SVM** files) using the Turbo Studio. The Turbo Studio monitors the installation of your application, analyzes the installation, and constructs a virtual package which you can upload to Turbo Server. Experienced users can convert most applications for Turbo in minutes.
 
-To create an **SVM** using TurboStudio, Project Type must be set to **Component**. containers with compressed payloads **cannot** be optimized for streaming using Turbe Server. To build a streaming container, **Compress Payload** in Settings must remain unchecked during the build process.
+To create an **SVM** using Turbo Studio, Project Type must be set to **Component**. containers with compressed payloads **cannot** be optimized for streaming using Turbe Server. To build a streaming container, **Compress Payload** in Settings must remain unchecked during the build process.
 
-Refer to the TurboStudio help documentation for detailed instructions on how to create a Turbo application.
+Refer to the Turbo Studio help documentation for detailed instructions on how to create a Turbo application.
 
 #### Publish Applications
 

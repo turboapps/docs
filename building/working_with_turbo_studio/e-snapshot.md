@@ -1,6 +1,6 @@
 ### Snapshotting
 
-Many applications require combinations of filesystem and registry entries. To facilitate containerization of these applications, TurboStudio can snapshot application installations and automatically configure them based on modifications made to the host system during setup.
+Many applications require combinations of filesystem and registry entries. To facilitate containerization of these applications, Turbo Studio can snapshot application installations and automatically configure them based on modifications made to the host system during setup.
 
 #### Process
 
@@ -8,15 +8,15 @@ Snapshots use before and after images of the host machine to determine configura
 
 - **Before**: This snapshot is taken prior to installing the application and captures the state of the host device without the target application installed.
 
-- **After**: This snapshot is taken after installing the application and captures all changes to the host device during application installation. TurboStudio then computes the changes between the before and after snapshots, and inserts these changes into the configuration.
+- **After**: This snapshot is taken after installing the application and captures all changes to the host device during application installation. Turbo Studio then computes the changes between the before and after snapshots, and inserts these changes into the configuration.
 
 Complete the following steps to use the Snapshot feature:
 
-1. Prepare the host device: remove the target application and all dependencies or copy TurboStudio onto a clean machine.
+1. Prepare the host device: remove the target application and all dependencies or copy Turbo Studio onto a clean machine.
 
 2. Capture the before image: select the Virtual Application tab on the ribbon bar and then Capture Before. This may take several minutes to complete.
 
-3. Save the before snapshot (optional): saving the before snapshot enables you to skip this step in subsequent applications from the same clean machine. Select the down arrow underneath Capture Before and choose Save Snapshot. TurboStudio automatically saves the most recently captured before snapshot; this snapshot is reset once the Capture and Diff is complete.
+3. Save the before snapshot (optional): saving the before snapshot enables you to skip this step in subsequent applications from the same clean machine. Select the down arrow underneath Capture Before and choose Save Snapshot. Turbo Studio automatically saves the most recently captured before snapshot; this snapshot is reset once the Capture and Diff is complete.
 
 4. Install your application: also install any other files, settings, runtimes, and components you want to include in the image. Refer to Add Runtimes and Components for more information. If the application setup requests a reboot, save the before snapshot, then proceed with the reboot.
 
@@ -26,7 +26,7 @@ Complete the following steps to use the Snapshot feature:
 
 #### Capture Application Updates via Snapshot
 
-Container updates can be captured within TurboStudio via snapshots.
+Container updates can be captured within Turbo Studio via snapshots.
 
 Complete the following steps to capture an update via snapshots:
 
@@ -52,7 +52,7 @@ For more information on updating containers using SVMs, refer to Create and Use 
 
 - Most applications should be configured by performing the snapshot on the earliest (least common denominator) target operating system. A small number of applications may require multi-platform merge for successful deployment across all operating system variants.
 
-- When selecting a folder to save the Capture and Diff snapshot, select Make New Folder in TurboStudio. This folder will not be included in the snapshot. If the folder is included in the Capture and Diff snapshot, remove it using the Filesystem tab.
+- When selecting a folder to save the Capture and Diff snapshot, select Make New Folder in Turbo Studio. This folder will not be included in the snapshot. If the folder is included in the Capture and Diff snapshot, remove it using the Filesystem tab.
 
 - Before beginning the pruning process, save a backup of the Capture and Diff snapshot (snapshot.xappl). Revert to the original Capture and Diff snapshot in the event of an error.
 

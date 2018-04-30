@@ -1,8 +1,8 @@
 ### SpoonReg
 
-SpoonReg is a tool that provides a command-line interface for deploying containers and managing the virtual desktop environment. Users and administrators can use SpoonReg to register containers for a single user or, in the case of administrators, a group of users or devices. SpoonReg can be used to deploy and manage containers and layers built using TurboStudio. 
+SpoonReg is a tool that provides a command-line interface for deploying containers and managing the virtual desktop environment. Users and administrators can use SpoonReg to register containers for a single user or, in the case of administrators, a group of users or devices. SpoonReg can be used to deploy and manage containers and layers built using Turbo Studio. 
 
-After containerizing an application with TurboStudio, you can make the Start Menu icons, shortcuts, and file associations available on a user's desktop. SpoonReg enables you to register Turbo containers in the shell, creating associations that generally are created during a standard installation process. Unlike an installation, registration and un-registration are performed instantaneously.
+After containerizing an application with Turbo Studio, you can make the Start Menu icons, shortcuts, and file associations available on a user's desktop. SpoonReg enables you to register Turbo containers in the shell, creating associations that generally are created during a standard installation process. Unlike an installation, registration and un-registration are performed instantaneously.
 
 SpoonReg also enables you to create, reset, and remove application sandboxes: virtual environment "bubbles" where containerized applications reside. Sandbox management provides control over application linking and intercommunication.
 
@@ -18,7 +18,7 @@ The following table lists the different naming conventions used with SpoonReg:
 	</tr>
 	<tr>
 		<th>AppSpec</th>
-		<td>Path (relative or fully-qualified) to a virtual executable or layer built with TurboStudio</td>
+		<td>Path (relative or fully-qualified) to a virtual executable or layer built with Turbo Studio</td>
 	</tr>
 	<tr>
 		<th>SandboxSpec</th>
