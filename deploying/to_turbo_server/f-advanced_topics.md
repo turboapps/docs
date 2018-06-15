@@ -1034,7 +1034,7 @@ When publishing applications to external sites, Turbo provides a JavaScript API 
       </tr>
       <tr>
          <td>
-            <p><strong>SpoonEntry. IsPluginInstalled ()</strong></p>
+            <p><strong>SpoonEntry.IsPluginInstalled (callback)</strong></p>
          </td>
          <td>
             <p>Checks whether the Turbo Client is installed on the client machine.</p>
@@ -1042,7 +1042,7 @@ When publishing applications to external sites, Turbo provides a JavaScript API 
       </tr>
       <tr>
          <td>
-            <p><strong>SpoonEntry. RedirectToInstaller ()</strong></p>
+            <p><strong>SpoonEntry.RedirectToInstaller ()</strong></p>
          </td>
          <td>
             <p>Prompts user to install the Turbo Client.</p>
@@ -1073,7 +1073,7 @@ Use the following code to reference the Turbo JavaScript API:
 
 	<script language="javascript" src="http://[SERVER]/Plugin/Api/" type="text/javascript"></script>
 	<script language="javascript" type="text/javascript">
-		if(!SpoonEntry.IsPluginInstalled()) SpoonEntry.RedirectToInstaller()
+		SpoonEntry.IsPluginInstalled(function(isInstalled){if(!isInstalled) SpoonEntry.RedirectToInstaller()})
 	</script>
 	
 ##### Turbo Feed
