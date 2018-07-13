@@ -301,7 +301,7 @@ Examples:
 	Server.exe admin /update /a "My Application" /v 1.0.0.0 /f "D:\Installation Files\myapplication.svm" /lang "en-us" /sku "Premier Edition" /arch "x86"
 
 
-**Server.exe admin /license**
+**Server.exe admin /client**
 
 <table>
       <tr>
@@ -321,36 +321,43 @@ Examples:
             <p><code>print, (none)</code></p>
          </td>
          <td>
-            <p>Prints the current license.</p>
+            <p>Prints the current settings for the client.</p>
          </td>
       </tr>
       <tr>
          <td>
-            <p><code>set &lt;file&gt;</code></p>
+            <p><code><code>hide</code></code></p>
          </td>
          <td>
-            <p>Sets the license to the contents of the given text file.</p>
+            <p>Hides the console for users when installed</p>
          </td>
       </tr>
       <tr>
-         <td>
-            <p><code>help, h, ?, -?, /?, etc.</code></p>
+         <td colspan="1"><code>show</code></td>
+         <td colspan="1">
+            <p>Shows the console for users when installed</p>
+            <p>Note: "show" is the default setting for the client</p>
          </td>
-         <td>
-            <p>Prints help information.</p>
-         </td>
+      </tr>
+      <tr>
+         <td colspan="1"><code>help</code></td>
+         <td colspan="1">Prints help information</td>
       </tr>
 </table>
 <br>
 Examples:
 
-- **Print the current license**:
+- **Print the current console settings**:
 
-	Server.exe admin /license print
+	Server.exe admin /client hide
 
-- **Set the current license**:
+- **Hide the console on user computers**:
 
-	Server.exe admin /license set ss-license.txt
+	Server.exe admin /client hide
+
+- **Show the console on user computers**:
+
+	Server.exe admin /client show
 
 
 **Server.exe admin /directory-services**
@@ -605,7 +612,7 @@ The following examples describe a typical set of steps to set up a directory ser
 	Server.exe admin /directory-service ad set ad-settings.txt
 
 
-**Server.exe admin /users**
+**Server.exe admin /license**
 
 <table>
       <tr>
@@ -625,23 +632,15 @@ The following examples describe a typical set of steps to set up a directory ser
             <p><code>print, (none)</code></p>
          </td>
          <td>
-            <p>Prints the current users and groups.</p>
+            <p>Prints the current license.</p>
          </td>
       </tr>
       <tr>
          <td>
-            <p><code>authentication-type</code></p>
+            <p><code>set &lt;file&gt;</code></p>
          </td>
          <td>
-            <p>Creates a new directory service with default settings.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>authentication-type (Anonymous|Forms)</code></p>
-         </td>
-         <td>
-            <p>Changes the current authentication type.</p>
+            <p>Sets the license to the contents of the given text file.</p>
          </td>
       </tr>
       <tr>
@@ -656,13 +655,13 @@ The following examples describe a typical set of steps to set up a directory ser
 <br>
 Examples:
 
-- **Print information about current users and groups**:
+- **Print the current license**:
 
-	Server.exe admin /users
+	Server.exe admin /license print
 
-- **Change the authentication type to "Forms"**:
+- **Set the current license**:
 
-	Server.exe admin /users authentication-type Forms
+	Server.exe admin /license set ss-license.txt
 
 
 **Server.exe admin /server**
@@ -802,6 +801,71 @@ Examples:
 - **Set the user quota to 2 GB**:
 
 	Server.exe admin /sync quota-megabytes 2000
+
+
+**Server.exe admin /users**
+
+<table>
+      <tr>
+         <th data-column="0">
+            <div>
+               <p>Option</p>
+            </div>
+         </th>
+         <th data-column="1">
+            <div>
+               <p>Description</p>
+            </div>
+         </th>
+      </tr>
+      <tr>
+         <td>
+            <p><code>print, (none)</code></p>
+         </td>
+         <td>
+            <p>Prints the current users and groups.</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p><code>authentication-type (Anonymous|Forms)</code></p>
+         </td>
+         <td>
+            <p>Changes the current authentication type.</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p><code>ticket-timeout</code></p>
+         </td>
+         <td>
+            <p>Gets or sets the number of minutes that a login ticket is valid when "remember me" is selected. The default is 1-week (10,080 minutes).</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p><code>help, h, ?, -?, /?, etc.</code></p>
+         </td>
+         <td>
+            <p>Prints help information.</p>
+         </td>
+      </tr>
+</table>
+<br>
+Examples:
+
+- **Print information about current users and groups**:
+
+	Server.exe admin /users
+
+- **Change the authentication type to "Forms"**:
+
+	Server.exe admin /users authentication-type Forms
+        
+
+- **Change the login timeout duration to four weeks**:
+
+	Server.exe admin /users ticket-timeout 40320
 
 
 **Server.exe admin /user-groups**
@@ -946,65 +1010,6 @@ Examples:
 - **Remove all members from group 2**:
 
 	Server.exe admin /user-group 2 clear
-
-
-**Server.exe admin /client**
-
-<table>
-      <tr>
-         <th data-column="0">
-            <div>
-               <p>Option</p>
-            </div>
-         </th>
-         <th data-column="1">
-            <div>
-               <p>Description</p>
-            </div>
-         </th>
-      </tr>
-      <tr>
-         <td>
-            <p><code>print, (none)</code></p>
-         </td>
-         <td>
-            <p>Prints the current settings for the client.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code><code>hide</code></code></p>
-         </td>
-         <td>
-            <p>Hides the console for users when installed</p>
-         </td>
-      </tr>
-      <tr>
-         <td colspan="1"><code>show</code></td>
-         <td colspan="1">
-            <p>Shows the console for users when installed</p>
-            <p>Note: "show" is the default setting for the client</p>
-         </td>
-      </tr>
-      <tr>
-         <td colspan="1"><code>help</code></td>
-         <td colspan="1">Prints help information</td>
-      </tr>
-</table>
-<br>
-Examples:
-
-- **Print the current console settings**:
-
-	Server.exe admin /client hide
-
-- **Hide the console on user computers**:
-
-	Server.exe admin /client hide
-
-- **Show the console on user computers**:
-
-	Server.exe admin /client show
 
 #### Turbo JavaScript API
 
