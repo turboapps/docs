@@ -28,10 +28,6 @@ The following is a table of the definitions and uses of features available in Tu
 		<td>A startup "splash" image to display during application startup. Startup images improve application branding and are useful when the application requires several seconds to initialize.<br/><br/>Transparency keying enables the startup image to contain transparent regions. Transparencies improve the visual effectiveness of your startup image.</td>
 	</tr>
 	<tr>
-		<td><b>Startup Shim</b></td>
-		<td>Startup shims are used to perform customized licensing checks and other initialization tasks. The shim must conform to Turbo Studio interface in order to validate.<br/><br/>The startup shim must compile with an <b>OnInitialize</b> method.<br/><br/><b>C-style startup shim signature</b><br/><br/>typedef BOOL (__stdcall *FnOnInititialize) (LPCWSTR pwcsInitilizationToken);<br/><br/>The return value indicates whether virtual machine execution proceeds.<br/><br/>Methods are acquired via <b>::LoadLibrary</b> followed by <b>::GetProcAddress</b> calls. <br/><br/><b>Example</b><pre>LPCWSTR pwcsInitToken = "VendorSpecificToken";<br/>HMODULE hShim = ::LoadLibrary("Shim.dll");<br/>FnOnInititialize fnOnInit = (FnOnInititialize)::GetProcAddress(hShim, "OnInitialize");<br/>BOOL fResult = fnOnInit(pwcsInitToken);</pre></td>
-	</tr>
-	<tr>
 		<td><b>Directory Binding</b></td>
 		<td>Turbo Studio enables you to limit where an application will run, based on queries to an Active Directory Domain Controller.</td>
 	</tr>
