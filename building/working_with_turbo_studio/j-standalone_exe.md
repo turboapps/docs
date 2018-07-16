@@ -152,3 +152,28 @@ The third way is using an environment variable. This allows access to diagnostic
 ```
 
 <b>NOTE:</b> Can also specify this as a global environment variable.
+
+#### Startup File Triggers
+
+A container package can define several startup files. These can all be activated on launch or they can be configured to only be launched given a specified <b>trigger</b>. This is useful for suite applications (like Microsoft Office) where most of the container package is shared.
+
+In Turbo Studio, the startup file triggers are managed in the 'Startup Files' dialog.
+
+![](/docs/building/working_with_turbo_studio/TRIGGERS1.png)
+
+In this example, an application package is defined with three startup files; word, excel, and access. Any startup files that don't have a specific trigger or have <b>Auto Start</b> enabled will be launched by default. Any startup file that has a trigger (but not 'auto start') will not be launched unless the trigger is specified. Multiple startup files can have the same trigger to enable grouped launching.
+
+To launch a startup file by its trigger, specify its trigger as the first parameter to the container .exe:
+```
+# to launch word
+> virtual-app.exe WORD
+
+# to launch access
+> virtual-app.exe ACCESS
+
+# to launch excel
+> virtual-app.exe EXCEL
+
+# to launch excel as the default
+> virtual-app.exe
+```
