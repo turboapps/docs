@@ -6,6 +6,13 @@ documents:
 - title: Turbo and App Virtualization
 - title: Turbo and Docker
 ---
+topic: End User Guide
+documents:
+- title: Run Applications
+- title: Printing
+- title: Accessing Files
+- title: Accessing Network
+---
 topic: Hub
 documents:
 - title: Creating a Profile
