@@ -127,31 +127,30 @@ This performs a wildcard match finding any files that match the pattern, such as
 
 <b>Note:</b> SVMs that are discovered by wildcard are applied in reverse-alphabetical priority. For example, items in 'patch_002.svm' have higher priority than items in 'patch_001.svm'.
 
+#### Large Executables
 
-#### Diagnostic Mode
+Where creating container packages, it is possible that the virtual .exe packages exceed 4GB in size. This is a problem because Windows has a hard limit of 4GB for .exe files and will not allow them to be executed and you will get an error message like this:
 
-When troubleshooting issues with containers, it is often useful to generate VM logs for analysis. These logs show detailed information about system calls and error codes that were generated during the application life. 
+![](/docs/building/working_with_turbo_studio/4GBEXE1.png)
 
-There are three ways to enable diagnostic mode. With all methods, the log files will be written to the same directory as the container .exe unless the /XLogPath command line parameter is used.
+The solution for this is to split your package into two pieces, one small .exe and one large .svm. Then, at runtime, combine them using the above mentioned techniques (either with /XLayerPath or specifying required layers in Turbo Studio).
 
-The first way is to create a diagnostic mode build of your container. This is done in studio by selecting the 'Generate diagnostic mode executable' build option.
-
-![](/docs/building/working_with_turbo_studio/DIAGNOSTIC1.png)
-
-The second way is using a command line parameter. This allows access to diagnostic information without rebuilding your container package.
-
-```
-> virtual-app.exe /XEnable=Diagnostics
-```
-
-The third way is using an environment variable. This allows access to diagnostic information when the command line options are not easily modified (ie. service containers, container launched from non-container, etc).
-
-```
-> SET __VMDIAGNOSTICS=true
-> virtual-app.exe
-```
-
-<b>NOTE:</b> Can also specify this as a global environment variable.
+Follow these steps to convert your existing container image xappl:
+- Save a copy of your xappl as data.xappl.
+- Open data.xappl in Turbo Studio
+-- Change the project type to "Component"
+![](/docs/building/working_with_turbo_studio/4GBEXE2.png)
+-- Change the "Output File" to data.svm
+![](/docs/building/working_with_turbo_studio/4GBEXE3.png)
+-- Save the file and build
+- Open your existing xappl in Turbo Studio
+-- Add "@APPDIR@\data.svm" to the list of required layers
+![](/docs/building/working_with_turbo_studio/4GBEXE4.png)
+-- Remove everything from <Filesystem> and <Registry> nodes. If you have multiple layers, you can remove all the other layers. All of this will be loaded from the data SVM. If your application is configured to inherit metadata and icons from the startup file, then you will need to keep the startup file .exe in the <filesystem> node (including its full directory hierarchy).  
+![](/docs/building/working_with_turbo_studio/4GBEXE5.png)
+![](/docs/building/working_with_turbo_studio/4GBEXE6.png)
+-- Save the file and build
+- To deploy, take your .exe and your .svm and put them in the same directory.
 
 #### Startup File Triggers
 
