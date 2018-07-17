@@ -16,12 +16,12 @@ Usage: turbo logout
 # Logout the current user
 > turbo logout
 
-spoonuser logged out
+turboiuser logged out
 
 # Logout from shared user credentials
 > turbo logout --all-users
 
-spoonuser logged out
+turbouser logged out
 
 # No action taken if a user isn't currently logged in
 > turbo logout

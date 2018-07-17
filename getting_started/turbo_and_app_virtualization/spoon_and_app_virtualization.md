@@ -26,7 +26,7 @@ The Turbo containerization system includes:
   operations such as creating, stopping, committing, and pushing containers.
 * **TurboScript:** TurboScript is a scripting language that supports automation of container creation and maintenance tasks. TurboScript
   supports all command-line options plus higher order primitives such as **using**, the ability to modify 
-* **SpoonDB:** SpoonDB is a deduplicated storage system optimized to support efficient storage, versioning, rollback, and 
+* **TurboDB:** TurboDB is a deduplicated storage system optimized to support efficient storage, versioning, rollback, and 
   delta-based transactioning of container and image state. Turbo uses a novel differential synchronization protocol that supports rapid synchronization over wide area networks such as the Internet.
 * **Turbo Hub:** The Turbo Hub is an online container repository that allows containers to be easily shared with collaborators. The Turbo
   Hub also provides container state synchronization, allowing continuation of container execution across different devices. (See the `continue`

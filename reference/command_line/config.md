@@ -32,7 +32,7 @@ The hub server that Turbo will connect to, and thus push to and pull from, can b
 By default, Turbo is configured to connect to **https://turbo.net/hub**.
 
 #### Change the Storage Path
-The storage path points to the directory where images and containers are saved. By default, images and containers are saved in **%LOCALAPPDATA%\Spoon\Containers**.  Use the `--storage-path` flag to set the storage path to a different location.
+The storage path points to the directory where images and containers are saved. By default, images and containers are saved in **%LOCALAPPDATA%\Turbo\Containers**.  Use the `--storage-path` flag to set the storage path to a different location.
 
 It may be more efficient to share a repository of images in multi-user environment while keeping container storage in a separate, per user location. 
 
@@ -43,23 +43,23 @@ Finally, the storage path can also be overwritten by the `TURBOREPO` environment
 ##### Example
 
 ```
-# Set container and image root path to C:\ProgramData\Spoon\Containers
-> turbo config --storage-path=C:\ProgramData\Spoon\Containers
+# Set container and image root path to C:\ProgramData\Turbo\Containers
+> turbo config --storage-path=C:\ProgramData\Turbo\Containers
 
-# Set the container storage path to %LOCALAPPDATA%\Spoon\Containers\sandboxes
-> turbo config --container-path=%LOCALAPPDATA%\Spoon\Containers\sandboxes
+# Set the container storage path to %LOCALAPPDATA%\Turbo\Containers\sandboxes
+> turbo config --container-path=%LOCALAPPDATA%\Turbo\Containers\sandboxes
 
 > turbo config
 Hub server: https://turbo.net/
-Storage path: C:\ProgramData\Spoon\Containers
-Container storage path: C:\Users\matt\AppData\Local\Spoon\Containers\sandboxes
+Storage path: C:\ProgramData\Turbo\Containers
+Container storage path: C:\Users\matt\AppData\Local\Turbo\Containers\sandboxes
 Browser redirection is enabled
 
-# Switch storage path to %LOCALAPPDATA%\Spoon\Containers\repo\images
-# Keep container storage path in %LOCALAPPDATA%\Spoon\Containers\sandboxes
-> SET TURBOREPO=%LOCALAPPDATA%\Spoon\Containers
+# Switch storage path to %LOCALAPPDATA%\Turbo\Containers\repo\images
+# Keep container storage path in %LOCALAPPDATA%\Turbo\Containers\sandboxes
+> SET TURBOREPO=%LOCALAPPDATA%\Turbo\Containers
 
-# Sets the image repository storage path to C:\ProgramData\Spoon\Containers for all users
+# Sets the image repository storage path to C:\ProgramData\Turbo\Containers for all users
 > turbo config --image-path=allusers --all-users
 ```
 

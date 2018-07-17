@@ -1115,7 +1115,7 @@ The Turbo Feed provides a separate JavaScript API to embed a button within a web
       </tr>
       <tr>
          <td>
-            <p><strong>Spoon_PortalRoot<br></strong></p>
+            <p><strong>Turbo_PortalRoot<br></strong></p>
          </td>
          <td>
             <p>String</p>
@@ -1132,7 +1132,7 @@ The Turbo Feed provides a separate JavaScript API to embed a button within a web
       </tr>
       <tr>
          <td>
-            <p><strong>Spoon_Id<br></strong></p>
+            <p><strong>Turbo_Id<br></strong></p>
          </td>
          <td>
             <p>String</p>
@@ -1144,12 +1144,12 @@ The Turbo Feed provides a separate JavaScript API to embed a button within a web
             <p>This is the Application identifier</p>
          </td>
          <td>
-            <p>This is the value that is seen in the portal under the apps root. For example, if the application's URL is <em>http://portal/apps/notepad-7.6</em>, the Spoon_Id is notepad-7.6.</p>
+            <p>This is the value that is seen in the portal under the apps root. For example, if the application's URL is <em>http://portal/apps/notepad-7.6</em>, the Turbo_Id is notepad-7.6.</p>
          </td>
       </tr>
       <tr>
          <td>
-            <p><strong>Spoon_BackgroundColor</strong></p>
+            <p><strong>Turbo_BackgroundColor</strong></p>
          </td>
          <td>
             <p>String</p>
@@ -1169,8 +1169,8 @@ The Turbo Feed provides a separate JavaScript API to embed a button within a web
 To embed a Turbo Feed, you must first initialize the Turbo Variables above to the correct values with javascript:
 
 	<script type="text/javascript">
-	Spoon_PortalRoot = 'http://[SERVER]:[PORT]/';
-	Spoon_Id = '7-zip-9.20';
+	Turbo_PortalRoot = 'http://[SERVER]:[PORT]/';
+	Turbo_Id = '7-zip-9.20';
 	</script>
 	
 After the Turbo Variables are set, use the following code to embed the Turbo Feed in an iframe:
@@ -1180,8 +1180,8 @@ After the Turbo Variables are set, use the following code to embed the Turbo Fee
 **Example**: Embed a Button to Launch Firefox 5.0.0.0.
 
 	<script type="text/javascript">
-	Spoon_PortalRoot = 'http://[SERVER]:[PORT]/';
-	Spoon_Id = 'Firefox-5.0.0.0';
+	Turbo_PortalRoot = 'http://[SERVER]:[PORT]/';
+	Turbo_Id = 'Firefox-5.0.0.0';
 	</script>
 	<script language="javascript" type="text/javascript" src="http://[SERVER]:[PORT]/feed"></script>
 	
@@ -1359,9 +1359,9 @@ An example case of expected Command Prompt printouts is included, below:
 	"c:\Program Files (x86)\Java\jre7\bin\keytool.exe" -import -alias VirtualAppServer -file C:\Users\testuser\Desktop\certificate.crt -keystore "C:\Program Files (x86)\Java\jre7\lib\security\cacerts" -storepass changeit
 
 
-	Owner: EMAILADDRESS=test@turbo.net, CN=myspoonserver, OU=Testing, O=SpoonQA, L=Seattle, ST=Washington, C=US
+	Owner: EMAILADDRESS=test@turbo.net, CN=myturboserver, OU=Testing, O=TurboQA, L=Seattle, ST=Washington, C=US
 
-	Issuer: EMAILADDRESS=test@turbo.net, CN=myspoonserver, OU=Testing, O=SpoonQA, L=Seattle, ST=Washington, C=US
+	Issuer: EMAILADDRESS=test@turbo.net, CN=myturboserver, OU=Testing, O=TurboQA, L=Seattle, ST=Washington, C=US
 
 	Serial number: c4ba0e7be87ff2a5
 
