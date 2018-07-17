@@ -72,7 +72,7 @@ From this Microsoft documentation, we see that the purpose of this function is "
 <b>name</b> - The name of the value entry to obtain data for.<br>
 <b>class</b> - A KEY_VALUE_INFORMATION_CLASS value that determines the type of information returned in the KeyValueInformation buffer. For more information about the values that this can be, see the doc on [KEY_VALUE_INFORMATION_CLASS](https://docs.microsoft.com/en-us/windows-hardware/drivers/ddi/content/wdm/ne-wdm-_key_value_information_class).<br>
 <b>length</b> - The size, in bytes, of the KeyValueInformation buffer.<br>
-<b>resultlength<b> - The size, in bytes, of the key information.<br>
+<b>resultlength</b> - The size, in bytes, of the key information.<br>
 <b>handle</b> - The handle to the key to read value entries from. This was created by a previous call to NtCreateKey or NtOpenKey.<br>
 <b>path</b> - The resolved path in the container that the handle represents.<br>
 
