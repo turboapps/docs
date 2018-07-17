@@ -9,7 +9,7 @@ The command-line version of Turbo Studio is called <b>XStudio.exe</b> and can be
 		<th>Description</th>
 	</tr>
 	<tr>
-        <td><span>&lt;path to XAPPL configuration file&gt;</span></td>
+        <td><strong><span>&lt;path to XAPPL configuration file&gt;</span></strong></td>
         <td><span>/l &lt;path to license file&gt; [/o &lt;path to output&gt;] [/component] [/d] [/compressed] [/uncompressed] [/deletesandbox] [/v &lt;version&gt;] [/startupfile &lt;virtual path to file&gt;]</span></td>
         <td>
             <p>Builds the virtual application based on the application configuration file.</p>
