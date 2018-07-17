@@ -44,12 +44,12 @@ An example of a log is below:
 pid:1240, tid:5416, tick:0x1757B5, lvl:LOG, func:NtQueryValueKey, status:0xC0000034, name:"InprocServer32", class:0x2, length:0x90, resultlength:0x0, handle:0x79E, path:"\Registry\Machine\Software\Classes\CLSID\{4B429D05-8931-11D2-A213-0008C71AB540}\InprocServer32"
 ```
 
-The fields of the log entry are:
-<b>pid</b> - The ID of the process that generated the log entry.
-<b>tid</b> - The ID of the thread that generated the log entry.
-<b>tick</b> - The tick count when the log entry was written. Tick count is the number of elapsed milliseconds since the machine was started.
-<b>lvl</b> - The severity of the log entry. Possible values include "OK", "LOG", "WRN", and "ERR". "OK" indicates the entry was a success case. "LOG" indicates that the function failed or was other informative non-function call log entry. "WRN" indicates that something failed unexpectedly and may suggest a problem. "ERR" indicates that something failed unexpectedly and is likely a problem. Note that not all "LOG" entries are ignorable and every "ERR" entry is a problem, any log entry requires analysis based on the context of the call.
-<b>func</b> - The function where the log entry was written from. Most often these will be Windows APIs that have entries in [Microsoft Docs](https://docs.microsoft.com) or [Microsoft Developer Network](https://msdn.microsoft.com) that can give more context about the parameters in the log entry.
+The fields of the log entry are:<br>
+<b>pid</b> - The ID of the process that generated the log entry.<br>
+<b>tid</b> - The ID of the thread that generated the log entry.<br>
+<b>tick</b> - The tick count when the log entry was written. Tick count is the number of elapsed milliseconds since the machine was started.<br>
+<b>lvl</b> - The severity of the log entry. Possible values include "OK", "LOG", "WRN", and "ERR". "OK" indicates the entry was a success case. "LOG" indicates that the function failed or was other informative non-function call log entry. "WRN" indicates that something failed unexpectedly and may suggest a problem. "ERR" indicates that something failed unexpectedly and is likely a problem. Note that not all "LOG" entries are ignorable and every "ERR" entry is a problem, any log entry requires analysis based on the context of the call.<br>
+<b>func</b> - The function where the log entry was written from. Most often these will be Windows APIs that have entries in [Microsoft Docs](https://docs.microsoft.com) or [Microsoft Developer Network](https://msdn.microsoft.com) that can give more context about the parameters in the log entry.<br>
 <b>status</b> - The NTSTATUS code that is returned from the function. See [NTSTATUS Values](https://msdn.microsoft.com/en-us/library/cc704588.aspx) for a list of values. In this case we see 0xC0000034 which is for STATUS_OBJECT_NAME_NOT_FOUND. Not all functions return NTSTATUS codes. Some may have "gle" which is the system error code returned from GetLastError. See [System Error Codes](https://docs.microsoft.com/en-us/windows/desktop/debug/system-error-codes) for a list of values. Other functions have "hr" which is for an HRESULT code. HRESULT values are usually very context specific so no single resource catalogs their values. A quick web search will often find their meaning.
 
 After the return value, the log entry will show the list of parameters that were passed to the function. This will depend on the function being called and is where checking the Microsoft documentation can be helpful.
@@ -68,13 +68,13 @@ NTSYSAPI NTSTATUS ZwQueryValueKey(
 );
 ```
 
-From this Microsoft documentation, we see that the purpose of this function is "return a value entry for a registry key" and the remaining fields of the log entry are:
-<b>name</b> - The name of the value entry to obtain data for.
-<b>class</b> - A KEY_VALUE_INFORMATION_CLASS value that determines the type of information returned in the KeyValueInformation buffer. For more information about the values that this can be, see the doc on [KEY_VALUE_INFORMATION_CLASS](https://docs.microsoft.com/en-us/windows-hardware/drivers/ddi/content/wdm/ne-wdm-_key_value_information_class).
-<b>length</b> - The size, in bytes, of the KeyValueInformation buffer.
-<b>resultlength<b> - The size, in bytes, of the key information.
-<b>handle</b> - The handle to the key to read value entries from. This was created by a previous call to NtCreateKey or NtOpenKey.
-<b>path</b> - The resolved path in the container that the handle represents.
+From this Microsoft documentation, we see that the purpose of this function is "return a value entry for a registry key" and the remaining fields of the log entry are:<br>
+<b>name</b> - The name of the value entry to obtain data for.<br>
+<b>class</b> - A KEY_VALUE_INFORMATION_CLASS value that determines the type of information returned in the KeyValueInformation buffer. For more information about the values that this can be, see the doc on [KEY_VALUE_INFORMATION_CLASS](https://docs.microsoft.com/en-us/windows-hardware/drivers/ddi/content/wdm/ne-wdm-_key_value_information_class).<br>
+<b>length</b> - The size, in bytes, of the KeyValueInformation buffer.<br>
+<b>resultlength<b> - The size, in bytes, of the key information.<br>
+<b>handle</b> - The handle to the key to read value entries from. This was created by a previous call to NtCreateKey or NtOpenKey.<br>
+<b>path</b> - The resolved path in the container that the handle represents.<br>
 
 From viewing this log entry, we can determine that this thread was looking up a COM GUID to determine how it should be activated. It was not able to find the information it was looking for at this location. This might be a problem or it might continue its search in another location (ie. in HKCU, etc). NOTE: There are always many error codes returned by system calls so determining which error is causing a problem can be tricky.
 
