@@ -138,10 +138,10 @@ The solution for this is to split your package into two pieces, one small .exe a
 Follow these steps to convert your existing container image xappl:
 * Save a copy of your xappl as data.xappl.
 * Open data.xappl in Turbo Studio
-    * Change the project type to "Component"
+    * Change the "Project Type" to "Component"
     ![](/docs/building/working_with_turbo_studio/4GBEXE2.png)
     
-    * Change the "Output File" to data.svm
+    * Change the "Output File" to "data.svm"
     ![](/docs/building/working_with_turbo_studio/4GBEXE3.png)
     
     * Save the file and build
@@ -149,14 +149,14 @@ Follow these steps to convert your existing container image xappl:
     * Add "@APPDIR@\data.svm" to the list of required layers
     ![](/docs/building/working_with_turbo_studio/4GBEXE4.png)
     
-    * Remove everything from <Filesystem> and <Registry> nodes. If you have multiple layers, you can remove all the other layers. All of this will be loaded from the data SVM. If your application is configured to inherit metadata and icons from the startup file, then you will need to keep the startup file .exe in the <filesystem> node (including its full directory hierarchy).  
+    * Remove everything from <Filesystem> and <Registry> nodes. If you have multiple layers, you can remove all layers other than the 'default' layer. If your application is configured to inherit metadata and icons from the startup file, then you will need to keep the startup file .exe in the <filesystem> node (including its full directory hierarchy).  
     
     ![](/docs/building/working_with_turbo_studio/4GBEXE5.png)
     
     ![](/docs/building/working_with_turbo_studio/4GBEXE6.png)
     
     * Save the file and build
-* To deploy, take your .exe and your .svm and put them in the same directory.
+* To deploy, place your .exe and your .svm in the same directory.
 
 #### Startup File Triggers
 
