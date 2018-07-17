@@ -29,14 +29,14 @@ The leading character of each line denotes the type of change made at that path.
 || D || Deleted ||
 
 If a file is changed, the diff results will show the a change in the folder along with the change to the file.  
-For example, if one added a file to a container at **C:\Users\Spoonuser\file.txt**: 
+For example, if one added a file to a container at **C:\Users\Turbouser\file.txt**: 
 
 ```
 > turbo diff --subsystems=files <container id>
 
 File system changes:
-C C:\Users\Spoonuser
-A C:\Users\Spoonuser\file.txt
+C C:\Users\Turbouser
+A C:\Users\Turbouser\file.txt
 ```
 
 #### Filtering Results

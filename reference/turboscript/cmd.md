@@ -30,7 +30,7 @@ cmd ("c:\windows\system32\notepad.exe", "c:\users\user\desktop\foo.txt")
 
 Using this syntax, each command is executed in its own command prompt -- a new command prompt being spawned for each instruction. Any stateful commands (`cd`, for example), must be chained to other commands with an ampersand to have their desired effect. 
 
-For example, to read **C:\spoon\text-file.txt**: 
+For example, to read **C:\turbo\text-file.txt**: 
 
 ```
 # Does not work

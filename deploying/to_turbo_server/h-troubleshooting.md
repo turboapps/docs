@@ -141,7 +141,7 @@ When troubleshooting an issue related to the general administration of Turbo Ser
 
 5. Enter the following command: **net start turbo**
 
-6. Upon restarting Turbo Server (with the previous command), debug logs are written to a text file located at **C:\Program Files\Spoon Server**. This log file is assigned a name based on the date and time when Turbo Server restarted. A new log file is created on subsequent restarts of Turbo Server.
+6. Upon restarting Turbo Server (with the previous command), debug logs are written to a text file located at **C:\Program Files\Turbo Server**. This log file is assigned a name based on the date and time when Turbo Server restarted. A new log file is created on subsequent restarts of Turbo Server.
 
 #### Locating Log Files
 

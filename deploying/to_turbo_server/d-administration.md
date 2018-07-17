@@ -154,7 +154,7 @@ This page also contains the following sections:
 
 - **Embed**: When this HTML code is embedded on an external webpage, it creates a Turbo Feed button to launch the application version. For more information on customizing the Turbo Feed refer to Turbo JavaScript API.
 
-**Note:** The "Spoon_Id" JavaScript variable is composed from the following, *<Application Slug>-<Major Version Number>-<Minor Version Number>*.
+**Note:** The "Turbo_Id" JavaScript variable is composed from the following, *<Application Slug>-<Major Version Number>-<Minor Version Number>*.
 
 **Note:** The embed code may not be backwards compatible between versions of Turbo Server. Please update and test the embed code for existing applications that are embedded on other sites when upgrading Turbo Server.
 

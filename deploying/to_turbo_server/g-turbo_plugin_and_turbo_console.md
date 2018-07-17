@@ -121,7 +121,7 @@ If the plugin is installed for a single user profile, the install location is in
 
 The Turbo Client installs an application called Turbo Sandbox Manager that runs on startup. This application can be found in the install directory of the Turbo Client. There is a command line interface for this application.
 
-**Spoon-Sandbox.exe [Option]**
+**Turbo-Sandbox.exe [Option]**
 
 <table>
       <tr>
@@ -180,8 +180,8 @@ XLaunch is an internal application used to execute virtual applications that hav
 
 **Install location**
 
-- Location when installed by SpoonReg: @APPDATALOCAL@\Spoon\XLaunch\_version_\XLaunch.exe 
-- Location when installed by Turbo Client: @APPDATALOCAL@\Spoon\Client\Components\_version_\XLaunch.exe
+- Location when installed by SpoonReg: @APPDATALOCAL@\Turbo\XLaunch\_version_\XLaunch.exe 
+- Location when installed by Turbo Client: @APPDATALOCAL@\Turbo\Client\Components\_version_\XLaunch.exe
 
 **Command line reference**
 
@@ -253,9 +253,9 @@ The XClient file is an XML file that provides information about applications tha
 
 **File location**
 
-- Applications registered with SpoonReg: @APPDATALOCAL@\Spoon\Client\5\Default.xclient
+- Applications registered with SpoonReg: @APPDATALOCAL@\Turbo\Client\5\Default.xclient
 
-- Applications registered from standalone streaming server: @APPDATALOCAL@\Spoon\Servers\<server>\Users\[_username_|Anonymous]\Desktops\Default\Client\Default.xclient
+- Applications registered from standalone streaming server: @APPDATALOCAL@\Turbo\Servers\<server>\Users\[_username_|Anonymous]\Desktops\Default\Client\Default.xclient
 
 **XML file format**
 

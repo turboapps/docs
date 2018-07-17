@@ -35,8 +35,8 @@ When adding a portal site hosted on another server, you must add that server on 
 After creating an application version, you will find HTML code located on the application version page in the Embed section. A Turbo Feed can be set up for any Turbo Server running in anonymous mode (see Configuration and Customization) with a valid license and published apps. Like the turbo.net live feed, the Server feed can be added to any website by adding a few lines of HTML. An example use of the feed is below.
 
     <script type="text/javascript">
-    Spoon_PortalRoot = 'http://[SERVER]:[PORT]/';
-    Spoon_Id = 'Firefox-5.0.0.0';
+    Turbo_PortalRoot = 'http://[SERVER]:[PORT]/';
+    Turbo_Id = 'Firefox-5.0.0.0';
     </script>
     <script language="javascript" type="text/javascript" src="http://[SERVER]:[PORT]/feed"></script>
 
@@ -78,7 +78,7 @@ This section outlines the possible parameters for the Turbo Feed.
       </tr>
       <tr>
          <td>
-            <p><strong>Spoon_PortalRoot<br></strong></p>
+            <p><strong>Turbo_PortalRoot<br></strong></p>
          </td>
          <td>
             <p>String</p>
@@ -95,7 +95,7 @@ This section outlines the possible parameters for the Turbo Feed.
       </tr>
       <tr>
          <td>
-            <p><strong>Spoon_Id<br></strong></p>
+            <p><strong>Turbo_Id<br></strong></p>
          </td>
          <td>
             <p>String</p>
@@ -107,12 +107,12 @@ This section outlines the possible parameters for the Turbo Feed.
             <p>This is the Application identifier</p>
          </td>
          <td>
-            <p>This is the value that is seen in the portal under the apps root. For example, if the application's URL is <em><a href="http://portal/apps/notepad-7.6" class="external-link" rel="nofollow">http://portal/apps/notepad-7.6</a></em>, the Spoon_Id is notepad-7.6.</p>
+            <p>This is the value that is seen in the portal under the apps root. For example, if the application's URL is <em><a href="http://portal/apps/notepad-7.6" class="external-link" rel="nofollow">http://portal/apps/notepad-7.6</a></em>, the Turbo_Id is notepad-7.6.</p>
          </td>
       </tr>
       <tr>
          <td>
-            <p><strong>Spoon_BackgroundColor</strong></p>
+            <p><strong>Turbo_BackgroundColor</strong></p>
          </td>
          <td>
             <p>String</p>
@@ -129,18 +129,6 @@ This section outlines the possible parameters for the Turbo Feed.
       </tr>
 </table>
 <br>
-
-**Feed Sizing**
-
-Feeds have only certain valid values for the FeedWidth and FeedHeight. Currently, those values are as follows:
-
-    Turbo Button: 
-	Default Width (no Spoon_FeedWidth specified): 190px 
-	Default Height (no Spoon_FeedHeight specified): 45px 
-	Minimum Width (smallest Spoon_FeedWidth allowed): 120px 
-	Minimum Height (smallest Spoon_FeedHeight allowed): 42px
-
-A Turbo Button has no limit on the maximum width and height.
 
 ##### Publish Using Third-Party Software
 

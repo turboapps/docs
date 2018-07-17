@@ -20,24 +20,24 @@ API Keys are generated and revoked using user profile or organization settings a
 
 ```
 # Log in by specifying username and password
-> turbo login spoonuser password-here
+> turbo login turbouser password-here
 
 # Without parameters, returns state of logged-in user
 > turbo login
 
-spoonuser logged in at 8/25/2014 at 5:40:45 PM
+turbouser logged in at 8/25/2014 at 5:40:45 PM
 
 # Log in to shared user credentials
 > turbo login --all-users
-Login: spoonuser
+Login: turbouser
 Password: ********
 
-Logged in as spoonuser
+Logged in as turbouser
 
 # Login in by specifying API key
 > turbo login --api-key=key-here
 
-spoonuser logged in at 8/25/2014 at 5:40:45 PM
+turbouser logged in at 8/25/2014 at 5:40:45 PM
 ```
 
 See `turbo config` for information about setting your remote registry location.
