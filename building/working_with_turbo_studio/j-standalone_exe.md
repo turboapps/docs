@@ -149,7 +149,7 @@ Follow these steps to convert your existing container image xappl:
     * Add "@APPDIR@\data.svm" to the list of required layers
     ![](/docs/building/working_with_turbo_studio/4GBEXE4.png)
     
-    *Remove everything from <Filesystem> and <Registry> nodes. If you have multiple layers, you can remove all the other layers. All of this will be loaded from the data SVM. If your application is configured to inherit metadata and icons from the startup file, then you will need to keep the startup file .exe in the <filesystem> node (including its full directory hierarchy).  
+    * Remove everything from <Filesystem> and <Registry> nodes. If you have multiple layers, you can remove all the other layers. All of this will be loaded from the data SVM. If your application is configured to inherit metadata and icons from the startup file, then you will need to keep the startup file .exe in the <filesystem> node (including its full directory hierarchy).  
     
     ![](/docs/building/working_with_turbo_studio/4GBEXE5.png)
     
