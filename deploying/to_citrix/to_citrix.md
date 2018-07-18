@@ -1,0 +1,83 @@
+## To Citrix
+
+System administrators can use Turbo to quickly deploy applications and custom containerized environments on Citrix, Parallels RAS, Workspot, Windows Remote Desktop Services (RDS), and other remote desktop systems.
+
+![](/docs/deploying/to_citrix/CITRIX1.png)
+Citrix Receiver Applications Side by Side Launched
+
+#### Prerequisites
+
+To get started, you will need to [download](https://turbo.net/download) and install Turbo for Windows for all users on the system.
+
+If users will be streaming the application window rather than the whole desktop, we recommend hiding the Turbo GUI using the `--hide-gui` flag.
+```
+> start /wait turbo-client.exe --all-users --silent --hide-gui
+```
+
+![](/docs/deploying/to_citrix/CITRIX2.png)
+
+#### Adding Applications to the Start Menu
+
+Turbo application desktop integration, including Start Menu, desktop shortcuts, and file associations, can be enabled with the `turbo installi` command along with the `--all-users` flag. If you omit the version from the application identifier, then the latest version will be used.
+
+```
+# Sign in to Turbo.net
+> turbo login 
+
+# Add the latest Firefox ESR browser to the Start Menu
+> turbo installi --all-users mozilla/firefox-esr
+
+# Add the latest Google Chrome browser to the Start Menu
+> turbo installi --all-users google/chrome
+
+# Add Internet Explorer 8 with Java 6.45 to the Start Menu
+> turbo installi --all-users microsoft/ie:8,jre:6.45</pre>
+```
+
+![](/docs/deploying/to_citrix/CITRIX3.png)
+
+The **Firefox ESR**, **Chrome**,and **IE8 with Java6** applications will appear in the Start Menu of the server.
+
+![](/docs/deploying/to_citrix/CITRIX4.png)
+
+#### Adding Applications to the Delivery Platform
+
+Depending on the delivery platform in use, you may also need to add the applications in the delivery system's administration interface.
+
+In this example, we will add applications to Citrix XenApp using Citrix Studio.
+
+Start **Citrix Studio** and go to **Applications** &gt; **Add Applications**.
+
+![](/docs/deploying/to_citrix/CITRIX5.png)
+
+Select the option to **Add** applications **From Start Menu...**
+
+![](/docs/deploying/to_citrix/CITRIX6.png)
+
+Then select the **Firefox ESR**, **Chrome**, and **IE8 with Java6** applications.
+
+![](/docs/deploying/to_citrix/CITRIX7.png)
+
+Click through to **Finish** to complete the process.
+
+![](/docs/deploying/to_citrix/CITRIX8.png)
+
+#### Running the Applications
+
+Once added to Citrix Studio users can access the applications from the  Citrix StoreFront website or the Citrix Receiver application.
+
+![](/docs/deploying/to_citrix/CITRIX9.png)
+
+Click on an application to launch it.
+
+![](/docs/deploying/to_citrix/CITRIX10.png)
+
+Since applications are executed in isolated Turbo container environments, any combination of browsers, plugins, and runtimes can run side-by-side on the same server.
+
+![](/docs/deploying/to_citrix/CITRIX11.png)
+
+For example, an **Internet Explorer 8 with Java 6** environment can run alongside an **Internet Explorer 10 with Java 7** environment or another **Internet Explorer 8 with Java 7** environment.
+
+![](/docs/deploying/to_citrix/CITRIX12.png)
+
+This allows elimination of Citrix siloing and consolidation of servers to a single version of Citrix using a single base image.
