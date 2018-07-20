@@ -1,13 +1,7 @@
 ---
 topic: Getting Started
 documents:
-- title: Table of Contents
-- title: What is Turbo?
-- title: Turbo and App Virtualization
-- title: Turbo and Docker
----
-topic: End User Guide
-documents:
+- title: Installation
 - title: Run Applications
 - title: Accessing Files
 - title: Accessing Network
@@ -52,3 +46,9 @@ topic: Contributing
 documents:
 - title: Contribute to Turbo
 - title: Style Guide
+---
+topic: About
+documents:
+- title: What is Turbo?
+- title: Turbo and App Virtualization
+- title: Turbo and Docker
