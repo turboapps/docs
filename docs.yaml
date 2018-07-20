@@ -9,9 +9,9 @@ documents:
 topic: End User Guide
 documents:
 - title: Run Applications
-- title: Printing
 - title: Accessing Files
 - title: Accessing Network
+- title: Printing
 ---
 topic: Hub
 documents:

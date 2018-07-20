@@ -1,5 +1,3 @@
-# Accessing Local Network
-
 Turbo allows access to the local network in cloud applications launches from the native client. The HTML5 client does not support local network access. Applications launched on the local machine will automatically have local network access.
 
 Click on the Settings link in Turbo Launcher to bring up the settings dialog.

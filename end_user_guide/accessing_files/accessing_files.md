@@ -1,5 +1,3 @@
-# Accessing Files
-
 Turbo allows access to the local file system or Online Storage providers such as OneDrive or Dropbox.
 
 # Accessing local system files with Run in Cloud (Windowed)
