@@ -1,4 +1,4 @@
-Turbo applications can access the local printer using native remote desktop printer redirection. The HTML5 client will have the printer to a PDF file download.
+Turbo applications can access the local printer using native remote desktop printer redirection. The HTML5 client will allow printing to a PDF file.
 
 # From the Browser
 

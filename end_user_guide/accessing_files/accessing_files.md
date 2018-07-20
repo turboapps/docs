@@ -6,11 +6,11 @@ Users may access files from their local system when they launch an application i
 
 ![](/docs/end_user_guide/accessing_files/accessing-files-from-local-system-via-run-in-cloud-windowed-1.png)
 
-Applications running in this mode will show files from the local system under mapped drives using the **<drive> on <system-name>** format in the File Open and Save dialogs.
+Applications running in this mode will show files from the local system under mapped drives using the **\{drive\} on \{system-name\}** format in the File Open and Save dialogs.
 
 ![](/docs/end_user_guide/accessing_files/accessing-files-from-local-system-via-run-in-cloud-windowed-2.png)
 
-Files from the local system may also be accessed using the **\\TSCLIENT\<drive>** remote path.
+Files from the local system may also be accessed using the **\\\\TSCLIENT\\\{drive\}** remote path.
 
 ![](/docs/end_user_guide/accessing_files/accessing-files-from-local-system-via-run-in-cloud-windowed-2-bg.png)
 
@@ -24,7 +24,7 @@ Applications running in this mode will show files from the local system under th
 
 ![](/docs/end_user_guide/accessing_files/mac-power-bi-home-on-my-mac.png)
 
-Files from the local system may also be accessed using the \\TSCLIENT\Home remote path.
+Files from the local system may also be accessed using the \\\\TSCLIENT\\Home remote path.
 
 ![](/docs/end_user_guide/accessing_files/mac-net-use.png)
 
@@ -54,7 +54,7 @@ When the authentication succeeds, the storage service status will show as connec
 
 ![](/docs/end_user_guide/accessing_files/connecting-a-storage-service-onedrive-to-your-account-3.png)
 
-Files from the storage service will be available under the **T:\** drive for applications running in the cloud.
+Files from the storage service will be available under the **T:\\** drive for applications running in the cloud.
 
 ![](/docs/end_user_guide/accessing_files/connecting-a-storage-service-onedrive-to-your-account-4.png)
 
