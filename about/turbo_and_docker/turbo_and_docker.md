@@ -12,7 +12,7 @@ Turbo **supports both desktop and server Windows applications**, and works on **
 forward. Turbo does not require modifications to the base operating system kernel and Turbo does not execute a parallel copy of the base
 operating system.
 
-For more information about the differences between application and OS virtualization, see the article [How Turbo is different from hardware virtualization](/docs/getting-started/what-is-turbo#how-does-it-work).
+For more information about the differences between application and OS virtualization, see the article [How Turbo is different from hardware virtualization](/docs/about/what-is-turbo#how-does-it-work).
 
 Via the Turbo VM, Turbo containers support many Windows-specific constructs, such as Windows Services, COM/DCOM components, named kernel object isolation, WinSxS side-by-side versioning, shell registration, clipboard data, and other mechanisms that do not directly apply to Linux operating systems. 
 
