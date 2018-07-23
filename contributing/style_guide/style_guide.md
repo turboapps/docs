@@ -36,6 +36,7 @@ When contributing to turbo.net/docs, please take the following style guidelines 
 - Put the image in the same folder as the md file
 - Modify the path in the link based on the example below
 - If you need to specify image dimensions, use HTML
+- Image file names should be all lower case
 
 ```
 # GitHub location
