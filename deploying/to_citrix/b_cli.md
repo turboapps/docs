@@ -1,9 +1,6 @@
-## To Citrix
+### Using Turbo Command Line
 
-System administrators can use Turbo to quickly deploy applications and custom containerized environments on Citrix, Parallels RAS, Workspot, Windows Remote Desktop Services (RDS), and other remote desktop systems.
-
-![](/docs/deploying/to_citrix/citrix1.png)
-Citrix Receiver Applications Side by Side Launched
+Turbo containers can be deployed to Citrix XenApp servers using the Turbo command line interface. Below are the steps required.
 
 #### Prerequisites
 
