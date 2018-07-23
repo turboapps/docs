@@ -18,7 +18,7 @@ For simple tasks, a .bat or .cmd script can be configured.
 
 Put the script in the container file system (a full isolated folder in @SYSDRIVE@ such as "scripts" is recommended). Specify the full path to the script in studio. Note that the untokenized form of the path must be used here ("c:\scripts\init.cmd" rather than "@SYSDRIVE@\scripts\init.cmd").
 
-![](/docs/building/working_with_turbo_studio/SCRIPT1.png)
+![](/docs/building/working_with_turbo_studio/script1.png)
 
 An example startup script might look like this:
 <pre>
@@ -57,7 +57,7 @@ To troubleshoot script issues, set the "__DEBUGINITSCRIPTSHIM" environment varia
 #### Shims
 For complex tasks, a DLL can be written to be executed. DLLs can be written in any programming language that supports them but do note any framework requirements must be configured inside the container. 
 
-![](/docs/building/working_with_turbo_studio/SHIM1.png)
+![](/docs/building/working_with_turbo_studio/shim1.png)
 
 The shim must conform to Turbo Studio interface in order to be loaded properly. Startup shims must be compiled with an exported <b>OnInitialize</b> function. Shutdown shims must be compiled with an exported <b>OnShutdown</b> function. The same DLL can be used for both if both functions are exported.
 

@@ -14,7 +14,7 @@ There are three ways to enable diagnostic mode. With all methods, the log files 
 
 The first way is to create a diagnostic mode build of your container. This is done in studio by selecting the 'Generate diagnostic mode executable' build option.
 
-![](/docs/building/working_with_turbo_studio/DIAGNOSTIC1.png)
+![](/docs/building/working_with_turbo_studio/diagnostic1.png)
 
 The second way is using a command line parameter. This allows access to diagnostic information without rebuilding your container package.
 

@@ -63,7 +63,7 @@ First open the Local Group Policy Editor:
 
 Select the **Add-on Management** node under "Computer Configuration/Administrative Templates/Windows Components/Internet Explorer/Security Features" in the Local Computer Policy panel.
 
-![](/docs/deploying/integration_tools/REDIRECTOR1.png)
+![](/docs/deploying/integration_tools/redirector1.png)
 
 Double click **Add-on List** in the detailed view.
 
@@ -71,7 +71,7 @@ Select **Enabled** and click the **Show** button in the **Options** panel.
 
 Add a new entry with **Value name** set to "{DEC8F2AC-A81F-4BC9-A973-41EE4C4AF116}" and **Value** set to "1". The **Value name** corresponds to the class identifier (CLSID) of the Browser Helper Object. The **Value** is a number indicating whether Internet Explorer should deny or allow the add-on to be loaded. Setting Value to "1" means that an add-on should be allowed. Enter a "2" to allow the add-on to be loaded and permit the user to manage the add-on through -Add-on Manager-. We recommend using "1" for most administration scenarios.
 
-![](/docs/deploying/integration_tools/REDIRECTOR2.png)
+![](/docs/deploying/integration_tools/redirector2.png)
 
 Click **OK** to save options and close the dialog.
 
@@ -83,7 +83,7 @@ If the Turbo Sandbox Manager is not running you may see an Internet Explorer Sec
 
 Go to **Tools** (Alt + X) and open **Manage Add-ons** (M).
 
-![](/docs/deploying/integration_tools/REDIRECTOR3.png)
+![](/docs/deploying/integration_tools/redirector3.png)
 
 Turbo.net Browser Helper should be included in the list of currently loaded add-ons and be enabled. Note that actions to change the status of the Turbo.net Browser Helper are disabled.
 
@@ -109,7 +109,7 @@ Run the Local Group Policy Editor:
 
 Select **Extensions** node under "Computer Configuration/Administrative Templates/Google/Google Chrome" in the Local Computer Policy panel.
 
-![](/docs/deploying/integration_tools/REDIRECTOR4.png)
+![](/docs/deploying/integration_tools/redirector4.png)
 
 Double click on the **Configure the list of force-installed apps and extensions** in the detailed view.
 
@@ -119,7 +119,7 @@ Add the following entry to the list of **Extension/app ids and update URLs to 
 
 The first value is the Id of the Turbo.net Extension. The URL points to the standard Chrome Web Store update service.
 
-![](/docs/deploying/integration_tools/REDIRECTOR5.png)
+![](/docs/deploying/integration_tools/redirector5.png)
 
 Click **OK** to save options and close the dialog.
 
@@ -127,7 +127,7 @@ Press the **Apply** button to update the policy settings and **OK** to close t
 
 To verify that local policy settings are applied correctly launch Google Chrome and go to **chrome://extensions** URL.
 
-![](/docs/deploying/integration_tools/REDIRECTOR6.png)
+![](/docs/deploying/integration_tools/redirector6.png)
 
 The Turbo.net Extension should be listed on the page with the **Enabled** checkbox set but not available for user interaction and a badge informing that the extension was installed by enterprise policy.
 
