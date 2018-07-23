@@ -1,4 +1,4 @@
-### Deploying
+### Browser Redirector
 
 The Turbo URL Redirector is a native browser extension that assists in web navigation by processing clicked hyperlinks and URLs entered in the navigation bar. The extension can be configured to open specified domains using a browser available on [Turbo.net](https://turbo.net/) or a local Turbo Server.
 
