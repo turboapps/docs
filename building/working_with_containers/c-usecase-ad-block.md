@@ -64,3 +64,27 @@ Before submitting an application image, you may want to verify how an applicati
 
 Once the changes have been tested, they can be applied with the **turbo commit** command using the same flags.
 
+#### Blocking Adult Content
+
+The **Block Adult Content** routes layer can be used with any Turbo container, including web browsers, email clients, instant messengers, or any other applications. The layer contains a set of IP routing rules that automatically block connections to adult content sites.
+
+The host list in the **Block Adult Content** routes layer is updated automatically by TurboBuild based on published databases of adult content sites. Updates are propagated automatically to subscribed devices if automatic updates are enabled.
+
+To enable network-based adult content blocking on your own applications, right-click on the application and press the **Settings** context menu button in the **Applications** tab of the dashboard. Then select the **Network** tab and click the **Add** button next to the **Block Adult Content** layer.
+
+The layer can also be applied using the command line interface. To use the layer, insert **block-adult-routes** into the image list. For example, to run Chrome with adult sites blocked, use the command:
+
+```
+> turbo run block-adult-routes,chrome
+```
+
+#### Blocking Social Networks
+
+The **Block Social Networks** routes layer can be used to block access to popular social networking sites (Facebook, Twitter, YouTube, etc) from any Turbo web browser. A full list of the blocked sites are listed [here](https://raw.githubusercontent.com/turboapps/turbome/master/turbobrowsers/block-ad-routes/social-networks/routes.txt).
+
+As with ad and adult content blocking, you can add this layer from your turbo.net dashboard with **Block Social Networks** layer or from the command line:
+
+```
+> turbo run block-social-routes,chrome
+```
+
