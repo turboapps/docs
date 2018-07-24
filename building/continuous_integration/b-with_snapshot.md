@@ -88,6 +88,25 @@ Next, add a build step **Take Studio snapshot** and setup it in the following wa
 
 ![](/docs/building/continuous_integration/snapshot5.png)
 
+Select the **Generate using template** option for installation script.
+
+Specify **/S** to force a silent install.
+
+Select the **Ignore exit code** checkbox.
+
+Use a **Fixed** startup file set to **@PROGRAMFILESX86@\Image-Line\FL Studio 12\FL.exe**. For most applications, the default startup file selection made by Turbo Studio is sufficient.
+
+Optionally, select the **Overwrite** checkbox if you want Jenkins to continue the build in case an image with the same version is already available in the Turbo.net Hub. Otherwise, the build will be aborted.
+
+Save the build project and go back to the main Jenkins dashboard.
+
+#### Trigger the Build
+
+Open the context menu next to project name and click **Build Now**.
+
+![](/docs/building/continuous_integration/snapshot6.png)
+
+The build should finish in approximately half an hour. The FL Studio image will be saved in a local repository. If you want to publish it to the Turbo Hub, simply add the build steps **Login to Turbo Hub** and **Push Turbo image**.
 
 
 
