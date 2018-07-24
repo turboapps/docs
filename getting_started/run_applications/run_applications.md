@@ -8,9 +8,9 @@ Use the Dashboard to access your applications. Left click on an application to s
 
 To specify the launch behavior click on the settings gear located at the upper right of your dashboard. This setting controls where the application will execute for your left-click launches.
 
-1. Cloud (Browser): the application will execute in the cloud and stream to the user’s device via an HTML5 browser.
-2. Cloud (Windowed): the application will execute in the cloud and stream to the user’s device via the Turbo Client. This requires the user to have the Turbo Client installed on a Windows or Mac system.
-3. My Machine: the application will execute locally on the user’s device. This requires the user to have the Turbo Client installed on a Windows system.
+1. **Cloud (Browser)**: the application will execute in the cloud and stream to the user’s device via an HTML5 browser.
+2. **Cloud (Windowed)**: the application will execute in the cloud and stream to the user’s device via the Turbo Client. This requires the user to have the Turbo Client installed on a Windows or Mac system.
+3. **My Machine**: the application will execute locally on the user’s device. This requires the user to have the Turbo Client installed on a Windows system.
 
 ![](/docs/getting_started/run_applications/setting-the-default-launch-setting-1.png)
 
@@ -34,3 +34,5 @@ Turbo for Mac allows launching applications in the cloud. Left click on an appli
 ![](/docs/getting_started/run_applications/launch-app-from-mac.png)
 
 Turbo also supports streaming applications from the cloud to your mobile device. Install Turbo for iOS or Android from the app store and launch desktop applications using the touch screen interface.
+
+
