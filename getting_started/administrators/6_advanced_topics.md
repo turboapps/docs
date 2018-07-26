@@ -34,7 +34,7 @@ Continuing execution of container python#a37b20f9 in state cc525b1b
 
 Turbo.net uses efficient *differential synchronization* techniques that only transmit information on changes across devices. The entire container does not need to be copied across devices if the other machine already has some of the container information. This makes it much faster to migrate state across devices.
 
-### Importing third party package formats
+#### Importing third party package formats
 
 Turbo.net supports importing of several application package formats directly into Turbo container images. This is useful if investment has already been made in packaging applications in a third party package format.
 

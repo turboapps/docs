@@ -92,7 +92,7 @@ By default, committing will generate a final image that also contains the base `
 > turbo commit --no-base 3df234f3 simple-java-webserver
 ```
 
-### Creating releases
+#### Creating releases
 
 Each time an image is pushed a new version is generated. But usually only certain versions are released to end users. These images can be marked as releases using the `turbo release` command.
 

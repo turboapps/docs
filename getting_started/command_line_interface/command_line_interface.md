@@ -2,7 +2,7 @@
 
 The Turbo Command Line Interface allows advanced users and administrators to execute, modify, and create Turbo applications in an automated manner. Install the [Turbo for Windows](https://turbo.net/downloads) to get started.
 
-### Creating a container
+### Creating Containers
 
 A container is an instance of a Turbo Application. The `new` command creates and starts a new container.
 
@@ -56,7 +56,7 @@ To exit a container, exit all processes that were started in the container. In o
 Process exited with status 0
 ```
 
-### Starting an existing container
+### Starting Existing Containers
 
 The container still exists even though we exited all processes and it was shut down.
 
@@ -75,7 +75,7 @@ Running existing container clean#8104e501 with visibility private
 
 In this example, we used the full container identifier. If there is no danger of ambiguity, you can use any prefix of a container identifier to specify the container. For example, we could have used `turbo start 810` so long as there were no other containers with identifiers starting in `810`.
 
-### Deleting a container
+### Deleting Containers
 
 Suppose we are done with our container. We can remove it from our local repository using the rm command.
 
@@ -96,7 +96,7 @@ All containers have been removed
 
 This restores us to a nice clean desktop!
 
-### Running applications from the Hub
+### Running Hub Images
 
 Creating an empty container is nice, but really we want to run real applications.
 

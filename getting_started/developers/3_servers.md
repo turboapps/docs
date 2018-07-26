@@ -18,7 +18,7 @@ Note that we have used container linking and naming to connect the SSMS manageme
 
 Login using the username `sa` and password `password1` to the database servers `sql1` and `sql2`. You can confirm the two databases are manageable through the client and are two distinct versions.
 
-### Multiple instances of a single server
+#### Multiple instances of a single server
 
 In this example, we’ll use *TCP port mapping*, a special case of network routing, to run multiple instances of the Ghost blogging engine on the same host.
 
