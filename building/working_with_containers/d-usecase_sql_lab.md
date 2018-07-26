@@ -35,7 +35,7 @@ Create a **turbo.me** file which will be used to build the image. If prompted, s
 
 Add the following content to the **turbo.me** file:
 ```
-### This TurboScript creates a content image to use with sqlserver/sqlserver-express
+# This TurboScript creates a content image to use with sqlserver/sqlserver-express
 
 # Copy the content from the TurboScript directory.
 copy script.sql c:\sql-content\script.sql
@@ -81,7 +81,7 @@ Once the data is copied out of the container, it may be discarded:
 
 Now that the sample database is present, append a line to the **turbo.me** file to copy the **DATA** folder into the custom image during the image build process:
 ```
-### This TurboScript creates a content image to use with sqlserver/sqlserver-express
+# This TurboScript creates a content image to use with sqlserver/sqlserver-express
 
 # Copy the content from the TurboScript directory.
 copy script.sql c:\sql-content\script.sql
