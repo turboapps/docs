@@ -1,4 +1,4 @@
-## Turbo for Windows
+### Turbo for Windows
 
 Click on **Settings** at the bottom right of the Turbo Launcher to bring up the Settings dialog. 
 
@@ -13,7 +13,7 @@ Click on **Settings** at the bottom right of the Turbo Launcher to bring up the 
 
 ![](/docs/getting_started/advanced_settings/configuring-the-default-launch-setting-for-applications.png)
 
-## Turbo for Mac 
+### Turbo for Mac 
 
 Click on the **gear (⚙)** icon at the top-right of the Launcher to access the settings.
 

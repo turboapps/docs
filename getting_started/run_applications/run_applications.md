@@ -1,6 +1,6 @@
 Turbo runs Windows applications in the cloud through multiple end user clients. Turbo also allows users to run the same applications natively on your own personal computer without installing them.
 
-# From the Dashboard
+### Dashboard
 
 Use the Dashboard to access your applications. Left click on an application to start it. Right click on an application for advanced options.
 
@@ -14,7 +14,7 @@ To specify the launch behavior click on the settings gear located at the upper r
 
 ![](/docs/getting_started/run_applications/setting-the-default-launch-setting-1.png)
 
-# From the Windows Launcher
+### Windows Launcher
 
 The Left click on an Application to Launch from the Windows Launcher.
 
@@ -27,7 +27,7 @@ Right click to select different locations to launch:
 
 ![](/docs/getting_started/run_applications/launching-an-application-on-local-system-or-cloud.png)
 
-# From Mac, iOS and Android
+### Mac, iOS and Android
 
 Turbo for Mac allows launching applications in the cloud. Left click on an application to start it.
 

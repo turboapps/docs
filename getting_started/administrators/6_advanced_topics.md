@@ -1,8 +1,8 @@
-## Advanced Topics
+### Advanced Topics
 
 Turbo.net has many capabilities that we didn’t discuss in other sections. Here are a few:
 
-### Synchronizing state across machines
+#### Synchronizing state across machines
 
 Turbo.net optionally supports state synchronization. This allows application state to be saved and continue automatically *on a different device*.
 
@@ -45,7 +45,7 @@ In this example, we import a virtual application package from ThinApp into a Tur
 > turbo import -n=appname thinapp C:\thinapp-project\package.ini
 ```
 
-### Container Skinning
+#### Container Skinning
 
 When many container instances are running it can be difficult to distinguish between applications, particularly if they are subtle variants of a single base application. Skinning makes it easy to visually distinguish between container contexts.
 

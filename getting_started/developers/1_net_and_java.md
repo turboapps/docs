@@ -1,10 +1,10 @@
-## .NET and Java
+### .NET and Java
 
 Containers let you deploy applications built on frameworks such as .NET and Java without requiring users to install the .NET Framework or Java runtime.
 
 Containerizing also assures that your application will run reliably regardless of what runtimes may already be installed on the endpoint.
 
-### Getting Started
+#### Getting Started
 
 We will begin by downloading the sample applications from GitHub. A nice trick to do this without installing Git is to create a temporary container with turbo try that is only used to clone the repository. The --mount=%CD%\samples flag is used to poke a hole in the container to the samples directory on the native file system so that the containerized Git application can write to it. (The %CD% special path variable represents the current directory.)
 
@@ -16,7 +16,7 @@ We will begin by downloading the sample applications from GitHub. A nice trick t
 > turbo try --mount=%CD%\samples git -- /c git clone https://github.com/turboapps/samples
 ```
 
-### .NET
+#### .NET
 
 This example shows how to make an image for a .NET Framework application using TurboScript, an automated way to build application images.
 
@@ -44,7 +44,7 @@ cmd copy %CD%\samples\dotnet-helloworld\DotNetHelloWorld.exe c:\myApp
 startup file c:\myApp\DotNetHelloWorld.exe
 ```
 
-### Java
+#### Java
 
 Instead of using TurboScript automation, we will demonstrate a different and more interactive process for containerizing the Java sample application.
 
@@ -115,7 +115,7 @@ ID            Name                   Release   Created                Size
 3a24fade3ea4  simple-java-webserver  1.0       8/22/2014 11:59:59 AM  20.2 MB
 ```
 
-### Deploying to the Turbo.net Hub
+#### Deploying to the Turbo.net Hub
 
 Now that we have built our image, we can deploy it to end users by pushing it to the [Turbo Hub](https://turbo.net/hub).
 

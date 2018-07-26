@@ -1,6 +1,10 @@
 Turbo allows access to the local file system or Online Storage providers such as OneDrive or Dropbox.
 
-# Accessing local system files with Run in Cloud (Windowed)
+### Local File System
+
+Users may access files on their local system when launching an application in the Cloud or on a local container instance.
+
+#### Access local files with Run in Cloud (Windows Launcher)
 
 Users may access files from their local system when they launch an application in the cloud and stream it to their device via the Turbo Client. On the dashboard, this mode is known as **Run in Cloud (Windowed)**.
 
@@ -14,7 +18,15 @@ Files from the local system may also be accessed using the **\\\\TSCLIENT\\\{dri
 
 ![](/docs/getting_started/accessing_files/accessing-files-from-local-system-via-run-in-cloud-windowed-2-bg.png)
 
-# Access local file system files with Mac Launcher
+#### Access local files with Run On My Machine (Windows Launcher)
+
+Users who run Turbo applications on their local Windows Desktop may access the local file system directly. Open the Settings dialog from Turbo Launcher and check the **Access to local user folders** setting.
+
+![](/docs/getting_started/accessing_files/local-user-folder-access.png)
+
+User folders such as Desktop, Downloads, Documents, Music, Pictures, and Videos are now accessible in the Turbo application that are launched on the machine. Non-system drives are also directly accessible. 
+
+#### Access local file system files with Mac Launcher
 
 Users may access files from their local system when they launch an application in the cloud and stream it to their device via Turbo for Mac.
 
@@ -28,17 +40,9 @@ Files from the local system may also be accessed using the \\\\TSCLIENT\\Home re
 
 ![](/docs/getting_started/accessing_files/mac-net-use.png)
 
-# Access local files with Run On My Machine (Windows Launcher)
+### Cloud Storage Services 
 
-Users who run Turbo applications on their local Windows Desktop may access the local file system directly. Open the Settings dialog from Turbo Launcher and check the **Access to local user folders** setting.
-
-![](/docs/getting_started/accessing_files/local-user-folder-access.png)
-
-User folders such as Desktop, Downloads, Documents, Music, Pictures, and Videos are now accessible in the Turbo application that are launched on the machine. Non-system drives are also directly accessible. 
-
-# Connecting a OneDrive storage service to applications
-
-Connecting a cloud storage service, such as OneDrive, to your applications on Turbo.net is a seamless way to access your files quickly.
+Connecting a cloud storage service, such as OneDrive or Dropbox, to your applications on Turbo.net is a seamless way to access your files quickly.
 
 From your dashboard, click on **Files** to access the storage services for your account.
 

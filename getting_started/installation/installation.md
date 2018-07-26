@@ -1,10 +1,10 @@
-# Prerequisites
+#### Prerequisites
 
 Before you get started, you’ll need to create a [Turbo.net account](https://turbo.net/signup).
 
 Once you have created a Turbo.net account, you may run applications in the cloud using an HTML5 compatible browser.
 
-# Recommended
+#### Recommended
 
 Install the Turbo Client on your devices:
 

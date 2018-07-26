@@ -1,8 +1,8 @@
-## Networking
+### Networking
 
 Turbo containers have a virtual networking stack that can be customized on a per-container basis. You can also connect containers with one another and with the host device’s network adapters.
 
-### Site whitelisting
+#### Site whitelisting
 
 The route-block and route-add flags control which domains and protocols are allowed to interact with the container.
 
@@ -16,7 +16,7 @@ This will launch a new Firefox browser with all IP addresses blocked except for 
 
 Routing rules are applied in left-to-right order. The first rule blocks all IP traffic. Subsequent rules can then add back specific routes. In our example, we could have added additional `--route-add` arguments to allow access to additional web sites. The `ip://` prefix indicates that all IP traffic, including both TCP and UDP protocols, should be affected by the routing rule.
 
-### Virtual networks
+#### Virtual networks
 
 Suppose we want to run multiple containers on an isolated virtual network such that the containers can communicate with one another.
 
@@ -35,7 +35,7 @@ The `--network` flag creates a *named virtual network*. Containers started in th
 
 Notice that the Firefox browser is able to connect to the WordPress server at the `http://web:8080` address. You may also confirm that the WordPress server is not externally accessible on the device.
 
-### Container linking
+#### Container linking
 
 It is also possible to connect individual containers together via *container linking*.
 
@@ -54,7 +54,7 @@ Container linking provides more fine grained control over container interactions
 
 This example also demonstrates the use of container name remapping. In this case, we mapped Firefox to the `web` container as before but modified its DNS entry to `mywordpress.com`.
 
-### Network layering
+#### Network layering
 
 Network configurations can be stored in images and layered just like any other image. This is very useful when applying the same set of routing rules to multiple images. The Turbo.net Hub also provides pre-configured network routing images.
 

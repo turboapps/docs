@@ -1,10 +1,10 @@
-## Desktop Integration
+### Desktop Integration
 
 Sometimes we want containers to behave as isolated environments. Other times, we want the container to interact (in a managed way) with the host desktop.
 
 Turbo lets you to control the level and types of integration with the host desktop.
 
-### Accessing local files
+#### Accessing local files
 
 You may have noticed in previous examples that you could not access the **My Documents** or **My Downloads** file when using containerized applications. This is because the container has its own instance of the filesystem by default. In many cases, we may want to allow access to these built-in folders.
 
@@ -18,7 +18,7 @@ To solve this, Turbo provides a built-in isolation mode that de-isolates all maj
 
 When **Notepad++** starts, notice that you can view and edit files in your user folders.
 
-### Shell integration
+#### Shell integration
 
 Full desktop integration extends beyond just the ability to access the host filesystem. For example, we may want the application’s Start Menu shortcuts, file associations, and other shell integrations to work as if the application was natively installed.
 

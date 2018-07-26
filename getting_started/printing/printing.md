@@ -1,6 +1,6 @@
 Turbo applications can access the local printer using native remote desktop printer redirection. The HTML5 client will allow printing to a PDF file.
 
-# From the Browser
+### From the Browser
 
 To print from the HTML5 client, select the **Print to PDF** printer.
 
@@ -10,7 +10,7 @@ The printer will download a PDF file through the browser. Open the PDF and print
 
 ![](/docs/getting_started/printing/downloaded-pdf.png)
 
-# From Turbo Launcher
+### From Launcher
 
 If the Turbo application is executing on the local machine, the printer should automatically be visible to the application.
 

@@ -1,10 +1,10 @@
-## Automation
+### Automation
 
 When operating in a developer environment, the recommended practice is to automate creation of Turbo images.
 
 Turbo supports a flexible scripting language called TurboScript. In this section, we’ll see how to use TurboScript in conjunction with different external tools to automate container builds.
 
-### Building images with TurboScript
+#### Building images with TurboScript
 
 In this example, we’ll use TurboScript to automatically build **VLC Media Player**, a popular media player for Windows.
 
@@ -24,7 +24,7 @@ After a couple minutes, a new **vlc** image should be created. Try running it to
 > turbo run vlc
 ```
 
-### Inside TurboScript
+#### Inside TurboScript
 
 Let’s look at what this script does. It starts by defining the *namespace*, *name* and *title* of the container image that will be created.
 
@@ -98,7 +98,7 @@ cmd python getVersion.py
 
 We were only able to cover some TurboScript basics here. To learn more, view the [TurboScript Reference Guide](https://turbo.net/docs/reference/turboscript).
 
-### Scripting builds
+#### Scripting builds
 
 Now that we have our TurboScript and a command to run the build, we need to automate the rest of the build process.
 
@@ -119,7 +119,7 @@ turbo push <name>
 
 Once the image is pushed, other users and processes can pull and run it instantly!
 
-### Integrating with MSBuild and Visual Studio
+#### Integrating with MSBuild and Visual Studio
 
 Now let's integrate our container build step with MSBuild, Visual Studio's build system. (The same basic steps will work with any IDE.)
 
@@ -137,7 +137,7 @@ For solutions with multiple projects, we recommend only triggering a post-build 
 
 As before, you could also optionally add a `turbo push` event to automatically generate a repository version on each build. This is the recommended practice for continuous integration style development.
 
-### Automating with Jenkins
+#### Automating with Jenkins
 
 Jenkins is a popular and free open source continuous integration (CI) system. Turbo directly integration with Jenkins that allows container images to be built as part of the CI process.
 
@@ -155,7 +155,7 @@ We want to push the container image created to the Hub, so we add a **Push Turbo
 
 Save the new Jenkins job and trigger a run to see your automated build in action!
 
-### Automating Turbo with Chocolatey
+#### Automating Turbo with Chocolatey
 
 Chocolatey is a package manager for Windows desktop applications. We can use TurboScript to leverage Chocolatey to create Turbo images. This is powerful since any application with a Chocolatey package can be used to create a Turbo container. As of this writing there are nearly 3,000 distinct Chocolatey packages available.
 
@@ -203,13 +203,13 @@ VLC should launch:
 
 ![](/docs/getting_started/administrators/vlc-launch.png)
 
-### Sample TurboScripts on GitHub
+#### Sample TurboScripts on GitHub
 
 TurboScripts for many popular applications have been open sourced and are available in the [turboapps GitHub repository](https://github.com/turboapps/turbome).
 
 Looking at examples is a quick way to pick up the basics of TurboScript. Pull these down, customize your builds -- and remember to contribute your own TurboScripts back to the community by sending a pull request!
 
-### API keys for scripting and authentication
+#### API keys for scripting and authentication
 
 To allow authentication in the context of scripting and automation, Turbo supports authentication via *API keys*. API keys eliminate the need to hard code passwords or pass them as parameters to your scripts.
 
