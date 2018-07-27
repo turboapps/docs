@@ -1,4 +1,4 @@
-### Use Case: Legacy Internet Explorer and Java
+### Legacy Internet Explorer and Java
 
 A common use case in enterprise environments is using legacy Internet Explorer browser with old versions of Java. Many line of business web applications and plugins no longer work with the latest browsers. Using a legacy browser container can solve that problem and still allow your users to have all the latest operating system patches.
 

@@ -1,4 +1,4 @@
-### Use Case: SQL Test Lab Environments
+### SQL Test Lab Environments
 
 Turbo.net is a great way to provide online learning and test lab environments for SQL Server and other complex applications. Turbo VMs provide the user with a ready-to-use database server, sample content, and test IDE environment -- without requiring any setup or modifying the host desktop.
 

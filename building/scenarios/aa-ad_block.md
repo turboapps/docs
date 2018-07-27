@@ -1,4 +1,4 @@
-### Use Case: Browser Ad Blocking
+### Browser Ad Blocking
 
 Ad blocking is important for improving user experience, maximizing performance, and eliminating an important source of security vulnerabilties.
 
@@ -6,7 +6,7 @@ Turbo automatically provides ad blocking in popular web browsers such as Chrome 
 
 This article will explain Turbo's built-in browser ad blocking and network routing-based container ad blocking technology.
 
-#### Browser Ad Blocking
+#### Browser Ad Blocking on Turbo.net
 
 Popular web browsers in the Turbo Hub such as Chrome and Firefox come pre-configured with ad blocking.
 
