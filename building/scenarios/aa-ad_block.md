@@ -1,4 +1,4 @@
-### Use Case: Browser Ad Blocking
+### Browser Ad Blocking
 
 Ad blocking is important for improving user experience, maximizing performance, and eliminating an important source of security vulnerabilties.
 
@@ -6,11 +6,11 @@ Turbo automatically provides ad blocking in popular web browsers such as Chrome 
 
 This article will explain Turbo's built-in browser ad blocking and network routing-based container ad blocking technology.
 
-#### Browser Ad Blocking
+#### Browser Ad Blocking on Turbo.net
 
 Popular web browsers in the Turbo Hub such as Chrome and Firefox come pre-configured with ad blocking.
 
-![](/docs/building/working_with_containers/adblock1.png)
+![](/docs/building/scenarios/adblock1.png)
 
 Turbo uses the [uBlock Origin](https://github.com/gorhill/uBlock) plugin, a popular open source system currently installed on millions of devices. Turbo augments the default configuration with data on additional advertising networks. The ad block plugin and databases are automatically updated as part of Turbo's automatic browser patching system -- users or administrators don't need to do anything!
 
@@ -24,7 +24,7 @@ Applications containing advertising in the Turbo.net Hub have this layer enabled
 
 To enable network-based ad blocking on your own applications, right-click on the application and press the **Settings** context menu button in the **Applications** tab of the dashboard. Then select the **Network** tab and click the **Add** button next to the **Block Ad Networks** layer:
 
-![](/docs/building/working_with_containers/adblock2.png)
+![](/docs/building/scenarios/adblock2.png)
 
 Finally, click **Save**.
 

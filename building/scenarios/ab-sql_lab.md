@@ -1,4 +1,4 @@
-### Use Case: SQL Test Lab Environments
+### SQL Test Lab Environments
 
 Turbo.net is a great way to provide online learning and test lab environments for SQL Server and other complex applications. Turbo VMs provide the user with a ready-to-use database server, sample content, and test IDE environment -- without requiring any setup or modifying the host desktop.
 
@@ -118,9 +118,9 @@ For ease, this example is already available on the Turbo.net hub: **sqlserver/sq
 
 Login to the default instance with **sa** and **password1**:
 
-![](/docs/building/working_with_containers/sql1.png)
+![](/docs/building/scenarios/sql1.png)
 
 From inside the container SSMS, open **c:\sql-content\script.sql** and execute:
 
-![](/docs/building/working_with_containers/sql2.png)
+![](/docs/building/scenarios/sql2.png)
 
