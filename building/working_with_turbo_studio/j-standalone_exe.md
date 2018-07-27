@@ -138,18 +138,18 @@ The solution for this is to split your package into two pieces, one small .exe a
 Follow these steps to convert your existing container image xappl:
 * Save a copy of your xappl as data.xappl.
 * Open data.xappl in Turbo Studio
-    * Change the "Project Type" to "Component"
+    * Change the **Project Type** to **Component**
     ![](/docs/building/working_with_turbo_studio/4gbexe2.png)
     
-    * Change the "Output File" to "data.svm"
+    * Change the **Output File** to **data.svm**
     ![](/docs/building/working_with_turbo_studio/4gbexe3.png)
     
     * Save the file and build
 * Open your existing xappl in Turbo Studio
-    * Add "@APPDIR@\data.svm" to the list of required layers
+    * Add **@APPDIR@\data.svm** to the **SVM Search Pattern** and **data.svm** to the list of required layers
     ![](/docs/building/working_with_turbo_studio/4gbexe4.png)
     
-    * Remove everything from &lt;Filesystem&gt; and &lt;Registry&gt; nodes. If you have multiple layers, you can remove all layers other than the 'default' layer. If your application is configured to inherit metadata and icons from the startup file, then you will need to keep the startup file .exe in the &lt;Filesystem&gt; node (including its full directory hierarchy).  
+    * Remove everything from &lt;Filesystem&gt; and &lt;Registry&gt; nodes. If you have multiple layers, you can remove all layers other than the **default** layer. If your application is configured to inherit metadata and icons from the startup file, then you will need to keep the startup file .exe in the &lt;Filesystem&gt; node (including its full directory hierarchy).  
     
     ![](/docs/building/working_with_turbo_studio/4gbexe5.png)
     
