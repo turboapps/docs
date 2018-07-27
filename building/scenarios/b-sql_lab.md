@@ -118,9 +118,9 @@ For ease, this example is already available on the Turbo.net hub: **sqlserver/sq
 
 Login to the default instance with **sa** and **password1**:
 
-![](/docs/building/working_with_containers/sql1.png)
+![](/docs/building/scenarios/sql1.png)
 
 From inside the container SSMS, open **c:\sql-content\script.sql** and execute:
 
-![](/docs/building/working_with_containers/sql2.png)
+![](/docs/building/scenarios/sql2.png)
 
