@@ -6,7 +6,7 @@ API keys allow you to login to the Turbo.net or Turbo Server hub without the use
 
 The first step is to create an API key.  To do this, go to your account or organization's dashboard page, click the **Setting** button, click the **Profile and Account** button, and then select **Device and API Keys** on the right menu.
 
-![](/docs/deploying/to_citrix/apikey1.png)
+![](/docs/deploying/tips/apikey1.png)
 
 Once here, click **Add API Key** to generate a new key. Press the **Remove** button to remove the key and revoke its access to your organization. There is no limit to the number of keys you can generate.  You may decide to create and manage different keys for different teams or for different user access, allowing you the flexibility to revoke them independently without disrupting all key users.
 

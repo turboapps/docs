@@ -40,43 +40,43 @@ In Windows Firewall, an **Outbound Rule** is used to control how an application 
 
 Open the **Windows Firewall** from the **Control Panel**.
 
-![](/docs/deploying/to_citrix/firewall1.png)
+![](/docs/deploying/tips/firewall1.png)
 
 Click on **Advanced Settings** link.
 
-![](/docs/deploying/to_citrix/firewall2.png)
+![](/docs/deploying/tips/firewall2.png)
 
 Click on **Outbound Rules** and then **New Rule...**.
 
-![](/docs/deploying/to_citrix/firewall3.png)
+![](/docs/deploying/tips/firewall3.png)
 
 Select the **Program** rule type and then next.
 
-![](/docs/deploying/to_citrix/firewall4.png)
+![](/docs/deploying/tips/firewall4.png)
 
 Enter the path to the application stubexe and then next.
 
-![](/docs/deploying/to_citrix/firewall5.png)
+![](/docs/deploying/tips/firewall5.png)
 
 For our example we will block all connections from the application. Then press next.
 
-![](/docs/deploying/to_citrix/firewall6.png)
+![](/docs/deploying/tips/firewall6.png)
 
 Apply to all networks then press next.
 
-![](/docs/deploying/to_citrix/firewall7.png)
+![](/docs/deploying/tips/firewall7.png)
 
 Give the rule a name and description, then press next.
 
-![](/docs/deploying/to_citrix/firewall8.png)
+![](/docs/deploying/tips/firewall8.png)
 
 Now your new rule will be added to those that Windows adds by default. 
 
-![](/docs/deploying/to_citrix/firewall9.png)
+![](/docs/deploying/tips/firewall9.png)
 
 Running firefox again from the same container yields a different result this time.
 
-![](/docs/deploying/to_citrix/firewall10.png)
+![](/docs/deploying/tips/firewall10.png)
 
 
 #### Customizing the StubExe Path
@@ -85,11 +85,11 @@ By default the stubexe path is inside the sandbox. However, this can make it dif
 
 You can set the **Application stub cache location** to any local path.
 
-![](/docs/deploying/to_citrix/firewall11.png)
+![](/docs/deploying/tips/firewall11.png)
 
 Now the application stubexe will always be cached in a well known location that you can set your universal rules to point to.
 
-![](/docs/deploying/to_citrix/firewall12.png)
+![](/docs/deploying/tips/firewall12.png)
 
 
 #### Adding Rules Programatically
