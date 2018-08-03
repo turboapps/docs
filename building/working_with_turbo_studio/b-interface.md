@@ -4,29 +4,71 @@ Using Turbo Studio enables you to configure the filesystem and registry of a con
 
 #### Title Bar
 
+![](/docs/building/working_with_turbo_studio/ui1.png)
+
 - The Start Menu button, or the circle at the top left of the window, enables container configurations to be created, opened, saved, imported, applied, and closed.
 - The Options bar provides Turbo Studio customization options, the ability to set proxy settings, and install certificates.
 - The Help bar provides access to Turbo Studio documentation.
 
 #### Ribbon Bar
 
-- The container tab provides access to the snapshot, build features, and output configuration options such as the startup file, output directory, and diagnostic-mode selection.
-- The Runtimes tab provides a selection of auto-configurable runtime engines which can be embedded into your application. These include .NET Framework, Java, Flash, Shockwave, Acrobat Reader, and SQL Server 2005 Express.
-- The Advanced tab provides functions such as Platform Merge and Streaming.
+![](/docs/building/working_with_turbo_studio/ui2.png)
+
+- The **Virtual Application** tab provides access to the snapshot, build features, and output configuration options such as the startup file, output directory, and diagnostic-mode selection.
+- The **Runtimes** tab provides a selection of auto-configurable runtime engines which can be embedded into your application. These include .NET Framework, Java, Flash, Shockwave, Acrobat Reader, and SQL Server 2005 Express.
+- The **Advanced** tab provides functions such as viewing embedded layers and platform merge.
+
+##### Snapshot
+
+- **Capture Before** button is to capture the machine state before you install your application for a snapshot.
+- **Capture and Diff** button is to capture the machine state after you install your application for a snapshot.
+
+For more information on the snapshot process, see **Snapshot** documentation.
+
+##### Build
+
+- **Build** button is to build your container image output.
+- **Build and Run** button is to build your container image output and then execute it for testing purposes.
+- **Run and Merge** button builds your container image and then executes it within Turbo Client Runtime environment. Any changes made while inside the container environment will be added back to the configuration after the application is shutdown. This can be used to quickly set defaults in your container image.
+
+##### Output
+
+- **Startup File** field is to set the path to the application which runs when starting your container. The **Multiple** button shows the **Startup File** manager dialog where additional settings can be specified.
+- **Output File** field is the name of the file that is created when your container image configuration is built.
+- **Project Type** dropdown allows you to set the type of output to generate. The following values are possible:
+    - **Layer (.svm)** is a bare Turbo container image file that can be push to Turbo.net Hub, used in Turbo Server, imported into the Turbo.net Client Runtime environment, or used as a dependency in another project.
+    - **Portable Application (.exe)** is a packaged executable file which contains the Turbo.net Client Runtime components and integrates in to Turbo.net Hub or Turbo Server.
+    - **Standalone/ISV Application (.exe)** is a standalone executable file with no dependence on the Turbo.net Client Runtime or Turbo.net Hub. This output type requires an Enterprise or ISV license for Turbo Studio.
+- **Options** button shows the **Output Options** dialog. This is used to enable diagnostics for .exe outputs or configure **Portable Executable** settings.
+
+##### Tools
+
+- **Configuration Wizard** button shows the startup wizard where there are quick links to common process wizards; building from template, snapshot, install into a container, or manual configuration.
+- **Snapshot Merge** button allows a container sandbox changes to be imported into the configuration. 
+- **Import Configuration** button allows a container image to be imported from an external source; from .svm/.exe file, the Turbo.net Hub, or from the local Turbo.net Client Runtime repository.
+
+##### Publish
+
+- **Publish to Server** button allows an output container image to be pushed directly to the Turbo.net Hub or a Turbo Server instance.
+- **Publish to Local Repository** button allows an output container image to be pushed to the local Turbo.net Client Runtime repository.
 
 #### Left-side Button Panes
+
+![](/docs/building/working_with_turbo_studio/ui3.png)
 
 - The **Filesystem** pane displays the application virtual filesystem and enables you to add and remove virtual files and directories.
 - The **Registry** pane displays the application virtual registry and enables you to add and remove virtual registry keys and data values.
 - The **Settings** pane enables you to configure container metadata, startup image, startup/shutdown shims, and process configuration options.
-- The **Network** pane enables you to configure container proxy and DNS settings.
-- The **Components** pane enables you to add external container components.
-- The **Setup** pane enables you to configure the MSI setup package, shortcuts, and other shell integration options.
+- The **Layers** pane enables you to add external container components.
+- The **Install** pane enables you to configure the MSI setup package, shortcuts, and other shell integration options.
 - The **Expiration** pane enables you to configure application expiration options.
+- The **Network** pane enables you to configure container proxy and DNS settings.
 
 **Note:** Turbo Studio users are responsible for any third-party licensing compliance for redistributable components included using virtualization.
 
 #### Virtual Filesystem
+
+![](/docs/building/working_with_turbo_studio/ui4.png)
 
 Turbo Studio enables you to embed a *virtual filesystem* into your executable. Embedded files are accessible by your Turbo-processed application as if they were present in the actual filesystem. Virtual files are isolated from the host device. Virtual files do not require security privileges on the host device regardless of whether the virtual files reside in a privileged directory. Because virtual files are embedded in the application executable, shared DLLs do not interfere with those installed by other applications on the host device.
 
@@ -35,6 +77,8 @@ In the event of a conflict between a file in the virtual filesystem and a file p
 **Note:** When running a container on Windows 7, the **All Users Directory\Application Data** and **All Users Directory** root folders will map to the same folder at runtime. To prevent one setting from overriding another, verify that the isolation settings for these folders are the same.
 
 ##### Isolation Modes
+
+![](/docs/building/working_with_turbo_studio/ui5.png)
 
 Folders may be containerized in **Full**, **Merge**, **Write Copy**, or **Hide** mode.
 
@@ -47,6 +91,8 @@ Folders may be containerized in **Full**, **Merge**, **Write Copy**, or **Hide**
 
 ##### File Attributes
 
+![](/docs/building/working_with_turbo_studio/ui6.png)
+
 - **Hidden**: Files and folders can be hidden from shell browse dialogs and other applications. This is used to prevent internal components and data files from being displayed to the user. To hide a file or folder, select the checkbox in the **Hidden** column adjacent to the desired file or folder.
 	**Note**: The **Hidden Flag** is NOT the same as the **Hide** isolation mode. Enabling the **Hidden Flag** prevents a file or folder from displaying in browse dialogs or from directory enumeration APIs; it does not prevent the application (and potentially the end-user) from accessing the folder or file contents by direct binding. To prevent the file or folder from being found by the application, enable **Hide** isolation mode.
 - **Read Only**: Flagging files and folders as read-only prevents the application from modifying the file or folder contents. To make a file or folder read-only, select the checkbox in the **Read Only** column next to the desired file or folder.
@@ -55,11 +101,15 @@ Folders may be containerized in **Full**, **Merge**, **Write Copy**, or **Hide**
 
 ##### Filesystem Compression
 
+![](/docs/building/working_with_turbo_studio/ui7.png)
+
 To reduce executable size, Turbo Studio can compress virtual filesystem contents. This reduces container size by approximately 50% but also prevents profiling and streaming of the application. By default, the **Compress Payload** option in the **Process Configuration** area of the **Settings** panel is unchecked. Leave this box unchecked during the build process if the application will be optimized for streaming from Turbo Virtual Desktop Server.
 
 **Note**: Disabling payload compression may significantly increase the size of the container binary.
 
 #### Virtual Registry
+
+![](/docs/building/working_with_turbo_studio/ui8.png)
 
 Turbo Studio enables you to embed a virtual registry into your executable. Embedded registry keys are accessible by your Turbo-processed application as if they were present in the actual registry. Virtual registry keys are isolated from the host device. Virtual registry keys do not require security privileges on the host device regardless of whether the virtual files reside in a privileged directory. Because virtual registry entries are embedded in the application executable, other applications are unable to disrupt application execution by inadvertent modification of registry entries.
 
@@ -80,9 +130,15 @@ Keys may be containerized in **Full**, **Merge**, **Write Copy**, or **Hide** mo
 
 	**Tip**: To apply selected isolation modes to all subkeys, right-click on the key, choose **Isolation**, select the checkbox for **Apply to Subkeys**, then **OK**.
 
+##### Key Attributes
+
+![](/docs/building/working_with_turbo_studio/ui8.png)
+
 - **No Sync**: This feature only applies to containers that are delivered and managed by Turbo Virtual Desktop Server. By default, keys and values in the virtual registry can be synchronized to a user's Turbo account. This enables the application state to be maintained across different devices that are Turbo enabled. If there are keys in the virtual registry that should not be synchronized and remain only on the local device, select the checkbox in the **No Sync** column next to the desired key. This setting is managed on a key level and applies to all values within that folder.
 
 ##### Importing Registry Hive Files
+
+![](/docs/building/working_with_turbo_studio/ui10.png)
 
 Turbo Studio can import registry hive (.reg) files into the virtual registry. To import a .reg file, select the **Import** button in the **Registry** panel, then choose the registry hive file to import.
 
