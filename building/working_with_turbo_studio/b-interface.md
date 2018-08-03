@@ -6,9 +6,9 @@ Using Turbo Studio enables you to configure the filesystem and registry of a con
 
 ![](/docs/building/working_with_turbo_studio/ui1.png)
 
-- The Start Menu button, or the circle at the top left of the window, enables container configurations to be created, opened, saved, imported, applied, and closed.
-- The Options bar provides Turbo Studio customization options, the ability to set proxy settings, and install certificates.
-- The Help bar provides access to Turbo Studio documentation.
+- The **Start Menu** button, or the circle at the top left of the window, enables container configurations to be created, opened, saved, imported, applied, and closed.
+- The **Options** bar provides Turbo Studio customization options, the ability to set proxy settings, and install certificates.
+- The **Help** bar provides access to Turbo Studio documentation.
 
 #### Ribbon Bar
 
@@ -29,15 +29,15 @@ For more information on the snapshot process, see **Snapshot** documentation.
 
 - **Build** button is to build your container image output.
 - **Build and Run** button is to build your container image output and then execute it for testing purposes.
-- **Run and Merge** button builds your container image and then executes it within Turbo Client Runtime environment. Any changes made while inside the container environment will be added back to the configuration after the application is shutdown. This can be used to quickly set defaults in your container image.
+- **Run and Merge** button builds your container image and then executes it within the Turbo Client Runtime environment. Any changes made while inside the container environment will be added back to the configuration after the application is shutdown. This can be used to quickly set defaults in your container image.
 
 ##### Output
 
 - **Startup File** field is to set the path to the application which runs when starting your container. The **Multiple** button shows the **Startup File** manager dialog where additional settings can be specified.
 - **Output File** field is the name of the file that is created when your container image configuration is built.
 - **Project Type** dropdown allows you to set the type of output to generate. The following values are possible:
-    - **Layer (.svm)** is a bare Turbo container image file that can be push to Turbo.net Hub, used in Turbo Server, imported into the Turbo.net Client Runtime environment, or used as a dependency in another project.
-    - **Portable Application (.exe)** is a packaged executable file which contains the Turbo.net Client Runtime components and integrates in to Turbo.net Hub or Turbo Server.
+    - **Layer (.svm)** is a bare Turbo container image file that can be pushed to Turbo.net Hub, used in Turbo Server, imported into the Turbo.net Client Runtime environment, or used as a dependency in another project.
+    - **Portable Application (.exe)** is a packaged executable file which contains the Turbo.net Client Runtime components and integrates with the Turbo.net Hub or an on-premise Turbo Server.
     - **Standalone/ISV Application (.exe)** is a standalone executable file with no dependence on the Turbo.net Client Runtime or Turbo.net Hub. This output type requires an Enterprise or ISV license for Turbo Studio.
 - **Options** button shows the **Output Options** dialog. This is used to enable diagnostics for .exe outputs or configure **Portable Executable** settings.
 
@@ -45,7 +45,7 @@ For more information on the snapshot process, see **Snapshot** documentation.
 
 - **Configuration Wizard** button shows the startup wizard where there are quick links to common process wizards; building from template, snapshot, install into a container, or manual configuration.
 - **Snapshot Merge** button allows a container sandbox changes to be imported into the configuration. 
-- **Import Configuration** button allows a container image to be imported from an external source; from .svm/.exe file, the Turbo.net Hub, or from the local Turbo.net Client Runtime repository.
+- **Import Configuration** button allows a container image to be imported from an external source, such as: a ThinApp configuration, MSI package, Zenworks package, the Turbo.net Hub, or from the local Turbo.net Client Runtime image repository.
 
 ##### Publish
 
