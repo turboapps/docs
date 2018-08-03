@@ -182,3 +182,7 @@ To launch a startup file by its trigger, specify its trigger as the first parame
 # to launch excel as the default
 > virtual-app.exe
 ```
+
+To create an easy-to-access shortcut for a trigger, right-click on your packaged executable and select **Create shortcut**. Then, right-click on the newly created shortcut and append the trigger to the **Target** field. Change the shortcut name and icon to differentiate the application entry point that will be launched when the user runs the shortcut.
+
+![](/docs/building/working_with_turbo_studio/triggers1.png)
