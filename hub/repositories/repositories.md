@@ -8,6 +8,8 @@ If a repository is public, it will appear in search results, and any Turbo user 
 
 Private repositories are not searchable, and they can only be accessed, pulled, or changed by their named owner(s).
 
+A repository can be owned by a user or an organization. Anywhere in this documentation that mentions the repository owner or profile, it could be used interchagably between a single user or an organization. Users belonging to the organization can access the repositories in the organization if they belong to the organization. Write access to an organizations repository is granted to the administrators and owner of the organization.
+
 The homepage for a repository is located at **http://turbo.net/hub/[profile]/[repo]**, where **profile** is the username of the repository owner and **repo** is the name of the repository. The homepage contains 3 sections:
 
 1. **About** - Provides an overview of the repository. 
