@@ -453,4 +453,45 @@ The `run` command checks once a day for new image releases. Specify the `--pull`
 Updates are download within the specified release: `turbo run firefox` updates to the latest Firefox. 
 `turbo run firefox:42` updates to the Firefox within release 42, like 42.0, 42.1 42.2 etc.
 
-When images are updated, the container is forked with the new images. 
+#### Remote vs. Local Image Usage
+
+The behavior is to prioritize locally cached images over remote, unless the update check triggers an update of the repositories image.
+
+```
+# Start with an empty local image cache
+> turbo run firefox
+Downloading image firefox:3.5 from https://turbo.net/users/mozilla
+Pull complete
+
+# If the update check has not been done for firefox repository, run will update to the latest version
+> turbo run firefox
+Using VM 18.7.1306 from local
+Using image clean:26 from local
+Upgrading image firefox to version 61.0.2
+Upgrading image firefox-base to version 61.0.2
+Running new container firefox#165115f7
+
+# Remove the created container and the latest image
+> turbo rm firefox
+Removing container firefox#165115f7
+
+> turbo rmi firefox:61
+Image mozilla/firefox:61.0.2 was removed
+
+# Running firefox again will use the local image with the older version because the update check has already been done in the previous run
+> turbo run firefox
+Using VM 18.7.1306 from local
+Using image clean:26 from local
+Using image firefox:3.5 from local
+Running new container firefox#9afe83e2
+```
+
+If the user does not want to trigger the update to the latest firefox, specify the release explicitly:
+
+```
+> turbo run firefox:3.5
+Using VM 18.7.1306 from local
+Using image clean:26 from local
+Using image firefox:3.5 from local
+Running new container firefox:3.5#a524349c
+```
