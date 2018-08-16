@@ -1,4 +1,4 @@
-### Turbo for Windows
+﻿### Turbo for Windows
 
 Click on **Settings** at the bottom right of the Turbo Launcher to bring up the Settings dialog. 
 
@@ -24,3 +24,36 @@ Click on the **gear (⚙)** icon at the top-right of the Launcher to access the 
 5. **Cloud Region:** select the region where the application will execute and stream from.
 
 ![](/docs/getting_started/advanced_settings/configuring-the-default-launch-setting-for-applications-mac.png)
+
+
+### FAQ
+
+**How do I save passwords in a browser on Turbo to share with team members?
+
+This can be achieved by creating an image with the credentials set using the Turbo CLI
+
+```
+# Run a browser
+>turbo new firefox
+Using VM 18.7.1306 from local
+Using image clean:26 from local
+Using image firefox:61 from local
+Running new container firefox#9afe83e2
+
+# Go to a website and log in, saving your credentials, then exit the application
+Process exited with status 0
+
+# Save the container into an image
+> turbo commit firefox#9afe83e2 ffpassword
+Using image firefox:61 from local
+Committing container firefox:3.5#a524349c to image ffpassword
+Commit complete
+
+# Push to hub
+> turbo push ffpassword mynamespace/ffpassword
+Pushing image ffpassword to mynamespace/ffpassword
+Push complete
+Image is private
+```
+
+```
