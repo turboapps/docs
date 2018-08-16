@@ -142,9 +142,9 @@ When the `--diagnostic` flag is used, the container will generate diagnostic log
 
 Please note that `turbo.exe` always runs outside of the container on the host even if executed from within the container.
 
-#### Adding Environment Variables
+#### Environment Variables
 
-Environment variables can be added to a container with the `-e` or `--env-file` flags. 
+Environment variables from the host system will be seen inside the container, unless they were isolated or set image in which the image's value will be used over the host systems. Add or override them in the container with the `-e` or `--env-file` flags. Setting evironment variables in the container will persist them in the container but not on the host system regardless of the isolation mode.
 
 ```
 # Add environment variable 'foo' with value 'bar'
@@ -162,7 +162,7 @@ utensil=turbo
 my-var=10
 ```
 
-Environment variables are always expanded on the host system before they are added to the container. 
+Environment variables are expanded on the host system before they are added to the container. 
 
 ```
 > echo %PATH%
