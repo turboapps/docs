@@ -55,5 +55,3 @@ Pushing image ffpassword to mynamespace/ffpassword
 Push complete
 Image is private
 ```
-
-```
