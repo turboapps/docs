@@ -28,7 +28,7 @@ Click on the **gear (⚙)** icon at the top-right of the Launcher to access the 
 
 ### FAQ
 
-**How do I save passwords in a browser on Turbo to share with team members?
+**How do I save passwords in a browser on Turbo to share with team members?**
 
 This can be achieved by creating an image with the credentials set using the Turbo CLI
 
