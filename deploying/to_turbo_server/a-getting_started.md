@@ -1,6 +1,6 @@
 ### Getting Started
 
-In this section you will learn about system requirements and instructions for installing, configuring and running Turbo Server.
+Turbo Server is an on-premise application delivery solution. In this section you will learn about system requirements and instructions for installing, configuring and running Turbo Server.
 
 #### System Requirements
 
