@@ -89,15 +89,29 @@ The following table lists common issues/questions and their solutions:
       <tr>
          <td colspan="1">The portal site fails to load.</td>
          <td colspan="1">
-            <p>This may be due to an out of memory error in the Java runtime. <br>To verify this, look for the following error in the Jetty logs (see Locating Log Files):</p>
-            <pre><code>java.lang.OutOfMemoryError: Java heap space</code></pre>
-            
+            <p>This may be due to an out of memory error in the Java runtime. To verify this, look for the following error in the Jetty logs (see Locating Log Files):</p>
+            <pre>
+				<code>java.lang.OutOfMemoryError: Java heap space</code>
+			</pre>            
             <p>To increase the memory available, one must add a new "PortalJavaParams" parameter to the settings.xml file located in C:\ProgramData\Turbo Server. This parameter will set the maximum heap size for the Java process. For an example, see below:</p>
-            <pre><code class="java plain">&lt;Settings&gt;
-&lt;PortalJavaParams&gt;-Xmx1200M&lt;/PortalJavaParams&gt;
-&lt;/Settings&gt;</code></pre>
+            <pre>
+				<code class="java plain">
+					&lt;Settings&gt;
+						&lt;PortalJavaParams&gt;-Xmx1200M&lt;/PortalJavaParams&gt;
+					&lt;/Settings&gt;
+				</code>
+			</pre>
          </td>
       </tr>
+      <tr>
+         <td colspan="1">Turbo Server installer process hangs immediately.</td>
+         <td colspan="1">
+            <p>
+				This may be due to a partially downloaded Turbo Server installer. Redownload the Turbo Server installer and try again. If the issue continues, it may be due to fault tolerant heap shim being applied to the process. Make sure fault tolerant heap shim is disabled for the Turbo Server installer.
+			</p>
+         </td>
+      </tr>
+	  
 </table>
 
 #### Enable Diagnostic Mode
