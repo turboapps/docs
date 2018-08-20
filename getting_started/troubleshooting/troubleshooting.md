@@ -1,9 +1,9 @@
 ### Troubleshooting
 
-**Turbo for Mac right click command is not working.**
+**Cannot use the Control + Click shortcut to right-click on a Mac** 
 
-Turbo for Mac does not translate all possible right click keyboard combinations into the Windows right click. This is because some Windows applications uses those keyboard combinations for a different purpose. Use the standard mouse right click or two finger press on the trackpad on Turbo for Mac.
+Some Mac shortcuts, such as Control + Click to right-click, may not work correctly because Windows applications use the same shortcut combination for a different purpose. In this case, Control + Click will add the clicked element to the current selection on a Windows application. To right-click on Turbo for Mac, use a standard mouse right-click or tap with two fingers on the trackpad.
 
-**Launch fails with dialog "Error The session disconnected unexpectedly: Windows Sockets connect failed".**
+**Launch fails with dialog "Error The session disconnected unexpectedly: Windows Sockets connect failed".** 
 
-Firewall settings are blocking the required ports or addresses. Ensure that port 443 and 3389 are allowed in your firewall settings.
+Firewall settings are blocking the required ports or addresses. Ensure that port 443 and 3389 are allowed in your firewall settings. 
