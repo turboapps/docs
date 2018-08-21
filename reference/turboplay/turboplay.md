@@ -10,23 +10,23 @@ Users may execute turbo commands from turboplay which will provide windows graph
 User can also pass in a text file as the argument which contains a turbo command.
 
     > turboplay turbo C:\Users\[user]\AppData\Local\Turbo\Containers\shortcuts\My App.txt
-	
+ 
 Additional flags:
 ```
       --quiet                            Hide all graphical user interfaces until the application launches
       --start-progress-ui-immediately    Shows the status dialog immediately before any events are detected from the underlying Turbo.exe
       --wait-for-window                  Status dialog remains until the application's main UI shows 
       --delete-cmd-file                  Deletes the cmd file if specified immediately after reading it. Todo: remove 
-	  --enable-full-removal              Todo: remove
+      --enable-full-removal              Todo: remove
       --app-title                        Sets the title of the status dialog
-	  --debug-vm                         Overrides the path to the vm
-	  --log                              Specifies location of log file
-	  --startup-file                     Passes through startup file to turbo.exe
-	  --startup-verb                     Passes through startup verb to turbo.exe
-	  --isolate                          Passes through isolation setting to turbo.exe
-	  --merge-file                       Passes through merge file setting to turbo.exe
+      --debug-vm                         Overrides the path to the vm
+      --log                              Specifies location of log file
+      --startup-file                     Passes through startup file to turbo.exe
+      --startup-verb                     Passes through startup verb to turbo.exe
+      --isolate                          Passes through isolation setting to turbo.exe
+      --merge-file                       Passes through merge file setting to turbo.exe
 ```
-	
+ 
 Additional Notes:
 1. Turbo CLI flag `--wait-after-(error|exit)` is ignored because it causes the process to hang waiting for input that will never come.
 2. Turbo CLI flag `--format=rcp` is automatically passed in in order to parse the output.
@@ -60,12 +60,12 @@ TurboPlay can execute Legacy Turbo applications from a config or model URL
 
 ```
     /config           The URL to an application configuration to execute
-	/model            The UNC path to a streaming model to execute
-	/xsandboxname
-	/xsandboxpath     The path to the app sandbox (required with the /model flag)
-	/register
-	/cachemode        The local path where the fully streamed application is to be cached (only valid with the /model flag and is required).
-	/clientconfig
-	/xvm
+    /model            The UNC path to a streaming model to execute
+    /xsandboxname
+    /xsandboxpath     The path to the app sandbox (required with the /model flag)
+    /register
+    /cachemode        The local path where the fully streamed application is to be cached (only valid with the /model flag and is required).
+    /clientconfig
+    /xvm
 ```
 
