@@ -5,11 +5,11 @@ TurboPlay is a command line based window wrapper application to Turbo applicatio
 ### Executing Turbo Commands
 Users may execute turbo commands from turboplay which will provide windows graphical interface instead of the command prompt.
 
-    turboplay turbo run --format=rpc my-image
+    > turboplay turbo run --format=rpc my-image
 
 User can also pass in a text file as the argument which contains a turbo command.
 
-    turboplay turbo C:\Users\[user]\AppData\Local\Turbo\Containers\shortcuts\My App.txt
+    > turboplay turbo C:\Users\[user]\AppData\Local\Turbo\Containers\shortcuts\My App.txt
 	
 Additional flags:
 ```
@@ -28,7 +28,7 @@ Additional flags:
 ```
 	
 Additional Notes:
-1. Turbo CLI flag `--wait-after-(error|exit) is ignored because it causes the process to hang waiting for input that will never come.
+1. Turbo CLI flag `--wait-after-(error|exit)` is ignored because it causes the process to hang waiting for input that will never come.
 2. Turbo CLI flag `--format=rcp` is automatically passed in in order to parse the output.
 3. `--show-eula-for-rpc` is automatically passed and displayed to the user in a window if a EULA exists for an application.
 	
@@ -36,20 +36,22 @@ Additional Notes:
 TurboPlay is responsible for parsing the Turbo URI scheme in the format of turbo://[Ip]?[query].
 
 The query parameters are:
-1. type: rdp or local
-2. rdpUsername: the username on the remote system executing turbo 
-3. rdpPassword: the password on the remote system executing turbo
-4. remoteAppMode: set value to 1 for RemoteApp rdp
-5. remoteAppProgram: set this to %7C%7Cturboplay
-6. remoteAppCmdLine: the arguments sent to the remote TurboPlay
-7. tnlrUrl: URL of the remote tnlr service which allows the remote application to connect to the local network
-8. tnrlUsername: tnlr username
-9. tnlrPassword: tnlr password
+```
+type                                     rdp or local
+rdpUsername                              the username on the remote system executing turbo 
+rdpPassword                              the password on the remote system executing turbo
+remoteAppMode                            set value to 1 for RemoteApp rdp
+remoteAppProgram                         set this to %7C%7Cturboplay
+remoteAppCmdLine                         the arguments sent to the remote TurboPlay
+tnlrUrl                                  URL of the remote tnlr service which allows the remote application to connect to the local network
+tnrlUsername                             tnlr username
+tnlrPassword                             tnlr password
+```
 
 ### Turbo RDP
 TurboPlay can connect and execute a TurboPlay command on the remote desktop without a Turbo URI scheme.
 
-`turboplay rdp [Ip] [rdpUsername] [rdpPassword] [remoteAppProgram] [remoteAppCmdLine]`
+    > turboplay rdp [Ip] [rdpUsername] [rdpPassword] [remoteAppProgram] [remoteAppCmdLine]
 
 Tnrl support is not available in this mode.
 
