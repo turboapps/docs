@@ -1,4 +1,4 @@
-﻿### Turbo for Windows
+﻿### Turbo for Windows 
 
 Click on **Settings** at the bottom right of the Turbo Launcher to bring up the Settings dialog. 
 
