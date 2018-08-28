@@ -302,9 +302,9 @@ Examples:
     
 - **Update to latest version of Turbo VM**:
 	
-	turbo pull xvm
-    turbo export xvm c:\path\to\xvm.exe
-    Server.exe admin /update /xvm c:\path\to\xvm.exe
+	turbo pull xvm<br>
+	turbo export xvm c:\path\to\xvm.exe<br>
+	Server.exe admin /update /xvm c:\path\to\xvm.exe
     
     It is strongly recommended that the existing applications are tested against the new Turbo VM before updating server to avoid any unexpected incompatibilities. This can be done from the command line by running:
     
