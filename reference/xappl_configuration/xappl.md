@@ -30,9 +30,8 @@ Here is a table that describes the purpose of each of the tags you see in *XAPPL
          <p><strong>ProjectType</strong></p>
       </td>
       <td>
-         <p>The type of output that is created when built.</p> 
+         <p>The type of output that is created when built.
          
-         <p>
              Possible values:
              <ul>
                 <li><strong>Component</strong> - A Turbo component is a <strong>.svm</strong> file which is used with the Turbo.net Hub, Turbo Server, and as application dependencies.</li>
