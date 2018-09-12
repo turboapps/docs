@@ -1,8 +1,8 @@
 ### XAPPL Configuration
 
-*XAPPL* files specify the configuration for a container image created with Turbo Studio. *XAPPL* files are in XML format so it's easy to edit a container's configuration in a text editor just as you can with Turbo Studio user interface.
+<strong>XAPPL</strong> files specify the configuration for a container image created with Turbo Studio. <strong>XAPPL</strong> files are in XML format so it's easy to edit a container's configuration in a text editor just as you can with Turbo Studio user interface.
 
-Here is a table that describes the purpose of each of the tags you see in *XAPPL* files created with Turbo Studio:
+Here is a table that describes the purpose of each of the tags you see in <strong>XAPPL</strong> files created with Turbo Studio:
 
 <table>
    <tr>
@@ -30,9 +30,8 @@ Here is a table that describes the purpose of each of the tags you see in *XAPPL
          <p><strong>ProjectType</strong></p>
       </td>
       <td>
-         <p>The type of output that is created when built.
-         
-             Possible values:
+         <p>The type of output that is created when built.</p>
+         <p>Possible values:
              <ul>
                 <li><strong>Component</strong> - A Turbo component is a <strong>.svm</strong> file which is used with the Turbo.net Hub, Turbo Server, and as application dependencies.</li>
                 <li><strong>Application</strong> - A Turbo standalone executable is a <strong>.exe</strong> file which can run without any additional Turbo.net components.</li>
@@ -43,46 +42,45 @@ Here is a table that describes the purpose of each of the tags you see in *XAPPL
    </tr>
    <tr>
       <td valign="top">
-         <p>*Expiration*</p>
+         <p><strong>Expiration</strong></p>
       </td>
       <td>
-         <p>The expiration settings for the output image. </p>
-         
-         Attributes:
-         <ul>
-            <li>*daysLimit* - Denotes the number of days that the image can be used on a machine before expiration. </li>
-            <li>*expirationDate* - Gives a hard date for expiration. </li>
-            <li>*expirationWarningDays* - The number of days prior to expiration that a warning message is displayed.</li>
-            <li>*webTimeUrl* - A trusted url that is used by Turbo Studio to get the current time. Set to empty to use the machine system time.</li>
-            <li>*expireOnWebFail* - Whether the launch will fail if the web time url is not accessible. Not applicable when using the system time.</li>
-         </ul>
-         
-         The child elements *ExpiredMessage*, *ExpirationWarning*, and *UnreachableWarning* are the text messages that are displayed.
+         <p>The expiration settings for the output image.</p>
+         <p>Attributes:
+             <ul>
+                <li><strong>daysLimit</strong> - Denotes the number of days that the image can be used on a machine before expiration. </li>
+                <li><strong>expirationDate</strong> - Gives a hard date for expiration. </li>
+                <li><strong>expirationWarningDays</strong> - The number of days prior to expiration that a warning message is displayed.</li>
+                <li><strong>webTimeUrl</strong> - A trusted url that is used by Turbo Studio to get the current time. Set to empty to use the machine system time.</li>
+                <li><strong>expireOnWebFail</strong> - Whether the launch will fail if the web time url is not accessible. Not applicable when using the system time.</li>
+             </ul>
+         </p>
+         <p>The child elements <strong>ExpiredMessage</strong>, <strong>ExpirationWarning</strong>, and <strong>UnreachableWarning</strong> are the text messages that are displayed.</p>
       </td>
    </tr>
    <tr>
       <td valign="top">
-         <p>*Output*</p>
+         <p><strong>Output</strong></p>
       </td>
       <td>
          <p>The output options for the application build.</p>
-         
-         Attributes applicable to standalone applications:
-         <ul>
-            <li>*diagnosticMode* - Enable diagnostic mode by default. Can also be enabled at runtime with /XEnable=Diagnostics command line parameter.</li>
-         </ul>
-         
-         Attributes applicable to portable applications:
-         <ul>
-            <li>*includeRuntimeDotNetImage* - Include the Turbo Client Runtime .NET 4.5 image in the package. The .NET image will add more than 400MB to the size of the package so only use if you expect to target platforms that will not have the .NET runtime already present.</li>
-            <li>*allowFullIsolation* - Allows the *full* isolation setting at runtime. Enabling this setting will force the *clean* image to be included from the Turbo.net hub which will add more than 200MB to the package size.</li>
-            <li>*enableSync* - Enables sandbox sync for the container. </li>
-            <li>*enableAutoUpdate* - Enables automatic updates for images which are included in the package. </li>
-            <li>*showLaunchSettings* - Gives the user configuration options on application start (isolation, sync, etc).</li>
-            <li>*isolationLevel* - The default isolation settings for the application container.</li>
-            <li>*hub* - The hub where the package images are located. This can be *https://turbo.net* or the url of a Turbo Hub Server.</li>
-            <li>*isolationOptions* - Additional isolation options to use in the application container. Currently the only available option is *MergeUser* which makes the user folders (desktop, documents, etc) merge isolated no matter the container's isolation settings.</li>
-        </ul>
+         <p>Attributes applicable to standalone applications:
+             <ul>
+                <li>*diagnosticMode* - Enable diagnostic mode by default. Can also be enabled at runtime with /XEnable=Diagnostics command line parameter.</li>
+             </ul>
+         </p>
+         <p>Attributes applicable to portable applications:
+             <ul>
+                <li><strong>includeRuntimeDotNetImage</strong> - Include the Turbo Client Runtime .NET 4.5 image in the package. The .NET image will add more than 400MB to the size of the package so only use if you expect to target platforms that will not have the .NET runtime already present.</li>
+                <li><strong>allowFullIsolation</strong> - Allows the <strong>full</strong> isolation setting at runtime. Enabling this setting will force the <strong>clean</strong> image to be included from the Turbo.net hub which will add more than 200MB to the package size.</li>
+                <li><strong>enableSync</strong> - Enables sandbox sync for the container. </li>
+                <li><strong>enableAutoUpdate</strong> - Enables automatic updates for images which are included in the package. </li>
+                <li><strong>showLaunchSettings</strong> - Gives the user configuration options on application start (isolation, sync, etc).</li>
+                <li><strong>isolationLevel</strong> - The default isolation settings for the application container.</li>
+                <li><strong>hub</strong> - The hub where the package images are located. This can be <strong>https://turbo.net</strong> or the url of a Turbo Hub Server.</li>
+                <li><strong>isolationOptions</strong> - Additional isolation options to use in the application container. Currently the only available option is <strong>MergeUser</strong> which makes the user folders (desktop, documents, etc) merge isolated no matter the container's isolation settings.</li>
+            </ul>
+        </p>
       </td>
    </tr>
    <tr>
