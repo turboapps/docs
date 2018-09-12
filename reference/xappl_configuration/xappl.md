@@ -11,7 +11,7 @@ Here is a table that describes the purpose of each of the tags you see in *XAPPL
    </tr>
    <tr>
       <td valign="top">
-         <p>*OutputLocation*</p>
+         <p><strong>OutputLocation</strong></p>
       </td>
       <td>
          <p>Path to the folder where the output is saved after a successful build. This can be a local path, a UNC path, or a mapped drive.</p>
@@ -19,7 +19,7 @@ Here is a table that describes the purpose of each of the tags you see in *XAPPL
    </tr>
    <tr>
       <td valign="top">
-         <p>*OutputFile*</p>
+         <p><strong>OutputFile</strong></p>
       </td>
       <td>
          <p>Name of the image file output (ie. image.svm or application.exe).</p>
@@ -27,17 +27,19 @@ Here is a table that describes the purpose of each of the tags you see in *XAPPL
    </tr>
    <tr>
       <td valign="top">
-         <p>*ProjectType*</p>
+         <p><strong>ProjectType</strong></p>
       </td>
       <td>
          <p>The type of output that is created when built.</p> 
          
-         Possible values:
-         <ul>
-            <li>*Component* - A Turbo component is a *.svm* file which is used with the Turbo.net Hub, Turbo Server, and as application dependencies.</li>
-            <li>*Application* - A Turbo standalone executable is a *.exe* file which can run without any additional Turbo.net components.</li>
-            <li>*TurboApplication* - A Turbo portable executable is also a *.exe* but requires the Turbo Client Runtime to be installed on the machine as a prerequisite.</li>
-         </ul>
+         <p>
+             Possible values:
+             <ul>
+                <li><strong>Component</strong> - A Turbo component is a <strong>.svm</strong> file which is used with the Turbo.net Hub, Turbo Server, and as application dependencies.</li>
+                <li><strong>Application</strong> - A Turbo standalone executable is a <strong>.exe</strong> file which can run without any additional Turbo.net components.</li>
+                <li><strong>TurboApplication</strong> - A Turbo portable executable is also a <strong>.exe</strong> but requires the Turbo Client Runtime to be installed on the machine as a prerequisite.</li>
+             </ul>
+         </p>
       </td>
    </tr>
    <tr>
