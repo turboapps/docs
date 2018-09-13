@@ -144,7 +144,7 @@ Here is a table that describes the purpose of each of the tags you see in <stron
    </tr>
    <tr>
       <td valign="top">
-         <p><strong>Clipboard*/p>
+         <p><strong>Clipboard</strong></p>
       </td>
       <td>
          <p>The clipboard settings for the container (ie. copy-paste operations).</p>
@@ -157,7 +157,7 @@ Here is a table that describes the purpose of each of the tags you see in <stron
    </tr>
    <tr>
       <td valign="top">
-         <p><strong>EnvironmentVariableExGlobalSettings*/p>
+         <p><strong>EnvironmentVariableExGlobalSettings</strong></p>
       </td>
       <td>
          <p>The global environment variable settings.</p>
@@ -718,7 +718,7 @@ Here is a table that describes the purpose of each of the tags you see in <stron
          <p><strong>Filesystem</strong></p>
       </td>
       <td>
-         <p>Defines the virtual filesystem. Contains a collection of root <strong>Directory<strong> elements.</p>
+         <p>Defines the virtual filesystem. Contains a collection of root <strong>Directory</strong> elements.</p>
          <p>Root directory elements include:
              <ul>
                 <li><strong>@APPDATA@</strong> - Resolves to the user's roaming application data folder (ex: <strong>c:\users\turbouser\appdata\roaming</strong>).</li>
