@@ -1,4 +1,4 @@
-### XAPPL Configuration
+## XAPPL Configuration
 
 <strong>XAPPL</strong> files specify the configuration for a container image created with Turbo Studio. <strong>XAPPL</strong> files are in XML format so it's easy to edit a container's configuration in a text editor just as you can with Turbo Studio user interface.
 
