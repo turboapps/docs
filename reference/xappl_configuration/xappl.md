@@ -952,7 +952,7 @@ Here is a table that describes the purpose of each of the tags you see in <stron
                 </tr>
                 <tr>
                     <td><strong>ip</strong> - Maps requests to the specified IP address to another IP address.</td>
-                    <td>The IP address to map from. The name can include an optional flag to not preresolve hostnames. This is done be prefixing the name with *$$donotpreresolvehostnames$$* (ex: <strong>ip://$$donotpreresolvehostnames$$1.1.1.1:2.2.2.2</strong>).</td>
+                    <td>The IP address to map from. The name can include an optional flag to not preresolve hostnames. This is done be prefixing the name with <strong>$$donotpreresolvehostnames$$</strong> (ex: <strong>ip://$$donotpreresolvehostnames$$1.1.1.1:2.2.2.2</strong>).</td>
                     <td>The IP address to map to. To deny access to the named IP, set this value to <strong>0.0.0.0</strong>. This value can be made identical to the IP to map to allow the IP if there are other generic mappings to deny it (ex: <strong>ip://1.1.1.1:1.1.1.1</strong>).</td>
                 </tr>
                 <tr>
