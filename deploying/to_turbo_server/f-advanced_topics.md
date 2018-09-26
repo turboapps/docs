@@ -296,22 +296,33 @@ Examples:
 <br>
 Examples:
 
-- **Update an application version**:
-	
-	Server.exe admin /update /a "My Application" /v 1.0.0.0 /f "D:\Installation Files\myapplication.svm" /lang "en-us" /sku "Premier Edition" /arch "x86"
-    
-- **Update to latest version of Turbo VM**:
-	
-	turbo pull xvm<br>
-	turbo export xvm c:\path\to\xvm.exe<br>
-	Server.exe admin /update /xvm c:\path\to\xvm.exe
-    
-    It is strongly recommended that the existing applications are tested against the new Turbo VM before updating server to avoid any unexpected incompatibilities. This can be done from the command line by running:
-    
-    c:\path\to\xvm.exe /XEntry=c:\path\to\your-app.svm
-
-
-**Server.exe admin /client**
+- **Update an application version**:  
+  
+```	 
+  Server.exe admin /update /a "My Application" /v 1.0.0.0 /f "D:\Installation Files\myapplication.svm" /lang "en-us" /sku "Premier Edition" /arch "x86"
+```  
+  
+- **Update to latest version of Turbo VM**:  
+The latest official Turbo VM release may be obtained from the Turbo Hub using the turbo.exe command utility from Turbo Client.
+```  
+  # Pull latest Turbo VM from Hub
+  turbo pull xvm
+  
+  # Export the latest Turbo VM to a file
+  turbo export xvm c:\path\to\xvm.exe
+```  
+It is strongly recommended that the existing applications are tested against the new Turbo VM before updating server to avoid any unexpected incompatibilities. This can be done from the command line by running:
+```  
+  # Test your application using the new VM
+  C:\path\to\xvm.exe /XEntry=c:\path\to\your-app.svm
+```  
+Use the admin tool to update the Turbo VM used to run applications from Turbo Server.
+```  
+  Server.exe admin /update /xvm c:\path\to\xvm.exe
+```  
+Applications will use the Turbo VM version from when the SVM image is pushed to Turbo Server. Re-upload the application SVM file using the administration portal or server admin /update command to apply the updated Turbo VM to your existing applications.
+  
+**Server.exe admin /client**  
 
 <table>
       <tr>
