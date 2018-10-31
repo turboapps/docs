@@ -102,3 +102,5 @@ Select **Notepad Container** from the list and check **Always use this app to op
 ![](/docs/building/working_with_turbo_studio/msi14.png)
 
 In the Windows **Programs and Features** panel, you will find an entry for our **Notepad Container** deployment. Uninstalling it from here will remove all shortcuts and file associations that were added.
+
+![](/docs/building/working_with_turbo_studio/msi15.png)
