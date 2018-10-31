@@ -6,19 +6,19 @@ Turbo supports deploying containers from the Turbo.net hub to your desktop using
 
 The **Sync Device** feature on the Turbo.net Hub provides the ability to deploy applications directly to your desktop from the Hub in two simple steps: Add applications in the Turbo.net hub, when complete just click **Sync Device** on your user or organization homepage.
 
-![](/docs/deploying/to_turbo.net/ADDAPP9.png)
+![](/docs/deploying/to_a_desktop/addapp9.png)
 
 The **Sync Device** button will update to show the syncing has begun.
 
-![](/docs/deploying/to_turbo.net/ADDAPP10.png)
+![](/docs/deploying/to_a_desktop/addapp10.png)
 
 When complete a prompt appears to confirm **Applications synced to Device** with an instruction that shortcuts have also been created in the start menu.
 
-![](/docs/deploying/to_turbo.net/ADDAPP11.png)
+![](/docs/deploying/to_a_desktop/addapp11.png)
 
 On your machine you will notice that a scheduled task has been created. The scheduled task will perform the application updates. Modify the schedule to ensure the applications are only updated when you want them to. Optionally, **Run** the task to cache the applications. If you do not run the task, launching an application will present a buffer dialog on first launch.
 
-![](/docs/deploying/to_turbo.net/ADDAPP13.png)
+![](/docs/deploying/to_a_desktop/addapp13.png)
 
 ### Shell Registration
 
