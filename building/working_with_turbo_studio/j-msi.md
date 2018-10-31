@@ -1,12 +1,12 @@
 ### MSI
 
-You can build your standalone executable into a MSI that is ready to deploy in your environment. The MSI can be configured to include applicaion shortcuts and file associations.
+You can build your standalone executable into an MSI that is ready to deploy in your environment. The MSI can be configured to include applicaion shortcuts and file associations.
 
 #### MSI Settings
 
 ![](/docs/building/working_with_turbo_studio/msi1.png)
 
-The following is a table of descriptions of the settings that you can use for MSI outputs from Turbo Studio.
+The following table includes descriptions of the settings that you can use for MSI outputs.
 
 <table>
 	<tr>
