@@ -28,7 +28,7 @@ Turbo application desktop integration, including Start Menu, desktop shortcuts, 
 > turbo installi --all-users google/chrome
 
 # Add Internet Explorer 8 with Java 6.45 to the Start Menu
-> turbo installi --all-users microsoft/ie:8,jre:6.45</pre>
+> turbo installi --all-users microsoft/ie:8,jre:6.45
 ```
 
 ![](/docs/deploying/to_citrix/citrix3.png)
