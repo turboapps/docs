@@ -795,7 +795,8 @@ Here is a table that describes the purpose of each of the tags you see in <stron
                 <li><strong>modified</strong> - The last modified timestamp of the file when it was added to the configuration.</li>
                 <li><strong>upgradeable</strong> - If the file is allowed to be updated by later patch layers.</li>
                 <li><strong>source</strong> - The path to the source file that will be used at build time.</li>
-                <li><strong>privatize</strong> - An optional value that can be used for .DLL files which causes all references to the file in the virtual filesuystem from other fils to be rewritten. This can be used to isolate references to low level system .DLLs for compatibility with old applications on new operating systems.</li>
+                <li><strong>system</strong> - An optional value that indicates that a file should have the SYSTEM file attribute applied.</li>
+                <li><strong>privatize</strong> - An optional value that can be used for .DLL files which causes all references to the file in the virtual filesystem from other fils to be rewritten. This can be used to isolate references to low level system .DLLs for compatibility with old applications on new operating systems.</li>
              </ul>
          </p>
       </td>
