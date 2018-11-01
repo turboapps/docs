@@ -328,6 +328,8 @@ Here is a table that describes the purpose of each of the tags you see in <stron
                 <li><strong>isolateNonSystemDrives</strong> - Hides access to non-system drives on the machine. Default is <strong>False</strong>.</li>
                 <li><strong>isolateNetworkShares</strong> - Hides access to network shares defined on the machine. Default is <strong>False</strong>.</li>
                 <li><strong>disableProxySupportForRouteMaps</strong> - Disables network isolation and routing support to work around compatibility issues with some network security products. Default is <strong>False</strong>.</li>
+                <li><strong>isolateDDE</strong> - Prevents DDE messages (Dynamic Data Exchange) from passing between native and container environments. Default is <strong>False</strong>.</li>
+                <li><strong>extendedAppLockerCompatibility</strong> - Prevents some application errors when using AppLocker DLL Rules technology. Default is <strong>False</strong>.</li>                
              </ul>
          </p>
       </td>
