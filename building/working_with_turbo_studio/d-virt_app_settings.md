@@ -1,125 +1,64 @@
 ### Container Settings
 
-The following is a table of the definitions and uses of features available in Turbo Studio. These features allow you to edit and customize the settings for an image or virtual application configuration.
+The following discusses the many configuration features available in Turbo Studio. These features allow you to edit and customize the settings for an image or virtual application configuration.
 
-<table>
-	<tr>
-		<th>Setting</th>
-		<th>Description</th>
-	</tr>
-	<tr>
-		<td><b>Startup File</b></td>
-		<td>The executable or viewable file that opens when the user starts the virtual application. Multiple files can be selected by clicking the <b>Multiple</b> button.</td>
-	</tr>
-	<tr>
-		<td><b>Output File</b></td>
-		<td>The name of the output file from Turbo Studio build process.</td>
-	</tr>
-	<tr>
-		<td nowrap><b>Project Type</b></td>
-		<td><b>Application</b>: A virtual application project produces an executable file output (.exe file) that can be run directly from the operating system. Application output mode is appropriate for most users and is the default selection.<br/><br/><b>Component</b>:  A component project produces an SVM (.svm file). SVM is a Turbo file format which encode all virtual application configuration and content into a single binary file. SVMs cannot be executed directly from the operating system. SVMs are used to exchange virtual application and component data between multiple virtual applications.<br/><br/>Note: In order to create SVMs for use in streaming applications on Turbo Server, the project type must be set to Component.</td>
-	</tr>
-	<tr>
-		<td><b>Executable Metadata</b></td>
-		<td><b>Standard metadata</b> includes information such as product title, publisher, description, icon, web site URL, and version. By default, Turbo Studio applies metadata inherited from the virtual application startup file to the output virtual application executable. To override the default meta data, uncheck the <b>Inherit Properties</b> box.<br/><br/><b>Custom metadata</b> can be used by specialized external executable viewer applications, inventory scanners, and other asset and licensing management systems. For information on custom executable metadata, consult the Microsoft Windows Software Development Kit.</td>
-	</tr>
-	<tr>
-		<td><b>Startup Image</b></td>
-		<td>A startup "splash" image to display during application startup. Startup images improve application branding and are useful when the application requires several seconds to initialize.<br/><br/>Transparency keying enables the startup image to contain transparent regions. Transparencies improve the visual effectiveness of your startup image.</td>
-	</tr>
-	<tr>
-		<td><b>Directory Binding</b></td>
-		<td>Turbo Studio enables you to limit where an application will run, based on queries to an Active Directory Domain Controller.</td>
-	</tr>
-	<tr>
-		<td><b>Command Line Arguments</b></td>
-		<td>Command line arguments specified by the user are passed to the virtual application startup executable by default. You can override and specify a fixed set of command line arguments to pass to the startup executable. For example, you can specify Java virtual machine behavior.</td>
-	</tr>
-	<tr>
-		<td><b>Sandbox Location</b></td>
-		<td>By default, the sandbox is placed in the <b>@APPDATALOCAL@\Turbo.net\Sandbox\@TITLE@\@VERSION@</b> folder, where <b>@APPDATALOCAL@</b> represents the <b>local Application Data</b> folder, and <b>@TITLE@</b> and <b>@VERSION@</b> represent the application title and version. In addition to the standard root folder variables, the sandbox location can contain the following variables:<br/><br/><b>@TITLE@</b>: Product title<br/><b>@PUBLISHER@</b>:  Product publisher<br/><b>@VERSION@</b>:  Full version string, in dotted quad format<br/><b>@WEBSITE@</b>:  Publisher website<br/><b>@BUILDTIME@</b>: Virtual application build time, in a format similar to <b>2008.02.01T08.00</b>.<br/><br/>With the exception of the <b>@BUILDTIME@</b> variable (set automatically), these variables are based on the values specified in the <b>Properties</b> section of <b>Settings</b>.</td>
-	</tr>
-	<tr>
-		<td><b>Working Directory</b></td>
-		<td><b>Working Directory</b> determines the active directory at the time of process launch. <br/><br/>Use <b>Startup File Directory</b> sets the working directory to the directory of the virtual application startup file. In the case of a jukeboxed application, the working directory is set to the directory of the startup file specified on the jukebox command line. <br/><br/>Use <b>Current Directory</b> sets the working directory to the directory from which the virtual application is launched. <br/><br/>Use <b>Specified Path</b> enables you to specify a working directory. This specification can include environment and well-known root folder variables. <br/><br/>The working directory is set to the directory of the startup file by default.</td>
-	</tr>
-	<tr>
-		<td><b>Application Type</b></td>
-		<td>If you select an executable startup file, Turbo Studio automatically configures the virtual application to run in the same subsystem as the startup file. If you select a non-executable startup file, you must manually override the application type. Most applications execute in the GUI subsystem. To override the application type, select the mode from the Application Type menu in the Process Configuration section of the Settings panel. The Inherit mode sets the application type based on the type of the startup file.</td>
-	</tr>
-	<tr>
-		<td><b>Target Architecture</b></td>
-		<td><b>Target Architecture</b> is automatically captured during the snapshot process and generally should not be altered for applications packaged through the snapshot process.<ul><li><b>x86</b>:  Use this option for applications that were packaged using the snapshot process on x86 systems. This option maps the <b>Program Files</b> directory to <b>C:\Program Files</b> on x86 systems or to <b>C:\Program Files (x86)</b> on x64 systems. .NET applications compiled to target any CPU architecture always run as 32-bit applications. </li><li><b>x64</b>:  Use this option for applications that were packaged using the snapshot process on x64 systems. This option maps the <b>Program Files</b> directory to <b>C:\Program Files</b> on x64 systems. The <b>Program Files (x86)</b> directory is mapped to <b>C:\Program Files</b> on x86 systems and <b>C:\Program Files (x86)</b> on x64 systems. .NET applications compiled to target any CPU architecture run as 32-bit applications on x86 systems and 64-bit applications on x64 systems.</li><li><b>Any CPU</b>:  This option maps the <b>Program Files</b> directory to <b>C:\Program Files</b> on x86 systems and <b>C:\Program Files</b> on x64 systems. .NET applications compiled to target any CPU architecture run as 32-bit applications on x86 systems and 64-bit applications on x64 systems.  Use this option to place a .NET application that is compiled to target any CPU architecture in the <b>Program Files</b> folder.</li></ul></td>
-	</tr>
-	<tr>
-		<td><b>Environment Variables</b></td>
-		<td>Most virtual environment variables overwrite any environment variables defined in the host environment. However, <b>PATH</b> and <b>PATHEXT</b> environment variables always merge with the corresponding host environment variables.<br/><br/>Environment variables are automatically captured and merged during the snapshot delta process.</td>
-	</tr>
-	<tr>
-		<td><b>Virtual Services</b></td>
-		<td>Windows services are specialized applications that run in the background. They are typically responsible for providing system services such as database services, network traffic handling, web request processing, and other server functionality. Many applications install and require specific services in order to function properly. Turbo Studio fully supports virtualization of certain Windows services. <br/> <br/> Service installation and settings are captured automatically during the snapshot process. The primary exception occurs with virtualized applications intended to run as background worker services (for example, virtualized web servers); in this case, it is often required to enable the <b>Keep Alive</b> option.</td>
-	</tr>
-	<tr>
-		<td><b>SVMs</b></td>
-		<td>You can specify additional SVM layers for applications, in the case of updates or patches.</td>
-	</tr>
-	<tr>
-		<td><b>Child Process Exceptions</b></td>
-		<td>Some applications create new child processes while they run. Depending on the virtual application context, you can create such child processes within the virtual application, or in the host operating system.<br/><br/>Child processes include processes created to service COM local server requests.<br/><br/><b>Note</b>: Child processes created outside of the virtual application cannot access virtualized filesystem or registry contents. These processes can access or modify host operating system contents, even if otherwise forbidden by the virtual application configuration.<br/><br/>Child processes are created within the virtual application by default. To manually create child processes outside of the virtual application, uncheck the <b>Spawn child process within virtualized environment</b> option.<br/><br/>COM servers are created outside the virtual environment by default to allow COM communication between native applications and virtual applications. To create COM servers within the virtual environment, check the <b>Spawn COM servers within virtualized environment</b> option.<br/><br/>You can determine exceptions to the child process virtualization behavior using the <b>Child Process Exception List...</b> Process names listed in the child process exception list behave <em>opposite</em> to the master child process virtualization setting. To edit the child process exception list, select the <b>Child Process Exception List... </b> button. Process names will match without including the filename extension.</td>
-	</tr>
-	<tr>
-		<td><b>Read-only Virtual Environments </b></td>
-		<td>Prevent modifications to the virtual environment.</td>
-	</tr>
-	<tr>
-		<td><b>Automatic Sandbox Reset</b></td>
-		<td>Any changes made to an application's virtual environment are reverted when the application closes.</td>
-	</tr>
-	<tr>
-		<td><b>Shutdown Process Tree On Root Process Exit</b></td>
-		<td>Enables the shutdown of all child processes when the root process exits.
+##### Output Settings
 
-<b>Note</b>: The startup file is the root process by default. If a virtual service is specified in the application configuration file and is set to auto-start when the application is launched, the virtual service acts as the root process in the process tree.</td>
-	</tr>
-	<tr>
-		<td><b>Compress Payload</b></td>
-		<td>Enables compression of the output file. Note: Both the application profiling and streaming processes require that packages be built uncompressed. To build applications without compression, leave the <b>Compress payload</b> option unchecked.</td>
-	</tr>
-	<tr>
-		<td><b>Startup Executable Optimization</b></td>
-		<td>Launches the startup executable within the initial virtual machine process. This prevents the creation of a separate application process and can be incompatible with some applications.</td>
-	</tr>
-	<tr>
-		<td><b>Turbo Command-line Arguments</b></td>
-		<td>Turbo supports command-line arguments of the /X[arg] form, which modify virtual application behavior at run-time. In rare instances, these arguments may conflict with command-line arguments designed for use by the virtualized application. To disable processing of these arguments, uncheck the Enable Turbo command-line arguments box.</td>
-	</tr>
-	<tr>
-		<td><b>Window Class Isolation</b></td>
-		<td>Prevents viewing window classes that are registered by external processes. You can use this to prevent interaction between virtualized and non-virtualized versions of the same program when the application checks for existing class registrations.
-</td>
-	</tr>
-	<tr>
-		<td><b>Enhanced DEP Compatibility for Legacy Applications</b></td>
-		<td>Enables compatibility for systems with Data Execution Protection (DEP) enabled. Use this configuration for virtual applications running on Windows 2003.</td>
-	</tr>
-	<tr>
-		<td><b>Enhanced DRM Compatibility</b></td>
-		<td>Enables additional compatibility with common DRM systems, such as Armadillo.</td>
-	</tr>
-	<tr>
-		<td><b>Trace Process Starts in Debug Output</b></td>
-		<td>Sends a notification to <b>OutputDebugString</b> whenever a new process is started within the virtual environment. This notification is in XML format and comes as a basic information description. It can be monitored with any debugging tool. You can also monitor the notification by a parent process within the virtual environment if a child process is being debugged.</td>
-	</tr>
-	<tr>
-		<td><b>Force Read-share Files</b></td>
-		<td>Forces any file opened within the virtual environment to open with the <b>READ_SHARE</b> flag. Use this option to  resolve compatibility issues caused by sharing violations.</td>
-	</tr>
-	<tr>
-		<td><b>Always Launch Child Processes as Current User</b></td>
-		<td>Provide child processes with the same level of privileges as the virtual machine root process. Child processes launched by the virtual machine have reduced privileges by default.</td>
-	</tr>
-	<tr>
-		<td><b>Emulate Elevated Security Privileges</b></td>
-		<td>Forces an application to run as if it has elevated security privileges, even if the application does not. Enabling this option eliminates UAC security prompts for elevation and subsequent application crashes.</td>
-	</tr>
-</table>
+![](/docs/building/working_with_turbo_studio/settings1.png)
+
+- **Startup File** field is to set the path to the application which runs when starting your container. The **Multiple** button shows the **Startup File** manager dialog where additional settings can be specified.
+- **Output File** field is the name of the file that is created when your container image configuration is built.
+- **Project Type** dropdown allows you to set the type of output to generate. The following values are possible:
+    - **Layer (.svm)** is a bare Turbo container image file that can be pushed to Turbo.net Hub, used in Turbo Server, imported into the Turbo.net Client Runtime environment, or used as a dependency in another project.
+    - **Portable Application (.exe)** is a packaged executable file which contains the Turbo.net Client Runtime components and integrates with the Turbo.net Hub or an on-premise Turbo Server.
+    - **Standalone/ISV Application (.exe)** is a standalone executable file with no dependence on the Turbo.net Client Runtime or Turbo.net Hub. This output type requires an Enterprise or ISV license for Turbo Studio.
+- **Options** button shows the **Output Options** dialog. This is used to enable diagnostics for .exe outputs or configure **Portable Executable** settings.
+
+##### Application Properties
+
+![](/docs/building/working_with_turbo_studio/settings2.png)
+
+- **Standard Metadata** fields include information such as product title, publisher, description, icon, web site URL, and version. By default these values are inherited by the startup file and will be displayed here. To override any of the values, uncheck the **Inherit** checkbox. Leave the value as **@INHERIT@** for any values that should continue to be inherited.
+- **Custom Metadata** can be used by specialized external executable viewer applications, inventory scanners, and other asset and licensing management systems. For information on custom executable metadata, consult the Microsoft Windows Software Development Kit.
+
+##### Startup Settings
+
+![](/docs/building/working_with_turbo_studio/settings3.png)
+
+- **Splash Image** can assign an image that is displayed while the container is loading. Startup images improve application branding and are useful when the application requires several seconds to initialize. The **Transparency key** enables the splash image to contain transparent regions which can improve the visual effectiveness of your splash. The splash image can be shown for a specific amount of time or until the first application window appears. The splash image can always be dismissed by clicking it with the mouse.
+- **Shims** and **Scripts** settings allow you to run custom code to configure or clean up environments before and after a container is executed. See [Startup/Shutdown Scripts and Shims](/docs/building/working-with-turbo-studio#startupshutdown-scripts-and-shims) for more information.
+- **Active Directory** fields enable you to limit where the container can run based on queries to the Active Directory Domain Controller.
+- **Platform** allows you to specify the minimum required version of the Windows Operating System where the container will be allowed to run.
+
+##### Process Configuration
+
+![](/docs/building/working_with_turbo_studio/settings4.png)
+
+- **Command line arguments** will be passed to the startup file when the container is executed by default. You can override and specify a fixed set of command line arguments to pass to the startup executable. For example, you can specify Java virtual machine behavior.
+- **Application sandbox location** field specifies where the container's runtime sandbox will be stored during execution. This only applies to Standalone Executables and containers which are started using the Turbo Client Runtime will override this with its own behavior. This path can use the folder root tokens (ie. @DESKTOP@, @APPDATA@, etc) as well as the following metadata variables: **@TITLE@**, **@PUBLISHER@**, **@VERSION@**, **@WEBSITE@**, and **@BUILDTIME@**. The container build time is in a format similar to **2008.02.01T08.00**. With the exception of the **@BUILDTIME@**> variable (which is set automatically), these variables are based on the values specified in the **Properties** tab of **Settings** panel.
+- **Application stub cache location** field specifies where the container stubexe files are stored. By default this is blank and they are stored in the sandbox. Stubexe files are generated .exe files that map to executables which are launched inside the container. In some environment, stubexe files require exclusions for security or anti-virus software so it can be convenient to store them in the same place to reduce the exposure and complexity of exception rules.
+- **Application cache location** - todo
+- **Working directory** allows you to specify what the default working directory of startup files will be. Options include the directory that the startup file is in (default), the directory that the container was executed from (useful for tooling that might take relative paths to files as parameters), or a specific location.
+- **Application type** controls the Windows executable subsystem that is employed when starting the container. The default inherits this value from the startup file itself. This can be overridden to be **Console** or **GUI** if required.
+- **Target architecture** controls how wow64 redirection functions inside the virtual environment. If the configuration file was generated from a snapshot of an x86 machine then this should be set to **x86**. Otherwise this should be left as **x64**.
+- **Environment variables** allows to define custom environment variables that will be seen by applications inside the container. Options exist to control how variables are merged or overridden inside the container.
+- **Virtual services** allow Windows services to be defined inside the container. Windows services are specialized applications that run in the background. They are typically responsible for providing system services such as database services, network traffic handling, web request processing, and other server functionality. Many applications install and require specific services in order to function properly.
+- **SVMs** allow runtime dependencies to other SVM files to be defined. These dependencies can be required (ie. in cases where large executables are split between multiple files) or optional (ie. in cases where patch layers may be present).
+- **Spawn child processes within virtualized environment** sets the default behavior for how native executables (those that are not inside the container configuratino) are handled in the container. They can either be spawned inside the container and therefore be subject to the configuration of the container environment, or they can be spawned outside the container and therefore not have access to files or registry inside the container.
+- **Spawn COM servers within virtualized environment** specifies whether COM servers in the container are isolated from the native environment.
+- **Child process exception list** is a list of executable files that will be excluded from the default spawn behavior. This is useful if certain system processes need to be spawned outside the container while everything else is kept inside (ie. print spooler, etc).
+- **Virtual environment is read-only** makes it so that all write attempts to files inside the container will return access denied errors. 
+- **Delete sandbox on application shutdown** makes it so that the sandbox folder is removed once the container stops. This may have performance implications as there are many files that can be cached in the sandbox between runs.
+- **Shutdown process tree on root process exit** make is so that all child processes of the startup file will automatically be killed when the startup file exists.
+- **Compress payload** makes it so that the files stored in the container at build time will be compressed. This can greatly reduce the size of the container image or executable file. This may have performance implications as files must be decompressed at runtime.
+- **Enable startup executable optimization** makes it so that if there is a single startup file, then it will be run directly rather than being spawned from the virtual machine boostrap executable. This will reduce the number of processes that are required to start the container.
+- **Enable Turbo command line arguments** makes it so that the container runtime parameters can be used (ie. /XEnable, /XShellEx, etc). See [building standalone executables](/docs/building/working-with-turbo-studio#standalone-executables) for more information.
+- **Enable window class isolation** enables isolation for window classes. Window classes are a fundamental set of attributes that are assigned to an application window in the Windows operating system. These are often used to detect the presence of applications that are already running. 
+- **Enhanced DEP compatibility for legacy applications** hides DEP settings on modern operating systems which can allow older applications to run in a container. Be aware of your company security policies before enabling this setting.
+- **Enhanced DRM compatibility** allows some DRM software (ie. Armadillo variants) to function inside the container.
+- **Trace process starts in debug output** will display a message in the debug output stream whenever a process is started. The debug output stream can be viewed with [dbgview](https://docs.microsoft.com/en-us/sysinternals/downloads/debugview).
+- **Force read-share files** makes it so that all files in the container are opened in a way that doesn't block other processes from opening for read.
+- **Always launch child processes as current user** makes it so that any processes spawn inside the container will inherit the current user's account privileges rather than any custom privileges that the parent process might assign.
+- **Emulate elevated security privileges** makes it so that the processes in the container think they are running as admin when they are not. Since processes are running in a sandbox, writes to secure locations won't require administrative access.
+- **Isolate clipboard** makes it so that the Windows clipboard (ie. copy/paste) is isolated within a container. Isolated clipboards cannot copy/paste information between container or with the native system. Only within the same container will this work.
+
