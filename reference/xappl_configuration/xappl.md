@@ -288,7 +288,7 @@ Here is a table that describes the purpose of each of the tags you see in <stron
          <p>Virtual machine configuration settings which affect runtime behavior. Also contains a <strong>ChildProcessVirtualization</strong> element.</p>
          <p>Attributes:
              <ul>
-                <li><strong>suppressBranding</strong> - Disables the Turbo runtime splash. Default is <strong>True</strong>li>
+                <li><strong>suppressBranding</strong> - Disables the Turbo runtime splash. Default is <strong>True</strong><li>
                 <li><strong>deleteSandbox</strong> - Removes the sandbox runtime environment when the application exits. This is used to ensure a fresh sandbox environment on every launch. Default is <strong>False</strong>.</li>
                 <li><strong>shutdownProcessTree</strong> - Kills all the virtual processes when the root process exists. This is used to ensure that services and other spawned processes don't hang around after the application exists. Default is <strong>False</strong>.</li>
                 <li><strong>enhancedDEPCompatibility</strong> - Provides compatibility for Windows 2003 systems with Data Execution Protection enabled. Default is <strong>False</strong>.</li>
