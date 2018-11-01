@@ -143,3 +143,13 @@ To start a registry editor instance in the virtual application's container envir
 This will start an instance of the registry editor inside the container environment. Note that Windows only allows one instance of the registry editor to be running so close down all other instances before running this command or else you may not be viewing what you think you are.
 
 The 32-bit vs 64-bit registry is also something to be aware of with the registry editor. Select the registry editor to launch based on the architecture of the process that you are investigating.
+
+#### Common Errors
+
+##### Turbo Virtual Machine 0x0003
+
+![](/docs/building/working_with_turbo_studio/error1.png)
+
+This error indicates that there is a problem accessing the the container executable from itself. This can occur from security software that limits what applications have access to or if the application was started with a low privilege user which doesn't have access to the folder where the executable resides.
+
+Try adding exclusions to your security software for the application. Also, try enabling the **launch child processes as user** setting.
