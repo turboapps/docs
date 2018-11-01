@@ -1,4 +1,4 @@
-### UI Basics
+### Basics
 
 Using Turbo Studio enables you to configure the filesystem and registry of a container, embed external runtimes and components, take application snapshots, and create Turbo Virtual Machine (SVM) or executable files. The primary interface consists of a ribbon bar along the top and several panes accessed by buttons on the left.
 
@@ -37,8 +37,12 @@ For more information on the snapshot process, see **Snapshot** documentation.
 - **Output File** field is the name of the file that is created when your container image configuration is built.
 - **Project Type** dropdown allows you to set the type of output to generate. The following values are possible:
     - **Layer (.svm)** is a bare Turbo container image file that can be pushed to Turbo.net Hub, used in Turbo Server, imported into the Turbo.net Client Runtime environment, or used as a dependency in another project.
-    - **Portable Application (.exe)** is a packaged executable file which contains the Turbo.net Client Runtime components and integrates with the Turbo.net Hub or an on-premise Turbo Server.
     - **Standalone/ISV Application (.exe)** is a standalone executable file with no dependence on the Turbo.net Client Runtime or Turbo.net Hub. This output type requires an Enterprise or ISV license for Turbo Studio.
+    - **Portable Application (.exe)** is a packaged executable file which contains the Turbo.net Client Runtime components and integrates with the Turbo.net Hub or an on-premise Turbo Server.
+    
+    At runtime, you may see different behavior between Standalone and Portable applications. This is because they use a different set of default runtime settings which can change how the application behaves. 
+    - The default isolation settings will be different. This will change how the application can interact with the software on the native machine. Standalone executables will have the isolation settings exactly as you see it in the xappl and in Turbo Studio. Since Portal applications are built to run on the Turbo.net Client Runtime, its isolation settings will be a combination of the image configuration and the isolation mode which can be dynamically assigned at runtime. The default mode is **full isolation** which will override merge or writecopy isolation settings in the image configuration. You can change the isolation mode for a Portable application with the **--isolate** parameter. Setting the isolation mode to **merge** will defer isolation settings to those assigned in the image configuration. There is no way to change the base isolation mode in Standalone applications.
+    - The default VM settings flags are also different between the two application types. Standalone executables will only have those that are defined in the image configuration. Portable application will additionally contain these settings: ExeOptimization, SpawnComServers, IsolateWindowClasses, SuppressPopups, ForceWriteCopyIsolation, MergePathEnvVars, MergeVmSettings, DumpStdStreams, InheritFolderMaps, and ForceEnvironmentVariablesWriteCopyIsolation. See (xappl reference)[/docs/reference/xappl-configuration] for more information on these flags.
 - **Options** button shows the **Output Options** dialog. This is used to enable diagnostics for .exe outputs or configure **Portable Executable** settings.
 
 ##### Tools
