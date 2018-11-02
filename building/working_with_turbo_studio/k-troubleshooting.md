@@ -154,7 +154,7 @@ This error indicates that there is a problem accessing the the container executa
 
 Try adding exclusions to your security software for the application. Also, try enabling the **launch child processes as user** setting.
 
-##### Unable to load a required virtual Machine Component
+##### Unable to load a required virtual machine component
 
 ![](/docs/building/working_with_turbo_studio/error1.png)
 
