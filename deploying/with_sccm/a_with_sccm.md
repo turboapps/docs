@@ -1,6 +1,6 @@
 ## With SCCM
 
-Microsoft System Center Configuration Manager (SCCM) is a wonderful tool to deploy application containers to desktops in your enterprise. Below will guide you through using SCCM to deploy containers in various ways.
+Microsoft System Center Configuration Manager (SCCM) is a wonderful tool to deploy application containers to desktops in your enterprise. Below show several methods that SCCM can be used to deploy containers.
 
 ### For Standalone Executables
 
@@ -26,3 +26,5 @@ The Turbo.net Client Runtime platform can register a container to the desktop, h
 ```
 
 See [installi](/docs/reference#installi), [install](/docs/reference#install), and [subscribe](/docs/reference#subscribe) for more information.
+
+For this method, the Turbo.net Client Runtime must be installed on the machine. Using the **--silent** and **--all-users** command line parameters, the client can be installed with SCCM. See [Turbo Client Installation](/docs/reference/turbo-client#turbo-client-installation) for more information.
