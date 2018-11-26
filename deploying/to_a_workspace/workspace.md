@@ -151,6 +151,10 @@ If you would like to use your **own certificates to configure HTTPS** on the .st
 
 Another option is to use the [**Let's Encrypt**](https://letsencrypt.org/) certificate. In this scenario, the configuration script will prepare all the necessary files.
 
+#### Test Account in the Client's Domain
+
+It is not obligatory but will help a lot if we have a test account in the client's domain. With it, we will be able to test the portal authentication and make sure everything works correctly. 
+
 ### User Authentication
 
 #### Using Azure AD
