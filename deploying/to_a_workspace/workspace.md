@@ -159,9 +159,19 @@ It is not obligatory but will help a lot if we have a test account in the client
 
 #### Using Azure AD
 
-If users should authenticate against the university Azure AD, you need to register a new application in the Azure AD and set its Home Page URL and Reply URL to addresses provided by Turbo (for example, for unidemo the Home Page URL would be https://unidemo.start.turbo.net and the Reply URL: https://unidemo.start.turbo.net/auth/openid/return). Although it is possible to use the Service Principal account for authentication, we recommend creating a separate application with permissions only to authenticate users against Azure AD. You will also need to generate a secret for the application. Later, provide the application client\_id and secret to Turbo so we could update the authentication settings in the Portal.
+If users should authenticate against the university Azure AD, you need to register a new application in the Azure AD and set its Home Page URL and Reply URL to addresses provided by Turbo (for example, for unidemo the Home Page URL would be https://unidemo.start.turbo.net and the Reply URL: https://unidemo.start.turbo.net/auth/openid/return). Although it is possible to use the Service Principal account for authentication, we recommend creating a separate application with permissions only to authenticate users against Azure AD. You will also need to generate a secret for the application. Later, provide the application client\_id, secret, and App ID URI to Turbo so we could update the authentication settings in the Portal.
 
 If you plan to use Azure AD groups to customize the workspaces, make sure the newly created application has the permission to read the Active Directory data (Microsoft Graph > Read directory data).
+
+Next to the "web app/API" application we also need a native application to make the native clients work. It will be bound to the "web app/API" application.  Steps to register it are as follows:
+
+1. Click on "App registrations" and choose "New application registration".
+2. Enter a friendly name for the application, for example "Turbo.net-Client", and select "Native" as the Application Type. Set the RedirectURI to the same address as the Reply URL in the web app (for example: https://unidemo.start.turbo.net/auth/openid/return). Click on "Create" to create the application.
+3. In the succeeding page, find the "Application ID" value and share it with Turbo
+4. Next, we’ll need to configure the permissions of this new application.  
+  a. Click "Setting" and choose the "Required permissions" section
+  b. Click on "Add", then "Select an API", and type in the textbox the name of your "web app / api" app that we’re linking to and hit enter.  Select the app from the results and click the "Select" button.
+  c. Click on "Select Permissions" and select the "Access [name of app]" permission. Click the "Select" button again to close this screen.  Click on Done to finish adding the permission.
 
 #### Using ADFS
 
