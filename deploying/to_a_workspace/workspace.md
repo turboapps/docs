@@ -204,9 +204,15 @@ Click **Next** through the rest of the wizard and **Close** at the end.
 
 The **Edit Claim Rules for Turbo Portal** window should appear. We need to add two claim rules to pass the user's name and AD groups to the Turbo Portal.
 
-Click on the **Add Rule...** button, choose the **Send LDAP Attributes as Claims** option, and click **Next**. Fill the Claim Rule dialog as on the image below and click **Finish**.
+Click on the **Add Rule...** button, choose the **Send LDAP Attributes as Claims** option, and click **Next**. Set **Attribute store** to **Active Directory**, add the Claim Rules from the table below, and click **Finish**:
 
-![](/docs/deploying/to_a_workspace/adfs-claim-rules.png)
+LDAP Attribute                          | Outgoing Claim Type
+----------------------------------------|---------------------
+Display-Name                            | Name
+User-Principal-Name                     | UPN
+Token-Groups - Qualified by Domain Name | Group
+E-Mail-Addresses                        | E-Mail Address
+Token-Groups as SIDs                    | Group SID
 
 ### Managing workspaces and repositories
 
