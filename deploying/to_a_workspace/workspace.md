@@ -206,3 +206,17 @@ The **Edit Claim Rules for Turbo Portal** window should appear. We need to add t
 Click on the **Add Rule...** button, choose the **Send LDAP Attributes as Claims** option, and click **Next**. Fill the Claim Rule dialog as on the image below and click **Finish**.
 
 ![](/docs/deploying/to_a_workspace/adfs-claim-rules.png)
+
+### Managing workspaces and repositories
+
+To manage the workspace, you need to use your personal Turbo account. Make sure that this account has administrative rights in the organization. After signing in to https://turbo.net, click the profile icon (in the right upper corner) and you should see a list of workspaces to which you have access. Your workspace should be there too. After switching to it, you may search for new images and add them to the workspace, or remove the ones that are already there (hover over the image and click on the gear icon).
+
+When you publish a new university app image to the hub, you should use the organization namespace, for example, **turbo push unidemo.edu/myapp:2.0**. Publishing an image under the unidemo.edu namespace makes it accessible only to the @unidemo.edu accounts. As an administrator of the organization, you may configure settings for each image under the unidemo.edu namespace. If you click the gear icon on an image, you may select the "Go to Repository" option:
+
+![](/docs/deploying/to_a_workspace/go-to-repo.png)
+
+On the settings tab, two most important sections are the **Launch Configuration** panel and the **Admin** panel:
+
+![](/docs/deploying/to_a_workspace/admin-settings.png)
+ 
+The **File Isolation** defines the default isolation mode for the image (that’s what we will use to make the native Office365 visible). The **Using** textbox allows you to specify which other images (layers) should turbo import before running the main image (this could be 7zip or/and Adobe Reader, for example). Finally, the **Official** switch makes an image available for the cloud runs, and **Launch Location** configures possible ways of running the image.
