@@ -27,24 +27,24 @@ There are several types of logs available for Turbo Server, including logs for t
 
 ##### Portal + Application Broker Logs on Linux
 
-**Portal Runtime Logs**
+**Portal Logs**
 
 The logs for the Portal service can be accessed with the following command:
 
     sudo systemctl status portal.turbo.service
 
-**Application Broker Runtime Logs**
+**Application Broker Logs**
 
 The logs for the Application Broker service can be accessed with the following command:
 
     sudo systemctl status remoteapp-web.service
 
-**NGINX Logs (Linux)**
+**NGINX Logs**
 
 - Access Logs: /var/log/nginx/prod.turbo.net-access.log;
 - Error Logs: /var/log/nginx/prod.turbo.net-error.log;
 
-**Guacd Logs (Linux)**
+**Guacd Logs**
 
 The Guacamole proxy translates the Windows RDP protocol into the Guacamole protocol for the HTMl5 guacamole client.
     
@@ -53,11 +53,11 @@ The Guacamole proxy translates the Windows RDP protocol into the Guacamole proto
 
 ##### Portal + Application Broker Logs on Windows
 
-**Portal Runtime Logs**
+**Portal Logs**
 
 Currently there are no log files available for Windows installs.
 
-**Application Broker Runtime Logs**
+**Application Broker Logs**
 
 Currently there are no log files available for Windows installs.
 
