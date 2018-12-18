@@ -55,15 +55,15 @@ The Guacamole proxy translates the Windows RDP protocol into the Guacamole proto
 
 **Portal Logs**
 
-Currently there are no log files available for Windows installs.
+The Portal container outputs logs to stdout. You can access these logs with the following command:
+
+    turbo logs --stdout <container>
 
 **Application Broker Logs**
 
-Currently there are no log files available for Windows installs.
+The Application Broker container outputs logs to stdout. You can access these logs with the following command:
 
-**Jetty Logs**
-
-- C:\Jetty\Logs
+    turbo logs --stdout <container>
 
 
 ##### Application Server Logs
