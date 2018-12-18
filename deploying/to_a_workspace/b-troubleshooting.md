@@ -25,19 +25,19 @@ When troubleshooting an issue related to launching applications from the web, Tu
 
 There are several types of logs available for Turbo Server, including logs for the Portal, Application Broker, and Application Server.
 
-#### Portal + Application Broker Logs on Linux
+##### Portal + Application Broker Logs on Linux
 
 **Portal Runtime Logs**
 
 The logs for the Portal service can be accessed with the following command:
 
-		sudo systemctl status portal.turbo.service
+    sudo systemctl status portal.turbo.service
 
 **Application Broker Runtime Logs**
 
 The logs for the Application Broker service can be accessed with the following command:
 
-		sudo systemctl status remoteapp-web.service
+    sudo systemctl status remoteapp-web.service
 
 **NGINX Logs (Linux)**
 
@@ -51,7 +51,7 @@ The Guacamole proxy translates the Windows RDP protocol into the Guacamole proto
     sudo docker logs -f guacd
 
 
-#### Portal + Application Broker Logs on Windows
+##### Portal + Application Broker Logs on Windows
 
 **Portal Runtime Logs**
 
@@ -66,7 +66,7 @@ Currently there are no log files available for Windows installs.
 - C:\Jetty\Logs
 
 
-#### Application Server Logs
+##### Application Server Logs
 
 **Turbo Cmd Logs**
 
@@ -79,6 +79,6 @@ The RDPProxy translates the Windows RDP protocol into the RXP protocol for the H
 - C:\Users\Administrator\scripts\Logs
 
 
-#### Windows Event Viewer
+##### Windows Event Viewer
 
 The Windows Event Viewer is another useful source of information. If there is an issue with the Application Server configuration or RDP authentication there may be information reported in the Window Event Viewer to help diagnose the problem.
