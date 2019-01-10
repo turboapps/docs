@@ -1,4 +1,4 @@
-### Turbo Hub Server Administration
+### Hub Server Administration
 
 ![](/docs/deploying/to_turbo_server/hub-admin-1.png)
 

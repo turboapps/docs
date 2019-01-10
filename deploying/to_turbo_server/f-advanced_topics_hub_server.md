@@ -1,4 +1,4 @@
-### Turbo Hub Server Advanced Topics
+### Hub Server Advanced Topics
 
 This section describes advanced topics you may encounter when implementing Turbo Server.
 
