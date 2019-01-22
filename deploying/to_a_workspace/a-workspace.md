@@ -1,7 +1,7 @@
 
 ## To a Workspace
 
-Student Digitial Workspace (or SDW) is a platform which allows schools and universities to publish their application portfolio and let students run the applications on their own devices (Windows, MacOS, Android, iOS). 
+Digitial Workspace (or DW) is a platform which allows schools and universities to publish their application portfolio and let students run the applications on their own devices (Windows, MacOS, Android, iOS). 
 
 ### Architecture Overview
 
@@ -21,7 +21,7 @@ When an application launches, Portal initiates the session and handles the conne
 
 #### Components Description
 
-The following diagram gives an overview of the components that build SDW:
+The following diagram gives an overview of the components that build DW:
 
 ![Components diagram](/docs/deploying/to_a_workspace/architecture-diagram.png)
 
@@ -29,7 +29,7 @@ The following diagram gives an overview of the components that build SDW:
 
 #### Azure Resources
 
-The lists below describe resources required to host SDW in Azure in a recommended configuration. We can add additional components to the base configuration if needed. Example of such a situation could be adding an NV6 Compute Pod for engineering applications.
+The lists below describe resources required to host DW in Azure in a recommended configuration. We can add additional components to the base configuration if needed. Example of such a situation could be adding an NV6 Compute Pod for engineering applications.
 
 **VMs**:
 
@@ -49,13 +49,13 @@ The lists below describe resources required to host SDW in Azure in a recommende
 - Each Compute Pod: one fixed public IP
 - One Virtual Network with one or more subnets (possible to set up a Site2Site connection)
 
-The ArmViz diagram shows a minimal SDW deployment:
+The ArmViz diagram shows a minimal DW deployment:
 
-![ArmViz diagram of a minimal SDW with information about IPs and NSGs](/docs/deploying/to_a_workspace/armviz-architecture-diagram-with-ips-nsg.png)
+![ArmViz diagram of a minimal DW with information about IPs and NSGs](/docs/deploying/to_a_workspace/armviz-architecture-diagram-with-ips-nsg.png)
 
 #### Deployment Plan
 
-We deploy SDW in the following steps:
+We deploy DW in the following steps:
 
 1. Create Portal and school profile on Turbo central servers [4h]
 2. Add DNS addresses to point to the new servers (the convention is to use the school name and then .start.turbo.net) [<0.5h]
@@ -68,11 +68,11 @@ As you can see, the deployment should be finished within one day. Starting from 
 
 ### Requirements
 
-This section lists all the requirements needed to deploy the Student Digital Workspace in Azure successfully. For simplicity's sake, let's assume that we are configuring a production environment for a Demo University (unidemo). The university homepage is https://unidemo.edu and Portal will be available at the https://unidemo.start.turbo.net address. Students and staff members authenticate through Azure AD.
+This section lists all the requirements needed to deploy the Digital Workspace in Azure successfully. For simplicity's sake, let's assume that we are configuring a production environment for a Demo University (unidemo). The university homepage is https://unidemo.edu and Portal will be available at the https://unidemo.start.turbo.net address. Students and staff members authenticate through Azure AD.
 
 #### Azure Subscription
 
-The subscription on which we deploy SDW needs to have the following [Resource Providers](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-supported-services) registered:
+The subscription on which we deploy DW needs to have the following [Resource Providers](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-supported-services) registered:
 
 - Microsoft.Compute
 - Microsoft.Network
@@ -94,7 +94,7 @@ Please also check the "Usage + quotas" settings for your subscription, and make 
 
 #### Azure Resource Group
 
-We recommend creating a separate Resource Group (for example turbo-unidemo-prod) for the SDW deployment. It makes it easier to manage resources and avoids risks of interference between SDW elements and your current configuration. 
+We recommend creating a separate Resource Group (for example turbo-unidemo-prod) for the DW deployment. It makes it easier to manage resources and avoids risks of interference between DW elements and your current configuration. 
 
 #### Azure Service Principal Account
 
@@ -176,7 +176,7 @@ Next to the "web app/API" application we also need a native application to make 
 
 #### Using ADFS
 
-This paragraph lists the step required to configure SDW authentication against your ADFS server.
+This paragraph lists the step required to configure DW authentication against your ADFS server.
 
 On the ADFS server open the ADFS management window and go to **Trust Relationships** > **Relying Party Trusts** settings. Then right-click on the **Relying Party Trusts** and add a new Relying Party:
 
