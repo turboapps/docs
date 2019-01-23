@@ -482,6 +482,118 @@ The following examples describe a typical set of steps to set up a directory ser
 	Server.exe admin /directory-service ad set ad-settings.txt
 
 
+**Server.exe admin /hub**
+
+<table>
+      <tr>
+         <th data-column="0">
+            <div>
+               <p>Option</p>
+            </div>
+         </th>
+         <th data-column="1">
+            <div>
+               <p>Description</p>
+            </div>
+         </th>
+      </tr>
+      <tr>
+         <td>
+            <p><code>print, (none)</code></p>
+         </td>
+         <td>
+            <p>Prints the current hub settings.</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p><code>keys</code></p>
+         </td>
+         <td>
+            <p>Prints the current set of API keys.</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p><code>key create &lt;name&gt; &lt;type&gt;</code></p>
+         </td>
+         <td>
+            <p>Creates an API key with the given name. Specify "system" or "user" for the type of key to create.</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p><code>key renew &lt;name&gt;</code></p>
+         </td>
+         <td>
+            <p>Regenerates the value of the API key with the given name.</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p><code>key delete &lt;name&gt;</code></p>
+         </td>
+         <td>
+            <p>Deletes the API key with the given name.</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p><code>configsvc</code></p>
+         </td>
+         <td>
+            <p>Prints the launch configuration service settings.</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p><code>configsvc enable [port] [authentication-key]</code></p>
+         </td>
+         <td>
+            <p>Enables the launch configuration web service on the specified port. The authentication key is required to be passed in the header of all POST requests to the web service. The service is disabled by default.</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p><code>configsvc disable</code></p>
+         </td>
+         <td>
+            <p>Disables the launch configuration service.</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p><code>configsvc timeout [value]</code></p>
+         </td>
+         <td>
+            <p>Sets the length of time (in minutes) that a launch configuration is available after last use. Default is 1-hour.</p>
+         </td>
+      </tr>      
+      <tr>
+         <td>
+            <p><code>help, h, ?, -?, /?, etc.</code></p>
+         </td>
+         <td>
+            <p>Prints help information.</p>
+         </td>
+      </tr>
+</table>
+<br>
+Examples:
+
+- **Print the current settings**:
+
+	Server.exe admin /hub print
+
+- **Add an API key**:
+
+	Server.exe admin /hub key create "Test Lab Key"
+
+- **Enable launch configuration service**:
+
+	Server.exe admin /hub configsvc enable 9999 C68480F0BD594684A90EEB889118CEB6
+
+
 **Server.exe admin /license**
 
 <table>
