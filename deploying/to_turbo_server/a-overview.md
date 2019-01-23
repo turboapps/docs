@@ -38,6 +38,7 @@ Turbo Server enables you to accomplish the following goals:
 
 Turbo Server is compatible with the following platforms:
 
+- Microsoft Windows Server 2019
 - Microsoft Windows Server 2016
 - Microsoft Windows Server 2012 R2
 - Microsoft Windows Server 2012
