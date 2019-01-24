@@ -547,10 +547,10 @@ The following examples describe a typical set of steps to set up a directory ser
       </tr>
       <tr>
          <td>
-            <p><code>configsvc enable [port] [authentication-key]</code></p>
+            <p><code>configsvc enable [authentication-key]</code></p>
          </td>
          <td>
-            <p>Enables the launch configuration web service on the specified port. The authentication key is required to be passed in the header of all POST requests to the web service. The service is disabled by default.</p>
+            <p>Enables the launch configuration web service. The authentication key is required to be passed in the header of all POST requests to the web service. The service is disabled by default.</p>
          </td>
       </tr>
       <tr>
