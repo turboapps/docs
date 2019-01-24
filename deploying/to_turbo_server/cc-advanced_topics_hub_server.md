@@ -921,6 +921,105 @@ Examples:
 
 	Server.exe admin /user-group 2 clear
 
+
+#### Using the Launch Configuration Web Service
+
+The **launch configuration web service** is an optional component which can be used to allow executing containers from a Turbo Hub Server instance on a custom web portal. If Turbo Streaming Server is used as your application portal, this service is not necessary. 
+
+1. Enable the web service using the administration tool
+    
+    ```
+    > server.exe admin /hub configsvc enable F207AC681BBD40A0BF56ECF95B344EBC
+    ```
+    
+    In this example, the authentication key is set to "F207AC681BBD40A0BF56ECF95B344EBC". This value is required to be passed to all POST requests to the service in the **X-Config-Api-Key** HTTP header. The authentication key can be any string value but should be something long and randomly generated.
+    
+    **NOTE:** It is important that this authentication key be kept secret to prevent unauthorized users from generating malicious launch configurations. Any usage of the key or the code to submit a configuration must be done on the web portal's **server side** code (not in the browser client where a user can retrieve the key).
+    
+    Enabling the service will require npm (Node Package Manager) to be executed to download the required NodeJS libraries for your environment. This may fail in environments where the server has the network blocked. In this case, you will need to temporarily enable network access to complete the configuration process.
+    
+2. Create a launch configuration and submit it to the service
+    
+    ```
+    // create a launch configuration object. this example assumes that there is a hub image called "test/test".
+    // this launch configuration wil result in the turbo command: turbo try test/test --isolate=full
+    var launchConfig = {
+        v: 1,
+        verb: "try",
+        repoId: "test/test",
+        isolation: "full"
+    }
+    
+    // submit the launch configuration to the service
+    var request = new XMLHttpRequest();
+    request.open("POST", "http://[hub-server]/config");
+    request.setRequestHeader("Content-Type", "application/json");
+    request.setRequestHeader("X-Config-Api-Key", "F207AC681BBD40A0BF56ECF95B344EBC");
+    request.send(JSON.stringify(launchConfig));
+    request.onreadystatechange = function () {
+      if(request.readyState === 4) {
+        if(request.status === 200) {
+            console.log(request.responseText);
+        }
+        else {
+            console.log("request failed with status code: " + request.status);
+        }
+      }
+    };
+    ```
+    
+    Submit a POST request to the web service with the configuration json string. The response text is the hash of the configuration file on the server (ex: "sha256:66a123724dd6f8fb5ee050644a5494795fed2a1901d0c56def4030d8a6a26175"). This hash is used later to retrieve the configuration from the web service. Note the required request headers of "Content-Type" and "X-Config-Api-Key".
+    
+    Once submitted, the configuration will be available to retrieve for the configured timeout period. This can be set with the "/hub configsvc timeout" command (the default is 1-hour). The timeout is reset whenever the configuration is retrieved.
+        
+3. Retrieve a launch configuration
+    
+    ```
+    // hash that is returned from POST request
+    var hash = "sha256:66a123724dd6f8fb5ee050644a5494795fed2a1901d0c56def4030d8a6a26175";
+    
+    // make GET request
+    var url = "http://[hub-server]/config?hash=" + hash;
+    request.open("GET", url);
+    request.send();
+    request.onreadystatechange = function () {
+      if(request.readyState === 4) {
+        if(request.status === 200) {
+            console.log(request.responseText);
+        }
+        else {
+            console.log("request failed with status code: " + request.status);
+        }
+      }
+    };
+    ```
+    
+    The request will retrieve the configuration that was previously POSTed to the service. If the configuration has expired the response will be a status code of 404, file not found. 
+    
+4. Executing a launch configuration
+    
+    ```
+    // url to config:
+    // http://[hub-server]/config?hash=sha256:66a123724dd6f8fb5ee050644a5494795fed2a1901d0c56def4030d8a6a26175
+    
+    // open turbourl to config
+    var url = "turbo://[hub-server]/config?t=config&h=sha256:66a123724dd6f8fb5ee050644a5494795fed2a1901d0c56def4030d8a6a26175";
+    window.open(url);
+    ```
+    
+    To execute a submitted configuration file, you must construct a turbo protocol url. Your web portal can make an attempt to open these turbo urls to execute the configuration. The turbo protocol is handled by the Turbo Client if installed and will execute the configuration that it points to. 
+    
+    The first time you attempt to open a turbo url, the browser will show a security message like the following (each browser is different). The user can choose to hide future messages for turbo urls.
+    
+    ![](/docs/deploying/to_turbo_server/hub-configsvc-1.png)
+    
+    After the turbo url is allowed by the browser, a security message from the Turbo Client will be shown (see below). This message is to ensure that the user trusts the hub that the container is coming from. It is important that user do not execute containers from untrusted hubs. The user can choose to run this instance or trust all instances from the same hub.
+    
+    ![](/docs/deploying/to_turbo_server/hub-configsvc-2.png)
+    
+    After this the user will be prompted to login if necessary. Once logged in (or if login is not necessary), the container will execute.
+
+
 #### Testing HTTPS (SSL) with a Self-Signed Certificate
 
 Follow these steps to test Turbo Hub Server with SSL enabled using a self-signed certificate.
