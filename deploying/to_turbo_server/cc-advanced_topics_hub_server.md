@@ -591,7 +591,7 @@ Examples:
 
 - **Enable launch configuration service**:
 
-	Server.exe admin /hub configsvc enable 9999 C68480F0BD594684A90EEB889118CEB6
+	Server.exe admin /hub configsvc enable C68480F0BD594684A90EEB889118CEB6
 
 
 **Server.exe admin /license**
