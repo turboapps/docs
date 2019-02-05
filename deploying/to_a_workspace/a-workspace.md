@@ -198,7 +198,9 @@ Set the service URLs for WS-Federation and SAML 2.0 to the value provided by us 
 
 ![](/docs/deploying/to_a_workspace/adfs-enable-saml.png)
 
-Use the same URL as the relying party trust identifier, click **Add** and then **Next**.
+Use the same URL as the relying party trust identifier and click **Add**. Add one more identifier that is unbound to SAML or WS-Federation to be used by the Turbo Client. Click **Add** and then **Next**.
+
+![](/docs/deploying/to_a_workspace/adfs-id.png)
 
 Click **Next** through the rest of the wizard and **Close** at the end.
 
@@ -213,6 +215,28 @@ User-Principal-Name                     | UPN
 Token-Groups - Qualified by Domain Name | Group
 E-Mail-Addresses                        | E-Mail Address
 Token-Groups as SIDs                    | Group SID
+
+Confirm Global Authentication Policy settings from the **Authentication Policies** administration panel.
+
+![](/docs/deploying/to_a_workspace/adfs-global-policy-1.png)
+
+**Forms Authentication** must be enabled for both Extranet and Intranet.
+
+![](/docs/deploying/to_a_workspace/adfs-global-policy-2.png)
+
+Add Native Client App access to ADFS. Do this with the **Add-AdfsClient** powershell cmdlet.
+
+```
+(ps)> Add-AdfsClient -ClientId <CLIENT_ID> -Name <APP_NAME> -RedirectUri <REDIRECT_URI>
+```
+
+- **CLIENT_ID** is a GUID. Used guidgen.exe or other method to generate a new value.
+- **APP_NAME** is the name of the app. This can be anything but must be unique.
+- **REDIRECT_URI** is an unused but required value. This can be anything but must be unique.
+
+```
+(ps)> Add-AdfsClient -ClientId 54707E09-E6A2-4F22-9C73-638610AFE38A -Name Turbo-Client -RedirectUri http://turbo.net
+```
 
 ### Managing workspaces and repositories
 
