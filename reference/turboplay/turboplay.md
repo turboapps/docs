@@ -72,6 +72,7 @@ The json format of a `config` type is
   "enableRemoteCommands":true,
   "v":"1"
 }
+```
 
 RemoteAppConfig type example:
 
