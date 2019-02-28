@@ -33,7 +33,67 @@ Additional Notes:
 3. `--show-eula-for-rpc` is automatically passed and displayed to the user in a window if a EULA exists for an application.
 	
 ### Turbo URI scheme
-TurboPlay is responsible for parsing the Turbo URI scheme in the format of turbo://[Ip]?[query].
+
+The Turbo protocol directs TurboPlay to execute a local execution of an application, or connects to a remote application server capable of launching a Turbo application.
+
+```
+turbo://{portalAuthority}/{configPath}?t={type}&h={hash}&v={version}
+
+portalAuthority                          domain which must be trusted by the user from which the configuration comes from
+path                                     path of the service, typically 'config'
+type                                     config for launching a local application or remoteAppConfig for connecting to a remote application
+hash                                     hash of the configuration, to ensure its contents are not tampered with
+version                                  currently at 1
+```
+
+Configuration type example:
+
+`turbo://turbo.net/config?t=config&h=sha256:e28dd1863f82e6b2f46303311540ae194045a58756cd1c4fbbbc4c778021bc84&v=1`
+
+The json format of a `config` type is
+
+```
+{
+  "id":"2b68b3de-51e2-4a60-b822-bd810a55146f",
+  "repoId":"mozilla/firefox",
+  "appTitle":"Firefox",
+  "verb":"try",
+  "isolation":"full",
+  "isolateNetwork":false,
+  "routes":[],
+  "redirectedDomains":[],
+  "adGroupPermissions":[],
+  "startupFile":"",
+  "vm":"",
+  "layers":[],
+  "using":[],
+  "sync":false,
+  "tnlr":false,
+  "enableRemoteCommands":true,
+  "v":"1"
+}
+
+RemoteAppConfig type example:
+
+`turbo://turbo.net/config?t=remoteAppConfig&h=sha256:51d021ef9da4ee6c7910a4d5f19325fba77888ba94255ab67e0e4c0d8053fa6d&v=1`
+
+The json format of the `remoteAppConfig` type is
+
+```
+{
+  "v":1,
+  "sessionId":"e3e9df43-8f1e-4b0c-a371-8080b67cbc66",
+  "host":"192.0.2.1",
+  "auth":{
+    "user":"randomWindowsUser",
+    "password":"randomWindowsPassword"
+  },
+  "app":"turboplay",
+  "args":"turbourl turbo://config.to/run"
+}
+```
+
+The legacy Turbo URI scheme is in the format of turbo://[Ip]?[query].
 
 The query parameters are:
 ```
@@ -47,6 +107,8 @@ tnlrUrl                                  URL of the remote tnlr service which al
 tnrlUsername                             tnlr username
 tnlrPassword                             tnlr password
 ```
+
+
 
 ### Turbo RDP
 TurboPlay can connect and execute a TurboPlay command on the remote desktop without a Turbo URI scheme.
