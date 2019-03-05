@@ -1023,6 +1023,9 @@ The **launch configuration web service** is an optional component which can be u
 
 ```
 {
+    // The configuration JSON format version. Must be 1.
+    "v":1
+
     // The turbo command used to execute the app. Possible values are "try", "run", and "new". Must be specified.
     "verb":"try",
     
@@ -1032,35 +1035,26 @@ The **launch configuration web service** is an optional component which can be u
     // The isolation mode to run in. These are the same as those that can be passed to turbo run commands with `--isolate` flag. Default is "full".
     "isolation":"full",
     
-    // Whether network isolation is enabled in the container.
+    // Whether network isolation is enabled in the container. Optional, default is false.
     "isolateNetwork":false,
     
-    // A list of network mappings.
+    // A list of network mappings. Optional.
     "routes":[],
     
-    // Defines redirected domains.
-    "redirectedDomains":[],
-    
-    // Security groups which have access to this application. Empty means that all users have access.
-    "adGroupPermissions":[],
-    
-    // Command line parameters that are passed to the startup file of the container.
+    // Command line parameters that are passed to the startup file of the container. Optional.
     "cmdLineArgs":"",
     
-    // A list of additional image repository IDs that are permanently layered in to the container.
+    // A list of additional image repository IDs that are permanently layered in to the container. Optional.
     "layers":[],
     
-    // A list of additional image repository IDs that are temporarily layered in to the container.
+    // A list of additional image repository IDs that are temporarily layered in to the container. Optional.
     "using":[],
     
-    // Whether the container session is synced to/from the hub after/before each run.
+    // Whether the container session is synced to/from the hub after/before each run. Optional, default is false.
     "sync":false,
     
-    // Whether network tunneling is enabled.
+    // Whether network tunneling is enabled. Optional, default is false.
     "tnlr":false,
-    
-    // The configuration JSON format version. Must be 1.
-    "v":1
 }
 ```
 
