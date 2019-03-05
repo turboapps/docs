@@ -1018,6 +1018,51 @@ The **launch configuration web service** is an optional component which can be u
     ![](/docs/deploying/to_turbo_server/hub-configsvc-2.png)
     
     After this the user will be prompted to login if necessary. Once logged in (or if login is not necessary), the container will execute.
+    
+##### Launch Configuration JSON Format
+
+```
+{
+    // The turbo command used to execute the app. Possible values are "try", "run", and "new". Must be specified.
+    "verb":"try",
+    
+    // The repository ID of the image to execute. Must be specified.
+    "repoId":"spoonbrew/base",
+    
+    // The isolation mode to run in. These are the same as those that can be passed to turbo run commands with `--isolate` flag. Default is "full".
+    "isolation":"full",
+    
+    // Whether network isolation is enabled in the container.
+    "isolateNetwork":false,
+    
+    // A list of network mappings.
+    "routes":[],
+    
+    // Defines redirected domains.
+    "redirectedDomains":[],
+    
+    // Security groups which have access to this application. Empty means that all users have access.
+    "adGroupPermissions":[],
+    
+    // Command line parameters that are passed to the startup file of the container.
+    "cmdLineArgs":"",
+    
+    // A list of additional image repository IDs that are permanently layered in to the container.
+    "layers":[],
+    
+    // A list of additional image repository IDs that are temporarily layered in to the container.
+    "using":[],
+    
+    // Whether the container session is synced to/from the hub after/before each run.
+    "sync":false,
+    
+    // Whether network tunneling is enabled.
+    "tnlr":false,
+    
+    // The configuration JSON format version. Must be 1.
+    "v":1
+}
+```
 
 
 #### Testing HTTPS (SSL) with a Self-Signed Certificate
