@@ -172,7 +172,8 @@ Next to the "web app/API" application we also need a native application to make 
   a. Click "Setting" and choose the "Required permissions" section
   b. Click on "Add", then "Select an API", and type in the textbox the name of your "web app / api" app that we’re linking to and hit enter.  Select the app from the results and click the "Select" button.
   c. Click on "Select Permissions" and select the "Access [name of app]" permission. Click the "Select" button again to close this screen.  Click on Done to finish adding the permission.
-  d. When you are back on the Permissions screen, select "Windows Azure Active Directory" and make sure these two delegated permissions are checked: "Sign in and read user profile" and "Read directory data"
+  d. When you are back on the Permissions screen, select "Windows Azure Active Directory" and make sure these two delegated permissions are checked: "Sign in and read user profile" and "Read directory data", then select "Microsoft Graph" and check "Read directory data."
+5. Finally, we need to grant an aministator consent for the native application. Go to Enterprise applications on the Azure Active Directory blade and find the "Turbo.net-Client" application. Choose Permissions and then "Grant admin consent for Turbo.net." If you don't want users to accept the consent for the web application, grant the consent on this application too.
 
 #### Using ADFS
 
