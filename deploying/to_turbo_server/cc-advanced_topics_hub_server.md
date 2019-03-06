@@ -1049,12 +1049,6 @@ The **launch configuration web service** is an optional component which can be u
     
     // A list of additional image repository IDs that are temporarily layered in to the container. Optional.
     "using":[],
-    
-    // Whether the container session is synced to/from the hub after/before each run. Optional, default is false.
-    "sync":false,
-    
-    // Whether network tunneling is enabled. Optional, default is false.
-    "tnlr":false,
 }
 ```
 
