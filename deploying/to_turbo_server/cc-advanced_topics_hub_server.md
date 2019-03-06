@@ -1039,16 +1039,20 @@ The **launch configuration web service** is an optional component which can be u
     "isolateNetwork":false,
     
     // A list of network mappings. Optional.
+    // Example: routes:[{"rule":"ip","type":"deny"},{"rule":"ip://*.turbo.net","type":"allow"}],
     "routes":[],
     
     // Command line parameters that are passed to the startup file of the container. Optional.
+    // Example: cmdLineArgs: "echo Args",
     "cmdLineArgs":"",
     
     // A list of additional image repository IDs that are permanently layered in to the container. Optional.
+    // Example: layers: [{"repoId":"npp/notepadplusplus","enabled":true}],
     "layers":[],
     
     // A list of additional image repository IDs that are temporarily layered in to the container. Optional.
-    "using":[],
+    // Example: using: ["gnu/wget"]
+    "using":[]
 }
 ```
 
