@@ -57,11 +57,11 @@ Lets say the user wants to change the default working directory for the Python I
 This can be achieved by starting a python container and manually editing the lnk file using Windows File Explorer:
 
 1. `turbo run --isolate=merge-user --startup-file=explorer.exe python/python:3.7.3`
-2. Navigate to C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Python 3.7
-3. Right click on the file `IDLE (Python 3.7 32-bit).lnk
+2. Navigate to `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Python 3.7`
+3. Right click on the file `IDLE (Python 3.7 32-bit).lnk`
 4. Edit the Start in to T:\, or any other folder of your choice.
-5. Open another instance of File Explorer, this will be outsid of the Turbo Virtual Machine.
-6. Copy the `IDLE (Python 3.7 32-bit).lnk` you just edited using the virtual File Explorer instance, and paste it to the unvirtualized File Explorer folder where you've created the turbo.me file.
+5. Open another instance of File Explorer, this will be outside of the Turbo Virtual Machine.
+6. Copy the `IDLE (Python 3.7 32-bit).lnk` you just edited using the virtual File Explorer instance, and paste it to the native File Explorer folder where you've created the turbo.me file.
 7. Close the virtual File Explorer to shutdown the container. If the container does not shutdown, press ctrl+c in the command line to force kill.
 
 Next we modify the TurboScript to replace the startup file with the modifed file:
