@@ -67,6 +67,10 @@ You will now see your test image in your hub list in the administration site. Th
 
 On the repository edit page, a repository display name can be modified. This shows up in the hub administration page list as well as in connected Turbo Streaming Server portals if the dashboard is configured to show that repository. The repository ID field cannot be modified and is assigned when the first container image is pushed to the hub. The **versions** list shows all available images that are available for this repository. They can be referenced by their tag or their ID (ex, "mozilla/firefox:64.0" or "mozilla/firefox#44397e23bf46a08a8a567ba13b2c215668d451c9dde41b030706779dc977cc02"). Accessing a repository without a tag or ID will use the latest available image (ex, "mozilla/firefox"). Note that any repository updates may take up to 24hrs to be automatically retrieved by the Turbo Client.
 
+![](/docs/deploying/to_turbo_server/hub-admin-7.png)
+
+If a dashboard is defined then the repository can be added to it by checking the "Visible" checkbox. Repositories in the dashboard's namespace will automatically be added. Dashboard permissions can also be modified here. If no groups are defined then all users will have access to the repository. If groups are added to the list, then only members of these groups will be able to view the repository in the Turbo.net Launcher or Turbo Streaming Server portal.
+
 ##### Managing Repository Federation
 
 ![](/docs/deploying/to_turbo_server/hub-admin-6.png)
@@ -95,7 +99,7 @@ When adding an API Key, give it a name that describes the general usage of the k
 
 ![](/docs/deploying/to_turbo_server/hub-admin-10.png)
 
-When connecting Turbo Streaming Server to your Turbo Hub Server, the portal displays applications which are defined in your hub's dashboard. For example, if you dashboard is defined as "test-dashboard", then all repositories in that namespace ("test-dashboard/firefox", "test-dashboard/chrome", etc) will be displayed in the Turbo Streaming Server portal. All other containers will not be visible although they are still accessible as dependencies to visible applications.
+A dashboard is used to define what applications are exposed to users. By default there is no dashboard defined to all repositories in the server are shown in the Turbo.net Launcher (with the exception of the built-in dependencies repositories like vcredist, clean, base, etc). When a dashboard is defined, the Turbo.net Launcher or Turbo Streaming Server portal displays applications which are defined in your hub's dashboard. A repository can be added to the dashboard on the edit repository page. A dashboard must be defined in order to allow group permissions to be assigned to repository and is required to connect your hub server to a Turbo Streaming Server instance.
 
 #### Manage Users
 
