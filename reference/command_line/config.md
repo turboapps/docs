@@ -6,19 +6,24 @@ The `config` command displays and allows modification of the current configurati
 Usage: turbo config <options>
 
 <options> available:
-      --container-path=VALUE       Overrides container storage to the specified path
-      --debug-vm-path=VALUE        Path to debug VM
-      --disable-redirector         Disable browser redirection
-      --enable-redirector          Enable browser redirection
-      --format=VALUE               Use the specified format for output. Supported values: json
-      --hub=VALUE                  The remote hub to log into
-	  --image-path=VALUE           Overrides image storage to the specified path. Supported values: full path, or "allusers" to use the system wide shared folder
-      --reset                      Reset configuration to default values
-      --startup-file-default=VALUE Overrides the default startup file if the main image does not have one
-      --storage-path=VALUE         Path to local container and image storage
-      --using=VALUE                Use specified images as temporary dependencies
-      --wait-after-error           Leave process open after error
-      --wait-after-exit            Leave process open after it exits
+      --add-trusted-source=VALUE    Resources.Config_Help_AddTrustedSource
+      --all-users                   Applies the configuration settings to all users
+      --as-inherit                  Sets the all users settings as the inherited values which can be overridden by the user
+      --as-override                 Sets the all users settings as the values which override the user values
+      --block-trusted-source=VALUE  Resources.Config_Help_AddTrustedSource
+      --container-path=VALUE        Overrides container storage to the specified path
+      --debug-vm-path=VALUE         Path to debug VM
+      --disable=VALUE               Disables a feature: DirectDownload, MergeIsolation, Redirector, TurboDrive
+      --enable=VALUE                Enables a feature: DirectDownload, MergeIsolation, Redirector, TurboDrive
+      --format=VALUE                Use the specified format for output. Supported values: json
+      --hub=VALUE                   The remote hub to log into
+      --image-path=VALUE            Overrides image storage to the specified path. Supported values: full path, or "allusers" to use the system wide shared folder
+      --remove-trusted-source=VALUE Resources.Config_Help_AddTrustedSource
+      --reset                       Reset configuration to default values
+      --storage-path=VALUE          Path to local container and image storage
+      --using=VALUE                 Use specified images as temporary dependencies
+      --wait-after-error            Leave process open after error
+      --wait-after-exit             Leave process open after it exits
 ```
 
 If `turbo config` is executed without command line parameters then the current settings are returned. 
@@ -32,6 +37,7 @@ The hub server that Turbo will connect to, and thus push to and pull from, can b
 By default, Turbo is configured to connect to **https://turbo.net/hub**.
 
 #### Change the Storage Path
+
 The storage path points to the directory where images and containers are saved. By default, images and containers are saved in **%LOCALAPPDATA%\Turbo\Containers**.  Use the `--storage-path` flag to set the storage path to a different location.
 
 It may be more efficient to share a repository of images in multi-user environment while keeping container storage in a separate, per user location. 
@@ -61,6 +67,35 @@ Browser redirection is enabled
 
 # Sets the image repository storage path to C:\ProgramData\Turbo\Containers for all users
 > turbo config --image-path=allusers --all-users
+```
+
+#### Trusted Sources
+
+Trusted sources control which hub locations are allowed to have containers be started from web locations. By default, only https://turbo.net is trusted. Any untrusted hub will result in a warning dialog that will ask the user if the container execution is desired. The user will have the option to trust future containers from the location. A hub location can also be blocked which will prevent users from executing containers from those locations.
+
+```
+# view current trusted sources
+> turbo config
+Hub server: https://turbo.net/
+Turbo Drive is enabled (mounted as a T: drive)
+Trusted Hub Sources:
+  turbo.net
+  
+> turbo config --add-trusted-source=my-hub.com
+Hub server: https://turbo.net/
+Turbo Drive is enabled (mounted as a T: drive)
+Trusted Hub Sources:
+  turbo.net
+  my-hub.com
+  
+> turbo config --block-trusted-source=dangerous-hub.net
+Hub server: https://turbo.net/
+Turbo Drive is enabled (mounted as a T: drive)
+Trusted Hub Sources:
+  turbo.net
+  my-hub.com
+Blocked Hub Sources:
+  dangerous-hub.net
 ```
 
 #### Resetting Config Settings
