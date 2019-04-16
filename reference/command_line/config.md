@@ -13,8 +13,8 @@ Usage: turbo config <options>
       --block-trusted-source=VALUE  Resources.Config_Help_AddTrustedSource
       --container-path=VALUE        Overrides container storage to the specified path
       --debug-vm-path=VALUE         Path to debug VM
-      --disable=VALUE               Disables a feature: DirectDownload, MergeIsolation, Redirector, TurboDrive
-      --enable=VALUE                Enables a feature: DirectDownload, MergeIsolation, Redirector, TurboDrive
+      --disable=VALUE               Disables a feature: DirectDownload, MergeIsolation, Redirector, TurboDrive, LocalNetworkAccess
+      --enable=VALUE                Enables a feature: DirectDownload, MergeIsolation, Redirector, TurboDrive, LocalNetworkAccess
       --format=VALUE                Use the specified format for output. Supported values: json
       --hub=VALUE                   The remote hub to log into
       --image-path=VALUE            Overrides image storage to the specified path. Supported values: full path, or "allusers" to use the system wide shared folder
@@ -67,35 +67,6 @@ Browser redirection is enabled
 
 # Sets the image repository storage path to C:\ProgramData\Turbo\Containers for all users
 > turbo config --image-path=allusers --all-users
-```
-
-#### Trusted Sources
-
-Trusted sources control which hub locations are allowed to have containers be started from web locations. By default, only https://turbo.net is trusted. Any untrusted hub will result in a warning dialog that will ask the user if the container execution is desired. The user will have the option to trust future containers from the location. A hub location can also be blocked which will prevent users from executing containers from those locations.
-
-```
-# view current trusted sources
-> turbo config
-Hub server: https://turbo.net/
-Turbo Drive is enabled (mounted as a T: drive)
-Trusted Hub Sources:
-  turbo.net
-  
-> turbo config --add-trusted-source=my-hub.com
-Hub server: https://turbo.net/
-Turbo Drive is enabled (mounted as a T: drive)
-Trusted Hub Sources:
-  turbo.net
-  my-hub.com
-  
-> turbo config --block-trusted-source=dangerous-hub.net
-Hub server: https://turbo.net/
-Turbo Drive is enabled (mounted as a T: drive)
-Trusted Hub Sources:
-  turbo.net
-  my-hub.com
-Blocked Hub Sources:
-  dangerous-hub.net
 ```
 
 #### Resetting Config Settings
