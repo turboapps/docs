@@ -942,7 +942,7 @@ The **launch configuration web service** is an optional component which can be u
     
     ```
     // create a launch configuration object. this example assumes that there is a hub image called "test/test".
-    // this launch configuration wil result in the turbo command: turbo try test/test --isolate=full
+    // this launch configuration will result in the turbo command: turbo try test/test --isolate=full
     var launchConfig = {
         v: 1,
         verb: "try",
