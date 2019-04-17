@@ -109,5 +109,3 @@ The Turbo Client interacts with the Turbo VM kernel to allow container execution
 The new version of Turbo Hub Server will include a new Turbo Client, an updated Hub Site, and many other new features.
 
 When upgrading Turbo Hub Server, the service will restart. Be sure to alert users that the system is under maintenance before upgrading.
-
-**Note:** If your Turbo Hub Server was previously set to access an external database, your connection to the database will have to be manually reset after upgrading. For information on how to reset your connection to an external database, see *Manually Configure Turbo Server*.
