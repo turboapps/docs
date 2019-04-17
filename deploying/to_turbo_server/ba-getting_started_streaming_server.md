@@ -106,6 +106,6 @@ Once the portal service has started, you will be able to access the portal from 
 
 ![](/docs/deploying/to_turbo_server/streaming-setup-10.png)
 
-After logging into the poratl, the applications from the org or dashboard will be displayed for remote or local launch.
+After logging into the portal, the applications from the org or dashboard will be displayed for remote or local launch.
 
 ![](/docs/deploying/to_turbo_server/streaming-setup-11.png)
