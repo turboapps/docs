@@ -6,47 +6,54 @@ The `new` command creates new container from an image.
 Usage: new <options> [<image>] [--name=<name>]
 
 <options> available:
-      --                           Parameters after -- are passed directly to the container process
-  -a, --attach                     Attach to stdin, stdout, and stderr of the container
-      --ad-domain-allow=VALUE      Allow execution from the Active Directory domain
-      --ad-domain-deny=VALUE       Disallow execution from the Active Directory domain
-      --ad-group-allow=VALUE       Allow execution for members of the Active Directory group
-      --ad-group-deny=VALUE        Disallow execution for members of the Active Directory group
-      --admin                      Run the container with administrative permissions
-  -d, --detach                     Run the container in the background
-      --diagnostic                 Enable diagnostic logging
-      --disable=VALUE              Disable the specified Turbo VM setting
-  -e, --env=VALUE                  Set environment variables inside the container
-      --enable=VALUE               Enable the specified Turbo VM setting
-      --enable-log-stream          Enable web streaming of logs
-      --enable-screencast          Enable web streaming of screenshots
-      --enable-sync                Enable container synchronization
-      --env-file=VALUE             Read in a line delimited file of ENV variables
-      --format=VALUE               Use the specified format for output. Supported values: json
-      --hosts=VALUE                Add an entry to the virtual /etc/hosts file (<redirect>:<name>)
-  -i, --isolate=VALUE              Set isolation level: full, write-copy or merge
-      --install                    Create shortcut for created container in Start Menu
-      --link=VALUE                 Add link to another container (<container>:<alias>)
-      --mount=VALUE                Mount a host folder into the container. Format: [other-container:]SourceFolder[=TargetFolder]
-  -n, --name=VALUE                 Name of created container
-      --network=VALUE              Run container in specified named network
-      --no-pull                    Uses local images if to run the container if possible.  If not present, will pull from the hub.
-      --private                    Synchronize this container privately, visible only to me
-      --public                     Synchronize this container publicly, visible to everyone
-      --pull                       Pulls base images from hub before running, if they exist
-      --route-add=VALUE            Add route mapping. Supported protocols: ip, pipe, tcp, udp
-      --route-block=VALUE          Block specified route or protocol. Supported protocols: ip, tcp, udp
-      --route-file=VALUE           Read in a INI file of routing configuration
-      --startup-file=VALUE         Override the default startup file
-      --startup-verb=VALUE         Override the default startup verb
-      --temp                       Remove container when it exits
-      --trigger=VALUE              Execute named group of startup files
-      --upgrade-from=VALUE         Upgrade from specified container, when images have changed
-      --using=VALUE                Use specified images as a temporary dependency
-      --vm=VALUE                   Use the specified Turbo VM version for execution
-  -w, --working-dir=VALUE          Set the initial working directory inside the container
-      --wait-after-error           Leave process open after error
-      --wait-after-exit            Leave process open after it exits
+      --                       Parameters after -- are passed directly to the container process
+  -a, --attach                 Attach to stdin, stdout, and stderr of the container. This setting is not saved in the container.
+      --ad-domain-allow=VALUE  Allow execution from the Active Directory domain
+      --ad-domain-deny=VALUE   Disallow execution from the Active Directory domain
+      --ad-group-allow=VALUE   Allow execution for members of the Active Directory group
+      --ad-group-deny=VALUE    Disallow execution for members of the Active Directory group
+      --admin                  Run the container with administrative permissions
+      --app=VALUE              Run the application specified by an URI
+  -d, --detach                 Run the container in the background
+      --diagnostic             Enable diagnostic logging
+      --disable=VALUE          Disable the specified Turbo VM setting. This setting is not saved in the container.
+  -e, --env=VALUE              Set an environment variable inside the container. This setting is not saved in the container.
+      --enable=VALUE           Enable the specified Turbo VM setting. This setting is not saved in the container.
+      --enable-sync            Enable container synchronization. This setting is not saved in the container.
+      --env-file=VALUE         Read in a line delimited file of environment variables. This setting is not saved in the container.
+      --format=VALUE           Use the specified format for output. Supported values: json
+      --hide-drive=VALUE       Hide specified drives. This setting is not saved in the container. Format: <*|V:|-V:>[,...]
+      --hosts=VALUE            Add an entry to the virtual /etc/hosts file (<redirect>:<name>). This setting is not saved in the container.
+  -i, --isolate=VALUE          Set isolation level: full, write-copy, merge or merge-user.
+      --install                Installs the container after it is created
+      --link=VALUE             Add link to another container (<container>:<alias>). This setting is not saved in the container.
+      --mount=VALUE            Mount a host folder into the container. This setting is not saved in the container. Format: [other-container:]SourceFolder[=TargetFolder]
+      --mount-if=VALUE         Mount a host folder into the container but does not fail if the mount point doesn't exist. This setting is not saved in the container. Format: [other-container:]SourceFolder[=TargetFolder]
+  -n, --name=VALUE             Name of created container
+      --network=VALUE          Run container in specified named network. This setting is not saved in the container.
+      --no-pull                Uses local images to run the container if possible. If not present, will pull from the hub.
+      --no-run                 Create the container without executing it
+      --proxy-password=VALUE   Password used to connect to the proxy server. This setting is not saved in the container.
+      --proxy-server=VALUE     Proxy server. This setting is not saved in the container. Format: [socks5|http|https]://yourproxy:port
+      --proxy-username=VALUE   Username used to connect to the proxy server. This setting is not saved in the container.
+      --pull                   Pulls base images from hub before running, if they exist
+      --route-add=VALUE        Add route mapping. Supported protocols: ip, pipe, tcp, and udp. This setting is not saved in the container.
+      --route-block=VALUE      Block specified route or protocol. Supported protocols: ip, tcp, and udp. This setting is not saved in the container.
+      --route-file=VALUE       Read in a INI file of routing configuration. This setting is not saved in the container.
+      --set-startup-file=VALUE Override the default startup file permanantly
+      --set-startup-verb=VALUE Override the default startup verb permanantly
+      --show-window=VALUE      Controls how window is shown. Supported values: max, default
+      --startup-file=VALUE     Override the default startup file. This setting is not saved in the container.
+      --startup-verb=VALUE     Override the default startup verb. This setting is not saved in the container.
+      --stream                 Enable streaming of the image if available
+      --temp                   Remove container when it exits
+      --trigger=VALUE          Execute named group of startup files. This setting is not saved in the container.
+      --use-dll-cache          Use image DLL cache as created by the precache command. This setting is not saved in the container.
+      --using=VALUE            Use specified images as a temporary dependency
+      --vm=VALUE               Use the specified Turbo VM version for execution
+  -w, --working-dir=VALUE      Set the initial working directory inside the container. This setting is not saved in the container.
+      --wait-after-error       Leave process open after error
+      --wait-after-exit        Leave process open after it exits
 ```
 
 Turbo `new` can be used to specify multiple images by separating each image with a comma. If the same file, registry entry, or environment variable exists in multiple images, then the one from whichever image was specified last will win the conflict and be used in the virtual environment. Virtual machine settings are taken from the last specified image. Due to this "layering" approach, it is a good practice to specify images with newer versions of applications or libraries after images with older versions.
