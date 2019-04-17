@@ -93,7 +93,7 @@ API Keys allow you to login to your hub with a code other than with a username/p
 
 ![](/docs/deploying/to_turbo_server/hub-admin-8.png)
 
-When adding an API Key, give it a name that describes the general usage of the key. It is also recommended to have distinct keys for distinct usages so that if one is compromised or updated, all usages will not require update. **Run as System** controls whether the key is given administrative priviledges to push new images or delete repositories. Without this setting, the API key will only have read access to repositories.
+When adding an API Key, give it a name that describes the general usage of the key. It is also recommended to have distinct keys for distinct usages so that if one is compromised or updated, all usages will not require update. **Run as System** controls whether the key is given administrative privileges to push new images or delete repositories. Without this setting, the API key will only have read access to repositories.
 
 ##### Managing the Dashboard
 
