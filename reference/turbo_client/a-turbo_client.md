@@ -36,12 +36,32 @@ Running the Turbo Client installer with these command line flags can change the 
        </th>
     </tr>
     <tr>
+       <td><p><strong>--app-server</strong></p></td>
+       <td><p>Installs client and provisions the server to be used as an Application Server in an onpremise streaming pool.</p></td>
+    </tr>
+    <tr>
        <td><p><strong>--all-users</strong></p></td>
        <td><p>Installs the Turbo Client to <strong>%PROGRAMFILES(x86)%\turbo</strong> so that it is accessible for all users on the machine. This is required for running certain Turbo command for all users (such as `subscribe` or `installi`)</p></td>
     </tr>
     <tr>
+       <td><p><strong>--hide-gui</strong></p></td>
+       <td><p>Disables the Turbo Launcher from being visible.</p></td>
+    </tr>
+    <tr>
        <td><p><strong>--no-auto-start</strong></p></td>
-       <td><p>Stops the Turbo Sandbox Manager from starting in the background when logging into your machine. If this flag is used, other components or your web browser will have to start the process on demand and may reduce performance.</p></td>
+       <td><p>Stops the Turbo Launcher from starting when logging into your machine.</p></td>
+    </tr>
+    <tr>
+       <td><p><strong>--no-auto-update</strong></p></td>
+       <td><p>Disables the check to see if new versions of the client are available.</p></td>
+    </tr
+    <tr>
+       <td><p><strong>--no-redirector</strong></p></td>
+       <td><p>Doesn't install the Turbo Redirector Internet Explorer plugin when installing for all users.</p></td>
+    </tr>
+    <tr>
+       <td><p><strong>--no-shell-ext</strong></p></td>
+       <td><p>Disables the Turbo Launcher from being visible.</p></td>
     </tr>
     <tr>
        <td><p><strong>--server</strong></p></td>
