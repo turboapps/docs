@@ -180,8 +180,6 @@ After upgrading, the previous Turbo Launcher must also be uninstalled. Applicati
 
 **Note:** After upgrading, all preexisting applications need to be updated with a new application version for Windows 8 compatibility. This does not require a new SVM file to be packaged in Turbo Studio -- a new application version with the same SVM file is sufficient.
 
-**Note:** If your Turbo Server was previously set to access an external database, your connection to the database will have to be manually reset after upgrading. For information on how to reset your connection to an external database, see Manually Configure Turbo Server.
-
 ## Turbo Server
 
 Turbo Server is an application deployment tool that enables you to launch applications instantly from websites, portals and client desktops. Unlike traditional deployment methods, applications streamed from Turbo Server do not require download, installation, rebooting, administrative privileges, or separate setup steps. Applications hosted on Turbo Server launch after less than ten percent of the application is transferred. Turbo Server's speed and efficiency are possible thanks to two technologies: Virtualization and Predictive Streaming.
