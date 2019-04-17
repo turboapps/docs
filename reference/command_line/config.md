@@ -17,6 +17,7 @@ Usage: turbo config <options>
       --enable=VALUE                Enables a feature: DirectDownload, MergeIsolation, Redirector, TurboDrive, LocalNetworkAccess
       --format=VALUE                Use the specified format for output. Supported values: json
       --hub=VALUE                   The remote hub to log into
+	  --image-cache-size=VALUE      Limits the maximum image cache size, in megabytes. Set to 0 for unlimited
       --image-path=VALUE            Overrides image storage to the specified path. Supported values: full path, or "allusers" to use the system wide shared folder
       --remove-trusted-source=VALUE Resources.Config_Help_AddTrustedSource
       --reset                       Reset configuration to default values
@@ -46,6 +47,22 @@ Use the `--container-path` flag to specify a new location for container storage.
 
 Finally, the storage path can also be overwritten by the `TURBOREPO` environment variable which may be useful for testing an alternate location quickly without updating the client configuration. 
 
+### Set the Image Cache Size
+
+The image cache size flag will set the amount of disk space local images will consume before deleting lesser prioritized images. Set the value to 0 for unlimited cache size. The default value unlimited. 
+
+```
+> turbo config 
+Image cache size: unlimited
+
+# Set cache size to 2 GB
+> turbo config --image-cache-size=2048
+Image cache size: 2.00 GB
+
+# Back to unlimited
+> turbo config --image-cache-size=0
+Image cache size: unlimited
+```
 ##### Example
 
 ```
@@ -59,7 +76,7 @@ Finally, the storage path can also be overwritten by the `TURBOREPO` environment
 Hub server: https://turbo.net/
 Storage path: C:\ProgramData\Turbo\Containers
 Container storage path: C:\Users\matt\AppData\Local\Turbo\Containers\sandboxes
-Browser redirection is enabled
+Browser redirection: enabled
 
 # Switch storage path to %LOCALAPPDATA%\Turbo\Containers\repo\images
 # Keep container storage path in %LOCALAPPDATA%\Turbo\Containers\sandboxes
