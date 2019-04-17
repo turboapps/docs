@@ -8,7 +8,7 @@ There are four components of Turbo Streaming Server; the Portal service, the Hub
 
 #### Setup
 
-The Turbo Streaming Server is distributed with Turbo Container images. Running the containers will guide you through configuration on the first launch and then start the web services on your machine. The Portal and Broker services can also be configured to run on a Ubuntu Linux platform depending on your environment requirements. For test or demonstration purposes, all the services can be run on the same machine or VM. In production environments it is recommended to split the services to seperate machines as needed to share the load and offer adequate failover and redundancy.
+The Turbo Streaming Server is distributed with Turbo Container images. Running the containers will guide you through configuration on the first launch and then start the web services on your machine. The Portal and Broker services can also be configured to run on a Ubuntu Linux platform depending on your environment requirements. For test or demonstration purposes, all the services can be run on the same machine or VM. In production environments it is recommended to split the services to separate machines as needed to share the load and offer adequate failover and redundancy.
 
 ##### Application Server
 
