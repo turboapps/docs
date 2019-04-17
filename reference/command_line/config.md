@@ -17,7 +17,7 @@ Usage: turbo config <options>
       --enable=VALUE                Enables a feature: DirectDownload, MergeIsolation, Redirector, TurboDrive, LocalNetworkAccess
       --format=VALUE                Use the specified format for output. Supported values: json
       --hub=VALUE                   The remote hub to log into
-	  --image-cache-size=VALUE      Limits the maximum image cache size, in megabytes. Set to 0 for unlimited
+      --image-cache-size=VALUE      Limits the maximum image cache size, in megabytes. Set to 0 for unlimited
       --image-path=VALUE            Overrides image storage to the specified path. Supported values: full path, or "allusers" to use the system wide shared folder
       --remove-trusted-source=VALUE Resources.Config_Help_AddTrustedSource
       --reset                       Reset configuration to default values
