@@ -33,6 +33,13 @@ If you expect multiple users to be running on the same host, it is recommended t
 For more granular network isolation settings, see [Virtual Networks](/docs/reference#new-virtual-networks).
 
 
+#### Use DLL Cache
+
+This setting enables pre-caching of application DLL and EXE files on the Application Servers’ local disk for faster loading.  
+
+Typically this setting will be disabled, in which case the DLL and EXE files are embedded in the SVM and loaded from the Image Cache Server.  
+
+
 #### Access local network
 
 Local network access allows a remote application to access the local host's network. The local host's network can be accessed by using the special hostname `localhost.turbo.net`.
