@@ -559,11 +559,11 @@ Complete the following steps to manage an entry point:
 
 You can expose or hide an entry point by selecting the check box under the **Enabled** column of the **Entry Points** section, then saving the application version.
 
-###### Managing Application Categories
+##### Managing Application Categories
 
 Categories control the display and segregation of applications on the Portal Site. All categories are displayed on the left navigation bar of the Portal Site.
 
-######## Adding a Category
+###### Adding a Category
 
 Complete the following steps to add a new category:
 
@@ -581,15 +581,13 @@ Complete the following steps to add a new category:
 
 4. It may take up to ten (10) minutes for category updates to be visible on the Portal Site.
 
-######## Managing Categories
+###### Managing Categories
 
 Categories can be managed at the bottom of the **Apps** page. To revise the name or description of a category, select the category name in the listing. To delete a category select the **Delete** link in the category listing. Deleting a category does not delete or unpublish any applications associated with that category.
 
 ##### Manage Users
 
 Turbo Server users are tracked and managed via the Administration Site. Users are entered manually or via automated import from LDAP or Active Directory directory services. Users can be viewed and managed on the **Users** page. You can also place users into groups to assign application permissions to multiple users at once. The **Users** page contains a list of existing users and user groups. From this page you can view user directories, status, recent activity and available actions. Displayed above the user list is the total number of licenses available and the number of licenses currently in use.
-
-###### Managing Users
 
 To manage a user, select the user name from the list on the **Users** page. The following fields are displayed on the page:
 
