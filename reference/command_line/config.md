@@ -6,20 +6,21 @@ The `config` command displays and allows modification of the current configurati
 Usage: turbo config <options>
 
 <options> available:
-      --add-trusted-source=VALUE    Resources.Config_Help_AddTrustedSource
+      --add-trusted-source=VALUE    Add a source hub to the trusted list
       --all-users                   Applies the configuration settings to all users
       --as-inherit                  Sets the all users settings as the inherited values which can be overridden by the user
       --as-override                 Sets the all users settings as the values which override the user values
-      --block-trusted-source=VALUE  Resources.Config_Help_AddTrustedSource
+      --block-trusted-source=VALUE  Add a source hub to the blocked list
       --container-path=VALUE        Overrides container storage to the specified path
       --debug-vm-path=VALUE         Path to debug VM
       --disable=VALUE               Disables a feature: DirectDownload, MergeIsolation, Redirector, TurboDrive, LocalNetworkAccess
       --enable=VALUE                Enables a feature: DirectDownload, MergeIsolation, Redirector, TurboDrive, LocalNetworkAccess
       --format=VALUE                Use the specified format for output. Supported values: json
+      --gci-interval=VALUE          The number of minutes between automatic image garbage collection checks. Set to 0 to disable.
       --hub=VALUE                   The remote hub to log into
-      --image-cache-size=VALUE      Limits the maximum image cache size, in megabytes. Set to 0 for unlimited
+      --image-cache-size=VALUE      Limits the maximum image cache size, in megabytes. Set to 0 for unlimited.
       --image-path=VALUE            Overrides image storage to the specified path. Supported values: full path, or "allusers" to use the system wide shared folder
-      --remove-trusted-source=VALUE Resources.Config_Help_AddTrustedSource
+      --remove-trusted-source=VALUE Remove a source hub from the trusted list
       --reset                       Reset configuration to default values
       --storage-path=VALUE          Path to local container and image storage
       --using=VALUE                 Use specified images as temporary dependencies
