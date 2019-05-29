@@ -1003,7 +1003,7 @@ The **launch configuration web service** is an optional component which can be u
     // http://[hub-server]/config?hash=sha256:66a123724dd6f8fb5ee050644a5494795fed2a1901d0c56def4030d8a6a26175
     
     // open turbourl to config
-    var url = "turbo://[hub-server]/config?t=config&h=sha256:66a123724dd6f8fb5ee050644a5494795fed2a1901d0c56def4030d8a6a26175";
+    var url = "turbo://[hub-server]/config?t=config&v=1&h=sha256:66a123724dd6f8fb5ee050644a5494795fed2a1901d0c56def4030d8a6a26175";
     window.open(url);
     ```
     
