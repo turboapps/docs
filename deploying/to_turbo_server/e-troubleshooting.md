@@ -101,12 +101,12 @@ There are several types of logs available for Turbo Server, including logs for t
 - _[Install Directory]\logs\\*.log_
 
 **Turbo Hub Server Web Services Logs**
-- _[Install Directory]\Sandbox\MODIFIED\@PROGRAMFILESX86@\Turbo Server\Web\logs\*.log_
-- _[Install Directory]\Sandbox\MODIFIED\@PROGRAMFILESX86@\Turbo Server\Web\Hub\logs\*.log_
+- _[Install Directory]\Sandbox\MODIFIED\\@PROGRAMFILESX86@\Turbo Server\Web\logs\\*.log_
+- _[Install Directory]\Sandbox\MODIFIED\\@PROGRAMFILESX86@\Turbo Server\Web\Hub\logs\\*.log_
 
 **SQL Server Logs (Embedded SQL Server Express)**
 
-- _[Install Directory]\Sandbox\MODIFIED\@PROGRAMFILESX86@\Microsoft SQL Server\MSSQL.1\MSSQL\LOG_
+- _[Install Directory]\Sandbox\MODIFIED\\@PROGRAMFILESX86@\Microsoft SQL Server\MSSQL.1\MSSQL\LOG_
 
 **Apache Logs**
 
