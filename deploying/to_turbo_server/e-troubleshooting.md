@@ -110,7 +110,7 @@ There are several types of logs available for Turbo Server, including logs for t
 
 **Apache Logs**
 
-- _[Install Directory]\Sandbox\MODIFIED\@PROGRAMFILESX86@\Apache Software Foundation\Apache2.2\logs\error.log_
+- _[Install Directory]\Sandbox\MODIFIED\\@PROGRAMFILESX86@\Apache Software Foundation\Apache2.2\logs\error.log_
 
 #### Starting and Stopping the Turbo Server Service
 
