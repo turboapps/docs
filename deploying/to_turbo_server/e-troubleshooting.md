@@ -101,16 +101,22 @@ There are several types of logs available for Turbo Server, including logs for t
 - _[Install Directory]\logs\\*.log_
 
 **Turbo Hub Server Web Services Logs**
+
 - _[Install Directory]\Sandbox\MODIFIED\\@PROGRAMFILESX86@\Turbo Server\Web\logs\\*.log_
 - _[Install Directory]\Sandbox\MODIFIED\\@PROGRAMFILESX86@\Turbo Server\Web\Hub\logs\\*.log_
 
-**SQL Server Logs (Embedded SQL Server Express)**
+**Turbo Hub Server SQL Server Logs (Embedded SQL Server Express)**
 
 - _[Install Directory]\Sandbox\MODIFIED\\@PROGRAMFILESX86@\Microsoft SQL Server\MSSQL.1\MSSQL\LOG_
 
-**Apache Logs**
+**Turbo Hub Server Apache Logs**
 
 - _[Install Directory]\Sandbox\MODIFIED\\@PROGRAMFILESX86@\Apache Software Foundation\Apache2.2\logs\error.log_
+
+**Turbo Streaming Server Logs**
+
+- Portal and Broker servers write all log traces to the console. These are archived in their container logs xcstream_*.txt files. Use `turbo logs [container] --export=c:\path` to retrieve the logs.
+- Application Server provisioning logs are stored in _C:\Program Files (x86)\Turbo\ApplicationServer\logs_.
 
 #### Starting and Stopping the Turbo Server Service
 
