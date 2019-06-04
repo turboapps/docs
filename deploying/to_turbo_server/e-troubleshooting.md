@@ -98,7 +98,7 @@ There are several types of logs available for Turbo Server, including logs for t
 
 **Turbo Hub Server Service Logs**
 
-- _[Install Directory]\logs\*.log_
+- _[Install Directory]\logs\\*.log_
 
 **Turbo Hub Server Web Services Logs**
 - _[Install Directory]\Sandbox\MODIFIED\@PROGRAMFILESX86@\Turbo Server\Web\logs\*.log_
