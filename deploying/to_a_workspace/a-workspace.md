@@ -245,6 +245,63 @@ Add Native Client App access to ADFS. Do this with the **Add-AdfsClient** powers
 (ps)> Add-AdfsClient -ClientId 54707E09-E6A2-4F22-9C73-638610AFE38A -Name Turbo-Client -RedirectUri http://turbo.net
 ```
 
+#### On Premises ADFS Configuration
+
+In this section we go over the required settings changes to configure your on premises installation for ADFS login. The following instructions are for the Ubuntu installation steps:
+
+1. We use the ADFS Token-Signing Certificate to verify that ADFS authentication responses are signed by your ADFS. On your ADFS, export the Token-Signing Certificate as a Base-64 encoded X.509 .CER file.
+2. Rename the file to `adfs.crt`.
+3. On your Ubuntu machine, add `adfs.crt` to the `turbo.net` directory.
+4. Next update or run the Ubuntu setup instructions. On the Ubuntu 16.04 machine extract the turbo.net.tar.gz.
+    
+        tar -xzvf turbo-net.tar.gz
+        cd turbo.net
+
+5. Ensure the ADFS related fields in `config.yml` are filled.
+
+        nano config.yml 
+		
+   `login_mode` The login mode used to access the portal, use the value `ADFS`
+
+   `adfs_issuer` The ADFS relying party's identifier.
+   
+   `adfs_entry_point` The ADFS relying party's endpoint.
+   
+   `adfs_logout_url` The ADFS relying party's logout endpoint.
+   
+   `adfs_signing_cert_thumb` The ADFS Token-Signing Certificate's thumbprint.
+   
+   `adfs_signing_cert_cn` The ADFS Token-Signing Certificate's common name.
+
+   `adfs_cert_file` The ADFS Token-Signing Certificate, in PEM format.
+
+6. Run:
+ 
+        sudo ./setup.sh
+		
+
+If you would like to manually edit the configuration file for an already configured Turbo Portal, open the /props/config.ini file. If you are running Turbo Portal in a Windows Turbo Container, run the following command `turbo run turbo/portal --startup-file=c:\websites\portal\src\props\config.ini`. Fill in the following fields:
+
+```
+# Controls what mode of login this portal uses
+# ADFS: Login to ADFS with SAML auth
+loginMode = ADFS
+
+# Controls which ADFS you SSO into
+#Obtained from your ADFS relying party client- / app-id
+ADFSAppId=
+# Obtained from your ADFS relying party identifier
+ADFSIssuer =
+# Obtained from your ADFS relying party endpoints
+ADFSEntryPoint =
+# Obtained from your ADFS relying party endpoints
+ADFSLogoutUrl =
+# Obtained from your ADFS token-signing certificate
+ADFSSigningCertThumb =
+# Obtained from your ADFS token-signing certificate
+ADFSSigningCertCN =
+```
+
 ### Managing workspaces and repositories
 
 To manage the workspace, you need to use your personal Turbo account. Make sure that this account has administrative rights in the organization. After signing in to https://turbo.net, click the profile icon (in the right upper corner) and you should see a list of workspaces to which you have access. Your workspace should be there too. After switching to it, you may search for new images and add them to the workspace, or remove the ones that are already there (hover over the image and click on the gear icon).
