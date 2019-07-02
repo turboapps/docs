@@ -159,6 +159,95 @@ Configured LocalAccountTokenFilterPolicy to grant administrative rights remotely
 WinRM service is already running on this machine.
 WinRM is already set up for remote management on this computer.
 ```
+#### RemoteApp Registry Settings
+
+The application server provisioner should make the required changes to enable RemoteApp execution. Ensure these registry settings were applied properly:
+
+<table>
+      <tr>
+         <th data-column="0">
+            <div>
+               <p>Path</p>
+            </div>
+         </th>
+         <th data-column="1">
+           <div>
+             <p>Setting</p>
+          </div>
+         <th data-column="2">
+            <div>
+               <p>Value</p>
+            </div>
+         </th>
+         <th data-column="3">
+           <div>
+             <p>Comment</p>
+           </div>
+         </th>
+      </tr>
+
+      <tr>
+         <td colspan="1">HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services</td>
+         <td colspan="1">fDisableCam</td>
+         <td colspan="1">0 (DWORD)</td>
+         <td colspan="1">Enables audio.</td>
+      </tr>
+      <tr>
+         <td colspan="1"></td>
+         <td colspan="1">fDisableCam</td>
+         <td colspan="1">0 (DWORD)</td>
+         <td colspan="1">Enables audio.</td>
+      </tr>
+      <tr>
+         <td colspan="1"></td>
+         <td colspan="1">DisablePasswordSaving</td>
+         <td colspan="1">0 (DWORD)</td>
+         <td colspan="1"></td>
+      </tr>
+      <tr>
+         <td colspan="1"></td>
+         <td colspan="1">fPromptForPassword</td>
+         <td colspan="1">0 (DWORD)</td>
+         <td colspan="1"></td>
+      </tr>
+      <tr>
+         <td colspan="1"></td>
+         <td colspan="1">fEncryptRPCTraffic</td>
+         <td colspan="1">0 (DWORD)</td>
+         <td colspan="1"></td>
+      </tr>
+      <tr>
+         <td colspan="1"></td>
+         <td colspan="1">MinEncryptionLevel</td>
+         <td colspan="1">absent</td>
+         <td colspan="1">Remove this value.</td>
+      </tr>
+      <tr>
+         <td colspan="1">HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Terminal Server\TSAppAllowList</td>
+         <td colspan="1">fDisabledAllowList</td>
+         <td colspan="1">1 (DWORD)</td>
+         <td colspan="1">Enables the RemoteApp allowed program list.</td>
+      </tr>
+      <tr>
+         <td colspan="1"></td>
+         <td colspan="1">CustomRDPSettings</td>
+         <td colspan="1">authentication level:i:2 (String)</td>
+         <td colspan="1">Specifies RemoteApp custom settings such as the authentication level.</td>
+      </tr>
+
+      <tr>
+         <td colspan="1">HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Terminal Server\TSAppAllowList\Applications\turboplay</td>
+         <td colspan="1">Path</td>
+         <td colspan="1">C:\Program Files (x86)\Turbo\Cmd\turboplay.exe (String)</td>
+         <td colspan="1">Make sure turboplay is allowed.</td>
+      </tr>
+      <tr>
+         <td colspan="1">HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Terminal Server\TSAppAllowList\Applications\turbo</td>
+         <td colspan="1">Path</td>
+         <td colspan="1">C:\Program Files (x86)\Turbo\Cmd\turbo.exe (String)</td>
+         <td colspan="1">Make sure turbo is allowed.</td>
+      </tr>
+</table>
 
 ## Provision Failures
 
