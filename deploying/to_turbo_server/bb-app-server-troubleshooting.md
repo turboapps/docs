@@ -233,7 +233,6 @@ The application server provisioner should make the required changes to enable Re
          <td colspan="1">authentication level:i:2 (String)</td>
          <td colspan="1">Specifies RemoteApp custom settings such as the authentication level.</td>
       </tr>
-
       <tr>
          <td colspan="1">HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Terminal Server\TSAppAllowList\Applications\turboplay</td>
          <td colspan="1">Path</td>
