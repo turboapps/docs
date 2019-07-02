@@ -185,7 +185,6 @@ The application server provisioner should make the required changes to enable Re
            </div>
          </th>
       </tr>
-
       <tr>
          <td colspan="1">HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services</td>
          <td colspan="1">fDisableCam</td>
