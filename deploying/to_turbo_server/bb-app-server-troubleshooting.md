@@ -90,11 +90,11 @@ In a typical enterprise scenario the administrator has applied Microsoft's secur
       </tr>
 </table>
 
-#### WinRM 
+#### Diagnose WinRM Errors
 
-If the broker logs reveal errors WinRM errors in the stacktrace, the administrator can manually test the WinRm on the application server.
+If the broker logs reveal errors WinRM errors in the stacktrace, the administrator can manually test the WinRM on the application server.
 
-The application server must have WinRm Client enabled for diagnostics commands. The following table specifies the required group policies for allowing WinRm client:
+The application server must have WinRM Client enabled for diagnostics commands. The following table specifies the required group policies for allowing WinRM client:
 
 <table>
       <tr>
