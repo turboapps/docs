@@ -187,9 +187,9 @@ The application server provisioner should make the required changes to enable Re
       </tr>
       <tr>
          <td colspan="1">HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services</td>
-         <td colspan="1">fDisableCam</td>
+         <td colspan="1">fDenyTSConnections</td>
          <td colspan="1">0 (DWORD)</td>
-         <td colspan="1">Enables audio.</td>
+         <td colspan="1">Enables Terminal Services.</td>
       </tr>
       <tr>
          <td colspan="1"></td>
