@@ -61,13 +61,13 @@ In a typical enterprise scenario the administrator has applied Microsoft's secur
       <tr>
         <td colspan="1">Windows Settings > Security Settings > Local Policies > User Rights Assignment</td>
         <td colspan="1">Deny access to this computer from the network</td>
-        <td colspan="1">Remove Users</td>
-        <td colspan="1">Local users must be able to remote into application server to run applications. This is not required if using active directory authentication.</td>
+        <td colspan="1">Remove Local account</td>
+        <td colspan="1">Local users must be able to remote into application server to run applications and configure the machine using the --app-server install. This is not required if using active directory authentication.</td>
       </tr>
       <tr>
         <td colspan="1"></td>
         <td colspan="1">Deny log on through Remote Desktop Services</td>
-        <td colspan="1">Remove Users</td>
+        <td colspan="1">Remove Local account</td>
         <td colspan="1">Local users must be able to remote into application server to run applications. This is not required if using active directory authentication.</td>
       </tr>
       <tr>
@@ -90,11 +90,11 @@ In a typical enterprise scenario the administrator has applied Microsoft's secur
       </tr>
 </table>
 
-#### Diagnose WinRM Errors
+#### Diagnosing WinRM Errors
 
-If the broker logs reveal errors WinRM errors in the stacktrace, the administrator can manually test the WinRM on the application server.
+If the broker logs reveal errors WinRM errors in the stacktrace or during the application server installer's provisioning process, the administrator can manually test the WinRM on the application server.
 
-The application server must have WinRM Client enabled for diagnostics commands. The following table specifies the required group policies for allowing WinRM client:
+The application server must have WinRM Client enabled for diagnostics commands. The following table specifies the required group policies for allowing WinRM client, and additional policies that must be set for the WinRM host:
 
 <table>
       <tr>
@@ -129,6 +129,30 @@ The application server must have WinRM Client enabled for diagnostics commands. 
          <td colspan="1">Allow unencrypted traffic</td>
          <td colspan="1">Enabled or not configured</td>
          <td colspan="1">Security baseline will set this to disabled. The winrm command will test the connection using basic http.</td>
+      </tr>
+      <tr>
+         <td colspan="1">Administrative Templates > Windows Components > Windows Remote Management > WinRM Service</td>
+         <td colspan="1">Allow remote server management through WinRM</td>
+         <td colspan="1">Enabled or not configured</td>
+         <td colspan="1">Application server provision requires WinRM.</td>
+      </tr>
+      <tr>
+         <td colspan="1"></td>
+         <td colspan="1">Allow Basic authentication</td>
+         <td colspan="1">Enabled</td>
+         <td colspan="1">Application server provision requires WinRM.</td>
+      </tr>
+      <tr>
+        <td colspan="1"></td>
+        <td colspan="1">Allow unencrypted traffic</td>
+        <td colspan="1">Enabled</td>
+        <td colspan="1">Application server provision requires WinRM.</td>
+      </tr>
+	  <tr>
+        <td colspan="1">Windows Settings > Security Settings > Local Policies > User Rights Assignment</td>
+        <td colspan="1">Deny access to this computer from the network</td>
+        <td colspan="1">Remove Local account</td>
+        <td colspan="1">Application server provision requires WinRM potentially over the local administrator account.</td>
       </tr>
 </table>
 
@@ -249,5 +273,17 @@ The application server provisioner should make the required changes to enable Re
 
 ## Provision Failures
 
-Occasionally the application server provisoner may fail. Please try again and contact support@turbo.net if the failure repeats.
+If the appliation server installer fails check the logs located in `C:\Program Files (x86)\Turbo\ApplicationServer\logs`. A common failure log:
 
+```
+Ansible provision script failed with 4
+At C:\data\application-server-provision.ps1:265 char:9
++ throw "Ansible provision script failed with $ret"
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
++ CategoryInfo : OperationStopped: (Ansible provision script failed with 4:String) [], RuntimeException
++ FullyQualifiedErrorId : Ansible provision script failed with 4
+
+Error: Ansible provision script failed with 4
+```
+
+The error is caused by group policies that restrict WinRM access. Refer to the Diagnosing WinRM Failures section of this article.
