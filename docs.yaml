@@ -44,6 +44,7 @@ topic: VM
 documents:
 - title: Virtual Machine
 - title: VM Settings and Variables
+- title: XAPPL Configuration
 ---
 topic: Reference
 documents:
@@ -53,7 +54,6 @@ documents:
 - title: Dependencies
 - title: Turbo Client
 - title: Turbo Play
-- title: XAPPL Configuration
 ---
 topic: About
 documents:
