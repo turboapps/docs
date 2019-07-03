@@ -1,5 +1,5 @@
-## TurboPlay
-TurboPlay is a command line based window wrapper application to Turbo applications.
+## Turbo Play
+Turbo Play is a command line based window wrapper application to Turbo applications.
 
 
 ### Executing Turbo Commands
@@ -34,7 +34,7 @@ Additional Notes:
 	
 ### Turbo URI scheme
 
-The Turbo protocol directs TurboPlay to execute a local execution of an application, or connects to a remote application server capable of launching a Turbo application.
+The Turbo protocol directs Turbo Play to execute a local execution of an application, or connects to a remote application server capable of launching a Turbo application.
 
 ```
 turbo://{portalAuthority}/{configPath}?t={type}&h={hash}&v={version}
@@ -112,14 +112,14 @@ tnlrPassword                             tnlr password
 
 
 ### Turbo RDP
-TurboPlay can connect and execute a TurboPlay command on the remote desktop without a Turbo URI scheme.
+Turbo Play can connect and execute a Turbo Play command on the remote desktop without a Turbo URI scheme.
 
     > turboplay rdp [Ip] [rdpUsername] [rdpPassword] [remoteAppProgram] [remoteAppCmdLine]
 
 Tnrl support is not available in this mode.
 
 ### Turboplay Legacy Usage
-TurboPlay can execute Legacy Turbo applications from a config or model URL
+Turbo Play can execute Legacy Turbo applications from a config or model URL
 
 ```
     /config           The URL to an application configuration to execute

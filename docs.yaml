@@ -40,6 +40,11 @@ documents:
 - title: Integration Tools
 - title: Tips
 ---
+topic: VM
+documents:
+- title: Virtual Machine
+- title: VM Settings and Variables
+---
 topic: Reference
 documents:
 - title: Command Line
@@ -47,18 +52,13 @@ documents:
 - title: Turbo Shell
 - title: Dependencies
 - title: Turbo Client
-- title: TurboPlay
-- title: Virtual Machine
-- title: VM Settings and Variables
+- title: Turbo Play
 - title: XAPPL Configuration
----
-topic: Contributing
-documents:
-- title: Contribute to Turbo
-- title: Style Guide
 ---
 topic: About
 documents:
 - title: What is Turbo?
 - title: Turbo and App Virtualization
 - title: Turbo and Docker
+- title: Contribute to Turbo
+- title: Style Guide
