@@ -134,7 +134,7 @@ The application server must have WinRM Client enabled for diagnostics commands. 
          <td colspan="1">Administrative Templates > Windows Components > Windows Remote Management > WinRM Service</td>
          <td colspan="1">Allow remote server management through WinRM</td>
          <td colspan="1">Enabled or not configured</td>
-         <td colspan="1">Application server provision requires WinRM.</td>
+         <td colspan="1">Application server provision requires WinRM. If enabled, make sure you set the IPv4 and IPv6 filters correctly.</td>
       </tr>
       <tr>
          <td colspan="1"></td>
