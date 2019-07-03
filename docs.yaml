@@ -32,13 +32,21 @@ documents:
 - title: To Turbo.net
 - title: To a Workspace
 - title: To a Desktop
-- title: To Turbo Server
 - title: To Citrix
 - title: To Parallels RAS
 - title: With SCCM
 - title: Portable EXEs and MSIs
 - title: Integration Tools
 - title: Tips
+---
+topic: Server
+documents:
+- title: Overview
+- title: Hub Server
+- title: Application Server
+- title: Legacy Portal Server
+- title: Turbo Plugin and Turbo Launcher
+- title: Troubleshooting
 ---
 topic: VM
 documents:
