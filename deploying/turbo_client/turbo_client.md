@@ -1,6 +1,6 @@
-### Turbo Client and Launcher
+### Turbo Client
 
-In the following pages you will learn about how to use Turbo Client and the Turbo Launcher.
+In the following pages you will learn about how to use the Turbo Client and Turbo Launcher.
 
 #### Install the Plugin
 

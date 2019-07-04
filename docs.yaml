@@ -35,6 +35,7 @@ documents:
 - title: To Citrix
 - title: To Parallels RAS
 - title: With SCCM
+- title: Turbo Client
 - title: Portable EXEs and MSIs
 - title: Integration Tools
 - title: Tips
@@ -45,7 +46,6 @@ documents:
 - title: Hub Server
 - title: Application Server
 - title: Legacy Portal Server
-- title: Turbo Client and Launcher
 - title: Troubleshooting
 ---
 topic: VM
