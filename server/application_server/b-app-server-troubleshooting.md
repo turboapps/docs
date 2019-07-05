@@ -4,7 +4,7 @@ A common point of failure is due to the group policy applied to the application 
 
 #### Group Policy Settings
 
-In a typical enterprise scenario the administrator has applied Microsoft's security baseline group policies on Windows servers. There are some group policies that will prevent the application server from functioning. Ensure the following group policies are either unconfigured or set to the following values in the table:
+In a typical enterprise scenario the administrator has applied Microsoft's security baseline group policies on Windows servers. There are some group policies that will prevent the application server from functioning. Some of these policies may not appear in your Group Policy editor if the template is missing from your Windows Policy folder, but must be changed to install correctly. Ensure the following group policies are either unconfigured or set to the following values in the table:
 
 <table>
       <tr>
@@ -27,6 +27,12 @@ In a typical enterprise scenario the administrator has applied Microsoft's secur
              <p>Comment</p>
            </div>
          </th>
+      </tr>
+      <tr>
+         <td colspan="1">Administrative Templates > SCM: Pass the Hash Mitigations</td>
+         <td colspan="1">Apply UAC restrictions to local accounts on network logons</td>
+         <td colspan="1">Disabled or not configured</td>
+         <td colspan="1">Security baseline will enable this value. If the policy path is missing, locate the ptH.admx and add it in your group policy templates folder.</td>
       </tr>
       <tr>
          <td colspan="1">Administrative Templates > Windows Components > Windows Remote Management > WinRM Service</td>
@@ -117,6 +123,12 @@ The application server must have WinRM Client enabled for diagnostics commands. 
              <p>Comment</p>
            </div>
          </th>
+      </tr>
+	  <tr>
+         <td colspan="1">Administrative Templates > SCM: Pass the Hash Mitigations</td>
+         <td colspan="1">Apply UAC restrictions to local accounts on network logons</td>
+         <td colspan="1">Disabled or not configured</td>
+         <td colspan="1">Security baseline will enable this value. If the policy path is missing, locate the ptH.admx and add it in your group policy templates folder.</td>
       </tr>
       <tr>
          <td colspan="1">Administrative Templates > Windows Components > Windows Remote Management > WinRM Client</td>
