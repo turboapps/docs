@@ -41,18 +41,6 @@ In a typical enterprise scenario the administrator has applied Microsoft's secur
          <td colspan="1">Security baseline default value is not configured.</td>
       </tr>
       <tr>
-         <td colspan="1"></td>
-         <td colspan="1">Allow Basic authentication</td>
-         <td colspan="1">Enabled</td>
-         <td colspan="1">Security baseline will set this to disabled. Broker communicates with the application server over http and must be enabled.</td>
-      </tr>
-      <tr>
-        <td colspan="1"></td>
-        <td colspan="1">Allow unencrypted traffic</td>
-        <td colspan="1">Enabled</td>
-        <td colspan="1">Security baseline will set this to disabled. Broker communicates with the application server over http and must be enabled.</td>
-      </tr>
-      <tr>
         <td colspan="1">Administrative Templates > Windows Components > Remote Desktop Services > Remote Desktop Session Host > Security</td>
         <td colspan="1">Always prompt for password upon connection</td>
         <td colspan="1">Disabled</td>
