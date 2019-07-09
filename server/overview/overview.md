@@ -16,7 +16,7 @@ Turbo containers interact with a virtualized file system, registry, and process 
 
 ##### Turbo Streaming
 
-Turbo Streaming Server allows an application to be executed in an application server pool while streaming the application to the client machine. Native clients are supported for Windows, MacOS, iOS, and Android or any HTML5 browser can be used to access the application. Using Turbo Container technology on your application servers allows for increased user density and less maintenance than traditional remote desktop solutions.
+Turbo Server allows an application to be executed in an application server pool while streaming the application to the client machine. Native clients are supported for Windows, MacOS, iOS, and Android or any HTML5 browser can be used to access the application. Using Turbo Container technology on your application servers allows for increased user density and less maintenance than traditional remote desktop solutions.
 
 #### Features
 
