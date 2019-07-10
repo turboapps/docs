@@ -2,17 +2,13 @@
 
 Turbo Streaming Server is an on-premise application delivery platform. In this section you will learn about system requirements and instructions for installing, configuring and running Turbo Streaming Server.
 
-#### Architecture
-
-There are four components of Turbo Streaming Server; the Portal service, the Hub service, the Application Server Pool, and the Broker service. The **Portal service** hosts the application web portal where users can log in to view and launch their applications. The **Hub service** is the source of all the application images that are offered on the web portal. The hub can either point to Turbo.net hub or your own instance of Turbo Hub Server. The **Application Server Pool** is a group of servers where the remove application containers are executed and the streamed to the client. The **Broker service** controls how remote applications are executed in the application server pool.
-
 #### Setup
 
 The Turbo Streaming Server is distributed with Turbo Container images. Running the containers will guide you through configuration on the first launch and then start the web services on your machine. The Portal and Broker services can also be configured to run on a Ubuntu Linux platform depending on your environment requirements. For test or demonstration purposes, all the services can be run on the same machine or VM. In production environments it is recommended to split the services to separate machines as needed to share the load and offer adequate failover and redundancy.
 
 ##### Application Server
 
-The **Application Server** is where remote applications will run when streamed to remote clients. The server must be running Microsoft Windows Server 2012R2 or later. The [application server provisioner container image](https://turbo.net/run/turbo/application-server-provisioner) will enable the RDS role, configure the firewall, WinRM, and other settings to allow remote applications to be executed. This provisioning process must be done on every application server in the pool.
+The **Application Server** is where remote applications will run when streamed to remote clients. The server must be running Microsoft Windows Server 2012R2, Windows Server 2016, or Windows Server 2019. The [application server provisioner container image](https://turbo.net/run/turbo/application-server-provisioner) will enable the RDS role, configure the firewall, WinRM, and other settings to allow remote applications to be executed. This provisioning process must be done on every application server in the pool.
 
 To run the provisioner, download the [Turbo Client](https://turbo.net/downloads) and run with the `--app-server` parameter.
 
