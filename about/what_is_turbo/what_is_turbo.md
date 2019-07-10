@@ -38,7 +38,7 @@ With Turbo, system administrators can:
 
 ### How does it work?
 
-Turbo containers are built on top of the **Turbo Virtual Machine Engine** (SVM), an application virtualization engine which provides lightweight implementation of core operating system APIs, including the filesystem, registry, process, networking, and threading subsystems. Applications executing within the Turbo virtual machine interact with a virtualized filesystem, registry, network, and process environment supplied by the SVM, rather than directly with the host device operating system. 
+Turbo containers are built on top of the **Turbo Virtual Machine Engine**, an application virtualization engine which provides lightweight implementation of core operating system APIs, including the filesystem, registry, process, networking, and threading subsystems. Applications executing within the Turbo virtual machine interact with a virtualized filesystem, registry, network, and process environment supplied by the SVM, rather than directly with the host device operating system. 
 
 The image below illustrates how the SVM is isolated from the host environment.
 
