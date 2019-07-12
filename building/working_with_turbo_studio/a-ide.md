@@ -18,14 +18,14 @@ Turbo Studio offers a user interface to manage custom images and virtual applica
 
 <!--TODO: add a brief section on when you would want to use Turbo Studio vs. the CLI -->
 
-### System requirements and download
+### System Requirements
 
-Turbo Studio runs on any Windows operating system, including systems running within VMware and Microsoft hardware virtualization and hypervisor environments. Turbo Studio has limited support for the Windows Preinstallation Environment (WinPE), though certain applications (depending on operating system features unavailable in WinPE) may not function properly.
+Turbo Studio runs on any Windows operating system, including systems running within VMware and Microsoft hardware virtualization and hypervisor environments.
 
 Turbo Studio supports both 32- and 64-bit applications. Both 32-bit (under 32-bit mode) and 64-bit executables can be run on x64-based platforms.
+
+Turbo Studio has limited support for the Windows Preinstallation Environment (WinPE), though certain applications (depending on operating system features unavailable in WinPE) may not function properly.
 
 **Note:** Turbo Studio does not support creation of 16-bit executables. To run 16-bit DOS applications, virtualize an appropriate emulator with the application and launch the application through the emulator.
 
 **Note:** Turbo Studio cannot access the turbo.net hub on Windows XP or Windows Server 2003 because the platforms do not support TLS1.2 which is required to access the web resources. Snapshot, build, and other features are not affected.
-
-Download a free 30-day trial [here](/studio) or try the free, [express version](/studio/download). 
