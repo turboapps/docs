@@ -9,7 +9,7 @@ isolate "<objectType>:<name or path>" <isolation>
 Supported object types:
 
 * kernel - kernel objects (full isolation only)
-* file - file system
+* file - file system (directory paths must end in a backslash)
 * window - window objects
 
 Supported isolation types:
