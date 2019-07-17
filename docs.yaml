@@ -16,13 +16,13 @@ documents:
 topic: Hub
 documents:
 - title: Creating a Profile
+- title: Working with Images
 - title: Repositories
 - title: Templates
 ---
 topic: Building
 documents:
 - title: Working with Containers
-- title: Working with Images
 - title: Working with Turbo Studio
 - title: Continuous Integration
 - title: Scenarios
@@ -51,8 +51,8 @@ documents:
 topic: VM
 documents:
 - title: Virtual Machine
-- title: VM Settings and Variables
-- title: XAPPL Configuration
+- title: Advanced Topics
+- title: XML Configuration
 ---
 topic: Reference
 documents:
