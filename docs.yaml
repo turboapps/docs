@@ -20,13 +20,6 @@ documents:
 - title: Repositories
 - title: Templates
 ---
-topic: Building
-documents:
-- title: Working with Containers
-- title: Working with Turbo Studio
-- title: Continuous Integration
-- title: Scenarios
----
 topic: Deploying
 documents:
 - title: To Turbo.net
@@ -39,6 +32,16 @@ documents:
 - title: Portable EXEs and MSIs
 - title: Integration Tools
 - title: Tips
+---
+topic: Studio
+documents:
+- title: Overview
+- title: Working with Turbo Studio
+- title: Working with Containers
+- title: Continuous Integration
+- title: Advanced Topics
+- title: Troubleshooting
+- title: Scenarios
 ---
 topic: Server
 documents:

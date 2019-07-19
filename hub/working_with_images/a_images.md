@@ -19,7 +19,7 @@ There are four ways to create an image:
 > turbo commit <container-id> <image-name>
 ```
 
-See a more detailed example [here](/docs/building/working-with-containers).
+See a more detailed example [here](/docs/studio/working-with-containers).
 
 #### Automatic Builds
 

@@ -103,6 +103,7 @@ The command-line version of Turbo Studio is called <b>XStudio.exe</b> and can be
     </tr>
 </table>
 <br>
+
 **Note:** Configuration files that are generated from the command-line after using the **/after** flag do not have an output file specified in the **XAPPL** configuration file. When using scripting for snapshots, it may be necessary to apply changes to the generated **XAPPL** file, either manually or programmatically.
 
-**Note:** If running XStudio displays the error, "<SandboxCollision> is missing from the string table", it is because the XStudio application cannot be run while Turbo Studio is also running. Turbo Studio must be closed before running XStudio via the command line.
+**Note:** If running XStudio displays the error `<SandboxCollision> is missing from the string table` the XStudio application cannot be run while Turbo Studio is also running. Turbo Studio must be closed before running XStudio via the command line.

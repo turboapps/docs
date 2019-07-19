@@ -20,7 +20,7 @@ NOTE: The parameters to pass to **OffVirt.msi** depend on the Office 2010 produc
 
 Use Turbo Studio to **Capture Before**.
 
-![](/docs/building/scenarios/office1.png)
+![](/docs/studio/scenarios/office1.png)
 
 Install Microsoft Office 2010. **NOTE:** this must be done with a KMS or VLK installer. Retail licenses will not work properly.
 
@@ -32,7 +32,7 @@ Use Turbo Studio to **Capture and Diff**.
 
 After the snapshot is complete, the **Microsoft Office Snapshot** wizard will present you with some options to isolate the configuration file. In almost all scenarios you will want the first option, to isolate from the native system. This will allow you to run side-by-side with native versions of Microsoft Office. In scenarios where the Office 2010 container is run with native components and plugins, then it may be required to select the second option. However, this option generally doesn't allow for side-by-side operation with native Office installations.
 
-![](/docs/building/scenarios/office2.png)
+![](/docs/studio/scenarios/office2.png)
 
 Set the **Project Type** to **ISV Application (.exe)**, save the configuration, and build.
 

@@ -27,4 +27,4 @@ Also note the use of **adobe/disable-reader-sandbox**. This is used for compatib
 > turbo run mypdfs,adobe/disable-reader-sandbox --isolate=write-copy --startup-file="C:\Program Files (x86)\Adobe\Acrobat Reader DC\Reader\AcroRd32.exe" -- c:\MyPDFs\test.pdf
 ```
 
-![](/docs/building/scenarios/reader1.png)
+![](/docs/studio/scenarios/reader1.png)

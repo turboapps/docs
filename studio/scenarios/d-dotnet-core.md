@@ -10,19 +10,19 @@ Decompress the .NET Core .zip file to you application build working directory. F
 
 Open Turbo Studio and save the empty configuration to **c:\dotnetcore-build\dotnetcore.xappl**. Set the **Startup File** to **@SYSTEM@\cmd.exe**, the **Project Type** to **Layer (.svm)**, and the **Output File** to **c:\dotnetcore-build\dotnetcore.svm**. Note, depending on your scenario and deployment method, your settings may vary.
 
-![](/docs/building/scenarios/dotnetcore1.png)
+![](/docs/studio/scenarios/dotnetcore1.png)
 
 Make sure that the **Copy added files to configuration folder** option is enabled (see the **Option** menu at the top-left corner of the Turbo Studio interface). 
 
-![](/docs/building/scenarios/dotnetcore2.png)
+![](/docs/studio/scenarios/dotnetcore2.png)
 
 Then select **System Drive** in the **Filesystem** editor window. Click the **Add Folder** button and select **c:\dotnetcore-build\dotnet-sdk-2.1.302-win-x64**. This will add the folder to your configuration, copying the files to the **c:\dotnetcore-build\Files** directory.
 
-![](/docs/building/scenarios/dotnetcore3.png)
+![](/docs/studio/scenarios/dotnetcore3.png)
 
 Next add two environment variables to the configuration. Add **PATH** in **WriteCopy** isolation mode with a value of **@SYSDRIVE@\dotnet-sdk-2.1.302-win-x64** (or whatever the installation path is in your container environment). This value will be added to the existing **PATH** value for applications that run inside the container. Also add **DOTNET_SKIP_FIRST_TIME_EXPERIENCE** in **Full** isolation mode with a value of **true**. This will make first runs execute much faster as unused components will not be pre-cached.
 
-![](/docs/building/scenarios/dotnetcore4.png)
+![](/docs/studio/scenarios/dotnetcore4.png)
 
 Depending on where this image is deployed, the **Microsoft Visual C++ 2015 Redistributable Update 3** may be required. This can be added to your container environment from the Turbo.net hub with the **microsoft/vcredist:2015** image. For standalone executables, see the article on **Legacy Internet Explorer and Java** for an example of how to add a dependency from the Turbo.net hub. 
 

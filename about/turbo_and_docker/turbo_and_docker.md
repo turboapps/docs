@@ -74,7 +74,7 @@ host device. This is extremely useful, for example, to allow cached data to be p
 
 At an even finer granularity, a Turbo **isolation mode** may be specified on a per-object basis. For example, it is possible to specify that one directory subtree should be fully isolated while another one is visible from the host device. Supported isolation modes include **Full**, **Merge**, **Hide**, and **Write Copy**.
 
-For more information on isolation modes, please see the [Isolation Modes](/docs/building/working-with-turbo-studio#virtual-filesystem) section of this documentation.
+For more information on isolation modes, please see the [Isolation Modes](/docs/studio/working-with-turbo-studio#virtual-filesystem) section of this documentation.
 
 ### Networking
 
@@ -97,7 +97,7 @@ app virtualization engine, which operates on top of (rather than within) the OS 
 
 Like Docker, Turbo provides command-line interfaces (`turbo`) and a scripting language (**TurboScript**) for automating build processes. Turbo also provides a number of rich GUI- and web-based tools and services for building, configuring, and managing virtual environments.
 
-**[Turbo Studio](/docs/building/working-with-turbo-studio)** provides a visual design environment and easy-to-use wizards for creating images.
+**[Turbo Studio](/docs/studio/working-with-turbo-studio)** provides a visual design environment and easy-to-use wizards for creating images.
 
 **[Turbo Server](http://turbo.net/server)** is an on-premises version of Turbo.net that	provides the same functionality in a behind-firewall environment. In addition, Turbo Server provides enterprise-specific such as a web application portal, Active Directory and LDAP integration, centralized management, user data synchronization, license management, and usage analytics.
 

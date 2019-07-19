@@ -10,7 +10,7 @@ This article will explain Turbo's built-in browser ad blocking and network routi
 
 Popular web browsers in the Turbo Hub such as Chrome and Firefox come pre-configured with ad blocking.
 
-![](/docs/building/scenarios/adblock1.png)
+![](/docs/studio/scenarios/adblock1.png)
 
 Turbo uses the [uBlock Origin](https://github.com/gorhill/uBlock) plugin, a popular open source system currently installed on millions of devices. Turbo augments the default configuration with data on additional advertising networks. The ad block plugin and databases are automatically updated as part of Turbo's automatic browser patching system -- users or administrators don't need to do anything!
 
@@ -24,7 +24,7 @@ Applications containing advertising in the Turbo.net Hub have this layer enabled
 
 To enable network-based ad blocking on your own applications, right-click on the application and press the **Settings** context menu button in the **Applications** tab of the dashboard. Then select the **Network** tab and click the **Add** button next to the **Block Ad Networks** layer:
 
-![](/docs/building/scenarios/adblock2.png)
+![](/docs/studio/scenarios/adblock2.png)
 
 Finally, click **Save**.
 

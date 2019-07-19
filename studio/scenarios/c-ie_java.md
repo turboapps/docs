@@ -17,42 +17,42 @@ With the Turbo Client installed, pull the images that we need from the Turbo.net
 
 Now we will need to import those images into Turbo Studio to use. Starting with our Java 6 image, import the image from the local repository.
 
-![](/docs/building/scenarios/usecase_iejre1.png)
+![](/docs/studio/scenarios/usecase_iejre1.png)
 
 Select **oracle/jre:6.45**.
 
-![](/docs/building/scenarios/usecase_iejre2.png)
+![](/docs/studio/scenarios/usecase_iejre2.png)
 
 Save the imported image to a location on your machine. Here, **c:\turbo\jre-6.45** was chosen.
 
-![](/docs/building/scenarios/usecase_iejre3.png)
+![](/docs/studio/scenarios/usecase_iejre3.png)
 
 Once the import is complete, set the **Project Type** to "Layer (.svm)" and set the **Output File** to "jre-6.45.svm". Save and build. You will now have **c:\turbo\jre-6.45\jre-6.45.svm**.
 
-![](/docs/building/scenarios/usecase_iejre4.png)
+![](/docs/studio/scenarios/usecase_iejre4.png)
 
 Now we need to import our Internet Explorer 8 image. Import from the local repository and select **microsoft/ie:8**.
 
-![](/docs/building/scenarios/usecase_iejre5.png)
+![](/docs/studio/scenarios/usecase_iejre5.png)
 
 Save the imported image to **c:\turbo\ie-8**.
 
-![](/docs/building/scenarios/usecase_iejre6.png)
+![](/docs/studio/scenarios/usecase_iejre6.png)
 
 Change the **Output File** to "IE8+JRE6.exe" (or any other appropriate name for your scenario).
 
-![](/docs/building/scenarios/usecase_iejre7.png)
+![](/docs/studio/scenarios/usecase_iejre7.png)
 
 Add jre-6.45.svm to your layers library by clicking the **Layer** button and then **Import Layers...**. Select **c:\turbo\jre-6.45\jre-6.45.svm**.
 
-![](/docs/building/scenarios/usecase_iejre8.png)
+![](/docs/studio/scenarios/usecase_iejre8.png)
 
 Select **jre-6.45** in the layers list.
 
-![](/docs/building/scenarios/usecase_iejre9.png)
+![](/docs/studio/scenarios/usecase_iejre9.png)
 
 Save and build. Below is an image of our new IE8+JRE6 standalone executable running side-by-side with native Internet Explorer 11 on Windows 10.
 
-![](/docs/building/scenarios/usecase_iejre10.png)
+![](/docs/studio/scenarios/usecase_iejre10.png)
 
 
