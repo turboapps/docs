@@ -1011,11 +1011,11 @@ The **launch configuration web service** is an optional component which can be u
     
     The first time you attempt to open a turbo url, the browser will show a security message like the following (each browser is different). The user can choose to hide future messages for turbo urls.
     
-    ![](/docs/deploying/to_turbo_server/hub-configsvc-1.png)
+    ![](/docs/server/hub_server/hub-configsvc-1.png)
     
     After the turbo url is allowed by the browser, a security message from the Turbo Client will be shown (see below). This message is to ensure that the user trusts the hub that the container is coming from. It is important that user do not execute containers from untrusted hubs. The user can choose to run this instance or trust all instances from the same hub.
     
-    ![](/docs/deploying/to_turbo_server/hub-configsvc-2.png)
+    ![](/docs/server/hub_server/hub-configsvc-2.png)
     
     After this the user will be prompted to login if necessary. Once logged in (or if login is not necessary), the container will execute.
     
