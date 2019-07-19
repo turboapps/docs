@@ -18,7 +18,7 @@ To run the provisioner, download the [Turbo Client](https://turbo.net/downloads)
 
 This will install the Turbo Client components for all users and configure the application server for remote applications. 
 
-![](/docs/deploying/to_turbo_server/streaming-setup-1.png)
+![](/docs/server/application_server/streaming-setup-1.png)
 
 Note that this process cannot be undone so make sure that the machine is backed up appropriately.
 
@@ -28,13 +28,13 @@ During the provisioning process a reboot may occur. If so, after complete, log b
 
 When the process is complete, you will see a completion message.
 
-![](/docs/deploying/to_turbo_server/streaming-setup-2.png)
+![](/docs/server/application_server/streaming-setup-2.png)
 
 ##### Broker Service
 
 The **Broker service** is a web service which controls connections between the portal and the servers in the application server pool.
 
-![](/docs/deploying/to_turbo_server/streaming-setup-3.png)
+![](/docs/server/application_server/streaming-setup-3.png)
 
 To run the broker service, first download and install the [Turbo Client](https://turbo.net/downloads) if it is not already present. Then run the [broker service container image](https://turbo.net/run/turbo/broker).
 
@@ -44,7 +44,7 @@ To run the broker service, first download and install the [Turbo Client](https:/
 
 On first launch it will prompt you for configuration parameters. Leaving the prompt empty will automatically use the default value that are enclosed in the parenthesis.
 
-![](/docs/deploying/to_turbo_server/streaming-setup-4.png)
+![](/docs/server/application_server/streaming-setup-4.png)
 
 - **Broker server url:** This is the url where the broker will be accessed by both the portal web services and the client. 
 
@@ -58,13 +58,13 @@ On first launch it will prompt you for configuration parameters. Leaving the pro
 
 Review the values and confirm by typing **Y**. After this it will prompt you to define the connection information for the servers in the application server pool. 
 
-![](/docs/deploying/to_turbo_server/streaming-setup-5.png)
+![](/docs/server/application_server/streaming-setup-5.png)
 
 - **IP or hostname of server:** The IP or hostname of the server to add. This IP or hostname must be accessible from the broker service. Leave this entry blank if there are no more servers to add to the pool.
 
 - **External IP or hostname of server:** The IP or hostname of the server which will be accessible by the client. This may be the same value as the previous prompt.
 
-![](/docs/deploying/to_turbo_server/streaming-setup-6.png)
+![](/docs/server/application_server/streaming-setup-6.png)
 
 After the values are confirmed, the broker web service will be started.
 
@@ -72,7 +72,7 @@ After the values are confirmed, the broker web service will be started.
 
 The **Portal service** is a web service which hosts a web portal for users to access their applications.
 
-![](/docs/deploying/to_turbo_server/streaming-setup-7.png)
+![](/docs/server/application_server/streaming-setup-7.png)
 
 To run the portal service, first download and install the [Turbo Client](https://turbo.net/downloads) if it is not already present. Then run the [portal service container image](https://turbo.net/run/turbo/portal).
 
@@ -82,7 +82,7 @@ To run the portal service, first download and install the [Turbo Client](https:/
 
 On first launch it will prompt you for configuration parameters. Leaving the prompt empty will automatically use the default value that are enclosed in the parenthesis.
 
-![](/docs/deploying/to_turbo_server/streaming-setup-8.png)
+![](/docs/server/application_server/streaming-setup-8.png)
 
 - **Portal server url:** The url where the portal site will be hosted and accessible to end users.
 
@@ -96,12 +96,12 @@ On first launch it will prompt you for configuration parameters. Leaving the pro
 
 Review and confirm the values with **Y**. The portal site service will then start.
 
-![](/docs/deploying/to_turbo_server/streaming-setup-9.png)
+![](/docs/server/application_server/streaming-setup-9.png)
 
 Once the portal service has started, you will be able to access the portal from the URL that was specified in the configuration. Log in to the portal with a hub user account (either turbo.net account or an account defined in your Turbo Hub Server).
 
-![](/docs/deploying/to_turbo_server/streaming-setup-10.png)
+![](/docs/server/application_server/streaming-setup-10.png)
 
 After logging into the portal, the applications from the org or dashboard will be displayed for remote or local launch.
 
-![](/docs/deploying/to_turbo_server/streaming-setup-11.png)
+![](/docs/server/application_server/streaming-setup-11.png)
