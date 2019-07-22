@@ -1,7 +1,7 @@
 
 ## To a Workspace
 
-Turbo Workspaces allow organizations to publish applications to users from a central portal. Applications can be run from the cloud or on users' own devices. 
+Turbo Workspaces allow organizations to publish applications to users from a central portal. Applications can be run from the cloud or on users' own devices.
 
 ### Overview
 
@@ -17,26 +17,27 @@ Each Workspace contains a set of applications determined by administrator-define
 - **Cloud (Windowed)**: Runs in the cloud with the application rendered in a new window outside the browser, similarly to a native application
 - **My Machine**: Runs on the end user device inside a Turbo container
 
-The **Windowed** modes require a Turbo native client on the end user device. The **My Machine** mode is only available on PCs with the Turbo for PC client installed.
-
-When an application launches, the Portal initiates the session and handles the connection to either Turbo Launcher or Elastic Cloud Controller. Turbo Launcher is a part of the Turbo Client installation and is responsible for controlling the native and windowed launch. The Elastic Cloud Controller handles the remote sessions and initiates the connection between Compute Pod and the user machine. 
+The **Windowed** modes require a Turbo native client on the end user device. The **My Machine** mode is only available on PCs with the **Turbo for PC** client installed.
 
 #### Components Description
 
-The following diagram gives an overview of the components that build DW:
+The following diagram gives an overview of the components in an Azure-based Workspace:
 
 ![Components diagram](/docs/deploying/to_a_workspace/architecture-diagram.png)
 
-**Compute Pods** are Windows Virtual Machines which run user applications (or rather application images). **Elastic Cloud Controller** (or Cloud Controller) is composed of several applications and scripts, which are responsible for managing connections with Compute Pods, as well as administering Compute Pods themselves (scaling them out/in depending on the current load, installing updates, or collecting performance metrics). **Hub** is the central place for application images. Finally, **Portal** authenticates users, keeps information about their profiles, and allows users to interact with the workspaces.
+- **Compute Pods** are Windows Virtual Machines that run applications in Turbo containers.
+- The **Elastic Cloud Controller** managing connections with Compute Pods, as well as administering Compute Pods themselves (scaling them out/in depending on the current load, installing updates, or collecting performance metrics).
+- A **Hub** stores application images and user profile data. The Hub may be hosted in the cloud or on-premises.
+- A **Portal** provides a web-based interface for users to sign in and access applications and files. The Portal also provides API-based access that can be used to deploy Turbo resources natively onto desktops or via third-party providers.
 
 #### Azure Resources
 
-The lists below describe resources required to host DW in Azure in a recommended configuration. We can add additional components to the base configuration if needed. Example of such a situation could be adding an NV6 Compute Pod for engineering applications.
+The lists below describe resources required to host Workspaces in Azure in a recommended configuration. We can add additional components to the base configuration if needed. Example of such a situation could be adding an NV6 Compute Pod for engineering applications.
 
 Virtual Machines:
 
 - Central Cache Server (one instance): Standard DS2 v2 (2 cores 7GB RAM)
-- Compute Pod (one or more instances):  Standard D3 v2 (4 cores 14 GB RAM)
+- Compute Pod (one or more instances): Standard D3 v2 (4 cores 14 GB RAM)
 - Elastic Cloud Controller (one instance): Basic A3 (4 cores 7GB RAM)
 
 Storage:
@@ -51,26 +52,27 @@ Network:
 - Each Compute Pod: one fixed public IP
 - One Virtual Network with one or more subnets (possible to set up a Site2Site connection)
 
-The ArmViz diagram shows a minimal DW deployment:
+The following diagram shows a minimal Azure Workspace deployment:
 
-![ArmViz diagram of a minimal DW with information about IPs and NSGs](/docs/deploying/to_a_workspace/armviz-architecture-diagram-with-ips-nsg.png)
+![ArmViz diagram of a minimal Workspace with information about IPs and NSGs](/docs/deploying/to_a_workspace/armviz-architecture-diagram-with-ips-nsg.png)
 
 #### Deployment Plan
 
-We deploy DW in the following steps:
+Workspaces are deployed in the following order:
 
-1. Create Portal and school profile on Turbo central servers [4h]
-2. Add DNS addresses to point to the new servers (the convention is to use the school name and then .start.turbo.net) [<0.5h]
-3. Prepare the Azure account settings (subscriptions with all the required Resource Providers, Service Principal account, Resource Group(s) for stage and prod) [2h]
-4. Prepare infrastructure configuration files [1h]
-5.  Run the deployment on stage and production. The whole deployment for one environment takes about 2h, but usually, there are some problems in Azure, which will make it longer (3-4h / per environment)
-6.  When the infrastructure is ready, we can access Portal and run some sample apps. Moreover, it’s time to customize the workspace and add app images. In this step, we also start preparing custom images which the school requested.
+1. Create a Portal and organization profile on Turbo.net. [4h]
+2. Add DNS addresses to point to the new servers. By convention, this is the organization name followed by`.start.turbo.net`. [<0.5h]
+3. Prepare the Azure account settings (subscriptions with all the required Resource Providers, Service Principal account, Resource Group(s) for stage and production) [2h]
+4. Prepare infrastructure configuration files. [1h]
+5. Run the deployment process on stage and production. The whole deployment for one environment takes about 2 hours. [2h]
+6. When the infrastructure is ready, we can access Portal and run some sample applications. At this time additional customizations such as the logo images and wallpaper are applied.
+7. Finally, specific applications required by the organization are configured and deployed to the portal.
 
-As you can see, the deployment should be finished within one day. Starting from this point students will be able to access the workspaces and run the applications.
+In most cases, an initial deployment can be completed within one day. Additional time may be required depending on the number and complexity of additional applications to be deployed.
 
 ### Requirements
 
-This section lists all the requirements needed to deploy the Digital Workspace in Azure successfully. For simplicity's sake, let's assume that we are configuring a production environment for a Demo University (unidemo). The university homepage is https://unidemo.edu and Portal will be available at the https://unidemo.start.turbo.net address. Students and staff members authenticate through Azure AD.
+This section lists all the requirements needed to deploy the Digital Workspace in Azure successfully. For simplicity's sake, let's assume that we are configuring a production environment for a Demo University (unidemo). The university homepage is `https://unidemo.edu` and Portal will be available at the https://unidemo.start.turbo.net address. Students and staff members authenticate through Azure AD.
 
 #### Azure Subscription
 
@@ -100,15 +102,19 @@ We recommend creating a separate Resource Group (for example turbo-unidemo-prod)
 
 #### Azure Service Principal Account
 
-The Service Principal account is the account we will use to run the deployment. You may [register it in the portal](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal) or use [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/create-an-azure-service-principal-azure-cli?view=azure-cli-latest). Please write down and share with Turbo the following data:
+The Service Principal account is the account we will use to run the deployment. You may [register it in the portal](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal) or use [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/create-an-azure-service-principal-azure-cli?view=azure-cli-latest).
 
-- the subscription id
-- the resource group name
-- the Azure AD domain name
-- the Service Principal client id
-- the Service Principal secret
+Take note of the following information and provide it to Turbo:
 
-Finally, we need to give the Service Principal permissions to modify the Azure resources. The quickest solution is to assign a Contributor role to the whole turbo-unidemo-prod Resource Group to the Service Principal. To use a more limited set of permissions you can add a unique role in the Azure AD. For this purpose, you need to create a turbo-custom-role.json file with the following JSON data (replace `<subscription-id>` and `<resource-group-name>` with data taken from your subscription):
+- Subscription id
+- Resource group name
+- Azure AD domain name
+- Service Principal client id
+- Service Principal secret
+
+Finally, we need to give the Service Principal permissions to modify the Azure resources. The quickest solution is to assign a **Contributor** role to the entire `turbo-unidemo-prod` Resource Group to the Service Principal.
+
+To use a more limited set of permissions it is possible to add a unique role in the Azure AD. For this purpose, you need to create a `turbo-custom-role.json` file with the following JSON data. In this example, replace `<subscription-id>` and `<resource-group-name>` with data taken from your subscription:
 
 ```json
 {
@@ -139,7 +145,7 @@ Finally, we need to give the Service Principal permissions to modify the Azure r
 }
 ```
 
-Create the role in Azure and assign it to the Service Principal: 
+Create the role in Azure and assign it to the Service Principal:
 
 ```bash
 az role definition create --role-definition /mnt/d/temp/sp-permissions/turbo-custom-role.json
@@ -147,7 +153,7 @@ az role definition create --role-definition /mnt/d/temp/sp-permissions/turbo-cus
 az role assignment create --assignee unidemo-sp --role "Turbo Custom Role"
 ```
 
-#### Certificate for HTTPS Connections 
+#### Certificate for HTTPS Connections
 
 If you would like to use your **own certificates to configure HTTPS** on the `start.turbo.net` domain, please request them before starting the deployment. You may later save them in the Azure Key Vault and give read access to the Service Principal account.
 
@@ -165,22 +171,22 @@ To enable Single Sign-On authentication with Azure AD, a new application must be
 
 For an org named `unidemo`, the URLs will be of the form:
 
-* Home Page URL: `https://unidemo.start.turbo.net`
-* Reply URL: `https://unidemo.start.turbo.net/auth/openid/return`
+- Home Page URL: `https://unidemo.start.turbo.net`
+- Reply URL: `https://unidemo.start.turbo.net/auth/openid/return`
 
 Although it is possible to use the Service Principal account for authentication, we stongly recommend creation of a separate application with permissions only to authenticate users against Azure AD.
 
 It is also necessary to generate a secret for the application. The generated **client\_id**, **secret**, and **App ID URI** should be provided to your Turbo implementation specialist, who will finalize integration of authentication settings.
 
-These accounts may be created manually as described below, or using a [bash script](/docs/deploying/to_a_workspace/azure-create-app-accounts.sh).
+These accounts may be created manually as described below, or using a bash script.
 
-**Create accounts with a bash script**
+##### Create accounts with a bash script
 
 The bash script requires [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest) and may be run from any Linux machine or from WSL (Windows Subsystem for Linux).
 
-After downloading it from [our GitHub](/docs/deploying/to_a_workspace/azure-create-app-accounts.sh), run it in bash providing as parameters the subscription id, the resource group name, the Azure location, and the tenant's name. For example:
+After [downloading the script from this link](/docs/deploying/to_a_workspace/azure-create-app-accounts.sh), run it in bash providing as parameters the subscription id, the resource group name, the Azure location, and the tenant name. For example:
 
-```
+```bash
 ./azure-create-app-accounts.sh
   --subscription aaaaaaaa-cccc-1111-3333-bbbbbbbbbbbb
   --resource-group turbo-prod
@@ -188,11 +194,11 @@ After downloading it from [our GitHub](/docs/deploying/to_a_workspace/azure-crea
   --tenant unidemo
 ```
 
-Copy the output and share it with your implementation specialist through a secure channel. We recommend Azure Key Vault or OneDrive for this purposex.
+Copy the output and share it with your implementation specialist through a secure channel. We recommend Azure Key Vault or OneDrive for this purpose.
 
-Finally, go to the Azure portal and grant the **admin consent** to the newly created applications. Go to **Enterprise applications** on the Azure Active Directory tab and find the **Turbo.net-Client** and **Turbo.net-Web** applications. Choose **Permissions** and then **Grant admin consent**. 
+Finally, go to the Azure portal and grant the **admin consent** to the newly created applications. Go to **Enterprise applications** on the Azure Active Directory tab and find the `Turbo.net-Client` and `Turbo.net-Web` applications. Choose **Permissions** and then **Grant admin consent**.
 
-**Create accounts manually**
+##### Create accounts manually
 
 To allow Portal to authenticate domain users, the authentication application requires the **Sign in and read user profile** permission in the client's Azure AD.
 
@@ -203,7 +209,7 @@ In addition to the **web app/API** application, Turbo also requires a native app
 To create the client application:
 
 * Click on **App registrations** and choose **New application registration**.
-* Enter a friendly name for the application, for example **Turbo.net-Client**. Select **Native** as the **Application Type**.
+* Enter a friendly name for the application, for example `Turbo.net-Client`. Select **Native** as the **Application Type**.
 * Set the **RedirectURI** to the same address as the **Reply URL** in the web app. In our example, this would be `https://unidemo.start.turbo.net/auth/openid/return`.
 * Click on **Create** to create the application.
 * In the next page, find the **Application ID** value and send it to Turbo.
@@ -218,7 +224,7 @@ Next, we need to configure permissions for this new application:
 
 Finally, we need to grant an adminisrator consent for the native application:
 
-* Go to **Enterprise applications** on the Azure Active Directory tab and find the **Turbo.net-Client** application.
+* Go to **Enterprise applications** on the Azure Active Directory tab and find the `Turbo.net-Client` application.
 * Choose **Permissions** and then **Grant admin consent for Turbo.net-Client**. If you don't want users to accept the consent for the web application, grant the consent on this application also.
 
 #### Using ADFS
@@ -273,7 +279,7 @@ Confirm Global Authentication Policy settings from the **Authentication Policies
 
 Add Native Client App access to ADFS. Do this with the **Add-AdfsClient** powershell cmdlet.
 
-```
+```powershell
 (ps)> Add-AdfsClient -ClientId <CLIENT_ID> -Name <APP_NAME> -RedirectUri <REDIRECT_URI>
 ```
 
@@ -281,7 +287,7 @@ Add Native Client App access to ADFS. Do this with the **Add-AdfsClient** powers
 - **APP_NAME** is the name of the app. This can be anything but must be unique.
 - **REDIRECT_URI** is an unused but required value. This can be anything but must be unique.
 
-```
+```powershell
 (ps)> Add-AdfsClient -ClientId 54707E09-E6A2-4F22-9C73-638610AFE38A -Name Turbo-Client -RedirectUri http://turbo.net
 ```
 
@@ -293,9 +299,11 @@ In this section we go over the required settings changes to configure your on pr
 2. Rename the file to `adfs.crt`.
 3. On your Ubuntu machine, add `adfs.crt` to the `turbo.net` directory.
 4. Next update or run the Ubuntu setup instructions. On the Ubuntu 16.04 machine extract the turbo.net.tar.gz.
-    
-        tar -xzvf turbo-net.tar.gz
-        cd turbo.net
+
+```bash
+tar -xzvf turbo-net.tar.gz
+cd turbo.net
+```
 
 5. Ensure the ADFS related fields in `config.yml` are filled.
 
@@ -342,16 +350,16 @@ ADFSSigningCertThumb =
 ADFSSigningCertCN =
 ```
 
-### Managing workspaces and repositories
+### Managing Workspaces and Repositories
 
-To manage the workspace, you need to use your personal Turbo account. Make sure that this account has administrative rights in the organization. After signing in to https://turbo.net, click the profile icon (in the right upper corner) and you should see a list of workspaces to which you have access. Your workspace should be there too. After switching to it, you may search for new images and add them to the workspace, or remove the ones that are already there (hover over the image and click on the gear icon).
+To manage the workspace, you need to use your personal Turbo account. Make sure that this account has administrative rights in the organization. After signing in to `https://turbo.net`, click the profile icon (in the right upper corner) and you should see a list of workspaces to which you have access. Your workspace should be there too. After switching to it, you may search for new images and add them to the workspace, or remove the ones that are already there (hover over the image and click on the gear icon).
 
-When you publish a new university app image to the hub, you should use the organization namespace, for example, **turbo push unidemo.edu/myapp:2.0**. Publishing an image under the unidemo.edu namespace makes it accessible only to the @unidemo.edu accounts. As an administrator of the organization, you may configure settings for each image under the unidemo.edu namespace. If you click the gear icon on an image, you may select the "Go to Repository" option:
+When you publish a new university app image to the hub, you should use the organization namespace, for example, `turbo push unidemo.edu/myapp:2.0`. Publishing an image under the `unidemo.edu` namespace makes it accessible only to the `@`unidemo.edu` accounts. As an administrator of the organization, you may configure settings for each image under the unidemo.edu namespace. If you click the gear icon on an image, you may select the **Go to Repository** option:
 
 ![](/docs/deploying/to_a_workspace/go-to-repo.png)
 
 On the settings tab, two most important sections are the **Launch Configuration** panel and the **Admin** panel:
 
 ![](/docs/deploying/to_a_workspace/admin-settings.png)
- 
+
 The **File Isolation** defines the default isolation mode for the image (that’s what we will use to make the native Office365 visible). The **Using** textbox allows you to specify which other images (layers) should turbo import before running the main image (this could be 7zip or/and Adobe Reader, for example). Finally, the **Official** switch makes an image available for the cloud runs, and **Launch Location** configures possible ways of running the image.
