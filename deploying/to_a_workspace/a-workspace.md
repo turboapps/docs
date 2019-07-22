@@ -17,9 +17,9 @@ Each Workspace contains a set of applications determined by administrator-define
 - **Cloud (Windowed)**: Runs in the cloud with the application rendered in a new window outside the browser, similarly to a native application
 - **My Machine**: Runs on the end user device inside a Turbo container
 
-The Windowed and My Machine modes require Turbo Client to be installed on the student's device.
+The **Windowed** modes require a Turbo native client on the end user device. The **My Machine** mode is only available on PCs with the Turbo for PC client installed.
 
-When an application launches, Portal initiates the session and handles the connection to either Turbo Launcher or Cloud Controller. Turbo Launcher is a part of the Turbo Client installation and is responsible for controlling the native and windowed launch. Cloud Controller handles the remote sessions and initiates the connection between Compute Pod and the user machine. Currently, Portal is hosted on a server located in the US and owned by Turbo. However, it will be soon possible to publish it in the client location as well.
+When an application launches, the Portal initiates the session and handles the connection to either Turbo Launcher or Elastic Cloud Controller. Turbo Launcher is a part of the Turbo Client installation and is responsible for controlling the native and windowed launch. The Elastic Cloud Controller handles the remote sessions and initiates the connection between Compute Pod and the user machine. 
 
 #### Components Description
 
