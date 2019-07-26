@@ -29,18 +29,6 @@ In a typical enterprise scenario the administrator has applied Microsoft's secur
          </th>
       </tr>
       <tr>
-         <td colspan="1">Administrative Templates > SCM: Pass the Hash Mitigations</td>
-         <td colspan="1">Apply UAC restrictions to local accounts on network logons</td>
-         <td colspan="1">Disabled or not configured</td>
-         <td colspan="1">Security baseline will enable this value. If the policy path is missing, locate the ptH.admx and add it in your group policy templates folder.</td>
-      </tr>
-      <tr>
-         <td colspan="1">Administrative Templates > Windows Components > Windows Remote Management > WinRM Service</td>
-         <td colspan="1">Allow remote server management through WinRM</td>
-         <td colspan="1">Enabled or not configured</td>
-         <td colspan="1">Security baseline default value is not configured.</td>
-      </tr>
-      <tr>
         <td colspan="1">Administrative Templates > Windows Components > Remote Desktop Services > Remote Desktop Session Host > Security</td>
         <td colspan="1">Always prompt for password upon connection</td>
         <td colspan="1">Disabled</td>
@@ -84,105 +72,6 @@ In a typical enterprise scenario the administrator has applied Microsoft's secur
       </tr>
 </table>
 
-#### Diagnosing WinRM Errors
-
-If the broker logs reveal errors WinRM errors in the stacktrace or during the application server installer's provisioning process, the administrator can manually test the WinRM on the application server.
-
-The application server must have WinRM Client enabled for diagnostics commands. The following table specifies the required group policies for allowing WinRM client, and additional policies that must be set for the WinRM host:
-
-<table>
-      <tr>
-         <th data-column="0">
-            <div>
-               <p>Path</p>
-            </div>
-         </th>
-         <th data-column="1">
-           <div>
-             <p>Setting</p>
-          </div>
-         <th data-column="2">
-            <div>
-               <p>Value</p>
-            </div>
-         </th>
-         <th data-column="3">
-           <div>
-             <p>Comment</p>
-           </div>
-         </th>
-      </tr>
-	  <tr>
-         <td colspan="1">Administrative Templates > SCM: Pass the Hash Mitigations</td>
-         <td colspan="1">Apply UAC restrictions to local accounts on network logons</td>
-         <td colspan="1">Disabled or not configured</td>
-         <td colspan="1">Security baseline will enable this value. If the policy path is missing, locate the ptH.admx and add it in your group policy templates folder.</td>
-      </tr>
-      <tr>
-         <td colspan="1">Administrative Templates > Windows Components > Windows Remote Management > WinRM Client</td>
-         <td colspan="1">Allow Basic authentication</td>
-         <td colspan="1">Enabled or not configured</td>
-         <td colspan="1">Security baseline default value is not configured.</td>
-      </tr>
-      <tr>
-         <td colspan="1"></td>
-         <td colspan="1">Allow unencrypted traffic</td>
-         <td colspan="1">Enabled or not configured</td>
-         <td colspan="1">Security baseline will set this to disabled. The winrm command will test the connection using basic http.</td>
-      </tr>
-      <tr>
-         <td colspan="1">Administrative Templates > Windows Components > Windows Remote Management > WinRM Service</td>
-         <td colspan="1">Allow remote server management through WinRM</td>
-         <td colspan="1">Enabled or not configured</td>
-         <td colspan="1">Application server provision requires WinRM. If enabled, make sure you set the IPv4 and IPv6 filters correctly.</td>
-      </tr>
-      <tr>
-         <td colspan="1"></td>
-         <td colspan="1">Allow Basic authentication</td>
-         <td colspan="1">Enabled</td>
-         <td colspan="1">Application server provision requires WinRM.</td>
-      </tr>
-      <tr>
-        <td colspan="1"></td>
-        <td colspan="1">Allow unencrypted traffic</td>
-        <td colspan="1">Enabled</td>
-        <td colspan="1">Application server provision requires WinRM.</td>
-      </tr>
-	  <tr>
-        <td colspan="1">Windows Settings > Security Settings > Local Policies > User Rights Assignment</td>
-        <td colspan="1">Deny access to this computer from the network</td>
-        <td colspan="1">Remove Local account</td>
-        <td colspan="1">Application server provision requires WinRM potentially over the local administrator account.</td>
-      </tr>
-</table>
-
-
-In a command prompt on the application server, issue the following command:
-
-```
->winrm identify -r:http://localhost:5985 -auth:basic -u:{adminuser} -p:{password} -encoding:utf-8
-```
-
-The command should be an IndentifyResponse. If command fails and you have checked the group policies have been properly set, try the `winrm quickconfig` command. Note that the quickconfig command will request LocalAccountTokenFilterPolicy. Turbo does not require that setting to be enabled.
-
-```
->winrm quickconfig
-WinRM service is already running on this machine.
-WinRM is not set up to allow remote access to this machine for management.
-The following changes must be made:
-
-Configure LocalAccountTokenFilterPolicy to grant administrative rights remotely to local users.
-
-Make these changes [y/n]? y
-
-WinRM has been updated for remote management.
-
-Configured LocalAccountTokenFilterPolicy to grant administrative rights remotely to local users.
-
->winrm quickconfig
-WinRM service is already running on this machine.
-WinRM is already set up for remote management on this computer.
-```
 #### RemoteApp Registry Settings
 
 The application server provisioner should make the required changes to enable RemoteApp execution. Ensure these registry settings were applied properly:
@@ -271,19 +160,99 @@ The application server provisioner should make the required changes to enable Re
       </tr>
 </table>
 
-## Provision Failures
+#### Diagnosing WinRM Errors (LEGACY)
 
-If the appliation server installer fails check the logs located in `C:\Program Files (x86)\Turbo\ApplicationServer\logs`. A common failure log:
+The following group policies enables WinRM for legacy (prior to version 2019.7.26) Turbo Broker:
+
+<table>
+      <tr>
+         <th data-column="0">
+            <div>
+               <p>Path</p>
+            </div>
+         </th>
+         <th data-column="1">
+           <div>
+             <p>Setting</p>
+          </div>
+         <th data-column="2">
+            <div>
+               <p>Value</p>
+            </div>
+         </th>
+         <th data-column="3">
+           <div>
+             <p>Comment</p>
+           </div>
+         </th>
+      </tr>
+	  <tr>
+         <td colspan="1">Administrative Templates > SCM: Pass the Hash Mitigations</td>
+         <td colspan="1">Apply UAC restrictions to local accounts on network logons</td>
+         <td colspan="1">Disabled or not configured</td>
+         <td colspan="1">Security baseline will enable this value. If the policy path is missing, locate the ptH.admx and add it in your group policy templates folder.</td>
+      </tr>
+      <tr>
+         <td colspan="1">Administrative Templates > Windows Components > Windows Remote Management > WinRM Client</td>
+         <td colspan="1">Allow Basic authentication</td>
+         <td colspan="1">Enabled or not configured</td>
+         <td colspan="1">Security baseline default value is not configured.</td>
+      </tr>
+      <tr>
+         <td colspan="1"></td>
+         <td colspan="1">Allow unencrypted traffic</td>
+         <td colspan="1">Enabled or not configured</td>
+         <td colspan="1">Security baseline will set this to disabled. The winrm command will test the connection using basic http.</td>
+      </tr>
+      <tr>
+         <td colspan="1">Administrative Templates > Windows Components > Windows Remote Management > WinRM Service</td>
+         <td colspan="1">Allow remote server management through WinRM</td>
+         <td colspan="1">Enabled or not configured</td>
+         <td colspan="1">Application server provision requires WinRM. If enabled, make sure you set the IPv4 and IPv6 filters correctly.</td>
+      </tr>
+      <tr>
+         <td colspan="1"></td>
+         <td colspan="1">Allow Basic authentication</td>
+         <td colspan="1">Enabled</td>
+         <td colspan="1">Application server provision requires WinRM.</td>
+      </tr>
+      <tr>
+        <td colspan="1"></td>
+        <td colspan="1">Allow unencrypted traffic</td>
+        <td colspan="1">Enabled</td>
+        <td colspan="1">Application server provision requires WinRM.</td>
+      </tr>
+	  <tr>
+        <td colspan="1">Windows Settings > Security Settings > Local Policies > User Rights Assignment</td>
+        <td colspan="1">Deny access to this computer from the network</td>
+        <td colspan="1">Remove Local account</td>
+        <td colspan="1">Application server provision requires WinRM potentially over the local administrator account.</td>
+      </tr>
+</table>
+
+To diagnose manually, issue the following command in a command prompt on the application server:
 
 ```
-Ansible provision script failed with 4
-At C:\data\application-server-provision.ps1:265 char:9
-+ throw "Ansible provision script failed with $ret"
-+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-+ CategoryInfo : OperationStopped: (Ansible provision script failed with 4:String) [], RuntimeException
-+ FullyQualifiedErrorId : Ansible provision script failed with 4
-
-Error: Ansible provision script failed with 4
+>winrm identify -r:http://localhost:5985 -auth:basic -u:{adminuser} -p:{password} -encoding:utf-8
 ```
 
-The error is caused by group policies that restrict WinRM access. Refer to the Diagnosing WinRM Failures section of this article.
+The command should be an IndentifyResponse. If command fails and you have checked the group policies have been properly set, try the `winrm quickconfig` command. Note that the quickconfig command will request LocalAccountTokenFilterPolicy. Turbo does not require that setting to be enabled.
+
+```
+>winrm quickconfig
+WinRM service is already running on this machine.
+WinRM is not set up to allow remote access to this machine for management.
+The following changes must be made:
+
+Configure LocalAccountTokenFilterPolicy to grant administrative rights remotely to local users.
+
+Make these changes [y/n]? y
+
+WinRM has been updated for remote management.
+
+Configured LocalAccountTokenFilterPolicy to grant administrative rights remotely to local users.
+
+>winrm quickconfig
+WinRM service is already running on this machine.
+WinRM is already set up for remote management on this computer.
+```
