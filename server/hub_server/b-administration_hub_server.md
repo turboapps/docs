@@ -61,6 +61,19 @@ You will now see your test image in your hub list in the administration site. Th
 
 **NOTE:** If you do not specify a namespace in the image name (ex, "test" in "test/notepad") then the image will be pushed to the user's private namespace. This image will only be accessible by the user who pushed it and it will not show in the hub list on the administration site.
 
+##### Troubleshooting
+
+The push command is denied with following error message:
+
+```
+> turbo push mozilla/firefox-base:68.0.1
+Pushing image mozilla/firefox-base:68.0.1 to mozilla/firefox-base:68.0.1
+Error: Push failed. This user may not be authorized to push to the mozilla repository.
+```
+The current logged in user may not be an administrator of the Hub server. Add the user to the administrators group. For more information refer to *Managing Users*.
+
+**NOTE:** If you add the user to the administrators group after already attempting to push an image to the Hub server, you may have to wait awhile for the prermissions to propagate to the Hub server. Either switch to an API key based login, or restart the Hub server process and try again.
+
 ##### Managing Repositories
 
 ![](/docs/server/hub_server/hub-admin-7.png)
