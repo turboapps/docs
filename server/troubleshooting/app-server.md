@@ -1,4 +1,4 @@
-### Troubleshooting
+### Application Server
 
 A common point of failure is due to the group policy applied to the application server.
 
