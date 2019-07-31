@@ -12,13 +12,15 @@ Turbo Application Server allows you to run application workloads on a server for
 
 There are four major server roles in a Turbo Server deployment:
 
-* A **Hub Server** is stores all application images and user session data. The Hub may be hosted in the Turbo.net cloud or run in a customer managed cloud or on-premises server. On-premises Hub servers can federate containers to and from other Hubs.
+* The **Hub Server** is stores all application images and user session data. The Hub may be hosted in the Turbo.net cloud or run in a customer managed cloud or on-premises server. On-premises Hub servers can federate containers to and from other Hubs.
 
-* A **Portal Server** hosts the application web portal where users can log in to view and launch applications, open files, and manage Turbo resources. A portal server also provides API services allowing other client types to interact with the Turbo environment.
+* The **Portal Server** hosts the application web portal where users can log in to view and launch applications, open files, and manage Turbo resources. A portal server also provides API services allowing other client types to interact with the Turbo environment.
 
-* An **Application Server** runs containerized applications and streams sessions to clients. A typical deployment uses multiple application servers in a *pool* to handle load volumes and provide redundancy. Application servers can be hosted in the cloud or on-premises.
+* One or more **Application Servers** runs containerized applications and streams sessions to clients. A typical deployment uses multiple application servers in a *pool* to handle load volumes and provide redundancy. Application servers can be hosted in the cloud or on-premises.
 
-* A **broker** controls how remote applications are executed in the application server pool and routes client requests to the appropriate servers.
+* The **Broker Service** controls how remote applications are executed in the application server pool and routes client requests to the appropriate servers.
+
+If Turbo is used to deliver applications to endpoints or third-party streaming products for execution, only the Hub Server or a standard file server is required.
 
 ### Technology
 
