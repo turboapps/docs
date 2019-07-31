@@ -1,4 +1,4 @@
-### Application Server Configuration
+### Configuration
 
 Below are some reference registry keys to configure the application server:
 

@@ -1,4 +1,4 @@
-### Getting Started with Application Server
+### Getting Started
 
 Turbo Application Server is an on-premise application delivery platform. In this section you will learn about system requirements and instructions for installing, configuring and running Turbo Streaming Server.
 
