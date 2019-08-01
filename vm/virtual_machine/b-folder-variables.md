@@ -4,6 +4,8 @@ Turbo VM maps well known root folders such as **Documents** and **Program Files*
 
 These variables may also be used in TurboScript and as part of command-line arguments when building images or starting Turbo containers.
 
+*Note:* Folder variables are case sensitive. They must appear in all caps to be recgonized by the command processor.
+
 <table>
       <tr>
          <th data-column="0">
