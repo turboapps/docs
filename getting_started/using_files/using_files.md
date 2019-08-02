@@ -1,4 +1,6 @@
-Turbo allows access to the local file system or Online Storage providers such as OneDrive or Dropbox.
+## Using Files
+
+Turbo.net let you use files located on your local file system or online storage providers such as OneDrive and Dropbox.
 
 ### Local File System
 
@@ -14,7 +16,7 @@ Applications running in this mode will show files from the local system under ma
 
 ![](/docs/getting_started/accessing_files/accessing-files-from-local-system-via-run-in-cloud-windowed-2.png)
 
-Files from the local system may also be accessed using the **\\\\TSCLIENT\\\{drive\}** remote path.
+Files from the local system may also be accessed using the `\\\\TSCLIENT\\\{drive\}` remote path.
 
 ![](/docs/getting_started/accessing_files/accessing-files-from-local-system-via-run-in-cloud-windowed-2-bg.png)
 
@@ -40,7 +42,7 @@ Files from the local system may also be accessed using the \\\\TSCLIENT\\Home re
 
 ![](/docs/getting_started/accessing_files/mac-net-use.png)
 
-### Cloud Storage Services 
+### Cloud Storage Services
 
 Connecting a cloud storage service, such as OneDrive or Dropbox, to your applications on Turbo.net is a seamless way to access your files quickly.
 

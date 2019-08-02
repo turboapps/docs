@@ -34,5 +34,3 @@ Turbo for Mac allows launching applications in the cloud. Left click on an appli
 ![](/docs/getting_started/run_applications/launch-app-from-mac.png)
 
 Turbo also supports streaming applications from the cloud to your mobile device. Install Turbo for iOS or Android from the app store and launch desktop applications using the touch screen interface.
-
-

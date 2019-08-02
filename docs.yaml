@@ -2,9 +2,8 @@
 topic: Getting Started
 documents:
 - title: Installation
-- title: Find Applications
 - title: Run Applications
-- title: Accessing Files
+- title: Using Files
 - title: Accessing Network
 - title: Printing
 - title: Advanced Settings
@@ -15,7 +14,7 @@ documents:
 ---
 topic: Hub
 documents:
-- title: Creating a Profile
+- title: Overview
 - title: Working with Images
 - title: Repositories
 - title: Templates
@@ -40,8 +39,8 @@ documents:
 - title: Working with Containers
 - title: Continuous Integration
 - title: Advanced Topics
-- title: Troubleshooting
 - title: Scenarios
+- title: Troubleshooting
 ---
 topic: Server
 documents:
