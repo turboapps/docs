@@ -4,11 +4,9 @@ documents:
 - title: Installation
 - title: Run Applications
 - title: Using Files
-- title: Accessing Network
 - title: Printing
+- title: Networking
 - title: Advanced Settings
-- title: Troubleshooting
-- title: Command Line Interface
 - title: Administrators
 - title: Developers
 ---
@@ -16,6 +14,7 @@ topic: Hub
 documents:
 - title: Overview
 - title: Working with Images
+- title: Command Line Interface
 - title: Repositories
 - title: Templates
 ---
