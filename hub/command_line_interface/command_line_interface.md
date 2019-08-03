@@ -117,7 +117,7 @@ How did the `turbo` command know how to run Firefox? By default, it will connect
 
 The Turbo.net Hub provides thousands of images for popular applications, runtimes, and layers  that will automatically configure and run on demand. You can also publish images into a *private repository*; or to a shared team account with a Turbo.net Team plan. Enterprises can host Turbo repositories on-premises with [TurboServer](https://turbo.net/server).
 
-### Version management
+### Version Management
 
 In the example above, no version was specified. In this case the container is called *evergreen* — the latest image version is always run and the container is automatically updated if a new version becomes available. This is a powerful and easy method to keep devices up to date with the latest patches.
 
@@ -143,7 +143,7 @@ For example, suppose we want to run Firefox with the Java runtime enabled:
 > turbo run jre,firefox:35
 ```
 
-![](/docs/getting_started/command_line_interface/layered-architecture.png)
+![](/docs/hub/command_line_interface/layered-architecture.png)
 
 Note that if you navigate to the **Options / Plugins** menu in Firefox, the Java plugin is installed!
 
@@ -157,7 +157,7 @@ We can combine the versioning and layering operators to achieve more combination
 > turbo run jre:8,firefox:38 --detach
 ```
 
-![](/docs/getting_started/command_line_interface/side-by-side-versioning.png)
+![](/docs/hub/command_line_interface/side-by-side-versioning.png)
 
 Notice that we are able to run multiple versions of Firefox — with multiple versions of Java! — side by side on a single desktop.
 
