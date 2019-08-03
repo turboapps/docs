@@ -143,7 +143,7 @@ For example, suppose we want to run Firefox with the Java runtime enabled:
 > turbo run jre,firefox:35
 ```
 
-![](/docs/getting_started/command_line_interface/layered-architecture.png)
+![](/docs/hub/command_line_interface/layered-architecture.png)
 
 Note that if you navigate to the **Options / Plugins** menu in Firefox, the Java plugin is installed!
 
@@ -157,7 +157,7 @@ We can combine the versioning and layering operators to achieve more combination
 > turbo run jre:8,firefox:38 --detach
 ```
 
-![](/docs/getting_started/command_line_interface/side-by-side-versioning.png)
+![](/docs/hub/command_line_interface/side-by-side-versioning.png)
 
 Notice that we are able to run multiple versions of Firefox — with multiple versions of Java! — side by side on a single desktop.
 
