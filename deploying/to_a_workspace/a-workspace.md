@@ -176,7 +176,7 @@ For an org named `unidemo`, the URLs will be of the form:
 
 Although it is possible to use the Service Principal account for authentication, we stongly recommend creation of a separate application with permissions only to authenticate users against Azure AD.
 
-It is also necessary to generate a secret for the application. The generated **client\_id**, **secret**, and **App ID URI** should be provided to your Turbo implementation specialist, who will finalize integration of authentication settings.
+It is also necessary to generate a secret for the application. The generated **Application ID**, **Tenant ID**, and **Client Secret** should be provided to your Turbo implementation specialist, who will finalize integration of authentication settings. (Note: The term **Tenant ID** and **Directory ID** are used interchangeably. It may be specified either by an alias or in the form of a UUID.)
 
 These accounts may be created manually as described below, or using a bash script.
 
@@ -208,24 +208,27 @@ In addition to the **web app/API** application, Turbo also requires a native app
 
 To create the client application:
 
+* Select **All services** in the menu on the left side of the screen. Then select **Azure Active Directory**.
 * Click on **App registrations** and choose **New application registration**.
-* Enter a friendly name for the application, for example `Turbo.net-Client`. Select **Native** as the **Application Type**.
+* Enter a friendly name for the application, for example `Turbo.net`. Select **Web app / API** as the **Application Type**.
 * Set the **RedirectURI** to the same address as the **Reply URL** in the web app. In our example, this would be `https://unidemo.start.turbo.net/auth/openid/return`.
 * Click on **Create** to create the application.
 * In the next page, find the **Application ID** value and send it to Turbo.
 
 Next, we need to configure permissions for this new application:
 
-* Click **Setting** and choose the **Required permissions** section.
-* Click on **Add**. Then click **Select an API** and enter the name of your **web app / api** app. Select the app from the results and click the **Select** button.
+* Click **Setting** and choose the **Required Permissions** section.
+* Click on **Add**. Then click **Select an API** and enter the name of your **Web app / API** application. Select the app from the results and click the **Select** button.
 * Click on **Select Permissions** and select the **Access [name of app]** permission. Click the **Select** button again to close this screen.
 * Click on **Done** to finish adding the permission.
 * When you are back on the **Permissions** screen, select **Windows Azure Active Directory** and make sure the delegated **Sign in and read user profile** permission is selected. Then select **Microsoft Graph** and select the delegated **Read directory data** permission.
 
-Finally, we need to grant an adminisrator consent for the native application:
+To generate the client secret, click **Keys** under the **Settings** section and under **Passwords** enter a description and duration and press **Save**. After saving, the key value will be displayed. Take note of this for later.
 
-* Go to **Enterprise applications** on the Azure Active Directory tab and find the `Turbo.net-Client` application.
-* Choose **Permissions** and then **Grant admin consent for Turbo.net-Client**. If you don't want users to accept the consent for the web application, grant the consent on this application also.
+Finally, we need to grant an administrator consent for the application:
+
+* Go to **Enterprise applications** on the Azure Active Directory tab and find the `Turbo.net` application.
+* Choose **Permissions** and then **Grant admin consent for Turbo.net**. If you don't want users to accept the consent for the web application, grant the consent on this application also.
 
 #### Using ADFS
 
