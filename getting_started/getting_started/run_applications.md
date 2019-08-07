@@ -10,7 +10,7 @@ By default, items will open and stream inside the web browser. For a better expe
 
 If you are on a PC that meets the application requirements, you also have the option of running the application on your own device. There are no separate installation steps required to run applications once the Turbo.net for PC application is installed.
 
-![Opening an application](/docs/getting_started/run_applications/launching-an-application-from-the-dashboard-1.png)
+![Opening an application](/docs/getting_started/getting_started/launching-an-application-from-the-dashboard-1.png)
 
 To select a specific way to run the application, right-click on the application and select one of the following:
 
@@ -20,4 +20,4 @@ To select a specific way to run the application, right-click on the application 
 
 You can select a preferred default method of running an application by clicking on the gear icon in the top right of the application list:
 
-![Default launch settings](/docs/getting_started/run_applications/setting-the-default-launch-setting-1.png)
+![Default launch settings](/docs/getting_started/getting_started/setting-the-default-launch-setting-1.png)
