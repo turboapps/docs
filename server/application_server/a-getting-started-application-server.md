@@ -1,16 +1,28 @@
 ### Getting Started
 
-Turbo Application Server is an on-premise application delivery platform. In this section you will learn about system requirements and instructions for installing, configuring and running Turbo Streaming Server.
+Turbo Application Server is an on-premises application delivery platform. In this section you will learn about system requirements and instructions for installing, configuring and running Turbo Application Server.
 
 #### Setup
 
-The Turbo Streaming Server is distributed with Turbo Container images. Running the containers will guide you through configuration on the first launch and then start the web services on your machine. The Portal and Broker services can also be configured to run on a Ubuntu Linux platform depending on your environment requirements.
+The Turbo Application Server is distributed with Turbo Container images. Running the containers will guide you through configuration on the first launch and then start the web services on your machine. The Portal and Broker services can also be configured to run on a Ubuntu Linux platform depending on your environment requirements.
 
 For test or demonstration purposes, all the services can be run on the same machine or VM. In production environments it is recommended to split the services to separate machines as needed to share the load and offer adequate failover and redundancy.
 
 ##### Application Server
 
-The **Application Server** is where remote applications will run when streamed to remote clients. The server must be running Microsoft Windows Server 2012R2, Windows Server 2016, or Windows Server 2019. The [application server provisioner container image](https://turbo.net/run/turbo/application-server-provisioner) will enable the RDS role, configure the firewall, WinRM, and other settings to allow remote applications to be executed. This provisioning process must be done on every application server in the pool.
+The **Application Server** is where remote applications will run when streamed to remote clients.
+
+The supported operating systems for Turbo Application Server are:
+
+* Windows Server 2019
+* Windows Server 2016
+* Windows Server 2012R2
+
+Note: Due to driver compatibility issues unrelated to Turbo, we currently recommend Windows Server 2016 for maximum reliability. This recommendation will be reviewed as Microsoft provides additional updates to Windows Server 2019.
+
+For applications requiring a GPU or using video streaming, it is strongly recommended to use a server GPU supporting a suitable number of concurrent hardware-encoded H.264 streams. See for example the [**NVIDIA Video Encode and Decode GPU Support Matrix**](https://developer.nvidia.com/video-encode-decode-gpu-support-matrix).
+
+The [application server provisioner container image](https://turbo.net/run/turbo/application-server-provisioner) will enable the RDS role, configure the firewall, WinRM, and other settings to allow remote applications to be executed. This provisioning process must be done on every application server in the pool.
 
 To run the provisioner, download the [Turbo Client](https://turbo.net/downloads) and run with the `--app-server` parameter.
 
