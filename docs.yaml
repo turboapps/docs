@@ -19,12 +19,14 @@ documents:
 ---
 topic: Deploying
 documents:
+- title: Overview
 - title: To Turbo.net
 - title: To a Workspace
 - title: To a Desktop
-- title: To Citrix
-- title: To Parallels RAS
-- title: With SCCM
+- title: System Center (SCCM)
+- title: Intune
+- title: Citrix
+- title: Parallels RAS
 - title: Turbo Client
 - title: Portable EXEs and MSIs
 - title: Integration Tools

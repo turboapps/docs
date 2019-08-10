@@ -1,4 +1,4 @@
-## With SCCM
+## System Center (SCCM)
 
 Microsoft System Center Configuration Manager (SCCM) is a wonderful tool to deploy application containers to desktops in your enterprise. Below shows several methods that SCCM can be used to deploy containers.
 
