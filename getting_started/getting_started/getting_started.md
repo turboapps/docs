@@ -14,9 +14,9 @@ For the best experience, it is recommended to install the native Turbo.net appli
 
 If you do not use one of Turbo.net client applications, you can still use Turbo.net via a web browser.
 
-* [Turbo for PC](https://turbo.net/download)  
-* [Turbo for Mac](https://turbo.net/download)  
-* [Turbo for iOS](https://itunes.apple.com/us/app/turbo-net/id1394795519?mt=8)
-* [Turbo for Android](https://play.google.com/store/apps/details?id=net.turbo.android.launcher)
+* [Turbo.net for PC](https://turbo.net/download)  
+* [Turbo.net for Mac](https://turbo.net/download)  
+* [Turbo.net for iOS](https://itunes.apple.com/us/app/turbo-net/id1394795519?mt=8)
+* [Turbo.net for Android](https://play.google.com/store/apps/details?id=net.turbo.android.launcher)
 
 If you are on a device issued by your organization, your system administrator may already have installed the necessary Turbo.net client on your device.
