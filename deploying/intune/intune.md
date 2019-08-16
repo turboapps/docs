@@ -5,19 +5,21 @@ Intune is an Azure-based device management solution by Microsoft.
 This section describes the process for deploying the Turbo client to Intune-managed devices.
 
 ### Deploying Turbo.net for PC
- 
+
 1. Download the latest Turbo Client MSI installer at `https://start.turbo.net/install?msi=`
 2. Sign in to the Intune portal
-3. In the Intune pane select Client Apps > Apps > Add
-4. In the App type list select Line-of-business app and select the Turbo Client MSI installer
-5. Select Configure and provide the following information:
+3. In the Intune pane select **Client Apps > Apps > Add**
+4. In the **App** type list select **Line-of-business app** and select the Turbo Client MSI installer
+5. Select **Configure** and provide the following information:
     * *Name:*  Enter the name of the app as it is to be displayed in the company portal
     * *Description:*  Enter a description for the app as it is to be displayed in the company portal
     * *Publisher:* Enter **Turbo.net** as the publisher.
-    * *App install context:* Select **User context**
-6. Optional:  Select Scope and select the necessary Tags
-7. Select Add
-8. Under Manage, click Assignments and assign the app to the necessary groups
+6. Under the **Command-line arguments** section, enter the desired setup parameters. Any parameters valid for the Turbo EXE client install and `turbo config` command may be provided here.
+    * Recomended: Use the `--image-path=allusers` flag to have all users on the device use a shared image cache. This prevents redownload of the application when different users on the same device run the same application.
+    * (Optional) Use the `--add-trusted-source=https://myhub.start.turbo.net` flag to have the device automatically trust applications from your Hub. If this is not done at client setup time, the user will be prompted to trust applications published by your organization before an application can execute on the device.
+7. Optional: Select **Scope** and select any desired tags
+8. Select **Add**
+9. Under **Manage**, click **Assignments** and assign the app to the necessary groups
 
 ### Deploying Turbo.net for iOS
 

@@ -16,7 +16,7 @@ To enable local network access, open the Turbo for PC or Turbo fro Mac applicati
 
 Once the setting is enabled, subsequent launches of cloud-based applications will be able to reference local URLs.
 
-### Accessing the `localhost` address
+### Accessing localhost
 
 When network sharing is enabled, a potential ambiguity exists when referencing the special `localhost` device name, depending on whether the client device or cloud host is the intended target.
 
