@@ -14,9 +14,10 @@ This section describes the process for deploying the Turbo client to Intune-mana
     * *Name:*  Enter the name of the app as it is to be displayed in the company portal
     * *Description:*  Enter a description for the app as it is to be displayed in the company portal
     * *Publisher:* Enter **Turbo.net** as the publisher.
-6. Under the **Command-line arguments** section, enter the desired setup parameters. Any parameters valid for the Turbo EXE client install and `turbo config` command may be provided here.
+6. Under the **Command-line arguments** section, enter the text `CMDLINE="params"` where `params` are the desired setup parameters. Any parameters valid for the Turbo EXE client install and `turbo config` command may be provided here.
     * Recomended: Use the `--image-path=allusers` flag to have all users on the device use a shared image cache. This prevents redownload of the application when different users on the same device run the same application.
     * (Optional) Use the `--add-trusted-source=https://myhub.start.turbo.net` flag to have the device automatically trust applications from your Hub. If this is not done at client setup time, the user will be prompted to trust applications published by your organization before an application can execute on the device.
+    * For example, to use a shared image cache and add a trusted source, the command-line argument would be `CMDLINE="--image-path=allusers --add-trusted-source=https://myhub.start.turbo.net"`
 7. Optional: Select **Scope** and select any desired tags
 8. Select **Add**
 9. Under **Manage**, click **Assignments** and assign the app to the necessary groups
