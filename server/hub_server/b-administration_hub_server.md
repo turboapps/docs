@@ -303,6 +303,8 @@ When you are satisfied with your settings, select **Save**. At this point, the u
 
 The **Reports** page provides pre-configured, detailed analytic reports, broken-down into categories. Selecting a report takes you to the **Report** page, which consists of a **Date Range** control and the **Report Viewer**. Use the **Date Range** control to adjust the time period for the selected report.
 
+Note that if the server uses Annonymous login mode, the user name in the reports will display the Windows login profile name. This applies even for logged in users with cached credentials.
+
 ##### Administration Reports
 
 - **Session Logs Report**: Provides a detailed record of all session events, including launching or stopping an application.
