@@ -151,3 +151,7 @@ There are currently two ways of doing this, through either the Control Panel or 
 #### Windows Event Viewer
 
 The Windows Event Viewer is another useful source of information. If there is an issue starting the Windows service for Turbo Hub Server there may be information reported in the Window Event Viewer to help diagnose the problem.
+
+#### Application Launch Issues
+
+The remote application failed to launch. There is a 20 second interval when the Turbo Server service is starting where the communication between the Broker and Application Server is out of sync. The application launch should succeed once the interval has elapsed.
