@@ -29,18 +29,6 @@ In a typical enterprise scenario the administrator has applied Microsoft's secur
          </th>
       </tr>
       <tr>
-         <td colspan="1">Administrative Templates > SCM: Pass the Hash Mitigations</td>
-         <td colspan="1">Apply UAC restrictions to local accounts on network logons</td>
-         <td colspan="1">Disabled or not configured</td>
-         <td colspan="1">Security baseline will enable this value. If the policy path is missing, locate the ptH.admx and add it in your group policy templates folder.</td>
-      </tr>
-      <tr>
-         <td colspan="1">Administrative Templates > Windows Components > Windows Remote Management > WinRM Service</td>
-         <td colspan="1">Allow remote server management through WinRM</td>
-         <td colspan="1">Enabled or not configured</td>
-         <td colspan="1">Security baseline default value is not configured.</td>
-      </tr>
-      <tr>
         <td colspan="1">Administrative Templates > Windows Components > Remote Desktop Services > Remote Desktop Session Host > Security</td>
         <td colspan="1">Always prompt for password upon connection</td>
         <td colspan="1">Disabled</td>
@@ -84,11 +72,9 @@ In a typical enterprise scenario the administrator has applied Microsoft's secur
       </tr>
 </table>
 
-#### Diagnosing WinRM Errors
+#### Diagnosing WinRM Errors (LEGACY)
 
-If the broker logs reveal errors WinRM errors in the stacktrace or during the application server installer's provisioning process, the administrator can manually test the WinRM on the application server.
-
-The application server must have WinRM Client enabled for diagnostics commands. The following table specifies the required group policies for allowing WinRM client, and additional policies that must be set for the WinRM host:
+The following group policies enables WinRM for legacy (prior to version 2019.7.26) Turbo Broker:
 
 <table>
       <tr>
@@ -270,20 +256,3 @@ The application server provisioner should make the required changes to enable Re
          <td colspan="1">Make sure turbo is allowed.</td>
       </tr>
 </table>
-
-## Provision Failures
-
-If the appliation server installer fails check the logs located in `C:\Program Files (x86)\Turbo\ApplicationServer\logs`. A common failure log:
-
-```
-Ansible provision script failed with 4
-At C:\data\application-server-provision.ps1:265 char:9
-+ throw "Ansible provision script failed with $ret"
-+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-+ CategoryInfo : OperationStopped: (Ansible provision script failed with 4:String) [], RuntimeException
-+ FullyQualifiedErrorId : Ansible provision script failed with 4
-
-Error: Ansible provision script failed with 4
-```
-
-The error is caused by group policies that restrict WinRM access. Refer to the Diagnosing WinRM Failures section of this article.

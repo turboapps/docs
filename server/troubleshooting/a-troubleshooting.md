@@ -133,25 +133,31 @@ There are currently two ways of doing this, through either the Control Panel or 
 2. Via the **Command Prompt** using the **net** command
 
 	a. Run a new command prompt (cmd.exe) as Administrator
-	
+
 	b. Type the command net stop turbo to stop the Turbo Server service
-	
+
 	The expected output for this command is:
-	
+
 		The Turbo Server service is stopping.
 		The Turbo Server service was stopped successfully.
-		
+
 	c. Type the command net start turbo to start the Turbo Server service
 
 	The expected output for this command is:
 
 		The Turbo Server service is starting.
 		The Turbo Server service was started successfully.
-		
+
 #### Windows Event Viewer
 
 The Windows Event Viewer is another useful source of information. If there is an issue starting the Windows service for Turbo Hub Server there may be information reported in the Window Event Viewer to help diagnose the problem.
 
 #### Application Launch Issues
 
-The remote application failed to launch. There is a 20 second interval when the Turbo Server service is starting where the communication between the Broker and Application Server is out of sync. The application launch should succeed once the interval has elapsed.
+**The remote application failed to launch**
+
+There is a 20 second interval when the Turbo Server service is starting where the communication between the Broker and Application Server is out of sync. The application launch should succeed once the interval has elapsed.
+
+**Application Server performance is poor**
+
+Ensure that background processes such as Windows updates is disabled when the Application Server is expected to be in use. Log in as administrator and open Task Manager. If the TiWorker.exe is running with high CPU usage then it indicates that a Windows update is in progress.

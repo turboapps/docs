@@ -1,6 +1,6 @@
 ### Configuration
 
-Below are some reference registry keys to configure the application server:
+The table below describes the registry settings to configure the application server:
 
 <table>
       <tr>
@@ -58,6 +58,56 @@ Below are some reference registry keys to configure the application server:
          <td colspan="1"></td>
          <td colspan="1">Shadow</td>
          <td colspan="1">4(DWORD)</td>
-         <td colspan="1"><a href="https://www.windows-security.org/d1cb44a0c8fa4a101929e6cb9b67e656/set-rules-for-remote-control-of-remote-desktop-services-user">Allow viewing a users RDP session via mstsc /shadow:{session-id} /noConsentPrompt</a></td>
+         <td colspan="1"><a href="https://www.windows-security.org/d1cb44a0c8fa4a101929e6cb9b67e656/set-rules-for-remote-control-of-remote-desktop-services-user">Allow viewing a users RDP session with mstsc /shadow:{session-id} /noConsentPrompt</a></td>
       </tr>
+      <tr>
+         <td colspan="1"></td>
+         <td colspan="1">bEnumerateHWBeforeSW</td>
+         <td colspan="1">1 (DWORD)</td>
+         <td colspan="1">Prioritizes hardware graphics adaptor for RDP</td>
+      </tr>
+      <tr>
+         <td colspan="1"></td>
+         <td colspan="1">AVC444ModePreferred</td>
+         <td colspan="1">1 (DWORD)</td>
+         <td colspan="1">Prioritizes the H.264/AVC 444 graphics mode for non-RemoteFX vGPU scenarios</td>
+      </tr>
+</table>
+
+The following table describes the corresponding group policies for the registry settings:
+
+<table>
+      <tr>
+         <th data-column="0">
+            <div>
+               <p>Path</p>
+            </div>
+         </th>
+         <th data-column="1">
+           <div>
+             <p>Setting</p>
+          </div>
+         <th data-column="2">
+            <div>
+               <p>Value</p>
+            </div>
+         </th>
+         <th data-column="3">
+           <div>
+             <p>Comment</p>
+           </div>
+         </th>
+      </tr>
+      <tr>
+         <td colspan="1">Administrative Templates > Windows Components > Remote Desktop Services > Remote Desktop Session Host > Remote Session Environment</td>
+         <td colspan="1">Use hardware graphics adapters for all Remote Desktop Services sessions</td>
+         <td colspan="1">1 (DWORD)</td>
+         <td colspan="1">Prioritizes hardware graphics adaptor for RDP</td>
+      </tr>
+      <tr>
+         <td colspan="1"></td>
+         <td colspan="1">Prioritize H.264/AVC 444 graphics mode for Remote Desktop Connections</td>
+         <td colspan="1">1 (DWORD)</td>
+         <td colspan="1">Prioritizes the H.264/AVC 444 graphics mode for non-RemoteFX vGPU scenarios</td>
+      </tr>      
 </table>
