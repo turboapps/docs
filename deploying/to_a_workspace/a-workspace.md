@@ -13,7 +13,7 @@ End users can authenticate using Single Sign-On (SSO) over a wide variety of pro
 
 Each Workspace contains a set of applications determined by administrator-defined entitlements. The application launches after a click on its icon. There are three ways to run an application:
 
-- **Cloud (Browser)**: Runs in the cloud and the application window renders in a new tab in the browser
+- **Cloud (HTML5)**: Runs in the cloud and the application window renders in a new tab in the browser
 - **Cloud (Windowed)**: Runs in the cloud with the application rendered in a new window outside the browser, similarly to a native application
 - **My PC**: Runs on the end user device inside a Turbo container
 
