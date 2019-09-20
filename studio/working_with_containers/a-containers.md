@@ -182,7 +182,7 @@ Navigate to **Icon Settings** and set a **Background color**. If the icon you up
 
 Navigate to **Launch Configuration**. If any additional flags are required for the application to function, enter these here. For a list of available flags read [here](/docs/reference). Enter additional **Image layers** if you wish to launch the application with other dependent images. Always ensure the application you wish to launch is in the last image in the list. Seperate each image you wish to layer with a comma.
 
-To force the use of a certain version of the Turbo VM enter the version number under **Stable VM version**.
+To force the use of a certain version of the Turbo VM enter the version number under **VM version**.
 
 In the above example, InstEd requires local file access. This can be permitted by setting **File Isolation** to **Write Copy** of **Merge**.
 

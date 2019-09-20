@@ -15,9 +15,9 @@ Each Workspace contains a set of applications determined by administrator-define
 
 - **Cloud (Browser)**: Runs in the cloud and the application window renders in a new tab in the browser
 - **Cloud (Windowed)**: Runs in the cloud with the application rendered in a new window outside the browser, similarly to a native application
-- **My Machine**: Runs on the end user device inside a Turbo container
+- **My PC**: Runs on the end user device inside a Turbo container
 
-The **Windowed** modes require a Turbo native client on the end user device. The **My Machine** mode is only available on PCs with the **Turbo for PC** client installed.
+The **Windowed** modes require a Turbo native client on the end user device. The **My PC** mode is only available on PCs with the **Turbo for PC** client installed.
 
 #### Components Description
 

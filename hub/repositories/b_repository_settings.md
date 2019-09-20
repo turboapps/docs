@@ -63,9 +63,9 @@ Components are added to the base image as layers. These layers will be committed
 Components must be enabled to be included during execution. Disabled components are for display purposes only, they are shown on the repo settings page and application settings dialog.
 
 
-#### Stable VM version
+#### VM version
 
-The Stable VM version is a version string that specifies which Turbo VM version will be used for execution. 
+The VM version is a version string that specifies which Turbo VM version will be used for execution. 
 
 Typically this field should be left empty so that you are automatically updated to the latest VM version. This should only be used for known VM incompatibilities.
 

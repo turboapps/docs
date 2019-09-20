@@ -7,4 +7,4 @@ You can now search for new applications and add them to the dashboard (or remove
 
 ![](/docs/getting_started/find_applications/adding-an-applicatino-to-your-dashboard-via-search-1.png)
 
-Being an admin of the organization, allows you to also publish images under the organization namespace. After adding a new image, it will appear on the dashboard, but the only way to run it would be using the “My Machine” mode. To enable custom applications to run in the cloud please contact support@turbo.net.
+Being an admin of the organization, allows you to also publish images under the organization namespace. After adding a new image, it will appear on the dashboard, but the only way to run it would be using the “My PC” mode. To enable custom applications to run in the cloud please contact support@turbo.net.
