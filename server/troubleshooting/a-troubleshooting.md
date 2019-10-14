@@ -55,6 +55,14 @@ The following table lists common issues/questions and their solutions:
          <td colspan="1">Turbo Hub Server is no longer accessible after making a Network Configuration change</td>
          <td colspan="1">Turbo Hub Server service may need to be restarted after making a network configuration change. Go to <em>Control Panel &gt; Administrative Tools &gt; Services</em> and try restarting the Turbo Hub Server service.</td>
       </tr>
+      <tr>
+         <td>
+            <p>HTML5 cloud launch fails to start the application and results in the generic error page.</p>
+         </td>
+         <td>
+            <p>Review the [SSL troubleshooting](/docs/server/troubleshooting#ssl-troubleshooting) page. If it is not a certificate issue, the application server may not be accessible from the broker. Check that port 8084 can be accessed from the broker to the application server.</p>
+         </td>
+      </tr>
 </table>
 
 #### Enable Diagnostic Mode
