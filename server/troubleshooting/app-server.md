@@ -256,3 +256,15 @@ The application server provisioner should make the required changes to enable Re
          <td colspan="1">Make sure turbo is allowed.</td>
       </tr>
 </table>
+
+#### Windows Update Notifications
+
+Disable Automatic Updates if Windows Update notifications are being shown on remote sessions:
+
+First open the Local Group Policy Editor:
+
+```
+> gpedit.msc
+```
+
+Set **Configure Automatic Updates** to disabled under **Computer Configuration/Administrative Templates/Windows Components/Windows Update**.
