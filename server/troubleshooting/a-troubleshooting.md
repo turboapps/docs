@@ -60,7 +60,7 @@ The following table lists common issues/questions and their solutions:
             <p>HTML5 cloud launch fails to start the application and results in the generic error page.</p>
          </td>
          <td>
-            <p>Review the [SSL troubleshooting](/docs/server/troubleshooting#ssl-troubleshooting) page. If it is not a certificate issue, the application server may not be accessible from the broker. Check that port 8084 can be accessed from the broker to the application server.</p>
+		 <p>Review the <strong>SSL troubleshooting</strong> documentation. If it is not a certificate issue, the application server may not be accessible from the broker. Check that port 8084 can be accessed from the broker to the application server.</p>
          </td>
       </tr>
 </table>
