@@ -64,10 +64,14 @@ The values required:
 * **Directory (tenant) ID**
 * **Client Secret**
 
-## Configure Azure AD for Moble Clients
+### Configure Azure AD for Moble Clients
 
 To enable SSO from mobile clients you must register an Azure AD native client application. It is recommended that this application is separate from the Azure AD web application registration. The permissions required to set up the native application is the same as the web application in the above section. 
 
 To check that the application is a native application, navigate to the Azure Portal app registration manifest and verify the manifest has the field `"allowPublicClient": true`.
 
 Set the registered native applicaton's Application ID on the authentication method page under **Application ID (mobile and desktop clients)**.
+
+### Troubleshooting Azure AD App Registration Permissions
+
+You may review which permissions the app registration requires by forcing the consent dialog to appear during login. To do so, please consult to Microsoft docs: https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/configure-user-consent#force-user-consent-through-a-url-request
