@@ -1,7 +1,5 @@
 ### SSL Troubleshooting
 
-#### Issues
-
 Symptoms:
 Unable to login from the portal after installing SSL certificates. Unable to launch applications remotely on application server. Please check the portal logs. The logs contain the following error(s):
 
