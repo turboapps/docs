@@ -36,4 +36,33 @@ To allow users to connect their Dropbox accounts and access them while running t
 
 ### Troubleshooting
 
-TODO
+The following section contains solutions for issues with regards to setting up cloud storage.
+
+Issue: 
+
+User sign in results in error message "[The Azure Application] is not configured as a multi-tenant application. Usage of the /common endpoint is not supported for such applications created after ‘[Some date]’. Use a tenant-specific endpoint of configure the application to be multi-tenant."
+
+Solution:
+
+The user is trying to log in with their external OneDrive account which requires a multi-tenant app registration. Ensure that the application registration is multi-tenant and separate from the application used for SSO.
+
+Issue:
+
+When the user is prompted to grant permission they’re warned about the domain being "unverified".
+
+Solution:
+
+This document explains how to resolve the unverified message:
+
+[How to: Configure an application's publisher domain](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-configure-publisher-domain)
+
+The setting is located in Azure Portal > App registrations > Branding > Publisher Domain
+
+Issue:
+
+User sign in results in error message "AADSTS50011: The reply url specified in the request does not match the reply urls configured for the application: '[Application ID]`.
+
+Solution:
+
+Ensure the correct Redirect URI is set. The setting is located in Azure Portal > App registrations > Authentication > Redirect URIs
+
