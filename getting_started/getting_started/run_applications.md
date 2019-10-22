@@ -17,6 +17,7 @@ To select a specific way to run the application, right-click on the application 
 1. **Run in Cloud (HTML5)**: The application will run in the cloud and stream to your device inside the web browser.
 2. **Run in Cloud (Windowed)**: The application will run in the cloud and stream to your device via the Turbo.net native application.
 3. **Run on My PC (Local)**: The application will be downloaded and run on your device.
+3. **Install on My PC**: The application will be installed on your device.
 
 You can select a preferred default method of running an application by clicking on the gear icon in the top right of the application list:
 
