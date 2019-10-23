@@ -4,17 +4,17 @@ The Turbo Hub Server Administration Site enables you to manage and control all a
 
 The default location of the Administration Site is: http://localhost:80/admin, and consists of the following links:
 
-- **Hub**: This page lists all applications repositories on your Turbo Hub Server. From here **Federation** can be configured to source application repositories from turbo.net hub. **API Keys** can be defined to allow access to your hub without using a password (useful for automation, tooling, and other similar scenarios). For more information refer to *Managing Hub*.
+- **Hub**: This page lists all applications repositories on your Turbo Hub Server. From here **Federation** can be configured to source application repositories from turbo.net hub. **API Keys** can be defined to allow access to your hub without using a password (useful for automation, tooling, and other similar scenarios). For more information refer to [Managing Hub server](/docs/server/hub-server#hub-server-administration-managing-hub).
 
-- **Users**: This page list all users and groups on your Turbo Hub Server. From here **Directory Services** can be configured to import users from LDAP or Active Directory. **Authentication Method** allows you to configure how users will authenticate with the Turbo Hub Server. **Device Keys** allows you to manage all registered devices. For more information refer to *Managing Users*.
+- **Users**: This page list all users and groups on your Turbo Hub Server. From here **Directory Services** can be configured to import users from LDAP or Active Directory. **Authentication Method** allows you to configure how users will authenticate with the Turbo Hub Server. **Device Keys** allows you to manage all registered devices. For more information refer to [Managing Users and Authentication](/docs/server/hub-server#hub-server-administration-managing-users-and-authentication).
 
-- **Servers**: This page lists all servers that are included as part of the current Turbo Hub Server installation. Server settings such as roles, web service bindings, and SSL certificates may be configured here. For more information refer to *Managing Servers*.
+- **Servers**: This page lists all servers that are included as part of the current Turbo Hub Server installation. Server settings such as roles, web service bindings, and SSL certificates may be configured here. For more information refer to [Managing Servers](/docs/server/hub-server#hub-server-administration-managing-servers).
 
-- **Workspaces**: This page lists all workspaces on your Turbo Hub Server. From here workspaces may be added, configured, and deleted. For more information refer to *Managing Workspaces*.
+- **Workspaces**: This page lists all workspaces on your Turbo Hub Server. From here workspaces may be added, configured, and deleted. For more information refer to [Managing Workspaces](/docs/server/hub-server#hub-server-administration-managing-workspaces).
 
-- **Reports**: This page provides preconfigured customizable analytics reports, sorted according to Administration, Hub, and Users. For more information refer to *Reports*.
+- **Reports**: This page provides preconfigured customizable analytics reports, sorted according to Administration, Hub, and Users. For more information refer to [Reports](/docs/server/hub-server#hub-server-administration-reports).
 
-- **General**: This page contains a summary of your Turbo Hub Server license, and information and options for configuring Turbo Hub Server. For more information refer to *Configuration and Customization*.
+- **General**: This page contains a summary of your Turbo Hub Server license, and information and options for configuring Turbo Hub Server. For more information refer to [Configuration and Customization](/docs/server/hub-server#hub-server-administration-configuration-and-customization).
 
 #### Managing Hub
 
@@ -24,7 +24,7 @@ All application repositories on Turbo Hub Server are managed from the **Hub** pa
 
 ##### Application Repositories
 
-Each new application repository is added to Turbo Hub Server in the form of a Turbo container image, or SVM, which are pushed to the hub using the Turbo Client command line tools.  For more information about SVMs and Turbo Virtualization Technology refer to *Turbo Hub Server Technology*.
+Each new application repository is added to Turbo Hub Server in the form of a Turbo container image, or SVM, which are pushed to the hub using the Turbo Client command line tools.  For more information about SVMs and Turbo Virtualization Technology refer to [Turbo Server Technology](/docs/server/overview#technology).
 
 ##### Adding a Container Image
 
@@ -72,7 +72,7 @@ The push command is denied with following error message:
 Pushing image mozilla/firefox-base:68.0.1 to mozilla/firefox-base:68.0.1
 Error: Push failed. This user may not be authorized to push to the mozilla repository.
 ```
-The current logged in user may not be an administrator of the Hub server. Add the user to the administrators group. For more information refer to *Managing Users*.
+The current logged in user may not be an administrator of the Hub server. Add the user to the administrators group. For more information refer to [Managing Users and Authentication](/docs/server/hub-server#hub-server-administration-managing-users-and-authentication).
 
 **NOTE:** If you add the user to the administrators group after already attempting to push an image to the Hub server, you may have to wait up to 5 minutes for the prermissions to propagate to the Hub server. Either switch to an API key based login, or restart the Hub server process and try again.
 
@@ -106,7 +106,7 @@ API Keys allow you to login to your hub with a code other than with a username/p
 
 When adding an API Key, give it a name that describes the general usage of the key. It is also recommended to have distinct keys for distinct usages so that if one is compromised or updated, all usages will not require update. **Run as System** controls whether the key is given administrative privileges to push new images or delete repositories. Without this setting, the API key will only have read access to repositories.
 
-#### Manage Users
+#### Managing Users and Authentication
 
 ![](/docs/server/hub_server/admin-users.png)
 
@@ -293,6 +293,12 @@ You may have a specific subset of existing users that will use Turbo Server, in 
 	b. Check groups to include. All members of that group will be synchronized, including contained groups and all of their members.
 
 When you are satisfied with your settings, select **Save**. At this point, the users and groups in your directory service are not synchronized with Turbo Server. From the **Manage Directory Services** page, click the synchronization button and verify there are positive counts for users and/or groups when it has finished. For large directories this can take several seconds.
+
+#### Managing Servers
+
+![](/docs/server/hub_server/admin-servers.png)
+
+The **Servers** page lists all servers that are included as part of the current Turbo Server installation. Clicking a server name will navigate to the server configuration page.
 
 #### Managing Workspaces
 

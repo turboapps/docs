@@ -27,7 +27,7 @@ Turbo DB uses data deduplication to minimize storage consumption when multiple c
 
 #### Setup
 
-In this section you will learn how to use the Setup Wizard to automatically configure Turbo Server. For details regarding manual configuration of Turbo Server, refer to Manually Configuring Turbo Server.
+In this section you will learn how to use the Setup Wizard to automatically configure Turbo Server. For details regarding manual configuration of Turbo Server, refer to [Manually Configure Turbo Server](/docs/server/hub-server#hub-server-advanced-topics-manually-configure-turbo-hub-server).
 
 Complete the following steps to set up Turbo Server:
 
@@ -45,7 +45,7 @@ Complete the following steps to set up Turbo Server:
 
     b. **Port assignments**:
 
-    **Administration site**: The port used to access the Administration Site.  For more information, refer to the Administration Site topic.
+    **Administration site**: The port used to access the Administration Site.  For more information, refer to the [Administration Site](/docs/server/hub-server#getting-started-with-hub-server-administration-site) topic.
 
 	**Hub site**: The port used to access the Hub.  If Microsoft IIS is already on the machine then port 80 may already be in use. Verify that the ports assigned to the Administration and Hub sites are not already in use.
 		
@@ -55,9 +55,9 @@ Complete the following steps to set up Turbo Server:
 
 6. Select **Setup** to begin configuring Turbo Hub Server.
 
-7. After setup is complete the Administration Site automatically opens and displays a web page where you can apply your license. Both evaluation and retail licenses are applied here. To obtain an evaluation license, login or create an account on http://turbo.net. For information on purchasing a retail license, refer to the Licensing topic.
+7. After setup is complete the Administration Site automatically opens and displays a web page where you can apply your license. Both evaluation and retail licenses are applied here. To obtain an evaluation license, login or create an account on http://turbo.net. For information on purchasing a retail license, refer to the [Licensing](/docs/server/hub-server#getting-started-with-hub-server-licensing) topic.
 
-8. Open the ports for the Administration and Hub sites (the Microsoft Windows Firewall blocks external connections to Turbo Hub Server by default). For instructions on opening the ports and for recommendations on how to best secure Turbo Hub Server, refer to *Configuring Turbo Hub Server Security*.
+8. Open the ports for the Administration and Hub sites (the Microsoft Windows Firewall blocks external connections to Turbo Hub Server by default). For instructions on opening the ports and for recommendations on how to best secure Turbo Hub Server, refer to [Configure Turbo Hub Server Security](/docs/server/hub-server#hub-server-advanced-topics-configure-turbo-hub-server-security).
 
 9. Start using Turbo Hub Server!
 
@@ -67,7 +67,7 @@ The standard Turbo Hub Server license, **Turbo Server Enterprise Edition**, cons
 
 Users are typically accounted for with a username and password. However, you can use anonymous users. In this case, each user is defined by the domain of the hosted Turbo Hub Server and a specific username, such as SomeCompany\SomeUser. 
 
-The Turbo Server administrator can activate and deactivate users as needed, or add additional allowed users or devices by upgrading the license. For more information about managing users refer to *Managing Users*. For instructions on applying a new license to Turbo Server, refer to *Configuration and Customization*.
+The Turbo Server administrator can activate and deactivate users as needed, or add additional allowed users or devices by upgrading the license. For more information about managing users refer to [Managing Users and Authentication](/docs/server/hub-server#hub-server-administration-managing-users-and-authentication). For instructions on applying a new license to Turbo Server, refer to [Configuration and Customization](/docs/server/hub-server#hub-server-administration-configuration-and-customization).
 
 #### Administration Site
 
@@ -77,7 +77,7 @@ Turbo Server has an administration site interface that enables Turbo Hub Server 
 - Application Image Repositories
 - Users
 
-The Administration Site also provides detailed application usage analytics via pre-configured reports. The administration site is automatically configured during Turbo Hub Server setup, and is assigned to path /admin on port 80 by default. For more information about how to administer Turbo Server, refer to *Turbo Server Administration*.
+The Administration Site also provides detailed application usage analytics via pre-configured reports. The administration site is automatically configured during Turbo Hub Server setup, and is assigned to path /admin on port 80 by default. For more information about how to administer Turbo Server, refer to [Turbo Server Administration](/docs/server/hub-server#hub-server-administration).
 
 #### Hub Site
 
