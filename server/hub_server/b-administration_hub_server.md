@@ -1,22 +1,24 @@
 ### Hub Server Administration
 
-![](/docs/server/hub_server/hub-admin-1.png)
-
 The Turbo Hub Server Administration Site enables you to manage and control all aspects of your Turbo Hub Server. 
 
-The default location of the Administration Site is: http://localhost:81, and consists of the following links:
+The default location of the Administration Site is: http://localhost:80/admin, and consists of the following links:
 
-- **Hub**: This page lists all applications repositories on your Turbo Hub Server. From here **Federation** can be configured to source application repositories from turbo.net hub. **API Keys** can be defined to allow access to your hub without using a password (useful for automation, tooling, and other similar scenarios). If connecting to a Turbo Streaming Server, the dashboard namespace and display name can be defined here as well.
+- **Hub**: This page lists all applications repositories on your Turbo Hub Server. From here **Federation** can be configured to source application repositories from turbo.net hub. **API Keys** can be defined to allow access to your hub without using a password (useful for automation, tooling, and other similar scenarios). For more information refer to *Managing Hub*.
 
-- **Users**: This page provides a list of active and inactive users on your Turbo Hub Server. For more information refer to *Managing Users*.
+- **Users**: This page list all users and groups on your Turbo Hub Server. From here **Directory Services** can be configured to import users from LDAP or Active Directory. **Authentication Method** allows you to configure how users will authenticate with the Turbo Hub Server. **Device Keys** allows you to manage all registered devices. For more information refer to *Managing Users*.
+
+- **Servers**: This page lists all servers that are included as part of the current Turbo Hub Server installation. Server settings such as roles, web service bindings, and SSL certificates may be configured here. For more information refer to *Managing Servers*.
+
+- **Workspaces**: This page lists all workspaces on your Turbo Hub Server. From here workspaces may be added, configured, and deleted. For more information refer to *Managing Workspaces*.
 
 - **Reports**: This page provides preconfigured customizable analytics reports, sorted according to Administration, Hub, and Users. For more information refer to *Reports*.
 
-- **Admin**: This page contains a summary of your Turbo Server license, and information and options for configuring Turbo Hub Server. For more information refer to *Configuration and Customization*.
+- **General**: This page contains a summary of your Turbo Hub Server license, and information and options for configuring Turbo Hub Server. For more information refer to *Configuration and Customization*.
 
-#### Manage Hub
+#### Managing Hub
 
-![](/docs/server/hub_server/hub-admin-2.png)
+![](/docs/server/hub_server/admin-hub.png)
 
 All application repositories on Turbo Hub Server are managed from the **Hub** page of the Administration Site. 
 
@@ -26,7 +28,7 @@ Each new application repository is added to Turbo Hub Server in the form of a Tu
 
 ##### Adding a Container Image
 
-![](/docs/server/hub_server/hub-admin-11.png)
+![](/docs/server/hub_server/admin-hub-push-cli.png)
 
 Complete the following steps to add a new application image to Turbo Hub Server:
 
@@ -76,53 +78,43 @@ The current logged in user may not be an administrator of the Hub server. Add th
 
 ##### Managing Repositories
 
-![](/docs/server/hub_server/hub-admin-7.png)
+![](/docs/server/hub_server/admin-repos-edit.png)
 
-On the repository edit page, a repository display name can be modified. This shows up in the hub administration page list as well as in connected Turbo Streaming Server portals if the dashboard is configured to show that repository. The repository ID field cannot be modified and is assigned when the first container image is pushed to the hub. The **versions** list shows all available images that are available for this repository. They can be referenced by their tag or their ID (ex, "mozilla/firefox:64.0" or "mozilla/firefox#44397e23bf46a08a8a567ba13b2c215668d451c9dde41b030706779dc977cc02"). Accessing a repository without a tag or ID will use the latest available image (ex, "mozilla/firefox"). Note that any repository updates may take up to 24hrs to be automatically retrieved by the Turbo Client.
-
-![](/docs/server/hub_server/hub-admin-7.png)
-
-If a dashboard is defined then the repository can be added to it by checking the "Visible" checkbox. Repositories in the dashboard's namespace will automatically be added. Dashboard permissions can also be modified here. If no groups are defined then all users will have access to the repository. If groups are added to the list, then only members of these groups will be able to view the repository in the Turbo.net Launcher or Turbo Streaming Server portal.
+On the repository edit page, a repository display name can be modified. This shows up in the hub administration page list. The repository ID field cannot be modified and is assigned when the first container image is pushed to the hub. The **versions** list shows all available images that are available for this repository. They can be referenced by their tag or their ID (ex, "mozilla/firefox:64.0" or "mozilla/firefox#44397e23bf46a08a8a567ba13b2c215668d451c9dde41b030706779dc977cc02"). Accessing a repository without a tag or ID will use the latest available image (ex, "mozilla/firefox"). Note that any repository updates may take up to 24hrs to be automatically retrieved by the Turbo Client.
 
 ##### Managing Repository Federation
 
-![](/docs/server/hub_server/hub-admin-6.png)
+![](/docs/server/hub_server/admin-federated-repos.png)
 
 With the Federation feature in Turbo Hub Server, you can configure application repositories to be sourced and automatically updated from the Turbo.net Hub. Since repositories in the Turbo.net Hub are automatically built as updates become available, you can remove the burden of maintaining images yourself.
 
-![](/docs/server/hub_server/hub-admin-6.png)
+![](/docs/server/hub_server/admin-federation-settings.png)
 
 When first using Federation, you must configure the API key that is used to access the Turbo.net Hub. This API key can be retrieved in your [Turbo.net Account Settings](https://turbo.net/settings/devices-and-api-keys). You can also set how frequently the Turbo.net Hub is queried for new version of federated repositories. The default frequency is every 24-hours. If **Automatic Forwarding** is enabled, any image request to your hub instance that cannot be satisfied will automatically be forwarded on to Turbo.net Hub with the returned repository being cached in your hub. This effectively federates the entire Turbo.net Hub library and uses your instance as a local cache for your users.
 
-![](/docs/server/hub_server/hub-admin-5.png)
+![](/docs/server/hub_server/admin-federated-repos-add.png)
 
-To add a new federated repository, click the **Add Repo** button and enter the full name of the Turbo.net repository that you want to federate. Set the **Revision History Length** field to the number of past revisions to import during a sync. Since repositories on Turbo.net are updated automatically, some may have hundreds of images available. The default value is 10 revisions. After setting the properties, click **Save**. You will now see your new federated repo listed and the initial sync with Turbo.net Hub will be in progress. After the sync is complete you will see the new repository in your main repository list on the Hub administration page.
+To add a new federated repository, click the **Add** button and enter the full name of the Turbo.net repository that you want to federate. Set the **Revision History Length** field to the number of past revisions to import during a sync. Since repositories on Turbo.net are updated automatically, some may have hundreds of images available. The default value is 10 revisions. After setting the properties, click **Save**. You will now see your new federated repo listed and the initial sync with Turbo.net Hub will be in progress. After the sync is complete you will see the new repository in your main repository list on the Hub administration page.
 
 ##### Managing API Keys
 
-![](/docs/server/hub_server/hub-admin-9.png)
+![](/docs/server/hub_server/admin-api-keys.png)
 
 API Keys allow you to login to your hub with a code other than with a username/password. This is useful when configuring automation or in other scenarios where a plain text password is not desirable. If an API Key has been compromised, it can be refreshed to a new value or deleted to immediately revoke access. 
 
-![](/docs/server/hub_server/hub-admin-8.png)
+![](/docs/server/hub_server/admin-api-keys-add.png)
 
 When adding an API Key, give it a name that describes the general usage of the key. It is also recommended to have distinct keys for distinct usages so that if one is compromised or updated, all usages will not require update. **Run as System** controls whether the key is given administrative privileges to push new images or delete repositories. Without this setting, the API key will only have read access to repositories.
 
-##### Managing the Dashboard
-
-![](/docs/server/hub_server/hub-admin-10.png)
-
-A dashboard is used to define what applications are exposed to users. By default there is no dashboard defined to all repositories in the server are shown in the Turbo.net Launcher (with the exception of the built-in dependencies repositories like vcredist, clean, base, etc). When a dashboard is defined, the Turbo.net Launcher or Turbo Streaming Server portal displays applications which are defined in your hub's dashboard. A repository can be added to the dashboard on the edit repository page. A dashboard must be defined in order to allow group permissions to be assigned to repository and is required to connect your hub server to a Turbo Streaming Server instance.
-
 #### Manage Users
 
-![](/docs/server/hub_server/hub-admin-12.png)
+![](/docs/server/hub_server/admin-users.png)
 
 Turbo Hub Server users are tracked and managed via the Administration Site. Users are entered manually or via automated import from LDAP or Active Directory directory services. Users can be viewed and managed on the **Users** page. You can also place users into groups. The **Users** page contains a list of existing users and user groups. From this page you can view user directories, status, and available actions. Displayed above the user list is the total number of licenses available and the number of licenses currently in use.
 
 ##### Managing Users
 
-![](/docs/server/hub_server/hub-admin-13.png)
+![](/docs/server/hub_server/admin-users-user.png)
 
 To manage a user, select the user name from the list on the **Users** page. The following fields are displayed on the page:
 
@@ -130,13 +122,11 @@ To manage a user, select the user name from the list on the **Users** page. The 
 
 - **Login Name**: The unique login name for the user.
 
-- **Directory Information**: Information about the directory service for the user if the user was imported from an external directory service.
-
 - **Enabled**: Determines whether a user can access Turbo Hub Server. After a user is disabled he no longer consumes a seat.
 
 ##### Managing User Groups
 
-![](/docs/server/hub_server/hub-admin-14.png)
+![](/docs/server/hub_server/admin-users-group.png)
 
 To create a user group select **Add Group**. The **Add User Group** screen displays. This screen contains the following fields:
 
@@ -146,11 +136,11 @@ To create a user group select **Add Group**. The **Add User Group** screen displ
 
 - **Members**: Users and groups that are members of this group. Users and groups are inherited when including other groups as members. Add users or other groups by selecting Add.
 
-There are two special groups that are created automatically, **Administrators** and **Anonymous Users**. Any users in the **Administrators** group will be able to log into the administration site and push shared images. Note that changes to the **Administrators** group will require a service restart before they are honored by the hub services. Access to the administration site will be honored immediately. Users discovered when the authentication mode is set to **Anonymous** are added to the **Anonymous Users** group. 
+There are three special groups that are created automatically, **Administrators**, **Anonymous Users**, and **Everyone**. Any users in the **Administrators** group will be able to log into the administration site and push shared images. Note that changes to the **Administrators** group will require a service restart before they are honored by the hub services. Access to the administration site will be honored immediately. Users discovered when the authentication mode is set to **Anonymous** are added to the **Anonymous Users** group. All users will automatically be added to the **Everyone** group.
 
 ##### Adding an External Directory Service
 
-![](/docs/server/hub_server/hub-admin-15.png)
+![](/docs/server/hub_server/admin-users-directory-service.png)
 
 Using Turbo Hub Server you can add an external directory service, such as Active Directory. This enables you to manage users with the touch of a button and easily import existing users and groups into Turbo Hub Server. Complete the following steps to add an external directory service:
 
@@ -297,9 +287,15 @@ You may have a specific subset of existing users that will use Turbo Server, in 
 
 When you are satisfied with your settings, select **Save**. At this point, the users and groups in your directory service are not synchronized with Turbo Server. From the **Manage Directory Services** page, click the synchronization button and verify there are positive counts for users and/or groups when it has finished. For large directories this can take several seconds.
 
+#### Managing Workspaces
+
+![](/docs/server/hub_server/admin-workspaces.png)
+
+A workspace defines a set of applications and user permissions. These workspaces are shown on the Turbo Streaming Server portal and in the Turbo.net Launcher to users with sufficient permissions. By default there is a single **Default Workspace** with user permissions granted to the **Everyone** user group, allowing access to all users. Applications, permissions, and analytics maye be managed from the the Workspace Administration page.
+
 #### Reports
 
-![](/docs/server/hub_server/hub-admin-16.png)
+![](/docs/server/hub_server/admin-reports.png)
 
 The **Reports** page provides pre-configured, detailed analytic reports, broken-down into categories. Selecting a report takes you to the **Report** page, which consists of a **Date Range** control and the **Report Viewer**. Use the **Date Range** control to adjust the time period for the selected report.
 
@@ -325,7 +321,7 @@ Note that if the server uses Annonymous login mode, the user name in the reports
 
 ##### Report Viewer
 
-![](/docs/server/hub_server/hub-admin-17.png)
+![](/docs/server/hub_server/admin-reports-view.png)
 
 Use the toolbar located at the top of the **Report Viewer** to perform the following tasks:
 
@@ -342,14 +338,10 @@ Use the toolbar located at the top of the **Report Viewer** to perform the follo
 
 #### Configuration and Customization
 
-![](/docs/server/hub_server/hub-admin-18.png)
+![](/docs/server/hub_server/admin-general.png)
 
-The **Admin** page provides options to configure and customize Turbo Hub Server. The page is divided into the following sections:
+The **General** page provides options to configure and customize Turbo Hub Server. The page contains the following sections:
 
-- **License**: Provides an overview of information associated with the current Turbo Server license, including number of seats, allowed portals,  computer name, and machine identifier. If server users are licensed to run applications on more than one machine, this number is reflected here. This section also contains a link to add a **New License**; you can use this to update an existing license as well.
+- **License**: Provides an overview of information associated with the current Turbo Server license, including number of seats, allowed portals, computer name, and machine identifier. If server users are licensed to run applications on more than one machine, this number is reflected here. This section also contains a link to add a **New License**; you can use this to update an existing license as well.
 
 - **Administrator Email**: Users are directed to this email address if they encounter any errors or issues while using Turbo Hub Server.
-
-- **Administrators**: The administrative web pages can be restricted to a subset of the users known to the Turbo Hub Server. If no users are contained in this group, access will be open to anyone able to access the port of the administration site. When at least one user is contained in the group, a login form is presented to any user who hasn't already been authenticated from his browser. Only the members of the administrators group (including members of groups that are members of the administrators group) are allowed access. Note that this group appears in the standard user groups list and is editable from there as well. 
-
-- **Authentication Type**:  Authentication type that users must supply to access applications.

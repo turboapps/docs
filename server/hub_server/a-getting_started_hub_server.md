@@ -77,7 +77,7 @@ Turbo Server has an administration site interface that enables Turbo Hub Server 
 - Application Image Repositories
 - Users
 
-The Administration Site also provides detailed application usage analytics via pre-configured reports. The administration site is automatically configured during Turbo Hub Server setup, and is assigned to port 81 by default. For more information about how to administer Turbo Server, refer to *Turbo Server Administration*.
+The Administration Site also provides detailed application usage analytics via pre-configured reports. The administration site is automatically configured during Turbo Hub Server setup, and is assigned to path /admin on port 80 by default. For more information about how to administer Turbo Server, refer to *Turbo Server Administration*.
 
 #### Hub Site
 
