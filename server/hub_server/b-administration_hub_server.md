@@ -229,6 +229,7 @@ Using Turbo Hub Server you can add an external directory service, such as Active
          <td colspan="1">Used to identify items in the directory tree that should be synchronized with Turbo Hub Server. For more information, see <strong>Choosing Items to Synchronize</strong>, further down this page.</td>
       </tr>
 </table>  
+&nbsp;
 
 **Choosing Your Connection Settings**
 
@@ -294,11 +295,44 @@ You may have a specific subset of existing users that will use Turbo Server, in 
 
 When you are satisfied with your settings, select **Save**. At this point, the users and groups in your directory service are not synchronized with Turbo Server. From the **Manage Directory Services** page, click the synchronization button and verify there are positive counts for users and/or groups when it has finished. For large directories this can take several seconds.
 
+##### Authentication Method
+
+![](/docs/server/hub_server/admin-users-authentication-method.png)
+
+The **Authentication Method** page configures which Authentication Method is used when an end-user logs into the Hub Site and Turbo Client. The supported methods are:
+
+- **Anonymous**: Anonymous authentication allows users to access the Portal without logging in. All anonymous users are added to the **Anonymous Users** group.
+
+- **Username and Password**: Username and Password authentication requires users to provide their username and password in order to log in. Passwords may be managed from the user settings page.
+
+- **Single Sign-On**: Single Sign-On authentication allows users to login to external directory services such as Azure AD. For more information on configuring SSO, refer to [Configure Azure AD](/docs/server/hub-server#azure-active-directory-integration-configure-azure-ad)
+
+##### Device Keys
+
+![](/docs/server/hub_server/admin-users-device-keys.png)
+
+The **Device Keys** page lists all devices that are registered to the Hub Server. Devices are automatically registered with the Hub Server when subscribing or installing applications. Device Keys may be deleted in order to immediately revoke that device's access to the Hub Server.
+
 #### Managing Servers
 
 ![](/docs/server/hub_server/admin-servers.png)
 
-The **Servers** page lists all servers that are included as part of the current Turbo Server installation. Clicking a server name will navigate to the server configuration page.
+The **Servers** page lists all servers that are included as part of the current Turbo Server installation, along with their current status. Clicking a server name will navigate to the server configuration page.
+
+##### Configuring a Server
+
+![](/docs/server/hub_server/admin-servers-edit.png)
+
+- **Name**: A display name for the server, shown in the Administration Site.
+
+- **Role**: The roles for which this server is responsible, including: [Hub Server](/docs/server/hub-server), Hub Site (Portal), and [Application Server](/docs/server/application-server). Changing the server role will trigger a service restart which may take a few minutes to complete.
+
+- **Use Advanced Video Coding**: Enables the use of Advanced Video Coding (H.264) for remote application streaming if the Application Server supports it. This setting is only available for servers with the Application role enabled.
+
+- **Web Service Root**: Configures the web service bindings for where the hub, portal, broker, and public web services will be hosted. This setting is only available for servers with the Hub or Portal role enabled.
+
+- **Web Service SSL Certificate**: Configures the SSL certificate files that are used for HTTPS web service bindings. The provided file paths must point to permanent locations that are available to the service account.
+
 
 #### Managing Workspaces
 
