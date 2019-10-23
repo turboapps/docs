@@ -338,7 +338,41 @@ The **Servers** page lists all servers that are included as part of the current 
 
 ![](/docs/server/hub_server/admin-workspaces.png)
 
-A workspace defines a set of applications and user permissions. These workspaces are shown on the Turbo Streaming Server portal and in the Turbo.net mobile clients to users with sufficient permissions. By default there is a single **Default Workspace** with User permissions granted to the **Everyone** user group, allowing access to all users. Applications, permissions, and analytics can be managed from the the Workspace Administration page.
+A workspace defines a set of applications and user permissions. These workspaces are shown on the Turbo Streaming Server portal and on the Turbo Clients to users with sufficient permissions. By default there is a single **Default Workspace** with User permissions granted to the **Everyone** user group, allowing access to all users. Applications, permissions, and analytics can be managed from the the Workspace Administration page.
+
+Server Administrators, as well as users with Administrator permissions to the workspace, may click the **Manage** button to access the Workspace Administration site.
+
+##### Workspace Administration Dashboard
+
+![](/docs/server/hub_server/admin-workspaces-admin-dashboard.png)
+
+The **Dashboard** page shows application usage analytics for the workspace. The analytics are separated into 4 sections:
+
+- **Application Launch Volume**: A graph visualizing the application launch volume for the past week.
+
+- **Key Statistics**: A summary of the unique applications, launches, users, and devices for the past week. 
+
+- **Usage Summary**: A table grouped by application summarizing each application's launch volume for the past week.
+
+- **Recent Activity**: A table detailing the last 100 application launches.
+
+##### Workspace Administration Applications
+
+![](/docs/server/hub_server/admin-workspaces-admin-applications.png)
+
+The **Applications** page lists all applications that have been added to this workspace and provides management options such as adding, editing, and deleting workspace applications. Applications added to the workspace will be displayed on the portal to users will sufficient permissions and will be available for launch.
+
+##### Editing a Workspace Application
+
+![](/docs/server/hub_server/admin-workspaces-admin-applications-edit.png)
+
+The **Application Settings** page provides configuration options for a variety of application settings. These settings affect the application's display settings, launch settings and more. For more information on these settings refer to the [Repository Settings](/docs/hub/repositories#repository-settings).
+
+##### Workspace Administration Users
+
+![](/docs/server/hub_server/admin-workspaces-admin-users.png)
+
+The **Users** page lists all user and user group permissions that have been added to the workspace and provides management options such as adding and deleting permissions. Granting **User** permissions will allow that user or user group to access the workspace, while granting **Administrator** permissions will allow that user or user group to access the workspace administration.
 
 #### Reports
 
