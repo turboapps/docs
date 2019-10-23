@@ -110,7 +110,7 @@ When adding an API Key, give it a name that describes the general usage of the k
 
 ![](/docs/server/hub_server/admin-users.png)
 
-Turbo Hub Server users are tracked and managed via the Administration Site. Users are entered manually or via automated import from LDAP or Active Directory directory services. Users can be viewed and managed on the **Users** page. You can also place users into groups. The **Users** page contains a list of existing users and user groups. From this page you can view user directories, status, and available actions. Displayed above the user list is the total number of licenses available and the number of licenses currently in use.
+Turbo Hub Server users are tracked and managed via the Administration Site. Users are entered manually or via automated import from LDAP or Active Directory directory services. Users and user groups can be viewed and managed on the **Users** page. From this page you can view user directories, status, and available actions. Displayed above the user list is the total number of licenses available and the number of licenses currently in use.
 
 ##### Managing Users
 
@@ -134,9 +134,16 @@ To create a user group select **Add Group**. The **Add User Group** screen displ
 
 - **Description**: A group description (optional).
 
-- **Members**: Users and groups that are members of this group. Users and groups are inherited when including other groups as members. Add users or other groups by selecting Add.
+- **Members**: Users and groups that are members of this group. Users and groups are inherited when including other groups as members. Add users or other groups by selecting **Add Members**.
 
-There are three special groups that are created automatically, **Administrators**, **Anonymous Users**, and **Everyone**. Any users in the **Administrators** group will be able to log into the administration site and push shared images. Note that changes to the **Administrators** group will require a service restart before they are honored by the hub services. Access to the administration site will be honored immediately. Users discovered when the authentication mode is set to **Anonymous** are added to the **Anonymous Users** group. All users will automatically be added to the **Everyone** group.
+
+There are three special groups that are created automatically, **Administrators**, **Anonymous Users**, and **Everyone**:
+
+- **Administrators**: This group will be able to log into the administration site and push shared images. Note that changes to the **Administrators** group will require a service restart before they are honored by the hub services. Access to the administration site will be honored immediately. 
+
+- **Anonymous**: This group automatically includes any user discovered when the authentication mode is set to **Anonymous**.
+
+- **Everyone**: This group automatically includes all users regardless of authentication mode.
 
 ##### Adding an External Directory Service
 
@@ -221,7 +228,7 @@ Using Turbo Hub Server you can add an external directory service, such as Active
          <td colspan="1"><strong>Synchronized Items</strong></td>
          <td colspan="1">Used to identify items in the directory tree that should be synchronized with Turbo Hub Server. For more information, see <strong>Choosing Items to Synchronize</strong>, further down this page.</td>
       </tr>
-</table>
+</table>  
 
 **Choosing Your Connection Settings**
 
@@ -291,7 +298,7 @@ When you are satisfied with your settings, select **Save**. At this point, the u
 
 ![](/docs/server/hub_server/admin-workspaces.png)
 
-A workspace defines a set of applications and user permissions. These workspaces are shown on the Turbo Streaming Server portal and in the Turbo.net Launcher to users with sufficient permissions. By default there is a single **Default Workspace** with user permissions granted to the **Everyone** user group, allowing access to all users. Applications, permissions, and analytics maye be managed from the the Workspace Administration page.
+A workspace defines a set of applications and user permissions. These workspaces are shown on the Turbo Streaming Server portal and in the Turbo.net mobile clients to users with sufficient permissions. By default there is a single **Default Workspace** with User permissions granted to the **Everyone** user group, allowing access to all users. Applications, permissions, and analytics can be managed from the the Workspace Administration page.
 
 #### Reports
 
@@ -299,7 +306,7 @@ A workspace defines a set of applications and user permissions. These workspaces
 
 The **Reports** page provides pre-configured, detailed analytic reports, broken-down into categories. Selecting a report takes you to the **Report** page, which consists of a **Date Range** control and the **Report Viewer**. Use the **Date Range** control to adjust the time period for the selected report.
 
-Note that if the server uses Annonymous login mode, the user name in the reports will display the Windows login profile name. This applies even for logged in users with cached credentials.
+Note that if the server uses Anonymous login mode, the user name in the reports will display the Windows login profile name. This applies even for logged in users with cached credentials.
 
 ##### Administration Reports
 
@@ -345,3 +352,15 @@ The **General** page provides options to configure and customize Turbo Hub Serve
 - **License**: Provides an overview of information associated with the current Turbo Server license, including number of seats, allowed portals, computer name, and machine identifier. If server users are licensed to run applications on more than one machine, this number is reflected here. This section also contains a link to add a **New License**; you can use this to update an existing license as well.
 
 - **Administrator Email**: Users are directed to this email address if they encounter any errors or issues while using Turbo Hub Server.
+
+##### Appearance
+
+![](/docs/server/hub_server/admin-general-appearance.png)
+
+The **Appearance** page provides customization options for the Turbo Streaming Server portal, such as icons and background images. Some settings may require the portal to restart before taking affect.
+
+##### Cloud Storage
+
+![](/docs/server/hub_server/admin-general-files.png)
+
+The **Cloud Storage** page provides configuration options for integration with Cloud Storage providers such as OneDrive and Dropbox. This allows users to be able to access their files from these providers while running applications. For more information refer to the [Cloud Storage Integration](/docs/server/hub-server#cloud-storage-integration) section.
