@@ -372,7 +372,7 @@ The **Application Settings** page provides configuration options for a variety o
 
 ![](/docs/server/hub_server/admin-workspaces-admin-users.png)
 
-The **Users** page lists all user and user group permissions that have been added to the workspace and provides management options such as adding and deleting permissions. Granting **User** permissions will allow that user or user group to access the workspace, while granting **Administrator** permissions will allow that user or user group to access the workspace administration.
+The **Users** page lists all user and user group permissions that have been added to the workspace and provides management options such as adding and deleting permissions. Granting **User** permissions will allow that user or user group to access the workspace, while granting **Administrator** permissions will allow that user or user group to access the workspace administration site.
 
 #### Reports
 

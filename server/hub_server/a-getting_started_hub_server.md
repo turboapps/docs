@@ -31,35 +31,35 @@ In this section you will learn how to use the Setup Wizard to automatically conf
 
 Complete the following steps to set up Turbo Server:
 
-1. Run the Turbo Hub Server setup application.
+1. [Download Turbo Server](https://turbo.net/server/download) and run the setup application.
 
 2. Select **Next** to start the installation wizard.
 
 3. Read the End User License Agreement, check the box and select **Next**.
 
-4. Use **Destination Folder** to choose where Turbo Hub Server files are installed and select Install.
+4. Enter the License Certificate from your [Account Licenses](https://turbo.net/settings/licenses) page and select **Next**.
 
-5. After the installation process completes, choose the following configuration options:
+4. Use **Destination Folder** to choose where Turbo Hub Server files are installed and select **Install**.
 
-    a. **Administrator email address**: This is typically the Turbo Hub Server system administrator's email address. Users are directed to this email address if they encounter any errors or issues while using Turbo Hub Server.
+5. Choose the Server Roles that will be installed on the machine and select **Next**.
 
-    b. **Port assignments**:
+6. Enter the web service scheme, hostname, and port where your hub, portal, broker, and public web services will be hosted and select **Next**. The **Administration Site** and **Hub Site** will be accessible from this web service root after the install completes.    
 
-    **Administration site**: The port used to access the Administration Site.  For more information, refer to the [Administration Site](/docs/server/hub-server#getting-started-with-hub-server-administration-site) topic.
+    If Microsoft IIS is already on the machine then port 80 may already be in use. Verify that the ports assigned to the Administration and Hub sites are not already in use.
 
-	**Hub site**: The port used to access the Hub.  If Microsoft IIS is already on the machine then port 80 may already be in use. Verify that the ports assigned to the Administration and Hub sites are not already in use.
-		
-    c. Click the **Advanced** button to specify connection information to an external SQL Server Database. When using an external SQL Server Database, be sure that the "Log On" user for the Turbo Server Windows Service has the appropriate access to the database. It may be necessary to modify the Log On user for the service by editing the service details after installing Turbo Hub Server.
+7. If the **Farm** server role was selected, the **Database Setup** page will request database connection information to an external SQL Server Database. When using an external SQL Server Database, be sure that the "Log On" user for the Turbo Server Windows Service has the appropriate access to the database. It may be necessary to modify the Log On user for the service by editing the service details after installing Turbo Hub Server.
     
-	**Note:** Turbo Server supports all versions of Microsoft SQL Server 2005 or newer. Any connection string format supported by Microsoft SQL Server may be used.
+	**Note:** Turbo Server supports all versions of Microsoft SQL Server 2005 or newer and Azure SQL. Any connection string format supported by Microsoft SQL Server may be used.
+	
+8. Enter your **Administration Account** credentials and select **Install**. This administration account will be used to access the Administration Site after install.
 
-6. Select **Setup** to begin configuring Turbo Hub Server.
+9. Select **Install** to begin configuring Turbo Hub Server.
 
-7. After setup is complete the Administration Site automatically opens and displays a web page where you can apply your license. Both evaluation and retail licenses are applied here. To obtain an evaluation license, login or create an account on http://turbo.net. For information on purchasing a retail license, refer to the [Licensing](/docs/server/hub-server#getting-started-with-hub-server-licensing) topic.
+10. After setup is complete the Administration Site automatically opens and displays a web page where you can apply your license. Both evaluation and retail licenses are applied here. To obtain an evaluation license, login or create an account on http://turbo.net. For information on purchasing a retail license, refer to the [Licensing](/docs/server/hub-server#getting-started-with-hub-server-licensing) topic.
 
-8. Open the ports for the Administration and Hub sites (the Microsoft Windows Firewall blocks external connections to Turbo Hub Server by default). For instructions on opening the ports and for recommendations on how to best secure Turbo Hub Server, refer to [Configure Turbo Hub Server Security](/docs/server/hub-server#hub-server-advanced-topics-configure-turbo-hub-server-security).
+11. Open the ports for the Administration and Hub sites (the Microsoft Windows Firewall blocks external connections to Turbo Hub Server by default). For instructions on opening the ports and for recommendations on how to best secure Turbo Hub Server, refer to [Configure Turbo Hub Server Security](/docs/server/hub-server#hub-server-advanced-topics-configure-turbo-hub-server-security).
 
-9. Start using Turbo Hub Server!
+12. Start using Turbo Hub Server!
 
 #### Licensing
 
