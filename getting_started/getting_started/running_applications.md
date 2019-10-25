@@ -1,8 +1,8 @@
-### Running Applications
+## Running Applications
 
 Turbo.net applications can be opened using the Portal or, if configured by your administrator, directly from the Start Menu or Applications folder.
 
-#### Portal
+### Portal
 
 To open an application or file, go to the Turbo.net Portal and click on the item you want to open.
 

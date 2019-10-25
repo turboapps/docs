@@ -1,74 +1,147 @@
+# {id: "my_topic", title: "My Topic", sections: [{id: "my_section", "title": "My Section", "documents": [{"id": "my_document", "title": "My Document", "files": ["my_file.md"]}]}]}
 ---
-topic: Getting Started
-documents:
-- title: Getting Started
-- title: Using Files
-- title: Printing
-- title: Networking
-- title: Advanced Settings
-- title: Administrators
-- title: Developers
+title: Getting Started
+sections:
+  - title: Getting Started
+    documents:
+      - Getting Started
+      - Running Applications
+  - title: Using Files
+    documents:
+      - Using Files
+  - title: Printing
+    documents:
+      - Printing
+  - title: Networking
+    documents:
+      - Networking
+  - title: Advanced Settings
+    documents:
+      - Advanced Settings
+  - title: Administrators
+    documents:
+      - Creating Images
+      - Desktop Integration
+      - Networking
+      - Automation
+      - Citrix and RDS
+      - Advanced Topics
+      - Org Dashboard
+      - Creating Turbo URLs
+  - title: Developers
+    documents:
+      - .NET and Java
+      - Web Applications
+      - Servers
 ---
-topic: Hub
-documents:
-- title: Overview
-- title: Working with Images
-- title: Command Line Interface
-- title: Repositories
-- title: Templates
+title: Hub
+sections:
+  - title: Overview
+    documents:
+      - Overview
+  - title: Working with Images
+    documents:
+      - Working with Images
+      - Creating Layers
+  - title: Command Line Interface
+    documents:
+      - Command Line Interface
+  - title: Repositories
+    documents:
+      - Repositories
+      - Repository Settings
+  - title: Templates
+    documents:
+      - Templates
 ---
-topic: Deploying
-documents:
-- title: Overview
-- title: To Turbo.net
-- title: To a Workspace
-- title: To a Desktop
-- title: System Center (SCCM)
-- title: Intune
-- title: Citrix
-- title: Parallels RAS
-- title: Turbo Client
-- title: Portable EXEs and MSIs
-- title: Integration Tools
-- title: Tips
+title: Deploying
+sections:
+  - title: Overview
+    documents:
+      - Overview
+  - title: To Turbo.net
+    documents:
+      - Deploying to Turbo.net
+  - title: To a Workspace
+    documents:
+      - Deploying to a Workspace
+      - Troubleshooting
+  - title: To a Desktop
+    documents:
+      - Deploying to Desktop
+  - title: System Center (SCCM)
+    documents:
+      - System Center (SCCM)
+  - title: Intune
+    documents:
+      - Intune
+  - title: Citrix
+    documents:
+      - Citrix
+      - CLI
+      - Scripts
+  - title: Parallels RAS
+    documents:
+      - Deploying to Parallels RAS
+  - title: Turbo Client
+    documents:
+      - Turbo Client
+  - title: Portable EXEs and MSIs
+    documents:
+      - Portable EXEs and MSIs
+  - title: Integration Tools
+    documents:
+      - Tools
+      - Redirector Walkthrough
+      - SpoonReg
+  - title: Tips
+    documents:
+      - Tips
+      - API Keys
+      - Firewall Rules
 ---
-topic: Studio
-documents:
-- title: Overview
-- title: Working with Turbo Studio
-- title: Working with Containers
-- title: Continuous Integration
-- title: Advanced Topics
-- title: Scenarios
-- title: Troubleshooting
----
-topic: Server
-documents:
-- title: Overview
-- title: Hub Server
-- title: Application Server
-- title: Legacy Portal Server
-- title: Troubleshooting
----
-topic: VM
-documents:
-- title: Virtual Machine
-- title: Advanced Topics
-- title: XML Configuration
----
-topic: Reference
-documents:
-- title: Command Line
-- title: TurboScript
-- title: Turbo Shell
-- title: Dependencies
-- title: Turbo Client
-- title: Turbo Play
----
-topic: About
-documents:
-- title: What is Turbo?
-- title: Turbo and App Virtualization
-- title: Turbo and Docker
-- title: Contribute to Turbo
-- title: Style Guide
+title: Studio
+sections:
+  - title: Overview
+    documents:
+      - Overview
+  - title: Working with Turbo Studio
+    documents:
+      - Interface
+      - Snapshot
+      - Virtual Application Settings
+      - Standalone Executables
+      - Building from the Command Line
+      - MSI
+...
+#---
+#topic: Server
+#documents:
+#  - title: Overview
+#  - title: Hub Server
+#  - title: Application Server
+#  - title: Legacy Portal Server
+#  - title: Troubleshooting
+#---
+#topic: VM
+#documents:
+#  - title: Virtual Machine
+#  - title: Advanced Topics
+#  - title: XML Configuration
+#---
+#topic: Reference
+#documents:
+#  - title: Command Line
+#  - title: TurboScript
+#  - title: Turbo Shell
+#  - title: Dependencies
+#  - title: Turbo Client
+#  - title: Turbo Play
+#---
+#topic: About
+#documents:
+#  - title: What is Turbo?
+#  - title: Turbo and App Virtualization
+#  - title: Turbo and Docker
+#  - title: Contribute to Turbo
+#  - title: Style Guide

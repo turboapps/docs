@@ -1,12 +1,12 @@
-### Troubleshooting
+## Troubleshooting
 
 This section provides information to help troubleshoot common issues you might encounter while using an On-Premises Turbo Portal.
 
-#### Enable Diagnostic Mode
+### Enable Diagnostic Mode
 
 Enabling diagnostic mode generates debug output logs. These can be used to help the Turbo support staff diagnose and debug issues.
 
-##### Turbo Client
+#### Turbo Client
 
 When troubleshooting an issue related to launching applications from the web, Turbo recommends enabling diagnostic mode for the Turbo Client. Complete the following steps to enable diagnostic mode and capture debug output logs for the Turbo Client:
 
@@ -21,11 +21,11 @@ When troubleshooting an issue related to launching applications from the web, Tu
 5. When the application is launched again with Turbo, the DbgView Output displays debugging logs.
 
 
-#### Locating Log Files
+### Locating Log Files
 
 There are several types of logs available for Turbo Server, including logs for the Portal, Application Broker, and Application Server.
 
-##### Portal + Application Broker Logs on Linux
+#### Portal + Application Broker Logs on Linux
 
 **Portal Logs**
 
@@ -51,7 +51,7 @@ The Guacamole proxy translates the Windows RDP protocol into the Guacamole proto
     sudo docker logs -f guacd
 
 
-##### Portal + Application Broker Logs on Windows
+#### Portal + Application Broker Logs on Windows
 
 **Portal Logs**
 
@@ -66,7 +66,7 @@ The Application Broker container outputs logs to stdout. You can access these lo
     turbo logs --stdout <container>
 
 
-##### Application Server Logs
+#### Application Server Logs
 
 **Turbo Cmd Logs**
 
@@ -79,6 +79,6 @@ The RDPProxy translates the Windows RDP protocol into the RXP protocol for the H
 - C:\Users\Administrator\scripts\Logs
 
 
-##### Windows Event Viewer
+#### Windows Event Viewer
 
 The Windows Event Viewer is another useful source of information. If there is an issue with the Application Server configuration or RDP authentication there may be information reported in the Window Event Viewer to help diagnose the problem.
