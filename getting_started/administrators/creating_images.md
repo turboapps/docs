@@ -1,8 +1,8 @@
-### Creating Images
+## Creating Images
 
 In the previous section, we used several ready-to-use images from the Turbo.net Hub. But what if we want to create or customize our own images?
 
-#### Customizing applications
+### Customizing applications
 
 Recall that in the previous section we launched several Firefox containers from the Turbo.net Hub. Applications in the Hub are configured with installer defaults. Let’s see how to customize images with our own preferred settings.
 
@@ -58,7 +58,7 @@ Finally, we can launch a new instance of our custom image!
 
 Notice that a new container identifier has been assigned. Even though the configuration is the same as our initial container `e4a84281`, the container we just launched is a new instance of a container instantiated off the `firefox-turbo image`.
 
-#### Removing images
+### Removing images
 
 Since we only created the `firefox-turbo` image for testing purposes, we’d like to remove it to keep our local repository clean.
 
@@ -71,7 +71,7 @@ Image firefox-turbo was removed
 
 The `rmi` command also accepts wildcards. For example, all images can be removed from a device with the command `turbo rmi *`.
 
-#### Installing custom applications
+### Installing custom applications
 
 So far we have been using applications that were already available in the Turbo.net Hub. But what if we want to install completely custom applications into our containers?
 
@@ -158,7 +158,7 @@ Take note of the full path to the startup file as we’ll need it later.
 
 ![](/docs/getting_started/administrators/sublime-ui.png)
 
-#### Saving new images
+### Saving new images
 
 Now we have a useful container that has Sublime Text installed.
 

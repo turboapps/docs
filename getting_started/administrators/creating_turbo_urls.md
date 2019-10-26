@@ -1,4 +1,4 @@
-### Running Applications Using a Shareable URL
+## Running Applications Using a Shareable URL
 
 Turbo allows organization administrators to create a URL for end users to run applications without having to log into the dashboard.
 

@@ -1,4 +1,3 @@
-# {id: "my_topic", title: "My Topic", sections: [{id: "my_section", "title": "My Section", "documents": [{"id": "my_document", "title": "My Document", "files": ["my_file.md"]}]}]}
 ---
 title: Getting Started
 sections:
@@ -113,35 +112,156 @@ sections:
       - Standalone Executables
       - Building from the Command Line
       - MSI
+---
+title: Server
+sections:
+  - title: Overview
+    documents:
+      - Overview
+  - title: Hub Server
+    documents:
+      - Getting Started
+      - Administration
+      - Advanced Topics
+      - Cloud Storage
+      - Azure AD
+  - title: Application Server
+    documents:
+      - Getting Started
+      - App Server Config
+  - title: Legacy Portal Server
+    documents:
+      - Legacy Portal Server
+  - title: Troubleshooting
+    documents:
+      - Troubleshooting
+      - App Server
+      - SSL
+---
+title: VM
+sections:
+  - title: Virtual Machine
+    documents:
+      - Virtual Machine
+      - Folder Variables
+      - Command Line Settings
+  - title: Advanced Topics
+    documents:
+      - DEP Compatibility
+  - title: XML Configuration
+    documents:
+      - XML Configuration
+---
+title: Reference
+sections:
+  - title: Command Line
+    documents:
+      - Command Line Interface
+      - build
+      - commit
+      - config
+      - containers
+      - continue
+      - copyi
+      - cp
+      - diff
+      - export
+      - fork
+      - gc
+      - gci
+      - help
+      - history
+      - images
+      - import
+      - inspect
+      - install
+      - installi
+      - login
+      - logout
+      - logs
+      - netstat
+      - new
+      - ps
+      - pull
+      - push
+      - release
+      - releases
+      - resume
+      - revert
+      - rm
+      - rmi
+      - run
+      - save
+      - search
+      - start
+      - stop
+      - subscribe
+      - subscription
+      - subscriptions
+      - suspend
+      - try
+      - uninstall
+      - uninstalli
+      - unsubscribe
+      - version
+      - vm
+      - vms
+  - title: TurboScript
+    documents:
+      - TurboScript
+      - batch
+      - cmd
+      - copy
+      - disable
+      - echo
+      - enable
+      - env
+      - hosts
+      - import
+      - isolate
+      - layer
+      - meta-cmd
+      - require
+      - requires
+      - route
+      - setworkdir
+      - shellextension
+      - startup
+      - sync
+      - using
+      - var
+      - workdir
+  - title: Turbo Shell
+    documents:
+      - Turbo Shell
+      - commit
+      - push
+  - title: Dependencies
+    documents:
+      - Overview
+  - title: Turbo Client
+    documents:
+      - Turbo Client
+      - Security
+  - title: Turbo Play
+    documents:
+      - Turbo Play
+---
+title: About
+sections:
+  - title: What is Turbo?
+    documents:
+      - What is Turbo?
+  - title: Turbo and App Virtualization
+    documents:
+      - Turbo and App Virtualization
+  - title: Turbo and Docker
+    documents:
+      - Turbo and Docker
+  - title: Contribute to Turbo
+    documents:
+      - Contributing
+  - title: Style Guide
+    documents:
+      - Style Guide
 ...
-#---
-#topic: Server
-#documents:
-#  - title: Overview
-#  - title: Hub Server
-#  - title: Application Server
-#  - title: Legacy Portal Server
-#  - title: Troubleshooting
-#---
-#topic: VM
-#documents:
-#  - title: Virtual Machine
-#  - title: Advanced Topics
-#  - title: XML Configuration
-#---
-#topic: Reference
-#documents:
-#  - title: Command Line
-#  - title: TurboScript
-#  - title: Turbo Shell
-#  - title: Dependencies
-#  - title: Turbo Client
-#  - title: Turbo Play
-#---
-#topic: About
-#documents:
-#  - title: What is Turbo?
-#  - title: Turbo and App Virtualization
-#  - title: Turbo and Docker
-#  - title: Contribute to Turbo
-#  - title: Style Guide

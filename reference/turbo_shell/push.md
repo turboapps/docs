@@ -1,4 +1,4 @@
-### push
+## push
 
 The `push` command pushes last committed image to the hub.
 

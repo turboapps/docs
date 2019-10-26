@@ -1,8 +1,8 @@
-### Servers
+## Servers
 
 Turbo.net supports both desktop and server applications. For the most part, server application images behave in the same way as desktop application images. However, special configuration considerations often arise with server applications.
 
-#### Multiple database server versions
+### Multiple database server versions
 
 Turbo can be used to run database servers such as SQL Server, MySQL, ElasticSearch, MongoDB, and others.
 
@@ -18,7 +18,7 @@ Note that we have used container linking and naming to connect the SSMS manageme
 
 Login using the username `sa` and password `password1` to the database servers `sql1` and `sql2`. You can confirm the two databases are manageable through the client and are two distinct versions.
 
-#### Multiple instances of a single server
+### Multiple instances of a single server
 
 In this example, we’ll use *TCP port mapping*, a special case of network routing, to run multiple instances of the Ghost blogging engine on the same host.
 
@@ -39,7 +39,7 @@ The `tcp://` prefix indicates that the routing rule should apply to TCP traffic.
 
 You can check that three distinct Ghost instances are accessible by browsing to localhost:8080, localhost:8081, and localhost:8082. You can also test what happens if you try to launch instances without applying the routing rules!
 
-#### Factoring a database into a layer
+### Factoring a database into a layer
 
 A useful practice when constructing container architectures is to use layering to factor data from the underlying server application.
 

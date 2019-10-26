@@ -1,4 +1,4 @@
-### Organization Dashboard
+## Organization Dashboard
 To access the dashboard in an administrator mode, you need to sign in to your turbo.net account on the https://turbo.net page. After accessing your personal dashboard, click on the profile icon in the upper right corner and switch to your organization's dashboard:
 
 ![](/docs/getting_started/administrators/dashboards.png)
