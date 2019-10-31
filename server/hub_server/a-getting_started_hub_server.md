@@ -87,7 +87,7 @@ The Turbo Hub Server hub site gives users access to application repositories fro
 
 If the server has an **Authentication Type** that enables anonymous access, users can launch applications without logging in. If the server requires users to log in with a username and password, however, users must provide valid credentials to access the hub and application repositories.
 
-If you are a user and need to log in but do not know your username and password, contact an your Administrator to retrieve your credentials.
+If you are a user and need to log in but do not know your username and password, contact your Administrator to retrieve your credentials.
  
 ##### Signing In and Out via Turbo Launcher
 
