@@ -1,4 +1,4 @@
-### var
+## var
 
 The `var` instruction sets value of a variable.
 

@@ -1,4 +1,4 @@
-### copyi
+## copyi
 
 The `copyi` command copies an image to another repository on your local machine. `cpi` is an alias for this command.
 
@@ -24,6 +24,6 @@ Output image: my-node
 > turbo copyi nodejs/nodejs my-node:1.0
 ```
 
-#### JSON output
+### JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain either an `image` object with information about forked image or an `error` object if command failed.

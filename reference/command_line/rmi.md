@@ -1,4 +1,4 @@
-### rmi
+## rmi
 
 The `rmi` command removes images from the local registry. 
 
@@ -50,6 +50,6 @@ ID            Name                Tag  Created                Size
 Image chocolatey-forked:1.0 was removed
 ```
 
-#### JSON output
+### JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain either an `images` array with information about removed images or an `error` object if command failed.

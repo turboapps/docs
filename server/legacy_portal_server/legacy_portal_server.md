@@ -1,10 +1,10 @@
-### Legacy Portal Server
+## Legacy Portal Server
 
 Turbo Portal Server is an on-premise application delivery solution. In this section you will learn about system requirements and instructions for installing, configuring and running Turbo Portal Server.
 
 **NOTE that Turbo Portal Server has been deprecated in the 2019 version.** It is recommended that you migrate your environment to use Turbo Hub Server and/or Turbo Streaming Server depending on your requirements. 
 
-##### System Requirements
+#### System Requirements
 
 For small to medium size deployments (less than 200 concurrent users), the minimum recommended machine specifications are:
 
@@ -15,11 +15,11 @@ For small to medium size deployments (less than 200 concurrent users), the minim
 
 Larger enterprise deployments may require additional processing power, memory, and disk space. For sizing and technical guidance, contact Turbo at support@turbo.net.
 
-##### Database Requirements
+#### Database Requirements
 
 Turbo Server is installed with an embedded SQL Express database. However, we recommend this database only be used for demonstration or testing purposes. When using Turbo Server in production, we recommend connecting Turbo Server to an external SQL database.
 
-##### Disk Space Requirements
+#### Disk Space Requirements
 
 The initial installation of Turbo Server requires 1.05 GB of free space on your hard drive.
 
@@ -30,7 +30,7 @@ The amount of disk space required varies based on how many applications your ser
 
 Turbo DB uses data deduplication to minimize storage consumption when multiple copies of the same data are stored on the server, so your exact needs may vary based on the content being stored.
 
-##### Setup
+#### Setup
 
 In this section you will learn how to use the Setup Wizard to automatically configure Turbo Server. For details regarding manual configuration of Turbo Server, refer to Manually Configuring Turbo Server.
 
@@ -66,7 +66,7 @@ Complete the following steps to set up Turbo Server:
 
 9. Start using Turbo Server!
 
-##### Licensing
+#### Licensing
 
 The standard Turbo Server license, **Turbo Server Enterprise Edition**, consists of a server license and a custom number of unique or simultaneous end-users or devices. The standard license enables an unlimited number of applications to be hosted on Turbo Server.
 
@@ -80,7 +80,7 @@ The Turbo Server administrator can activate and deactivate users as needed, or a
 
 Turbo offers discounts for qualified educational customers (K-12, university, and trade schools) and non-profit organizations, as well as custom licensing options. For more information about Turbo licensing and pricing, or to purchase your own Turbo Server license, visit http://turbo.net/server/ or contact us at sales@turbo.net.
 
-##### Administration Site
+#### Administration Site
 
 Turbo Server has an administration site interface that enables Turbo Server administrators to manage and control all aspects of a Turbo Server instance, including:
 
@@ -93,11 +93,11 @@ Turbo Server has an administration site interface that enables Turbo Server admi
 
 The Administration Site also provides detailed application usage analytics via pre-configured reports and a full-featured dashboard. The administration site is automatically configured during Turbo Server setup, and is assigned to port 81 by default. For more information about how to administer Turbo Server, refer to Turbo Server Administration.
 
-##### Portal Site
+#### Portal Site
 
 The Turbo Server portal site is users access and stream applications from. After applications are published they are displayed on the Portal Site, giving users one-click access to your entire application library. The Portal Site automatically configures during Turbo Server setup and can be customized via the Administration Site. The Portal Site is assigned to port 80 by default.
 
-###### Logging In
+##### Logging In
 
 If the server has an Authentication Type that enables anonymous access, users can launch applications without logging in. If the server requires users to log in with a username and password, however, users must provide valid credentials to access the portal.
 
@@ -108,7 +108,7 @@ If the Turbo Server has more than one directory service, the directory prefix mu
 - Username: ACME\aaron
 - Password: *******
 
-###### Using the Homepage
+##### Using the Homepage
 
 On the homepage for the Portal Site users see the Turbo Web Desktop, which contains available published applications and (if they are an authenticated user) their synchronized folders. Users can navigate the web desktop through the links on the side panel. Users must install the Turbo Client. For more information refer to Install the Turbo Client.
 
@@ -118,11 +118,11 @@ Turbo Web Desktop contains the following links:
 - Named Categories: In the All Apps section of the desktop, you will see a list of categories: select that category to view applications in the category.
 - Synced Folders: Lists Synchronized folders. Select the folders you want to access. You can download those files.
 
-###### Logging Out
+##### Logging Out
 
 Authenticated users can logout of the Turbo Server Portal Site by selecting Logout in the upper right corner of the webpage.
  
-###### Signing In and Out via Turbo Launcher
+##### Signing In and Out via Turbo Launcher
 
 Users can also log in or out via the Turbo Launcher after it is installed on their local machine. Users can bring up the Turbo Launcher by either going to the System Tray or hitting the keys "Alt + Windows." If the user is not logged in already, a login form will be available. If logged in, the user can click on the arrow in the lower-left corner of the Console and select "Sign Out" or "Exit." 
 
@@ -133,11 +133,11 @@ When specifying the server URL in the login form, use one of the conventions, be
 - Using https (SSL) on the default port (443): https://<server>
 - Using https (SSL) on any other port: https://<server>:<port>
 
-##### Quick Start
+#### Quick Start
 
 Turbo Server includes free, preconfigured applications that are immediately available from the Portal Site after setup is complete. Prior to launching Turbo applications for the first time, end-users must download and install the Turbo Client.
 
-###### Installing the Turbo Client
+##### Installing the Turbo Client
 
 The Turbo Client interacts with the Turbo VM kernel to enable container streaming. The Portal Site automatically prompts users to download the plugin when they select an application.
 
@@ -157,7 +157,7 @@ After the Turbo Client is installed on your device, complete the following steps
 
 **Note:** The Turbo-Sandbox.exe process manages sandboxes of any running containers launched with the plugin. This must run continuously; if that process is closed, all applications launched with the plugin close.
 
-###### Proxy Settings
+##### Proxy Settings
 
 The Turbo Client has limited support for proxy settings. The Plugin uses proxy settings of the local device on which it is installed by default. These proxy settings can need to be changed to enable compatibility with the Turbo Client. End-users running Microsoft Internet Explorer can change proxy settings for the host device directly from within the browser. Users of other browsers must change proxy settings on the host device itself.
 
@@ -168,7 +168,7 @@ Complete the following steps to change system proxy settings on the host device:
 3. Select the Connections tab, then LAN Settings.
 4. Enter the proxy settings specified by your network administrator.
 
-##### Upgrading
+#### Upgrading
 
 The new version of Turbo Server includes a new Turbo Server Console, an updated Portal Site, and many other new features.
 
@@ -184,9 +184,9 @@ After upgrading, the previous Turbo Launcher must also be uninstalled. Applicati
 
 Turbo Server is an application deployment tool that enables you to launch applications instantly from websites, portals and client desktops. Unlike traditional deployment methods, applications streamed from Turbo Server do not require download, installation, rebooting, administrative privileges, or separate setup steps. Applications hosted on Turbo Server launch after less than ten percent of the application is transferred. Turbo Server's speed and efficiency are possible thanks to two technologies: Virtualization and Predictive Streaming.
 
-##### Technology
+#### Technology
 
-###### Turbo Containers
+##### Turbo Containers
 
 Unlike other virtualization solutions that require an entire copy of the host operating system, Turbo's container technology only emulates the features required to run application. Turbo containers have the same performance characteristics as native applications, but without any changes to system infrastructure.
 
@@ -194,7 +194,7 @@ The core of Turbo Virtualization Technology is the Turbo Virtual Machine (VM) ke
 
 Turbo containers interact with a virtualized file system, registry, and process environment contained in the kernel, rather than directly with the host device operating system. Requests are handled internally within the virtualized environment, but can also be redirected or overridden based on your configuration.
 
-###### Turbo Streaming
+##### Turbo Streaming
 
 Turbo's unique predictive streaming technology enables you to launch containers five to twenty times faster than traditional downloadable applications.
 
@@ -202,7 +202,7 @@ Turbo enables you to break down containers into smaller functional and data unit
 
 You can register applications to the local device after transfers complete. Registration moves content to a permanent location on your local device (making it available offline), and creates all application related Start Menu icons, Desktop shortcuts, and file associations.
 
-##### Features
+#### Features
 
 Turbo Server enables you to accomplish the following goals:
 
@@ -218,7 +218,7 @@ Turbo Server enables you to accomplish the following goals:
 
 - Migrate with confidence to Microsoft Windows 8. Turbo enables you to run legacy applications as they stand on newer operating systems, including Microsoft Windows 7 and 8/8.1, without the need to recode, retest, or reinstall.
 
-##### Supported Platforms
+#### Supported Platforms
 
 Turbo Server is compatible with the following platforms:
 
@@ -235,9 +235,9 @@ Turbo Server supports x86 (32-bit) and x64 (64-bit) processor architectures. End
 
 **Note:** Versions of Internet Explorer prior to Internet Explorer 8 are not supported. If you are accessing the Portal Site with a newer version of Internet Explorer, but experiencing problems, be sure to disable compatibility mode. This feature is enabled automatically for intranet sites and serves to emulate Internet Explorer 7 which is not supported by the Portal Site.
 
-#### Basic Walkthrough
+### Basic Walkthrough
 
-##### Create a Virtual Application
+#### Create a Virtual Application
 
 Adding an Application to Turbo Server requires you to create a virtual version of the Application using the Turbo Studio packaging tool.
 
@@ -249,7 +249,7 @@ To create a Turbo Virtual Machine (SVM) for your Application using the Turbo Stu
 
 The evaluation version of Turbo Studio creates time trial containers. To create containers that do not expire, obtain a retail license for the Turbo Studio.
 
-##### Add the Application to Turbo Server
+#### Add the Application to Turbo Server
 
 After the **SVM** is created add the Application to Turbo Server. For more information on managing Applications and Application versions in Turbo Server, refer to Managing Applications. Complete the following steps to add a new Application to Turbo Server:
 
@@ -299,7 +299,7 @@ After the Application is added to Turbo Server, create a specific Application ve
 
 4. Select **Save**. The **SVM** file will upload to Turbo Server. Depending on the size of the Application this can take several minutes.
 
-##### Optimize the Application Version (Optional)
+#### Optimize the Application Version (Optional)
 
 Optimizing an Application version typically results in a five to twenty times faster launch. Optimization determines the best order for bytes to be transferred. Turbo recommends optimizing all Application versions over ten megabytes.
 
@@ -327,7 +327,7 @@ Complete the following steps to optimize an Application version:
 
 To add additional profiles to the model, simply navigate back to the **Optimize** page, and click the **Profile Application** link. Any new profiles that are taken will show up in the **Profiles** section as *Unused*. Clicking the **Update Model** link will apply these profiles to the model.
 
-##### Publish the Application
+#### Publish the Application
 
 Turbo Server enables administrators to test Application versions prior to publishing. Complete the following to test the Application version:
 
@@ -343,7 +343,7 @@ Turbo Server enables administrators to test Application versions prior to publis
 
 6. To make the Application visible on the Portal Site, publish the Application version by selecting the **Published** box on the Application version page, then **Save**.
 
-#### Administration
+### Administration
 
 The Turbo Server Administration Site enables you to manage and control all aspects of your Turbo Server. The default location of the Administration Site is: http://localhost:81, and consists of the following links:
 
@@ -359,15 +359,15 @@ The Turbo Server Administration Site enables you to manage and control all aspec
 
 - **Admin**: This page contains a summary of your Turbo Server license, and information and options for configuring Turbo Server. For more information refer to Configuration and Customization.
 
-##### Administrator Dashboard
+#### Administrator Dashboard
 
 The Turbo Server Dashboard provides an overview of the Turbo Server over a given time period. You can adjust this time period using **Date Range Control**. The dashboard is split into five sections: Top Apps, Volume, Key Statistics, Usage Breakdown, and Recent Activity. You can locate the dashboard by selecting the **Home** link from the Administration Site (it is also the default page for the Administration Site).
 
-###### Volume
+##### Volume
 
 The Volume graph charts the total number of launches for your Turbo Server over a specific date range. These are broken down into one day periods on the horizontal axis. Launches for unpublished application versions are not included.
 
-###### Key Statistics
+##### Key Statistics
 
 Key Statistics displays the following statistics for a selected date range:
 
@@ -379,7 +379,7 @@ Key Statistics displays the following statistics for a selected date range:
 
 - **Devices**: The number of unique devices used to launch an application.
 
-###### Usage Breakdown
+##### Usage Breakdown
 
 Usage Breakdown provides detailed statistics for the top ten application versions over a selected date range, ranked by total launches, including:
 
@@ -389,7 +389,7 @@ Usage Breakdown provides detailed statistics for the top ten application version
 
 - **Devices**: Number of unique devices used to launch that application version, followed by the number of unique devices used to launch that application version as a percentage of the total devices used.
 
-###### Recent Activity
+##### Recent Activity
 
 Recent Activity provides a log of the most recent application launches, including the following:
 
@@ -401,15 +401,15 @@ Recent Activity provides a log of the most recent application launches, includin
 
 - **Ended**: The date and time the user closed the application.
 
-##### Manage Applications
+#### Manage Applications
 
 All applications on Turbo Server are managed from the **Applications** page of the Administration Site. Each new application is added to Turbo Server in the form of a Turbo Virtual Machine, or SVM. For more information about SVMs and Turbo Virtualization Technology refer to Turbo Server Technology.
 
-###### Applications and Application Versions
+##### Applications and Application Versions
 
 Turbo Server manages Turbo Virtual Machines (**SVMs**) using two entities: **applications** and **application versions**. Each application can contain one or more application versions. For example, Firefox can have child application versions for Firefox 3, Firefox 3.5 and Firefox 4. Each application version corresponds to a specific **SVM**.
 
-###### Adding an Application
+##### Adding an Application
 
 Complete the following steps to add a new application to Turbo Server:
 
@@ -445,11 +445,11 @@ Complete the following steps to add a new application to Turbo Server:
 
 6. You can change the information on an application by selecting the display name of the application you wish to edit on the **Applications** page.
 
-###### Managing an Application
+##### Managing an Application
 
 You can manage an existing application by selecting the display name on the **Applications** page. This page enables you to revise the display name, summary, description, swatch, permissions, and categories for an application. This page also displays and links all versions that exist for the application. To delete an application, select the red X located to the right of the application on the Applications page.
 
-###### Adding an Application Version
+##### Adding an Application Version
 
 A new application version must be added to an existing application. During this process you are required to upload an **SVM**; for information about how to create **SVMs** refer to Creating Applications.
 
@@ -481,7 +481,7 @@ Complete the following steps to add an application version to an existing applic
 
 6. This application version now appears next to the application on the **Applications** page. The application version is not visible to users accessing the Portal Site until published. You can change the information on an application version by selecting the version number on the **Applications** page, or by selecting the version number in the details page for the parent application.
 
-###### Managing an Application Version
+##### Managing an Application Version
 
 Application versions are managed by selecting the application version link located on the **Applications** page. This page enables you to revise the summary, description, swatch and Turbo VM file for an application version.
 
@@ -507,7 +507,7 @@ This page also contains the following sections:
 
 To delete an application version, select the red **X** located to the right of the application version in the details page of the parent application. You can also delete the application by selecting **Delete** at the bottom of the details page for the application version.
 
-###### Optimizing an Application Version (Optional)
+##### Optimizing an Application Version (Optional)
 
 Optimizing an application version enables you to launch five to twenty times faster than an application version without optimization. Optimization determines the best order for an application version's bytes to be transferred. Turbo recommends optimizing all application versions over ten megabytes.
 
@@ -533,7 +533,7 @@ After the Model Status changes to **Requested** the model can take a few minutes
 
 **Note**: In order for an application to be profiled, the entire SVM package must be cached on the system where the profile is being created. This is not a concern for applications that do not have a streaming model because the entire SVM will be downloaded and cached. However, for applications that have a streaming model, they will launch before the full SVM is cached. In this case, the application must be run long enough for the full SVM to be downloaded and cached in the background. At that point, the application should be closed and a new profile can be created.
 
-###### Managing an Entry Point
+##### Managing an Entry Point
 
 The initial set of entry points corresponds the the **Shortcuts** specified in the application configuration before building the **SVM** package. Although specific entry points available to an application are determined when creating an **SVM** file, the appearance of the entry point can be managed in Turbo Server.
 
@@ -559,11 +559,11 @@ Complete the following steps to manage an entry point:
 
 You can expose or hide an entry point by selecting the check box under the **Enabled** column of the **Entry Points** section, then saving the application version.
 
-##### Managing Application Categories
+#### Managing Application Categories
 
 Categories control the display and segregation of applications on the Portal Site. All categories are displayed on the left navigation bar of the Portal Site.
 
-###### Adding a Category
+##### Adding a Category
 
 Complete the following steps to add a new category:
 
@@ -581,11 +581,11 @@ Complete the following steps to add a new category:
 
 4. It may take up to ten (10) minutes for category updates to be visible on the Portal Site.
 
-###### Managing Categories
+##### Managing Categories
 
 Categories can be managed at the bottom of the **Apps** page. To revise the name or description of a category, select the category name in the listing. To delete a category select the **Delete** link in the category listing. Deleting a category does not delete or unpublish any applications associated with that category.
 
-##### Manage Users
+#### Manage Users
 
 Turbo Server users are tracked and managed via the Administration Site. Users are entered manually or via automated import from LDAP or Active Directory directory services. Users can be viewed and managed on the **Users** page. You can also place users into groups to assign application permissions to multiple users at once. The **Users** page contains a list of existing users and user groups. From this page you can view user directories, status, recent activity and available actions. Displayed above the user list is the total number of licenses available and the number of licenses currently in use.
 
@@ -607,7 +607,7 @@ To manage a user, select the user name from the list on the **Users** page. The 
 
 - **Recent Activity**: A log of recent application usage.
 
-###### Managing User Groups
+##### Managing User Groups
 
 To create a user group select **Add Group**.  The **Add User Group** screen displays. This screen contains the following fields:
 
@@ -621,7 +621,7 @@ To create a user group select **Add Group**.  The **Add User Group** screen disp
 
 Turbo Server automatically creates an Anonymous Users group. Users discovered when the authentication mode is set to Anonymous are added to the Anonymous Users group. You can assign special permissions to these users by selecting **Manage Anonymous Users** at the top of the **Users** page.
 
-###### Managing User Permissions
+##### Managing User Permissions
 
 **User Permissions** enable you to allow or block users from running certain applications. These rules override default permissions. For example, you can block Firefox by default but allow user John Doe to launch the application. Turbo Server also supports nested groups: permissions for one group apply to users and groups within that group.
 
@@ -647,7 +647,7 @@ To **Delete** existing permissions select the red **X** next to existing permiss
 
 Permissions for users and groups prioritize blocks over permits. If a user is blocked anywhere in their group hierarchy, he is blocked even if you permit him specifically.
 
-###### Managing User Licenses
+##### Managing User Licenses
 
 User Licenses record how many unique users are using your applications. Licenses are only used for applications that have their **Licensing** set to a number of Unique Users. In the **User Detail** page, you can see a list of licenses that the User obtained. You can delete these licenses so other users can take a license and be one of the unique users allowed to use the application. Complete the following steps to delete a user license:
 
@@ -657,7 +657,7 @@ User Licenses record how many unique users are using your applications. Licenses
 
 To delete all user licenses for an application, navigate to the application page, then update the licensing settings to no longer use a unique number of users.
 
-###### Adding an External Directory Service
+##### Adding an External Directory Service
 
 Using Turbo Server you can add an external directory service, such as Active Directory. This enables you to manage users with the touch of a button and easily import existing users and groups into Turbo Server. Complete the following steps to add an external directory service:
 
@@ -804,11 +804,11 @@ You may have a specific subset of existing users that will use Turbo Server, in 
 
 When you are satisfied with your settings, select **Save**. At this point, the users and groups in your directory service are not synchronized with Turbo Server. From the **Manage Directory Services** page, click the synchronization button and verify there are positive counts for users and/or groups when it has finished. For large directories this can take several seconds.
 
-##### Manage Servers
+#### Manage Servers
 
 Depending on the scope of your Turbo Server implementation you can add additional servers to distribute the workload and improve performance. If you are deploying applications from an external site on another server, you must add that server to Turbo Server.
 
-###### Adding a Server
+##### Adding a Server
 
 Complete the following steps to add a new server:
 
@@ -834,13 +834,13 @@ Complete the following steps to add a new server:
 
 4. Select **Save**.
 
-###### Managing Servers
+##### Managing Servers
 
 Servers are listed on the **Servers** page. Select the server name in the listing to revise the name, web address, or admin site address. You can add or edit the location of the SSL certificate files on the manager server. For example, *c:\ssl\certificate.crt* and *c:\ssl\certificate.key*.
 
 The file path cannot be revised; in order to specify a different file path, you must delete the server and add a new one with the correct file path. To delete a server, select the **Delete** icon in the server list. You cannot delete the server named **Primary**.
 
-###### Configuring a Content Server
+##### Configuring a Content Server
 
 Application files are hosted by the Manager Server and synchronized to any Content Servers that have been created. This synchronization is handled by the Turbo service running on the Management Server which runs under the Local System account by default. In order for the synchronization process to work, the Management Server machine account must be given access to the specified folder on the Content Server machine. Below are the steps to accomplish this:
 
@@ -896,17 +896,17 @@ Application files are hosted by the Manager Server and synchronized to any Conte
 
 12. Click **OK**
 
-##### Reports
+#### Reports
 
 The **Reports** page provides pre-configured, detailed analytic reports, broken-down into categories. Selecting a report takes you to the **Report** page, which consists of a **Date Range** control and the **Report Viewer**. Use the **Date Range** control to adjust the time period for the selected report.
 
-###### Administration Reports
+##### Administration Reports
 
 - **Session Logs Report**: Provides a detailed record of all session events, including launching or stopping an application.
 
 - **Alert Report**: Presents a record of all Turbo Server alerts. Common alerts include errors, creation of applications, application versions, categories.
 
-###### Application Reports
+##### Application Reports
 
 - **App Inventory Report**: Provides detailed information for each application in your Turbo Server.
 
@@ -914,7 +914,7 @@ The **Reports** page provides pre-configured, detailed analytic reports, broken-
 
 - **App Usage Report**: Provides a detailed breakdown and comparison of the usage for each application.
 
-###### User Reports
+##### User Reports
 
 - **User App Usage Report**: Provides a record of all application usage, broken-down by user.
 
@@ -922,7 +922,7 @@ The **Reports** page provides pre-configured, detailed analytic reports, broken-
 
 - **User Session Report**: Provides a detailed record of each application session, broken-down by user.
 
-###### Report Viewer
+##### Report Viewer
 
 Use the toolbar located at the top of the **Report Viewer** to perform the following tasks:
 
@@ -939,7 +939,7 @@ Use the toolbar located at the top of the **Report Viewer** to perform the follo
 - Refresh the report.
 - Print the report.
 
-##### Configuration and Customization
+#### Configuration and Customization
 
 The **Admin** page provides options to configure and customize Turbo Server. The page is divided into the following sections:
 
@@ -955,7 +955,7 @@ The **Admin** page provides options to configure and customize Turbo Server. The
 
 - **Authentication Type**:  Authentication type that users must supply to access applications. Folder sync and app sync are not available to anonymous users.
 
-###### Synchronization
+##### Synchronization
 
 Synchronization settings are found by selecting **Sync Settings** on the **Administrative Settings** page. There are two options which are available to configure:
 
@@ -963,15 +963,15 @@ Synchronization settings are found by selecting **Sync Settings** on the **Admin
 
 - **Quota**: the amount of sync data users can keep on the server. The default is 100MB, but can be any value up to 2,000,000,000MB. When the quota is reached the user is notified and they can longer upload files to the server.
 
-#### Manage Applications
+### Manage Applications
 
 In this section you'll learn how to manage containers and deploy them with Turbo Server.
 
-##### Create Applications
+#### Create Applications
 
 In this section you will learn how to create Turbo applications that can deploy from Turbo Server. Turbo applications are created from existing applications by converting them into **SVM** file format.
 
-###### Virtualize Application with Turbo Studio
+##### Virtualize Application with Turbo Studio
 
 To be hosted on Turbo Server applications must be converted into Turbo containers (**SVM** files) using the Turbo Studio. The Turbo Studio monitors the installation of your application, analyzes the installation, and constructs a virtual package which you can upload to Turbo Server. Experienced users can convert most applications for Turbo in minutes.
 
@@ -979,7 +979,7 @@ To create an **SVM** using Turbo Studio, Project Type must be set to **Component
 
 Refer to the Turbo Studio help documentation for detailed instructions on how to create a Turbo application.
 
-##### Export Application from Turbo.net Hub
+#### Export Application from Turbo.net Hub
 
 Turbo.net Hub provides preconfigured images that can be exported to **SVM** files for use in your Turbo Server using the Turbo CLI.
 
@@ -996,17 +996,17 @@ Using image firefox:61.0.2 from local
 Output image: c:\images\firefox.svm
 ```
 
-##### Publish Applications
+#### Publish Applications
 
 In this section you will learn about deploying applications to users with Turbo Server.
 
-###### Publish to the Turbo Server Portal
+##### Publish to the Turbo Server Portal
 
 The Turbo Server Portal Site is the default mechanism for delivering streaming applications to your users. The Portal Site automatically configures during Turbo Server setup and can be customized via the Administration Site.The default location of the site is: http://localhost/.
 
 To make an application visible on the Portal Site, publish an application version on the Administration Site. For more information refer to Managing Applications.
 
-###### Publish to an External Site
+##### Publish to an External Site
 
 Turbo Server supports delivery from custom external websites with additional license certification. Standard Turbo Server licenses allow two sites by default: the Administration and Portal Sites. You can upgrade license certificates to enable application delivery from external sites: contact your Turbo sales representative at sales@turbo.net.
 
@@ -1112,7 +1112,7 @@ This section outlines the possible parameters for the Turbo Feed.
 </table>
 <br>
 
-###### Publish Using Third-Party Software
+##### Publish Using Third-Party Software
 
 You can integrate Turbo Server third-party web collaboration tools and portal software, such as:
 
@@ -1124,11 +1124,11 @@ You can integrate Turbo Server third-party web collaboration tools and portal so
 
 Publishing an application to a third-party web portal requires the same license certificate upgrade required for publishing to a custom external site. For more information about license upgrades needed to publish on an external site and how to utilize Turbo embed code refer to Publishing to an External Site. 
 
-#### Advanced Topics
+### Advanced Topics
 
 This section describes advanced topics you may encounter when implementing Turbo Server.
 
-##### Running Applications when Offline
+#### Running Applications when Offline
 
 Applications can be enabled to be run offline through the **Desktop Registration** setting in an application's settings page on the Turbo Server Administrator portal. To enable **Desktop Registration**, see the instructions at Manage Applications.
 
@@ -1162,7 +1162,7 @@ To check that the application has been fully cached:
 
 The context menu should show Available Offline. If this is not the case, reopen the application or continue to leave it open.
 
-##### Manually Configure Turbo Server
+#### Manually Configure Turbo Server
 
 Turbo Server enables you to manually configure settings during setup. Using this process you can control the database connection strings used by Turbo Server and the domain names for the Administration and Portal Sites. Turbo Server supports the use of any connection string format used by Microsoft SQL Server.
 
@@ -1237,13 +1237,13 @@ Select **Enter** to submit the command and choose **Y** to proceed.
 
 Fully-qualified domain names can be specified on the **Servers** page of the Administration Site. For more information about modifying servers refer to Managing Servers.
 
-##### Configure Turbo Server Security
+#### Configure Turbo Server Security
 
 This section explains how to configure Turbo Server's security settings on common Microsoft Windows platforms. These settings restrict external connections to the Administration Site, enable external connections to the Portal Site and enable the Turbo JavaScript API for use with external web portals.
 
 **Note**: To enable remote administration for external connections apply the instructions below.
 
-###### Microsoft Windows Vista
+##### Microsoft Windows Vista
 
 To configure Turbo Server security on Microsoft Windows Vista, you must enable Microsoft Windows Firewall. The default settings of Microsoft Windows Firewall block all external connections to the Administration Site (assigned to port 81 by default) and Portal Site (assigned to port 80 by default). After Microsoft Windows Firewall is enabled, you must add exceptions to the default settings to provide licensed users access the Portal Site and the Turbo JavaScript API.
 
@@ -1259,7 +1259,7 @@ Complete the following steps to enable Microsoft Windows Firewall with licensed 
 
 5. Assign a name to the exception and set **Port** to the Portal Site port assigned during installation (the default is port 80).
 
-###### Microsoft Windows Server 2008 and Microsoft Windows 7
+##### Microsoft Windows Server 2008 and Microsoft Windows 7
 
 To secure the Turbo Server Administration Site on Microsoft Windows Server 2008 and Microsoft Windows 7, enable Microsoft Windows Firewall with Advanced Security. The default settings of Microsoft Windows Firewall with Advanced Security block all external connections to the Administration Site (assigned to port 81 by default) and the Portal Site (assigned to port 80 by default). After Microsoft Windows Firewall with Advanced Security is enabled, add exceptions to the default settings to provide licensed users with access the Portal Site and the Turbo JavaScript API.
 
@@ -1281,11 +1281,11 @@ Complete the following steps to enable Microsoft Windows Firewall with Advanced 
 
 8. Add a name and description.
 
-##### Manage Turbo Server from the Command Line
+#### Manage Turbo Server from the Command Line
 
 `Server.exe`, located in the installation directory of Turbo Server (usually C:\Program Files\Turbo Server), can be used as a command-line tool by specifying the admin option. This tool enables you to add and update applications to the Turbo Server library from the command line, and add large applications (over 2GB) to the Turbo Server. The Turbo Server administrator portal does not support uploading SVM files over 2GB.
 
-###### Requirements for Using Server.exe
+##### Requirements for Using Server.exe
 
 - Run the command window as Administrator (right-click Run as Administrator).
 
@@ -1299,7 +1299,7 @@ Complete the following steps to enable Microsoft Windows Firewall with Advanced 
 
 - When working in the command window place quotation marks around paths that include a space.
 
-###### Server.exe Command Format
+##### Server.exe Command Format
 
 `Server.exe` can be used with the following arguments to manage provisioning, uninstall, upgrade, and service recycling:
 
@@ -1351,7 +1351,7 @@ Complete the following steps to enable Microsoft Windows Firewall with Advanced 
 </table>
 <br>
 
-###### Server.exe admin Command Format
+##### Server.exe admin Command Format
 
 Server.exe can also be used to create and update applications, as well as to manage other server settings. This is done by specifying any of the given topics after the Server.exe admin command.
 
@@ -2158,7 +2158,7 @@ Examples:
 
 	Server.exe admin /user-group 2 clear
 
-##### Turbo JavaScript API
+#### Turbo JavaScript API
 
 When publishing applications to external sites, Turbo provides a JavaScript API to enable control over the Turbo Client installation, launching applications and deploying applications to the desktop. The following table lists and describes the method calls available in the JavaScript API.
 
@@ -2228,7 +2228,7 @@ Use the following code to reference the Turbo JavaScript API:
 		SpoonEntry.IsPluginInstalled(function(isInstalled){if(!isInstalled) SpoonEntry.RedirectToInstaller()})
 	</script>
 	
-###### Turbo Feed
+##### Turbo Feed
 
 The Turbo Feed provides a separate JavaScript API to embed a button within a webpage. This API enables user control over which application to launch and  button appearance. The following table lists and describes the variables that define the Turbo Feed:
 
@@ -2334,7 +2334,7 @@ After the Turbo Variables are set, use the following code to embed the Turbo Fee
 	
 **Note**: Embedding a Turbo Feed is only available if the server Authentication Type is set to "Anonymous" (see Configuration and Customization).
 
-##### Using Installed and Registered containers Together
+#### Using Installed and Registered containers Together
 
 When an application is added to the Start Menu, it should function as if it were natively installed. If it is not working, troubleshooting steps should be taken, such as verifying file associations in the registry.
 
@@ -2364,7 +2364,7 @@ For example: If you are using local version of Microsoft Office Outlook and a vi
 		
 		**Note**: The value reflects what is called a Program ID. You can find the correct Program ID in the configuration file by searching for the section labeled ProgID.
 		
-##### Turbo Server Authorization Web Service
+#### Turbo Server Authorization Web Service
 
 When integrating with existing permissions systems, Turbo provides a web service for granting and revoking access to applications. The web service is available as a REST API with the following capabilities:
 
@@ -2434,7 +2434,7 @@ When integrating with existing permissions systems, Turbo provides a web service
 
 **Note**: [CATEGORY] refers to the Slug field in the "Category Details" page on the Turbo Server administrator portal. [APPLICATION] refers to the Slug field on "Application Details" page on the Turbo Server administrator portal.
 
-##### Migrating Sync Data When Changing the Storage Path
+#### Migrating Sync Data When Changing the Storage Path
 
 When specifying a new storage path for sync data, the existing data is not automatically migrated.
 
@@ -2456,7 +2456,7 @@ In order to migrate existing data, follow the steps, below:
 
 5. Restart Turbo Server. This can be done by opening a Windows Command Prompt as an administrator and entering the command **net start turbo**
 
-##### Testing HTTPS (SSL) with a Self-Signed Certificate
+#### Testing HTTPS (SSL) with a Self-Signed Certificate
 
 Follow these steps to test Turbo Server with SSL enabled using a self-signed certificate.
 
@@ -2530,11 +2530,11 @@ An example case of expected Command Prompt printouts is included, below:
 
 	Certificate was added to keystore
 	
-#### Turbo Client and Console
+### Turbo Client and Console
 
 In the following pages you will learn about how to use Turbo Client and the Turbo Launcher.
 
-##### Install the Plugin
+#### Install the Plugin
 
 End-users must download and install the Turbo Client prior to launching Turbo applications for the first time.
 
@@ -2550,7 +2550,7 @@ After the Turbo Client is installed complete the following steps to launch an ap
 
 The Turbo Client will continue to run in the background to optimize the launch of Turbo applications. The Turbo-Sandbox.exe process manages the sandboxes of any running virtual applications launched with the plugin. If that process closes, all Turbo applications will also close.
 
-###### Command line flags
+##### Command line flags
 
 When installing the Turbo Client for a managed environment, there are command line flags that may be useful.
 
@@ -2583,7 +2583,7 @@ When installing the Turbo Client for a managed environment, there are command li
       </tr>
 </table>
 
-###### Proxy Settings
+##### Proxy Settings
 
 The Turbo Client uses the proxy settings of the local device by default. End-users using Microsoft Internet Explorer can change proxy settings from within the browser. Users of other browsers must change proxy settings on the host device itself.
 
@@ -2597,9 +2597,9 @@ Complete the following steps to change system proxy settings on the host device:
 
 4. Enter the proxy settings specified by your network administrator.
 
-##### Using the Turbo Launcher
+#### Using the Turbo Launcher
 
-###### The Turbo Launcher 
+##### The Turbo Launcher 
 
 The Turbo Launcher is what end-users see when they select the Turbo icon from the system tray. From here users can log in or out of accounts, register applications to the desktop, synchronize files and folders across desktops, add credit card information, and shut-down the plugin. Note the following Turbo Launcher features:
 
@@ -2619,7 +2619,7 @@ The Turbo Launcher is what end-users see when they select the Turbo icon from th
 
 - Connecting the local device enables it to be seen by Turbo Launchers on other machines signed in to the same Turbo account. Disconnecting it removes it from view, although files are still uploaded to the synchronization account's server.
 
-###### Console Overview
+##### Console Overview
 
 **Status**
 
@@ -2637,9 +2637,9 @@ Clicking on any of the **Documents**, **Desktop**, **Music**, **Pictures** or **
 
 **Note**: When viewing the files and folders connected via the Turbo Launcher, the browser's Internet Security settings can effect what is displayed on the web desktop. More restrictive settings can prevent files and folders from displaying and synchronizing.
 
-##### Advanced Plugin Topics
+#### Advanced Plugin Topics
 
-###### Install location
+##### Install location
 
 If the Turbo Client was installed for all users, the install location is in one of the following locations.
 
@@ -2649,7 +2649,7 @@ If the Turbo Client was installed for all users, the install location is in one 
 
 If the plugin is installed for a single user profile, the install location is in the following locations: **C:\Users\<profile>\AppData\Local\Turbo**
 
-###### Command line flags
+##### Command line flags
 
 The Turbo Client installs an application called Turbo Sandbox Manager that runs on startup. This application can be found in the install directory of the Turbo Client. There is a command line interface for this application.
 
@@ -2706,7 +2706,7 @@ The Turbo Client installs an application called Turbo Sandbox Manager that runs 
       </tr>
 </table>
 
-###### XLaunch
+##### XLaunch
 
 XLaunch is an internal application used to execute virtual applications that have been registered to the desktop by SpoonReg or through the Turbo Sync Console.
 
@@ -2779,7 +2779,7 @@ XLaunch is an internal application used to execute virtual applications that hav
       </tr>
 </table>
 
-###### XClient file
+##### XClient file
 
 The XClient file is an XML file that provides information about applications that are registered to the user's machine. Registering and applications can be done using the SpoonReg command line tool (Register Virtual Applications in the Windows Shell), through the Turbo Launcher by clicking "Add to Start Menu" (Using the Turbo Launcher), or through the Turbo JavaScript API.
 
@@ -2856,11 +2856,11 @@ The XClient file is an XML file that provides information about applications tha
       </tr>
 </table>
 
-#### Troubleshooting
+### Troubleshooting
 
 This section provides information to help troubleshoot common issues you might encounter while using Turbo Server.
 
-##### Common Issues
+#### Common Issues
 
 The following table lists common issues/questions and their solutions:
 
@@ -2972,11 +2972,11 @@ The following table lists common issues/questions and their solutions:
 	  
 </table>
 
-##### Enable Diagnostic Mode
+#### Enable Diagnostic Mode
 
 Enabling diagnostic mode generates debug output logs. These can be used to help the Turbo support staff diagnose and debug issues.
 
-###### Turbo Client
+##### Turbo Client
 
 When troubleshooting an issue related to launching applications from the web, Turbo recommends enabling diagnostic mode for the Turbo Client. Complete the following steps to enable diagnostic mode and capture debug output logs for the Turbo Client:
 
@@ -2990,7 +2990,7 @@ When troubleshooting an issue related to launching applications from the web, Tu
 
 5. When the application is launched again with Turbo, the DbgView Output displays debugging logs.
 
-###### Turbo Server
+##### Turbo Server
 
 When troubleshooting an issue related to the general administration of Turbo Server, enable diagnostic mode for Turbo Server. Complete the following steps to enable diagnostic mode for Turbo Server:
 
@@ -3015,7 +3015,7 @@ When troubleshooting an issue related to the general administration of Turbo Ser
 
 6. Upon restarting Turbo Server (with the previous command), debug logs are written to a text file located at **C:\Program Files\Turbo Server**. This log file is assigned a name based on the date and time when Turbo Server restarted. A new log file is created on subsequent restarts of Turbo Server.
 
-##### Locating Log Files
+#### Locating Log Files
 
 There are several types of logs available for Turbo Server, including logs for the installation process, Apache, and SQL Server. The log file locations are dependent on the install location of Turbo Server. The default location is "C:\Program Files\Turbo Server".
 
@@ -3040,7 +3040,7 @@ There are several types of logs available for Turbo Server, including logs for t
 
 - __Install Directory_\Sandbox\MODIFIED\@PROGRAMFILESX86@\Apache Software Foundation\Apache2.2\logs\error.log_
 
-##### Starting and Stopping the Turbo Server Service
+#### Starting and Stopping the Turbo Server Service
 
 Oftentimes, troubleshooting and fixing problems in Turbo Server requires the Turbo Server service be restarted.
 
@@ -3070,7 +3070,7 @@ There are currently two ways of doing this, through either the Control Panel or 
 		The Turbo Server service is starting.
 		The Turbo Server service was started successfully.
 		
-##### Windows Event Viewer
+#### Windows Event Viewer
 
 The Windows Event Viewer is another useful source of information. If there is an issue starting the Windows service for Turbo Server there may be information reported in the Window Event Viewer to help diagnose the problem.
 

@@ -1,4 +1,4 @@
-### layer
+## layer
 
 The `layer` instruction creates a new container and sets the base image(s) for that container. 
 

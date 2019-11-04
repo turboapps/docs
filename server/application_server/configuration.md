@@ -1,4 +1,4 @@
-### Configuration
+## Configuration
 
 The table below describes the registry settings to configure the application server:
 

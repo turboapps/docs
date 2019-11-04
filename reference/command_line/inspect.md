@@ -1,4 +1,4 @@
-### inspect
+## inspect
 
 The `inspect` command displays contents of the image.
 
@@ -16,7 +16,7 @@ Usage: turbo inspect <options> <image>
                                p, dns, ports, env
 ```
 
-#### Examples:
+### Examples:
 
 ```
 # Show all details about the image
@@ -29,6 +29,6 @@ Usage: turbo inspect <options> <image>
 > turbo inspect --exclude=files,registry my-image
 ```
 
-#### JSON output
+### JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain either an `inspect` object with all available information about image or an `error` object if command failed.

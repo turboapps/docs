@@ -1,4 +1,4 @@
-### batch
+## batch
 
 The `batch` instruction is used for joining multiple commands of the same type in TurboScript.
 
@@ -13,7 +13,7 @@ If `<command>` is `cmd` or empty then all following indented lines will be put i
 
 The first non-indented line terminates the batch section and resumes normal command processing.
 
-#### Example
+### Example
 
 You can use the batch instruction to execute a series of commands that share their state.
 

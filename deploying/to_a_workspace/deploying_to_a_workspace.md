@@ -1,4 +1,3 @@
-
 ## To a Workspace
 
 Turbo Workspaces allow organizations to publish applications to users from a central portal. Applications can be run from the cloud or on users' own devices.

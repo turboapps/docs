@@ -1,10 +1,10 @@
-### Using Turbo Citrix Scripts
+## Using Turbo Citrix Scripts
 
 Turbo containers can also be deployed to XenApp using powershell helper scripts to automate the deployment.
 
 ![](/docs/deploying/citrix/scripts1.png)
 
-#### XenApp 7
+### XenApp 7
 
 For XenApp 7, use the **turbocitrix/xa7-subscribe** container image to add turbo applications to your XenApp server and publish them automatically.
 
@@ -57,7 +57,7 @@ After those easy commands, we have applications deployed to our XenApp farm!
 
 Go to [Subscribe for XenApp7](https://turbo.net/hub/turbocitrix/xa7-subscribe) for more information and full documentation of the script parameters.
 
-#### XenApp 6.5
+### XenApp 6.5
 
 For XenApp 6.5, use the **turbocitrix/xa6-subscribe** container image to add turbo applications to your XenApp server and publish them automatically.
 

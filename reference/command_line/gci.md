@@ -1,4 +1,4 @@
-### gci
+## gci
 
 The `gci` command garbage collects unreferenced images.
 

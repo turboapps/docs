@@ -1,4 +1,4 @@
-### Hub Server Administration
+## Hub Server Administration
 
 The Turbo Hub Server Administration Site enables you to manage and control all aspects of your Turbo Hub Server. 
 
@@ -16,17 +16,17 @@ The default location of the Administration Site is: http://localhost:80/admin, a
 
 - **General**: This page contains a summary of your Turbo Hub Server license, and information and options for configuring Turbo Hub Server. For more information refer to [Configuration and Customization](/docs/server/hub-server#hub-server-administration-configuration-and-customization).
 
-#### Managing Hub
+### Managing Hub
 
 ![](/docs/server/hub_server/admin-hub.png)
 
 All application repositories on Turbo Hub Server are managed from the **Hub** page of the Administration Site. 
 
-##### Application Repositories
+#### Application Repositories
 
 Each new application repository is added to Turbo Hub Server in the form of a Turbo container image, or SVM, which are pushed to the hub using the Turbo Client command line tools.  For more information about SVMs and Turbo Virtualization Technology refer to [Turbo Server Technology](/docs/server/overview#technology).
 
-##### Adding a Container Image
+#### Adding a Container Image
 
 ![](/docs/server/hub_server/admin-hub-push-cli.png)
 
@@ -63,7 +63,7 @@ You will now see your test image in your hub list in the administration site. Th
 
 **NOTE:** If you do not specify a namespace in the image name (ex, "test" in "test/notepad") then the image will be pushed to the user's private namespace. This image will only be accessible by the user who pushed it and it will not show in the hub list on the administration site.
 
-##### Troubleshooting
+#### Troubleshooting
 
 The push command is denied with following error message:
 
@@ -76,13 +76,13 @@ The current logged in user may not be an administrator of the Hub server. Add th
 
 **NOTE:** If you add the user to the administrators group after already attempting to push an image to the Hub server, you may have to wait up to 5 minutes for the prermissions to propagate to the Hub server. Either switch to an API key based login, or restart the Hub server process and try again.
 
-##### Managing Repositories
+#### Managing Repositories
 
 ![](/docs/server/hub_server/admin-repos-edit.png)
 
 On the repository edit page, a repository display name can be modified. This shows up in the hub administration page list. The repository ID field cannot be modified and is assigned when the first container image is pushed to the hub. The **versions** list shows all available images that are available for this repository. They can be referenced by their tag or their ID (ex, "mozilla/firefox:64.0" or "mozilla/firefox#44397e23bf46a08a8a567ba13b2c215668d451c9dde41b030706779dc977cc02"). Accessing a repository without a tag or ID will use the latest available image (ex, "mozilla/firefox"). Note that any repository updates may take up to 24hrs to be automatically retrieved by the Turbo Client.
 
-##### Managing Repository Federation
+#### Managing Repository Federation
 
 ![](/docs/server/hub_server/admin-federated-repos.png)
 
@@ -96,7 +96,7 @@ When first using Federation, you must configure the API key that is used to acce
 
 To add a new federated repository, click the **Add** button and enter the full name of the Turbo.net repository that you want to federate. Set the **Revision History Length** field to the number of past revisions to import during a sync. Since repositories on Turbo.net are updated automatically, some may have hundreds of images available. The default value is 10 revisions. After setting the properties, click **Save**. You will now see your new federated repo listed and the initial sync with Turbo.net Hub will be in progress. After the sync is complete you will see the new repository in your main repository list on the Hub administration page.
 
-##### Managing API Keys
+#### Managing API Keys
 
 ![](/docs/server/hub_server/admin-api-keys.png)
 
@@ -106,13 +106,13 @@ API Keys allow you to login to your hub with a code other than with a username/p
 
 When adding an API Key, give it a name that describes the general usage of the key. It is also recommended to have distinct keys for distinct usages so that if one is compromised or updated, all usages will not require update. **Run as System** controls whether the key is given administrative privileges to push new images or delete repositories. Without this setting, the API key will only have read access to repositories.
 
-#### Managing Users and Authentication
+### Managing Users and Authentication
 
 ![](/docs/server/hub_server/admin-users.png)
 
 Turbo Hub Server users are tracked and managed via the Administration Site. Users are entered manually or via automated import from LDAP or Active Directory directory services. Users and user groups can be viewed and managed on the **Users** page. From this page you can view user directories, status, and available actions. Displayed above the user list is the total number of licenses available and the number of licenses currently in use.
 
-##### Managing Users
+#### Managing Users
 
 ![](/docs/server/hub_server/admin-users-user.png)
 
@@ -124,7 +124,7 @@ To manage a user, select the user name from the list on the **Users** page. The 
 
 - **Enabled**: Determines whether a user can access Turbo Hub Server. After a user is disabled he no longer consumes a seat.
 
-##### Managing User Groups
+#### Managing User Groups
 
 ![](/docs/server/hub_server/admin-users-group.png)
 
@@ -145,7 +145,7 @@ There are three special groups that are created automatically, **Administrators*
 
 - **Everyone**: This group automatically includes all users regardless of authentication mode.
 
-##### Adding an External Directory Service
+#### Adding an External Directory Service
 
 ![](/docs/server/hub_server/admin-users-directory-service.png)
 
@@ -295,7 +295,7 @@ You may have a specific subset of existing users that will use Turbo Server, in 
 
 When you are satisfied with your settings, select **Save**. At this point, the users and groups in your directory service are not synchronized with Turbo Server. From the **Manage Directory Services** page, click the synchronization button and verify there are positive counts for users and/or groups when it has finished. For large directories this can take several seconds.
 
-##### Authentication Method
+#### Authentication Method
 
 ![](/docs/server/hub_server/admin-users-authentication-method.png)
 
@@ -307,19 +307,19 @@ The **Authentication Method** page configures which Authentication Method is use
 
 - **Single Sign-On**: Single Sign-On authentication allows users to login to external directory services such as Azure AD. For more information on configuring SSO, refer to [Configure Azure AD](/docs/server/hub-server#azure-active-directory-integration-configure-azure-ad)
 
-##### Device Keys
+#### Device Keys
 
 ![](/docs/server/hub_server/admin-users-device-keys.png)
 
 The **Device Keys** page lists all devices that are registered to the Hub Server. Devices are automatically registered with the Hub Server when subscribing or installing applications. Device Keys may be deleted in order to immediately revoke that device's access to the Hub Server.
 
-#### Managing Servers
+### Managing Servers
 
 ![](/docs/server/hub_server/admin-servers.png)
 
 The **Servers** page lists all servers that are included as part of the current Turbo Server installation, along with their current status. Clicking a server name will navigate to the server configuration page.
 
-##### Configuring a Server
+#### Configuring a Server
 
 ![](/docs/server/hub_server/admin-servers-edit.png)
 
@@ -334,7 +334,7 @@ The **Servers** page lists all servers that are included as part of the current 
 - **Web Service SSL Certificate**: Configures the SSL certificate files that are used for HTTPS web service bindings. The provided file paths must point to permanent locations that are available to the service account.
 
 
-#### Managing Workspaces
+### Managing Workspaces
 
 ![](/docs/server/hub_server/admin-workspaces.png)
 
@@ -342,7 +342,7 @@ A workspace defines a set of applications and user permissions. These workspaces
 
 Server Administrators, as well as users with Administrator permissions to the workspace, may click the **Manage** button to access the Workspace Administration site.
 
-##### Workspace Administration Dashboard
+#### Workspace Administration Dashboard
 
 ![](/docs/server/hub_server/admin-workspaces-admin-dashboard.png)
 
@@ -356,25 +356,25 @@ The **Dashboard** page shows application usage analytics for the workspace. The 
 
 - **Recent Activity**: A table detailing the last 100 application launches.
 
-##### Workspace Administration Applications
+#### Workspace Administration Applications
 
 ![](/docs/server/hub_server/admin-workspaces-admin-applications.png)
 
 The **Applications** page lists all applications that have been added to this workspace and provides management options such as adding, editing, and deleting workspace applications. Applications added to the workspace will be displayed on the portal to users will sufficient permissions and will be available for launch.
 
-##### Editing a Workspace Application
+#### Editing a Workspace Application
 
 ![](/docs/server/hub_server/admin-workspaces-admin-applications-edit.png)
 
 The **Application Settings** page provides configuration options for a variety of application settings. These settings affect the application's display settings, launch settings and more. For more information on these settings refer to the [Repository Settings](/docs/hub/repositories#repository-settings).
 
-##### Workspace Administration Users
+#### Workspace Administration Users
 
 ![](/docs/server/hub_server/admin-workspaces-admin-users.png)
 
 The **Users** page lists all user and user group permissions that have been added to the workspace and provides management options such as adding and deleting permissions. Granting **User** permissions will allow that user or user group to access the workspace, while granting **Administrator** permissions will allow that user or user group to access the workspace administration site.
 
-#### Reports
+### Reports
 
 ![](/docs/server/hub_server/admin-reports.png)
 
@@ -382,25 +382,25 @@ The **Reports** page provides pre-configured, detailed analytic reports, broken-
 
 Note that if the server uses Anonymous login mode, the user name in the reports will display the Windows login profile name. This applies even for logged in users with cached credentials.
 
-##### Administration Reports
+#### Administration Reports
 
 - **Session Logs Report**: Provides a detailed record of all session events, including launching or stopping an application.
 
 - **Alert Report**: Presents a record of all Turbo Hub Server alerts. Common alerts include errors and administrative changes.
 
-##### Hub Reports
+#### Hub Reports
 
 - **Repository Session Report**: Presents a detailed record of each repository session.
 
 - **Repository Usage Report**: Provides a detailed breakdown and comparison of the usage for each repository.
 
-##### User Reports
+#### User Reports
 
 - **User Usage Report**: Presents a detailed breakdown and comparison of application usage for each user
 
 - **User Session Report**: Provides a detailed record of each application session, broken-down by user.
 
-##### Report Viewer
+#### Report Viewer
 
 ![](/docs/server/hub_server/admin-reports-view.png)
 
@@ -417,7 +417,7 @@ Use the toolbar located at the top of the **Report Viewer** to perform the follo
 
 - Print the report.
 
-#### Configuration and Customization
+### Configuration and Customization
 
 ![](/docs/server/hub_server/admin-general.png)
 
@@ -427,13 +427,13 @@ The **General** page provides options to configure and customize Turbo Hub Serve
 
 - **Administrator Email**: Users are directed to this email address if they encounter any errors or issues while using Turbo Hub Server.
 
-##### Appearance
+#### Appearance
 
 ![](/docs/server/hub_server/admin-general-appearance.png)
 
 The **Appearance** page provides customization options for the Turbo Streaming Server portal, such as icons and background images. Some settings may require the portal to restart before taking affect.
 
-##### Cloud Storage
+#### Cloud Storage
 
 ![](/docs/server/hub_server/admin-general-files.png)
 

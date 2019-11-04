@@ -1,8 +1,8 @@
-### Windows Firewall
+## Windows Firewall
 
 Sometimes it is necessary to add **Windows Firewall** rules to allow container applications access to network ports. Below are some suggestions when configuring these rules.
 
-#### Using the StubExe Path
+### Using the StubExe Path
 
 If creating a rule that applies to a program path, you will need to use the path to the **stubexe**. The stubexe is a small .exe stub that is written to the sandbox when an application inside the container is launched. It is required by the Windows operating system in order to execute an application.
 
@@ -34,7 +34,7 @@ Note, there will be a stubexe for each .exe that is spawned from the container. 
 If you are using a standalone executable, the stubexe is also used and will be in the application sandbox in the same folder structure. If your environment has upgraded from using a Spoon Client, then you may need to use the **spoon** directory rather than the one which using a **turbo** link.
 
 
-#### Creating a New Outbound Rule
+### Creating a New Outbound Rule
 
 In Windows Firewall, an **Outbound Rule** is used to control how an application can access outside resources.
 
@@ -79,7 +79,7 @@ Running firefox again from the same container yields a different result this tim
 ![](/docs/deploying/tips/firewall10.png)
 
 
-#### Customizing the StubExe Path
+### Customizing the StubExe Path
 
 By default the stubexe path is inside the sandbox. However, this can make it difficult to configure network rules that apply across your enterprise since it will be a different path for every user. For this case, you can configure where the stubexe is cached using Turbo Studio when you build your container images.
 
@@ -92,7 +92,7 @@ Now the application stubexe will always be cached in a well known location that 
 ![](/docs/deploying/tips/firewall12.png)
 
 
-#### Adding Rules Programatically
+### Adding Rules Programatically
 
 You can use either the PowerShell [New-NetFirewallRule](https://docs.microsoft.com/en-us/powershell/module/netsecurity/new-netfirewallrule?view=win10-ps) cmdlet or call the Windows [netsh](https://support.microsoft.com/en-us/help/947709/how-to-use-the-netsh-advfirewall-firewall-context-instead-of-the-netsh) command directly.
 

@@ -1,4 +1,4 @@
-### Hub
+## Hub
 
 Users may browse the applications available on Turbo.net by clicking on the [Hub](https://turbo.net/hub) link at the top of the Turbo.net homepage.
 

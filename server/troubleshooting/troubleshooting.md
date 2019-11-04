@@ -1,8 +1,8 @@
-### Troubleshooting
+## Troubleshooting
 
 This section provides information to help troubleshoot common issues you might encounter while using Turbo Server.
 
-#### Common Issues
+### Common Issues
 
 The following table lists common issues/questions and their solutions:
 
@@ -65,15 +65,15 @@ The following table lists common issues/questions and their solutions:
       </tr>
 </table>
 
-#### Enable Diagnostic Mode
+### Enable Diagnostic Mode
 
 Enabling diagnostic mode generates debug output logs. These can be used to help the Turbo support staff diagnose and debug issues.
 
-##### Turbo Client
+#### Turbo Client
 
 Diagnostic logs are written to the **c:\users\[user]\appdata\local\turbo\logs** directory.
 
-##### Turbo Server
+#### Turbo Server
 
 When troubleshooting an issue related to the general administration of Turbo Hub Server, enable diagnostic mode for Turbo Hub Server. Complete the following steps to enable diagnostic mode for Turbo Hub Server:
 
@@ -96,7 +96,7 @@ When troubleshooting an issue related to the general administration of Turbo Hub
 
 5. Enter the following command: **net start turbo**
 
-#### Locating Log Files
+### Locating Log Files
 
 There are several types of logs available for Turbo Server, including logs for the installation process, Apache, and SQL Server. The log file locations are dependent on the install location of Turbo Server. The default location is "C:\Program Files\Turbo Server".
 
@@ -126,7 +126,7 @@ There are several types of logs available for Turbo Server, including logs for t
 - Portal and Broker servers write all log traces to the console. These are archived in their container logs xcstream_*.txt files. Use `turbo logs [container] --export=c:\path` to retrieve the logs.
 - Application Server provisioning logs are stored in _C:\Program Files (x86)\Turbo\ApplicationServer\logs_.
 
-#### Starting and Stopping the Turbo Server Service
+### Starting and Stopping the Turbo Server Service
 
 Oftentimes, troubleshooting and fixing problems in Turbo Server requires the Turbo Server service be restarted.
 
@@ -156,11 +156,11 @@ There are currently two ways of doing this, through either the Control Panel or 
 		The Turbo Server service is starting.
 		The Turbo Server service was started successfully.
 
-#### Windows Event Viewer
+### Windows Event Viewer
 
 The Windows Event Viewer is another useful source of information. If there is an issue starting the Windows service for Turbo Hub Server there may be information reported in the Window Event Viewer to help diagnose the problem.
 
-#### Application Launch Issues
+### Application Launch Issues
 
 **The remote application failed to launch**
 

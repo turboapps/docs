@@ -1,4 +1,4 @@
-### install
+## install
 
 The `install` command creates a shortcut for the specified container in the **Start Menu**
 
@@ -26,6 +26,6 @@ There are two options for removing the container from the system:
 
 Any supplied run flags are passed to the run command when an installed application is executed. For example, `turbo install [container] --vm=1.2.3.4 --diagnostics` will result in shortcuts that have a run command like `turbo start [container] --vm=1.2.3.4 --diagnostics [additional installation params]`. These can be used to customize the installation behavior.
 
-#### JSON output
+### JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain exit code and an `error` object if command failed.

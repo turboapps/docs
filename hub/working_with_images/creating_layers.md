@@ -1,8 +1,8 @@
-### Creating Layers
+## Creating Layers
 
 Creating a `layer` on top of an existing image is used to apply special settings, files, or registry entries without having to maintain and deploy a duplicated image. A common use case is to layer a brower image with different browser plugins, change the default homepage, or have it launch in kiosk mode.
 
-#### Using TurboScript
+### Using TurboScript
 
 Turboscript allows creating layers in an interable and repeatable fashion. In this example we will create a layer which modifies the startup file for Python in order to launch Python's built in ide IDLE.
 
@@ -48,7 +48,7 @@ Run `turbo build turbo.me` to build the image. Try it out using `turbo try pytho
 
 See the [TurboScript](/docs/reference/turboscript) reference page for advanced details. 
 
-#### Customizing Layer Using TurboScript
+### Customizing Layer Using TurboScript
 
 In the previous example we simply set the startup file from the base image to create a layer that behaved in a different way. If the user wanted to change files within the base image in the layer, it is achievable by using TurboScript `copy` [command](/docs/reference/turboscript#layer).
 

@@ -1,4 +1,4 @@
-### pull
+## pull
 
 The `pull` command syncs an image from a remote registry to your local registry. 
 
@@ -21,6 +21,6 @@ If a namespace is not specified then it will default to that of the current user
 
 If a tag is not specified then the **head** tag is applied. 
 
-#### JSON output
+### JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain either an `image` object with information about pulled image or an `error` object if command failed.

@@ -1,8 +1,8 @@
-### Application Server
+## Application Server
 
 A common point of failure is due to the group policy applied to the application server.
 
-#### Group Policy Settings
+### Group Policy Settings
 
 In a typical enterprise scenario the administrator has applied Microsoft's security baseline group policies on Windows servers. There are some group policies that will prevent the application server from functioning. Some of these policies may not appear in your Group Policy editor if the template is missing from your Windows Policy folder, but must be changed to install correctly. Ensure the following group policies are either unconfigured or set to the following values in the table:
 
@@ -72,7 +72,7 @@ In a typical enterprise scenario the administrator has applied Microsoft's secur
       </tr>
 </table>
 
-#### Diagnosing WinRM Errors (LEGACY)
+### Diagnosing WinRM Errors (LEGACY)
 
 The following group policies enables WinRM for legacy (prior to version 2019.7.26) Turbo Broker:
 
@@ -169,7 +169,7 @@ Configured LocalAccountTokenFilterPolicy to grant administrative rights remotely
 WinRM service is already running on this machine.
 WinRM is already set up for remote management on this computer.
 ```
-#### RemoteApp Registry Settings
+### RemoteApp Registry Settings
 
 The application server provisioner should make the required changes to enable RemoteApp execution. Ensure these registry settings were applied properly:
 
@@ -257,7 +257,7 @@ The application server provisioner should make the required changes to enable Re
       </tr>
 </table>
 
-#### Windows Update Notifications
+### Windows Update Notifications
 
 Disable Automatic Updates if Windows Update notifications are being shown on remote sessions:
 

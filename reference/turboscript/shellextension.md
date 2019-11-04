@@ -1,4 +1,4 @@
-### shellextension
+## shellextension
 
 The `shellextension` instruction is used to enable a shell extension in the output image.
 

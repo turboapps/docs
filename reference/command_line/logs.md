@@ -1,4 +1,4 @@
-### logs
+## logs
 
 The `logs` command displays the logs for a container. This is especially useful for debugging or inspecting containers. 
 
@@ -50,6 +50,6 @@ Previous logs are kept until the next start of a given container instance. Logs 
 > turbo logs --list 2de7fda8
 ```
 
-#### JSON output
+### JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It can contain `streamLogs` and `diagnosticLogs` arrays if asked for list of logs, a `log` string if asked for specific log, or an `error` object if command failed.

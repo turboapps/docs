@@ -1,8 +1,8 @@
-### Using Turbo Command Line
+## Using Turbo Command Line
 
 Turbo containers can be deployed to Citrix XenApp servers using the Turbo command line interface. Below are the steps required.
 
-#### Prerequisites
+### Prerequisites
 
 To get started, you will need to [download](https://turbo.net/download) and install Turbo for Windows for all users on the system.
 
@@ -13,7 +13,7 @@ If users will be streaming the application window rather than the whole desktop,
 
 ![](/docs/deploying/citrix/citrix2.png)
 
-#### Adding Applications to the Start Menu
+### Adding Applications to the Start Menu
 
 Turbo application desktop integration, including Start Menu, desktop shortcuts, and file associations, can be enabled with the `turbo installi` command along with the `--all-users` flag. If you omit the version from the application identifier, then the latest version will be used.
 
@@ -37,7 +37,7 @@ The **Firefox ESR**, **Chrome**,and **IE8 with Java6** applications will appear
 
 ![](/docs/deploying/citrix/citrix4.png)
 
-#### Adding Applications to the Delivery Platform
+### Adding Applications to the Delivery Platform
 
 Depending on the delivery platform in use, you may also need to add the applications in the delivery system's administration interface.
 
@@ -59,7 +59,7 @@ Click through to **Finish** to complete the process.
 
 ![](/docs/deploying/citrix/citrix8.png)
 
-#### Running the Applications
+### Running the Applications
 
 Once added to Citrix Studio users can access the applications from the  Citrix StoreFront website or the Citrix Receiver application.
 

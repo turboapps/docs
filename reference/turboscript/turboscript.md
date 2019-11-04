@@ -67,5 +67,3 @@ layer clean when (not host has os:windows7 and not host has os:windows8.1)
 layer spoonbrew/iis7-base when host has os:windows7
 layer spoonbrew/iis8-base when host has os:windows8.1
 ```
-
-### Command Reference

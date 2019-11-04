@@ -1,4 +1,4 @@
-### continue
+## continue
 
 The `continue` command downloads the last state of a container and then starts it.
 
@@ -48,6 +48,6 @@ To enable diagnostic logging for the container, specify the `--diagnostic` flag.
 
 To run the container in the background, specify the `-d` or `--detach` flag. 
 
-#### JSON output
+### JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain either a `container` object with information about executed container or an `error` object if command failed.

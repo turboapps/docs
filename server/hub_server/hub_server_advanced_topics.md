@@ -1,8 +1,8 @@
-### Hub Server Advanced Topics
+## Hub Server Advanced Topics
 
 This section describes advanced topics you may encounter when implementing Turbo Server.
 
-#### Manually Configure Turbo Hub Server
+### Manually Configure Turbo Hub Server
 
 Turbo Hub Server enables you to manually configure settings during setup. Using this process you can control the database connection strings used by Turbo Hub Server and the domain names for the Administration and Hub Sites. Turbo Hub Server supports the use of any connection string format used by Microsoft SQL Server.
 
@@ -79,7 +79,7 @@ Select **Enter** to submit the command and choose **Y** to proceed.
 
 Fully-qualified domain names can be specified on the **Servers** page of the Administration Site. For more information about modifying servers refer to Managing Servers.
 
-#### Configure Turbo Hub Server Security
+### Configure Turbo Hub Server Security
 
 This section explains how to configure Turbo Server's security settings on common Microsoft Windows platforms. These settings restrict external connections to the Administration Site as well as enable external connections to the Hub Site.
 
@@ -105,7 +105,7 @@ Complete the following steps to enable Microsoft Windows Firewall with Advanced 
 
 8. Add a name and description.
 
-#### Manage Turbo Hub Server from the Command Line
+### Manage Turbo Hub Server from the Command Line
 
 The Turbo Hub Server executable, **server.exe**, is located in the installation directory of Turbo Hub Server (usually **C:\Program Files\Turbo Server**). It has many administrative options that are accessible by using command line parameters.
 
@@ -115,7 +115,7 @@ When using the Turbo Hub Server command line administrative tools, it is importa
 
 - When working in the command window place quotation marks around parameters and paths that include a space.
 
-##### Server.exe Command Format
+#### Server.exe Command Format
 
 `Server.exe` can be used with the following arguments to manage provisioning, uninstall, upgrade, and service recycling:
 
@@ -167,7 +167,7 @@ When using the Turbo Hub Server command line administrative tools, it is importa
 </table>
 <br>
 
-##### Server.exe admin Command Format
+#### Server.exe admin Command Format
 
 Server.exe can also be used to create and update applications, as well as to manage other server settings. This is done by specifying any of the given topics after the Server.exe admin command.
   
@@ -922,7 +922,7 @@ Examples:
 	Server.exe admin /user-group 2 clear
 
 
-#### Using the Launch Configuration Web Service
+### Using the Launch Configuration Web Service
 
 The **launch configuration web service** is an optional component which can be used to allow executing containers from a Turbo Hub Server instance on a custom web portal. If Turbo Streaming Server is used as your application portal, this service is not necessary. 
 
@@ -1019,7 +1019,7 @@ The **launch configuration web service** is an optional component which can be u
     
     After this the user will be prompted to login if necessary. Once logged in (or if login is not necessary), the container will execute.
     
-##### Launch Configuration JSON Format
+#### Launch Configuration JSON Format
 
 ```
 {
@@ -1057,7 +1057,7 @@ The **launch configuration web service** is an optional component which can be u
 ```
 
 
-#### Testing HTTPS (SSL) with a Self-Signed Certificate
+### Testing HTTPS (SSL) with a Self-Signed Certificate
 
 Follow these steps to test Turbo Hub Server with SSL enabled using a self-signed certificate.
 

@@ -1,4 +1,4 @@
-### installi
+## installi
 
 The `installi` creates Start menu shortcuts for the specified image set.
 
@@ -24,7 +24,7 @@ Usage: turbo.exe installi <options> <image> [run flags...]
 
 Any supplied run flags are passed to the run command when an installed application is executed. For example, `turbo installi 7-zip --vm=1.2.3.4 --diagnostics` will result in shortcuts that have a run command like `turbo run 7-zip --vm=1.2.3.4 --diagnostics [additional installation params]`. These can be used to customize the installation behavior.
 
-#### Offline
+### Offline
 
 It is sometimes desired to configure your installed containers to execute completely offline to manage deployment and updates manually. Special planning must be considered if this is your goal.
 
@@ -68,7 +68,7 @@ If this is for a multi-user workstation, then additional steps are required to m
 > turbo installi [application] --offline --all-users
 ```
 
-#### Services
+### Services
 
 Virtual services defined in the images are not installed by default as they will be executed from the user's container automatically or on-demand as configured in the image. Virtual services will be installed to the Windows Service Control Manager and will be run as SYSTEM account by default. 
 

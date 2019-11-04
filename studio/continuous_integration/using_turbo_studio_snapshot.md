@@ -6,7 +6,7 @@ Snapshotting is a technique for creating images of virtual applications by detec
 
 Here we will discuss how to create an automated pipeline for creating snapshot-based application images using Turbo Studio, [Vagrant](https://www.vagrantup.com/) and [Jenkins](https://jenkins.io/). Jenkins is an automation server used to manage automated processes. Vagrant is a tool used to manage virtual machine instances (in our case, VirtualBox).
 
-#### The Basics
+### The Basics
 
 Creating a virtual application image using snapshots is a multi-step process. It includes taking a snapshot of a clean operating system image before installing an application, performing the installation, and taking the second snapshot after the setup completes. Extra time is required for managing a virtual machine or downloading the application installer. Overall, building application images via snapshot manually is time consuming, so the process benefits dramatically from scaling via automation.
 
@@ -24,7 +24,7 @@ Features available off the shelf in Jenkins help to further customize the workf
 
 As an example, we will show how to create a Jenkins build project for [FL Studio](https://www.image-line.com/flstudio/), a popular music production system.
 
-#### Initial Setup
+### Initial Setup
 
 The configuration presented below was tested using Jenkins 2.134, Vagrant 1.7.4, and VirtualBox 4.3 installed on Windows 8.1 and Windows Server 2012 R2.
 
@@ -35,7 +35,7 @@ The TurboScript plugin for Jenkins uses PowerShell to call external tools like V
 > powershell -Command Set-ExecutionPolicy RemoteSigned
 ```
 
-#### Configure Jenkins
+### Configure Jenkins
 
 Open the Jenkins Plugin Manager and install the latest version of **TurboScript Plugin**.
 
@@ -49,7 +49,7 @@ Specify the file paths to **XStudio.exe** in the Turbo Studio install directory 
 
 Optionally, you may want to change the default virtual machine used to take snapshots. Boxes are downloaded from Vagrant's Service. The list of boxes is available [here](https://app.vagrantup.com/boxes/search).
 
-#### Create the Build Project
+### Create the Build Project
 
 Go to the Jenkins dashboard and create a new **Turbo Project**. Name it **FL Studio Snapshot** and click **OK**.
 
@@ -100,7 +100,7 @@ Optionally, select the **Overwrite** checkbox if you want Jenkins to continue t
 
 Save the build project and go back to the main Jenkins dashboard.
 
-#### Trigger the Build
+### Trigger the Build
 
 Open the context menu next to project name and click **Build Now**.
 

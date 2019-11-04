@@ -1,8 +1,8 @@
-### API Keys
+## API Keys
 
 API keys allow you to login to the Turbo.net or Turbo Server hub without the use of a password. This is important for scripting and automation as it eliminates the need to hard code passwords or pass them in as parameters to your scripts. API keys can be revoked or regenerated in case they have been compromised.
 
-#### Manage Your Keys
+### Manage Your Keys
 
 The first step is to create an API key.  To do this, go to your account or organization's dashboard page, click the **Setting** button, click the **Profile and Account** button, and then select **Device and API Keys** on the right menu.
 
@@ -12,7 +12,7 @@ Once here, click **Add API Key** to generate a new key. Press the **Remove** but
 
 Click **Copy Key** and head back to the command line.
 
-#### Turbo Login with an API Key
+### Turbo Login with an API Key
 
 Using the API key is easy -- just include the key in the turbo login command using the **--api-key** flag.
 

@@ -1,4 +1,4 @@
-### export
+## export
 
 The `export` command copies an image from the local registry to a specified path on your local machine or network. 
 
@@ -14,7 +14,7 @@ Usage: turbo.exe export <options> <image> <path>
       --wait-after-exit      Leave process open after it exits
 ```
 
-#### Examples:
+### Examples:
 
 ```
 # Export an image to the local file system
@@ -27,6 +27,6 @@ Usage: turbo.exe export <options> <image> <path>
 > turbo export --type=exe image C:\path\to\image.exe
 ```
 
-#### JSON output
+### JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain either a `file` object with information about export file or an `error` object if command failed.

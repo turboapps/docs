@@ -1,4 +1,4 @@
-### search
+## search
 
 The `search` command is used to search the remote registry for images.
 
@@ -17,6 +17,6 @@ Multiple queries can be added to make searches more specific. The `search` comma
 > turbo search java maven
 ```
 
-#### JSON output
+### JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain either an `images` array with information about found images or an `error` object if command failed.

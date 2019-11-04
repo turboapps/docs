@@ -1,10 +1,10 @@
-### Azure Active Directory Integration
+## Azure Active Directory Integration
 
 Turbo Server can be configured to allow users to log in using Azure Active Directory single sign on (AD SSO). Navigate to the /admin/users/authenticationmethod.aspx page. Change the authentication method to *Single Sign-On*. Select the *Azure AD* directory service. Fill in the required fields and press *Save*.
 
 Azure AD SSO requires all servers in the farm to use https in order to keep users data secure. Make sure SSL is enabled during installation or install SSL from the /admin/servers/ page.
 
-#### Configure Azure AD
+### Configure Azure AD
 
 The following section describes how to enable Azure AD SSO using the Azure Portal.
 
@@ -64,7 +64,7 @@ The values required:
 * **Directory (tenant) ID**
 * **Client Secret**
 
-#### Configure Azure AD for Moble Clients
+### Configure Azure AD for Moble Clients
 
 To enable SSO from mobile clients you must register an Azure AD native client application. It is recommended that this application is separate from the Azure AD web application registration. The permissions required to set up the native application is the same as the web application in the above section. 
 
@@ -72,6 +72,6 @@ To check that the application is a native application, navigate to the Azure Por
 
 Set the registered native application's Application ID on the authentication method page under **Application ID (mobile and desktop clients)**.
 
-#### Troubleshooting Azure AD App Registration Permissions
+### Troubleshooting Azure AD App Registration Permissions
 
 You may review which permissions the app registration requires by forcing the consent dialog to appear during login. To do so, please consult to Microsoft docs: [https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/configure-user-consent#force-user-consent-through-a-url-request](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/configure-user-consent#force-user-consent-through-a-url-request)

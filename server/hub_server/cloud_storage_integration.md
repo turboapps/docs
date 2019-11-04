@@ -1,6 +1,6 @@
-### Cloud Storage Integration
+## Cloud Storage Integration
 
-#### Setting up OneDrive SSO
+### Setting up OneDrive SSO
 
 To allow users to connect their OneDrive accounts and access them while running their applications, you must first configure a OneDrive app registration. This OneDrive app controls the permissions, branding, and routing for the OneDrive SSO.  
 
@@ -18,7 +18,7 @@ The settings should be entered into /admin/general/files.aspx.
 
 6. Enter your **Application Secret** into the corresponding oneDrive keys field.  
 
-#### Setting up Dropbox SSO
+### Setting up Dropbox SSO
 
 To allow users to connect their Dropbox accounts and access them while running their applications, you must first configure a Dropbox app registration. This Dropbox app controls the permissions, branding, and routing for the Dropbox SSO.  
 
@@ -34,7 +34,7 @@ To allow users to connect their Dropbox accounts and access them while running t
 
 6. Enter your **App secret** into the corresponding dropbox keys field.  
 
-#### Troubleshooting
+### Troubleshooting
 
 The following section contains solutions for issues with regards to setting up cloud storage.
 

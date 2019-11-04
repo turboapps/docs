@@ -8,7 +8,7 @@ The latest Turbo Client may be downloaded from [https://turbo.net/download](http
 
 To install the Turbo Client using default settings, double-click on the installer. This will configure the client for the current user and place the client components in the **%LOCALAPPDATA%\Turbo** user directory. Shortcuts will be added to the Start Menu in the **Turbo.net** folder for quick access to the **TurboLauncher** and **TurboShell**. In addition, shortcuts will be added to the Startup folder to automatically start the Turbo Client.
 
-The Turbo.net Extension is required when using the client with the Chrome browser. It may be found in the Chrome Web Store at [https://chrome.google.com/webstore/detail/turbonet-extension/ldibmiofagdkgiphkcokpooepankmacl] (https://chrome.google.com/webstore/detail/turbonet-extension/ldibmiofagdkgiphkcokpooepankmacl).
+The Turbo.net Extension is required when using the client with the Chrome browser. It may be found in the Chrome Web Store at [https://chrome.google.com/webstore/detail/turbonet-extension/ldibmiofagdkgiphkcokpooepankmacl](https://chrome.google.com/webstore/detail/turbonet-extension/ldibmiofagdkgiphkcokpooepankmacl).
 
 **Installing Turbo Client for All Users**
 

@@ -1,4 +1,4 @@
-### workdir
+## workdir
 
 The `workdir` instruction sets the working directory inside the container.
 

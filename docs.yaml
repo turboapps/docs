@@ -23,10 +23,10 @@ sections:
       - Desktop Integration
       - Networking
       - Automation
-      - Citrix and RDS
+      - Turbo on Citrix and RDS
       - Advanced Topics
-      - Org Dashboard
-      - Creating Turbo URLs
+      - Organization Dashboard
+      - Running Applications Using a Shareable URL
   - title: Developers
     documents:
       - .NET and Java
@@ -77,8 +77,8 @@ sections:
   - title: Citrix
     documents:
       - Citrix
-      - CLI
-      - Scripts
+      - Using Turbo Command Line
+      - Using Turbo Citrix Scripts
   - title: Parallels RAS
     documents:
       - Deploying to Parallels RAS
@@ -90,14 +90,13 @@ sections:
       - Portable EXEs and MSIs
   - title: Integration Tools
     documents:
-      - Tools
+      - Integration Tools
       - Redirector Walkthrough
       - SpoonReg
   - title: Tips
     documents:
-      - Tips
       - API Keys
-      - Firewall Rules
+      - Windows Firewall
 ---
 title: Studio
 sections:
@@ -106,12 +105,40 @@ sections:
       - Overview
   - title: Working with Turbo Studio
     documents:
-      - Interface
-      - Snapshot
-      - Virtual Application Settings
+      - Basics
+      - Snapshots
+      - Container Settings
       - Standalone Executables
       - Building from the Command Line
       - MSI
+  - title: Working with Containers
+    documents:
+      - Containers
+      - IP Routing
+      - Tips
+  - title: Continuous Integration
+    documents:
+      - Continuous Integration
+      - Using Turbo Studio Snapshot
+  - title: Advanced Topics
+    documents:
+      - Large Applications
+      - Startup/Shutdown Scripts and Shims
+  - title: Scenarios
+    documents:
+      - Turbo.net Build Scripts
+      - Browser Ad Blocking
+      - SQL Test Lab Environments
+      - Legacy SQL Server
+      - Legacy Internet Explorer and Java
+      - Microsoft .NET Core
+      - Microsoft Office 2010
+      - Integration with Native Applications
+  - title: Troubleshooting
+    documents:
+      - Troubleshooting
+      - Analyzing Logs
+      - Common Errors
 ---
 title: Server
 sections:
@@ -120,23 +147,23 @@ sections:
       - Overview
   - title: Hub Server
     documents:
-      - Getting Started
-      - Administration
-      - Advanced Topics
-      - Cloud Storage
-      - Azure AD
+      - Getting Started with Hub Server
+      - Hub Server Administration
+      - Hub Server Advanced Topics
+      - Cloud Storage Integration
+      - Azure Active Directory Integration
   - title: Application Server
     documents:
       - Getting Started
-      - App Server Config
+      - Configuration
   - title: Legacy Portal Server
     documents:
       - Legacy Portal Server
   - title: Troubleshooting
     documents:
       - Troubleshooting
-      - App Server
-      - SSL
+      - Application Server
+      - SSL Troubleshooting
 ---
 title: VM
 sections:
@@ -238,11 +265,11 @@ sections:
       - push
   - title: Dependencies
     documents:
-      - Overview
+      - Dependencies
   - title: Turbo Client
     documents:
       - Turbo Client
-      - Security
+      - Turbo Client Security
   - title: Turbo Play
     documents:
       - Turbo Play
@@ -260,7 +287,7 @@ sections:
       - Turbo and Docker
   - title: Contribute to Turbo
     documents:
-      - Contributing
+      - Contribute to Turbo
   - title: Style Guide
     documents:
       - Style Guide

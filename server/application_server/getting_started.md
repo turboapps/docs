@@ -1,14 +1,14 @@
-### Getting Started
+## Getting Started
 
 Turbo Application Server is an on-premises application delivery platform. In this section you will learn about system requirements and instructions for installing, configuring and running Turbo Application Server.
 
-#### Setup
+### Setup
 
 The Turbo Application Server is distributed with Turbo Container images. Running the containers will guide you through configuration on the first launch and then start the web services on your machine. The Portal and Broker services can also be configured to run on a Ubuntu Linux platform depending on your environment requirements.
 
 For test or demonstration purposes, all the services can be run on the same machine or VM. In production environments it is recommended to split the services to separate machines as needed to share the load and offer adequate failover and redundancy.
 
-##### Application Server
+#### Application Server
 
 The **Application Server** is where remote applications will run when streamed to remote clients.
 
@@ -44,7 +44,7 @@ When the process is complete, you will see a completion message.
 
 ![](/docs/server/application_server/streaming-setup-2.png)
 
-##### Broker Service
+#### Broker Service
 
 The **Broker service** is a web service which controls connections between the portal and the servers in the application server pool.
 
@@ -82,7 +82,7 @@ Review the values and confirm by typing **Y**. After this it will prompt you to 
 
 After the values are confirmed, the broker web service will be started.
 
-##### Portal Service
+#### Portal Service
 
 The **Portal service** is a web service which hosts a web portal for users to access their applications.
 

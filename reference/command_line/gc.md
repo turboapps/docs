@@ -1,4 +1,4 @@
-### gc
+## gc
 
 The `gc` command garbage collects unused containers that have been forked. By default a container is considered unused if not run within the past 7 days.
 
