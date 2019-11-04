@@ -1,4 +1,4 @@
-### Standalone Executables
+## Standalone Executables
 
 A popular option for organizations that have an existing endpoint management solution like LANDesk Management Suite &reg;, Microsoft System Center, or Novell ZENworks is to deploy containerized applications as standalone executables. These executables are built on the SVM architecture and work just like a container. 
 
@@ -8,7 +8,7 @@ To produce an executable output, set the **Project Type** to **ISV Application**
 
 An enterprise license for Turbo Studio is required to enable executable outputs. Contact our [sales team](mailto:sales@turbo.net) for more information.
 
-#### Command Line Options
+### Command Line Options
 
 Standalone executables have many command line options to change settings at runtime. The following is a list of available options. Note that these are case sensitive and must be specified before any command line options to the application itself.
 
@@ -78,11 +78,11 @@ See [VM Settings](/docs/reference/vm-settings-and-variables#command-line-setting
 	</tr>
 </table>
 
-#### Specify Additional SVMs for a Container
+### Specify Additional SVMs for a Container
 
 When you have updates or patches you can use Turbo Studio to specify additional SVMs for applications. Studio provides two mechanisms to accomplish this. Both methods support path tokens (ie. @APPDIR@) and must specify the full path to SVM dependencies.
 
-##### Using Studio
+#### Using Studio
 
 One mechanism is to specify the SVM dependencies in Turbo Studio. 
 
@@ -98,7 +98,7 @@ Multiple SVMs may be specified for the **SVM Search Pattern** field in a semi-co
 
 The second field allows required SVMs to be specified. Wildcard characters are not valid for this and a specific path must be used. If the file is not found during application launch, an error will be reported and the launch will be aborted.
 
-##### Using Command Line
+#### Using Command Line
 
 Another mechanism is by using the `/XLayerPath=` command line option. This parameter takes a path to additional SVMs to load. This can be useful for dynamically creating container environments depending on other user settings. These runtime settings augment any which are built into the SVM. 
 
@@ -127,7 +127,7 @@ This performs a wildcard match finding any files that match the pattern, such as
 
 <b>Note:</b> SVMs that are discovered by wildcard are applied in reverse-alphabetical priority. For example, items in 'patch_002.svm' have higher priority than items in 'patch_001.svm'.
 
-#### Startup File Triggers
+### Startup File Triggers
 
 A container package can define several startup files. These can all be activated on launch or they can be configured to only be launched given a specified <b>trigger</b>. This is useful for suite applications (like Microsoft Office) where most of the container package is shared.
 

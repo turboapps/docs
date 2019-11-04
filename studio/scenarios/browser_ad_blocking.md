@@ -1,4 +1,4 @@
-### Browser Ad Blocking
+## Browser Ad Blocking
 
 Ad blocking is important for improving user experience, maximizing performance, and eliminating an important source of security vulnerabilties.
 
@@ -6,7 +6,7 @@ Turbo automatically provides ad blocking in popular web browsers such as Chrome 
 
 This article will explain Turbo's built-in browser ad blocking and network routing-based container ad blocking technology.
 
-#### Browser Ad Blocking on Turbo.net
+### Browser Ad Blocking on Turbo.net
 
 Popular web browsers in the Turbo Hub such as Chrome and Firefox come pre-configured with ad blocking.
 
@@ -16,7 +16,7 @@ Turbo uses the [uBlock Origin](https://github.com/gorhill/uBlock) plugin, a pop
 
 If you wish to use a non-adblocked version of a browser, use the "Base" version in the Hub. For example, the [mozilla/firefox-base](https://turbo.net/hub/mozilla/firefox-base) image is a default Firefox image with no adblocking or other plugins applied.
 
-#### IP-based Ad Blocking
+### IP-based Ad Blocking
 
 Turbo also provides an alternate approach to ad blocking based on virtual network configuration in the container. Recall that Turbo supports custom IP routing rules within containers. The Turbo Hub provides a pre-configured routing table with known advertising networks and hosts blocked. Applying this layer blocks access to these advertising networks. This allows ad blocking for applications other than web browsers, where ad blocking plugin interfaces are not available.
 
@@ -30,7 +30,7 @@ Finally, click **Save**.
 
 The **Block Ad Networks** layer is an aggregation of multiple databases of advertising network hosts and IP addresses. These are updated nightly by TurboBuild and pushed automatically when automatic patching is enabled. Additional manual customizations can be applied on top of the layer by clicking on the **Custom** sub-tab.
 
-#### Customizing IP Blocking
+### Customizing IP Blocking
 
 Administrators can easily build custom network blocking rules and apply them to organization containers.
 
@@ -64,7 +64,7 @@ Before submitting an application image, you may want to verify how an applicati
 
 Once the changes have been tested, they can be applied with the **turbo commit** command using the same flags.
 
-#### Blocking Adult Content
+### Blocking Adult Content
 
 The **Block Adult Content** routes layer can be used with any Turbo container, including web browsers, email clients, instant messengers, or any other applications. The layer contains a set of IP routing rules that automatically block connections to adult content sites.
 
@@ -78,7 +78,7 @@ The layer can also be applied using the command line interface. To use the laye
 > turbo run block-adult-routes,chrome
 ```
 
-#### Blocking Social Networks
+### Blocking Social Networks
 
 The **Block Social Networks** routes layer can be used to block access to popular social networking sites (Facebook, Twitter, YouTube, etc) from any Turbo web browser. A full list of the blocked sites are listed [here](https://raw.githubusercontent.com/turboapps/turbome/master/turbobrowsers/block-ad-routes/social-networks/routes.txt).
 

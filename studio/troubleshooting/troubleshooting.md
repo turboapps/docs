@@ -1,8 +1,8 @@
-### Troubleshooting
+## Troubleshooting
 
 Once your container package is built, it is time to test on the platforms that you expect to encounter. When issues surface there are several things that can be done to track down the cause. 
 
-#### Diagnostic Mode
+### Diagnostic Mode
 
 When troubleshooting issues with containers, it is often useful to generate diagnostic logs for analysis. These logs show detailed information about system calls and error codes that were generated during the application life. 
 
@@ -27,7 +27,7 @@ The third way is using an environment variable. This allows access to diagnostic
 
 <b>NOTE:</b> Can also specify this as a global environment variable.
 
-#### Viewing the Container Environment
+### Viewing the Container Environment
 
 Some problems are caused because the xappl configuration didn't render an environment as was expected. To determine if files and registry keys are as they should be, instances of Windows command prompt or registry editor can be started in the container.
 
@@ -51,6 +51,6 @@ This will start an instance of the registry editor inside the container environm
 
 The 32-bit vs 64-bit registry is also something to be aware of with the registry editor. Select the registry editor to launch based on the architecture of the process that you are investigating.
 
-#### Turbo.net Professional Services
+### Turbo.net Professional Services
 
 Turbo has a team of knowledgable support engineers to help you build your packages. We can help you through any problems that you face. Email our team at [support team](mailto:support@turbo.net). See [Support Programs](/datasheets/Turbo.net-Support-Programs.pdf) for more information on the services that we offer.

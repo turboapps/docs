@@ -1,4 +1,4 @@
-### Folder Variables
+## Folder Variables
 
 Turbo VM maps well known root folders such as **Documents** and **Program Files** based on the host operating system at runtime. 
 
@@ -164,5 +164,3 @@ These variables may also be used in TurboScript and as part of command-line argu
          <td><p>(All Users Directory): The folder that stores shared profile data.</p></td>
       </tr>
 </table>      
-
-###

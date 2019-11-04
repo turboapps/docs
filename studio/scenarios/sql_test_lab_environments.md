@@ -1,14 +1,14 @@
-### SQL Test Lab Environments
+## SQL Test Lab Environments
 
 Turbo.net is a great way to provide online learning and test lab environments for SQL Server and other complex applications. Turbo VMs provide the user with a ready-to-use database server, sample content, and test IDE environment -- without requiring any setup or modifying the host desktop.
 
 Here we will show you how to create a SQL Server Turbo VM lab that can be easily executed in your lab environment. In our example, we will create a lab environment for this article from SQL Server Central, one of the world's largest SQL Server communities: [http://www.sqlservercentral.com/articles/T-SQL/130558/](http://www.sqlservercentral.com/articles/T-SQL/130558/).
 
-#### Prerequisites
+### Prerequisites
 
 If you want to follow along building this example, you will first need to download the [Wildcard Searches.sql](http://www.sqlservercentral.com/Files/Wildcard%20Searches.sql/27022.sql) file. This will require an account at SQL Server Central.
 
-#### The Basics
+### The Basics
 
 Our SQL environment will consist of three Turbo container images:
 
@@ -16,9 +16,9 @@ Our SQL environment will consist of three Turbo container images:
 * sqlserver/ssms
 * A content layer that will provide content specific to the article for which the image is being created. Typically this is a SQL script, but could also include a database or other resources.
 
-#### Step 1: Create the Lab Image
+### Step 1: Create the Lab Image
 
-##### Specify a Sample SQL Script
+#### Specify a Sample SQL Script
 
 Create a folder on your system for the contents of the content layer and change the directory of the command window to that folder.
 ```
@@ -43,7 +43,7 @@ copy script.sql c:\sql-content\script.sql
 
 We will be using the **tempdb** which is in our SQL Server Express container, so we can skip to **Build the Custom Image**. _If you want to use a custom database as sample content, follow the instructions in the **Adding a Sample Database** to the Custom Image section._
 
-##### Adding a Sample Database to the Custom Image
+#### Adding a Sample Database to the Custom Image
 
 **Note:** This section is optional and not required for the example.
 
@@ -90,7 +90,7 @@ copy DATA c:\sql-content\
 
 When the SSMS container starts, the user will have to attach the database to access the data. You can also put your database files directly in the SQL Server DATA directory to be attached automatically.
 
-##### Build the Lab Image
+#### Build the Lab Image
 
 Now that we have the contents ready for the lab image, we can build the image using the **turbo.me** file. Use an appropriate name in place of **sql-sample-content**. For example, if the VM corresponds to an article, a good practice would be for the image name to match the article title. Our example is based on an article titled _SQL Wildcard Searches_ so we will name our image **turbouser/sql-wildcard-searches**. The placeholder **turbouser** should be set to your login name (you can find your login name with the command turbo login).
 
@@ -104,7 +104,7 @@ After the build completes, test the new image.
 > turbo run --route-block=tcp --name=testing-for-article-container sqlserver/sqlserver-express:2012,sqlserver/ssms:2012,turbouser/sql-wildcard-searches
 ```
 
-##### Publish the Custom Image
+#### Publish the Custom Image
 
 Once the image has been tested, push the **sql-wildcard-searches** image to Turbo.net:
 ```

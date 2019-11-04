@@ -1,8 +1,8 @@
-### Basics
+## Basics
 
 Using Turbo Studio enables you to configure the filesystem and registry of a container, embed external runtimes and components, take application snapshots, and create Turbo Virtual Machine (SVM) or executable files. The primary interface consists of a ribbon bar along the top and several panes accessed by buttons on the left.
 
-#### Title Bar
+### Title Bar
 
 ![](/docs/studio/working_with_turbo_studio/ui1.png)
 
@@ -10,7 +10,7 @@ Using Turbo Studio enables you to configure the filesystem and registry of a con
 - The **Options** bar provides Turbo Studio customization options, the ability to set proxy settings, and install certificates.
 - The **Help** bar provides access to Turbo Studio documentation.
 
-#### Ribbon Bar
+### Ribbon Bar
 
 ![](/docs/studio/working_with_turbo_studio/ui2.png)
 
@@ -18,20 +18,20 @@ Using Turbo Studio enables you to configure the filesystem and registry of a con
 - The **Runtimes** tab provides a selection of auto-configurable runtime engines which can be embedded into your application. These include .NET Framework, Java, Flash, Shockwave, Acrobat Reader, and SQL Server 2005 Express.
 - The **Advanced** tab provides functions such as viewing embedded layers and platform merge.
 
-##### Snapshot
+#### Snapshot
 
 - **Capture Before** button is to capture the machine state before you install your application for a snapshot.
 - **Capture and Diff** button is to capture the machine state after you install your application for a snapshot.
 
 For more information on the snapshot process, see **Snapshot** documentation.
 
-##### Build
+#### Build
 
 - **Build** button is to build your container image output.
 - **Build and Run** button is to build your container image output and then execute it for testing purposes.
 - **Run and Merge** button builds your container image and then executes it within the Turbo Client Runtime environment. Any changes made while inside the container environment will be added back to the configuration after the application is shutdown. This can be used to quickly set defaults in your container image.
 
-##### Output
+#### Output
 
 - **Startup File** field is to set the path to the application which runs when starting your container. The **Multiple** button shows the **Startup File** manager dialog where additional settings can be specified.
 - **Output File** field is the name of the file that is created when your container image configuration is built.
@@ -45,18 +45,18 @@ For more information on the snapshot process, see **Snapshot** documentation.
     - The default VM settings flags are also different between the two application types. Standalone executables will only have those that are defined in the image configuration. Portable application will additionally contain these settings: ExeOptimization, SpawnComServers, IsolateWindowClasses, SuppressPopups, ForceWriteCopyIsolation, MergePathEnvVars, MergeVmSettings, DumpStdStreams, InheritFolderMaps, and ForceEnvironmentVariablesWriteCopyIsolation. See [xappl reference](/docs/reference/xappl-configuration) for more information on these flags.
 - **Options** button shows the **Output Options** dialog. This is used to enable diagnostics for .exe outputs or configure **Portable Executable** settings.
 
-##### Tools
+#### Tools
 
 - **Configuration Wizard** button shows the startup wizard where there are quick links to common process wizards; building from template, snapshot, install into a container, or manual configuration.
 - **Snapshot Merge** button allows a container sandbox changes to be imported into the configuration. 
 - **Import Configuration** button allows a container image to be imported from an external source, such as: a ThinApp configuration, MSI package, Zenworks package, the Turbo.net Hub, or from the local Turbo.net Client Runtime image repository.
 
-##### Publish
+#### Publish
 
 - **Publish to Server** button allows an output container image to be pushed directly to the Turbo.net Hub or a Turbo Server instance.
 - **Publish to Local Repository** button allows an output container image to be pushed to the local Turbo.net Client Runtime repository.
 
-#### Left-side Button Panes
+### Left-side Button Panes
 
 ![](/docs/studio/working_with_turbo_studio/ui3.png)
 
@@ -70,7 +70,7 @@ For more information on the snapshot process, see **Snapshot** documentation.
 
 **Note:** Turbo Studio users are responsible for any third-party licensing compliance for redistributable components included using virtualization.
 
-#### Virtual Filesystem
+### Virtual Filesystem
 
 ![](/docs/studio/working_with_turbo_studio/ui4.png)
 
@@ -80,7 +80,7 @@ In the event of a conflict between a file in the virtual filesystem and a file p
 
 **Note:** When running a container on Windows 7, the **All Users Directory\Application Data** and **All Users Directory** root folders will map to the same folder at runtime. To prevent one setting from overriding another, verify that the isolation settings for these folders are the same.
 
-##### Isolation Modes
+#### Isolation Modes
 
 ![](/docs/studio/working_with_turbo_studio/ui5.png)
 
@@ -93,7 +93,7 @@ Folders may be containerized in **Full**, **Merge**, **Write Copy**, or **Hide**
 
 **Tip**: To apply selected isolation modes to all subfolders, right-click on the folder, choose Isolation, select the checkbox for **Apply to Subfolders**, then select **OK**.
 
-##### File Attributes
+#### File Attributes
 
 ![](/docs/studio/working_with_turbo_studio/ui6.png)
 
@@ -103,7 +103,7 @@ Folders may be containerized in **Full**, **Merge**, **Write Copy**, or **Hide**
 - **No Upgrade**: By default, files in the virtual filesystem can be upgraded with patches (refer to "Updating Registration Settings" in the **Register containers in the Windows Shell** section for more information). If there are files in the virtual filesystem that should not be upgraded, such as user data files, select the checkbox in the **No Upgrade** column next to the desired file or folder.
 - **No Sync**: This feature only applies to containers that are delivered and managed by Turbo Virtual Desktop Server. By default, files in the virtual filesystem can be synchronized to a user's Turbo account. This enables the application state to be maintained across different devices that are Turbo enabled. If there are folders in the virtual filesystem that should not be synchronized and remain only on the local device, select the checkbox in the **No Sync** column next to the desired file or folder. This setting is managed on a folder level and applies to all files within that folder.
 
-##### Filesystem Compression
+#### Filesystem Compression
 
 ![](/docs/studio/working_with_turbo_studio/ui7.png)
 
@@ -111,7 +111,7 @@ To reduce executable size, Turbo Studio can compress virtual filesystem contents
 
 **Note**: Disabling payload compression may significantly increase the size of the container binary.
 
-#### Virtual Registry
+### Virtual Registry
 
 ![](/docs/studio/working_with_turbo_studio/ui8.png)
 
@@ -123,7 +123,7 @@ Registry string values can include well-known variables such as **@WINDIR@**, **
 
 In the event of a conflict between a key or value in the virtual registry and data present on the host device registry, information in the virtual registry takes precedence. 
 
-##### Isolation Modes
+#### Isolation Modes
 
 Keys may be containerized in **Full**, **Merge**, **Write Copy**, or **Hide** mode.
 
@@ -134,19 +134,19 @@ Keys may be containerized in **Full**, **Merge**, **Write Copy**, or **Hide** mo
 
 	**Tip**: To apply selected isolation modes to all subkeys, right-click on the key, choose **Isolation**, select the checkbox for **Apply to Subkeys**, then **OK**.
 
-##### Key Attributes
+#### Key Attributes
 
 ![](/docs/studio/working_with_turbo_studio/ui8.png)
 
 - **No Sync**: This feature only applies to containers that are delivered and managed by Turbo Virtual Desktop Server. By default, keys and values in the virtual registry can be synchronized to a user's Turbo account. This enables the application state to be maintained across different devices that are Turbo enabled. If there are keys in the virtual registry that should not be synchronized and remain only on the local device, select the checkbox in the **No Sync** column next to the desired key. This setting is managed on a key level and applies to all values within that folder.
 
-##### Importing Registry Hive Files
+#### Importing Registry Hive Files
 
 ![](/docs/studio/working_with_turbo_studio/ui10.png)
 
 Turbo Studio can import registry hive (.reg) files into the virtual registry. To import a .reg file, select the **Import** button in the **Registry** panel, then choose the registry hive file to import.
 
-#### Runtimes and Components
+### Runtimes and Components
 
 Many components and runtime systems consist of large, complex sets of filesystem entries and registry settings. Turbo Studio contains a collection of pre-configured component settings which can be added to your container with a single click. For example, if your application is a .NET Framework 4.0 application, then selecting the .NET Framework 4.0 component will allow your executable to run on machines without the .NET Framework installed.
 
@@ -162,13 +162,13 @@ To add a runtime or component:
 
 **Note:** You are responsible for compliance with licensing for any third-party redistributable components included in your containerized application.
 
-##### Using .NET Runtimes
+#### Using .NET Runtimes
 
 To limit conflicts with installed .NET runtimes, the .NET runtime packages are isolated from the native file system. If the application requires access to multiple .NET versions, it is necessary to include all of the required runtimes in the virtual package. For example, including only the .NET 4 runtime will hide visibility to the .NET 3.5 runtime on the native file system. This is fine if the application only requires the .NET 4 components, but would be problematic if it also requires earlier versions of .NET.
 
 An alternative approach would be to use the snapshot feature of Turbo Studio to build a custom .NET component for the application. This approach provides visibility into the files and registry keys that are available and allows for custom isolation settings.
 
-##### Configuring the Java Runtime
+#### Configuring the Java Runtime
 
 Turbo Studio provides specialized support for the Java runtime. If your application is based on Java runtime, select the Sun Java Runtime button on the Runtimes ribbon bar. This displays the Java configuration menu.
 

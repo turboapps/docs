@@ -1,4 +1,4 @@
-### Building from the Command Line
+## Building from the Command Line
 
 The command-line version of Turbo Studio is called <b>XStudio.exe</b> and can be found in the Turbo Studio installation directory. See below for a list of command-line arguments and options for the XStudio tool.
 

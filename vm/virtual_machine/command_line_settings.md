@@ -1,4 +1,4 @@
-### Command Line Settings
+## Command Line Settings
 
 The behaviour of containers and images can be modified by changing VM settings at runtime.
 
@@ -109,6 +109,4 @@ Altering VM settings for a container will override the settings of the base imag
          <td><p>Suppresses any error popup dialogs that the virtual environment generates during application runtime.</p></td>
       </tr>
 </table>
-
-###
 

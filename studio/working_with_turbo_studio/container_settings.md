@@ -1,8 +1,8 @@
-### Container Settings
+## Container Settings
 
 The following discusses the many configuration features available in Turbo Studio. These features allow you to edit and customize the settings for an image or virtual application configuration.
 
-##### Output Settings
+#### Output Settings
 
 ![](/docs/studio/working_with_turbo_studio/settings1.png)
 
@@ -14,14 +14,14 @@ The following discusses the many configuration features available in Turbo Studi
     - **Standalone/ISV Application (.exe)** is a standalone executable file with no dependence on the Turbo.net Client Runtime or Turbo.net Hub. This output type requires an Enterprise or ISV license for Turbo Studio.
 - **Options** button shows the **Output Options** dialog. This is used to enable diagnostics for .exe outputs or configure **Portable Executable** settings.
 
-##### Application Properties
+#### Application Properties
 
 ![](/docs/studio/working_with_turbo_studio/settings2.png)
 
 - **Standard Metadata** fields include information such as product title, publisher, description, icon, web site URL, and version. By default these values are inherited by the startup file and will be displayed here. To override any of the values, uncheck the **Inherit** checkbox. Leave the value as **@INHERIT@** for any values that should continue to be inherited.
 - **Custom Metadata** can be used by specialized external executable viewer applications, inventory scanners, and other asset and licensing management systems. For information on custom executable metadata, consult the Microsoft Windows Software Development Kit.
 
-##### Startup Settings
+#### Startup Settings
 
 ![](/docs/studio/working_with_turbo_studio/settings3.png)
 
@@ -30,7 +30,7 @@ The following discusses the many configuration features available in Turbo Studi
 - **Active Directory** fields enable you to limit where the container can run based on queries to the Active Directory Domain Controller.
 - **Platform** allows you to specify the minimum required version of the Windows Operating System where the container will be allowed to run.
 
-##### Process Configuration
+#### Process Configuration
 
 ![](/docs/studio/working_with_turbo_studio/settings4.png)
 

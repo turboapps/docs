@@ -1,8 +1,8 @@
-### MSI
+## MSI
 
 You can build your standalone executable into an MSI that is ready to deploy in your environment. The MSI can be configured to include applicaion shortcuts and file associations.
 
-#### MSI Settings
+### MSI Settings
 
 ![](/docs/studio/working_with_turbo_studio/msi1.png)
 
@@ -39,7 +39,7 @@ The following table includes descriptions of the settings that you can use for M
 	</tr>
 </table>
 
-#### MSI Example
+### MSI Example
 
 Here we will show the steps required to configure a simple container to be deployed via MSI with shortcuts and file associations. 
 

@@ -1,8 +1,8 @@
-### Snapshots
+## Snapshots
 
 Many applications require combinations of filesystem and registry entries. To facilitate containerization of these applications, Turbo Studio can snapshot application installations and automatically configure them based on modifications made to the host system during setup.
 
-#### Process
+### Process
 
 Snapshots use before and after images of the host machine to determine configuration:
 
@@ -24,7 +24,7 @@ Complete the following steps to use the Snapshot feature:
 
 6. Review the filesystem and registry entries:  Remove any files or settings not required for proper execution. Removing unused entries will reduce image size. Be careful to avoid removal of required resources, as it will cause your image to fail to function properly.
 
-#### Capture Application Updates via Snapshot
+### Capture Application Updates via Snapshot
 
 Container updates can be captured within Turbo Studio via snapshots.
 
@@ -42,7 +42,7 @@ Complete the following steps to capture an update via snapshots:
 
 This process only captures changes between the original executable and installed updates. You can then apply the resulting SVM to the original virtual package.
 
-#### Best Practices
+### Best Practices
 
 - Performing the snapshot on a clean machine ensures that all dependencies are installed by the application setup. Installing on a machine with existing components can inadvertently include dependencies in the before snapshot and exclude them from the final output.
 
@@ -60,11 +60,11 @@ This process only captures changes between the original executable and installed
 
 - Remove uninstall shortcuts during the pruning process.
 
-#### Snapshotting Google Chrome Install
+### Snapshotting Google Chrome Install
 
 Below is a walkthrough of the steps required to snapshot Google Chrome.
 
-##### Start with a Clean Virtual Machine
+#### Start with a Clean Virtual Machine
 
 ![](/docs/studio/working_with_turbo_studio/vm1.png)
 
@@ -79,7 +79,7 @@ In this example we will create a snapshot of Google Chrome.
 ![](/docs/studio/working_with_turbo_studio/vm2.png)
 
 
-##### Using the Wizard to Capture the Application Install
+#### Using the Wizard to Capture the Application Install
 
 Select the third option in the Wizard, **Snapshot a third-party application or component**.
 

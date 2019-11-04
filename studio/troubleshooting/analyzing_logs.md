@@ -1,8 +1,8 @@
-### Analyzing Logs
+## Analyzing Logs
 
 In diagnostic mode, a log file will be created for each process that is spawned in the container environment. By default the virtual machine logs are named "xclog_[pid].txt" and the network logs are named "xcnetwork_[pid].txt", where "pid" is the process ID in hexidecimal format. The virtual machine logs show diagnostic information about the code executing in the process. The network logs show specifics about network handling, virtual proxies, and routing.
 
-#### Virtual Machine Logs
+### Virtual Machine Logs
 
 Virtual machine logs show every system function call that comes from the process. 
 
@@ -47,7 +47,7 @@ From viewing this log entry, we can determine that this thread was looking up a 
 
 This is just one example but following the same procedures to cross reference with Microsoft documentation can be used to decipher most any log entry.
 
-#### Virtual Machine Analysis Strategies
+### Virtual Machine Analysis Strategies
 
 Virtual machine logs are frequently very large and it can be a difficult task to isolate which of the many error conditions are causing problems. There are several techniques that can be employed to make the task easier.
 
@@ -55,7 +55,7 @@ The first technique is to compare working logs to failing ones. In many cases, a
 
 The second technique is to narrow the scope of the logs that you have to look through. For example, if an error only occurs after a button is pressed, then copying off the logs immediately before and after the button press will allow you to determine the set of log entries that were written for the operation that led to the error (the difference between the before and after logs). This can be especially effective when coupled with the first technique of comparing working to failing logs.
 
-#### Network Logs
+### Network Logs
 
 Network logs show details about any network operations that pass through the process.
 

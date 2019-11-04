@@ -1,8 +1,8 @@
-### Integration with Native Applications
+## Integration with Native Applications
 
 Often it is desirable to integrate containers with application toolchains that are installed natively on the machine. Turbo containers have the flexibility to allow this kind of integration. Below we will walk through how to open a .PDF file defined in a container with Adobe Reader which is installed natively on the system.
 
-#### Opening with native Adobe Reader
+### Opening with native Adobe Reader
 
 We will start by creating a simple container image which has a .PDF in it that we will want to open. I will source the .PDF from a file on my desktop and copy it into a new folder called "MyPDFs".
 
