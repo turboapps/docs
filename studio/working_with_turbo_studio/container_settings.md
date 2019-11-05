@@ -26,7 +26,7 @@ The following discusses the many configuration features available in Turbo Studi
 ![](/docs/studio/working_with_turbo_studio/settings3.png)
 
 - **Splash Image** can assign an image that is displayed while the container is loading. Startup images improve application branding and are useful when the application requires several seconds to initialize. The **Transparency key** enables the splash image to contain transparent regions which can improve the visual effectiveness of your splash. The splash image can be shown for a specific amount of time or until the first application window appears. The splash image can always be dismissed by clicking it with the mouse.
-- **Shims** and **Scripts** settings allow you to run custom code to configure or clean up environments before and after a container is executed. See [Startup/Shutdown Scripts and Shims](/docs/studio/working-with-turbo-studio#startupshutdown-scripts-and-shims) for more information.
+- **Shims** and **Scripts** settings allow you to run custom code to configure or clean up environments before and after a container is executed. See [Startup/Shutdown Scripts and Shims](/docs/studio/advanced-topics/startupshutdown-scripts-and-shims) for more information.
 - **Active Directory** fields enable you to limit where the container can run based on queries to the Active Directory Domain Controller.
 - **Platform** allows you to specify the minimum required version of the Windows Operating System where the container will be allowed to run.
 
@@ -52,7 +52,7 @@ The following discusses the many configuration features available in Turbo Studi
 - **Shutdown process tree on root process exit** make is so that all child processes of the startup file will automatically be killed when the startup file exists.
 - **Compress payload** makes it so that the files stored in the container at build time will be compressed. This can greatly reduce the size of the container image or executable file. This may have performance implications as files must be decompressed at runtime.
 - **Enable startup executable optimization** makes it so that if there is a single startup file, then it will be run directly rather than being spawned from the virtual machine boostrap executable. This will reduce the number of processes that are required to start the container.
-- **Enable Turbo command line arguments** makes it so that the container runtime parameters can be used (ie /XEnable, /XShellEx, etc). See [building standalone executables](/docs/studio/working-with-turbo-studio#standalone-executables) for more information.
+- **Enable Turbo command line arguments** makes it so that the container runtime parameters can be used (ie /XEnable, /XShellEx, etc). See [building standalone executables](/docs/studio/working-with-turbo-studio/standalone-executables) for more information.
 - **Enable window class isolation** enables isolation for window classes. Window classes are a fundamental set of attributes that are assigned to an application window in the Windows operating system. These are often used to detect the presence of applications that are already running. 
 - **Enhanced DEP compatibility for legacy applications** hides DEP settings on modern operating systems which can allow older applications to run in a container. Be aware of your company security policies before enabling this setting.
 - **Enhanced DRM compatibility** allows some DRM software (ie Armadillo variants) to function inside the container.

@@ -69,7 +69,7 @@ SpawnComServers
 SpawnVM
 SuppressCollisionCheck
 
-See [VM Settings](/docs/reference/vm-settings-and-variables#command-line-settings) for details on the available settings.
+See [VM Settings](/docs/vm/virtual-machine/command-line-settings) for details on the available settings.
         </td>
 	</tr>
 	<tr>

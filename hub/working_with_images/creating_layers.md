@@ -24,7 +24,7 @@ meta name="pythonidle"
 meta release="3.7.3"
 ```
 
-Include the base image by using the `layer` [command](/docs/reference/turboscript#layer):
+Include the base image by using the `layer` [command](/docs/reference/turboscript/layer):
 
 ```
 ###################################

@@ -20,5 +20,5 @@ If you attempt to execute an EXE file over 4GB in size you will get the error me
 
 ![](/docs/studio/working_with_turbo_studio/4gbexe1.png)
 
-See the article on handling [Large Applications](/docs/studio/advanced-topics#large-applications) for information on containerizing and optimizing large applications.
+See the article on handling [Large Applications](/docs/studio/advanced-topics/large-applications) for information on containerizing and optimizing large applications.
 

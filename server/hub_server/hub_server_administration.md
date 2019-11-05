@@ -4,17 +4,17 @@ The Turbo Hub Server Administration Site enables you to manage and control all a
 
 The default location of the Administration Site is: http://localhost:80/admin, and consists of the following links:
 
-- **Hub**: This page lists all applications repositories on your Turbo Hub Server. From here **Federation** can be configured to source application repositories from turbo.net hub. **API Keys** can be defined to allow access to your hub without using a password (useful for automation, tooling, and other similar scenarios). For more information refer to [Managing Hub server](/docs/server/hub-server#hub-server-administration-managing-hub).
+- **Hub**: This page lists all applications repositories on your Turbo Hub Server. From here **Federation** can be configured to source application repositories from turbo.net hub. **API Keys** can be defined to allow access to your hub without using a password (useful for automation, tooling, and other similar scenarios). For more information refer to [Managing Hub server](/docs/server/hub-server/hub-server-administration#managing-hub).
 
-- **Users**: This page list all users and groups on your Turbo Hub Server. From here **Directory Services** can be configured to import users from LDAP or Active Directory. **Authentication Method** allows you to configure how users will authenticate with the Turbo Hub Server. **Device Keys** allows you to manage all registered devices. For more information refer to [Managing Users and Authentication](/docs/server/hub-server#hub-server-administration-managing-users-and-authentication).
+- **Users**: This page list all users and groups on your Turbo Hub Server. From here **Directory Services** can be configured to import users from LDAP or Active Directory. **Authentication Method** allows you to configure how users will authenticate with the Turbo Hub Server. **Device Keys** allows you to manage all registered devices. For more information refer to [Managing Users and Authentication](/docs/server/hub-server/hub-server-administration#managing-users-and-authentication).
 
-- **Servers**: This page lists all servers that are included as part of the current Turbo Hub Server installation. Server settings such as roles, web service bindings, and SSL certificates may be configured here. For more information refer to [Managing Servers](/docs/server/hub-server#hub-server-administration-managing-servers).
+- **Servers**: This page lists all servers that are included as part of the current Turbo Hub Server installation. Server settings such as roles, web service bindings, and SSL certificates may be configured here. For more information refer to [Managing Servers](/docs/server/hub-server/hub-server-administration#managing-servers).
 
-- **Workspaces**: This page lists all workspaces on your Turbo Hub Server. From here workspaces may be added, configured, and deleted. For more information refer to [Managing Workspaces](/docs/server/hub-server#hub-server-administration-managing-workspaces).
+- **Workspaces**: This page lists all workspaces on your Turbo Hub Server. From here workspaces may be added, configured, and deleted. For more information refer to [Managing Workspaces](/docs/server/hub-server/hub-server-administration#managing-workspaces).
 
-- **Reports**: This page provides preconfigured customizable analytics reports, sorted according to Administration, Hub, and Users. For more information refer to [Reports](/docs/server/hub-server#hub-server-administration-reports).
+- **Reports**: This page provides preconfigured customizable analytics reports, sorted according to Administration, Hub, and Users. For more information refer to [Reports](/docs/server/hub-server/hub-server-administration#reports).
 
-- **General**: This page contains a summary of your Turbo Hub Server license, and information and options for configuring Turbo Hub Server. For more information refer to [Configuration and Customization](/docs/server/hub-server#hub-server-administration-configuration-and-customization).
+- **General**: This page contains a summary of your Turbo Hub Server license, and information and options for configuring Turbo Hub Server. For more information refer to [Configuration and Customization](/docs/server/hub-server/hub-server-administration#configuration-and-customization).
 
 ### Managing Hub
 
@@ -34,13 +34,13 @@ Complete the following steps to add a new application image to Turbo Hub Server:
 
 1. Install the Turbo Client for Windows platform.
 
-2. Connect the client to your hub server using the `turbo config` command. See [Config Command](/docs/reference#config) for more information.
+2. Connect the client to your hub server using the `turbo config` command. See [Config Command](/docs/reference/command-line/config) for more information.
 
 ```
 > turbo config --hub=http://[hubserver]
 ```
 
-3. Log in as a hub administrator account or use a **system** API key. This is done using the `turbo login` command. See [Login Command](/docs/reference#login) for more information.
+3. Log in as a hub administrator account or use a **system** API key. This is done using the `turbo login` command. See [Login Command](/docs/reference/command-line/login) for more information.
 
 ```
 > turbo login admin-user
@@ -72,7 +72,7 @@ The push command is denied with following error message:
 Pushing image mozilla/firefox-base:68.0.1 to mozilla/firefox-base:68.0.1
 Error: Push failed. This user may not be authorized to push to the mozilla repository.
 ```
-The current logged in user may not be an administrator of the Hub server. Add the user to the administrators group. For more information refer to [Managing Users and Authentication](/docs/server/hub-server#hub-server-administration-managing-users-and-authentication).
+The current logged in user may not be an administrator of the Hub server. Add the user to the administrators group. For more information refer to [Managing Users and Authentication](/docs/server/hub-server/hub-server-administration#managing-users-and-authentication).
 
 **NOTE:** If you add the user to the administrators group after already attempting to push an image to the Hub server, you may have to wait up to 5 minutes for the prermissions to propagate to the Hub server. Either switch to an API key based login, or restart the Hub server process and try again.
 
@@ -305,7 +305,7 @@ The **Authentication Method** page configures which Authentication Method is use
 
 - **Username and Password**: Username and Password authentication requires users to provide their username and password in order to log in. Passwords may be managed from the user settings page.
 
-- **Single Sign-On**: Single Sign-On authentication allows users to login to external directory services such as Azure AD. For more information on configuring SSO, refer to [Configure Azure AD](/docs/server/hub-server#azure-active-directory-integration-configure-azure-ad)
+- **Single Sign-On**: Single Sign-On authentication allows users to login to external directory services such as Azure AD. For more information on configuring SSO, refer to [Configure Azure AD](/docs/server/hub-server/azure-active-directory-integration#configure-azure-ad)
 
 #### Device Keys
 
@@ -366,7 +366,7 @@ The **Applications** page lists all applications that have been added to this wo
 
 ![](/docs/server/hub_server/admin-workspaces-admin-applications-edit.png)
 
-The **Application Settings** page provides configuration options for a variety of application settings. These settings affect the application's display settings, launch settings and more. For more information on these settings refer to the [Repository Settings](/docs/hub/repositories#repository-settings).
+The **Application Settings** page provides configuration options for a variety of application settings. These settings affect the application's display settings, launch settings and more. For more information on these settings refer to the [Repository Settings](/docs/hub/repositories/repository-settings).
 
 #### Workspace Administration Users
 
@@ -437,4 +437,4 @@ The **Appearance** page provides customization options for the Turbo Streaming S
 
 ![](/docs/server/hub_server/admin-general-files.png)
 
-The **Cloud Storage** page provides configuration options for integration with Cloud Storage providers such as OneDrive and Dropbox. This allows users to be able to access their files from these providers while running applications. For more information refer to the [Cloud Storage Integration](/docs/server/hub-server#cloud-storage-integration) section.
+The **Cloud Storage** page provides configuration options for integration with Cloud Storage providers such as OneDrive and Dropbox. This allows users to be able to access their files from these providers while running applications. For more information refer to the [Cloud Storage Integration](/docs/server/hub-server/cloud-storage-integration) section.

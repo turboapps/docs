@@ -30,7 +30,7 @@ In this section, the term layer is used interchagibly with image, since a layer 
 
 #### Layering Scenarios
 
-Layering is used to support [Turbo Studio components](/docs/reference/turbo-studio#runtimes-and-components). It is also used when [dependencies](/docs/reference/dependencies) are created.
+Layering is used to support [Turbo Studio components](/docs/studio/working-with-turbo-studio/basics#runtimes-and-components). It is also used when [dependencies](/docs/reference/dependencies) are created.
 
 #### Conflicts Between Layers
 

@@ -14,14 +14,14 @@ Typically this setting should be enabled in order to prevent loss of data.
 
 This setting allows the application to access the host device's local user folders. This includes user folders such as Desktop, Downloads, Documents, Music, Pictures, and Videos.
 
-For applications executing on a remote host, it is recommend that you access your files by connecting a [Cloud Storage Service](/docs/getting-started/accessing-files#cloud-storage-services).
+For applications executing on a remote host, it is recommend that you access your files by connecting a [Cloud Storage Service](/getting-started/using-files).
 
 
 ### Enable URL redirection
 
 When enabled, users using the Turbo URL Redirector Extension will automatically be routed to this virtual application when a accessing certain websites from their native browser.
 
-For more information on installing and configuring the URL redirection extension, see [Browser Redirector](/docs/deploying/integration-tools#browser-redirector).
+For more information on installing and configuring the URL redirection extension, see [Browser Redirector](/docs/deploying/integration-tools/redirector-walkthrough).
 
 
 ### Isolate network
@@ -30,7 +30,7 @@ Network isolation runs applications in a virtualized network environment. This e
 
 If you expect multiple users to be running on the same host, it is recommended that you disable this setting to prevent cross-session network access.
 
-For more granular network isolation settings, see [Virtual Networks](/docs/reference#new-virtual-networks).
+For more granular network isolation settings, see [Virtual Networks](/docs/reference/command-line/new#virtual-networks).
 
 
 ### Use DLL Cache
