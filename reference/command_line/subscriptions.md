@@ -1,4 +1,4 @@
-### subscriptions
+## subscriptions
 
 The `subscriptions` command lists the subscriptions that are currently registered on the device.
 

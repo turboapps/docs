@@ -1,4 +1,4 @@
-### meta
+## meta
 
 The `meta` instruction sets the metadata value for the output image. 
 

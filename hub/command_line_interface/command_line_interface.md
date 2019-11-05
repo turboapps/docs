@@ -1,4 +1,4 @@
-### Introduction
+## Introduction
 
 The Turbo Command Line Interface allows advanced users and administrators to execute, modify, and create Turbo applications in an automated manner. Install the [Turbo for Windows](https://turbo.net/downloads) to get started.
 

@@ -1,4 +1,4 @@
-### requires
+## requires
 
 The `requires` instruction defines a build time requirement which should be enforced immediately. If the requirement cannot be satisfied, the build will fail.
 

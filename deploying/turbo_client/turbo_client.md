@@ -1,14 +1,14 @@
-### Turbo Client
+## Turbo Client
 
 In the following pages you will learn about how to use the Turbo Client and Turbo Launcher.
 
-#### Install the Plugin
+### Install the Plugin
 
 End-users must download and install the Turbo Client prior to launching Turbo applications for the first time.
 
 If you already have the Turbo Client and are installing an update Turbo automatically uninstalls older versions if they have been idle for more than 30 days. 
 
-##### Command line flags
+#### Command line flags
 
 When installing the Turbo Client for a managed environment, there are command line flags that may be useful.
 
@@ -41,7 +41,7 @@ When installing the Turbo Client for a managed environment, there are command li
       </tr>
 </table>
 
-##### Proxy Settings
+#### Proxy Settings
 
 The Turbo Client uses the proxy settings of the local device by default. End-users using Microsoft Internet Explorer can change proxy settings from within the browser. Users of other browsers must change proxy settings on the host device itself.
 
@@ -55,9 +55,9 @@ Complete the following steps to change system proxy settings on the host device:
 
 4. Enter the proxy settings specified by your network administrator.
 
-#### Using the Turbo Launcher
+### Using the Turbo Launcher
 
-##### The Turbo Launcher 
+#### The Turbo Launcher 
 
 The Turbo Launcher is what end-users see when they select the Turbo icon from the system tray. Users are able to launch applications from the Hub they are connected to.
 
@@ -71,9 +71,9 @@ The Turbo Launcher is what end-users see when they select the Turbo icon from th
 
 - Only one Turbo user per host can be signed in at the same time. 
 
-#### Advanced Plugin Topics
+### Advanced Plugin Topics
 
-##### Install location
+#### Install location
 
 If the Turbo Client was installed for all users, the install location is in one of the following locations.
 
@@ -83,7 +83,7 @@ If the Turbo Client was installed for all users, the install location is in one 
 
 If the plugin is installed for a single user profile, the install location is in the following locations: **C:\Users\<profile>\AppData\Local\Turbo**
 
-##### Command line flags
+#### Command line flags
 
 The Turbo Client installs an application called Turbo Sandbox Manager that runs on startup. This application can be found in the install directory of the Turbo Client. There is a command line interface for this application.
 

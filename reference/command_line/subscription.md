@@ -1,4 +1,4 @@
-### subscription
+## subscription
 
 The `subscription` command is used to update, suspend, resume and print the details of a subscription. 
 
@@ -15,15 +15,15 @@ Usage: subscription <options> [action] <name>
 
 The available actions are `update`, `suspend`, `resume` and `print`.
 
-#### Update a Subscription
+### Update a Subscription
 The `update` action updates all of the images in the subscription to the latest version.  
 
 Use the `--no-pull` option to update the subscription without pulling new image versions, instead the images will be streamed on demand.
 
-#### Suspend and Resume a Subscription
+### Suspend and Resume a Subscription
 The `suspend` action suspends updates for the specified subscription. The `resume` command will resume updates.
 
-#### Listing Details
+### Listing Details
 The `print` action shows details about the subscription.
 
 ```

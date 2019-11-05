@@ -1,4 +1,4 @@
-### subscribe
+## subscribe
 
 The `subscribe` command is used to subscribe to a workspace, or an organization's repositories. 
 
@@ -18,8 +18,8 @@ In addition to installing each repository, a subscription will periodically upda
 
 Use the `subscription` command to control the subscription. To view all subscriptions use the `subscripions` command. To remove the subscription use the `unsubscribe` command. 
 
-#### Subscribe All Users
+### Subscribe All Users
 When `--all-users` is specified, the subscription will be installed for all users on the machine. This command requires Administrator privileges and that the Turbo client is installed for all users. See the install options for the Turbo installer for more information on how to install for all users.
 
-#### Automatic Updates
+### Automatic Updates
 Subscribing to a channel creates a Winodws task that executes a daily update of the subscription. To avoid automatic updates, the `subscription` command has a `suspend` action or the scheduled task can be disabled or modified to suit the desired update process.

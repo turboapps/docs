@@ -1,4 +1,4 @@
-### startup file
+## startup file
 
 The `startup file` instruction is used to specify the startup file or script to run when a new container is created from this image (using `turbo run`).
 
@@ -14,7 +14,7 @@ This instruction is only applied to the output image and does not affect the int
 
 If `startup file` is not specified then the startup file setting is inherited from last image listed in the `layer` command.  Well known system paths like `C:\Windows\System32` will be replaced by a variable that will be converted at runtime to the appropriate path for the execution environment.
 
-#### As an Executable
+### As an Executable
 
 If you wish to launch a process from an executable and optionally supply parameters to that executable, you must express the desired *executable* as a tuple of strings and give the full path to the executable (unless it is on the local system or container's `PATH`). Using this syntax, parameters are passed directly to the executable. 
 
@@ -23,7 +23,7 @@ If you wish to launch a process from an executable and optionally supply paramet
 startup file ("git.exe", "clone", "https://github.com/turboapps/docs")
 ```
 
-#### As a Shell Command
+### As a Shell Command
 
 You may also launch a process using basic command prompt syntax. To open a Command Prompt window with a message:
 
@@ -32,7 +32,7 @@ You may also launch a process using basic command prompt syntax. To open a Comma
 startup file cmd.exe /k echo hello world
 ```
 
-#### Multiple Startup Files
+### Multiple Startup Files
 
 It is possible to specify multiple startup files which will be launched simultaneously using the array syntax.
 
@@ -44,7 +44,7 @@ startup file [("c:\windows\system32\notepad.exe"), ("c:\windows\regedit.exe")]
 turbo run test-shotgun
 ```
 
-#### Startup File Triggers
+### Startup File Triggers
 
 A startup file, or collection of startup files, can be assigned a trigger name. When this is done, the startup file(s) specified will only launch when using `turbo run` with the `--trigger` flag. This can be useful when setting up shortcuts to multiple applications inside the same image.
 

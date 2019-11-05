@@ -1,4 +1,4 @@
-### history
+## history
 
 The `history` command lists all images used in the past. 
 
@@ -32,6 +32,6 @@ The results of `turbo history` are truncated so that they are most readable in t
 
 The `--csv` flag can be specified to return the output as a tab-separated table. 
 
-#### JSON output
+### JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain either an `images` array with information about list of recently images or an `error` object if command failed.

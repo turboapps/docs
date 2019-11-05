@@ -1,4 +1,4 @@
-### import
+## import
 
 The `import` command is used to add Turbo images or non-Turbo file types from your local machine to your local registry.
 
@@ -33,6 +33,6 @@ turbo import -n=my-svm-image svm C:\s\my-image.svm
 
 **Turbo Studio** users can use this command to import their existing components.
 
-#### JSON output
+### JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain either an `image` object with information about imported image or an `error` object if command failed.

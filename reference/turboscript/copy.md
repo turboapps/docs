@@ -1,4 +1,4 @@
-### copy
+## copy
 
 The `copy` instruction is used to copy a file or directory from a TurboScript or an XAPPL configuration directory.
 

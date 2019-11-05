@@ -1,4 +1,4 @@
-### config
+## config
 
 The `config` command displays and allows modification of the current configuration settings.
 
@@ -32,13 +32,13 @@ If `turbo config` is executed without command line parameters then the current s
 
 To modify any settings, specify them as command line flags and assign a value to the flag. This value will then be applied to that setting. 
 
-#### Change the Hub Server
+### Change the Hub Server
 
 The hub server that Turbo will connect to, and thus push to and pull from, can be configured with the `--hub` flag.
 
 By default, Turbo is configured to connect to `https://turbo.net/hub`.
 
-#### Change the Storage Path
+### Change the Storage Path
 
 The storage path points to the directory where images and containers are saved. By default, images and containers are saved in `%LOCALAPPDATA%\Turbo\Containers`.  Use the `--storage-path` flag to set the storage path to a different location.
 
@@ -48,7 +48,7 @@ Use the `--container-path` flag to specify a new location for container storage.
 
 Finally, the storage path can also be overwritten by the `TURBOREPO` environment variable which may be useful for testing an alternate location quickly without updating the client configuration. 
 
-#### Set the Image Cache Size
+### Set the Image Cache Size
 
 The image cache size flag will set the amount of disk space local images will consume before deleting lesser prioritized images. Set the value to 0 for unlimited cache size. The default value unlimited. 
 
@@ -64,7 +64,7 @@ Image cache size: 2.00 GB
 > turbo config --image-cache-size=0
 Image cache size: unlimited
 ```
-#### Example
+### Example
 
 ```
 # Set container and image root path to C:\ProgramData\Turbo\Containers
@@ -87,10 +87,10 @@ Browser redirection: enabled
 > turbo config --image-path=allusers --all-users
 ```
 
-#### Resetting Config Settings
+### Resetting Config Settings
 
 The configuration settings for Turbo can be reset to their default values by issuing the config command with the `--reset` flag.
 
-#### JSON output
+### JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain either a `configuration` object with information about configuration or an `error` object if command failed.

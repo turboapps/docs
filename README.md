@@ -94,7 +94,7 @@ Edit the **docs.yaml** file following existing patterns.
 
 ### docs.yaml
 
-The overall structure of the page is dicated by the **docs.yaml** file, located at /docs.yaml.
+The overall structure of the page is dictated by the **docs.yaml** file, located at /docs.yaml.
 Each document in the yaml file specifies a topic that will appear in the top navbar of the docs page. A topic has the following properties:
 
 1. A `topic`. This is the actual wording that will appear in the top navbar.

@@ -1,4 +1,4 @@
-### containers
+## containers
 
 The containers command lists all containers on the local machine.  
 
@@ -35,7 +35,7 @@ b92981a3dd27  nodejs/nodejs           node app.js  9/3/2014 11:05:36 AM  Stopped
 
 If the value specified for `-n` is greater than the number of containers present on the local machine, all of the containers are listed (same result as running `turbo containers`). 
 
-#### Formatting Results
+### Formatting Results
 
 The table that is returned by the containers command is space-formatted. If you wish to return the table with tabs between each column then use the `--csv` flag. 
 
@@ -58,6 +58,6 @@ The `--no-trunc` flag includes additional columns in the output, **Ports**, **Se
 
 The **Ports** column contains active port mappings. See the `turbo netstat` command for more information. The **VM version** contains version number of VM used to create and run container.
 
-#### JSON output
+### JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain either a `containers` array with information about available containers or an `error` object if command failed.

@@ -1,4 +1,4 @@
-### commit
+## commit
 
 The `commit` command builds an image from a container. The image is built from the container's most recent state. 
 
@@ -26,7 +26,7 @@ Usage: commit <options> <container> <image> [--args <startup file params>]
       --wait-after-exit       Leave process open after it exits
 ```
 
-#### Merging Images
+### Merging Images
 
 The `commit` command will merge all the base images used in the container. This behavior can be overridden with the `--no-base` flag. 
 
@@ -38,10 +38,10 @@ For example, if a container were created with the command `turbo run git/git,nug
 
 However, if the same container were committed with the command `turbo commit --no-base <container id> my-new-image`, `my-new-image` would only contain the files and registry keys created or modified in the container. The `git/git` and `nuget/nuget` images are included as a dependency at runtime.
 
-#### Startup File
+### Startup File
 
 To alter the selected startup file, apply the new value with `--startup-file` parameter. All parameters which are passed after the `--args` flag will be used as parameters to the startup file.
 
-#### JSON output
+### JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain either an `image` object with information about commited image or an `error` object if command failed.
