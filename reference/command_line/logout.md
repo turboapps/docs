@@ -10,7 +10,7 @@ Usage: turbo logout
      --all-users            Logout from the shared user credentials. Requires admin privilege.
 ```
 
-### Examples:
+### Examples
 
 ```
 # Logout the current user

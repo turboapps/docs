@@ -16,7 +16,7 @@ Usage: turbo login [<username> <password>]
 API Keys can be used to login to a user account or an organization without providing a username and password. It eliminates the need to hard code passwords or pass them in as parameters to automation scripts.
 API Keys are generated and revoked using user profile or organization settings at the **Turbo.net** website.
 
-### Examples:
+### Examples
 
 ```
 # Log in by specifying username and password

@@ -9,7 +9,7 @@ Usage: turbo cp [<source-container>:]<path-from> [<target-container>:]<path-to>
      --format=VALUE         Use json format for output
 ```
 
-### Examples:
+### Examples
 
 ```
 # Copy a file from a container to the native system

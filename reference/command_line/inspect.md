@@ -16,7 +16,7 @@ Usage: turbo inspect <options> <image>
                                p, dns, ports, env
 ```
 
-### Examples:
+### Examples
 
 ```
 # Show all details about the image

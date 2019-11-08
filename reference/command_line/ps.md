@@ -12,7 +12,7 @@ Usage: turbo ps <options> [<container>]
       --no-trunc             Don't truncate output
 ```
 
-### Examples:
+### Examples
 
 ```
 # View all processes running in containers

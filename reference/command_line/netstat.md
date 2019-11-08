@@ -9,7 +9,7 @@ Usage: turbo netstat <container>
      --format=VALUE         Use json format for output
 ```
 
-### Examples:
+### Examples
 
 ```
 > turbo run --route-add=tcp://80:0 --route-add=tcp://8081:0 --hosts=localhost:lhost --link=0218:service -d <image> 63621076457c4b4fb7fff3fcbfda06b1

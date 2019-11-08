@@ -14,7 +14,7 @@ Usage: turbo.exe export <options> <image> <path>
       --wait-after-exit      Leave process open after it exits
 ```
 
-### Examples:
+### Examples
 
 ```
 # Export an image to the local file system

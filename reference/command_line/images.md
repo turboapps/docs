@@ -15,7 +15,7 @@ The results are truncated so that they are most readable in the command prompt. 
 
 The `--csv` flag can be specified to return the output as a tab-separated table. 
 
-### Examples:
+### Examples
 
 ```
 # List all images in local registry

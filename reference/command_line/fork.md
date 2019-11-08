@@ -14,7 +14,7 @@ Usage: turbo fork  <existing container> [<new container name>]
 
 The `--images' flag replaces all images in the new container with the ones that are specified. Any images from the original container that are required in the new container would need to be specified again.
 
-### Examples:
+### Examples
 
 ```
 # Create an unnamed copy of a container
