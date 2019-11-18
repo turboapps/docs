@@ -1085,7 +1085,7 @@ Follow these steps to test Turbo Hub Server with SSL enabled using a self-signed
 
 Federation feature allows distributing hub servers across different regions to achieve faster streaming for end users and allows higher availability by redundancy. Federation works by assigning a `root` server from which the `child` hub servers to copy repositories from.
 
-Federation child communicates with the root server using an API key which is a symmetric secret key that must kept private between the servers. API keys can be disabled and recreated on demand from the admin user interface to ensure repository access to the server is secure. API keys can be configured to grant low privilege tokens which ensure the key is used only to read repository data from the root server.
+Federation child communicates with the root server using an API key which is a secret key between the servers. API keys can be disabled and recreated on demand from the admin user interface to ensure repository access to the server is secure. API keys can be configured to grant low privilege tokens which ensure the key is used only to read repository data from the root server.
 
 Federation repositories can be explicitly cached and synchronized on the child hub by adding them from the federation repository page. Federation repositories can also be automatically forwarded to the root server by using request forwarding. Request forwarding is achieved by forwarding https requests to the root hub.
 
@@ -1105,7 +1105,7 @@ Follow the [documentation](/docs/server/hub-server/getting-started#setup) to set
 
 3. Add a federated repository
 
-    Navigate to `https://{child}/admin/hub/federation.aspx`. Add a federated repository by using the repository identifier `namespace/name` (example: `mozilla/firefox`), and press save. The newly added repository should begin to synchronize immediately with the status displayed on the federation page.
+    Navigate to `https://{child}/admin/hub/federation.aspx`. Add a federated repository by using the repository identifier `namespace/name` (example: `mozilla/firefox`), and press save. The repository should begin to synchronize immediately with the status displayed on the federation page.
 
 4. Use the federated repository
 
