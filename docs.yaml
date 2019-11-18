@@ -147,9 +147,9 @@ sections:
       - Overview
   - title: Hub Server
     documents:
-      - Getting Started with Hub Server
-      - Hub Server Administration
-      - Hub Server Advanced Topics
+      - Getting Started
+      - Administration
+      - Advanced Topics
       - Cloud Storage Integration
       - Azure Active Directory Integration
   - title: Application Server

@@ -1,4 +1,4 @@
-## Hub Server Administration
+## Administration
 
 The Turbo Hub Server Administration Site enables you to manage and control all aspects of your Turbo Hub Server. 
 

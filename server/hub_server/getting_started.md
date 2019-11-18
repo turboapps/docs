@@ -1,4 +1,4 @@
-## Getting Started with Hub Server
+## Getting Started
 
 Turbo Hub Server is an on-premise application delivery platform. In this section you will learn about system requirements and instructions for installing, configuring and running Turbo Hub Server.
 

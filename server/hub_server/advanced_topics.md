@@ -1,4 +1,4 @@
-## Hub Server Advanced Topics
+## Advanced Topics
 
 This section describes advanced topics you may encounter when implementing Turbo Server.
 
@@ -1078,3 +1078,37 @@ Follow these steps to test Turbo Hub Server with SSL enabled using a self-signed
 2. On the client machine, double-click on your certificate.crt file to install it in the "Trusted Root Certification Authorities for Windows"
 	
 3. Access the hub using the Turbo Client command line tools, Turbo Launcher, or connected Turbo Streaming Server portal.
+
+### Federation
+
+Fedation feature allows administrators to setup separate child hub servers to copy repositories from a master Turbo Hub Server that you have configured yourself, or against the public Turbo.net Hub. 
+
+#### Setup Master Hub Server
+
+Follow the [documentation](/docs/server/hub-server/getting_started#setup) to setup a Hub Server and your repositories to the hub. The server which will contain the source of the repositories will be called the `master` server.
+
+#### Setup Api Key
+
+On the master, navigate to `https://{master}/admin/hub/keys.aspx`. Add an API Key with a descriptive name such as "Federation Key for {child}". `Run as system` setting is not required. Copy the generated API key.
+
+#### Add Federation Source to Hub
+
+On the child hub(s), navigate to `https://{child}/admin/hub/federationsource.aspx`. Change the `Hub` text box to the `master` hub host url. Add the previously copied API Key and press save.
+
+#### Add Federation Repository 
+
+Navigate to `https://{child}/admin/hub/federation.aspx`. Add a federated repository by using the repository identifier `namespace/name` (example: `mozilla/firefox`), and press save. The newly added repository should begin to synchronize immediately with the status displayed on the federation page.
+
+#### Use the Federated Repository
+
+Once the repository has finished synchronizing, you may begin using the repository on the child server from a [workspace](/docs/server/hub-server/administration#managing-workspaces). 
+
+You can also install the repository image directly using the turbo cli on the user's machine.
+
+```
+turbo config --hub={child}
+turbo login {user}
+turbo installi namespace/name
+```
+
+The application should be available from the start menu.
