@@ -1093,7 +1093,7 @@ If the root hub is unavailable due to network outage or maintenance, the child h
 
 #### Configuring Federation
 
-Follow the [documentation](/docs/server/hub-server/getting_started#setup) to setup a Hub Server and your repositories to the hub. The server which will contain the source of the repositories will be called the `root` server.
+Follow the [documentation](/docs/server/hub-server/getting-started#setup) to setup a Hub Server and your repositories to the hub. The server which will contain the source of the repositories will be called the `root` server.
 
 1. Setup an API Key
 
