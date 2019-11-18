@@ -4,7 +4,7 @@ The Turbo Hub Server Administration Site enables you to manage and control all a
 
 The default location of the Administration Site is: http://localhost:80/admin, and consists of the following links:
 
-- **Hub**: This page lists all applications repositories on your Turbo Hub Server. From here **Federation** can be configured to source application repositories from turbo.net hub. **API Keys** can be defined to allow access to your hub without using a password (useful for automation, tooling, and other similar scenarios). For more information refer to [Managing Hub server](/docs/server/hub-server/hub-server-administration#managing-hub).
+- **Hub**: This page lists all applications repositories on your Turbo Hub Server. From here **Federation** can be configured to source application repositories from a master hub. **API Keys** can be defined to allow access to your hub without using a password (useful for automation, tooling, federation, and other similar scenarios). For more information refer to [Managing Hub server](/docs/server/hub-server/administration#managing-hub).
 
 - **Users**: This page list all users and groups on your Turbo Hub Server. From here **Directory Services** can be configured to import users from LDAP or Active Directory. **Authentication Method** allows you to configure how users will authenticate with the Turbo Hub Server. **Device Keys** allows you to manage all registered devices. For more information refer to [Managing Users and Authentication](/docs/server/hub-server/hub-server-administration#managing-users-and-authentication).
 
@@ -86,7 +86,7 @@ On the repository edit page, a repository display name can be modified. This sho
 
 ![](/docs/server/hub_server/admin-federated-repos.png)
 
-With the Federation feature in Turbo Hub Server, you can configure application repositories to be sourced and automatically updated from the Turbo.net Hub. Since repositories in the Turbo.net Hub are automatically built as updates become available, you can remove the burden of maintaining images yourself.
+With the Federation feature in Turbo Hub Server, you can configure application repositories to be sourced and automatically updated from a master Turbo Hub. You may select the public Turbo.net Hub as the master hub. Since repositories in the Turbo.net Hub are automatically built as updates become available, you can remove the burden of maintaining images yourself.
 
 ![](/docs/server/hub_server/admin-federation-settings.png)
 
@@ -95,6 +95,8 @@ When first using Federation, you must configure the API key that is used to acce
 ![](/docs/server/hub_server/admin-federated-repos-add.png)
 
 To add a new federated repository, click the **Add** button and enter the full name of the Turbo.net repository that you want to federate. Set the **Revision History Length** field to the number of past revisions to import during a sync. Since repositories on Turbo.net are updated automatically, some may have hundreds of images available. The default value is 10 revisions. After setting the properties, click **Save**. You will now see your new federated repo listed and the initial sync with Turbo.net Hub will be in progress. After the sync is complete you will see the new repository in your main repository list on the Hub administration page.
+
+To setup your own hub as the master server, refer to [Advanced Topics](/docs/server/hub_server/advanced-topics#federation).
 
 #### Managing API Keys
 
