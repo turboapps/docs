@@ -63,6 +63,16 @@ The following table lists common issues/questions and their solutions:
 		 <p>Review the <strong>SSL troubleshooting</strong> documentation. If it is not a certificate issue, the application server may not be accessible from the broker. Check that port 8084 can be accessed from the broker to the application server.</p>
          </td>
       </tr>
+
+      <tr>
+         <td>
+            <p>Help! I forgot the administrator account password and can't access the Administration Site.</p>
+         </td>
+         <td>
+            <p>Remove the admin group by using the server cli. Open a command prompt as administrator and navigate to the installation folder. Run `Server.exe admin user-group 2 clear` which clears all users from the server administrator's group. This allows you to access the the Administration Site without login. Reset the admin user's password and add the user back to the administrator's group to secure the Administration Site.</p>
+         </td>
+      </tr>
+
 </table>
 
 ### Enable Diagnostic Mode
