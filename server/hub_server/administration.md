@@ -337,11 +337,11 @@ The **Servers** page lists all servers that are included as part of the current 
 
 ### Setting URLs
 
-The URLs page allows configuring custom externally consumed URLs used within by the server farm. For example, if you would like to setup a load balancer for Portal server(s) within a farm, enter the load balancer's URL in the Portal URL text box. All related services will correctly allow access from that URL.
+The URLs page allows configuring end users facing URLs for the server farm. For example, if you would like to use a load balancer for multiple Portals within a server farm, enter the load balancer's URL in the Portal URL text box. Web services and end user URLs will use that URL if required.
 
-The Hub allows access behind the specified proxy url, but does not allow multiple instances within a farm. Hub installations can be made redundant by configuring storage redundancy on the operating system, and scaled by using federation.
+The Hub server URL can be configured to point to a specified proxy url. Hub server itself does not need multiple instances within a farm. Redundancy is achieved by storage redundancy, and scaled horizontally using federation.
 
-If the URLs are empty, then the services will default to the server specified **Web Service Root** setting.
+If the URLs are empty, then services will default to the server specified **Web Service Root** setting.
 
 ### Managing Workspaces
 
