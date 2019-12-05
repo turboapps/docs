@@ -28,7 +28,7 @@ There are two configuration steps for the file share server:
 
 From <https://turbo.net/download> download the .msi Turbo.net Client installer and create an Application in SCCM with the .msi deployment type:
 
-![](sccm-2-turbo-app-deployment-type.png)
+![](/docs/deploying/system-center-sccm/sccm-2-turbo-app-deployment-type.png)
 
 Next, create a custom Application that configures the newly installed Turbo.net Client. For this purpose, we need a simple install.bat file with the following content (replace `{file-share}` with the shared folder path from the previous point):
 
@@ -43,19 +43,19 @@ echo ok > "C:\Program Files (x86)\Turbo\configured.txt"
 
 Next, we create a custom Application:
 
-![](sccm-2-turbo-app-deployment-type-script-0.png)
+![](/docs/deploying/system-center-sccm/sccm-2-turbo-app-deployment-type-script-0.png)
 
 Create the 'Script Installer' deployment type:
 
-![](sccm-2-turbo-app-deployment-type-script-1.png)
+![](/docs/deploying/system-center-sccm/sccm-2-turbo-app-deployment-type-script-1.png)
 
 Specify the path to the batch file:
 
-![](sccm-2-turbo-app-deployment-type-script-2.png)
+![](/docs/deploying/system-center-sccm/sccm-2-turbo-app-deployment-type-script-2.png)
 
 And the detection rules:
 
-![](sccm-2-turbo-app-deployment-type-script-3.png)
+![](/docs/deploying/system-center-sccm/sccm-2-turbo-app-deployment-type-script-3.png)
 
 Finally, on the User Experience tab, make sure the script installs for the system and run the deployment.
 
@@ -73,11 +73,11 @@ We are now ready to prepare the SCCM package for our application. We start again
 
 And use it in a 'Script Installer' deployment:
 
-![](sccm-3-custom-app-deployment-type-script-0.png)
+![](/docs/deploying/system-center-sccm/sccm-3-custom-app-deployment-type-script-0.png)
 
 The turbo installi command adds keys to the Uninstaller key, so you may use the app key in a Detection Rule configuration:
 
-![](sccm-3-custom-app-deployment-type-script-1.png)
+![](/docs/deploying/system-center-sccm/sccm-3-custom-app-deployment-type-script-1.png)
 
 In the User Experience tab, select 'Install for user' and finish the Application wizard. We are now ready to deploy the package to Distribution Points and client devices.
 
