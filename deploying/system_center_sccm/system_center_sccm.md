@@ -20,6 +20,9 @@ There are two configuration steps for the file share server:
 
 - Install the Turbo.net client: `turbo-client-19.9.2054.0.exe --silent --all-users`
 - Make the path C:\ProgramData\Turbo\Containers\repo a shared folder, giving read-access to all the user accounts which will run Turbo applications
+- Download the base images:
+  - `turbo pull --all-users xvm`
+  - `turbo pull --all-users clean`
 
 #### 2. Prepare Turbo.net Client Runtime installation package in SCCM
 
@@ -65,7 +68,7 @@ It's time to create the application .svm file. We can do that by using either St
 We are now ready to prepare the SCCM package for our application. We start again by creating a .bat file with a simple command:
 
 ```
-turbo installi --pull --all-users --skip-installed {app-name}
+"C:\Program Files (x86)\Turbo\Cmd\turbo.exe" installi --skip-installed --offline {app-name}
 ```
 
 And use it in a 'Script Installer' deployment:
@@ -76,9 +79,7 @@ The turbo installi command adds keys to the Uninstaller key, so you may use the 
 
 ![](sccm-3-custom-app-deployment-type-script-1.png)
 
-Alternatively, you could check the existence of the `C:\ProgramData\Turbo\Containers\installation\{app-title}` folder.
-
-In the User Experience tab, select 'Install for system' and finish the Application wizard. We are now ready to deploy the package to Distribution Points and client devices.
+In the User Experience tab, select 'Install for user' and finish the Application wizard. We are now ready to deploy the package to Distribution Points and client devices.
 
 ** *Note* **
 
