@@ -6,7 +6,7 @@ Turbo Hub Server is an on-premise application delivery platform. In this section
 
 For small to medium size deployments (less than 200 concurrent users), the minimum recommended machine specifications are:
 
-- A supported operating system (see Supported Platforms)
+- Microsoft Windows Server 2012R2+. Microsoft Windows Server 2016 recommended for any application server roles.
 - At least 4 GB of RAM
 - 2.5 GHz or greater processor with at least 2MB L2 cache
 - 32-bit or 64-bit chipset
