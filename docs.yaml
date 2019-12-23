@@ -152,10 +152,6 @@ sections:
       - Advanced Topics
       - Cloud Storage Integration
       - Azure Active Directory Integration
-  - title: Application Server
-    documents:
-      - Getting Started
-      - Configuration
   - title: Legacy Portal Server
     documents:
       - Legacy Portal Server
