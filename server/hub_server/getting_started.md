@@ -9,7 +9,6 @@ For small to medium size deployments (less than 200 concurrent users), the minim
 - Microsoft Windows Server 2012R2+. Microsoft Windows Server 2016 recommended for any application server roles.
 - At least 4 GB of RAM
 - 2.5 GHz or greater processor with at least 2MB L2 cache
-- 32-bit or 64-bit chipset
 
 Larger enterprise deployments may require additional processing power, memory, and disk space. For sizing and technical guidance, contact Turbo at support@turbo.net.
 
