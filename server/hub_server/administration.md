@@ -335,6 +335,15 @@ The **Servers** page lists all servers that are included as part of the current 
 
 - **Web Service SSL Certificate**: Configures the SSL certificate files that are used for HTTPS web service bindings. The provided file paths must point to permanent locations that are available to the service account.
 
+- **Java Virtual Machine Settings**: Configures the JVM heap space for the Hub and Broker Java processes. This setting is only available for servers with the Hub or Portal roles enabled.  
+
+- **Image Cache**: Configures an image cache path where the Hub will store SVM images. This prevents the redownload of the same application when ran by different users. This can be a local file path which will be shared by all users on the same device, or a network path which may be shared by all users across multiple devices.
+
+- **Application Load Balancing Strategy**: Configires the load balancing strategy used to allocation applications to application servers. This setting is only available for servers with the Portal role enabled. The available strategies are:
+  - **Active Sessions**: New application requests will be allocated to the active application server with the lowest active session count.
+  - **Total Sessions**: New application requests will be allocated to the active application server with the lowest total session count.
+  - **CPU Load**: New application requests will be allocated to the active application server with the lowest CPU load.
+
 ### Setting URLs
 
 The URLs page allows configuring end users facing URLs for the server farm. For example, if you would like to use a load balancer for multiple Portals within a server farm, enter the load balancer's URL in the Portal URL text box. Web services and end user URLs will use that URL if required.
