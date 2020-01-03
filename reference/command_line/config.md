@@ -14,10 +14,10 @@ Usage: turbo config <options>
       --container-path=VALUE        Overrides container storage to the specified path
       --debug-vm-path=VALUE         Path to debug VM
       --disable=VALUE               Disables a feature: DirectDownload, MergeIsolation, Redirector, TurboDrive, LocalNetworkAccess
+      --domain=VALUE                The domain to log into
       --enable=VALUE                Enables a feature: DirectDownload, MergeIsolation, Redirector, TurboDrive, LocalNetworkAccess
       --format=VALUE                Use the specified format for output. Supported values: json
       --gci-interval=VALUE          The number of minutes between automatic image garbage collection checks. Set to 0 to disable.
-      --hub=VALUE                   The remote hub to log into
       --image-cache-size=VALUE      Limits the maximum image cache size, in megabytes. Set to 0 for unlimited.
       --image-path=VALUE            Overrides image storage to the specified path. Supported values: full path, or "allusers" to use the system wide shared folder
       --remove-trusted-source=VALUE Remove a source hub from the trusted list
@@ -32,11 +32,11 @@ If `turbo config` is executed without command line parameters then the current s
 
 To modify any settings, specify them as command line flags and assign a value to the flag. This value will then be applied to that setting. 
 
-### Change the Hub Server
+### Change the Server
 
-The hub server that Turbo will connect to, and thus push to and pull from, can be configured with the `--hub` flag.
+The server that Turbo will connect to, and thus push to and pull from, can be configured with the `--domain` flag.
 
-By default, Turbo is configured to connect to `https://turbo.net/hub`.
+By default, Turbo is configured to connect to `https://turbo.net`.
 
 ### Change the Storage Path
 
