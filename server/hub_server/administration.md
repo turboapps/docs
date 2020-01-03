@@ -8,7 +8,7 @@ The default location of the Administration Site is: http://localhost:80/admin, a
 
 - **Users**: This page list all users and groups on your Turbo Hub Server. From here **Directory Services** can be configured to import users from LDAP or Active Directory. **Authentication Method** allows you to configure how users will authenticate with the Turbo Hub Server. **Device Keys** allows you to manage all registered devices. For more information refer to [Managing Users and Authentication](/docs/server/hub-server/hub-server-administration#managing-users-and-authentication).
 
-- **Servers**: This page lists all servers that are included as part of the current Turbo Hub Server installation. Server settings such as roles, web service bindings, and SSL certificates may be configured here. For more information refer to [Managing Servers](/docs/server/hub-server/hub-server-administration#managing-servers).
+- **Servers**: This page lists all servers that are included as part of the current Turbo Hub Server installation. Server settings such as roles, web service bindings, and SSL certificates may be configured here. For more information refer to [Managing Servers](/docs/server/hub-server/administration#managing-servers).
 
 - **Workspaces**: This page lists all workspaces on your Turbo Hub Server. From here workspaces may be added, configured, and deleted. For more information refer to [Managing Workspaces](/docs/server/hub-server/hub-server-administration#managing-workspaces).
 

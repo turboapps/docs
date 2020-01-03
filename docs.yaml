@@ -152,6 +152,7 @@ sections:
       - Advanced Topics
       - Cloud Storage Integration
       - Azure Active Directory Integration
+      - Network and Load Balancing
   - title: Legacy Portal Server
     documents:
       - Legacy Portal Server
