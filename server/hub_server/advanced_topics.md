@@ -77,7 +77,7 @@ server.exe /provision admin@acme.com /dblibrary "Integrated Security=true;Data S
 
 Select **Enter** to submit the command and choose **Y** to proceed.
 
-Fully-qualified domain names can be specified on the **Servers** page of the Administration Site. For more information about modifying servers refer to Managing Servers.
+Fully-qualified domain names can be specified on the **Domain** page of the Administration Site. For more information about modifying servers refer to Managing the Domain.
 
 ### Configure Turbo Hub Server Security
 
