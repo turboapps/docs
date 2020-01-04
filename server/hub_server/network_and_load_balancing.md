@@ -4,7 +4,7 @@
 
 Turbo Server allows installing redundant roles across multiple servers. To install the role on separate servers, run the Turbo Server installer and select the role you would like to install.
 
-The administrator can also add or remove roles on that server after installation. For more information refer to [Managing Domain](/docs/server/hub-server/administration#managing-domain).
+The administrator can also add or remove roles on that server after installation. For more information refer to [Managing the Domain](/docs/server/hub-server/administration#managing-the-domain).
 
 ### Configuring Network
 

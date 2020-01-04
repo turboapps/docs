@@ -8,7 +8,7 @@ The default location of the Administration Site is: http://localhost:80/admin, a
 
 - **Users**: This page list all users and groups on your Turbo Hub Server. From here **Directory Services** can be configured to import users from LDAP or Active Directory. **Authentication Method** allows you to configure how users will authenticate with the Turbo Hub Server. **Device Keys** allows you to manage all registered devices. For more information refer to [Managing Users and Authentication](/docs/server/hub-server/hub-server-administration#managing-users-and-authentication).
 
-- **Servers**: This page lists all servers that are included as part of the current Turbo Hub Server installation. Server settings such as roles, web service bindings, and SSL certificates may be configured here. For more information refer to [Managing Servers](/docs/server/hub-server/administration#managing-domain).
+- **Servers**: This page lists all servers that are included as part of the current Turbo Hub Server installation. Server settings such as roles, web service bindings, and SSL certificates may be configured here. For more information refer to [Managing Servers](/docs/server/hub-server/administration#managing-the-domain).
 
 - **Workspaces**: This page lists all workspaces on your Turbo Hub Server. From here workspaces may be added, configured, and deleted. For more information refer to [Managing Workspaces](/docs/server/hub-server/hub-server-administration#managing-workspaces).
 
@@ -315,7 +315,7 @@ The **Authentication Method** page configures which Authentication Method is use
 
 The **Device Keys** page lists all devices that are registered to the Hub Server. Devices are automatically registered with the Hub Server when subscribing or installing applications. Device Keys may be deleted in order to immediately revoke that device's access to the Hub Server.
 
-### Managing Domain
+### Managing the Domain
 
 ![](/docs/server/hub_server/admin-domain.png)
 
@@ -347,7 +347,7 @@ The **Addresses** page allows configuring end users facing URLs for a domain. Th
 
 If a URL is empty, then the services will default to the server specified **Web Service Root** setting.
 
-#### Configuring a Server
+### Managing a Server
 
 ![](/docs/server/hub_server/admin-servers-edit.png)
 
