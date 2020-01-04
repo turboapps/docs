@@ -8,7 +8,7 @@ The default location of the Administration Site is: http://localhost:80/admin, a
 
 - **Users**: This page list all users and groups on your Turbo Hub Server. From here **Directory Services** can be configured to import users from LDAP or Active Directory. **Authentication Method** allows you to configure how users will authenticate with the Turbo Hub Server. **Device Keys** allows you to manage all registered devices. For more information refer to [Managing Users and Authentication](/docs/server/hub-server/hub-server-administration#managing-users-and-authentication).
 
-- **Servers**: This page lists all servers that are included as part of the current Turbo Hub Server installation. Server settings such as roles, web service bindings, and SSL certificates may be configured here. For more information refer to [Managing Servers](/docs/server/hub-server/administration#managing-servers).
+- **Servers**: This page lists all servers that are included as part of the current Turbo Hub Server installation. Server settings such as roles, web service bindings, and SSL certificates may be configured here. For more information refer to [Managing Servers](/docs/server/hub-server/administration#managing-domain).
 
 - **Workspaces**: This page lists all workspaces on your Turbo Hub Server. From here workspaces may be added, configured, and deleted. For more information refer to [Managing Workspaces](/docs/server/hub-server/hub-server-administration#managing-workspaces).
 
@@ -315,11 +315,37 @@ The **Authentication Method** page configures which Authentication Method is use
 
 The **Device Keys** page lists all devices that are registered to the Hub Server. Devices are automatically registered with the Hub Server when subscribing or installing applications. Device Keys may be deleted in order to immediately revoke that device's access to the Hub Server.
 
-### Managing Servers
+### Managing Domain
 
-![](/docs/server/hub_server/admin-servers.png)
+![](/docs/server/hub_server/admin-domain.png)
 
-The **Servers** page lists all servers that are included as part of the current Turbo Server installation, along with their current status. Clicking a server name will navigate to the server configuration page.
+The **Domain** page lists all servers that are included as part of the current Turbo Server installation, along with their current status. Clicking a server name will navigate to the server configuration page.
+
+### Domain Settings
+
+![](/docs/server/hub_server/admin-domain-settings.png)
+
+The **Settings** page lists allows you to configure domain-wide settings, including:
+
+- **Resource Allocation Strategy**: The load balancing strategy used to allocate applications to application servers. The available strategies are:
+  - **Active Sessions**: New application requests will be allocated to the active application server with the lowest active session count.
+  - **Total Sessions**: New application requests will be allocated to the active application server with the lowest total session count.
+  - **CPU Load**: New application requests will be allocated to the active application server with the lowest CPU load.
+
+
+### Domain Addresses
+
+![](/docs/server/hub_server/admin-domain-addresses.png)
+
+The **Addresses** page allows configuring end users facing URLs for a domain. The available URLs are:
+
+- **Domain URL**: A URL or DNS hostname of the domain that hosts all Turbo Server web services. For more information, see [Understanding the Domain URL](/docs/server/hub-server/network-and-load-balancing#understanding-the-domain-url)
+
+- **Portal URL**: A URL that end users will use to access the Portal site and services. This URL can be configured to point to a load balancer, providing high scalability across multiple Portal servers.
+
+- **Hub URL**: A URL that can be configured to point to a specified proxy url. Hub server itself does not need multiple instances within a domain. Redundancy is achieved by storage redundancy, and scaled horizontally using federation.
+
+If a URL is empty, then the services will default to the server specified **Web Service Root** setting.
 
 #### Configuring a Server
 
@@ -337,20 +363,7 @@ The **Servers** page lists all servers that are included as part of the current 
 
 - **Java Virtual Machine Settings**: Configures the JVM heap space for the Hub and Broker Java processes. This setting is only available for servers with the Hub or Portal roles enabled.  
 
-- **Image Cache**: Configures an image cache path where the Hub will store SVM images. This prevents the redownload of the same application when ran by different users. This can be a local file path which will be shared by all users on the same device, or a network path which may be shared by all users across multiple devices.
-
-- **Application Load Balancing Strategy**: Configires the load balancing strategy used to allocation applications to application servers. This setting is only available for servers with the Portal role enabled. The available strategies are:
-  - **Active Sessions**: New application requests will be allocated to the active application server with the lowest active session count.
-  - **Total Sessions**: New application requests will be allocated to the active application server with the lowest total session count.
-  - **CPU Load**: New application requests will be allocated to the active application server with the lowest CPU load.
-
-### Setting URLs
-
-The URLs page allows configuring end users facing URLs for the server farm. For example, if you would like to use a load balancer for multiple Portals within a server farm, enter the load balancer's URL in the Portal URL text box. Web services and end user URLs will use that URL if required.
-
-The Hub server URL can be configured to point to a specified proxy url. Hub server itself does not need multiple instances within a farm. Redundancy is achieved by storage redundancy, and scaled horizontally using federation.
-
-If the URLs are empty, then services will default to the server specified **Web Service Root** setting.
+- **Image Cache**: Configures an image cache path where the Hub will store SVM images. This prevents the redownload of the same application when ran by different users. This can be a local file path which will be shared by all users on the same device, or a network path which may be shared by all users across multiple devices. This setting is only available for servers with the Hub role enabled.
 
 ### Managing Workspaces
 

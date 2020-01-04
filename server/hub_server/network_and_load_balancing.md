@@ -4,15 +4,15 @@
 
 Turbo Server allows installing redundant roles across multiple servers. To install the role on separate servers, run the Turbo Server installer and select the role you would like to install.
 
-The administrator can also add or remove roles on that server after installation. For more information refer to [Managing Servers](/docs/server/hub-server/administration#managing-servers).
+The administrator can also add or remove roles on that server after installation. For more information refer to [Managing Domain](/docs/server/hub-server/administration#managing-domain).
 
 ### Configuring Network
 
-The administrator may want to use a reverse proxy to accesss the internal Turbo Server services. The administrator can configure which URLs the services and clients will use to talk to each other. For more information refer to [Setting URLs](/docs/server/hub-server/administration#setting-urls).
+The administrator may want to use a reverse proxy to accesss the internal Turbo Server services. The administrator can configure which URLs the services and clients will use to talk to each other. For more information refer to [Domain Addresses](/docs/server/hub-server/administration#domain-addresses).
 
 ### Load Balancing
 
-To load balance Application Servers, install the Application Server role on the desired servers. Then, configure the load balancing strategy as described in [Server Adminstration](/docs/server/hub-server/administration#managing-servers).
+To load balance Application Servers, install the Application Server role on the desired servers. Then, configure the load balancing strategy as described in [Domain Settings](/docs/server/hub-server/administration#domain-settings).
 
 To load balance the server roles, set the URLS as described above to an external load balancer. Built in roles load balancing will be comming soon!
 
