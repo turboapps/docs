@@ -952,7 +952,7 @@ var appConfig = {
 
 // submit the application configuration to the service
 var request = new XMLHttpRequest();
-request.open("POST", "http://[hub-server]/config");
+request.open("POST", "http://[hub-server]/start/app");
 request.setRequestHeader("Content-Type", "application/json");
 request.setRequestHeader("X-Config-Api-Key", "F207AC681BBD40A0BF56ECF95B344EBC");
 request.send(JSON.stringify(appConfig));
@@ -972,8 +972,8 @@ Submit a POST request to the web service with the configuration json string, not
 
 ```
 {
-   "url": "turbo://[hub-server]/config?t=config&h=sha256:66a123724dd6f8fb5ee050644a5494795fed2a1901d0c56def4030d8a6a26175&scheme=http&v=2",
-   "urlInternal": "turbo://[hub-server]/config?t=config&h=sha256:66a123724dd6f8fb5ee050644a5494795fed2a1901d0c56def4030d8a6a26175&scheme=http&v=2"
+   "url": "turbo://[hub-server]/start/app?h=sha256:66a123724dd6f8fb5ee050644a5494795fed2a1901d0c56def4030d8a6a26175&scheme=http&v=2",
+   "urlInternal": "turbo://[hub-server]/start/app?h=sha256:66a123724dd6f8fb5ee050644a5494795fed2a1901d0c56def4030d8a6a26175&scheme=http&v=2"
 }
 ```
 
@@ -982,14 +982,14 @@ Once submitted, the configuration will be available for the configured timeout p
 You may also lookup configs from the launch configuration service by performing a GET request on the same URL with an HTTP/S scheme, for example:
 
 ```
-http://[hub-server]/config?t=config&h=sha256:66a123724dd6f8fb5ee050644a5494795fed2a1901d0c56def4030d8a6a26175&scheme=http&v=2
+http://[hub-server]/start/app?h=sha256:66a123724dd6f8fb5ee050644a5494795fed2a1901d0c56def4030d8a6a26175&scheme=http&v=2
 ```
    
 #### Executing an Application Configuration
     
 ```
 // open turbourl to config
-var url = "turbo://[hub-server]/config?t=config&h=sha256:66a123724dd6f8fb5ee050644a5494795fed2a1901d0c56def4030d8a6a26175&scheme=http&v=2";
+var url = "turbo://[hub-server]/start/app?h=sha256:66a123724dd6f8fb5ee050644a5494795fed2a1901d0c56def4030d8a6a26175&scheme=http&v=2";
 window.open(url);
 ```
 
