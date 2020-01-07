@@ -401,7 +401,25 @@ The **Applications** page lists all applications that have been added to this wo
 
 ![](/docs/server/hub_server/admin-workspaces-admin-applications-edit.png)
 
-The **Application Settings** page provides configuration options for a variety of application settings. These settings affect the application's display settings, launch settings and more. For more information on these settings refer to the [Repository Settings](/docs/hub/repositories/repository-settings).
+The **Application Settings** page provides configuration options for a variety of application settings. These settings control the application's display and launch behavior.
+
+- **Display Name**: The application display name shown on the portal.
+- **Application Version**: The exact application version that will be launched. By default the latest version will be used.
+- **Sessions are persistent**: Automatically synchronizes the application state and settings with the Turbo Hub server. See [Sessions are persistent](/docs/hub/repositories/repository-settings#sessions-are-persistent).
+- **Access local user folders**: Allows the application to access the host device's local user folders, such as Desktop, Downloads, Documents, Music, Pictures, and Videos. See [Access local user folders](/docs/hub/repositories/repository-settings#access-local-user-folders).
+- **Isolate network**: Isolates the virtualized network environment from the host device's network. See [Isolate network](/docs/hub/repositories/repository-settings#isolate-network).
+- **Use DLL cache**: Enables pre-caching of application DLL and EXE files on the Application Servers’ local disk for faster loading. See [Use DLL cache](/docs/hub/repositories/repository-settings#use-dll-cache).
+- **File Isolation**: Determines the level of file visibility and access from the vm to the host environment. See [Isolation Settings](/docs/reference/command-line/run#isolation-settings).
+- **Temporary Layers**: A list of additional image repository IDs that are temporarily included during application execution. See [Using](/docs/hub/repositories/repository-settings#using).
+- **Components**: A list of additional image repository IDs that are added to the base image as layers.  See [Components](/docs/hub/repositories/repository-settings#components).
+- **Network Routes**: A whitelist or blacklist of network routes that are accessible by the virtual network environment. See [Controlling Outbound Traffic](/docs/reference/command-line/run#controlling-outbound-traffic).
+- **VM Version**: The VM version is a version string that specifies which Turbo VM version will be used for execution. See [VM Version](/docs/hub/repositories/repository-settings#vm-version).
+- **Allowed Launch Modes**: Application launch modes that are available for applications on the portal. Disallowed launch modes will be disabled.
+- **Default Launch Mode**: The launch mode the application will use by default if the user does not specify a launch mode. The is the default left-click behavior on the portal.
+- **Video Encoding**: The preferred video encoding used for remote execution. Video encoding support depends on the application server settings and hardware.
+- **Restrict to AD Groups**: Restricts the application's visibility to members of the specified AD group. If a value is provided, then only members of that AD Group will see the application on the portal. If no value is provided, then all users with access to the workspace will see the application.
+- **Drive Visibility**: Controls which drives are visible in the virtualized application environment during cloud runs. This setting does not apply to local runs. By default, only the system drives and T: drive are visible.
+
 
 #### Workspace Administration Users
 
