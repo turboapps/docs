@@ -968,7 +968,7 @@ request.onreadystatechange = function () {
 };
 ```
 
-Submit a POST request to the web service with the configuration json string, note the required request headers of `Content-Type` and `X-Config-Api-Key`. The response json contains set of turbo urls that can be used to execute the application from the browser, for example:
+Submit a POST request to the web service with the configuration json string, note the required request headers of `Content-Type` and `X-Config-Api-Key`. The response json contains a set of turbo urls that can be used to execute the application from the browser, for example:
 
 ```
 {
@@ -993,7 +993,7 @@ var url = "turbo://[hub-server]/config?t=config&h=sha256:66a123724dd6f8fb5ee0506
 window.open(url);
 ```
 
-To execute a submitted configuration file, you must use a turbo protocol url. Your web portal can make an attempt to open these turbo urls to execute the configuration. The turbo protocol is handled by the Turbo Client if installed and will execute the configuration that it points to. 
+To execute a submitted configuration file, you must use a turbo protocol url. Your web portal can open these turbo urls to attempt to execute the configuration. The turbo protocol is handled by the Turbo Client if installed and will execute the configuration that it points to. 
 
 The first time you attempt to open a turbo url, the browser will show a security message like the following (each browser is different). The user can choose to hide future messages for turbo urls.
 
@@ -1009,36 +1009,54 @@ After this the user will be prompted to login if necessary. Once logged in (or i
 
 ```
 {
-    // The configuration JSON format version. Must be 1.
-    "v":1
+   // The configuration JSON format version. Must be 1.
+   "v":1
 
-    // The turbo command used to execute the app. Possible values are "try", "run", and "new". Must be specified.
-    "verb":"try",
-    
-    // The repository ID of the image to execute. Must be specified.
-    "repoId":"spoonbrew/base",
-    
-    // The isolation mode to run in. These are the same as those that can be passed to turbo run commands with `--isolate` flag. Default is "full".
-    "isolation":"full",
-    
-    // Whether network isolation is enabled in the container. Optional, default is false.
-    "isolateNetwork":false,
-    
-    // A list of network mappings. Optional.
-    // Example: routes:[{"rule":"ip","type":"deny"},{"rule":"ip://*.turbo.net","type":"allow"}],
-    "routes":[],
-    
-    // Command line parameters that are passed to the startup file of the container. Optional.
-    // Example: cmdLineArgs: "echo Args",
-    "cmdLineArgs":"",
-    
-    // A list of additional image repository IDs that are permanently layered in to the container. Optional.
-    // Example: layers: [{"repoId":"npp/notepadplusplus","enabled":true}],
-    "layers":[],
-    
-    // A list of additional image repository IDs that are temporarily layered in to the container. Optional.
-    // Example: using: ["gnu/wget"]
-    "using":[]
+   // The turbo command used to execute the application. Possible values are "try", "run", and "new". Required.
+   "verb":"try",
+   
+   // The repository ID of the image to execute. Required.
+   "repoId":"test/test",
+   
+   // The isolation mode to run in. These are the same as those that can be passed to turbo run commands with `--isolate` flag. Optional, default is "full".
+   "isolation":"full",
+   
+   // Allows merge access to special user folders such as documents. Optional, default is false.
+   "mergeUser":false,
+
+   // Whether network isolation is enabled in the container. Optional, default is false.
+   "isolateNetwork":false,
+   
+   // A list of network mappings. Optional, default is empty.
+   // Example: routes:[{"rule":"ip","type":"deny"},{"rule":"ip://*.turbo.net","type":"allow"}],
+   "routes":[],
+
+   // A list of additional image repository IDs that are permanently layered in to the container. Optional, default is empty.
+   // Example: layers: [{"repoId":"npp/notepadplusplus","enabled":true}],
+   "layers":[],
+   
+   // A list of additional image repository IDs that are temporarily layered in to the container. Optional, default is empty.
+   // Example: using: ["gnu/wget"]
+   "using":[],
+
+   // Overrides the default startup file. Optional, default is no override.
+   //"startupFile":"cmd",
+
+   // Command line parameters that are passed to the startup file of the container. Optional, default is empty.
+   // Example: cmdLineArgs: "echo test",
+   "cmdLineArgs":"",
+
+   // Automatically synchronizes the application state and settings with the Turbo Hub server. Optional, default is false.
+   "sync": true,
+
+   // Enables pre-caching of application DLL and EXE files on the Application Servers’ local disk for faster loading. Optional, default is false.
+   "useDllCache": false,
+
+   // Specifies drive visibility in the virtual application using the format: <*|V:|-V:>[,...]. Optional, default is *,-T:.
+   "hideDrive":"*,-T:",
+
+   // The VM version is a version string that specifies which Turbo VM version will be used for execution. Optional, default is latest.
+   //"vm": "19.6.1427.29"
 }
 ```
 
