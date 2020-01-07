@@ -365,7 +365,7 @@ If a URL is empty, then the services will default to the server specified **Web 
 
 - **Image Cache**: Configures an image cache path where the Hub will store SVM images. This prevents the redownload of the same application when ran by different users. This can be a local file path which will be shared by all users on the same device, or a network path which may be shared by all users across multiple devices. This setting is only available for servers with the Hub role enabled.
 
-- **Configuration API Key**: The API key used by the [Launch Configuration Service](/docs/server/advanced-topics#launch-configuration-web-service) to post custom application configurations. Configurations posted with this API key are publicly accessibly. This setting is recommended if you will be using an external portal instead of the Turbo Portal. This setting is only available for servers with the Portal role enabled.  
+- **Configuration API Key**: The API key used by the [Launch Configuration Service](/docs/server/hub-server/advanced-topics#using-the-launch-configuration-web-service) to post custom application configurations. Configurations posted with this API key are publicly accessibly. This setting is recommended if you will be using an external portal instead of the Turbo Portal. This setting is only available for servers with the Portal role enabled.  
 
 - **Configuration Cache Expiration**: The length of time (in milliseconds) that a configuration is valid after it is added to the launch configuration service. This timeout is reset any time the application configuration is accessed, such as during an application launch. This setting is only available for servers with the Portal role enabled.  
 

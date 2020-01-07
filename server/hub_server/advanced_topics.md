@@ -924,13 +924,13 @@ Examples:
 
 ### Using the Launch Configuration Web Service
 
-The **launch configuration web service** provides storage for application configurations which may be used to execute applications from a custom web portal using Turbo URLs. If the Turbo Portal is used as your application portal, this service is not necessary. 
+The **launch configuration web service** provides storage for application configurations which may be used to execute applications from a custom web portal using turbo urls. If the Turbo Portal is used as your application portal, this service is not necessary. 
 
 #### Enabling the Launch Configuration Web Service
 
 The launch configuration service may be configured using the [Server Management](/docs/server/hub-server/administration#managing-a-server) form on a server with the Portal role enabled.
     
-    ![](/docs/server/hub_server/hub-configsvc-0.png)
+![](/docs/server/hub_server/hub-configsvc-0.png)
     
 In this example, the authentication key is set to `F207AC681BBD40A0BF56ECF95B344EBC`. This value is required to be passed to all POST requests to the service in the `X-Config-Api-Key` HTTP header. The authentication key can be any string value but should be something long and randomly generated.
 
@@ -968,7 +968,7 @@ request.onreadystatechange = function () {
 };
 ```
 
-Submit a POST request to the web service with the configuration json string, note the required request headers of `Content-Type` and `X-Config-Api-Key`. The response json contains set of Turbo URLs that can be used to execute the application from the browser, for example:
+Submit a POST request to the web service with the configuration json string, note the required request headers of `Content-Type` and `X-Config-Api-Key`. The response json contains set of turbo urls that can be used to execute the application from the browser, for example:
 
 ```
 {
@@ -979,7 +979,7 @@ Submit a POST request to the web service with the configuration json string, not
 
 Once submitted, the configuration will be available for the configured timeout period. This can be set on the server administration website (the default is 24-hour). The timeout is reset whenever the configuration is retrieved.
 
-You may also lookup configs from the launch configuration service by performing a GET request on the same URL with an HTTP scheme, for example:
+You may also lookup configs from the launch configuration service by performing a GET request on the same URL with an HTTP/S scheme, for example:
 
 ```
 http://[hub-server]/config?t=config&h=sha256:66a123724dd6f8fb5ee050644a5494795fed2a1901d0c56def4030d8a6a26175&scheme=http&v=2
