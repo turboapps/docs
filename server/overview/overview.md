@@ -6,9 +6,7 @@ Unlike traditional deployment methods, applications streamed from Turbo Server d
 
 Turbo Application Server allows you to run application workloads on a server for your users. Turbo Application Server can source applications from the Turbo.net Hub or an on-premises Turbo Hub Server.
 
-### Overview
-
-#### Architecture
+### Architecture
 
 There are four major server roles in a Turbo Server deployment:
 

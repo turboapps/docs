@@ -8,13 +8,13 @@ The administrator can also add or remove roles on that server after installation
 
 ### Configuring Network
 
-The administrator may want to use a reverse proxy to accesss the internal Turbo Server services. The administrator can configure which URLs the services and clients will use to talk to each other. For more information refer to [Domain Addresses](/docs/server/hub-server/administration#domain-addresses).
+The administrator may want to use a reverse proxy to accesss the internal Turbo Server services. The administrator can configure which URLs the services and clients will use to talk to each other. For more information refer to [Domain Addresses](/docs/server/hub-server/administration#managing-the-domain-domain-addresses).
 
 ### Load Balancing
 
-To load balance Application Servers, install the Application Server role on the desired servers. Then, configure the load balancing strategy as described in [Domain Settings](/docs/server/hub-server/administration#domain-settings).
+To load balance Application Servers, install the Application Server role on the desired servers. Then, configure the load balancing strategy as described in [Domain Settings](/docs/server/hub-server/administration#managing-the-domain-domain-settings).
 
-To load balance the server roles, set the URLS as described above to an external load balancer. Built in roles load balancing will be comming soon!
+To load balance the server roles, set the URLS as described above to an external load balancer. Built in roles load balancing will be coming soon!
 
 ### Understanding the Domain URL
 

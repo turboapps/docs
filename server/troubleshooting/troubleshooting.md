@@ -7,72 +7,71 @@ This section provides information to help troubleshoot common issues you might e
 The following table lists common issues/questions and their solutions:
 
 <table>
-      <tr>
-         <th data-column="0">
-            <div>
-               <p>Issue/Question</p>
-            </div>
-         </th>
-         <th data-column="1">
-            <div>
-               <p>Solution</p>
-            </div>
-         </th>
-      </tr>
-      <tr>
-         <td colspan="1">There is an error during installation: Turbo Hub Server installation failed, please contact the administrator.</td>
-         <td colspan="1">This may occur if there is a timeout when starting or accessing the database services. Go to <em>Control Panel &gt; Administrative Tools &gt; Services</em> and try restarting the Turbo Hub Server service.</td>
-      </tr>
-      <tr>
-         <td colspan="1">The Turbo Hub Server service fails to start.</td>
-         <td colspan="1">This may occur if there is a timeout when starting or accessing the database services. Go to <em>Control Panel &gt; Administrative Tools &gt; Services</em> and try restarting the Turbo Hub Server service.</td>
-      </tr>
-      <tr>
-         <td>
-            <p>I am unable to access the Administration Site or Hub Site from another machine.</p>
-         </td>
-         <td>
-            <p>Microsoft Windows security settings might be restricting external connections to the ports assigned to the Administration and/or Hub sites. For information about configuring Turbo Hub Server security settings, refer to <em>Configuring Turbo Hub Server Security</em>.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p>My application does not appear on the Turbo Streaming Server portal.</p>
-         </td>
-         <td>
-            <p>Verify that the application has been pushed to the correct org account dashboard (for turbo.net hub) or namespace (for Turbo Hub Server). For more information about publishing application versions, refer to <em>Managing Applications</em>.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p>Where do I install a new license?</p>
-         </td>
-         <td>
-            <p>New licenses can be applied by clicking the <strong>New License</strong> link found on the <strong>Admin</strong> page in the Administration Site.</p>
-         </td>
-      </tr>
-      <tr>
-         <td colspan="1">Turbo Hub Server is no longer accessible after making a Network Configuration change</td>
-         <td colspan="1">Turbo Hub Server service may need to be restarted after making a network configuration change. Go to <em>Control Panel &gt; Administrative Tools &gt; Services</em> and try restarting the Turbo Hub Server service.</td>
-      </tr>
-      <tr>
-         <td>
-            <p>HTML5 cloud launch fails to start the application and results in the generic error page.</p>
-         </td>
-         <td>
-		 <p>Review the <strong>SSL troubleshooting</strong> documentation. If it is not a certificate issue, the application server may not be accessible from the broker. Check that port 8084 can be accessed from the broker to the application server.</p>
-         </td>
-      </tr>
+   <tr>
+      <th data-column="0">
+         <div>
+            <p>Issue/Question</p>
+         </div>
+      </th>
+      <th data-column="1">
+         <div>
+            <p>Solution</p>
+         </div>
+      </th>
+   </tr>
+   <tr>
+      <td colspan="1">There is an error during installation: Turbo Hub Server installation failed, please contact the administrator.</td>
+      <td colspan="1">This may occur if there is a timeout when starting or accessing the database services. Go to <em>Control Panel &gt; Administrative Tools &gt; Services</em> and try restarting the Turbo Hub Server service.</td>
+   </tr>
+   <tr>
+      <td colspan="1">The Turbo Hub Server service fails to start.</td>
+      <td colspan="1">This may occur if there is a timeout when starting or accessing the database services. Go to <em>Control Panel &gt; Administrative Tools &gt; Services</em> and try restarting the Turbo Hub Server service.</td>
+   </tr>
+   <tr>
+      <td>
+         <p>I am unable to access the Administration Site or Hub Site from another machine.</p>
+      </td>
+      <td>
+         <p>Microsoft Windows security settings might be restricting external connections to the ports assigned to the Administration and/or Hub sites. For information about configuring Turbo Hub Server security settings, refer to <em>Configuring Turbo Hub Server Security</em>.</p>
+      </td>
+   </tr>
+   <tr>
+      <td>
+         <p>My application does not appear on the Turbo Streaming Server portal.</p>
+      </td>
+      <td>
+         <p>Verify that the application has been pushed to the correct org account dashboard (for turbo.net hub) or namespace (for Turbo Hub Server). For more information about publishing application versions, refer to <em>Managing Applications</em>.</p>
+      </td>
+   </tr>
+   <tr>
+      <td>
+         <p>Where do I install a new license?</p>
+      </td>
+      <td>
+         <p>New licenses can be applied by clicking the <strong>New License</strong> link found on the <strong>Admin</strong> page in the Administration Site.</p>
+      </td>
+   </tr>
+   <tr>
+      <td colspan="1">Turbo Hub Server is no longer accessible after making a Network Configuration change</td>
+      <td colspan="1">Turbo Hub Server service may need to be restarted after making a network configuration change. Go to <em>Control Panel &gt; Administrative Tools &gt; Services</em> and try restarting the Turbo Hub Server service.</td>
+   </tr>
+   <tr>
+      <td>
+         <p>HTML5 cloud launch fails to start the application and results in the generic error page.</p>
+      </td>
+      <td>
+      <p>Review the <strong>SSL troubleshooting</strong> documentation. If it is not a certificate issue, the application server may not be accessible from the broker. Check that port 8084 can be accessed from the broker to the application server.</p>
+      </td>
+   </tr>
 
-      <tr>
-         <td>
-            <p>Help! I forgot the administrator account password and can't access the Administration Site.</p>
-         </td>
-         <td>
-            <p>Remove the admin group by using the server cli. Open a command prompt as administrator and navigate to the installation folder. Run `Server.exe admin user-group 2 clear` which clears all users from the server administrator's group. This allows you to access the the Administration Site without login. Reset the admin user's password and add the user back to the administrator's group to secure the Administration Site.</p>
-         </td>
-      </tr>
-
+   <tr>
+      <td>
+         <p>Help! I forgot the administrator account password and can't access the Administration Site.</p>
+      </td>
+      <td>
+         <p>Remove the admin group by using the server cli. Open a command prompt as administrator and navigate to the installation folder. Run `Server.exe admin user-group 2 clear` which clears all users from the server administrator's group. This allows you to access the the Administration Site without login. Reset the admin user's password and add the user back to the administrator's group to secure the Administration Site.</p>
+      </td>
+   </tr>
 </table>
 
 ### Enable Diagnostic Mode

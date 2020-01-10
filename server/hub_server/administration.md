@@ -321,7 +321,7 @@ The **Device Keys** page lists all devices that are registered to the Hub Server
 
 The **Domain** page lists all servers that are included as part of the current Turbo Server installation, along with their current status. Clicking a server name will navigate to the server configuration page.
 
-### Domain Settings
+#### Domain Settings
 
 ![](/docs/server/hub_server/admin-domain-settings.png)
 
@@ -333,7 +333,7 @@ The **Settings** page lists allows you to configure domain-wide settings, includ
   - **CPU Load**: New application requests will be allocated to the active application server with the lowest CPU load.
 
 
-### Domain Addresses
+#### Domain Addresses
 
 ![](/docs/server/hub_server/admin-domain-addresses.png)
 
@@ -346,6 +346,18 @@ The **Addresses** page allows configuring end users facing URLs for a domain. Th
 - **Hub URL**: A URL that can be configured to point to a specified proxy url. Hub server itself does not need multiple instances within a domain. Redundancy is achieved by storage redundancy, and scaled horizontally using federation.
 
 If a URL is empty, then the services will default to the server specified **Web Service Root** setting.
+
+#### Domain Federation
+
+![](/docs/server/hub_server/admin-domain-federation.png)
+
+The **Federation** page allows you to configure federation across multiple domains to reduce setup time and keep domain resources in sync. According to these settings, the server will will periodically check the source domain for updates and replicate any changes. The available configurations are described below:
+
+- **Domain URL**: A federation source URL from which domain resourecs will be replicated.
+
+- **API Key**: The API key is used to access federation resources from the federation source. This API key must be configured as a system-level key on the source server. See [Managing API Keys](/docs/server/hub-server/administration#managing-hub-managing-api-keys) for information on configured API keys.
+
+- **Default Synchronization Frequency**: The frequency at which this server will check the federation source for updates.
 
 ### Managing a Server
 
