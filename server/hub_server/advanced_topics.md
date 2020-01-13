@@ -972,8 +972,8 @@ Submit a POST request to the web service with the configuration json string, not
 
 ```
 {
-   "url": "turbo://[hub-server]/start/app?h=sha256:66a123724dd6f8fb5ee050644a5494795fed2a1901d0c56def4030d8a6a26175&scheme=http&v=2",
-   "urlInternal": "turbo://[hub-server]/start/app?h=sha256:66a123724dd6f8fb5ee050644a5494795fed2a1901d0c56def4030d8a6a26175&scheme=http&v=2"
+   "url": "turbo://[hub-server]/start/app?t=config&h=sha256:66a123724dd6f8fb5ee050644a5494795fed2a1901d0c56def4030d8a6a26175&scheme=http&v=2",
+   "urlInternal": "turbo://[hub-server]/start/app?t=config&h=sha256:66a123724dd6f8fb5ee050644a5494795fed2a1901d0c56def4030d8a6a26175&scheme=http&v=2"
 }
 ```
 
@@ -989,7 +989,7 @@ http://[hub-server]/start/app?h=sha256:66a123724dd6f8fb5ee050644a5494795fed2a190
     
 ```
 // open turbourl to config
-var url = "turbo://[hub-server]/start/app?h=sha256:66a123724dd6f8fb5ee050644a5494795fed2a1901d0c56def4030d8a6a26175&scheme=http&v=2";
+var url = "turbo://[hub-server]/start/app?t=config&h=sha256:66a123724dd6f8fb5ee050644a5494795fed2a1901d0c56def4030d8a6a26175&scheme=http&v=2";
 window.open(url);
 ```
 

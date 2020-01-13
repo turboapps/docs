@@ -74,7 +74,7 @@ Error: Push failed. This user may not be authorized to push to the mozilla repos
 ```
 The current logged in user may not be an administrator of the Hub server. Add the user to the administrators group. For more information refer to [Managing Users and Authentication](/docs/server/hub-server/administration#managing-users-and-authentication).
 
-**NOTE:** If you add the user to the administrators group after already attempting to push an image to the Hub server, you may have to wait up to 5 minutes for the prermissions to propagate to the Hub server. Either switch to an API key based login, or restart the Hub server process and try again.
+**NOTE:** If you add the user to the administrators group after already attempting to push an image to the Hub server, you may have to wait up to 5 minutes for the permissions to propagate to the Hub server. Either switch to an API key based login, or restart the Hub server process and try again.
 
 #### Managing Repositories
 
@@ -353,7 +353,7 @@ If a URL is empty, then the services will default to the server specified **Web 
 
 The **Federation** page allows you to configure federation across multiple domains to reduce setup time and keep domain resources in sync. According to these settings, the server will will periodically check the source domain for updates and replicate any changes. The available configurations are described below:
 
-- **Domain URL**: A federation source URL from which domain resourecs will be replicated.
+- **Domain URL**: A federation source URL from which domain resources will be replicated.
 
 - **API Key**: The API key is used to access federation resources from the federation source. This API key must be configured as a system-level key on the source server. See [Managing API Keys](/docs/server/hub-server/administration#managing-hub-managing-api-keys) for information on configured API keys.
 
