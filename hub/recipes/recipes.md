@@ -2,7 +2,7 @@
 
 A recipe is a set of reproducible instructions used to build an image. These instructions may include information such as software prerequisites, installation steps, registry keys, files, and more.
 
-Turbo.net hosts recipes on the repository page. Recipes are available to all users who may view the repository.
+Recipes may be published to Turbo.net repository pages where they may be viewed by all users who have access to that repository.
 
 ### Adding a Recipe to an Existing Repository
 
@@ -11,9 +11,9 @@ Turbo.net hosts recipes on the repository page. Recipes are available to all use
 
 2. Make any edits you desire to the recipe and then click **Save**.
 
-### Importing a Recipe
+### Importing an Existing Recipe
 
-The copy an existing recipe from another repository, you may use the **Import** feature.
+The **Import** feature allows you to copy an existing recipe from another repository.
 
 1. On the edit recipe page, click the **Import** button at the bottom of the page.
 ![](/docs/hub/recipes/recipes-5.png)
@@ -25,11 +25,11 @@ The copy an existing recipe from another repository, you may use the **Import** 
 
 To publish a recipe to a new repository without pushing an image, you may create an empty repository.
 
-1. Go to the **Settings** page of your user or organization to which you wish to add the recipe. This page is only visible to your repository owners and organization administrators.
+1. Go to the **Settings** page of the user or organization to which you wish to add the recipe. This page is only visible to repository owners and organization administrators.
 ![](/docs/hub/recipes/recipes-1.png)
 
 
-2. Go to the **Repositories** tab and click the **Create Repository**.
+2. Go to the **Repositories** tab and click on **Create Repository**.
 ![](/docs/hub/recipes/recipes-2.png)
 
 3. Input the name of the repository you wish to create and click **Save**. You will be redirected to the new repository.
