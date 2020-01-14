@@ -29,8 +29,8 @@ To publish a recipe to a new repository without pushing an image, you may create
 ![](/docs/hub/recipes/recipes-1.png)
 
 
-2. Go to the **Repositories** tab and click on **Create Repository**.
+2. Go to the **Repositories** tab and click on **Create a Repository**.
 ![](/docs/hub/recipes/recipes-2.png)
 
-3. Input the name of the repository you wish to create and click **Save**. You will be redirected to the new repository.
+3. Input the name of the repository you wish to create and click **Create**. You will be redirected to the new repository.
 ![](/docs/hub/recipes/recipes-3.png)
