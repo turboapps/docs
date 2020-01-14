@@ -52,6 +52,9 @@ sections:
   - title: Templates
     documents:
       - Templates
+  - title: Recipes
+    documents:
+      - Recipes
 ---
 title: Deploying
 sections:
