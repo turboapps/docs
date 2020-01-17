@@ -1,4 +1,4 @@
-## Administration
+﻿## Administration
 
 The Turbo Hub Server Administration Site enables you to manage and control all aspects of your Turbo Hub Server. 
 
@@ -327,25 +327,12 @@ The **Domain** page lists all servers that are included as part of the current T
 
 The **Settings** page lists allows you to configure domain-wide settings, including:
 
+- **Domain URL**: A URL or DNS hostname of the domain that hosts all Turbo Server web services. For more information, see [Understanding the Domain URL](/docs/server/hub-server/network-and-load-balancing#understanding-the-domain-url)
+
 - **Resource Allocation Strategy**: The load balancing strategy used to allocate applications to application servers. The available strategies are:
   - **Active Sessions**: New application requests will be allocated to the active application server with the lowest active session count.
   - **Total Sessions**: New application requests will be allocated to the active application server with the lowest total session count.
   - **CPU Load**: New application requests will be allocated to the active application server with the lowest CPU load.
-
-
-#### Domain Addresses
-
-![](/docs/server/hub_server/admin-domain-addresses.png)
-
-The **Addresses** page allows configuring end users facing URLs for a domain. The available URLs are:
-
-- **Domain URL**: A URL or DNS hostname of the domain that hosts all Turbo Server web services. For more information, see [Understanding the Domain URL](/docs/server/hub-server/network-and-load-balancing#understanding-the-domain-url)
-
-- **Portal URL**: A URL that end users will use to access the Portal site and services. This URL can be configured to point to a load balancer, providing high scalability across multiple Portal servers.
-
-- **Hub URL**: A URL that can be configured to point to a specified proxy url. Hub server itself does not need multiple instances within a domain. Redundancy is achieved by storage redundancy, and scaled horizontally using federation.
-
-If a URL is empty, then the services will default to the server specified **Web Service Root** setting.
 
 #### Domain Federation
 

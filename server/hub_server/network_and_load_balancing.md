@@ -14,7 +14,7 @@ The administrator may want to use a reverse proxy to accesss the internal Turbo 
 
 To load balance Application Servers, install the Application Server role on the desired servers. Then, configure the load balancing strategy as described in [Domain Settings](/docs/server/hub-server/administration#managing-the-domain-domain-settings).
 
-To load balance the server roles, set the URLS as described above to an external load balancer. Built in roles load balancing will be coming soon!
+To load balance Portals, set the Domain URL to an external load balancer. Built in load balancing will be coming soon!
 
 ### Understanding the Domain URL
 
