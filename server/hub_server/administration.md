@@ -82,21 +82,18 @@ The current logged in user may not be an administrator of the Hub server. Add th
 
 On the repository edit page, a repository display name can be modified. This shows up in the hub administration page list. The repository ID field cannot be modified and is assigned when the first container image is pushed to the hub. The **versions** list shows all available images that are available for this repository. They can be referenced by their tag or their ID (ex, "mozilla/firefox:64.0" or "mozilla/firefox#44397e23bf46a08a8a567ba13b2c215668d451c9dde41b030706779dc977cc02"). Accessing a repository without a tag or ID will use the latest available image (ex, "mozilla/firefox"). Note that any repository updates may take up to 24hrs to be automatically retrieved by the Turbo Client.
 
-#### Managing Repository Federation
+#### Importing Repositories
 
-![](/docs/server/hub_server/admin-federated-repos.png)
+![](/docs/server/hub_server/admin-hub-import.png)
 
-With the Federation feature in Turbo Hub Server, you can configure application repositories to be sourced and automatically updated from a master Turbo Hub. You may select the public Turbo.net Hub as the master hub. Since repositories in the Turbo.net Hub are automatically built as updates become available, you can remove the burden of maintaining images yourself.
+With the Import Repository feature, you can import repositories from an external Hub server, such as the Turbo.net Hub, into your local Turbo Server Hub. To import a repository, click the **Add Repository** dropdown on the Hub page and click **Import Repository**. The import page has the following options available:
 
-![](/docs/server/hub_server/admin-federation-settings.png)
+- **Hub Source URL**: The Hub server from which the repository will be imported. By default only Turbo.net is available, however if you have domain federation enabled the source domain will also be available.
+- **API Key**: The API key is used to access private repositories from the source Hub. This field is not required for public repositories.
+- **Repository Id**: The name of the external repository. For example, `mozilla/firefox`.
+- **Revision History Length**: The number of application revisions to pull from the remote repository. The default value is 1 revision. 
 
-When first using Federation, you must configure the API key that is used to access the Turbo.net Hub. This API key can be retrieved in your [Turbo.net Account Settings](https://turbo.net/settings/devices-and-api-keys). You can also set how frequently the Turbo.net Hub is queried for new version of federated repositories. The default frequency is every 24-hours. If **Automatic Forwarding** is enabled, any image request to your hub instance that cannot be satisfied will automatically be forwarded on to Turbo.net Hub with the returned repository being cached in your hub. This effectively federates the entire Turbo.net Hub library and uses your instance as a local cache for your users.
-
-![](/docs/server/hub_server/admin-federated-repos-add.png)
-
-To add a new federated repository, click the **Add** button and enter the full name of the Turbo.net repository that you want to federate. Set the **Revision History Length** field to the number of past revisions to import during a sync. Since repositories on Turbo.net are updated automatically, some may have hundreds of images available. The default value is 10 revisions. After setting the properties, click **Save**. You will now see your new federated repo listed and the initial sync with Turbo.net Hub will be in progress. After the sync is complete you will see the new repository in your main repository list on the Hub administration page.
-
-To setup your own hub as the master server, refer to [Advanced Topics](/docs/server/hub_server/advanced-topics#federation).
+After setting the properties, click **Import**. The import may take a few minutes to complete depending on the size of the repository. After the import is complete you will see the new repository in your main repository list on the Hub administration page.
 
 #### Managing API Keys
 
@@ -340,11 +337,20 @@ The **Settings** page lists allows you to configure domain-wide settings, includ
 
 The **Federation** page allows you to configure federation across multiple domains to reduce setup time and keep domain resources in sync. According to these settings, the server will will periodically check the source domain for updates and replicate any changes. The available configurations are described below:
 
-- **Domain URL**: A federation source URL from which domain resources will be replicated.
+- **Source Domain URL**: A federation source URL from which domain resources will be replicated.
 
 - **API Key**: The API key is used to access federation resources from the federation source. This API key must be configured as a system-level key on the source server. See [Managing API Keys](/docs/server/hub-server/administration#managing-hub-managing-api-keys) for information on configured API keys.
 
 - **Default Synchronization Frequency**: The frequency at which this server will check the federation source for updates.
+
+- **Request Forwarding**: Automatically pull repositories from the federated domain when a local repository is not found.
+
+- **Revision History Length**: Number of application revisions to pull from the remote repository.
+
+- **Identity Federation**: Federate identity data from the source domain, including users, groups, directory services, and authentication settings.
+
+- **Workspace Federation**: Federate selected workspaces from the source domain. All repositories associated with the selected workspaces will also be federated.
+
 
 ### Managing a Server
 
