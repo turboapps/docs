@@ -79,7 +79,7 @@ Select **Enter** to submit the command and choose **Y** to proceed.
 
 Fully-qualified domain names can be specified on the **Domain** page of the Administration Site. For more information about modifying servers refer to Managing the Domain.
 
-### Configuring Image Streaming from Hub
+### Configure Image Streaming from Hub
 
 By default Application Servers download the application images from Hub before running them. It is however possible to stream the images directly from Hub. To configure the streaming, follow the steps listed below.
  
