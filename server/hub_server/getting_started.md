@@ -24,6 +24,85 @@ The amount of disk space required varies based on how many applications your ser
 
 Turbo DB uses data deduplication to minimize storage consumption when multiple copies of the same data are stored on the server, so your exact needs may vary based on the content being stored.
 
+### Firewall and Security
+
+The Turbo Server installation automatically creates firewall rules for the selected roles. These rules allow external connections to access the Turbo Server sites and services. The opened ports are listed below:
+
+#### Hub Server
+
+<table>
+<tbody>
+<tr>
+    <th>Port</th>
+    <th>Protocol</th>
+    <th>Description</th>
+</tr>
+<tr>
+    <td>80</td>
+    <td>TCP</td>
+    <td>Administration Site HTTP</td>
+</tr>
+<tr>
+    <td>443</td>
+    <td>TCP</td>
+    <td>Administration Site HTTPS</td>
+</tr>
+</tbody>
+</table>
+
+#### Portal Server
+
+<table>
+<tbody>
+<tr>
+    <th>Port</th>
+    <th>Protocol</th>
+    <th>Description</th>
+</tr>
+<tr>
+    <td>80</td>
+    <td>TCP</td>
+    <td>Portal Site HTTP</td>
+</tr>
+<tr>
+    <td>443</td>
+    <td>TCP</td>
+    <td>Portal Site HTTPS</td>
+</tr>
+<tr>
+    <td>1080</td>
+    <td>TCP</td>
+    <td>Tnlr Proxy</td>
+</tr>
+</tbody>
+</table>
+
+#### Application Server
+
+<table>
+<tbody>
+<tr>
+    <th>Port</th>
+    <th>Protocol</th>
+    <th>Description</th>
+</tr>
+<tr>
+    <td>5850</td>
+    <td>TCP</td>
+    <td>Application Server Rdp Proxy</td>
+</tr>
+<tr>
+    <td>8084</td>
+    <td>TCP</td>
+    <td>Application Server Service</td>
+</tr>
+</tbody>
+</table>
+<br/>
+
+
+For instructions on opening additional ports or for recommendations on how to best secure Turbo Server, refer to [Configure Turbo Hub Server Security](/docs/server/hub-server/advanced-topics#configure-turbo-hub-server-security).
+
 ### Setup
 
 In this section you will learn how to use the Setup Wizard to automatically configure Turbo Server. For details regarding manual configuration of Turbo Server, refer to [Manually Configure Turbo Server](/docs/server/hub-server/advanced-topics#configure-turbo-hub-server-security).
@@ -55,8 +134,6 @@ Complete the following steps to set up Turbo Server:
 9. Select **Install** to begin configuring Turbo Hub Server.
 
 10. After setup is complete the Administration Site automatically opens and displays a web page where you can apply your license. Both evaluation and retail licenses are applied here. To obtain an evaluation license, login or create an account on http://turbo.net. For information on purchasing a retail license, refer to the [Licensing](/docs/server/hub-server/getting-started#licensing) topic.
-
-11. Open the ports for the Administration and Hub sites (the Microsoft Windows Firewall blocks external connections to Turbo Hub Server by default). For instructions on opening the ports and for recommendations on how to best secure Turbo Hub Server, refer to [Configure Turbo Hub Server Security](/docs/server/hub-server/advanced-topics#configure-turbo-hub-server-security).
 
 12. Start using Turbo Hub Server!
 
