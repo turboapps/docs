@@ -89,7 +89,7 @@ On the repository edit page, a repository display name can be modified. This sho
 With the Import Repository feature, you can import repositories from an external Hub server, such as the Turbo.net Hub, into your local Turbo Server Hub. To import a repository, click the **Add Repository** dropdown on the Hub page and click **Import Repository**. The import page has the following options available:
 
 - **Hub Source URL**: The Hub server from which the repository will be imported. By default only Turbo.net is available, however if you have domain federation enabled the source domain will also be available.
-- **API Key**: The API key is used to access private repositories from the source Hub. This field is not required for public repositories.
+- **API Key**: The API key used to access private repositories from the source Hub. This field is not required for public repositories.
 - **Repository Id**: The name of the external repository. For example, `mozilla/firefox`.
 - **Revision History Length**: The number of application revisions to pull from the remote repository. The default value is 1 revision. 
 
@@ -339,7 +339,7 @@ The **Federation** page allows you to configure federation across multiple domai
 
 - **Source Domain URL**: A federation source URL from which domain resources will be replicated.
 
-- **API Key**: The API key is used to access federation resources from the federation source. This API key must be configured as a system-level key on the source server. See [Managing API Keys](/docs/server/hub-server/administration#managing-hub-managing-api-keys) for information on configured API keys.
+- **System API Key**: The API key used to access federation resources from the federation source. This API key must be configured as a system-level key on the source server. See [Managing API Keys](/docs/server/hub-server/administration#managing-hub-managing-api-keys) for information on configured API keys.
 
 - **Default Synchronization Frequency**: The frequency at which this server will check the federation source for updates.
 

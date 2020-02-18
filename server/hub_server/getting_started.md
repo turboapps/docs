@@ -101,7 +101,7 @@ The Turbo Server installation automatically creates firewall rules for the selec
 <br/>
 
 
-If your Turbo Server is running behind an external firewall that restricts these ports, you may need to configure the external firewall manually. For instructions on opening ports or for recommendations on how to best secure Turbo Server, refer to [Configure Turbo Server Security](/docs/server/hub-server/advanced-topics#configure-turbo-server-security).
+If your Turbo Server is running behind an external firewall that restricts these ports, you may need to configure the external firewall manually. For instructions on opening ports and for recommendations on how to best secure Turbo Server, refer to [Configure Turbo Server Security](/docs/server/hub-server/advanced-topics#configure-turbo-server-security).
 
 ### Setup
 
