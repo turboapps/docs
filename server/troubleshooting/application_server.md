@@ -35,6 +35,18 @@ In a typical enterprise scenario the administrator has applied Microsoft's secur
         <td colspan="1">A login prompt will prevent remoteapp applications from launching.</td>
       </tr>
       <tr>
+        <td colspan="1"></td>
+        <td colspan="1">Require use of specific security layer for remote (RDP) connections</td>
+        <td colspan="1">Enabled (SSL) or not configured</td>
+        <td colspan="1">Enhances security by requiring TLS 1.0 to authenticate the RD Session Host server during RDP connections.</td>
+      </tr>
+      <tr>
+        <td colspan="1"></td>
+        <td colspan="1">Require user authentication for remote connections by using Network Level Authentication</td>
+        <td colspan="1">Enabled or not configured</td>
+        <td colspan="1">Enhances security by requiring user authentication earlier in the remote connection process. Some clients may require NLA authentication to login.</td>
+      </tr>
+      <tr>
         <td colspan="1">Administrative Templates > Windows Components > Remote Desktop Services > Remote Desktop Session Host > Connections</td>
         <td colspan="1">Allow users to connect remotely by using Remote Desktop Services</td>
         <td colspan="1">Enabled or not configured</td>
@@ -255,6 +267,45 @@ The application server provisioner should make the required changes to enable Re
          <td colspan="1">C:\Program Files (x86)\Turbo\Cmd\turbo.exe (String)</td>
          <td colspan="1">Make sure turbo is allowed.</td>
       </tr>
+      <tr>
+         <td colspan="1">HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp</td>
+         <td colspan="1">SecurityLayer</td>
+         <td colspan="1">2 (DWORD)</td>
+         <td colspan="1">Require TLS 1.0 to authenticate the RD Session Host server.</td>
+      </tr>
+      <tr>
+         <td colspan="1"></td>
+         <td colspan="1">UserAuthentication</td>
+         <td colspan="1">1 (DWORD)</td>
+         <td colspan="1">Enable Network Level Authentication.</td>
+      </tr>
+</table>
+
+### Windows Updates
+
+<table>
+   <tr>
+      <th data-column="0">
+         <div>
+            <p>Operation System</p>
+         </div>
+      </th>
+      <th data-column="2">
+         <div>
+            <p>Update</p>
+         </div>
+      </th>
+      <th data-column="3">
+         <div>
+            <p>Comment</p>
+         </div>
+      </th>
+   </tr>
+   <tr>
+      <td colspan="1">Windows Server 2016</td>
+      <td colspan="1">KB4103723</td>
+      <td colspan="1">Security update for Remote Desktop connections.</td>
+   </tr>
 </table>
 
 ### Windows Update Notifications
