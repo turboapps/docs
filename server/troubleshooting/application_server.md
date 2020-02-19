@@ -283,11 +283,13 @@ The application server provisioner should make the required changes to enable Re
 
 ### Windows Updates
 
+The following Windows updates are required to establish secure connections between the client and RD Session Host. Not installing the following updates on the application server may prevent connections between the client and application server from functioning:
+
 <table>
    <tr>
       <th data-column="0">
          <div>
-            <p>Operation System</p>
+            <p>Operating System</p>
          </div>
       </th>
       <th data-column="2">
@@ -300,6 +302,11 @@ The application server provisioner should make the required changes to enable Re
             <p>Comment</p>
          </div>
       </th>
+   </tr>
+   <tr>
+      <td colspan="1">Windows Server 2012</td>
+      <td colspan="1">KB4103730 or KB4103726</td>
+      <td colspan="1">Security update for Remote Desktop connections.</td>
    </tr>
    <tr>
       <td colspan="1">Windows Server 2016</td>
