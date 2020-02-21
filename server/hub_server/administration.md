@@ -335,7 +335,15 @@ The **Settings** page lists allows you to configure domain-wide settings, includ
 
 ![](/docs/server/hub_server/admin-domain-federation.png)
 
-The **Federation** page allows you to configure federation across multiple domains to reduce setup time and keep domain resources in sync. According to these settings, the server will will periodically check the source domain for updates and replicate any changes. The available configurations are described below:
+The **Federation** page allows you to configure federation across multiple domains to reduce setup time and keep domain resources in sync. According to these settings, the server will will periodically check the source domain for updates and replicate any changes. 
+
+A domain federated server replicates the source server's workspaces, workspace permissions, and the workspaces' associated image repositories. In addition, the source server's users, groups, directory services, and identity method are also replicated to allow the users to run applications from workspaces using the same login identity. If the identity method is an external authentication method such as Azure AD, the subdomain's redirect url must be added in the Azure Portal. 
+
+If an existing login name or built in group, directory service, or user exists on the server, it will not be replicated. For example, the built in SYSTEM user will not be replicated. Replicated users will automatically belong to the 'Everyone' built in user group, but not the Anonymous or Administrator built in user groups.
+
+If an existing workspace with the same url friendly ID exists on the subdomain, it will be overwritten. If the source workspace permission references a built in group (Anonymous, Administrators, or Everyone), it will be normalized to reference the subdomain's built in group and automatically apply to the users belonging to those groups.
+
+ The available configurations are described below:
 
 - **Source Domain URL**: A federation source URL from which domain resources will be replicated.
 
