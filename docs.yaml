@@ -148,6 +148,9 @@ sections:
   - title: Overview
     documents:
       - Overview
+  - title: Setup
+    documents:
+      - Setup
   - title: Hub Server
     documents:
       - Getting Started
@@ -155,6 +158,8 @@ sections:
       - Advanced Topics
       - Cloud Storage Integration
       - Azure Active Directory Integration
+      - Network and Load Balancing
+  - title: Portal Server
       - Network and Load Balancing
   - title: Troubleshooting
     documents:
