@@ -279,7 +279,7 @@ Here is a table that describes the purpose of each of the tags you see in <stron
             <p>Virtual machine configuration settings which affect runtime behavior. Also contains a <strong>ChildProcessVirtualization</strong> element.</p>
             <p>Attributes:</p>
             <ul>
-               <li><strong>suppressBranding</strong> - Disables the Turbo runtime splash. Default is <strong>True</strong><li>
+               <li><strong>suppressBranding</strong> - Disables the Turbo runtime splash. Default is <strong>True</strong></li>
                <li><strong>deleteSandbox</strong> - Removes the sandbox runtime environment when the application exits. This is used to ensure a fresh sandbox environment on every launch. Default is <strong>False</strong>.</li>
                <li><strong>shutdownProcessTree</strong> - Kills all the virtual processes when the root process exists. This is used to ensure that services and other spawned processes don't hang around after the application exists. Default is <strong>False</strong>.</li>
                <li><strong>enhancedDEPCompatibility</strong> - Provides compatibility for Windows 2003 systems with Data Execution Protection enabled. Default is <strong>False</strong>.</li>
@@ -816,7 +816,7 @@ Here is a table that describes the purpose of each of the tags you see in <stron
                   <ul>
                         <li><strong>String</strong> - A null-terminated string. Translates to <strong>REG_SZ</strong> in the registry.</li>
                         <li><strong>ExpandString</strong> - A null-terminated string which contains environment variables to be resolved at runtime. Translates to <strong>REG_EXPAND_SZ</strong> in the registry.</li>
-                        <li><strong>StringArray</strong> - An array of null-terminated strings. Translates to <strong>REG_MULTI_STRING</strong> in the registry. Each string in the array is represented by a child <strong>String</strong> element (ex: <strong>&gt;String value="..." pathInformationTuples="..."/&lt;</strong>).</li>
+                        <li><strong>StringArray</strong> - An array of null-terminated strings. Translates to <strong>REG_MULTI_STRING</strong> in the registry. Each string in the array is represented by a child <strong>String</strong> element (ex: <strong>&lt;String value="..." pathInformationTuples="..."/&gt;</strong>).</li>
                         <li><strong>DWORD</strong> - A 32-bit integer value. Translates to <strong>REG_DWORD</strong> in the registry.</li>
                         <li><strong>QWORD</strong> - A 64-bit integer value. Translates to <strong>REG_QWORD</strong> in the registry.</li>
                         <li><strong>Binary</strong> - A binary blob value in hexidecimal string format (ex: <strong>00AB385128...</strong>). Translates to <strong>REG_BINARY</strong> in the registry.</li>
