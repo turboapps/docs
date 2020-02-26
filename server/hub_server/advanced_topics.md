@@ -136,11 +136,11 @@ Complete the following steps to enable Microsoft Windows Firewall with Advanced 
 
 8. Add a name and description.
 
-### Manage Turbo Hub Server from the Command Line
+### Manage Turbo Server from the Command Line
 
-The Turbo Hub Server executable, **server.exe**, is located in the installation directory of Turbo Hub Server (usually **C:\Program Files\Turbo Server**). It has many administrative options that are accessible by using command line parameters.
+The Turbo Server executable, **server.exe**, is located in the installation directory of Turbo Hub Server (usually **C:\Program Files (x86)\Turbo Server**). It has many administrative options that are accessible by using command line parameters.
 
-When using the Turbo Hub Server command line administrative tools, it is important to remember the following:
+When using the Turbo Server command line administrative tools, it is important to remember the following:
 
 - Run the command window as Administrator (right-click **Run as Administrator**).
 
@@ -202,66 +202,7 @@ When using the Turbo Hub Server command line administrative tools, it is importa
 
 Server.exe can also be used to create and update applications, as well as to manage other server settings. This is done by specifying any of the given topics after the Server.exe admin command.
   
-**Server.exe admin /client**  
-
-<table>
-      <tr>
-         <th data-column="0">
-            <div>
-               <p>Option</p>
-            </div>
-         </th>
-         <th data-column="1">
-            <div>
-               <p>Description</p>
-            </div>
-         </th>
-      </tr>
-      <tr>
-         <td>
-            <p><code>print, (none)</code></p>
-         </td>
-         <td>
-            <p>Prints the current settings for the client.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code><code>hide</code></code></p>
-         </td>
-         <td>
-            <p>Hides the console for users when installed</p>
-         </td>
-      </tr>
-      <tr>
-         <td colspan="1"><code>show</code></td>
-         <td colspan="1">
-            <p>Shows the console for users when installed</p>
-            <p>Note: "show" is the default setting for the client</p>
-         </td>
-      </tr>
-      <tr>
-         <td colspan="1"><code>help</code></td>
-         <td colspan="1">Prints help information</td>
-      </tr>
-</table>
-<br>
-Examples:
-
-- **Print the current console settings**:
-
-	Server.exe admin /client 
-
-- **Hide the console on user computers**:
-
-	Server.exe admin /client hide
-
-- **Show the console on user computers**:
-
-	Server.exe admin /client show
-
-
-**Server.exe admin /directory-services**
+**Server.exe admin --directory-services**
 
 <table>
       <tr>
@@ -314,18 +255,18 @@ Examples:
 
 - **Print the current directory services**:
 
-	Server.exe admin /directory-services
+	Server.exe admin --directory-services
 
 - **Create a new directory service with prefix "loc"**:
 
-	Server.exe admin /directory-services new loc
+	Server.exe admin --directory-services new loc
 
 - **Delete the "loc" directory service**:
 
-	Server.exe admin /directory-services delete loc
+	Server.exe admin --directory-services delete loc
 
 
-**Server.exe admin /directory-service**
+**Server.exe admin --directory-service**
 
 <table>
       <tr>
@@ -351,7 +292,7 @@ Examples:
 </table>
 <br>
 
-**Server.exe admin /directory-service &lt;login prefix&gt;**
+**Server.exe admin --directory-service &lt;login prefix&gt;**
 
 <table>
       <tr>
@@ -484,36 +425,100 @@ The following examples describe a typical set of steps to set up a directory ser
 
 - **Print the settings of directory service "ad"**:
 
-	Server.exe admin /directory-service ad
+	Server.exe admin --directory-service ad
 
 - **Change the name of directory service "ad"**:
 
-	Server.exe admin /directory-service ad name "Local Active Directory"
+	Server.exe admin --directory-service ad name "Local Active Directory"
 
 - **Dump the settings of directory service "ad" to a file**:
 
-	Server.exe admin /directory-service ad print > ad-settings.txt
+	Server.exe admin --directory-service ad print > ad-settings.txt
 
 - **Discover the schema of directory service "ad"**:
 
-	Server.exe admin /directory-service ad discover
+	Server.exe admin --directory-service ad discover
 
 - Copy/paste the recommended schema from the console to the ad-settings.txt file.
 
 - **Print all the groups found in "ad"**:
 
-	Server.exe admin /directory-service ad groups
+	Server.exe admin --directory-service ad groups
 
 - **Specify a user group to be synchronized**:
 
-	Server.exe admin /directory-service ad items add Group "cn=All,dc=acme,dc=com"
+	Server.exe admin --directory-service ad items add Group "cn=All,dc=acme,dc=com"
 
 - **Set all the settings of "ad" from a file**:
 
-	Server.exe admin /directory-service ad set ad-settings.txt
+	Server.exe admin --directory-service ad set ad-settings.txt
 
 
-**Server.exe admin /hub**
+**Server.exe admin --global**
+
+<table>
+      <tr>
+         <th data-column="0">
+            <div>
+               <p>Option</p>
+            </div>
+         </th>
+         <th data-column="1">
+            <div>
+               <p>Description</p>
+            </div>
+         </th>
+      </tr>
+      <tr>
+         <td>
+            <p><code>print, (none)</code></p>
+         </td>
+         <td>
+            <p>Prints the current global settings.</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p><code>&lt;property&gt;</code></p>
+         </td>
+         <td>
+            <p>Prints the current value of &lt;property&gt;.</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p><code>&lt;property&gt; &lt;value&gt;</code></p>
+         </td>
+         <td>
+            <p>Sets the value of &lt;property&gt; to &lt;value&gt;.</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p><code>help, h, ?, -?, /?, etc.</code></p>
+         </td>
+         <td>
+            <p>Prints help information.</p>
+         </td>
+      </tr>
+</table>
+<br>
+
+Examples:
+
+- **Print the current settings**:
+
+	Server.exe admin --global
+
+- **Print the OneDrive Client Id settings**:
+
+	Server.exe admin --global onedrive-client-id
+
+- **Set the OneDrive Client Id settings**:
+
+	Server.exe admin --global onedrive-client-id 9ac73e7d-83aa-425d-8b04-fac64a702f77
+
+**Server.exe admin --hub**
 
 <table>
       <tr>
@@ -614,18 +619,18 @@ Examples:
 
 - **Print the current settings**:
 
-	Server.exe admin /hub print
+	Server.exe admin --hub print
 
 - **Add an API key**:
 
-	Server.exe admin /hub key create "Test Lab Key"
+	Server.exe admin --hub key create "Test Lab Key" system
 
 - **Enable launch configuration service**:
 
-	Server.exe admin /hub configsvc enable C68480F0BD594684A90EEB889118CEB6
+	Server.exe admin --hub configsvc enable C68480F0BD594684A90EEB889118CEB6
 
 
-**Server.exe admin /license**
+**Server.exe admin --license**
 
 <table>
       <tr>
@@ -670,14 +675,14 @@ Examples:
 
 - **Print the current license**:
 
-	Server.exe admin /license print
+	Server.exe admin --license print
 
 - **Set the current license**:
 
-	Server.exe admin /license set ss-license.txt
+	Server.exe admin --license set ss-license.txt
 
 
-**Server.exe admin /server**
+**Server.exe admin --server**
 
 <table>
       <tr>
@@ -730,21 +735,21 @@ Examples:
 
 - **Print the current primary server settings**:
 
-	Server.exe admin /server
+	Server.exe admin --server
 
-- **Print the current primary server IP address**:
+- **Print the root web address**:
 
-	Server.exe admin /server ip-address
+	Server.exe admin --server &lt;server-name&gt; web-root
 
-- **Set the current primary server web address**:
+- **Set the root web address**:
 
-	Server.exe admin /server web-address https://acme/turbo
+	Server.exe admin --server &lt;server-name&gt; web-root https://acme/turbo
 
 - **Set the SSL certificate file path**:
 
-	Server.exe admin /server ssl-certificate-file c:\programdata\acme\cert.txt
+	Server.exe admin --server &lt;server-name&gt; ssl-certificate-file c:\programdata\acme\cert.txt
 
-**Server.exe admin /users**
+**Server.exe admin --users**
 
 <table>
       <tr>
@@ -797,19 +802,19 @@ Examples:
 
 - **Print information about current users and groups**:
 
-	Server.exe admin /users
+	Server.exe admin --users
 
 - **Change the authentication type to "Forms"**:
 
-	Server.exe admin /users authentication-type Forms
+	Server.exe admin --users authentication-type Forms
         
 
 - **Change the login timeout duration to four weeks**:
 
-	Server.exe admin /users ticket-timeout 40320
+	Server.exe admin --users ticket-timeout 40320
 
 
-**Server.exe admin /user-groups**
+**Server.exe admin --user-groups**
 
 <table>
       <tr>
@@ -862,18 +867,18 @@ Examples:
 
 - **Print the current groups**:
 
-	Server.exe admin /user-groups
+	Server.exe admin --user-groups
 
 - **Create a new group with name "Power Users"**:
 
-	Server.exe admin /user-groups new "Power Users"
+	Server.exe admin --user-groups new "Power Users"
 
 - **Delete group 2**:
 
-	Server.exe admin /user-groups delete 2
+	Server.exe admin --user-groups delete 2
 
 
-**Server.exe admin /user-group <id>**
+**Server.exe admin --user-group <id>**
 
 <table>
       <tr>
@@ -942,15 +947,15 @@ Examples:
 
 - **Print the settings of group 2**:
 
-	Server.exe admin /user-group 2
+	Server.exe admin --user-group 2
 
 - **Print the properties and members of group 2**:
 
-	Server.exe admin /user-group 2 print
+	Server.exe admin --user-group 2 print
 
 - **Remove all members from group 2**:
 
-	Server.exe admin /user-group 2 clear
+	Server.exe admin --user-group 2 clear
 
 
 ### Using the Launch Configuration Web Service
