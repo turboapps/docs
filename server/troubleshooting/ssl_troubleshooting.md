@@ -34,7 +34,7 @@ verify error:num=21:unable to verify the first certificate
 verify return:1
 ```
 
-The error can be further validated using (ssllabs.com)[https://www.ssllabs.com/ssltest/analyze.html] by entering the host of the Turbo Server to analyze. Expand the certification paths section to see which part of the certificate chain is missing. If parts of the certificate chain is missing, contact the administrator to obtain the correct certificate chain.
+The error can be further validated using [ssllabs.com](https://www.ssllabs.com/ssltest/analyze.html) by entering the host of the Turbo Server to analyze. Expand the certification paths section to see which part of the certificate chain is missing. If parts of the certificate chain is missing, contact the administrator to obtain the correct certificate chain.
 
 ### Portal does not load web pages after installing SSL certificates
 
