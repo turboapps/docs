@@ -26,10 +26,10 @@ The SSL chain file is missing or invalid. Use openssl to test the certificate ch
 > openssl s_client -showcerts {hubserverhost}:443
 
 CONNECTED(00000005)
-depth=0 CN = run.intellicadms.com
+depth=0 CN = hubserverhost
 verify error:num=20:unable to get local issuer certificate
 verify return:1
-depth=0 CN = run.intellicadms.com
+depth=0 CN = hubserverhost
 verify error:num=21:unable to verify the first certificate
 verify return:1
 ```
