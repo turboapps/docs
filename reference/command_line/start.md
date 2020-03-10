@@ -29,9 +29,10 @@ Usage: start <options> <container>
       --mount-if=VALUE         Mount a host folder into the container but does not fail if the mount point doesn't exist. This setting is not saved in the container. Format: [other-container:]SourceFolder[=TargetFolder]
       --network=VALUE          Run container in specified named network. This setting is not saved in the container.
       --no-pull                Uses local images to run the container if possible. If not present, will pull from the hub.
-      --proxy-password=VALUE   Password used to connect to the proxy server. This setting is not saved in the container.
-      --proxy-server=VALUE     Proxy server. This setting is not saved in the container. Format: [socks5|http|https]://yourproxy:port
-      --proxy-username=VALUE   Username used to connect to the proxy server. This setting is not saved in the container.
+      --proxy-password=VALUE   Password used to connect to the proxy server. It is not required when using Tnlr. This setting is not saved in the container.
+      --proxy-server=VALUE     Proxy or Tnlr server (Tnlr requires TLS). This setting is not saved in the container. Format: [socks5|http|https|tnlr]://proxy-address:port.
+      --proxy-targets=VALUE    A list of addresses (separated by semicolons) which will be proxied. If not set, all traffic will go through the proxy. The address could be either a DNS name or an IP address.
+      --proxy-username=VALUE   Username used to connect to the proxy server. It is not required when using Tnlr. This setting is not saved in the container.
       --pull                   Pulls base images from hub before running, if they exist
       --route-add=VALUE        Add route mapping. Supported protocols: ip, pipe, tcp, and udp. This setting is not saved in the container.
       --route-block=VALUE      Block specified route or protocol. Supported protocols: ip, tcp, and udp. This setting is not saved in the container.
