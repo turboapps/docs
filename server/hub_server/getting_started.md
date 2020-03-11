@@ -69,11 +69,6 @@ The Turbo Server installation automatically creates firewall rules for the selec
     <td>TCP</td>
     <td>Portal Site HTTPS</td>
 </tr>
-<tr>
-    <td>1080</td>
-    <td>TCP</td>
-    <td>Tnlr Proxy</td>
-</tr>
 </tbody>
 </table>
 
@@ -89,12 +84,7 @@ The Turbo Server installation automatically creates firewall rules for the selec
 <tr>
     <td>5850</td>
     <td>TCP</td>
-    <td>Application Server Rdp Proxy</td>
-</tr>
-<tr>
-    <td>8084</td>
-    <td>TCP</td>
-    <td>Application Server Service</td>
+    <td>Application Server RDP Proxy</td>
 </tr>
 </tbody>
 </table>
