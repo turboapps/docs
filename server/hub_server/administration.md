@@ -113,7 +113,7 @@ Turbo Hub Server users are tracked and managed via the Administration Site. User
 
 #### Managing Users
 
-![](/docs/server/hub_server/admin-users-user.png)
+![](/docs/server/hub_server/admin-user.png)
 
 To manage a user, select the user name from the list on the **Users** page. The following fields are displayed on the page:
 
@@ -125,7 +125,7 @@ To manage a user, select the user name from the list on the **Users** page. The 
 
 #### Managing User Groups
 
-![](/docs/server/hub_server/admin-users-group.png)
+![](/docs/server/hub_server/admin-user-group.png)
 
 To create a user group select **Add Group**. The **Add User Group** screen displays. This screen contains the following fields:
 
@@ -331,6 +331,12 @@ The **Settings** page lists allows you to configure domain-wide settings, includ
   - **Total Sessions**: New application requests will be allocated to the active application server with the lowest total session count.
   - **CPU Load**: New application requests will be allocated to the active application server with the lowest CPU load.
 
+- **Default Launch Mode**: The default launch location used when launching applications from the dashboard. If an application is configured with its own launch location, that setting will take precedence. The available options are:
+  - **Run in Cloud (HTML5)**: Application launches will open a new browser tab to which the application will stream from the application server.
+  - **Run in Cloud (Windowed)**: Application Launches will open a new browser tab and attempt an auto-launch. If a native client is installed, the application will stream from the application server.
+  - **Run on My PC (Local)**: Application Launches will open a new browser tab and attempt an auto-launch. If a native client is installed, the application will run on the local machine.
+
+
 #### Domain Federation
 
 ![](/docs/server/hub_server/admin-domain-federation.png)
@@ -351,18 +357,19 @@ If an existing workspace with the same url friendly ID exists on the subdomain, 
 
 - **Default Synchronization Frequency**: The frequency at which this server will check the federation source for updates.
 
+- **Identity**: Federate identity data from the source domain, including users, groups, directory services, and authentication settings.
+
+- **Workspaces**: Federate selected workspaces from the source domain. All repositories associated with the selected workspaces will also be federated.
+
 - **Request Forwarding**: Automatically pull repositories from the federated domain when a local repository is not found.
 
 - **Revision History Length**: Number of application revisions to pull from the remote repository.
 
-- **Identity Federation**: Federate identity data from the source domain, including users, groups, directory services, and authentication settings.
-
-- **Workspace Federation**: Federate selected workspaces from the source domain. All repositories associated with the selected workspaces will also be federated.
 
 
 ### Managing a Server
 
-![](/docs/server/hub_server/admin-servers-edit.png)
+![](/docs/server/hub_server/admin-domain-server.png)
 
 - **Name**: A display name for the server, shown in the Administration Site.
 
@@ -412,7 +419,7 @@ The **Applications** page lists all applications that have been added to this wo
 
 #### Editing a Workspace Application
 
-![](/docs/server/hub_server/admin-workspaces-admin-applications-edit.png)
+![](/docs/server/hub_server/admin-workspaces-admin-application.png)
 
 The **Application Settings** page provides configuration options for a variety of application settings. These settings control the application's display and launch behavior.
 
@@ -450,25 +457,12 @@ Note that if the server uses Anonymous login mode, the user name in the reports 
 
 #### Administration Reports
 
-- **Session Logs Report**: Provides a detailed record of all session events, including launching or stopping an application.
-
 - **Alert Report**: Presents a record of all Turbo Hub Server alerts. Common alerts include errors and administrative changes.
-
-#### Hub Reports
-
-- **Repository Session Report**: Presents a detailed record of each repository session.
-
 - **Repository Usage Report**: Provides a detailed breakdown and comparison of the usage for each repository.
-
-#### User Reports
-
-- **User Usage Report**: Presents a detailed breakdown and comparison of application usage for each user
-
+- **Repository Session Report**: Presents a detailed record of each repository session.
+- **Session Logs Report**: Provides a detailed record of all session events, including launching or stopping an application.
 - **User Session Report**: Provides a detailed record of each application session, broken-down by user.
-
-#### Report Viewer
-
-![](/docs/server/hub_server/admin-reports-view.png)
+- **User Usage Report**: Presents a detailed breakdown and comparison of application usage for each user
 
 Use the toolbar located at the top of the **Report Viewer** to perform the following tasks:
 
