@@ -4,7 +4,7 @@
 
 To allow users to connect their OneDrive accounts and access them while running their applications, you must first configure a OneDrive app registration. This OneDrive app controls the permissions, branding, and routing for the OneDrive SSO.  
 
-The settings should be entered into /admin/general/files.aspx.
+The settings should be entered into your Turbo Server Administration site at /admin/general/files.aspx.
 
 1. Follow the [Microsoft docs](https://docs.microsoft.com/en-us/onedrive/developer/rest-api/getting-started/app-registration) to set up a OneDrive app registration.  
 
@@ -12,15 +12,29 @@ The settings should be entered into /admin/general/files.aspx.
 
 3. Enable the following Delegated Permissions: `Files.ReadWrite.All` and `offline_access`  
 
-4. Add `https://{portal-subdomain}.turbo.net` to `cloudStorageManager` in `config.ini`  
+4. On the Turbo Server Administration site, enter your **Application Id** into the corresponding **OneDrive Client** Id field.  
 
-5. Enter your **Application Id** into the corresponding oneDriveClientId field.  
+5. On the Turbo Server Administration site, enter your **Application Secret** into the corresponding **OneDrive Secret** field.  
 
-6. Enter your **Application Secret** into the corresponding oneDrive keys field.  
+6. On the server running the Turbo Hub Server, add `cloudStorageManager = https://{Web Service Root}` to `config.ini.<version>.template`:
+
+    1. Open an administrator command prompt and cd into your install directory:  
+    `C:\Users\Administrator>cd "C:\Program Files (x86)\Turbo Server"`
+    2. Open the virtual file system:  
+    `C:\Program Files (x86)\Turbo Server>Server.exe /XShellEx=cmd`
+    3. Open the config.ini.&lt;version&gt;.template file in the new command prompt:  
+    `C:\Windows\System32>notepad C:\portal\src\props\config.ini.<version>.template`
+    4. Set the cloudStorageManager to https://{Web Service Root}, then save and close. This should match the host of the Redirect URI in Azure:  
+    `cloudStorageManager = https://example.turbo.net`
+    5. Restart the Turbo service from the Task Manager.
+
+Once configured, users may connect their OneDrive account from the portal dashboard Files tab.
 
 ### Setting up Dropbox SSO
 
 To allow users to connect their Dropbox accounts and access them while running their applications, you must first configure a Dropbox app registration. This Dropbox app controls the permissions, branding, and routing for the Dropbox SSO.  
+
+The settings should be entered into your Turbo Server Administration site at /admin/general/files.aspx.
 
 1. Create a [Dropbox app registration](https://www.dropbox.com/developers/apps).  
 
@@ -28,11 +42,23 @@ To allow users to connect their Dropbox accounts and access them while running t
 
 3. Set the Permission type to `Full Dropbox`  
 
-4. Add `https://{Web Service Root}` to `cloudStorageManager` in `config.ini`  
+4. On the Turbo Server Administration site, enter your **App key** into the corresponding **Dropbox Client Id** field.  
 
-5. Enter your **App key** into the corresponding dropboxClientId field.  
+5. On the Turbo Server Administration site, enter your **App secret** into the corresponding **Dropbox Secret** field.  
 
-6. Enter your **App secret** into the corresponding dropbox keys field.  
+6. On the server running the Turbo Hub Server, add `cloudStorageManager = https://{Web Service Root}` to `config.ini.<version>.template`:
+
+    1. Open an administrator command prompt and cd into your install directory:  
+    `C:\Users\Administrator>cd "C:\Program Files (x86)\Turbo Server"`
+    2. Open the virtual file system:  
+    `C:\Program Files (x86)\Turbo Server>Server.exe /XShellEx=cmd`
+    3. Open the config.ini.&lt;version&gt;.template file in the new command prompt:  
+    `C:\Windows\System32>notepad C:\portal\src\props\config.ini.<version>.template`
+    4. Set the cloudStorageManager to https://{Web Service Root}, then save and close. This should match the host of the Redirect URI in Azure:  
+    `cloudStorageManager = https://example.turbo.net`
+    5. Restart the Turbo service from the Task Manager.
+
+Once configured, users may connect their Dropbox account from the portal dashboard Files tab.
 
 ### Troubleshooting
 
