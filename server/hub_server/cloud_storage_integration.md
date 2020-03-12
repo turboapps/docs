@@ -12,11 +12,11 @@ The settings should be entered into your Turbo Server Administration site at /ad
 
 3. Enable the following Delegated Permissions: `Files.ReadWrite.All` and `offline_access`  
 
-4. On the Turbo Server Administration site, enter your **Application Id** into the corresponding **OneDrive Client** Id field.  
+4. On the Turbo Server Administration site, enter your **Application Id** into the corresponding **OneDrive Client Id** field.  
 
 5. On the Turbo Server Administration site, enter your **Application Secret** into the corresponding **OneDrive Secret** field.  
 
-6. On the server running the Turbo Hub Server, add `cloudStorageManager = https://{Web Service Root}` to `config.ini.<version>.template`:
+6. [Required for Server <= 20.3.1722.0] On the server running the Turbo Hub Server, add `cloudStorageManager = https://{Web Service Root}` to `config.ini.<version>.template`:
 
     1. Open an administrator command prompt and cd into your install directory:  
     `C:\Users\Administrator>cd "C:\Program Files (x86)\Turbo Server"`
@@ -46,7 +46,7 @@ The settings should be entered into your Turbo Server Administration site at /ad
 
 5. On the Turbo Server Administration site, enter your **App secret** into the corresponding **Dropbox Secret** field.  
 
-6. On the server running the Turbo Hub Server, add `cloudStorageManager = https://{Web Service Root}` to `config.ini.<version>.template`:
+6. [Required for Server <= 20.3.1722.0] On the server running the Turbo Hub Server, add `cloudStorageManager = https://{Web Service Root}` to `config.ini.<version>.template`:
 
     1. Open an administrator command prompt and cd into your install directory:  
     `C:\Users\Administrator>cd "C:\Program Files (x86)\Turbo Server"`
