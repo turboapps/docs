@@ -8,17 +8,21 @@ The settings should be entered into your Turbo Server Administration site at /ad
 
 1. Follow the [Microsoft docs](https://docs.microsoft.com/en-us/onedrive/developer/rest-api/getting-started/app-registration) to set up a OneDrive app registration.  
 
-2. Add the following Redirect URLs: `https://{Web Service Root}/oauth/onedrive/callback/login` and `https://{Web Service Root}/oauth/onedrive/callback/logout`  
+2. Add the following Redirect URLs:  
+    * `https://{Web Service Root}/oauth/onedrive/callback/login`  
+    * `https://{Web Service Root}/oauth/onedrive/callback/logout`  
 
-3. Enable the following Delegated Permissions: `Files.ReadWrite.All` and `offline_access`  
+3. Enable the following Delegated Permissions:  
+    * `Files.ReadWrite.All`  
+    * `offline_access`  
 
 4. On the Turbo Server Administration site, enter your **Application Id** into the corresponding **OneDrive Client Id** field.  
 
 5. On the Turbo Server Administration site, enter your **Application Secret** into the corresponding **OneDrive Secret** field.  
 
-6. [Required for Server <= 20.3.1722.0] On the server running the Turbo Hub Server, add `cloudStorageManager = https://{Web Service Root}` to `config.ini.<version>.template`:
+6. **[Required for Server < 20.3.1722.0]** Manually update the Turbo Server's OneDrive Redirect URL:  
 
-    1. Open an administrator command prompt and cd into your install directory:  
+    1. Open an administrator command prompt on your Turbo Hub Server and cd into your install directory:  
     `C:\Users\Administrator>cd "C:\Program Files (x86)\Turbo Server"`
     2. Open the virtual file system:  
     `C:\Program Files (x86)\Turbo Server>Server.exe /XShellEx=cmd`
@@ -38,17 +42,18 @@ The settings should be entered into your Turbo Server Administration site at /ad
 
 1. Create a [Dropbox app registration](https://www.dropbox.com/developers/apps).  
 
-2. Add the following Redirect URI: `https://{Web Service Root}/oauth/dropbox/callback/login`  
+2. Add the following Redirect URI:  
+    * `https://{Web Service Root}/oauth/dropbox/callback/login`  
 
-3. Set the Permission type to `Full Dropbox`  
+3. Set the Permission type to: `Full Dropbox`  
 
 4. On the Turbo Server Administration site, enter your **App key** into the corresponding **Dropbox Client Id** field.  
 
 5. On the Turbo Server Administration site, enter your **App secret** into the corresponding **Dropbox Secret** field.  
 
-6. [Required for Server <= 20.3.1722.0] On the server running the Turbo Hub Server, add `cloudStorageManager = https://{Web Service Root}` to `config.ini.<version>.template`:
+6. **[Required for Server < 20.3.1722.0]** Manually update the Turbo Server's Dropbox Redirect URI:  
 
-    1. Open an administrator command prompt and cd into your install directory:  
+    1. Open an administrator command prompt on your Turbo Hub Server and cd into your install directory:  
     `C:\Users\Administrator>cd "C:\Program Files (x86)\Turbo Server"`
     2. Open the virtual file system:  
     `C:\Program Files (x86)\Turbo Server>Server.exe /XShellEx=cmd`
