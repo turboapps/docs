@@ -87,6 +87,12 @@ Browser redirection: enabled
 > turbo config --image-path=allusers --all-users
 ```
 
+### Enable Turbo Drive
+
+Turbo Drive is a special drive (T:) mounted in your system, which allows you to access your cloud storage accounts. Turbo Drive requires WinFSP to be installed in the system, and a Cloud Storage accounts to be configured in the Turbo Server. Turbo Drive uses a persistent cache to make working with the cloud files faster. The cache is located in the encrypted (EFS) folder at `%TEMP%\TURBO\cmd\turbo-drive`.
+
+To enable Turbo Drive, run `turbo config --enable=TurboDrive`.
+
 ### Resetting Config Settings
 
 The configuration settings for Turbo can be reset to their default values by issuing the config command with the `--reset` flag.
