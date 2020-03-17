@@ -1,3 +1,10 @@
+# This repository is depricated, all future Turbo.net docs edits must be done in Contentful
+
+Contentful web app: https://app.contentful.com/spaces/r1iixxhzbg8u  
+See the Turbo.net docs for more information: https://github.com/codesystems/turbonet/tree/master/websites/www#docs-1  
+
+----
+
 # Turbo Documentation
 
 This is the official Git repository for Turbo's public documentation. 
