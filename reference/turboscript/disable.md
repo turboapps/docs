@@ -1,11 +1,11 @@
 ## disable
 
-The `disable` instruction disables the specified VM setting inside the container. 
+The `disable` instruction disables the specified VM setting inside the container.
 
 ```
 disable <vm setting>
 ```
 
-Only one setting can be disabled per instruction. To disable multiple VM settings, use multiple `disable` instructions. 
+Only one setting can be disabled per instruction. To disable multiple VM settings, use multiple `disable` instructions.
 
-See **[VM Settings](/docs/reference/vm-settings-and-variables)** section for details on available options.
+See **[VM Settings](https://hub.turbo.net/docs/vm/virtual-machine/runtime-settings)** section for details on available options.

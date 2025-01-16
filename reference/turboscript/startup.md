@@ -23,6 +23,31 @@ If you wish to launch a process from an executable and optionally supply paramet
 startup file ("git.exe", "clone", "https://github.com/turboapps/docs")
 ```
 
+### Using TurboScript Vars
+
+When passing a TurboScript var to the startup file instruction, the variable must be appended to a string.
+
+Example:
+```
+var startupfilepath = "C:\Program Files\App\app.exe"
+startup file ("" + startupfilepath)
+```
+
+### Passing Multiple Arguments to the Startup File
+
+When passing multiple arguments to the startup file, the arguments should be separated with a comma to avoid issues with spaces in paths.
+
+Example:
+```
+var startupfilepath = "C:\Program Files\App\app.exe"
+var configfilepath = "C:\Program Files\App\config.cfg"
+startup file ("" + startupfilepath, "-CONFIG","" + configfilepath)
+```
+
+The resulting config file argument is enclosed in quotes:
+```
+@PROGRAMFILES@\App\app.exe -CONFIG "@PROGRAMFILES@\App\config.cfg"
+```
 ### As a Shell Command
 
 You may also launch a process using basic command prompt syntax. To open a Command Prompt window with a message:
@@ -52,7 +77,6 @@ A startup file, or collection of startup files, can be assigned a trigger name. 
 # in turbo.me file to create "test-trigger" image...
 startup file [("c:\windows\system32\notepad.exe"), ("c:\windows\regedit.exe")]
 startup file doc=[("c:\windows\system32\notepad.exe", "c:\doc\welcome.txt"), ("c:\windows\system32\notepad.exe", "c:\doc\howto.txt")]
-
 
 # from command-prompt...
 

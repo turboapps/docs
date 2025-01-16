@@ -10,7 +10,7 @@ Private repositories are not searchable, and they can only be accessed, pulled, 
 
 A repository can be owned by a user or an organization. Anywhere in this documentation that mentions the repository owner or profile, it could be used interchagably between a single user or an organization. Users belonging to the organization can access the repositories in the organization if they belong to the organization. Write access to an organizations repository is granted to the administrators and owner of the organization.
 
-The homepage for a repository is located at **http://turbo.net/hub/[profile]/[repo]**, where **profile** is the username of the repository owner and **repo** is the name of the repository. The homepage contains 3 sections:
+The homepage for a repository is located at **https://app.turbo.net/run/[profile]/[repo]**, where **profile** is the username of the repository owner and **repo** is the name of the repository. The homepage contains 3 sections:
 
 1. **About** - Provides an overview of the repository. 
 2. **Releases** - Lists all tagged versions of the image.
@@ -18,7 +18,9 @@ The homepage for a repository is located at **http://turbo.net/hub/[profile]/[re
 
 On your repository's **About** page, you can edit the description, Readme, icon, URL, and steps for getting started with your project.
 
-Other users viewing the repository details page can stream the project directly from the browser in a variety of ways. They can **Run** your image in a new container. This is equivalent to this command executed through the command-line interface:
+Other users viewing the repository details page can run the repository in a variety of ways. 
+
+They can **Run** your image in a new container through the command-line interface:
 
 ```
 # Run the image in a container

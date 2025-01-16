@@ -4,7 +4,7 @@ Intune is an Azure-based device management solution by Microsoft.
 
 This section describes the process for deploying the Turbo client to Intune-managed devices.
 
-### Deploying Turbo.net for PC
+### Deploying Turbo for PC
 
 1. Download the latest Turbo Client MSI installer at `https://start.turbo.net/install?msi=`
 2. Sign in to the Intune portal
@@ -22,7 +22,7 @@ This section describes the process for deploying the Turbo client to Intune-mana
 8. Select **Add**
 9. Under **Manage**, click **Assignments** and assign the app to the necessary groups
 
-### Deploying Turbo.net for iOS
+### Deploying Turbo for iOS
 
 1. Sign in to the Intune portal
 2. In the Intune pane select **Client Apps > Apps > Add**
@@ -33,7 +33,7 @@ This section describes the process for deploying the Turbo client to Intune-mana
 7. Select **Add**
 8. Under **Manage**, click **Assignments** and assign the app to the necessary groups.
 
-### Deploying Turbo.net for Android
+### Deploying Turbo for Android
 
 To deploy Turbo.net for Android via InTune:
 

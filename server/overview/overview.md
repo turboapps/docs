@@ -6,19 +6,31 @@ Unlike traditional deployment methods, applications streamed from Turbo Server d
 
 Turbo Application Server allows you to run application workloads on a server for your users. Turbo Application Server can source applications from the Turbo.net Hub or an on-premises Turbo Hub Server.
 
+### Getting Started
+
+Turbo Server is available for deployment on-premises, as well as in the cloud via the Turbo Server Azure Marketplace Image (AMI).
+
+For more information on setting up Turbo Server on-premises, please refer to the [On-Premises](https://hub.turbo.net/docs/server/setup-and-deployment/deploying-on-premises) documentation.
+
+For more information on setting up Turbo Server in Azure, please refer to the [Azure Marketplace Image (AMI)](https://hub.turbo.net/docs/server/setup-and-deployment/deploying-to-azure) documentation.
+
 ### Architecture
 
 There are four major server roles in a Turbo Server deployment:
 
-* The **Hub Server** is stores all application images and user session data. The Hub may be hosted in the Turbo.net cloud or run in a customer managed cloud or on-premises server. On-premises Hub servers can federate containers to and from other Hubs.
+- The **Hub Server** stores all application images and user session data. The Hub may be hosted in the Turbo.net cloud or run in a customer managed cloud or on-premises server. On-premises Hub servers can federate containers to and from other Hubs.
 
-* The **Portal Server** hosts the application web portal where users can log in to view and launch applications, open files, and manage Turbo resources. A portal server also provides API services allowing other client types to interact with the Turbo environment.
+- The **Portal Server** hosts the application web portal where users can log in to view and launch applications, open files, and manage Turbo resources. A portal server also provides API services allowing other client types to interact with the Turbo environment.
 
-* One or more **Application Servers** runs containerized applications and streams sessions to clients. A typical deployment uses multiple application servers in a *pool* to handle load volumes and provide redundancy. Application servers can be hosted in the cloud or on-premises.
+- One or more **Application Servers** runs containerized applications and streams sessions to clients. A typical deployment uses multiple application servers in a _pool_ to handle load volumes and provide redundancy. Application servers can be hosted in the cloud or on-premises.
 
-* The **Broker Service** controls how remote applications are executed in the application server pool and routes client requests to the appropriate servers.
+- The **Broker Service** controls how remote applications are executed in the application server pool and routes client requests to the appropriate servers.
 
 If Turbo is used to deliver applications to endpoints or third-party streaming products for execution, only the Hub Server or a standard file server is required.
+
+#### Network Diagram
+
+![Turbo Network Diagram (Basic)](https://hub.turbo.net/images/docs/Turbo_Network_Diagram__Basic_.png)
 
 ### Technology
 
@@ -44,18 +56,21 @@ Turbo Server enables you to accomplish the following goals:
 
 - Run multiple versions of applications side-by-side without conflicts or dependencies. Turbo containers run in isolated sandboxed environments. This enables you to avoid conflicts and dependency issues associated with natively-installed applications.
 
-- Migrate with confidence to Microsoft Windows 10. Turbo enables you to run legacy applications as they stand on newer operating systems, including Microsoft Windows 7 and 8/8.1, without the need to recode, retest, or reinstall.
+- Migrate with confidence to Microsoft Windows 11 or Windows 10. Turbo enables you to run legacy applications as they stand on newer operating systems, including Microsoft Windows 7 and 8/8.1, without the need to recode, retest, or reinstall.
 
 #### Supported Platforms
 
 Turbo Server is compatible with the following platforms:
 
+- Microsoft Windows Server 2022
 - Microsoft Windows Server 2019
 - Microsoft Windows Server 2016
 - Microsoft Windows Server 2012 R2
+- Microsoft Windows 11 Enterprise multi-session (Azure)
+- Microsoft Windows 10 Enterprise multi-session (Azure)
 
-Turbo Server supports x86 (32-bit) and x64 (64-bit) processor architectures.
+Turbo Server supports x64 (64-bit) processor architectures.
 
-End users can access Turbo Server from Microsoft Windows 10, Microsoft Windows 8.1, Microsoft Windows 8, and Microsoft Windows 7 platforms. Turbo Portal Server supports Microsoft Edge, Internet Explorer, Chrome, Safari, Firefox, Opera, and other HTML5-compliant browsers.
+End users can access Turbo Server from Microsoft Windows 11, Microsoft Windows 10, Microsoft Windows 8.1, Microsoft Windows 8, and Microsoft Windows 7 platforms. Turbo Portal Server supports Microsoft Edge, Chrome, Safari, Firefox, Opera, and other HTML5-compliant browsers.
 
-**Note:** Versions of Internet Explorer prior to Internet Explorer 8 are not supported. If you are accessing the Portal Site with a newer version of Internet Explorer, but experiencing problems, be sure to disable compatibility mode. This feature is enabled automatically for intranet sites and serves to emulate Internet Explorer 7 which is not supported by the Portal Site.
+**Note:** Internet Explorer 11 is partially supported by the server administration site and is not supported by the portal dashboard. If you are experiencing problems with Internet Explorer 11 on the sever administration site, be sure to disable compatibility mode. This feature is enabled automatically for intranet sites and serves to emulate Internet Explorer 7 which is not supported by the administration site.
