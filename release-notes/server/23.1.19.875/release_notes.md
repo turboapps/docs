@@ -2,8 +2,7 @@ The January 2023 Turbo Server release includes several major features:
 
 - New **Elastic Cloud** feature allows deployment of Turbo application servers to your Azure tenant with a single click!
 
-
-![Add Server](https://hub.turbo.net/images/docs/add-server.png)
+![Add Server](../../../images/add-server.png)
 - New **Files API** provides a unified programmable interface for browsing and managing connected storage providers. For more information, see the .
 
 Other new features include:

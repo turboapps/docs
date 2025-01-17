@@ -2,17 +2,17 @@ The June 2020 Turbo Server release includes the following major new features:
 
 - **Application Licensing** controls are now available as part of Workspace Administration. Administrators can configure license controls based on named or concurrent users or devices.
 
-![Application Licensing](https://hub.turbo.net/images/docs/app-licensing.png)
+![Application Licensing](../../../images/app-licensing.png)
 
 - Light and dark **Portal Theme** options are now available on the **Appearance** settings. This allows for use of dark wallpaper images.
 
-![Portal Dark Theme](https://hub.turbo.net/images/docs/portal-dark.png)
+![Portal Dark Theme](../../../images/portal-dark.png)
 - **Server Logs** can now be viewed and downloaded from the Administration site.
 
-![Server Diagnostics](https://hub.turbo.net/images/docs/server-diagnostics.png)
+![Server Diagnostics](../../../images/server-diagnostics.png)
 - Added support for **Windows Domain User Logins** when launching applications in the cloud.
 
-![HTML5 Windows login](https://hub.turbo.net/images/docs/html5-login.png)
+![HTML5 Windows login](../../../images/html5-login.png)
 
 Other improvements include:
 

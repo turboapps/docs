@@ -1,6 +1,6 @@
 ## Workspaces
 
-![Server admin workspaces](https://hub.turbo.net/images/docs/admin-workspaces.png)
+![Server admin workspaces](../../images/admin-workspaces.png)
 
 A workspace defines a set of applications and user permissions. These workspaces are shown on the Turbo Portal and on the Turbo Clients to users with sufficient permissions. By default there is a single **Default Workspace** with User permissions granted to the **Everyone** user group, allowing access to all users. Applications, permissions, and analytics can be managed from the the Workspace Administration page.
 
@@ -8,7 +8,7 @@ Server Administrators, as well as users with Administrator permissions to the wo
 
 ### Workspace Dashboard
 
-![Server admin workspace dashboard](https://hub.turbo.net/images/docs/admin-workspaces-admin.png)
+![Server admin workspace dashboard](../../images/admin-workspaces-admin.png)
 
 The **Dashboard** page shows application usage analytics for the workspace. The analytics are separated into 4 sections:
 
@@ -22,7 +22,7 @@ The **Dashboard** page shows application usage analytics for the workspace. The 
 
 ### Workspace Applications
 
-![Workspace Admin Applications](https://hub.turbo.net/images/docs/admin-applications.png)
+![Workspace Admin Applications](../../images/admin-applications.png)
 
 The **Applications** page lists all applications that have been added to this workspace and provides management options such as adding, editing, and deleting applications. Applications added to the workspace will be displayed on the portal to users with sufficient permissions.
 
@@ -50,45 +50,45 @@ Windows Applications can be managed from the **Application Settings** page and c
 - **Startup File**: The startup file that is used when launching the application. By default the image's startup file is used.
 - **Startup File Arguments**: Arguments passed to the application startup file.
 - **Profile Mode**: The login mode used when launching applications in the cloud. Possible options are:
-  - **Temporary Profile**: A temporary user profile will be created on the Application Server. Temporary profile persistance can be configured on the [Server Settings](https://hub.turbo.net/docs/server/administration/domain#managing-a-server) page.
+  - **Temporary Profile**: A temporary user profile will be created on the Application Server. Temporary profile persistance can be configured on the [Server Settings](../../server/administration/domain.html#managing-a-server) page.
   - **Ask for Credentials**: The user will be prompted to enter their Windows credentials for the Application Server. Both down-level and UPN logon names are accepted. Users must enter the [UPN logon name format](https://docs.microsoft.com/en-us/windows/win32/secauthn/user-name-formats) for Windows 10+ Enterprise multi-session. NOTE: HTML5 file integration may not function properly if the down-level domain is entered along with a UPN.
-  - **Kerberos**: The user will be prompted to login using [Kerberos authentication](https://hub.turbo.net/docs/server/authentication/kerberos).
+  - **Kerberos**: The user will be prompted to login using [Kerberos authentication](../../server/authentication/kerberos.html).
 - **Restrict to User Groups**: Restricts the application's visibility to members of the specified user group. If a value is provided, then only members of that user group will see the application on the portal. If no value is provided, then all users with access to the workspace will see the application.
 
   If a user installs an application while they have permission, but that permission is later revoked, an error message will be displayed when the application is launched.
 
-- **VM Version**: The VM version is a version string that specifies which Turbo VM version will be used for execution. The available VM versions are sourced from the Turbo Virtual Machine system image. See [VM Version](https://hub.turbo.net/docs/hub/repositories/repository-settings#vm-version).
-- **Enable Assembly cache**: Enables pre-caching of application DLL and EXE files on the Application Servers’ local disk for faster loading. See [Use DLL cache](https://hub.turbo.net/docs/hub/repositories/repository-settings#use-dll-cache).
+- **VM Version**: The VM version is a version string that specifies which Turbo VM version will be used for execution. The available VM versions are sourced from the Turbo Virtual Machine system image. See [VM Version](../../hub/repositories/repository-settings.html#vm-version).
+- **Enable Assembly cache**: Enables pre-caching of application DLL and EXE files on the Application Servers’ local disk for faster loading. See [Use DLL cache](../../hub/repositories/repository-settings.html#use-dll-cache).
 - **Launch on Install**: Automatically launch the application when it is registered onto a device, such as when running the `subscribe <workspace> --register` commands from the Turbo client.
 - **Run as Administrator**: Runs the application with administrator privileges.
 - **Container Name**: The container name that is used when launching the application. By default the image's name is used.
 
 ##### Isolation
 
-- **Access Local User Folders**: Allows the application to access the host device's local user folders, such as Desktop, Downloads, Documents, Music, Pictures, and Videos. See [Access local user folders](https://hub.turbo.net/docs/hub/repositories/repository-settings#access-local-user-folders).
+- **Access Local User Folders**: Allows the application to access the host device's local user folders, such as Desktop, Downloads, Documents, Music, Pictures, and Videos. See [Access local user folders](../../hub/repositories/repository-settings.html#access-local-user-folders).
 
   Set to **Inherit from Workspace** to inherit this setting from the corresponding workspace setting, or select a custom isolation settings to override the workspace setting.
 
-- **File Isolation**: Determines the level of file visibility and access from the vm to the host environment. By default, local launches use Full isolation and cloud launches use Write Copy isolation. See [Isolation Settings](https://hub.turbo.net/docs/reference/command-line/run#isolation-settings).
+- **File Isolation**: Determines the level of file visibility and access from the vm to the host environment. By default, local launches use Full isolation and cloud launches use Write Copy isolation. See [Isolation Settings](../../reference/command-line/run.html#isolation-settings).
 
   Set to **Inherit from Workspace** to inherit this setting from the corresponding workspace setting, or select a custom isolation settings to override the workspace setting.
 
 ##### Network
 
-- **Isolate Network**: Isolates the virtualized network environment from the host device's network. See [Isolate network](https://hub.turbo.net/docs/hub/repositories/repository-settings#isolate-network).
-- **Tunneling**: Tunneling allows the application to tunnel traffic from the virtual environment to the specified targets accessible from the portal server. Tunneling currently supports TCP and IP protocols and requires SSL (https) to be enabled on the domain. UDP is not supported. See [Proxy Settings](https://hub.turbo.net/docs/reference/command-line/run#proxy-settings).
-- **Network Routes**: A whitelist or blacklist of network routes that are accessible by the virtual network environment. See [Controlling Outbound Traffic](https://hub.turbo.net/docs/reference/command-line/run#controlling-outbound-traffic).
+- **Isolate Network**: Isolates the virtualized network environment from the host device's network. See [Isolate network](../../hub/repositories/repository-settings.html#isolate-network).
+- **Tunneling**: Tunneling allows the application to tunnel traffic from the virtual environment to the specified targets accessible from the portal server. Tunneling currently supports TCP and IP protocols and requires SSL (https) to be enabled on the domain. UDP is not supported. See [Proxy Settings](../../reference/command-line/run.html#proxy-settings).
+- **Network Routes**: A whitelist or blacklist of network routes that are accessible by the virtual network environment. See [Controlling Outbound Traffic](../../reference/command-line/run.html#controlling-outbound-traffic).
 
 ##### Components
 
-- **Components**: A list of additional image repository IDs that are added to the base image as layers. See [Components](https://hub.turbo.net/docs/hub/repositories/repository-settings#components).
+- **Components**: A list of additional image repository IDs that are added to the base image as layers. See [Components](../../hub/repositories/repository-settings.html#components).
 
 ##### Storage
 
 - **Sessions are persistent**: Persists the application state and settings on the host machine, enabling persistence across multiple sessions. Typically this setting should be enabled in order to prevent loss of data. This setting defaults to true.
 - **Synchronize across devices**: Automatically synchronizes the application state and settings with the Hub server, enabling persistence across multiple devices. Sessions are persistent must be enabled to change this setting. This setting defaults to false.
 - **Drive Visibility**: Controls which drives are visible in the virtualized application environment during cloud runs. This setting does not apply to local runs. By default, only the system drives and T: Drive are visible.
-- **Mount Points**: A list of mount points that mount file paths from the host into the container. Supports NTFS paths, UNC paths, and special folder variables (see [Folder Variables](https://hub.turbo.net/docs/vm/virtual-machine/folder-variables))
+- **Mount Points**: A list of mount points that mount file paths from the host into the container. Supports NTFS paths, UNC paths, and special folder variables (see [Folder Variables](../../vm/virtual-machine/folder-variables.html))
 
 ##### Licensing
 
@@ -112,14 +112,14 @@ Windows Applications can be managed from the **Application Settings** page and c
 
 - **IP Access Rules**: A whitelist or blacklist of IPs that control access to this workspace application. Clients that access the portal dashboard from a blacklisted IP will not be able to view the application.
 
-  Detailed access control information may be found at [Access Control](https://hub.turbo.net/docs/server/applications/access-control).
+  Detailed access control information may be found at [Access Control](../../server/applications/access-control.html).
 
 ##### Server Assignment
 
-- **Fleet**: Restrict application launches to a [fleet](https://hub.turbo.net/docs/server/administration/domain#fleets).
+- **Fleet**: Restrict application launches to a [fleet](../../server/administration/domain.html#fleets).
 - **Server Tag Rules**: Restricts cloud application launches to application servers that satisfy the tag rules. An application server must contain the exact tag name and value for all tags in order to qualify. Comparisons are case-insensitive and empty tag values will match against any value.
 
-  For information about configuring Server tags, see [Managing a Server](https://hub.turbo.net/docs/server/administration/domain#managing-a-server)
+  For information about configuring Server tags, see [Managing a Server](../../server/administration/domain.html#managing-a-server)
 
 ##### Shell Integration
 
@@ -129,7 +129,7 @@ Web applications only support the default start menu shortcut and cannot be cust
 
 Shell integrations are configured in the application image. For more information on configuring shell integrations in Turbo Studio, see [Desktop Integration](https://hub.turbo.net/docs/studio/working-with-turbo-studio/desktop).
 
-For more information on using shell integrations, see [Shell integration](https://hub.turbo.net/docs/getting-started/administrators/desktop-integration#shell-integration)
+For more information on using shell integrations, see [Shell integration](../../getting-started/administrators/desktop-integration.html#shell-integration)
 
 ##### VM Settings
 
@@ -157,17 +157,17 @@ A Web Application is a software program that runs on an external website that is
 
 ### Workspace Startup
 
-![Workspace Startup](https://hub.turbo.net/images/docs/workspace-startup.png)
+![Workspace Startup](../../images/workspace-startup.png)
 
 The **Startup** page allows administrators to configure the startup behavior for installed workspace applications.
 
 The **Startup Applications** table lists all workspace applications and and their startup settings. Applications with startup enabled will run automatically when the application is installed to the device. This setting is disabled by default.
 
-When an application is marked as a startup application, commands that install that application to the device such as `turbo subscribe --register` and `turbo subscription register` will run the application automatically. The application is launched by shell executing the default shortcut. If the application has no shortcuts then the application will not be launched. For more information on configuring shortcuts with Turbo Studio, see [Desktop Integration Settings](https://hub.turbo.net/docs/studio/working-with-turbo-studio/configuration#desktop-integration-settings)
+When an application is marked as a startup application, commands that install that application to the device such as `turbo subscribe --register` and `turbo subscription register` will run the application automatically. The application is launched by shell executing the default shortcut. If the application has no shortcuts then the application will not be launched. For more information on configuring shortcuts with Turbo Studio, see [Desktop Integration Settings](../../studio/working-with-turbo-studio/configuration.html#desktop-integration-settings)
 
 ### Workspace Links
 
-![Workspace Admin Links](https://hub.turbo.net/images/docs/admin-applications-links.png)
+![Workspace Admin Links](../../images/admin-applications-links.png)
 
 The **Links** page allows administrators to create and customize web links for end users to open URLs from their dashboard. These links appear under the **Links** tab on the portal dashboard.
 
@@ -180,15 +180,15 @@ To create a new workspace link, click the **Add Link** button and enter your pre
 
 ### Sharing a Workspace Application
 
-![Workspace Admin Sharing](https://hub.turbo.net/images/docs/admin-applications-sharing.png)
+![Workspace Admin Sharing](../../images/admin-applications-sharing.png)
 
 The **Sharing** page allows administrators to create shareable URLs for end users to run applications without having to log into the portal.
 
-To create a new shareable URL, first create a non-system API key using the [API Key administration page](https://hub.turbo.net/docs/server/administration/hub#managing-api-keys).
+To create a new shareable URL, first create a non-system API key using the [API Key administration page](../../server/administration/hub.html#managing-api-keys).
 
 Next, click the **Share Application** button and select your preferred launch options:
 
-![Share Application](https://hub.turbo.net/images/docs/apps-sharing.png)
+![Share Application](../../images/apps-sharing.png)
 
 - **Application**: The workspace application that will be launched.
 - **Name**: A display name for the share link. This name is only displayed on the workspace administration site to help differentiate share links.
@@ -249,7 +249,7 @@ Currently, Turbo Drive does not support the use of scopes. Instead, it will disp
 
 #### Storage
 
-![wsadmin-storage](https://hub.turbo.net/images/docs/wsadmin-storage.png)
+![wsadmin-storage](../../images/wsadmin-storage.png)
 
 The **Storage** page allows the administrator to configure the scope type for this workspace. The available options include:
 
@@ -258,7 +258,7 @@ The **Storage** page allows the administrator to configure the scope type for th
 
 #### Scopes
 
-![wsadmin-storage-scopes](https://hub.turbo.net/images/docs/wsadmin-storage-scopes.png)
+![wsadmin-storage-scopes](../../images/wsadmin-storage-scopes.png)
 
 The **Scopes** page allows administrators to customize workspace storage scopes. The form will only be enabled if the workspace scope type is set to **Custom**. The administrator can choose an existing storage provider, assign a display name that will be shown to end-users, and specify the path that will serve as the root folder for the scope.
 
@@ -272,7 +272,7 @@ Please note that changing or removing an existing workspace permission may take 
 
 #### General
 
-![Workspace Admin Users](https://hub.turbo.net/images/docs/wsadmin-users.png)
+![Workspace Admin Users](../../images/admin-users.png)
 
 The users **General** page allows the administrator to configure the following settings:
 
@@ -281,7 +281,7 @@ The users **General** page allows the administrator to configure the following s
 
 #### Permissions
 
-![Workspace Admin User Permissions](https://hub.turbo.net/images/docs/admin-users-permissions.png)
+![Workspace Admin User Permissions](../../images/admin-users-permissions.png)
 
 The users **Permissions** page lists all user and user group permissions that have been added to the workspace and provides management options such as adding and deleting permissions. The following permissions are available:
 
@@ -291,7 +291,7 @@ The users **Permissions** page lists all user and user group permissions that ha
 
 #### Channels
 
-![Workspace Admin Channels](https://hub.turbo.net/images/docs/admin-users-channels.png)
+![Workspace Admin Channels](../../images/admin-users-channels.png)
 
 A channel is a collection of workspace items such as applications, links, and files that are made available to a configurable list of users and groups. Channels are visibile on the Turbo Server portal to users with sufficient permissions.
 
@@ -322,7 +322,7 @@ If the **Default Item Permission** workspace setting is enabled, all channel ite
 
 ### Workspace General
 
-![Turbo Server Workspace General](https://hub.turbo.net/images/docs/ws-general.png)
+![Turbo Server Workspace General](../../images/ws-general.png)
 
 - **Display Name**: The display name of the workspace.
 - **Web Path**: Folder name consisting of letters and numbers used to form the workspace URL.
@@ -351,7 +351,7 @@ Turbo Client registers the protocol handlers in the OS for the user's Workspaces
 
 The supported launch methods are remote HTML5, remote native, and local if the platform requirements are met.
 
-![URL Handlers](https://hub.turbo.net/images/docs/url-handlers.png)
+![URL Handlers](../../images/url-handlers.png)
 
 The following table describes the match modes used by the Workspace URL handlers:
 
@@ -467,7 +467,7 @@ Examples of patterns and matched URLs:
 
 File associations allow user's files and registered desktops to open the specified file types with a workspace application.
 
-![file-associations](https://hub.turbo.net/images/docs/file-associations.png)
+![file-associations](../../images/file-associations.png)
 
 - **Extension** - The file extension that maps a file to a workspace application. The extension must be non-empty. Extensions are case-insensitive and are normalized on submission.
 - **Application** - The workspace application that will be launched for files with the matching file extension.
@@ -475,4 +475,4 @@ File associations allow user's files and registered desktops to open the specifi
 
 The equivalent command to open the file via Turbo CLI is `turbo run <application> --startup-file=<file> --startup-verb=<action>`.
 
-Administrators must ensure the application is configured to handle the verb for the give file type, see [Studio Desktop Integration](https://hub.turbo.net/docs/studio/working-with-turbo-studio/desktop#desktop-integration).
+Administrators must ensure the application is configured to handle the verb for the give file type, see [Studio Desktop Integration](../../studio/working-with-turbo-studio/desktop.html#desktop-integration).

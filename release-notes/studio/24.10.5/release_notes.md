@@ -1,4 +1,4 @@
-This update to Turbo Studio includes the following improvements and bug fixes: 
+This update to Turbo Studio includes the following improvements and bug fixes:
 
 - The Turbo VM is updated to version 24.10.17
 - Fix **Windows Side-by-Side** issue with mismatched public key token for assemblies with registration-free COM objects

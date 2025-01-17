@@ -1,12 +1,12 @@
 ## Import Configuration
 
-The following section details the **Import Configuration** feature available in Turbo Studio. Import Configuration is used to import application packages in various formats into a Turbo Studio configuration that can be built and [deployed](https://hub.turbo.net/docs/deploying/overview/overview) to your endpoints.
+The following section details the **Import Configuration** feature available in Turbo Studio. Import Configuration is used to import application packages in various formats into a Turbo Studio configuration that can be built and [deployed](../../deploying/overview/overview.html) to your endpoints.
 
 Supported application package formats are: Microsoft App-V package (.appv), ThinApp configuration (.ini), Microsoft Installer (.msi), and ZENworks application package (.axt).
 
 ### Import Wizard
 
-![Turbo Studio Import](https://hub.turbo.net/images/docs/import.png)
+![Turbo Studio Import](../../images/import.png)
 
 To import an application package into Turbo Studio, please follow these steps:
 
@@ -66,7 +66,7 @@ We recommend using the following layer combinations to simulate App-V deployment
 - **MyApp,MyApp_DeploymentConfig_Machine,app_DeploymentConfig_User**: Layers the base image with machine extensions. Equivalent to publishing the App-V package with a dynamic deployment configuration.
 - **MyApp,MyApp_DeploymentConfig_Machine,app_UserConfig**: Layers the base image with user and machine extensions. Equivalent to publishing the App-V package with a dynamic user configuration and a dynamic deployment configuration.
 
-For more information on deploying applications with Turbo, see [Deploying to a Desktop](https://hub.turbo.net/docs/deploying/to-a-desktop/to-a-desktop).
+For more information on deploying applications with Turbo, see [Deploying to a Desktop](../../deploying/to-a-desktop/to-a-desktop.html).
 
 #### App-V Import Known Issues
 

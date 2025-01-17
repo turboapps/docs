@@ -54,25 +54,25 @@ To get to the administrative portal add "/admin" to the URL.
 
 From the administrative portal go to **Users**.
 
-![users-page](https://hub.turbo.net/images/docs/users-page.png)
+![users-page](../../images/users-page.png)
 
 Select "administrator", add a new password, and click **Save**.
 
-![administrator-account](https://hub.turbo.net/images/docs/administrator-account.png)
+![administrator-account](../../images/administrator-account.png)
 
 Next step is to add the "administrator" user to the **Server Administrators** group. This will grant Turbo Server administrative permissions to the "administrator" user. From the administrative portal go to **Users**.
 
-![users-page](https://hub.turbo.net/images/docs/users-page.png)
+![users-page](../../images/users-page.png)
 
 Open the **Server Administrators** group, click **Add Members**, select the "administrator" account, and click **Save** twice.
 
-![add-admin-serveradmins-group](https://hub.turbo.net/images/docs/add-admin-serveradmins-group.png)
+![add-admin-serveradmins-group](../../images/add-admin-serveradmins-group.png)
 
 This will add the administrator user to the **Server Administrators** group. This will also cause the Turbo Server Service to restart to complete the changes. Once the restart is complete you will be redirected to the sign-in page. Sign-in with the "administrator" user to verify access.
 
-![signin-page](https://hub.turbo.net/images/docs/signin-page.png)
+![signin-page](../../images/signin-page.png)
 
-The required post deployment steps for the hub and portal roles are complete if the sign-in was successful. However, for security reasons, it is strongly recommended to switch the portal to HTTPS. Please check the [Managing a Server](https://hub.turbo.net/docs/server/administration/domain#managing-a-server) section to setup HTTPS.
+The required post deployment steps for the hub and portal roles are complete if the sign-in was successful. However, for security reasons, it is strongly recommended to switch the portal to HTTPS. Please check the [Managing a Server](../../server/administration/domain.html#managing-a-server) section to setup HTTPS.
 
 ### App Role Deployment
 
@@ -103,6 +103,6 @@ Click **Create** when all the required information is added to the deployment an
 
 Additional configuration steps to setup Turbo Server:
 
-- Add applications to the [Hub](https://hub.turbo.net/docs/server/administration/hub)
-- Configure [Users, Directory Services, and Groups](https://hub.turbo.net/docs/server/administration/users)
-- Configure [Workspaces](https://hub.turbo.net/docs/server/administration/workspaces)
+- Add applications to the [Hub](../../server/administration/hub.html)
+- Configure [Users, Directory Services, and Groups](../../server/administration/users.html)
+- Configure [Workspaces](../../server/administration/workspaces.html)

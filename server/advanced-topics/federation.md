@@ -12,30 +12,30 @@ If the root hub is unavailable due to network outage or maintenance, the child h
 
 ### Configuring Federation
 
-Follow the [documentation](https://hub.turbo.net/docs/server/setup-and-deployment/deploying-on-premises) to setup a Hub Server and your repositories to the hub. The server which will contain the source of the repositories will be called the `root` server.
+Follow the [documentation](../../server/setup-and-deployment/deploying-on-premises.html) to setup a Hub Server and your repositories to the hub. The server which will contain the source of the repositories will be called the `root` server.
 
 1. Setup an API Key
 
-   On the root server, navigate to `https://{root}/admin/hub/keys.aspx`. Add an API Key with a descriptive name such as "Federation Key for {child}". `Run as system` setting is not required. Copy the generated API key.
+    On the root server, navigate to `https://{root}/admin/hub/keys.aspx`. Add an API Key with a descriptive name such as "Federation Key for {child}". `Run as system` setting is not required. Copy the generated API key.
 
 2. Add the federation source to child hub
 
-   On the child hub(s), navigate to `https://{child}/admin/hub/federationsource.aspx`. Change the `Hub` text box to the `root` hub host's URL. Add the previously copied API Key and press save.
+    On the child hub(s), navigate to `https://{child}/admin/hub/federationsource.aspx`. Change the `Hub` text box to the `root` hub host's URL. Add the previously copied API Key and press save.
 
 3. Add a federated repository
 
-   Navigate to `https://{child}/admin/hub/federation.aspx`. Add a federated repository by using the repository identifier `namespace/name` (example: `mozilla/firefox`), and press save. The repository should begin to synchronize immediately with the status displayed on the federation page.
+    Navigate to `https://{child}/admin/hub/federation.aspx`. Add a federated repository by using the repository identifier `namespace/name` (example: `mozilla/firefox`), and press save. The repository should begin to synchronize immediately with the status displayed on the federation page.
 
 4. Use the federated repository
 
-   Once the repository has finished synchronizing, you may begin using the repository on the child server from a [workspace](https://hub.turbo.net/docs/server/administration/overview#managing-workspaces).
+    Once the repository has finished synchronizing, you may begin using the repository on the child server from a [workspace](../../server/administration/overview.html#managing-workspaces). 
 
-   You can also install the repository image directly using the turbo cli on the user's machine.
+    You can also install the repository image directly using the turbo cli on the user's machine.
 
-   ```
-   turbo config --hub={child}
-   turbo login {user}
-   turbo installi namespace/name
-   ```
+    ```
+    turbo config --hub={child}
+    turbo login {user}
+    turbo installi namespace/name
+    ```
 
    The application should be available from the start menu.

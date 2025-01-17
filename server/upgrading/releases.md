@@ -38,4 +38,4 @@ By default, Turbo Server uses the latest Turbo VM version from its Hub repositor
 
 Rarely, a Turbo VM update may cause an issue with a specific application. If this occurs, workspace administrators should set a known working **VM Version** for the affected application in the [Workspace Application Settings](https://app.turbo.net/docs/server/administration/workspaces#workspace-applications-pc-applications) as well as report the issue to Turbo Support so that it gets fixed.
 
-![Workspace Application Settings - VM Version](https://hub.turbo.net/images/docs/workspace_application_settings.png)
+![Workspace Application Settings - VM Version](../../images/workspace_application_settings.png)

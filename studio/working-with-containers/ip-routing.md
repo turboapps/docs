@@ -173,7 +173,7 @@ turbo new firefox --route-add=ip://*.nytimes.com:127.0.0.1
 
 After typing nytimes.com in browser it shows our custom page, instead of original site:
 
-![Studio blocked sites](https://hub.turbo.net/images/docs/network1.png)
+![Studio blocked sites](../../images/network1.png)
 
 ### Sample: Creating Single Site Browsers
 
@@ -217,7 +217,7 @@ Did everything work correctly? (y/n):
 
 In every iteration, the script opens **firefox** to the **forbes.com** site. After closing the browser it asks the user if the site was displayed correctly. Repeat the process until the web page displays correctly.
 
-![Studio single-site browser s](https://hub.turbo.net/images/docs/network2.png)
+![Studio single-site browser s](../../images/network2.png)
 
 In the first iteration firefox is not displaying anything, so we choose **n**
 
@@ -232,7 +232,7 @@ Did everything work correctly? (y/n): y
 
 After the fourth iteration the site is displayed correctly. Now we answer yes and script ends.
 
-![Studio single-site browser](https://hub.turbo.net/images/docs/network3.png)
+![Studio single-site browser](../../images/network3.png)
 
 Now we can open the **forbes-routes.txt** file and check all the unblocked hosts:
 

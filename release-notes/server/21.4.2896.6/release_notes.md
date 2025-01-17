@@ -1,20 +1,20 @@
 The May 2021 Turbo Server release includes several major new features:
 
-- **Learning Management Systems (LMS)** and **Storage Provider **integrations now allow for multiple connections. 
+- **Learning Management Systems (LMS)** and **Storage Provider **integrations now allow for multiple connections.
 
-![LMS Connections](https://hub.turbo.net/images/docs/lms-connections.png)
+![LMS Connections](../../../images/lms-connections.png)
 
 - **T: Drive **now allows mounting of storage connections to specific paths within each storage provider connection.
 
-![T: Drive Path](https://hub.turbo.net/images/docs/tdrive-path.png)
+![T: Drive Path](../../../images/tdrive-path.png)
 
 - New **Link Text**, **Workspace**, and **Automatically Create Channels** settings provide control over presentation of Turbo link in LMSs, where the Turbo link will send the end user, and how the Turbo channel is initialized.
 
-![LMS Connection Settings](https://hub.turbo.net/images/docs/lms-connection-settings.png)
+![LMS Connection Settings](../../../images/lms-connection-settings.png)
 - New **Image Cleanup** setting periodically cleans up cached application images from the Application Server.
 - New **Application Image Path** setting configures the path where images are stored on the Application Server.
 
-![Image Cleanup](https://hub.turbo.net/images/docs/image-cleanup.png)
+![Image Cleanup](../../../images/image-cleanup.png)
 
 
 Other improvements include:

@@ -2,10 +2,10 @@
 
 Turbo Server supports following types of applications:
 
-- **PC applications**: Virtual applications packaged in the SVM format.
-- **Native applications**: Applications installed natively on an application server.
-- **Web application**: Browser based applications with a URL and potentially plugin layers.
+- __PC applications__: Virtual applications packaged in the SVM format.
+- __Native applications__: Applications installed natively on an application server.
+- __Web application__: Browser based applications with a URL and potentially plugin layers.
 
-To add applications to a workspace, refer to [Workspace Applications](https://hub.turbo.net/docs/server/administration/workspaces#workspace-applications).
+To add applications to a workspace, refer to [Workspace Applications](../../server/administration/workspaces.html#workspace-applications).
 
-Applications can be packaged using [Turbo Studio](https://hub.turbo.net/docs/studio/overview/overview.html) or imported directly from the [Hub](https://hub.turbo.net/docs/server/administration/hub#importing-repositories).
+Applications can be packaged using [Turbo Studio](../../studio/overview/overview.html) or imported directly from the [Hub](../../server/administration/hub.html#importing-repositories).

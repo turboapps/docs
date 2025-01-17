@@ -6,15 +6,15 @@ The following is a setup-by-step user guide to connect and access files from the
 
 1. From your Portal, click on **Files** to manage the cloud storage services connected to your account. Click on the **Connect** button and select your desired cloud storage service to link the storage service to your account.
 
-   ![Connect Cloud Storage](https://hub.turbo.net/images/docs/connect-cloud-storage.png)
+   ![Connect Cloud Storage](../../images/connect-cloud-storage.png)
 
 2. You will be asked to authenticate your account with the storage service. Once the authentication succeeds, the storage service status will show as connected.
 
-   ![Connect Cloud Storage SSO](https://hub.turbo.net/images/docs/connect-cloud-storage-2.png)
+   ![Connect Cloud Storage SSO](../../images/connect-cloud-storage-2.png)
 
 3. Files from the storage service will now be available under the **T:\\** drive for applications running in the cloud.
 
-   ![Access T: drive](https://hub.turbo.net/images/docs/access-t-drive.png)
+   ![Access T: drive](../../images/access-t-drive.png)
 
 4. Files can also be launched directly from the file browser on the portal. When launching a file, it will open using either a remote or local Turbo application associated with its file extension. The file will be temporarily downloaded to a virtual downloads folder and automatically opened by the corresponding application. Once the application is closed, all files stored in the downloads folder will be automatically uploaded to the T: drive.
 

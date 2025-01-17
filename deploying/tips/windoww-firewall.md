@@ -41,43 +41,43 @@ In Windows Firewall, an **Outbound Rule** is used to control how an application 
 
 Open the **Windows Firewall** from the **Control Panel**.
 
-![Firewall control panel](https://hub.turbo.net/images/docs/firewall1.png)
+![Firewall control panel](../../images/firewall1.png)
 
 Click on **Advanced Settings** link.
 
-![Firewall advanced settings](https://hub.turbo.net/images/docs/firewall2.png)
+![Firewall advanced settings](../../images/firewall2.png)
 
 Click on **Outbound Rules** and then **New Rule...**.
 
-![Firewall new outbound rule](https://hub.turbo.net/images/docs/firewall3.png)
+![Firewall new outbound rule](../../images/firewall3.png)
 
 Select the **Program** rule type and then next.
 
-![Firewall outbound rule program](https://hub.turbo.net/images/docs/firewall4.png)
+![Firewall outbound rule program](../../images/firewall4.png)
 
 Enter the path to the application stubexe and then next.
 
-![Firewall outbound rule program path](https://hub.turbo.net/images/docs/firewall5.png)
+![Firewall outbound rule program path](../../images/firewall5.png)
 
 For our example we will block all connections from the application. Then press next.
 
-![Firewall outbound rule action](https://hub.turbo.net/images/docs/firewall6.png)
+![Firewall outbound rule action](../../images/firewall6.png)
 
 Apply to all networks then press next.
 
-![Firewall outbound rule profile](https://hub.turbo.net/images/docs/firewall7.png)
+![Firewall outbound rule profile](../../images/firewall7.png)
 
 Give the rule a name and description, then press next.
 
-![Firewall outbound rule name](https://hub.turbo.net/images/docs/firewall8.png)
+![Firewall outbound rule name](../../images/firewall8.png)
 
 Now your new rule will be added to those that Windows adds by default.
 
-![Firewall outbound rules](https://hub.turbo.net/images/docs/firewall9.png)
+![Firewall outbound rules](../../images/firewall9.png)
 
 Running firefox again from the same container yields a different result this time.
 
-![Firewall outbound rule Firefox](https://hub.turbo.net/images/docs/firewall10.png)
+![Firewall outbound rule Firefox](../../images/firewall10.png)
 
 ### Customizing the StubExe Path
 
@@ -85,11 +85,11 @@ By default the stubexe path is inside the sandbox. However, this can make it dif
 
 You can set the **Application stub cache location** to any local path.
 
-![Firewall stubExe path](https://hub.turbo.net/images/docs/firewall11.png)
+![Firewall stubExe path](../../images/firewall11.png)
 
 Now the application stubexe will always be cached in a well known location that you can set your universal rules to point to.
 
-![Firewall stubExe](https://hub.turbo.net/images/docs/firewall12.png)
+![Firewall stubExe](../../images/firewall12.png)
 
 ### Adding Rules Programatically
 

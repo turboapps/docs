@@ -4,15 +4,15 @@ The **Storage** page provides options to configure storage with a variety of thi
 
 Turbo Server currently supports the following storage providers:
 
-- [OneDrive](https://hub.turbo.net/docs/server/cloud-storage/onedrive)
-- [Dropbox](https://hub.turbo.net/docs/server/cloud-storage/dropbox)
-- [Google Drive](https://hub.turbo.net/docs/server/cloud-storage/google-drive)
-- [Filr](https://hub.turbo.net/docs/server/cloud-storage/filr)
-- [File Share (SMB)](https://hub.turbo.net/docs/server/cloud-storage/file-share)
+- [OneDrive](../../server/cloud-storage/onedrive.html)
+- [Dropbox](../../server/cloud-storage/dropbox.html)
+- [Google Drive](../../server/cloud-storage/google-drive.html)
+- [Filr](../../server/cloud-storage/filr.html)
+- [File Share (SMB)](../../server/cloud-storage/file-share.html)
 
 ### Providers
 
-![storage-providers](https://hub.turbo.net/images/docs/storage-providers.png)
+![storage-providers](../../images/storage-providers.png)
 
 The **Providers** page allows administrators to view and manage integrations with a variety of third-party services as well as local network storage. Administrators or end-users may then create connections using these integrations to login to their cloud storage accounts and access their files while running applications.
 
@@ -20,11 +20,11 @@ The **Providers** page allows administrators to view and manage integrations wit
 
 - **Storage Type**: The storage type you are integrating with Turbo Server. Instructions for setting up a Storage Provider connection are available for:
 
-  - [OneDrive](https://hub.turbo.net/docs/server/cloud-storage/onedrive)
-  - [Dropbox](https://hub.turbo.net/docs/server/cloud-storage/dropbox)
-  - [Google Drive](https://hub.turbo.net/docs/server/cloud-storage/google-drive)
-  - [Filr](https://hub.turbo.net/docs/server/cloud-storage/filr)
-  - [File Share (SMB)](https://hub.turbo.net/docs/server/cloud-storage/file-share)
+  - [OneDrive](../../server/cloud-storage/onedrive.html)
+  - [Dropbox](../../server/cloud-storage/dropbox.html)
+  - [Google Drive](../../server/cloud-storage/google-drive.html)
+  - [Filr](../../server/cloud-storage/filr.html)
+  - [File Share (SMB)](../../server/cloud-storage/file-share.html)
 
 - **Name**: The display name of the storage provider connection.
 - **Client ID/Secret/Other**: The application registration information for the storage provider. Varies by storage provider type, see instructions above for more information.
@@ -37,7 +37,7 @@ The **Providers** page allows administrators to view and manage integrations wit
 
 ### Connections
 
-![Global Storage Connections](https://hub.turbo.net/images/docs/global-storage-connections.png)
+![Global Storage Connections](../../images/global-storage-connections.png)
 
 The **Connections** page allows administrators to view and manage global connections with a variety of third-party services as well as local network storage. These connections support configurable file and user access.
 
@@ -57,7 +57,7 @@ To ensure that your connection has the correct permissions, it is recommended to
 
 During the connection process, you will encounter a consent screen. Please carefully review the displayed scopes to ensure they align with your desired permissions before proceeding.
 
-If you do not see the consent screen, it is possible that the scope has been implicitly granted by an administrator. To address this, follow the [OneDrive setup guide](https://hub.turbo.net/docs/server/cloud-storage/onedrive) and ensure that admin consent is not granted.
+If you do not see the consent screen, it is possible that the scope has been implicitly granted by an administrator. To address this, follow the [OneDrive setup guide](../../server/cloud-storage/onedrive.html) and ensure that admin consent is not granted.
 
 #### Dropbox Support
 

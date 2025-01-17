@@ -1,11 +1,11 @@
 ## Continuous Integration
 
-Create automated, clean, and consistent test environments with Turbo while keeping the Continuous Integration (CI)
+Create automated, clean, and consistent test environments with Turbo while keeping the Continuous Integration (CI) 
 server free from conflict causing dependencies.
 
-Existing CI servers may have many varying libraries, runtimes, custom settings, and applications, possibly in different languages and versions, that are required for the various automated builds. Sometimes these dependencies collide to create inconsistent test environments and headaches when configuring automated builds.
+Existing CI servers may have many varying libraries, runtimes, custom settings, and applications, possibly in different languages and versions, that are required for the various automated builds.  Sometimes these dependencies collide to create inconsistent test environments and headaches when configuring automated builds. 
 
-With Turbo no installed dependencies are required on the CI server. All dependencies are built into containers providing consistent environments and a dependency-free CI server. This eliminates the possibility of dependency collision and makes automated build configuration very simple.
+With Turbo no installed dependencies are required on the CI server. All dependencies are built into containers providing consistent environments and a dependency-free CI server.  This eliminates the possibility of dependency collision and makes automated build configuration very simple.
 
 The basic steps for integrating Turbo into a CI server are to create a TurboScript, integrate it into an automated build on a CI server, and finally run and test the container.
 
@@ -21,15 +21,15 @@ layer nodejs/nodejs git/git
 cmd mkdir c:\root
 cmd git clone https://github.com/project/repo c:\root
 
-# Install Node.js depencies
+# Install Node.js depencies 
 cmd cd c:\root\server & npm install
 ```
 
-Save your script as a `.me` file. See the [TurboScript reference](https://hub.turbo.net/docs/reference/turboscript/turboscript) for more information on TurboScript script instructions.
+Save your script as a `.me` file. See the [TurboScript reference](../../reference/turboscript/turboscript.html) for more information on TurboScript script instructions.
 
 ### Integrate into the CI server
 
-The next step is to configure an automated build on the CI server that will execute the TurboScript and create an image. You'll need to configure the necessary triggers, schedules, notifications, etc., which will vary between CI servers.
+The next step is to configure an automated build on the CI server that will execute the TurboScript and create an image.  You'll need to configure the necessary triggers, schedules, notifications, etc., which will vary between CI servers.
 
 Now add the follow commands to your automated CI build script:
 
@@ -46,7 +46,7 @@ turbo export <name> c:\root\image.svm
 
 Rather than exporting the image to the host system, you can also `turbo push` the image to the hub where other users could pull it down and test.
 
-See the [Command Line Interface](https://hub.turbo.net/docs/reference/command-line/command-line-interface) page for more information on `turbo` commands.
+See the [Command Line Interface](../../reference/command-line/command-line-interface.html) page for more information on `turbo` commands.
 
 ### Run the container
 

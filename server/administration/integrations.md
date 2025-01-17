@@ -12,7 +12,7 @@ Compute Infrastructure currently only supports Azure environments. Support for o
 
 The Turbo Server farm must be running in Azure with an Azure SQL Database connection. Adding Azure application servers to a on-premises Turbo Server installation is not supported.
 
-For more information on setting up an Azure Turbo Server farm, see the Turbo Server AMI setup docs: [/docs/server/setup-and-deployment/deploying-to-azure#hub-and-portal-role-deployment](https://hub.turbo.net/docs/server/setup-and-deployment/deploying-to-azure#hub-and-portal-role-deployment).
+For more information on setting up an Azure Turbo Server farm, see the Turbo Server AMI setup docs: [/docs/server/setup-and-deployment/deploying-to-azure#hub-and-portal-role-deployment](../../server/setup-and-deployment/deploying-to-azure.html#hub-and-portal-role-deployment).
 
 #### Azure Setup Guide
 
@@ -44,7 +44,7 @@ Next, the application registration must be granted the Contributor role. This wi
 
 #### Compute Infrastructure Settings
 
-![Compute Infrastructure](https://hub.turbo.net/images/docs/compute-infrastructure.png)
+![Compute Infrastructure](../../images/compute-infrastructure.png)
 
 - **Platform**: The compute infrastructure that is being integrated, such as Azure.
 - **Name**: The display name of the compute Infrastructure that will be shown on the Turbo Server administration site.
@@ -68,11 +68,11 @@ For more information, see our [OpenAI](https://hub.turbo.net/docs/server/integra
 
 ### Learning Management Systems (LMS)
 
-![LMS Connections](https://hub.turbo.net/images/docs/lms-connections.png)
+![LMS Connections](../../images/lms-connections.png)
 
 The **Learning Management Systems (LMS)** page allows administrators to view and manage connections with various LMSs such as Canvas, Moodle, and Blackboard. Once configured, students may access the Turbo Portal and launch applications through their LMS.
 
-Instructions for setting up an LMS connection are available for [Canvas](https://hub.turbo.net/docs/server/integrations/canvas-lms.html), [Moodle](https://hub.turbo.net/docs/server/integrations/moodle.html), and [Blackboard](https://hub.turbo.net/docs/server/integrations/blackboard-learn).
+Instructions for setting up an LMS connection are available for [Canvas](../../server/integrations/canvas-lms.html), [Moodle](../../server/integrations/moodle.html), and [Blackboard](../../server/integrations/blackboard-learn.html).
 
 The following sections describe the available LMS configurations:
 
@@ -163,6 +163,6 @@ Navigate to the settings page of the desired course.
 
 The settings page can be reached by clicking the gear icon on the course’s home page or the gear icon on the listing in **Course and category management.**
 
-![Courses-MoodleGear](https://hub.turbo.net/images/docs/Courses-MoodleGear.png)
+![Courses-MoodleGear](../../images/Courses-MoodleGear.png)
 
 The Course ID is located under General. If the course does not yet have an ID, one must be given.

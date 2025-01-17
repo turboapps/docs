@@ -28,7 +28,7 @@ Edit and modify the container's virtual filesystem and registry using the same c
 ### Installing MSI Packages
 
 Installing MSI packages in containers is supported, but in some instances an install may fail e.g. a custom action may attempt to runs but fails when run in the fully isolated Turbo VM.
-If an MSI install fails, try creating the container using [Turbo Studio](https://hub.turbo.net/docs/studio/working-with-turbo-studio/getting-started).
+If an MSI install fails, try creating the container using [Turbo Studio](../../studio/working-with-turbo-studio/getting-started.html).
 
 This section will detail steps for creating a container for InstEd, a popular MSI editor.
 
@@ -36,7 +36,7 @@ Begin by downloading the application [here](http://www.instedit.com/download2.ht
 
 Copy the MSI to a new directory: **C:\Installers** on your local machine.
 
-![Studio MSI install](https://hub.turbo.net/images/docs/cmd1.png)
+![Studio MSI install](../../images/cmd1.png)
 
 By design the Turbo VM is fully isolated and does not permit access to local files. In order to use the MSI in your local **C:\Installers** directory, you must poke a hole in the isolation.
 Use the **--mount** flag to poke a hole in the isolation. Use the **-n** flag to set a name for the container.
@@ -56,15 +56,15 @@ Launch the install.
 
 When prompted, click **Next**.
 
-![Studio MSI install wizard](https://hub.turbo.net/images/docs/install1.png)
+![Studio MSI install wizard](../../images/install1.png)
 
 Click on the checkbox to agree to **accept the terms in the license agreement** and then click **Next**.
 
-![Studio MSI install wizard EULA](https://hub.turbo.net/images/docs/install2.png)
+![Studio MSI install wizard EULA](../../images/install2.png)
 
 Click **Next**.
 
-![Studio MSI install wizard output folder](https://hub.turbo.net/images/docs/install3.png)
+![Studio MSI install wizard output folder](../../images/install3.png)
 
 Click **Install** followed by **Finish**.
 
@@ -75,7 +75,7 @@ Exit the Turbo VM from the launched command prompt.
 (instedcont#95c15a32) > exit
 ```
 
-Once you finish editing a container, it can be saved and distributed in the form of images. For more information on images, read on [here](https://hub.turbo.net/docs/deploying/to-turbonet/to-turbonet).
+Once you finish editing a container, it can be saved and distributed in the form of images. For more information on images, read on [here](../../deploying/to-turbonet/to-turbonet.html).
 
 Ensure the **--startup-file** flag is set to the application's main executable. Provide an image name, in this example use **instedit**.
 
@@ -93,11 +93,11 @@ Test the new InstEd image.
 > turbo new instedit
 ```
 
-![Studio MSI install editor](https://hub.turbo.net/images/docs/instedit1.png)
+![Studio MSI install editor](../../images/instedit1.png)
 
 ### Accessing Local Files
 
-![Studio MSI install editor open files](https://hub.turbo.net/images/docs/instedit2.png)
+![Studio MSI install editor open files](../../images/instedit2.png)
 
 You may notice when attempting to open an MSI on your local machine, you will not have access to it. Similarly, when creating a new MSI and attempting to save to a local machine directory, you will not be able to save locally. This is expected behavior. By default containers run in full isolation. Use the **--isolate** flag to launch a new instance of InstEd with isolation set to merge with the local system.
 
@@ -110,7 +110,7 @@ Launch application with access to local files.
 
 You will now have access to any local files.
 
-![Studio MSI install editor open file](https://hub.turbo.net/images/docs/instedit3.png)
+![Studio MSI install editor open file](../../images/instedit3.png)
 
 ### Pushing Images to the Hub
 
@@ -130,34 +130,34 @@ Push the image by entering `turbo push` %lt;imagename&gt;.
 
 ### Publishing Images
 
-![Turbo.net sign in](https://hub.turbo.net/images/docs/signin1.png)
+![Turbo.net sign in](../../images/signin1.png)
 
 Our image has been pushed to the Hub. Now we will configure the repo settings and other publishing settings.
 Navigate to [Turbo.net](https://turbo.net) and clicking **Sign In**.
 
-![Turbo.net sign in dialog](https://hub.turbo.net/images/docs/signin2.png)
+![Turbo.net sign in dialog](../../images/signin2.png)
 
 If you do not have a Turbo.net account click **Sign Up** to create a new account. If you do have a Turbo.net account, enter your Turbo.net username and password and then click **Sign In**.
 
-![Studio publish to Turbo.net](https://hub.turbo.net/images/docs/publish1.png)
+![Studio publish to Turbo.net](../../images/publish1.png)
 
 After logging into Turbo.net you are presented with your home screen that contains your applications. Click on instedit.
 
-![Studio published image icon](https://hub.turbo.net/images/docs/publish2.png)
+![Studio published image icon](../../images/publish2.png)
 
 Hover over the large icon in the header of the page to upload a suitable image for the application. Hover just below the instedit text in the banner and click **edit** to provide a description.
 
-![Studio published image description](https://hub.turbo.net/images/docs/publish3.png)
+![Studio published image description](../../images/publish3.png)
 
 On the same page, hover beside the **description** heading and click **edit** to provide a description of the application. When complete, hover over the **readme** heading and click **edit** to provide information useful to people who may try to use your image. e.g. what commands should be used.
 
-![Studio published image settings](https://hub.turbo.net/images/docs/publish4.png)
+![Studio published image settings](../../images/publish4.png)
 
 Navigate to **Settings**. A default display name is set, you can change this to something more appropriate such as Instedit or Insted.
 
-Optionally, under **Repo Information** enter a build script URL if you have one. For more information on how to create a build script read on [here](https://hub.turbo.net/docs/studio/continuous-integration/continuous-integration). Enter a **Developer website** and **Support website** if desired. This information will be displayed on the application's repo page. When using a free account, click **Update** as there will be no other options available for you.
+Optionally, under **Repo Information** enter a build script URL if you have one. For more information on how to create a build script read on [here](../../studio/continuous-integration/continuous-integration.html). Enter a **Developer website** and **Support website** if desired. This information will be displayed on the application's repo page. When using a free account, click **Update** as there will be no other options available for you.
 
-![Studio published image settings](https://hub.turbo.net/images/docs/publish5.png)
+![Studio published image settings](../../images/publish5.png)
 
 The Turbo.net Hub provides the ability to create custom run pages for applications. For an example of this, click [here](https://app.turbo.net/run/instedit/insted).
 The run page provides a great presentation and end user experience. If enabled, this run page can also be embedded within a website or blog. For an example of an embedded run page click [here](https://blog.turbo.net/creating-sql-test-lab-environments/) and scroll to the bottom of the page.
@@ -170,13 +170,13 @@ Optionally, enter a **Run button color** and **Background image color**. This ma
 
 If you do not wish to use a **Splash image** you may choose to enable a **Background banner**. This will present a banner across the run page containing your run page information.
 
-![Studio published image icon settings](https://hub.turbo.net/images/docs/publish6.png)
+![Studio published image icon settings](../../images/publish6.png)
 
 Navigate to **Icon Settings** and set a **Background color**. If the icon you uploaded has a white background, it is best to enter transparent as the value for the **Background color**. Optionally select if the icon should **Padded**. This will trim the edges of the image. In some cases, this can make certain icons look much better.
 
-![Studio published image launch settings](https://hub.turbo.net/images/docs/publish7.png)
+![Studio published image launch settings](../../images/publish7.png)
 
-Navigate to **Launch Configuration**. If any additional flags are required for the application to function, enter these here. For a list of available flags read [here](https://hub.turbo.net/docs/reference/command-line/command-line-interface). Enter additional **Image layers** if you wish to launch the application with other dependent images. Always ensure the application you wish to launch is in the last image in the list. Seperate each image you wish to layer with a comma.
+Navigate to **Launch Configuration**. If any additional flags are required for the application to function, enter these here. For a list of available flags read [here](../../reference/command-line/command-line-interface.html). Enter additional **Image layers** if you wish to launch the application with other dependent images. Always ensure the application you wish to launch is in the last image in the list. Seperate each image you wish to layer with a comma.
 
 To force the use of a certain version of the Turbo VM enter the version number under **VM version**.
 
@@ -184,7 +184,7 @@ In the above example, InstEd requires local file access. This can be permitted b
 
 Enable **Isolate network** to isolate all tcp,udp and named object calls within the container.
 
-![Studio published image admin settings](https://hub.turbo.net/images/docs/publish8.png)
+![Studio published image admin settings](../../images/publish8.png)
 
 Navigate to **Admin Settings**. Under **Shortcut Icon (.ico)** click **Choose File** to upload an icon file for the application. Click on the dropdown menu for **Categories** to assign the relevant categories for the application to appear in on the Turbo.net Hub.
 

@@ -1,6 +1,6 @@
 ## Google LDAP
 
-To configure Turbo Server to authenticate against Google LDAP, add an [external directory service](https://hub.turbo.net/docs/server/administration/users#adding-an-external-directory-service).
+To configure Turbo Server to authenticate against Google LDAP, add an [external directory service](../../server/administration/users.html#adding-an-external-directory-service).
 
 Refer to the [Google LDAP documentation](https://support.google.com/a/topic/9048334?hl=en&ref_topic=7556686) to set up the Google LDAP service for your Google Workspace.
 
@@ -16,31 +16,30 @@ You must add the client certificate to the Windows Certificate store, as a singl
 
 Next, login to the Hub server as the service user and import the certificate-key file to the Current User windows keystore under Personal Certificates. Restart the Turbo Service to pick up the new certificate.
 
-Connect using the following settings when adding the [external directory service](https://hub.turbo.net/docs/server/administration/users#adding-an-external-directory-service):
+Connect using the following settings when adding the [external directory service](../../server/administration/users.html#adding-an-external-directory-service):
 
-**Type:**
+__Type:__
 Other LDAP
 
-**Host:**
+__Host:__
 ldap.google.com
 
-**Port:**
+__Port:__
 636
 
-**Top Directory:**
+__Top Directory:__
 dc=example,dc=com
 
-**Binding Type:**
+__Binding Type:__
 SSL
 
-**Synchronization Account:**
+__Synchronization Account:__
 Ensure you connect with a specific account if required by your Google LDAP configuration, in addition to SSL certificate authentication.
 
-**Directory Schema**
+__Directory Schema__
 Consult the [Google LDAP schema documentation](https://support.google.com/a/answer/9188164) to configure the Directory Schema settings. Example settings are provided below.
 
 - Users
-
   - Filter: (objectClass=inetOrgPerson);(objectClass=posixAccount)
   - Class: inetOrgPerson;posixAccount
   - Login name: uid;cn
@@ -55,5 +54,5 @@ Consult the [Google LDAP schema documentation](https://support.google.com/a/answ
   - Description: description
   - Members: member
 
-**Page Size:**
+__Page Size:__
 0

@@ -25,7 +25,7 @@ Puling image clean version 42
 Pull complete
 ```
 
-You can use [Turbo Studio to package your applications](https://hub.turbo.net/docs/studio/working-with-turbo-studio/setup-capture) or pull pre-packaged applications from [Turbo.net Hub](https://hub.turbo.net/hub).
+You can use [Turbo Studio to package your applications](../../studio/working-with-turbo-studio/setup-capture.html) or pull pre-packaged applications from [Turbo.net Hub](https://hub.turbo.net/hub).
 
 ```
 # Pull an example application
@@ -53,16 +53,15 @@ For scripted deployments, append the `--silent` flag for unattended installation
 ```
 turbo-client-installer.exe --offline --all-users --silent
 ```
+See the [Turbo Client Installation documentation](../../reference/turbo-client/turbo-client.html#turbo-client-installation) for more installation flags and information.
 
-See the [Turbo Client Installation documentation](https://hub.turbo.net/docs/reference/turbo-client/turbo-client#turbo-client-installation) for more installation flags and information.
-
-After the setup has completed, use the [turbo config](https://hub.turbo.net/docs/reference/command-line/config) CLI command to configure the client. For offline scenarios, it is common to configure the following:
+After the setup has completed, use the [turbo config](../../reference/command-line/config.html) CLI command to configure the client. For offline scenarios, it is common to configure the following:
 
 ```
-# Lock the client configuration, so users cannot change the settings.
+# Lock the client configuration, so users cannot change the settings. 
 turbo config --as-override
 
-# Configure the client repository path to a shared read-only path to prevent users from adding or removing images on their own.
+# Configure the client repository path to a shared read-only path to prevent users from adding or removing images on their own. 
 # The `allusers` value specifies the Turbo folder in ProgramData, but this path can be a different drive or even a network share path.
 turbo config --image-path=allusers --all-users
 
@@ -70,7 +69,7 @@ turbo config --image-path=allusers --all-users
 
 ### Populate the Client Repository with SVM Images
 
-When the Turbo Client is deployed in offline mode, the base and application SVM packages need to be imported manually using the [turbo import](https://hub.turbo.net/docs/reference/command-line/import) command from the prepared network share.
+When the Turbo Client is deployed in offline mode, the base and application SVM packages need to be imported manually using the [turbo import](../../reference/command-line/import.html) command from the prepared network share.
 
 ```
 turbo import svm -n=/xvm:24.4.10 \\networkpath\turbo-images\xvm_24.4.10.svm
@@ -84,7 +83,7 @@ Note that if you have configured the client's image path (using `turbo config --
 
 ### Deploy Applications to the System
 
-Once the client repository has been populated, applications can be deployed to the system using the [turbo installi](https://hub.turbo.net/docs/reference/command-line/installi) command.
+Once the client repository has been populated, applications can be deployed to the system using the [turbo installi](../../reference/command-line/installi.html) command.
 
 Example command to install the Notepad++ application for all users in offline mode using merge container isolation. The application will be able to read and write to the native filesystem and registry.
 

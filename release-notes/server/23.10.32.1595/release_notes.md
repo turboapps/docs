@@ -2,16 +2,13 @@ The October 2023 Turbo Server release includes several major features:
 
 - New! **Storage Connections** can now be created globally by administrators and made available to select user groups, allowing users to access shared files with no additional setup.
 
+![Global Connections](../../../images/global-connections-add.png)
+- New! **Workspace Storage Scopes** create customizable, per-workspace views into storage provider connections.
 
-![Global Connections](https://hub.turbo.net/images/docs/global-connections-add.png)
-- New! **Workspace Storage Scopes** create customizable, per-workspace views into storage provider connections. 
-
-
-![Workspace Storage Scopes](https://hub.turbo.net/images/docs/ws-storage-scopes-custom.png)
+![Workspace Storage Scopes](../../../images/ws-storage-scopes-custom.png)
 - New! **Accepted Tenants** restricts multi-tenant single sign-on (SSO) to a fixed set of tenants.
 
-
-![Accepted Tenants](https://hub.turbo.net/images/docs/accepted-tenants-2.png)
+![Accepted Tenants](../../../images/accepted-tenants-2.png)
 
 Other new features include:
 

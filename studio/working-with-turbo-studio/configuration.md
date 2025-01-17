@@ -4,7 +4,7 @@ The following discusses the many configuration features available in Turbo Studi
 
 ### Process Settings
 
-![Turbo Studio Process Settings](https://hub.turbo.net/images/docs/procsettings.png)
+![Turbo Studio Process Settings](../../images/procsettings.png)
 
 - **Command line arguments** will be passed to the startup file when the container is executed by default. You can override and specify a fixed set of command line arguments to pass to the startup executable for **Standalone Executable** project types. Command line arguments can also be assigned directly to the startup files in the **Startup Files** dialog.
 - **Working directory** allows you to specify what the default working directory of startup files will be. Options include the directory that the startup file is in (default), the directory that the container was executed from (useful for tooling that might take relative paths to files as parameters), or a specific location.
@@ -17,14 +17,14 @@ The following discusses the many configuration features available in Turbo Studi
 - **Compress payload** makes it so that the files stored in the container at build time will be compressed. This can greatly reduce the size of the container image or executable file. Enabling this setting will decrease performance as files must be decompressed at runtime and those over 1MB will be copied into the sandbox, even for read operations.
 - **Use Windows DLL loader** allows the container runtime environment to use the Windows loader for executable file types (.dll and .exe). This has the advantage of increased compatibility but increases the filesystem usage requirements as all executable files must be faulted into the sandbox before they can be loaded rather than loading directly from the container image.
 - **Trace process starts in debug output** will display a message in the debug output stream whenever a process is started. The debug output stream can be viewed with [dbgview](https://docs.microsoft.com/en-us/sysinternals/downloads/debugview).
-- **Enable Turbo command line arguments** makes it so that the container runtime parameters can be used (ie /XEnable, /XShellEx, etc). See [building standalone executables](https://hub.turbo.net/docs/studio/working-with-turbo-studio/standalone-executables) for more information.
+- **Enable Turbo command line arguments** makes it so that the container runtime parameters can be used (ie /XEnable, /XShellEx, etc). See [building standalone executables](../../studio/working-with-turbo-studio/standalone-executables.html) for more information.
 - **Enable startup executable optimization** makes it so that if there is a single startup file, then it will be run directly rather than being spawned from the virtual machine boostrap executable. This will reduce the number of processes that are required to start the container.
 - **Shutdown process tree on root process exit** makes is so that all child processes of the startup file will automatically be killed when the startup file exists.
 - **Enable Chromium suport** allows support for the Chromium sandbox used by Google Chrome, Microsoft Edge, and other applications and components.
 
 ### Sandbox Settings
 
-![Turbo Studio Sandbox Settings](https://hub.turbo.net/images/docs/sandboxsettings.png)
+![Turbo Studio Sandbox Settings](../../images/sandboxsettings.png)
 
 - **Sandbox location** field specifies where the container's runtime sandbox will be stored during execution. This only applies to Standalone Executables and containers which are started using the Turbo Client Runtime will override this with its own behavior. This path can use the folder root tokens (ie **@DESKTOP@**, **@APPDATA@**, etc) as well as the following metadata variables: **@TITLE@**, **@PUBLISHER@**, **@VERSION@**, **@WEBSITE@**, and **@BUILDTIME@**. The container build time is in a format similar to **2008.02.01T08.00**. With the exception of the **@BUILDTIME@** variable (which is set automatically), these variables are based on the values specified in the **Properties** tab of **Settings** panel.
 - **Stubexe cache location** field specifies where the container stubexe files are stored. By default this is blank and they are stored in the sandbox. Stubexe files are generated .exe files that map to executables which are launched inside the container. In some environment, stubexe files require exclusions for security or anti-virus software so it can be convenient to store them in the same place to reduce the exposure and complexity of exception rules.
@@ -43,19 +43,19 @@ The following discusses the many configuration features available in Turbo Studi
 
 ### Metadata Settings
 
-![Turbo Studio Metadata Settings](https://hub.turbo.net/images/docs/metadatasettings.png)
+![Turbo Studio Metadata Settings](../../images/metadatasettings.png)
 
 - **Standard Metadata** fields include information such as product title, publisher, description, icon, web site URL, and version. By default these values are inherited by the startup file and will be displayed here. To override any of the values, uncheck the **Inherit** checkbox. Leave the value as **@INHERIT@** for any values that should continue to be inherited.
 - **Custom Metadata** can be used by specialized external executable viewer applications, inventory scanners, and other asset and licensing management systems. For information on custom executable metadata, consult the Microsoft Windows Software Development Kit.
 
 ### Startup Settings
 
-![Turbo Studio Startup Settings](https://hub.turbo.net/images/docs/startupsettings.png)
+![Turbo Studio Startup Settings](../../images/startupsettings.png)
 
 - **Splash Image** can assign an image that is displayed while the container is loading. Startup images improve application branding and are useful when the application requires several seconds to initialize.
 - **Transparency key** enables the splash image to contain transparent regions which can improve the visual effectiveness of your splash.
 - **Display splash until** assigns how the splash will be shown, either for a specific amount of time or until the first application window appears. The splash image can always be dismissed by clicking it with the mouse.
-- **Shims** and **Scripts** settings allow you to run custom code to configure or clean up environments before and after a container is executed. See [Startup/Shutdown Scripts and Shims](https://hub.turbo.net/docs/studio/advanced-topics/startupshutdown-scripts-and-shims) for more information.
+- **Shims** and **Scripts** settings allow you to run custom code to configure or clean up environments before and after a container is executed. See [Startup/Shutdown Scripts and Shims](../../studio/advanced-topics/startupshutdown-scripts-and-shims.html) for more information.
 - **Startup script** assigns a path to a script that is executed when the container starts.
 - **Shutdown script** assigns a path to a script that is executed when the container stops.
 - **Terminate container with non-zero exit code** sets whether the exit code from the startup script is honored. If enabled, any non-zero exit code from the startup script will abort the container start (ex: `exit /b 1`). If disabled, the exit code from the script will be ignored. The default is disabled.
@@ -67,7 +67,7 @@ The following discusses the many configuration features available in Turbo Studi
 
 ### Layers Settings
 
-![Turbo Studio Layers](https://hub.turbo.net/images/docs/layers.png)
+![Turbo Studio Layers](../../images/layers.png)
 
 The **Layers** panel allows external image layers (SVMs) to be merged into the configuration at build time. While this can be used for any of the project types, it is primarily used for standalone executable projects.
 
@@ -81,15 +81,15 @@ For standalone executable project types, runtime patch layer dependencies can be
 
 ### Desktop Integration Settings
 
-![Turbo Studio Desktop Settings](https://hub.turbo.net/images/docs/desktop.png)
+![Turbo Studio Desktop Settings](../../images/desktop.png)
 
 The **Desktop** panel allows shortcuts and file associations to be defined which are used when the container is installed to the machine via Turbo Client **install**, **installi**, or **subscribe** commands, from the Turbo Server portal, or with MSI deployments.
 
-See [Desktop Integration](https://hub.turbo.net/docs/studio/working-with-turbo-studio/desktop) for more information on shortcut and file association configuration.
+See [Desktop Integration](../../studio/working-with-turbo-studio/desktop.html) for more information on shortcut and file association configuration.
 
 ### Licensing Settings
 
-![Turbo Studio Licensing Settings](https://hub.turbo.net/images/docs/licensing.png)
+![Turbo Studio Licensing Settings](../../images/licensing.png)
 
 - **Disallow execution after number of days** sets a hard limit on how many days the container can be executed. Useful for applications for trials or proof-of-concept.
 - **Disallow execution after date** sets the date at which point the container no longer executes.
@@ -103,7 +103,7 @@ See [Desktop Integration](https://hub.turbo.net/docs/studio/working-with-turbo-s
 
 ### Security Settings
 
-![Turbo Studio Security Settings](https://hub.turbo.net/images/docs/security.png)
+![Turbo Studio Security Settings](../../images/security.png)
 
 - **Required domain** specifies the name of an Active Directory domain where the container must be executed. If the container is attempted to be executed off the domain then an error message will be displayed.
 - **Required group membership** is a list of Active Directory groups to which the user executing the container must belong. Group names are semi-colon delimited.
@@ -118,7 +118,7 @@ See [Desktop Integration](https://hub.turbo.net/docs/studio/working-with-turbo-s
 
 ### Proxy Settings
 
-![Turbo Studio Proxy Settings](https://hub.turbo.net/images/docs/proxy.png)
+![Turbo Studio Proxy Settings](../../images/proxy.png)
 
 - **Proxy TCP connections** enables proxy settings for all TCP network traffic.
 - **Proxy UDP connections** enables proxy settings for all UDP network traffic.
@@ -128,14 +128,14 @@ See [Desktop Integration](https://hub.turbo.net/docs/studio/working-with-turbo-s
 
 ### DNS Settings
 
-![Turbo Studio DNS Settings](https://hub.turbo.net/images/docs/dns.png)
+![Turbo Studio DNS Settings](../../images/dns.png)
 
 - **Hostname or IP Address** specifies the source name/address to map to another location.
 - **Redirect** specified the target IP address where the source address is mapped to. Redirecting to IP 0.0.0.0 will make the source name/address unreachable.
 
 ### IP Restriction Settings
 
-![Turbo Studio IP Restrictions](https://hub.turbo.net/images/docs/ip.png)
+![Turbo Studio IP Restrictions](../../images/ip.png)
 
 - **Route** is the hostname, IP address (v4 or v6 format, CIDR notation for subnet mask), or pattern to which the rule applies.
 - **Type** sets whether the matching routes will be allowed or denied. All routes are allowed by default. To change this default add a route for "\*" set to **Deny**.

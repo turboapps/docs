@@ -4,11 +4,11 @@ The January 2022 Turbo Server release includes several major performance and fea
 
 - New! **Advanced Testing **provides integrated load testing by automatically launching a large number of sessions against specific application servers concurrently.
 
-![Advanced Testing](https://hub.turbo.net/images/docs/test-launch-v2.png)
+![Advanced Testing](../../../images/test-launch-v2.png)
 
 - New! **Disconnect** and **Close** actions have been added to the HTML5 client and Portal dashboard when running remote applications, allowing sessions to be easily transferred between clients without restarts. HTML5 client tab closures now logoff the remote user session by default.
 
-![Portal Disconnect and Close](https://hub.turbo.net/images/docs/portal-logoff-disconnect.png)
+![Portal Disconnect and Close](../../../images/portal-logoff-disconnect.png)
 
 Other new features include:
 

@@ -38,7 +38,7 @@ If you press the Windows key, you will notice that **7-Zip** and **Notepad++** a
 
 Also, notice that if you right-click on a file in the Windows Explorer, you see the shell extensions normally associated with installed versions of **7-Zip** and **Notepad++**:
 
-![Turboextension](https://hub.turbo.net/images/docs/turboextension.png)
+![Turboextension](../../images/turboextension.png)
 
 Installing a container does not automatically cause the image contents to download. The contents will download automatically when the application is first run. Container installation is intentionally designed this way so that many applications can be registered on the desktop very quickly.
 

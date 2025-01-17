@@ -143,7 +143,7 @@ For example, suppose we want to run Firefox with the Java runtime enabled:
 > turbo run firefox:35,jre
 ```
 
-![Layered architecture](https://hub.turbo.net/images/docs/layered-architecture.png)
+![Layered architecture](../../images/layered-architecture.png)
 
 Note that if you navigate to the **Options / Plugins** menu in Firefox, the Java plugin is installed!
 
@@ -157,7 +157,7 @@ We can combine the versioning and layering operators to achieve more combination
 > turbo run firefox:38,jre:8 --detach
 ```
 
-![Side-by-side versioning](https://hub.turbo.net/images/docs/side-by-side-versioning.png)
+![Side-by-side versioning](../../images/side-by-side-versioning.png)
 
 Notice that we are able to run multiple versions of Firefox — with multiple versions of Java! — side by side on a single desktop.
 
@@ -177,7 +177,7 @@ To make enable a layer temporarily, use the `--using` flag:
 
 ### Commit
 
-[Commiting](https://hub.turbo.net/docs/reference/command-line/commit) a container will create a new image with all layers and changes to the container. A commited container will not include any `using` images.
+[Commiting](../../reference/command-line/commit.html) a container will create a new image with all layers and changes to the container. A commited container will not include any `using` images.
 
 ```
 # Creates a new image with both firefox and jre included

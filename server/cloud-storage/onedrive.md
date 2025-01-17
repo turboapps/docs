@@ -2,7 +2,7 @@
 
 To allow users to connect their OneDrive accounts and access them while running their applications, you must first configure a OneDrive application registration. This OneDrive application controls the permissions, branding, and routing for the OneDrive SSO.
 
-If you are using [Azure Active Directory with OpenID Connect](https://hub.turbo.net/docs/server/authentication/azuread-openid-connect) Authentication, you may configure OneDrive to automatically connect on login by using the same application registration. See [Automatically Connect OneDrive](#setup-the-onedrive-application-update-an-existing-application)
+If you are using [Azure Active Directory with OpenID Connect](../../server/authentication/azuread-openid-connect.html) Authentication, you may configure OneDrive to automatically connect on login by using the same application registration. See [Automatically Connect OneDrive](#setup-the-onedrive-application-update-an-existing-application)
 
 ### Setup the OneDrive Application
 
@@ -16,31 +16,31 @@ The following section describes how to create a new OneDrive application that ca
 
    - `https://{Web Service Root}/oauth/onedrive/callback/login`
 
-   ![OneDrive Application Registration Redirect URL](https://hub.turbo.net/images/docs/onedrive-app.png)
+   ![OneDrive Application Registration Redirect URL](../../images/onedrive-app.png)
 
 3. Enable the following Delegated Permissions:
 
    - `Files.ReadWrite.All`
    - `offline_access`
 
-   ![onedrive-api-permissions](https://hub.turbo.net/images/docs/onedrive-api-permissions.png)
+   ![onedrive-api-permissions](../../images/onedrive-api-permissions.png)
 
 #### Update an Existing Application
 
-The following section describes how to update an existing [Azure Active Directory with OpenID Connect](https://hub.turbo.net/docs/server/authentication/azuread-openid-connect) application to automatically connect OneDrive when users login to the Portal using Single Sign-On.
+The following section describes how to update an existing [Azure Active Directory with OpenID Connect](../../server/authentication/azuread-openid-connect.html) application to automatically connect OneDrive when users login to the Portal using Single Sign-On.
 
 1. Add the following Redirect URL:
 
    - `https://{Web Service Root}/oauth/onedrive/callback/login`
 
-   ![oidc-onedrive-redirect-uris](https://hub.turbo.net/images/docs/oidc-onedrive-redirect-uris.png)
+   ![oidc-onedrive-redirect-uris](../../images/oidc-onedrive-redirect-uris.png)
 
 2. Enable the following Delegated Permissions:
 
    - `Files.ReadWrite.All`
    - `offline_access`
 
-   ![oidc-onedrive-permissions](https://hub.turbo.net/images/docs/oidc-onedrive-permissions.png)
+   ![oidc-onedrive-permissions](../../images/oidc-onedrive-permissions.png)
 
 ### Configure Turbo Server
 
@@ -66,7 +66,7 @@ User sign in results in error message "[The Azure Application] is not configured
 
 This error occurs when the OneDrive integration is configured with **Multitenant** supported account types, but the OneDrive application registration was created with **Single tenant** supported account types.
 
-Open the [OneDrive storage provider settings page](https://hub.turbo.net/docs/server/administration/integrations#storage-providers) and ensure that the **Single tenant** supported account type was selected.
+Open the [OneDrive storage provider settings page](../../server/administration/integrations.html#storage-providers) and ensure that the **Single tenant** supported account type was selected.
 
 In server 22.4 an earlier, only multitenant application registrations were supported.
 

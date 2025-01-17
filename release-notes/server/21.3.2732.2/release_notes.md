@@ -2,10 +2,10 @@ The March 2021 Turbo Server release includes the following major new features:
 
 - This release introduces **PC Native Applications **as a Workspace object type. PC Native Applications launch Windows desktop applications that are installed *natively* on the application server in a containerized environment.
 
-![Add PC Native Application](https://hub.turbo.net/images/docs/admin-application-add-native.png)
+![Add PC Native Application](../../../images/admin-application-add-native.png)
 - **Custom icons** can now be configured on all workspace application types from the application settings page.
 
-![Custom Application Icon](https://hub.turbo.net/images/docs/admin-application-icon.png)
+![Custom Application Icon](../../../images/admin-application-icon.png)
 - **Web Applications** have been updated to improve customization and consistency with other application types. Please read our migration guide for information on how to migrate your existing Web Applications:
 
 Other improvements include:

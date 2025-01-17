@@ -42,7 +42,7 @@ Turbo containers are built on top of the **Turbo Virtual Machine Engine**, an ap
 
 The image below illustrates how the SVM is isolated from the host environment.
 
-![Turbo VM diagram](https://hub.turbo.net/images/docs/turbo-vm.png)
+![Turbo VM diagram](../../images/turbo-vm.png)
 
 The Turbo VM is required to implement containerization on the Windows platform since the underlying OS does not provide appropriate containerization primitives. Put another way, Turbo VM plays the same role for Turbo containers as LXC does for Docker containers.
 
@@ -84,7 +84,7 @@ Turbo then stores deltas on top of the base images as the container state evolve
 
 **Does Turbo support virtual networking?**
 
-Yes. Controlling both inbound and outbound traffic is supported. See the `--route-add`, `--route-block`, `--link`, `--hosts`, and `--network` commands. For details relating to binding and routing container ports or IPs see [Networking](https://hub.turbo.net/docs/getting-started/administrators/networking).
+Yes. Controlling both inbound and outbound traffic is supported. See the `--route-add`, `--route-block`, `--link`, `--hosts`, and `--network` commands. For details relating to binding and routing container ports or IPs see [Networking](../../getting-started/administrators/networking.html).
 
 **Does Turbo support linking multiple containers?**
 

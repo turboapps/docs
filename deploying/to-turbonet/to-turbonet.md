@@ -60,6 +60,6 @@ Once the push is complete you can verify that the image is available on the Hub 
 
 ### Using Turbo Studio
 
-Turbo Studio provides a feature to deploy applications directly to your Turbo.net account. After completing the build process, see the [Build](https://hub.turbo.net/docs/studio/working-with-turbo-studio/getting-started) section for details, click on the **Publish to Server** option on the ribbon menu.
+Turbo Studio provides a feature to deploy applications directly to your Turbo.net account. After completing the build process, see the [Build](../../studio/working-with-turbo-studio/getting-started.html) section for details, click on the **Publish to Server** option on the ribbon menu.
 
 You will be prompted to log in with your Turbo.net account information and then application will be added to your profile. Once the application has been added to your Turbo.net account, it will be accessible from any Turbo enabled device.

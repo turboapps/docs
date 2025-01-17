@@ -2,7 +2,7 @@
 
 This section provides information to help troubleshoot common Single Sign On (SSO) issues.
 
-For information on how to configure Turbo Server to use SSO, please refer to the [Authentication Method](https://hub.turbo.net/docs/server/administration/users#authentication-method) section.
+For information on how to configure Turbo Server to use SSO, please refer to the [Authentication Method](../../server/administration/users.html#authentication-method) section.
 
 ### Azure Active Directory
 
@@ -10,13 +10,13 @@ For information on how to configure Turbo Server to use SSO, please refer to the
 
 Occurs when the application registration was not configured with the correct implicit grant type. Please ensure that you have configured your application registration to issue `ID tokens`.
 
-See [Configure Azure AD](https://hub.turbo.net/docs/server/authentication/azuread-openid-connect#configure-azure-ad) for more information on configuring the implicit grant types.
+See [Configure Azure AD](../../server/authentication/azuread-openid-connect.html#configure-azure-ad) for more information on configuring the implicit grant types.
 
 #### access_denied
 
 Occurs when the application registration was not configured with the correct API permissions. Please ensure that you have configured your application configuration to grant `User.Read` and `Directory.Read.All` permissions.
 
-See [Configure Azure AD](https://hub.turbo.net/docs/server/authentication/azuread-openid-connect#configure-azure-ad) for more information on configuring the API permissions.
+See [Configure Azure AD](../../server/authentication/azuread-openid-connect.html#configure-azure-ad) for more information on configuring the API permissions.
 
 #### In \_validateResponse: jwt is not active
 
@@ -58,15 +58,15 @@ This can be resolved by removing the `connect.sid` cookie from the client machin
 
 **Chrome**: Visit `chrome://settings/siteData` and search for your Portal server's hostname. Click on the matching search result, then click **Remove All** to clear all Portal cookies.
 
-![Chrome Cookies](https://hub.turbo.net/images/docs/chrome-cookies.png)
+![Chrome Cookies](../../images/chrome-cookies.png)
 
 **Firefox**: Visit `about:preferences#privacy` and click **Manage Data** under **Cookies and Site Data**. Search for your Portal server's hostname, then click **Remove All Shown** to clear all Portal cookies.
 
-![Firefox Cookies](https://hub.turbo.net/images/docs/firefox-cookies.png)
+![Firefox Cookies](../../images/firefox-cookies.png)
 
 **Edge**: Visit `edge://settings/siteData` and search for your Portal server's hostname. Click on the matching search result, then click **Remove All** to clear all Portal cookies.
 
-![Edge Cookies](https://hub.turbo.net/images/docs/edge-cookies.png)
+![Edge Cookies](../../images/edge-cookies.png)
 
 #### In \_authCodeFlowHandler: failed to redeem authorization code
 
@@ -75,7 +75,7 @@ Occurs when the login request fails to authenticate due to an application regist
 - The configured return URL does not match the Portal return URL endpoint.
 - The configured secret does not match the application registration's secret.
 
-See [Configure Azure AD](https://hub.turbo.net/docs/server/authentication/azuread-openid-connect#configure-azure-ad) for more information.
+See [Configure Azure AD](../../server/authentication/azuread-openid-connect.html#configure-azure-ad) for more information.
 
 #### Response_type 'id_token' is not enabled for the application.
 
@@ -93,27 +93,27 @@ Turbo Server expects the name ID to be returned in the SAML subject as `nameID`.
 
 Additionally, Turbo Server supports **Attribute Mapping** which allows mapping the name ID to an arbitrary attribute name. If a name ID mapping is configured, please make sure that it matches an existing attribute name returned by the IdP.
 
-If you are using AzureAD with SAML 2.0, see [Configure Azure AD](https://hub.turbo.net/docs/server/authentication/azuread-saml#configure-azure-ad-user-attributes-and-claims) for more information on setting up the claims.
+If you are using AzureAD with SAML 2.0, see [Configure Azure AD](../../server/authentication/azuread-saml.html#configure-azure-ad-user-attributes-and-claims) for more information on setting up the claims.
 
-If you are using ADFS with SAML 2.0, see [Configure ADFS](https://hub.turbo.net/docs/server/authentication/adfs#configure-adfs-create-new-claims) for more information on setting up the claims.
+If you are using ADFS with SAML 2.0, see [Configure ADFS](../../server/authentication/adfs.html#configure-adfs-create-new-claims) for more information on setting up the claims.
 
 #### Login failed: Missing Email claim
 
 The Turbo user could not be created due to a missing email claim. Turbo Server expects the `email` claim to be returned by the identity service.
 
-If you are using AzureAD with OpenID Connect, see [Configure Azure AD](https://hub.turbo.net/docs/server/authentication/azuread-openid-connect#configure-azure-ad) for more information on setting up the claims.
+If you are using AzureAD with OpenID Connect, see [Configure Azure AD](../../server/authentication/azuread-openid-connect.html#configure-azure-ad) for more information on setting up the claims.
 
 #### Login failed: Missing sub claim
 
 The Turbo user could not be created due to a missing sub claim. Turbo Server expects the `sub` claim to be returned by the identity service.
 
-If you are using OpenID Connect, see [OpenID Connect](https://hub.turbo.net/docs/server/authentication/openid-connect#prerequisites) for more information on the required claims.
+If you are using OpenID Connect, see [OpenID Connect](../../server/authentication/openid-connect.html#prerequisites) for more information on the required claims.
 
 #### Failed to load OpenID provider metadata
 
 The Portal was unable to load the OpenID Provider Metadata from the Provider Metadata URL configured in the authentication method. This could be caused by an incorrect URL or a network error.
 
-Please ensure that the correct Provider Metadata URL was provided and that the URL is accessible from the Portal server. If you are using AzureAD with OpenID Connect, see [Configured Turbo Server](https://hub.turbo.net/docs/server/authentication/azuread-openid-connect#configure-turbo-server).
+Please ensure that the correct Provider Metadata URL was provided and that the URL is accessible from the Portal server. If you are using AzureAD with OpenID Connect, see [Configured Turbo Server](../../server/authentication/azuread-openid-connect.html#configure-turbo-server).
 
 #### Your SSO tenant with ID "xxxx" is not approved for login.
 
@@ -166,7 +166,7 @@ If you are using Azure AD OpenID, please make sure that the following **API perm
 - **Microsoft Graph > Delegated permissions > User > User.Read**
 - **Microsoft Graph > Delegated permissions > Directory > Directory.Read.All**
 
-If you are using SAML authentication, please make sure that your values for the `Signing Certificate Thumbprint` and `Signing Certificate Common Name` are correct and that your signing certificate is installed on the Hub server. See [Configure Turbo Server](https://hub.turbo.net/docs/server/authentication/azuread-saml#configure-turbo-server) for more information on setting up the signing certificate.
+If you are using SAML authentication, please make sure that your values for the `Signing Certificate Thumbprint` and `Signing Certificate Common Name` are correct and that your signing certificate is installed on the Hub server. See [Configure Turbo Server](../../server/authentication/azuread-saml.html#configure-turbo-server) for more information on setting up the signing certificate.
 
 #### Login failed (503)
 

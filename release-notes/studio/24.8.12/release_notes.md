@@ -1,4 +1,4 @@
-This update to Turbo Studio includes the following improvements and bug fixes: 
+This update to Turbo Studio includes the following improvements and bug fixes:
 
 - The Turbo VM is updated to version 24.8.63
 - Add **Defaulted File Isolation** mode

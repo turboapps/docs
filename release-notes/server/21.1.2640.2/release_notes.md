@@ -2,14 +2,14 @@ The January 2021 Turbo Server release includes the following major new features:
 
 - Support for **Moodle **and **Blackboard **Learning Management Systems (LMS).
 
-![Moodle](https://hub.turbo.net/images/docs/moodle.png)
+![Moodle](../../../images/moodle.png)
 - Learning Tools Interoperability (LTI) **User Identity** settings now supports custom LMS user fields to login and create Turbo Server internal users.
 
-![LTI Custom User Identity](https://hub.turbo.net/images/docs/custom-user-identity.png)
+![LTI Custom User Identity](../../../images/custom-user-identity.png)
 
 - New LTI integration **Courses** settings map LMS courses to individual Turbo workspace channels, allowing multiple courses to share workspace content and configurations.
 
-![LTI Courses](https://hub.turbo.net/images/docs/courses.png)
+![LTI Courses](../../../images/courses.png)
 - New **Temporary User Profile Lifespan** setting allows administrators to specify the length of time that a temporary profile will be cached on the application server. The default value is 7 days.
 
 Other improvements include:

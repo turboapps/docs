@@ -2,7 +2,7 @@
 
 Turbo Server can be configured to allow users to log in via Duo Single Sign-On SSO using the SAML 2.0 authentication protocol.
 
-For prerequisites and additional information about the SAML 2.0 authentication protocol, please refer to the [SAML 2.0 Prerequisites](https://hub.turbo.net/docs/server/authentication/saml#prerequisites) section.
+For prerequisites and additional information about the SAML 2.0 authentication protocol, please refer to the [SAML 2.0 Prerequisites](../../server/authentication/saml.html#prerequisites) section.
 
 ### Configure Duo
 
@@ -12,15 +12,15 @@ First, ensure that you have configured Single Sign-On in Duo Administrator per t
 
 From your Duo Administration panel, go to the **Applications > Protect an Application page**.
 
-![Duo 1 Protect an Application](https://hub.turbo.net/images/docs/duo-1.png)
+![Duo 1 Protect an Application](../../images/duo-1.png)
 
 Search for **Generic SAML Service Provider** and click **Protect**.
 
-![Duo 2 Protect Application](https://hub.turbo.net/images/docs/duo-2-protect-application.png)
+![Duo 2 Protect Application](../../images/duo-2-protect-application.png)
 
 You now have a new SAML Service Provider Created for the Turbo Server SSO authentication. Record the **Entity ID**, **Single Sign-On URL**, and **Single Sign-Out URL** values and click the **Download certificate** button to save the certificate file for later use.
 
-![Duo 3 SAML Service Provider](https://hub.turbo.net/images/docs/duo-3-saml-service-provider.png)
+![Duo 3 SAML Service Provider](../../images/duo-3-saml-service-provider.png)
 
 Configure the SAML settings for the SAML integration in Duo:
 
@@ -29,7 +29,7 @@ Configure the SAML settings for the SAML integration in Duo:
 - **Single Logout URL:** https://example.company.com/auth/saml/logout
 - **Service Provider Login URL:** https://example.company.com/auth/saml/login
 
-![Duo 4 SAML Configuration](https://hub.turbo.net/images/docs/duo-4-saml-configuration.png)
+![Duo 4 SAML Configuration](../../images/duo-4-saml-configuration.png)
 
 Map Attributes:
 
@@ -38,7 +38,7 @@ Map Attributes:
 - **IDP Attribute:** Last Name  
   **SAML Response Attribute:** http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname
 
-![Duo 5 Attributes](https://hub.turbo.net/images/docs/duo-5-attributes.png)
+![Duo 5 Attributes](../../images/duo-5-attributes.png)
 
 Role Attributes (this is where you will map the group attribute):
 
@@ -46,17 +46,17 @@ Role Attributes (this is where you will map the group attribute):
   **Service Provider’s Role:** Name of Group to use in Turbo (i.e Turbo-Apps)  
   **Duo Groups:** Duo users you want to link to that Role in Turbo (i.e TestGroup1)
 
-![Duo 6 Groups](https://hub.turbo.net/images/docs/duo-6-groups.png)
+![Duo 6 Groups](../../images/duo-6-groups.png)
 
 Enter the **Name** for your application and click **Save**.
 
-![Duo 7 Name](https://hub.turbo.net/images/docs/duo-7-name.png)
+![Duo 7 Name](../../images/duo-7-name.png)
 
 ### Configure Turbo Server
 
 Open the Turbo Server administration site and navigate to the **Users > Authentication Method page**.
 
-![Okta 9 Turbo Server Authentication Method](https://hub.turbo.net/images/docs/Okta_9_Turbo_Server_Authentication_Method.png)
+![Okta 9 Turbo Server Authentication Method](../../images/Okta_9_Turbo_Server_Authentication_Method.png)
 
 Set the **Authentication Method** to **Single Sign-On**.
 
@@ -64,7 +64,7 @@ Set the **Single Sign-On Method** to **SAML 2.0**.
 
 Configure the following fields:
 
-![Okta 11 Turbo Server Authentication Method Fields](https://hub.turbo.net/images/docs/Okta_11_Turbo_Server_Authentication_Method_Fields.png)
+![Okta 11 Turbo Server Authentication Method Fields](../../images/Okta_11_Turbo_Server_Authentication_Method_Fields.png)
 
 - **Application ID**: Enter the Duo application ID. This value is identified in the last segment of the **Entity ID Metadata** value from Duo that was recorded earlier.  
   Example: DIABC12367890123456
@@ -76,7 +76,7 @@ Configure the following fields:
 - **Logout URL**: Enter the **Single Log-Out URL** value from Duo that was recorded earlier.  
   Example: https://sso-abc1def2.sso.duosecurity.com/saml2/sp/DIABC12367890123456/slo
 - **Signing Certificate Thumbprint**: Enter the thumbprint value that is listed in the SAML Signing Certificate under **Details > Thumbprint**.
-  ![Okta 12 Certificate Thumbprint](https://hub.turbo.net/images/docs/Okta_12_Certificate_Thumbprint.png)
+  ![Okta 12 Certificate Thumbprint](../../images/Okta_12_Certificate_Thumbprint.png)
 - **Singing Certificate Common Name**: Enter the common name value that is listed in the SAML Signing Certificate under **Details > Subject > CN**.
 
 ### Install SAML Signing Certificate on Turbo Hub
@@ -90,17 +90,17 @@ Login to the system where the Turbo Hub role is installed on as an administrator
 3. Select the **Certificates** option then click **Add**.
 4. Select **Computer account**, select **Local computer**, and then complete the dialog.
 5. Click on the new **Certificates** Snap In, then click **All Tasks > Import...**
-   ![Okta 14 MMC Console](https://hub.turbo.net/images/docs/Okta_14_MMC_Console.png)
+   ![Okta 14 MMC Console](../../images/Okta_14_MMC_Console.png)
 6. Select **Local Machine** and click **Next**.
-   ![Okta 14 Certificate Import Wizard](https://hub.turbo.net/images/docs/Okta_14_Certificate_Import_Wizard.png)
+   ![Okta 14 Certificate Import Wizard](../../images/Okta_14_Certificate_Import_Wizard.png)
 7. Select your SAML Signing Certificate and click **Next**.
-   ![Okta 16 Certificate Import Wizard File Import](https://hub.turbo.net/images/docs/Okta_16_Certificate_Import_Wizard_File_Import.png)
+   ![Okta 16 Certificate Import Wizard File Import](../../images/Okta_16_Certificate_Import_Wizard_File_Import.png)
 8. Select **Place all certificates in the following store**, select **Trusted Root Certificate Authorities**, and then click **Next**.
-   ![Okta 17 Certificate Import Wizard Certificate Store](https://hub.turbo.net/images/docs/Okta_17_Certificate_Import_Wizard_Certificate_Store.png)
+   ![Okta 17 Certificate Import Wizard Certificate Store](../../images/Okta_17_Certificate_Import_Wizard_Certificate_Store.png)
 9. Complete the rest of the import wizard with the default options.
 
 Once installed, Turbo Server portal logins should now complete successfully.
 
 ### Troubleshooting
 
-Please refer to the [SAML 2.0 Troubleshooting](https://hub.turbo.net/docs/server/authentication/saml#troubleshooting) section.
+Please refer to the [SAML 2.0 Troubleshooting](../../server/authentication/saml.html#troubleshooting) section.

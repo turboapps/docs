@@ -2,10 +2,10 @@
 
 - **Notifications **allow administrators to notify groups of Turbo Server users with custom messages. Notifications are displayed to users on the Turbo Portal in the notifications dropdown.
 
-![Notifications](https://hub.turbo.net/images/docs/notifications.png)
+![Notifications](../../../images/notifications.png)
 - **Search** is now available on the Portal Dashboard. Users can now quickly search Workspace contents by name.
 
-![Workspace Search](https://hub.turbo.net/images/docs/search.png)
+![Workspace Search](../../../images/search.png)
 
 Other improvements include:
 
@@ -35,5 +35,5 @@ This update includes fixes for the following issues:
 - Dismissing the Turbo Server license warning incorrectly triggered form validation.
 - Some administration site delete confirmation dialogs failed to appear if the display name contained invalid characters.
 
- 
+
 

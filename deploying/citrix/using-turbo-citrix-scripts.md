@@ -2,7 +2,7 @@
 
 Turbo containers can also be deployed to XenApp using powershell helper scripts to automate the deployment.
 
-![Citrix scripts](https://hub.turbo.net/images/docs/scripts1.png)
+![Citrix scripts](../../images/scripts1.png)
 
 ### XenApp 7
 
@@ -53,7 +53,7 @@ Deployment successful
 
 After those easy commands, we have applications deployed to our XenApp farm!
 
-![Citrix XenApp farm](https://hub.turbo.net/images/docs/scripts2.png)
+![Citrix XenApp farm](../../images/scripts2.png)
 
 Go to [Subscribe for XenApp7](https://app.turbo.net/hub/turbocitrix/xa7-subscribe) for more information and full documentation of the script parameters.
 

@@ -42,15 +42,15 @@ Enter 'Q' to stop IIS Express
 
 Let’s confirm the application is running by opening `http://localhost:8080` in a browser.
 
-![MiniBlog](https://hub.turbo.net/images/docs/miniblog.png)
+![MiniBlog](../../images/miniblog.png)
 
 Login using username **demo** and password **demo**.
 
-![MiniBlog signin](https://hub.turbo.net/images/docs/miniblog-signin.png)
+![MiniBlog signin](../../images/miniblog-signin.png)
 
 And finally create a new post!
 
-![MiniBlog saved post](https://hub.turbo.net/images/docs/savedpost.png)
+![MiniBlog saved post](../../images/savedpost.png)
 
 ### Creating a Node.js container
 

@@ -8,11 +8,11 @@ For the best experience, we recommend installing a Turbo native client to allow 
 
 To print from the HTML5 client, select the **Print to PDF** printer:
 
-![Print to PDF](https://hub.turbo.net/images/docs/print-to-pdf.png)
+![Print to PDF](../../images/print-to-pdf.png)
 
 The printer will download a PDF file through the browser. Open the PDF and print using your local printer.
 
-![Downloaded PDF](https://hub.turbo.net/images/docs/downloaded-pdf.png)
+![Downloaded PDF](../../images/downloaded-pdf.png)
 
 ### From Native Clients
 
@@ -20,4 +20,4 @@ If the Turbo application is executing on the local machine, the printer should a
 
 If the application is running in the cloud, local printers will be automatically redirected and visible to the application.
 
-![Redirected printer](https://hub.turbo.net/images/docs/redirected-printer.png)
+![Redirected printer](../../images/redirected-printer.png)

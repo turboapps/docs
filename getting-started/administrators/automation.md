@@ -96,7 +96,7 @@ cmd python getVersion.py
  var version = last
 ```
 
-We were only able to cover some TurboScript basics here. To learn more, view the [TurboScript Reference Guide](https://hub.turbo.net/docs/reference/turboscript/turboscript).
+We were only able to cover some TurboScript basics here. To learn more, view the [TurboScript Reference Guide](../../reference/turboscript/turboscript.html).
 
 ### Scripting builds
 
@@ -147,11 +147,11 @@ First we need to setup the Jenkins job. Save the script file on the Jenkins host
 
 From the Jenkins Dashboard create a new Jenkins job of type **Turbo Project**. Add an **Execute TurboScript** build step and connect it to the script just saved.
 
-![Create Jenkins job](https://hub.turbo.net/images/docs/jenkins1.png)
+![Create Jenkins job](../../images/jenkins1.png)
 
 We want to push the container image created to the Hub, so we add a **Push Turbo Image** build step:
 
-![Jenkins push to Turbo.net](https://hub.turbo.net/images/docs/jenkins2.png)
+![Jenkins push to Turbo.net](../../images/jenkins2.png)
 
 Save the new Jenkins job and trigger a run to see your automated build in action!
 
@@ -177,7 +177,7 @@ choco install vlc -y
 
 The VLC package should start to download and install successfully within the container.
 
-![chocolatey](https://hub.turbo.net/images/docs/choco1.png)
+![chocolatey](../../images/choco1.png)
 
 When the install has completed, close the command window.
 
@@ -201,7 +201,7 @@ We can now test the image by launching it in a new container. In a command windo
 
 VLC should launch:
 
-![VLC launch](https://hub.turbo.net/images/docs/vlc-launch.png)
+![VLC launch](../../images/vlc-launch.png)
 
 ### Sample TurboScripts on GitHub
 

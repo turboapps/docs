@@ -1,6 +1,6 @@
 ## Domain
 
-![Server admin domain dashboard](https://hub.turbo.net/images/docs/admin-domain-dashboard.png)
+![Server admin domain dashboard](../../images/admin-domain-dashboard.png)
 
 The **Dashboard** page shows real-time graphs detailing the total CPU, memory, number of sessions, and other resource usage information for the application servers.
 
@@ -10,9 +10,9 @@ The **Fleets** page displays a list of all the fleets in the domain. A fleet is 
 
 #### Add Fleet
 
-The **Add Fleet** page allows administrators to add additional fleets to the current Turbo Server farm. [Applications](https://hub.turbo.net/docs/server/administration/workspaces#workspace-applications) can be assigned to launch on a specific fleets.
+The **Add Fleet** page allows administrators to add additional fleets to the current Turbo Server farm. [Applications](../../server/administration/workspaces.html#workspace-applications) can be assigned to launch on a specific fleets.
 
-- **Fleet Type**: Manual or Managed. Selecting "Manual" allows the addition of any application server in the domain. Choosing "Managed" will include all servers in a [Compute Infrastructure](https://hub.turbo.net/docs/server/administration/integrations#compute-infrastructure) to the fleet.
+- **Fleet Type**: Manual or Managed. Selecting "Manual" allows the addition of any application server in the domain. Choosing "Managed" will include all servers in a [Compute Infrastructure](../../server/administration/integrations.html#compute-infrastructure) to the fleet.
 - **Name**: A unique name must be given for the fleet.
 
 #### Fleet Dashboard
@@ -35,7 +35,7 @@ The **Server** page lists all servers that are included as part of the current T
 
 #### Add Server
 
-![Add Server](https://hub.turbo.net/images/docs/add-server.png)
+![Add Server](../../images/add-server.png)
 
 The **Add Server** page allows administrators to add additional application servers to the current Turbo Server farm.
 
@@ -45,13 +45,13 @@ The **Add Server** feature allows you to deploy application servers to Azure env
 
 If you have not set up an external SQL connection, you must ensure that the Turbo Server farm is running in Azure and connected to an Azure SQL Database.
 
-In order to add a server you must first setup a [Compute Infrastructure](https://hub.turbo.net/docs/server/administration/integrations.html#compute-infrastructure) and follow the [Setup Guide](https://hub.turbo.net/docs/server/administration/integrations#compute-infrastructure-azure-setup-guide). This feature is only available in Turbo Server 23.1 and above.
+In order to add a server you must first setup a [Compute Infrastructure](../../server/administration/integrations.html#compute-infrastructure) and follow the [Setup Guide](../../server/administration/integrations.html#compute-infrastructure-azure-setup-guide). This feature is only available in Turbo Server 23.1 and above.
 
 ##### Deploying an Application Server
 
 To deploy an application server, complete the Add Server form with the following values:
 
-- **Compute Infrastructure**: Select the compute infrastructure configured in the [Compute Infrastructure](https://hub.turbo.net/docs/server/administration/integrations#compute-infrastructure) section
+- **Compute Infrastructure**: Select the compute infrastructure configured in the [Compute Infrastructure](../../server/administration/integrations.html#compute-infrastructure) section
 - **Resource Group Name**: Leave as default to use the same resource group that is configured in the compute infrastructure setting, or enter a new resource group name. A new resource group will be created if the specified resource group is not found.
 - **Server Name**: Enter any descriptive name for the application server (ex `turbo-app1`)
 - **Administrator Username**: Enter any desired administrator username that conforms to the compute infrastructure's username requirements
@@ -65,11 +65,11 @@ Once the deployment is complete the application server will automatically be add
 
 ### Domain Settings
 
-![Server admin domain settings](https://hub.turbo.net/images/docs/external-admin-access.png)
+![Server admin domain settings](../../images/external-admin-access.png)
 
 The **Settings** page lists allows you to configure domain-wide settings, including:
 
-- **Domain URL**: The public facing URL intended for end users to access Turbo. The firewall or load balancer should resolve this to your portal instances. For more information, see [Understanding the Domain URL](https://hub.turbo.net/docs/server/network-and-load-balancing/network-and-load-balancing#understanding-the-domain-url).
+- **Domain URL**: The public facing URL intended for end users to access Turbo. The firewall or load balancer should resolve this to your portal instances. For more information, see [Understanding the Domain URL](../../server/network-and-load-balancing/network-and-load-balancing.html#understanding-the-domain-url).
 - **Hub Domain URL**: The public facing URL for Turbo Hub web services. If this field is not specified, the Domain URL is used.
 - **Portal Domain URL**: The public facing URL for Turbo Portal web services. If this field is not specified, the Domain URL is used. Users must use this URL to access the portal and is typically the same as the Domain URL.
 - **External Administration Site**: Allows external network access to the administration site from the domain url.
@@ -90,7 +90,7 @@ The **Settings** page lists allows you to configure domain-wide settings, includ
 
 ### Domain Federation
 
-![Server admin domain federation](https://hub.turbo.net/images/docs/admin-domain-federation.png)
+![Server admin domain federation](../../images/admin-domain-federation.png)
 
 The **Federation** page allows you to configure federation across multiple domains to reduce setup time and keep domain resources in sync. According to these settings, the server will will periodically check the source domain for updates and replicate any changes.
 
@@ -104,7 +104,7 @@ The available configurations are described below:
 
 - **Source Domain URL**: A federation source URL from which domain resources will be replicated.
 
-- **System API Key**: The API key used to access federation resources from the federation source. This API key must be configured as a system-level key on the source server. See [Managing API Keys](https://hub.turbo.net/docs/server/administration/hub#managing-api-keys) for information on configured API keys.
+- **System API Key**: The API key used to access federation resources from the federation source. This API key must be configured as a system-level key on the source server. See [Managing API Keys](../../server/administration/hub.html#managing-api-keys) for information on configured API keys.
 
 - **Default Synchronization Frequency**: The frequency at which this server will check the federation source for updates.
 
@@ -127,7 +127,7 @@ The available configurations are described below:
 
 #### Server Dashboard
 
-![Server Dashboard](https://hub.turbo.net/images/docs/server-dashboard.png)
+![Server Dashboard](../../images/server-dashboard.png)
 
 The **Server Dashboard** page displays a summary of the server load, alerts, and setting updates.
 
@@ -137,7 +137,7 @@ The **Pending Changes** table list server setting changes that have been saved b
 
 #### Server Sessions
 
-![Server Sessions](https://hub.turbo.net/images/docs/sessions.png)
+![Server Sessions](../../images/sessions.png)
 
 The **Sessions** section lists all user sessions that are running on the server except for the local system user. This section is only available for servers with the application role.
 
@@ -145,7 +145,7 @@ Administrators may manually log off users by clicking the **Close** action, whic
 
 #### Server Settings
 
-![Server admin domain server](https://hub.turbo.net/images/docs/admin-domain-server.png)
+![Server admin domain server](../../images/admin-domain-server.png)
 
 - **Name**: A display name for the server, shown in the Administration Site.
 
@@ -181,11 +181,11 @@ Administrators may manually log off users by clicking the **Close** action, whic
 
   Images in the cache are removed if the repo's revision are deleted from the Hub. Cached images may be manually removed from the server by deleting the file from the Windows Explorer.
 
-- **Hub Storage Path**: Sets the hub storage path to a custom path. Ensure the target path is empty and not used by other applications, and has sufficient storage for storing all images and persisted data. The path can be changed later, but will require momentary downtime of the hub depending on how much data will be moved. The service user must have full access to the target path. Please see the [Backup and Recovery](https://hub.turbo.net/docs/server/backup-and-recovery/backup-and-recovery#backup) documentation for additional details and troubleshooting.
+- **Hub Storage Path**: Sets the hub storage path to a custom path. Ensure the target path is empty and not used by other applications, and has sufficient storage for storing all images and persisted data. The path can be changed later, but will require momentary downtime of the hub depending on how much data will be moved. The service user must have full access to the target path. Please see the [Backup and Recovery](../../server/backup-and-recovery/backup-and-recovery.html#backup) documentation for additional details and troubleshooting.
 
 - **Hub CDN URL**: The Hub block storage CDN URL. The Hub CDN URL must be a valid absolute http(s) URL. If the URL is not specified, blocks will be fetched from the original Hub URL.
 
-  For more information on the Hub CDN and common CDN configurations, see [Configuring Content Delivery Network (CDN)](https://hub.turbo.net/docs/server/network-and-load-balancing/network-and-load-balancing#configuring-content-delivery-network-cdn)
+  For more information on the Hub CDN and common CDN configurations, see [Configuring Content Delivery Network (CDN)](../../server/network-and-load-balancing/network-and-load-balancing.html#configuring-content-delivery-network-cdn)
 
 - **Hub CDN Max File Size**: The maximum file size supported by the CDN provider, in megabytes. Supporting clients will download files exceeding this size using the Turbo synchronization protocol.
 
@@ -195,11 +195,11 @@ Administrators may manually log off users by clicking the **Close** action, whic
 
 #### Server Security
 
-![Server Security](https://hub.turbo.net/images/docs/server-security.png)
+![Server Security](../../images/server-security.png)
 
 The **Server Security** page displays the required Windows Firewall configurations as well as other configurable security settings.
 
-- **Firewall and Security**: A list of ports that are required by the selected server roles. For a full list of ports that are used by Turbo Server, please refer to [Firewall and Security](https://hub.turbo.net/docs/server/setup-and-deployment/prerequisites#firewall-and-security).
+- **Firewall and Security**: A list of ports that are required by the selected server roles. For a full list of ports that are used by Turbo Server, please refer to [Firewall and Security](../../server/setup-and-deployment/prerequisites.html#firewall-and-security).
 
 - **SSL OCSP Stapling**: Enables OCSP Stapling for SSL. SSL must be enabled with the intermediate certification file specified.
 
@@ -209,7 +209,7 @@ The **Server Security** page displays the required Windows Firewall configuratio
 
 #### Server Diagnostics
 
-![Server Diagnostics](https://hub.turbo.net/images/docs/admin-server-diagnostics.png)
+![Server Diagnostics](../../images/admin-server-diagnostics.png)
 
 The **Server Information** section displays the start time and up time of the Windows server that Turbo Server is installed on.
 
@@ -223,7 +223,7 @@ The **Operations** table lists all operations that are managed by the Turbo serv
 
 The **Server Logs** section displays the most recent Turbo service logs. From this page administrators can create and download log archives directly from the administration site.
 
-![Turbo Server Log Archives](https://hub.turbo.net/images/docs/log-archives.png)
+![Turbo Server Log Archives](../../images/log-archives.png)
 
 Clicking the **Archive** button will gather all of the logs across the various Turbo Server services and compress then into a single .zip file. Once compressed, the archive will be made available for download and the original log files will be cleaned up.
 
@@ -231,7 +231,7 @@ The **Diagnostic Logging Level** setting allows administrators to configure leve
 
 #### Server Tags
 
-![Server Tags](https://hub.turbo.net/images/docs/server-tags.png)
+![Server Tags](../../images/server-tags.png)
 
 **Server Tags** are user-defined name value pairs that can be used to organize, manage, and filter servers. Server tags must include a name and may optionally include a value. Server tag names and values are case-insensitive.
 

@@ -24,7 +24,7 @@ meta name="pythonidle"
 meta release="3.7.3"
 ```
 
-Include the base image by using the `layer` [command](https://hub.turbo.net/docs/reference/turboscript/layer):
+Include the base image by using the `layer` [command](../../reference/turboscript/layer.html):
 
 ```
 ###################################
@@ -46,11 +46,11 @@ startup file ("c:\ProgramData\Microsoft\Windows\Start Menu\Programs\Python 3.7\I
 
 Run `turbo build turbo.me` to build the image. Try it out using `turbo try python/pythonidle:3.7.3`.
 
-See the [TurboScript](https://hub.turbo.net/docs/reference/turboscript/turboscript) reference page for advanced details.
+See the [TurboScript](../../reference/turboscript/turboscript.html) reference page for advanced details. 
 
 ### Customizing Layer Using TurboScript
 
-In the previous example we simply set the startup file from the base image to create a layer that behaved in a different way. If the user wanted to change files within the base image in the layer, it is achievable by using TurboScript `copy` [command](https://hub.turbo.net/docs/reference/turboscript/turboscript#layer).
+In the previous example we simply set the startup file from the base image to create a layer that behaved in a different way. If the user wanted to change files within the base image in the layer, it is achievable by using TurboScript `copy` [command](../../reference/turboscript/turboscript.html#layer).
 
 Lets say the user wants to change the default working directory for the Python IDLE layer, so that the application's open/save dialogs will look into the T: (TurboDrive) drive. A solution will be to change the lnk file's `Start in` field. We must edit this file and extract it for rebuilding.
 

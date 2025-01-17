@@ -17,11 +17,11 @@ There are four ways to create an image:
 > turbo commit <container-id> <image-name>
 ```
 
-See a more detailed example [here](https://hub.turbo.net/docs/studio/working-with-containers/containers).
+See a more detailed example [here](../../studio/working-with-containers/containers.html).
 
 #### Automatic Builds
 
-You can automatically build images using a TurboScript, which is a set of instructions that recreate the steps of configuring a container. See more information on [TurboScript](https://hub.turbo.net/docs/reference/turboscript/turboscript) verbage and syntax.
+You can automatically build images using a TurboScript, which is a set of instructions that recreate the steps of configuring a container. See more information on [TurboScript](../../reference/turboscript/turboscript.html) verbage and syntax.
 
 ```
 # Example script to automatically build a 7-Zip image
@@ -85,7 +85,7 @@ Use the appropriate file type parameter:
 > turbo import msi <path to .msi>
 
 # ThinApp configuration
-> turbo import thinapp <path to package.ini>
+> turbo import thinapp <path to package.ini> 
 ```
 
 ### Forking, Renaming, and Tagging
@@ -129,7 +129,7 @@ tester/test1    2.0  14wed2165141  8/18/2014 1:55:23 PM  1.9MB
 
 ### Push to a Remote Repository
 
-Images in a local registry can be copied to a remote repository on the [Turbo.net Hub](https://hub.turbo.net/docs/hub/overview/hub.html) or an on-premises [Turbo Server](https://hub.turbo.net/docs/server/overview/overview) with the `turbo push` command. Images pushed to a Turbo Server can be made available to your team members and end-users.
+Images in a local registry can be copied to a remote repository on the  [Turbo.net Hub](../../hub/overview/hub.html) or an on-premises [Turbo Server](../../server/overview/overview.html) with the `turbo push` command. Images pushed to a Turbo Server can be made available to your team members and end-users.
 
 ```
 # Specify the image you want to push
@@ -141,6 +141,6 @@ Images in a local registry can be copied to a remote repository on the [Turbo.ne
 
 If unspecified, the image will be pushed to the logged-in user's namespace with the tag head.
 
-Images pushed to the Turbo.net Hub are private by default. For more information on sharing images with your enterprise, see [Turbo Server](https://hub.turbo.net/docs/server/overview/overview).
+Images pushed to the Turbo.net Hub are private by default. For more information on sharing images with your enterprise, see [Turbo Server](../../server/overview/overview.html).
 
-See more information on [using the hub](https://hub.turbo.net/docs/hub/overview/hub).
+See more information on [using the hub](../../hub/overview/hub.html).

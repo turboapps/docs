@@ -14,7 +14,7 @@ Launch a new Firefox container as before:
 
 In this example, we modify the Firefox container by setting the homepage to a new URL from the **Options** menu:
 
-![Firefox home](https://hub.turbo.net/images/docs/firefox-home.png)
+![Firefox home](../../images/firefox-home.png)
 
 Close the browser window to stop the container.
 
@@ -156,7 +156,7 @@ Take note of the full path to the startup file as we’ll need it later.
 (clean#94d6338f) C:\Program Files (x86)\Sublime Text 2>sublime_text.exe
 ```
 
-![Sublime ui](https://hub.turbo.net/images/docs/sublime-ui.png)
+![Sublime ui](../../images/sublime-ui.png)
 
 ### Saving new images
 

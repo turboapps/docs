@@ -1,15 +1,15 @@
 The September 2021 Turbo Server release includes several major new features:
 
-- **Network Drives** option allow administrators to automatically map network drives into sessions when streaming remote applications. 
+- **Network Drives** option allow administrators to automatically map network drives into sessions when streaming remote applications.
 
-![Network Drives](https://hub.turbo.net/images/docs/network-drives.png)
+![Network Drives](../../../images/network-drives.png)
 - **Network Level Authentication (NLA)** and **NTLM** network security group policies can now be configured for remote application streaming.
 
-![Network Security](https://hub.turbo.net/images/docs/network-security.png)
+![Network Security](../../../images/network-security.png)
 
 - **DNS-based Load Balancing **is now supported via **URL Redirects **configuration. This allows setting up a single URL for DNS load balancers to redirect users to the appropriate Turbo domain.
 
-![URL Redirects](https://hub.turbo.net/images/docs/url-redirects.png)
+![URL Redirects](../../../images/url-redirects.png)
 - New **Synchronize across devices** and **Sessions are persistent** workspace application settings provide improved control over session storage.
 - **Microsoft Windows 10 Enterprise Multi-Session (Azure)** is now a supported platform.
 

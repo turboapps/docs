@@ -6,6 +6,6 @@ On-premises Hub servers are also available with [Turbo Server](https://turbo.net
 
 Users may browse the applications available on the Turbo.net Hub by clicking on the [Hub](https://app.turbo.net/hub) link at the top of the Turbo.net homepage.
 
-![Browsing applications on the Turbo.net hub](https://hub.turbo.net/images/docs/browsing-applications-on-the-turbo.net-hub-1.png)
+![Browsing applications on the Turbo.net hub](../../images/browsing-applications-on-the-turbo.net-hub-1.png)
 
-For more information on running applications from the Turbo.net Hub, see [Running Applications](https://hub.turbo.net/docs/getting-started/getting-started/running-applications).
+For more information on running applications from the Turbo.net Hub, see [Running Applications](../../getting-started/getting-started/running-applications.html).

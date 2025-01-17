@@ -1,6 +1,6 @@
 ## General
 
-![Turbo Server Admin General](https://hub.turbo.net/images/docs/admin-general.png)
+![Turbo Server Admin General](../../images/admin-general.png)
 
 The **General** page provides options to configure and customize Turbo Server. The page contains the following sections:
 
@@ -16,7 +16,7 @@ The **General** page provides options to configure and customize Turbo Server. T
 
 ### Notifications
 
-![Add Notification Admin](https://hub.turbo.net/images/docs/notifications-admin-add.png)
+![Add Notification Admin](../../images/notifications-admin-add.png)
 
 The **Notifications** page allows admins to notify groups of Turbo Server users with custom message, such as service maintenance periods or product updates. Notifications may be customized with the following fields:
 
@@ -32,7 +32,7 @@ The end-user may view their notifications on the Turbo Portal under the notifica
 
 ### Streaming
 
-![Admin General Streaming](https://hub.turbo.net/images/docs/admin-general-streaming.png)
+![Admin General Streaming](../../images/admin-general-streaming.png)
 
 The **Streaming** page provides remote application streaming configurations for the Application servers.
 
@@ -116,7 +116,7 @@ Setting changes are applied approximately once every 20 seconds. You may need to
 
 ### Appearance
 
-![Server admin portal appearance](https://hub.turbo.net/images/docs/admin-general-appearance.png)
+![Server admin portal appearance](../../images/admin-general-appearance.png)
 
 The **Appearance** page provides customization options for the Turbo Server portal, such as icons and background images. Appearance changes can take up to a couple minutes to apply to the Portal site.
 

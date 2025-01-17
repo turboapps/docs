@@ -2,7 +2,7 @@
 
 ### Turbo for PC
 
-Advanced settings for the Turbo for PC client are managed using the [turbo config command](https://hub.turbo.net/docs/reference/command-line/config).
+Advanced settings for the Turbo for PC client are managed using the [turbo config command](../../reference/command-line/config.html).
 
 ### Turbo for Mac
 
@@ -12,7 +12,7 @@ Click on the **Turbo.net** menu item and select **Settings...** to access the se
 2. **Use H.264:** use codec to decrease bandwidth usage for streaming (requires Extended RAIL).
 3. **Allow access to local network** allows streaming applications to access the local network of the end user's Mac device.
 
-![Turbo for Mac Client Settings](https://hub.turbo.net/images/docs/mac-settings.png)
+![Turbo for Mac Client Settings](../../images/mac-settings.png)
 
 ### FAQ
 

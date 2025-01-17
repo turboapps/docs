@@ -12,7 +12,7 @@ If users will be streaming the application window rather than the whole desktop,
 > start /wait turbo-client.exe --all-users --silent --hide-gui
 ```
 
-![Citrix start command](https://hub.turbo.net/images/docs/citrix2.png)
+![Citrix start command](../../images/citrix2.png)
 
 ### Adding Applications to the Start Menu
 
@@ -32,11 +32,11 @@ Turbo application desktop integration, including Start Menu, desktop shortcuts, 
 > turbo installi --all-users microsoft/ie:8,jre:6.45
 ```
 
-![Citrix installi command](https://hub.turbo.net/images/docs/citrix3.png)
+![Citrix installi command](../../images/citrix3.png)
 
 The **Firefox ESR**, **Chrome**,and **IE8 with Java6** applications will appear in the Start Menu of the server.
 
-![Citrix installi start menu](https://hub.turbo.net/images/docs/citrix4.png)
+![Citrix installi start menu](../../images/citrix4.png)
 
 ### Adding Applications to the Delivery Platform
 
@@ -46,36 +46,36 @@ In this example, we will add applications to Citrix XenApp using Citrix Studio.
 
 Start **Citrix Studio** and go to **Applications** &gt; **Add Applications**.
 
-![Citrix studio applications](https://hub.turbo.net/images/docs/citrix5.png)
+![Citrix studio applications](../../images/citrix5.png)
 
 Select the option to **Add** applications **From Start Menu...**
 
-![Citrix studio add application](https://hub.turbo.net/images/docs/citrix6.png)
+![Citrix studio add application](../../images/citrix6.png)
 
 Then select the **Firefox ESR**, **Chrome**, and **IE8 with Java6** applications.
 
-![Citrix studio application selection](https://hub.turbo.net/images/docs/citrix7.png)
+![Citrix studio application selection](../../images/citrix7.png)
 
 Click through to **Finish** to complete the process.
 
-![Citrix studio application table](https://hub.turbo.net/images/docs/citrix8.png)
+![Citrix studio application table](../../images/citrix8.png)
 
 ### Running the Applications
 
 Once added to Citrix Studio users can access the applications from the Citrix StoreFront website or the Citrix Receiver application.
 
-![Citrix StoreFront](https://hub.turbo.net/images/docs/citrix9.png)
+![Citrix StoreFront](../../images/citrix9.png)
 
 Click on an application to launch it.
 
-![Citrix StoreFront launch application](https://hub.turbo.net/images/docs/citrix10.png)
+![Citrix StoreFront launch application](../../images/citrix10.png)
 
 Since applications are executed in isolated Turbo container environments, any combination of browsers, plugins, and runtimes can run side-by-side on the same server.
 
-![Citrix StoreFront side-by-side](https://hub.turbo.net/images/docs/citrix11.png)
+![Citrix StoreFront side-by-side](../../images/citrix11.png)
 
 For example, an **Internet Explorer 8 with Java 6** environment can run alongside an **Internet Explorer 10 with Java 7** environment or another **Internet Explorer 8 with Java 7** environment.
 
-![Citrix StoreFront side-by-side IE](https://hub.turbo.net/images/docs/citrix12.png)
+![Citrix StoreFront side-by-side IE](../../images/citrix12.png)
 
 This allows elimination of Citrix siloing and consolidation of servers to a single version of Citrix using a single base image.

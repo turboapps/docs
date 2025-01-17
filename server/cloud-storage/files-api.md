@@ -1,15 +1,14 @@
 ## Overview
 
-The following documentation describes the Files API implemented by the Turbo Server Portal. The Files API allows users to view and manage files stored in their connected cloud storage accounts.
+The following documentation describes the Files API implemented by the Turbo Server Portal. The Files API allows users to view and manage files stored in their connected cloud storage accounts. 
 
 For more information cloud storage integrations and connecting cloud storage accounts, see:
-
-- [OneDrive](https://hub.turbo.net/docs/server/cloud-storage/onedrive)
-- [Dropbox](https://hub.turbo.net/docs/server/cloud-storage/dropbox)
-- [Google Drive](https://hub.turbo.net/docs/server/cloud-storage/google-drive)
-- [Filr](https://hub.turbo.net/docs/server/cloud-storage/filr)
-- [File Share (SMB)](https://hub.turbo.net/docs/server/cloud-storage/file-share)
-- [End User Guide](https://hub.turbo.net/docs/server/cloud-storage/end-user#end-user-guide)
+* [OneDrive](../../server/cloud-storage/onedrive.html)
+* [Dropbox](../../server/cloud-storage/dropbox.html)
+* [Google Drive](../../server/cloud-storage/google-drive.html)
+* [Filr](../../server/cloud-storage/filr.html)
+* [File Share (SMB)](../../server/cloud-storage/file-share.html)
+* [End User Guide](../../server/cloud-storage/end-user.html#end-user-guide) 
 
 All request paths described in this document are relative to the base Portal URL: `https://{portal}`
 
@@ -261,7 +260,7 @@ Content-Type: application/json
 
 Request Body:
 {
-	"fromAddress": "/onedrive/path/to/turbo-client-22.6.vhd",
+	"fromAddress": "/onedrive/path/to/turbo-client-22.6.vhd", 
 	"toParentAddress": "/onedrive"
 }
 
@@ -307,7 +306,7 @@ Content-Type: application/json
 
 Request Body:
 {
-	"address": "/onedrive/turbo-client-22.6.vhd",
+	"address": "/onedrive/turbo-client-22.6.vhd", 
 	"name": "turbo-client.vhd"
 }
 
@@ -429,39 +428,39 @@ A 5xx error response indicates that an unexpected error occurred while processin
 
 #### Error Codes
 
-| Reason Code                   | Description                                                                                                          | Code |
-| ----------------------------- | -------------------------------------------------------------------------------------------------------------------- | ---- |
-| accessDenied                  | Access to resource denied                                                                                            | 400  |
-| cannotCopySharedFolder        | Cannot copy a shared folder.                                                                                         | 400  |
-| cannotDeleteRootFolder        | Cannot delete a root folder.                                                                                         | 400  |
-| cannotModifyRootFolder        | Cannot modify root folder.                                                                                           | 400  |
-| cannotModifyRootFolderContent | Cannot modify root folder content.                                                                                   | 400  |
-| cannotMoveBetweenRootFolders  | Cannot move resources between root folders.                                                                          | 400  |
-| cannotMoveIntoRootFolder      | Cannot move resources into a root folder.                                                                            | 400  |
-| cannotMoveRootFolder          | Cannot move a root folder.                                                                                           | 400  |
-| cannotMoveSharedFolder        | Cannot move a shared folder.                                                                                         | 400  |
-| cannotNestSharedFolder        | Cannot nest a shared folder.                                                                                         | 400  |
-| cannotTransferOwnership       | Cannot transfer ownership.                                                                                           | 400  |
-| duplicateOrNestedPaths        | The request contains duplicate or nested paths.                                                                      | 400  |
-| fileContentRestricted         | The file content is restricted.                                                                                      | 400  |
-| fileTypeRestricted            | The file type is restricted.                                                                                         | 400  |
-| fileTypeUnsupported           | The file type is not supported by the requested operation.                                                           | 400  |
-| fileTooLarge                  | The file is too large.                                                                                               | 400  |
-| folderCannotContainItself     | A folder cannot be added as a subfolder of itself.                                                                   | 400  |
-| insufficientPermissions       | The caller does not have sufficient permissions for the requested operation.                                         | 400  |
-| invalidRequest                | The request is malformed or incorrect. Please check the request body and headers and try again.                      | 400  |
-| itemAlreadyExists             | The resource already exists.                                                                                         | 400  |
-| itemLocked                    | The resource is busy or locked. Please wait or stop the locking process and try again.                               | 400  |
-| itemNotFound                  | The resource could not be found.                                                                                     | 400  |
-| methodNotAllowed              | The resource does not support this operation.                                                                        | 400  |
-| notFile                       | The requested path is not a file.                                                                                    | 400  |
-| notFolder                     | The requested path is not a folder.                                                                                  | 400  |
-| operationNotPermitted         | The operation is not permitted. Please check that the service user has permission to perform the action on the file. | 400  |
-| quotaLimitReached             | The caller has reached their quota limit.                                                                            | 400  |
-| serverError                   | The server encountered an unexpected error.                                                                          | 500  |
-| tooManyFiles                  | The request contains too many files.                                                                                 | 400  |
-| tooManyWriteOperations        | There are too many active write operations. Please wait and try again.                                               | 400  |
-| unauthorized                  | The caller is not authenticated.                                                                                     | 401  |
+| Reason Code | Description | Code |
+| --- | --- | --- |
+| accessDenied | Access to resource denied | 400 |
+| cannotCopySharedFolder | Cannot copy a shared folder. | 400 |
+| cannotDeleteRootFolder | Cannot delete a root folder. | 400 |
+| cannotModifyRootFolder | Cannot modify root folder. | 400 |
+| cannotModifyRootFolderContent | Cannot modify root folder content. | 400 |
+| cannotMoveBetweenRootFolders | Cannot move resources between root folders. | 400 |
+| cannotMoveIntoRootFolder | Cannot move resources into a root folder. | 400 |
+| cannotMoveRootFolder | Cannot move a root folder. | 400 |
+| cannotMoveSharedFolder | Cannot move a shared folder. | 400 |
+| cannotNestSharedFolder | Cannot nest a shared folder. | 400 |
+| cannotTransferOwnership | Cannot transfer ownership. | 400 |
+| duplicateOrNestedPaths | The request contains duplicate or nested paths. | 400 |
+| fileContentRestricted | The file content is restricted. | 400 |
+| fileTypeRestricted | The file type is restricted. | 400 |
+| fileTypeUnsupported | The file type is not supported by the requested operation. | 400 |
+| fileTooLarge | The file is too large. | 400 |
+| folderCannotContainItself | A folder cannot be added as a subfolder of itself. | 400 |
+| insufficientPermissions | The caller does not have sufficient permissions for the requested operation. | 400 |
+| invalidRequest | The request is malformed or incorrect. Please check the request body and headers and try again.  | 400 |
+| itemAlreadyExists | The resource already exists. | 400 |
+| itemLocked | The resource is busy or locked. Please wait or stop the locking process and try again. | 400 |
+| itemNotFound | The resource could not be found. | 400 |
+| methodNotAllowed | The resource does not support this operation. | 400 |
+| notFile | The requested path is not a file. | 400 |
+| notFolder | The requested path is not a folder. | 400 |
+| operationNotPermitted | The operation is not permitted. Please check that the service user has permission to perform the action on the file. | 400 |
+| quotaLimitReached | The caller has reached their quota limit. | 400 |
+| serverError | The server encountered an unexpected error. | 500 |
+| tooManyFiles | The request contains too many files. | 400 |
+| tooManyWriteOperations | There are too many active write operations. Please wait and try again. | 400 |
+| unauthorized | The caller is not authenticated. | 401 |
 
 ### Object Models
 

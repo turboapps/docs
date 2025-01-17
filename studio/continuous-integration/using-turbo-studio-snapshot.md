@@ -40,11 +40,11 @@ The TurboScript plugin for Jenkins uses PowerShell to call external tools like V
 
 Open the Jenkins Plugin Manager and install the latest version of **TurboScript Plugin**.
 
-![Jenkins TurboScript plugin](https://hub.turbo.net/images/docs/snapshot1.png)
+![Jenkins TurboScript plugin](../../images/snapshot1.png)
 
 Go to the Jenkins configuration page and scroll down to the **Studio Snapshot** section.
 
-![Jenkins Studio snapshot](https://hub.turbo.net/images/docs/snapshot2.png)
+![Jenkins Studio snapshot](../../images/snapshot2.png)
 
 Specify the file paths to **XStudio.exe** in the Turbo Studio install directory and a license file on Jenkins host machine. If you installed Turbo Studio using default settings, **XStudio.exe** can be found in the **C:\Program Files (x86)\Turbo.net\Turbo Studio 18** folder.
 
@@ -54,7 +54,7 @@ Optionally, you may want to change the default virtual machine used to take snap
 
 Go to the Jenkins dashboard and create a new **Turbo Project**. Name it **FL Studio Snapshot** and click **OK**.
 
-![Jenkins create Turbo project](https://hub.turbo.net/images/docs/snapshot3.png)
+![Jenkins create Turbo project](../../images/snapshot3.png)
 
 Create a PowerShell script file which downloads the latest FL Studio installer. You can copy the code snippet below:
 
@@ -79,7 +79,7 @@ Save the script file on the Jenkins host machine and execute it in a build step
 
 To add a build step, use the **Execute Windows batch command** option.
 
-![Jenkins project build steps](https://hub.turbo.net/images/docs/snapshot4.png)
+![Jenkins project build steps](../../images/snapshot4.png)
 
 Specify the following command in the build step configuration:
 
@@ -89,7 +89,7 @@ powershell.exe -File "path_to_the_script"
 
 Next, add a build step **Take Studio snapshot** and setup it in the following way:
 
-![Jenkins Studio snapshot](https://hub.turbo.net/images/docs/snapshot5.png)
+![Jenkins Studio snapshot](../../images/snapshot5.png)
 
 Select the **Generate using template** option for installation script.
 
@@ -107,6 +107,6 @@ Save the build project and go back to the main Jenkins dashboard.
 
 Open the context menu next to project name and click **Build Now**.
 
-![Jenkins trigger build](https://hub.turbo.net/images/docs/snapshot6.png)
+![Jenkins trigger build](../../images/snapshot6.png)
 
 The build should finish in approximately half an hour. The FL Studio image will be saved in a local repository. If you want to publish it to the Turbo Hub, simply add the build steps **Login to Turbo Hub** and **Push Turbo image**.

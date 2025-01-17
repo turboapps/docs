@@ -30,7 +30,7 @@ Next, enable the `Enable Assembly Cache` setting under the workspace application
 
 Turbo Server runs an Apache reverse proxy to various web services such as APIs and the Portal site. This proxy is configured with a maximum number of request threads. If the number of concurrent connections exceeds this value, then incoming requests will hang until Apache is able to service them. For example, this may surface to an end user as a hang when accessing the external Portal URL.
 
-Each thread incurs a fixed startup memory cost in addition to a maximum runtime memory usage, which varies based on configuration and workload, so be mindful not to set this setting beyond your server's capacity. To support an even larger number of concurrent requests, we recommend looking into [Load Balancing](https://hub.turbo.net/docs/server/network-and-load-balancing/network-and-load-balancing).
+Each thread incurs a fixed startup memory cost in addition to a maximum runtime memory usage, which varies based on configuration and workload, so be mindful not to set this setting beyond your server's capacity. To support an even larger number of concurrent requests, we recommend looking into [Load Balancing](../../server/network-and-load-balancing/network-and-load-balancing.html).
 
 Turbo Server administrators may configure this setting through the admin command-line interface using the following command:
 
@@ -38,9 +38,9 @@ Turbo Server administrators may configure this setting through the admin command
 Server.exe admin global request-threads 2000
 ```
 
-For more information on using the admin CLI, see [Command Line Management](https://hub.turbo.net/docs/server/advanced-topics/command-line-management)
+For more information on using the admin CLI, see [Command Line Management](../../server/advanced-topics/command-line-management.html)
 
-By default, this value is set to **2000** in Turbo Server 21.9 and later. Previous releases defaulted to **150**.
+By default, this value is set to **2000** in Turbo Server 21.9 and later. Previous releases defaulted to **150**. 
 
 This value maps to the mpm_winnt [ThreadsPerChild](https://httpd.apache.org/docs/2.4/mod/mpm_common.html#threadsperchild) setting.
 

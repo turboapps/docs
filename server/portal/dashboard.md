@@ -2,7 +2,7 @@
 
 The Dashboard is the primary end user interface provided by the Portal. Once the user logs in and accepts the optional notice and consent form, they are presented the **Default Workspace**, or a list of workspaces if they have permissions to more than one.
 
-![dashboard-workspaces](https://hub.turbo.net/images/docs/dashboard-workspaces.png)
+![dashboard-workspaces](../../images/dashboard-workspaces.png)
 
 Clicking on a workspace to navigate to the workspace Home page, which lists recommended items such as applications, files, and links that the user has access to. To navigate back, click the logo at the top of the page.
 
@@ -12,7 +12,7 @@ The **Home** tab provides an overview of the user's recent activity as well as r
 
 ### Applications
 
-![dashboard-apps](https://hub.turbo.net/images/docs/dashboard.png)
+![dashboard-apps](../../images/dashboard.png)
 
 The **Applications** tab shows a list of applications that can be ran by clicking on them. The application will run with the default launch method, which by default is **Run in Cloud (HTML5)**. The administrator can change the default in the Workspace Application settings. Right click on the application to access addition launch methods if available.
 
@@ -20,7 +20,7 @@ The **Applications** tab shows a list of applications that can be ran by clickin
 
 The application context menu provides additional launch methods and controls for running sessions.
 
-![dashboard-app-context](https://hub.turbo.net/images/docs/dashboard-context.png)
+![dashboard-app-context](../../images/dashboard-context.png)
 
 The following context options will launch the application
 
@@ -37,17 +37,17 @@ The following context options are available if the application is currently runn
 
 ### Files
 
-![File Browser](https://hub.turbo.net/images/docs/file-browser.png)
+![File Browser](../../images/file-browser.png)
 
 The **Files** tab allows users to browse and open files from their connected cloud storage providers.
 
-Cloud storage providers may be connected by users from the user settings [Storage](https://hub.turbo.net/docs/server/portal/user-settings.html#storage) page, or connected by administrators from the administration site [Storage Connections](https://hub.turbo.net/docs/server/administration/storage#connections) page.
+Cloud storage providers may be connected by users from the user settings [Storage](../../server/portal/user-settings.html#storage) page, or connected by administrators from the administration site [Storage Connections](../../server/administration/storage.html#connections) page.
 
 Clicking on a folder will navigate into that folder. Users may navigate out of a folder by using the breadcrumb at the top of the page.
 
 Clicking on a file will open it with the associated application. If no associated application exists, the view file action will be performed instead.
 
-File associations may be managed from the [workspace administration site](https://hub.turbo.net/docs/server/administration/workspaces#workspace-general-file-associations).
+File associations may be managed from the [workspace administration site](../../server/administration/workspaces.html#workspace-general-file-associations).
 
 #### File Context Menu
 
@@ -66,7 +66,7 @@ For folders, the available actions are:
 
 #### Uploading Files
 
-![File Upload](https://hub.turbo.net/images/docs/file-upload.png)
+![File Upload](../../images/file-upload.png)
 
 Users may upload files by dragging & dropping files from their local device into the file browser. Files may be dropped anywhere on the screen and will be uploaded into the current folder.
 
@@ -74,7 +74,7 @@ Users may upload files by dragging & dropping files from their local device into
 
 The **Chat** tab contains an artificial intelligence chatbot that will respond to text prompts.
 
-The chat is hidden by default and must be configured and enabled by an administrator. For more information, see [Artificial Intelligence](https://hub.turbo.net/docs/server/integrations/openai).
+The chat is hidden by default and must be configured and enabled by an administrator. For more information, see [Artificial Intelligence](../../server/integrations/openai.html).
 
 ### Notifications
 

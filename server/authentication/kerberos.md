@@ -8,7 +8,7 @@ Azure AD SSO requires all servers in the farm to use https in order to keep user
 
 To enable Kerberos delegation during application launches, navigate to the workspace administration site and push the **Settings** button on the application for which the feature is desired. On the application's **General Settings** page, scroll down to **Profile Mode** and select **Kerberos** from the dropdown.
 
-![Application Profile Mode](https://hub.turbo.net/images/docs/kerberos-profile-mode.png)
+![Application Profile Mode](../../images/kerberos-profile-mode.png)
 
 This feature is currently only implemented for the Windows native client. HTML5 and mobile clients will behave as if the **Ask for Credentials** profile mode is selected.
 
@@ -18,11 +18,11 @@ Each client machine where users will connect to the Application Server requires 
 
 In the Group Policy Editor, go to **Computer Configuration > Administrative Templates > System > Credentials Delegation > Allow delegating default credentials**.
 
-![kerberos-gpedit](https://hub.turbo.net/images/docs/kerberos-gpedit.png)
+![kerberos-gpedit](../../images/kerberos-gpedit.png)
 
 Check the **Enabled** checkbox and press the **Show...** button. For each Application Server that is in the Turbo Server farm, add an entry in the following format: `TERMSRV/[server]`, where _server_ is the fully qualified domain name of the Application Server. For example, if the domain name is _test.net_ and the Application Server name is _turbo1_, then the correct entry value would be `TERMSRV/turbo1.test.net`.
 
-![kerberos-gpedit-servers](https://hub.turbo.net/images/docs/kerberos-gpedit-servers.png)
+![kerberos-gpedit-servers](../../images/kerberos-gpedit-servers.png)
 
 Add `"enableRdpGateway":"false"` to **C:\Users\\_username_\AppData\Local\Turbo\Containers\settings.json** while maintaining proper JSON syntax.
 

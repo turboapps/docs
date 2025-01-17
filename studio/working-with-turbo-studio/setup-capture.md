@@ -12,7 +12,7 @@ Launch **Turbo Studio** and open a blank configuration by clicking **File > New*
 
 Click **Start Capture** and select an empty folder to store the application files and configuration file.
 
-![Turbo Studio Setup Capture Start](https://hub.turbo.net/images/docs/setupcapture.png)
+![Turbo Studio Setup Capture Start](../../images/setupcapture.png)
 
 Perform the ShareX installation as normal.
 
@@ -29,8 +29,8 @@ After the recording and process selection steps are complete **Turbo Studio** wi
 
 Click **Browse** next to the **Output File** field and select a folder and filename to save the build output. The **Output File** is generally saved in the same folder as the application files and registry settings that was selected above. Click **File > Save** to save the application configuration.
 
-![Turbo Studio Setup Capture Set Output File](https://hub.turbo.net/images/docs/setoutput.png)
+![Turbo Studio Setup Capture Set Output File](../../images/setoutput.png)
 
 Click **Build and Run** to build the application at the **Output File** location selected above and do a test launch of the application.
 
-See [Deploying](https://hub.turbo.net/docs/deploying/overview/overview) for information about deploying containers on the Turbo platform.
+See [Deploying](../../deploying/overview/overview.html) for information about deploying containers on the Turbo platform.

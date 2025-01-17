@@ -23,7 +23,7 @@ Azure Portal:
 
 Follow the Azure documentation to create a managed disk and be sure to set **Enable shared disk** and set the **Max shares** to an appropriate number. https://docs.microsoft.com/en-us/azure/virtual-machines/windows/attach-managed-disk-portal#add-a-data-disk
 
-![Azure Shared Disk](https://hub.turbo.net/images/docs/azure-shared-disk.PNG)
+![Azure Shared Disk](../../images/Capture.PNG)
 
 Note: Different disk sizes may have a different max shares limit. https://docs.microsoft.com/en-us/azure/virtual-machines/disks-shared
 
@@ -64,7 +64,7 @@ Sample commands to login to the Turbo Server with a user account or an API key:
 
 `turbo.exe login --all-users --api-key=<api-key>`
 
-[Turbo Subscribe](https://hub.turbo.net/docs/reference/command-line/subscribe) is used to add all the applications from a workspase on to the local computer. Here is a sample command to subscribe to the applications in a Workspace:
+[Turbo Subscribe](../../reference/command-line/subscribe.html) is used to add all the applications from a workspase on to the local computer. Here is a sample command to subscribe to the applications in a Workspace:
 
 `turbo.exe subscribe --all-users <workspace>`
 
@@ -74,4 +74,4 @@ When the above steps are complete the applications from the Turbo Server workspa
 
 Refer to the Turbo Server workspace or Add/Remove Programs application on the WVD session hosts to verify which application were added.
 
-![CaptureWVD Subscribed Applications](https://hub.turbo.net/images/docs/wvd-apps.PNG)
+![CaptureWVD Subscribed Applications](../../images/Capture.PNG)

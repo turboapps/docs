@@ -14,7 +14,7 @@ Complete the following steps to enable Microsoft Windows Firewall with Advanced 
 
 4. Select **Port**.
 
-5. Select TCP and Specific local ports. Add the ports required by your server role as described in [Firewall and Security](https://hub.turbo.net/docs/server/setup-and-deployment/prerequisites#firewall-and-security).
+5. Select TCP and Specific local ports. Add the ports required by your server role as described in [Firewall and Security](../../server/setup-and-deployment/prerequisites.html#firewall-and-security).
 
 6. Select **Allow the Connection**.
 

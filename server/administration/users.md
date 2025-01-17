@@ -1,6 +1,6 @@
 ## Users
 
-![Server admin users](https://hub.turbo.net/images/docs/admin-users.png)
+![Server admin users](../../images/admin-users.png)
 
 Turbo Server users are tracked and managed via the Administration Site. Users are entered manually or via automated import from LDAP or Active Directory directory services. Users and user groups can be viewed and managed on the **Users** page. From this page you can view user directories, status, and available actions. Displayed above the user list is the total number of licenses available and the number of licenses currently in use.
 
@@ -8,7 +8,7 @@ Users can be internally created users, synchronized users from external director
 
 ### Managing a User
 
-![Edit User](https://hub.turbo.net/images/docs/user-edit.png)
+![Edit User](../../images/user-edit.png)
 
 To manage a user, select the user name from the list on the **Users** page. The following fields are displayed on the page:
 
@@ -20,17 +20,17 @@ To manage a user, select the user name from the list on the **Users** page. The 
 
 #### User Permissions
 
-![User Permissions](https://hub.turbo.net/images/docs/user-permissions.png)
+![User Permissions](../../images/user-permissions.png)
 
 The **Permissions** tab lists all user groups to which the user belongs. User groups determine which workspaces a user can access.
 
-For more user group management options, please see [Managing a User Group](https://hub.turbo.net/docs/server/administration/users#managing-a-user-group).
+For more user group management options, please see [Managing a User Group](../../server/administration/users.html#managing-a-user-group).
 
 #### User Sessions
 
-![User Sessions](https://hub.turbo.net/images/docs/user-sessions.png)
+![User Sessions](../../images/image.png)
 
-The **Sessions** tab lists all persisted sessions for the user. Session persistence is enabled by the [Sessions are persistent](https://hub.turbo.net/docs/server/administration/workspaces#editing-a-workspace-application) workspace application setting, which automatically synchronizes the user state and settings with Turbo Server.
+The **Sessions** tab lists all persisted sessions for the user. Session persistence is enabled by the [Sessions are persistent](../../server/administration/workspaces.html#editing-a-workspace-application) workspace application setting, which automatically synchronizes the user state and settings with Turbo Server.
 
 **Reset**: Resetting a user session will delete all of the synchronized state and settings from Turbo Server. Sessions that are cached on the user's local device will be reset the next time they run with session persistence enabled.
 
@@ -38,7 +38,7 @@ The **Sessions** tab lists all persisted sessions for the user. Session persiste
 
 ### Managing a User Group
 
-![Server admin edit user group](https://hub.turbo.net/images/docs/admin-user-group.png)
+![Server admin edit user group](../../images/admin-user-group.png)
 
 To create a user group select **Add Group**. The **Add User Group** screen displays. This screen contains the following fields:
 
@@ -52,7 +52,7 @@ The following groups are special groups that are created automatically and canno
 
 - **Administrators**: This group will be able to log into the administration site and push shared images. Note that changes to the **Administrators** group will require a service restart before they are honored by the hub services. Access to the administration site will be honored immediately.
 
-- **Analysts**: Users in the Analysts group will have access to the [administration reports](https://hub.turbo.net/docs/server/administration/reports). No other administrative permissions are granted beyond access to reports.
+- **Analysts**: Users in the Analysts group will have access to the [administration reports](../../server/administration/reports.html). No other administrative permissions are granted beyond access to reports.
 
 - **Anonymous**: This group automatically includes any user discovered when the authentication mode is set to **Anonymous**.
 
@@ -60,7 +60,7 @@ The following groups are special groups that are created automatically and canno
 
 ### Adding an External Directory Service
 
-![Server admin add directory service](https://hub.turbo.net/images/docs/admin-users-directory-service.png)
+![Server admin add directory service](../../images/admin-users-directory-service.png)
 
 Using Turbo Server you can add an external directory service, such as Active Directory. This enables you to manage users with the touch of a button and easily import existing users and groups into Turbo Hub Server. Complete the following steps to add an external directory service:
 
@@ -232,7 +232,7 @@ To resolve this, delete the user from the target domain. Then, allow domain iden
 
 ### Authentication Method
 
-![users-authentication-method](https://hub.turbo.net/images/docs/authentication.png)
+![users-authentication-method](../../images/authentication.png)
 
 The **Authentication Method** page configures which Authentication Method is used when an end-user logs into the Hub Site and Turbo Client. The supported methods are:
 
@@ -242,9 +242,9 @@ The **Authentication Method** page configures which Authentication Method is use
 
 - **Single Sign-On**: Single Sign-On authentication allows users to login to Turbo Server using an external directory service, such as Azure AD or ADFS. Turbo Server currently supports the following Single Sign-On Methods:
 
-  - **OpenID Connect**: This option will redirect users an identity provider login page that supports OpenID Connect authentication. Upon a successful login, the user will be redirected back to Turbo Server and an account will be created using the basic profile information provided by the OpenID claims. Some example identity providers that support OpenID Connect include AzureAD and Google. For more information, refer to [OpenID Connect](https://hub.turbo.net/docs/server/authentication/openid-connect).
+  - **OpenID Connect**: This option will redirect users an identity provider login page that supports OpenID Connect authentication. Upon a successful login, the user will be redirected back to Turbo Server and an account will be created using the basic profile information provided by the OpenID claims. Some example identity providers that support OpenID Connect include AzureAD and Google. For more information, refer to [OpenID Connect](../../server/authentication/openid-connect.html).
 
-  - **SAML 2.0**: This option will redirect users an identity provider login page that supports SAML 2.0 authentication. Upon a successful login, the user will be redirected back to Turbo Server and an account will be created using the basic profile information provided by the SAML response claims. Some example identity providers that support SAML 2.0 include AzureAD and ADFS. For more information, refer to [SAML 2.0](https://hub.turbo.net/docs/server/authentication/saml).
+  - **SAML 2.0**: This option will redirect users an identity provider login page that supports SAML 2.0 authentication. Upon a successful login, the user will be redirected back to Turbo Server and an account will be created using the basic profile information provided by the SAML response claims. Some example identity providers that support SAML 2.0 include AzureAD and ADFS. For more information, refer to [SAML 2.0](../../server/authentication/saml.html).
 
 - **Accepted Tenants**: Restricts logins to users that belong to an accepted tenant IDs. Leave empty for no restrictions. This field only applies to multi-tenant Azure AD Single Sign-On. For more information on setting up multi-tenant Single Sign-On for Azure AD, see steps for [OpenID Connect](https://hub.turbo.net/docs/server/authentication/azuread-openid-connect#azure-ad-multi-tenancy) and [SAML](https://hub.turbo.net/docs/server/authentication/azuread-saml#azure-ad-multi-tenancy).
 
@@ -252,10 +252,10 @@ The **Authentication Method** page configures which Authentication Method is use
 
 - **Check for compromised passwords**: Checks the [haveibeenpwnd](https://haveibeenpwned.com/) database for compromised passwords when creating setting the password for internal users.
 
-- **Integrated Windows Authentication Host**: The IP or hostname of the domain controller for clients using [IWA](https://hub.turbo.net/docs/reference/command-line/login). Select **Default** to automatically detect the domain controller's IP address.
+- **Integrated Windows Authentication Host**: The IP or hostname of the domain controller for clients using [IWA](../../reference/command-line/login.html). Select **Default** to automatically detect the domain controller's IP address.
 
 ### Device Keys
 
-![Server admin device keys](https://hub.turbo.net/images/docs/admin-users-device-keys.png)
+![Server admin device keys](../../images/admin-users-device-keys.png)
 
 The **Device Keys** page lists all devices that are registered to the Hub Server. Devices are automatically registered with the Hub Server when subscribing or installing applications. Device Keys may be deleted in order to immediately revoke that device's access to the Hub Server.

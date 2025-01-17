@@ -26,11 +26,11 @@ Adding Turbo to an Administrator Account will require a single setup for all cou
 
 Navigate to the desired course. Go to **Settings > Apps**.
 
-![Canvas Apps](https://hub.turbo.net/images/docs/canvas-apps.png)
+![Canvas Apps](../../images/canvas-apps.png)
 
 Click on **View App Configurations** and then **+App**. Change the **Configuration Type** dropdown to **By URL**.
 
-![Canvas Add App](https://hub.turbo.net/images/docs/canvas-byurl.png)
+![Canvas Add App](../../images/canvas-byurl.png)
 
 Enter the information from the Turbo Server administrator site:
 
@@ -50,4 +50,4 @@ Turbo can be enabled or disabled for each individual course. Whether the Turbo a
 4. Drag the item up to the list of shown items or down to the list of hidden items.
 5. Press **Save**.
 
-![Canvas Navigation](https://hub.turbo.net/images/docs/canvas-navigation.png)
+![Canvas Navigation](../../images/canvas-navigation.png)

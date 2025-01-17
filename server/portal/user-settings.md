@@ -6,15 +6,15 @@ This page is accessible from the Portal via the **Settings** link in the user dr
 
 ### Storage
 
-![Storage](https://hub.turbo.net/images/docs/storage.png)
+![Storage](../../images/storage.png)
 
 The **Storage** page allows users to manage their cloud storage connections. Once connected, files from that cloud service will be made available in the Portal Files browser. Furthermore, applications launched in the cloud will automatically map their cloud storage folder to the T: drive.
 
-For more information on connecting storage services and accessing files, see the [End User Guide](https://hub.turbo.net/docs/server/cloud-storage/end-user#end-user)
+For more information on connecting storage services and accessing files, see the [End User Guide](../../server/cloud-storage/end-user.html#end-user)
 
 ### Authentication
 
-![Authentication](https://hub.turbo.net/images/docs/user-authentication.png)
+![Authentication](../../images/authentication.png)
 
 The **Authentication** page allows users to save Windows login credentials that will be used to login to the application server when launching cloud applications with Ask authentication. Users may also save their Windows login credentials when launching an application in the HTML5 client by checking the "remember me" checkbox on the login form.
 

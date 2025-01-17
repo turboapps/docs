@@ -1,4 +1,4 @@
-This update to Turbo Studio includes the following improvements and bug fixes: 
+This update to Turbo Studio includes the following improvements and bug fixes:
 
 - The Turbo VM is updated to version 24.11.2
 - Fix incompatibility with **Windows 11 24H2** update (**KB5046740**)

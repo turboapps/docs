@@ -12,15 +12,15 @@ Open Turbo Studio and save the empty configuration to **c:\dotnetcore-build\dotn
 
 Make sure that the **Copy added files to configuration folder** option is enabled (see the **Option** menu at the top-left corner of the Turbo Studio interface).
 
-![Turbo Studio Copy Files Setting](https://hub.turbo.net/images/docs/copyfiles.png)
+![Turbo Studio Copy Files Setting](../../images/copyfiles.png)
 
 Then select **System Drive** in the **Filesystem** editor window. Click the **Add Folder** button and select **c:\dotnetcore-build\dotnet-sdk-2.1.811-win-x64**. This will add the folder to your configuration, copying the files to the **c:\dotnetcore-build\Files** directory.
 
-![Turbo Studio .NET Core Filesystem](https://hub.turbo.net/images/docs/dotnetcorefs.png)
+![Turbo Studio .NET Core Filesystem](../../images/dotnetcorefs.png)
 
 Next add two environment variables to the configuration. Add **PATH** in **WriteCopy** isolation mode with a value of **@SYSDRIVE@\dotnet-sdk-2.1.811-win-x64** (or whatever the installation path is in your container environment). This value will be added to the existing **PATH** value for applications that run inside the container. Also add **DOTNET_SKIP_FIRST_TIME_EXPERIENCE** in **Full** isolation mode with a value of **true**. This will make first runs execute much faster as unused components will not be pre-cached.
 
-![Turbo Studio .NET Core Environment Variables](https://hub.turbo.net/images/docs/dotnetcoreenvvar.png)
+![Turbo Studio .NET Core Environment Variables](../../images/dotnetcoreenvvar.png)
 
 Depending on where this image is deployed, the **Microsoft Visual C++ 2015 Redistributable Update 3** may be required. This can be added to your container environment from the Turbo.net hub with the **microsoft/vcredist:2015** image. For standalone executables, see the article on **Legacy Internet Explorer and Java** for an example of how to add a dependency from the Turbo.net hub.
 

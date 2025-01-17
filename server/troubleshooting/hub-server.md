@@ -1,4 +1,4 @@
-![setup-failed-db-error](https://hub.turbo.net/images/docs/setup-failed.png)## Installation Troubleshooting
+![setup-failed-db-error](../../images/setup-failed.png)## Installation Troubleshooting
 
 This section provides information to help troubleshoot common issues you might encounter while installing Turbo Server.
 
@@ -134,7 +134,7 @@ The following table lists common issues/questions and their solutions:
 
 ### Performance Counters
 
-Turbo Server uses performance counters to track and report server load information. These reports may be viewed on the Turbo Server administration site [Domain page](https://hub.turbo.net/docs/server/administration/domain).
+Turbo Server uses performance counters to track and report server load information. These reports may be viewed on the Turbo Server administration site [Domain page](../../server/administration/domain.html).
 
 If the load information for a server is missing, then the Turbo service user may not have permission to access performance counter data. To grant permission to the Service user:
 
@@ -248,6 +248,6 @@ The Windows Event Viewer is another useful source of information. If there is an
 
 Error details: A network related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify the instance name is correct and that SQL Server is configured to allow remote connections.
 
-![setup-failed-db-error](https://hub.turbo.net/images/docs/setup-failed.png)
+![setup-failed-db-error](../../images/setup-failed.png)
 
 The error may occur during setup due to the database being unavailable. Please ensure the SQL server can be connected from the server with the specified installation credentials. If installing in standalone server mode, the embedded database may not be available yet. Check to see if the Turbo Server Service was installed correctly and is in the process of booting up. If so, then wait a few minutes and attempt to access the administration website (typically available at http://localhost/admin).

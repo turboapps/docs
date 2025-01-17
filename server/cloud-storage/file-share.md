@@ -50,6 +50,6 @@ If you are using Per User storage it is recommended to select **Auto apply templ
 8. Enter the desired **T: Drive Path**.
 9. **Save** your settings. Setting changes may take a couple minutes to take affect.
 
-![File System Storage Provider](https://hub.turbo.net/images/docs/fs-storage-provider2.png)
+![File System Storage Provider](../../images/fs-storage-provider2.png)
 
 Users can access their file share from the portal dashboard Files tab and Turbo Client's T: Drive.

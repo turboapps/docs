@@ -5,5 +5,5 @@ This minor update to Turbo VM includes fixes for the following issues:
 - Error when moving virtual directories to **Merge** isolated locations.
 - Show returned value in trace logs for **NtQueryValueKey**.
 
- 
+
 

@@ -37,7 +37,7 @@ setup.exe /configure installation-config.xml
 
 An error dialog appears with the text: The application has encountered an error.
 
-![ErrorDialog](https://hub.turbo.net/images/docs/thumbnail_image001.png)
+![ErrorDialog](../../images/thumbnail_image001.png)
 
 The office license script requires cscript.exe. Your security settings or antivirus may be blocking execution of the file `C:\Windows\System32\cscript.exe`. Please check the security settings to allow execution.
 
@@ -51,6 +51,6 @@ Logs will be generated in the same folder. Please send the logs to support@turbo
 
 An error dialog appears with the text: The products we found in your account cannot be used to activate Office in shared computer scenarios.
 
-![Office products error](https://hub.turbo.net/images/docs/officeerror.PNG)
+![Office products error](../../images/officeerror.PNG)
 
 This is an Microsoft 365 Apps licensing error and is unrelated to Turbo Server. Please refer to the [Troubleshoot issues with shared computer activation for Microsoft 365 Apps](https://docs.microsoft.com/en-us/deployoffice/troubleshoot-shared-computer-activation) document to resolve this error.

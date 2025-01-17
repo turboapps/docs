@@ -10,7 +10,7 @@ The first step is to create a file share where Hub will store the images. Client
 
 Now, it’s time to configure Hub. Sign in as an administrator, go to the Server list and click on the server in the hub role. Scroll to the bottom, and there should be an Image Path section. You need to type there the local path of the share folder with images subfolder. In our example, it will be:
 
-![Server enable image cache](https://hub.turbo.net/images/docs/hub-enable-image-cache.png)
+![Server enable image cache](../../images/hub-enable-image-cache.png)
 
 After saving the settings, Hub will restart, and new images will automatically appear in the image cache.
 

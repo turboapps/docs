@@ -1,8 +1,7 @@
 # Turbo Desktop
+Turbo Desktop is a command line interface for registering Turbo Workspaces to a desktop. 
 
-Turbo Desktop is a command line interface for registering Turbo Workspaces to a desktop.
-
-A registered desktop will enable [URL protocol handlers](https://hub.turbo.net/docs/server/administration/workspaces.html#workspace-general) and [file associations](https://hub.turbo.net/docs/server/administration/workspaces#workspace-general) as specified in the workspace.
+A registered desktop will enable [URL protocol handlers](../../server/administration/workspaces.html#workspace-general) and [file associations](../../server/administration/workspaces.html#workspace-general) as specified in the workspace.
 
 Turbo Desktop is currently available for Windows.
 
@@ -21,7 +20,6 @@ Options:
 ```
 
 Ensure client is logged in and pointed to the correct domain:
-
 ```
 turbo config --domain=<your domain>
 turbo login <username>
@@ -29,7 +27,6 @@ Password: ******
 ```
 
 Register a workspace in the domain:
-
 ```
 >turbodesktop register default
 Created device key for turboserver1@administrator
