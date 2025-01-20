@@ -15,10 +15,10 @@ Other new features include:
 - **Applications Sort Order** workspace setting customizes the display and installation ordering of workspace applications
 - **Pull on Install** application setting pulls the application to the local machine on install
 - **File Associations** now include more advanced configurations, such as targets and arguments
-- Team** Dropbox** connections are now supported
+- Team **Dropbox** connections are now supported
 - **Guest Domain** read-only access to Hub repositories can be enabled from the administration CLI
 - **Anonymous Access** to Hub repositories can be enabled from the administration CLI
-- **Federation **setting added to the** Import Repository **page to control whether the imported repository will federated updates from the source Hub
+- **Federation** setting added to the **Import Repository** page to control whether the imported repository will federated updates from the source Hub
 
 Other improvements include:
 
@@ -40,8 +40,8 @@ Other improvements include:
 - Users who haven't used Turbo for 30 days are now marked as inactive, freeing up user license seats
 - Logs are now automatically archived every two weeks, and archives are deleted after one year. These parameters can be adjusted using the following command line settings:
 
-- logs-archive-interval: Controls the frequency of log archiving (default: 2 weeks)
-- logs-archive-purge-after: Sets the retention period for archived logs before deletion (default: 1 year)
+  - `logs-archive-interval`: Controls the frequency of log archiving (default: 2 weeks)
+  - `logs-archive-purge-after`: Sets the retention period for archived logs before deletion (default: 1 year)
 - Reorganized top-level admin settings for better navigation
 - Improved consistency in release sort order between VM repo page and workspace application page
 - Optimized Hub revisions query to improve performance and prevent timeouts during **turbo pull** operations
@@ -82,7 +82,7 @@ This update includes fixes for the following issues:
 - Error page displayed the **Administrator Email** contact instead of the **Support Link**
 - Cloning /xvm resulted in missing releases
 - "An operations error occurred while synchronizing AD" occurred during AD synchronization under certain conditions
-- Refreshing the repository** Versions** page on Hub after pushing an image failed to load the page
+- Refreshing the repository **Versions** page on Hub after pushing an image failed to load the page
 - Various Filr storage connection issues have been resolved
 - Hub database resulted in error state during unexpected server shutdowns
 - Session Logs custom date range did not properly filter logs

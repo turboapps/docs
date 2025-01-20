@@ -7,7 +7,7 @@ The September 2021 Turbo Server release includes several major new features:
 
 ![Network Security](../../../images/network-security.png)
 
-- **DNS-based Load Balancing **is now supported via **URL Redirects **configuration. This allows setting up a single URL for DNS load balancers to redirect users to the appropriate Turbo domain.
+- **DNS-based Load Balancing** is now supported via **URL Redirects** configuration. This allows setting up a single URL for DNS load balancers to redirect users to the appropriate Turbo domain.
 
 ![URL Redirects](../../../images/url-redirects.png)
 - New **Synchronize across devices** and **Sessions are persistent** workspace application settings provide improved control over session storage.
@@ -21,7 +21,7 @@ Other improvements include:
 - Images in the **Hub Image Cache** are now automatically deleted if the repository's revision is deleted from the Hub.
 - Added **Update Cache** action that manually updates the Hub Image Cache.
 - Disabling **Cache Temporary User Profiles** will now immediately delete temporary user profiles after logoff.
-- **Reports **now include application display names.
+- **Reports** now include application display names.
 - **Notice and Consent** dialog can now use Markdown formatting.
 - Added a source repository link to the workspace application settings.
 - Dashboard session details tooltip shows an expiration timer for disconnected sessions.

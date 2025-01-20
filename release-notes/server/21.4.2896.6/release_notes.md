@@ -1,10 +1,10 @@
 The May 2021 Turbo Server release includes several major new features:
 
-- **Learning Management Systems (LMS)** and **Storage Provider **integrations now allow for multiple connections.
+- **Learning Management Systems (LMS)** and **Storage Provider** integrations now allow for multiple connections.
 
 ![LMS Connections](../../../images/lms-connections.png)
 
-- **T: Drive **now allows mounting of storage connections to specific paths within each storage provider connection.
+- **T: Drive** now allows mounting of storage connections to specific paths within each storage provider connection.
 
 ![T: Drive Path](../../../images/tdrive-path.png)
 

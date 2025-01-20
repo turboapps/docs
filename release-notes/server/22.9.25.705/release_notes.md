@@ -12,9 +12,9 @@ The September 2022 Turbo Server release includes several major features:
 
 Other new features include:
 
-- New server dashboard **Alerts **table lists important status alerts such as server health warnings
+- New server dashboard **Alerts** table lists important status alerts such as server health warnings
 - New server dashboard **Pending and Recent Changes** tables list server setting changes that have been saved but have not yet been applied to the server, or have been applied to the server recently
-- New server diagnostics **Operations **table lists all Turbo service operations and their last know status
+- New server diagnostics **Operations** table lists all Turbo service operations and their last know status
 - The administration site **Reports** now support **search and filters**
 - Workspace applications now support **server assignments** that restricts the application servers to which the application workload can be assigned based on server tags.
 

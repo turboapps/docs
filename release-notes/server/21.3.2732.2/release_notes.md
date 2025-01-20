@@ -1,6 +1,6 @@
 The March 2021 Turbo Server release includes the following major new features:
 
-- This release introduces **PC Native Applications **as a Workspace object type. PC Native Applications launch Windows desktop applications that are installed *natively* on the application server in a containerized environment.
+- This release introduces **PC Native Applications** as a Workspace object type. PC Native Applications launch Windows desktop applications that are installed *natively* on the application server in a containerized environment.
 
 ![Add PC Native Application](../../../images/admin-application-add-native.png)
 - **Custom icons** can now be configured on all workspace application types from the application settings page.
@@ -10,7 +10,7 @@ The March 2021 Turbo Server release includes the following major new features:
 
 Other improvements include:
 
-- A new **Integrations **section has been added to the administration site, which contains the Cloud Storage and Learning Tools Interoperability (LTI) integrations.
+- A new **Integrations** section has been added to the administration site, which contains the Cloud Storage and Learning Tools Interoperability (LTI) integrations.
 - The **Directory Service Schema** section has been moved to the **Directory Service** Items page.
 - Portal user sessions recover more quickly after encountering server errors.
 - The **Domain URL** may now be set from the command line administrative tool.

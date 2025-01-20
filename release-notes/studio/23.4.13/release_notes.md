@@ -1,15 +1,15 @@
 This update to Turbo Studio includes the following improvements and bug fixes:
 
 - The Turbo VM is updated to version 23.4.3
-- Add **DisableFontPreload **VM setting to improve launch speeds of containers with many fonts
+- Add **DisableFontPreload** VM setting to improve launch speeds of containers with many fonts
 - Improve performance of heap allocations
 - Improve performance of write-copy registry operations
 - Improve handling of large log files in the Debugger
 - Allow **Turbo for PC Client** to pre-cache all executable files regardless of file extension
-- Fix for **Chromium **112+ sandbox (affecting **Chrome**, **Edge**, **PowerBI**, etc)
+- Fix for **Chromium** 112+ sandbox (affecting **Chrome**, **Edge**, **PowerBI**, etc)
 - Fix intermittent hang during application shutdown
 - Fix enumeration of **Merge** isolated registry keys that don't exist natively
-- Fix enumeration of **OneDrive **mapped profile directories
+- Fix enumeration of **OneDrive** mapped profile directories
 - Fix hang when enabling diagnostics for applications that use synchronous named pipes
 - Fix application of legacy resource memory protection policy
 - Fix 64-bit **Microsoft Office 2019+**

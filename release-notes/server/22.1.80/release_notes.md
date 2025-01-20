@@ -2,7 +2,7 @@ The January 2022 Turbo Server release includes several major performance and fea
 
 - **Application launch times have been dramatically reduced**, with launches typically completing in under 3 seconds. Turbo achieves this by pre-configuring a pool of ready-to-use user profiles that are dynamically assigned to a user and application when a launch request arrives.
 
-- New! **Advanced Testing **provides integrated load testing by automatically launching a large number of sessions against specific application servers concurrently.
+- New! **Advanced Testing** provides integrated load testing by automatically launching a large number of sessions against specific application servers concurrently.
 
 ![Advanced Testing](../../../images/test-launch-v2.png)
 

@@ -7,7 +7,7 @@
 - The **turbo as** command can be used to set the Turbo client profile context to the **All Users** profile, simplifying management of system-wide applications and settings.
 - The installer allows configuration options to be passed on the command line to set default turbo config settings.
 - The Launcher interface has been removed from the client. Launches are now initiated from the Turbo Portal, Start Menu, or third-party integration.
-- Multiple images may be downloaded from a Turbo Hub with a single **pull **command, eg **turbo pull sqlserver,ssms,dotnet**
+- Multiple images may be downloaded from a Turbo Hub with a single **pull** command, eg **turbo pull sqlserver,ssms,dotnet**
 - Whitelisting and blacklisting of application sources now support wildcard (*) expressions.
 - Added support for SSL digital certificates with a public key size greater than 2048 bits.
 - The **turbo uninstalli** command can use the **--name** flag to specify a named installed application.

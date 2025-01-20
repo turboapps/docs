@@ -8,11 +8,11 @@ The January 2023 Turbo Server release includes several major features:
 Other new features include:
 
 - New **Launch on Install** setting in the Workspace application settings allows applications to automatically launch upon installation on the device.
-- Workspaces can now be configured with default isolation** **and** **local user folder access settings. Workspace applications can inherit these settings from the workspace or specify application-specific settings.
+- Workspaces can now be configured with default isolation and local user folder access settings. Workspace applications can inherit these settings from the workspace or specify application-specific settings.
 - **JVM http(s) proxy** settings can now be configured from the administration site
 - New **Shell Integration** settings provide fine-grained control over application interactions with the host device, such as shortcuts, file associations, and shell extensions
 - Azure Active Directory with OpenID Connect Single Sign-On integrations can now automatically connect OneDrive on login if the Azure application registration is configured to grant drive permissions
-- New **/install-services **and **/uninstall-services** commands unvirtualize the API and administration sites in order to workaround certain antivirus incompatibilities
+- New **/install-services** and **/uninstall-services** commands unvirtualize the API and administration sites in order to workaround certain antivirus incompatibilities
 - Users now see a warning that their session is about to expire before being logged out automatically from the Portal
 
 Other improvements include:

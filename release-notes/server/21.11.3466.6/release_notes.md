@@ -3,7 +3,7 @@ The November 2021 Turbo Server release includes several major new features:
 - New! **IP Access Rules** feature allows access control to Workspace applications based on IP addresses and countries.
 
 ![IP Restrictions](../../../images/ip-restrictions.png)
-- New! **Hub CDN **feature allows Turbo images to be delivered from a configurable content delivery network (CDN).
+- New! **Hub CDN** feature allows Turbo images to be delivered from a configurable content delivery network (CDN).
 
 ![Hub CDN](../../../images/cdn.png)
 
@@ -17,7 +17,7 @@ Other improvements include:
 - **Hub Optimization** now shows an error before running if there is not enough disk space to perform the operation.
 - The **Server Diagnostics** display now lists the server start time, up time, and pending Windows updates.
 - New **Preemptive Authentication** setting can be disabled to hide the HTML5 client credentials dialog when using **Ask for Credentials** authentication, instead displaying the native Windows login screen.
-- New **Reset **button on the Streaming settings page resets application server group policies to their Turbo Server default values.
+- New **Reset** button on the Streaming settings page resets application server group policies to their Turbo Server default values.
 - Improved Broker **Active Sessions** resource allocation strategy when applications are launched in rapid succession.
 - User login and logouts now generate additional audit logs.
 - Improved client analytics when launching Workspace applications

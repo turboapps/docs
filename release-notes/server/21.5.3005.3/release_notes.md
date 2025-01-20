@@ -1,6 +1,6 @@
  The June 2021 Turbo Server release includes several major new features:
 
-- **Notifications **allow administrators to notify groups of Turbo Server users with custom messages. Notifications are displayed to users on the Turbo Portal in the notifications dropdown.
+- **Notifications** allow administrators to notify groups of Turbo Server users with custom messages. Notifications are displayed to users on the Turbo Portal in the notifications dropdown.
 
 ![Notifications](../../../images/notifications.png)
 - **Search** is now available on the Portal Dashboard. Users can now quickly search Workspace contents by name.
@@ -16,7 +16,7 @@ Other improvements include:
 - The **Run in Cloud (Windowed)** launch page text and troubleshooting details are now consistent with the HTML5 client.
 - Workspace applications are now be created with unique display names by default.
 - The workspace application **Test** actions are now enabled based on the application settings, application server settings, and application server availability.
-- The **Dropbox **integration has been updated to support upcoming Dropbox OAuth API changes.
+- The **Dropbox** integration has been updated to support upcoming Dropbox OAuth API changes.
 - Added a progress indicator to the **Reset User Sandbox** dialog and added the ability to delete user sandboxes.
 - Users are now removed from Single Sign-On (SSO) groups automatically during SSO login if they were removed in the external identity provider.
 - The Workspace Administration dashboard now has a custom date range selector with improved visualization of session launches.

@@ -6,7 +6,7 @@ The July 2020 Turbo Server release includes the following major new features:
 - New **Cache Temporary User Profiles** setting automatically controls whether temporary user profiles are persisted or deleted from the server periodically (approximately every 10 minutes after logout by default).
 
 ![Cache Temporary User Profiles](../../../images/image.png)
-- Application Server now supports** Windows Server 2019**.
+- Application Server now supports **Windows Server 2019**.
 - New Server command line interface commands for importing repositories and adding applications to a workspace.
 
 Other improvements include:

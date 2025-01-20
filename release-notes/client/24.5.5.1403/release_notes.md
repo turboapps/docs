@@ -1,8 +1,8 @@
 The May 2024 update to Turbo Client includes the following improvements:
 
-- The **turbo import **command now supports the **xvm** type for importing a Turbo VM directly from a file path.
-- The **turbo import **command now automatically detects and applies the appropriate application version to the release tag.
-- Turbo application dependencies are no longer restricted to exact image matches. Dependencies such as java:8 will now match with newer versions of application images named java:8.
+- The **turbo import** command now supports the **xvm** type for importing a Turbo VM directly from a file path.
+- The **turbo import** command now automatically detects and applies the appropriate application version to the release tag.
+- Turbo application dependencies are no longer restricted to exact image matches. Dependencies such as `java:8` will now match with newer versions of application images named `java:8`.
 - The **turbo containers** command has been renamed to **turbo sessions**, accompanied by corresponding updates in all supporting text. JSON-based APIs remain unaffected by this change, and the original command will still function as an alias.
 - Java has been entirely removed from the Turbo Client.
 - The **turbo push** command will fail early if the user does not have permissions to push images.
@@ -34,7 +34,7 @@ This update includes fixes for the following issues:
 - Turbo Client generated temporary file names with random extensions triggering security audits.
 - The **turbo subscription register** command resulted in the creation of duplicate desktop shortcuts in certain scenarios.
 - Background subscription updates triggered auto-launching applications.
-- The **turbo unsubscribe **threw an unhandled error when the image path is read-only.
+- The **turbo unsubscribe** threw an unhandled error when the image path is read-only.
 - Desktop shortcuts duplicated when upgrading from subscriptions created in Turbo Client 23.6.9.576.
 - The **turbo run** command failed to verify whether the specified startup file architecture matched the host machine.
 

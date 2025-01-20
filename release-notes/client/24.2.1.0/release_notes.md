@@ -16,7 +16,7 @@ This update includes fixes for the following issues:
 - The **turbo rmi -a** did not properly clear the image cache database under certain circumstances. This caused subsequent pulls to no longer cache the image executables and fonts.
 - The **turbo subscription** command was missing the **unregister** verb in the help text.
 - The **turbo installi --offline** command failed for certain images.
-- **Turbo Sandbox Manager **failed to properly garbage collect **All Users** images under certain circumstances.
+- **Turbo Sandbox Manager** failed to properly garbage collect **All Users** images under certain circumstances.
 - The **turbo gci** command removed **All Users** images incorrectly if the current user configures the image path to the same **All Users** path.
 - Image downloads may silently fail under slow or unstable network conditions. An error message or dialog is now displayed to the user.
 - The **turbo installi** command did not properly register PDFs for Google Chrome and Microsoft Edge images.

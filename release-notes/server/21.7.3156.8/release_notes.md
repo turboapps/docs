@@ -1,6 +1,6 @@
  The July 2021 Turbo Server release includes several major new features:
 
-- New! **Session Handoff **allows streaming clients to transfer sessions from one device to another. Existing sessions for the same application will automatically be disconnected. Users can also reconnect to an earlier sessions after an accidental disconnect.
+- New! **Session Handoff** allows streaming clients to transfer sessions from one device to another. Existing sessions for the same application will automatically be disconnected. Users can also reconnect to an earlier sessions after an accidental disconnect.
 - New! Workspace administration now gathers and displays additional launch analytics, including **Type**, **Client**, and **Device**.
 
 ![Client Device Analytics](../../../images/client-device-analytics.png)
@@ -31,7 +31,7 @@ This update includes fixes for the following issues:
 - Hub database migrations can fail and result in a partial migration under certain circumstances.
 - Azure AD SSO logins do not automatically create all user groups if the user belongs to over 100 AD groups.
 - Disabling **Cache Temporary User Profiles** can result in application launch errors under certain circumstances.
-- Temporary users are not added to the **Remote Desktop Users **group in certain environments due to localization issues.
+- Temporary users are not added to the **Remote Desktop Users** group in certain environments due to localization issues.
 - **OCSP Stapling** causes Turbo Server requests to hang in certain environments.
 - Custom **Image Paths** could result in permission errors when launching applications as a temporary profile user.
 - **Automatically Grant Permissions** does not grant channel permissions if the channel already existed.

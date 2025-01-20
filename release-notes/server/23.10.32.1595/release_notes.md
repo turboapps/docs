@@ -15,7 +15,7 @@ Other new features include:
 - **External Database Connections** allows servers from different cloud infrastructures or different tenants within the same cloud infrastructure to join a Turbo Server Domain
 - **Concurrent Session Limit** setting restricts the number of remote sessions that a user can run concurrently
 - **Support Link** setting that is displayed to users on error pages
-- New Turbo Server CLI command `admin domain-federation sync` triggers an **on-demand domain federation synchronization**
+- New Turbo Server CLI command ``admin domain-federation sync`` triggers an **on-demand domain federation synchronization**
 - **Check for Updates** setting determines when application update checks are performed
 
 Other improvements include:
@@ -32,7 +32,7 @@ Other improvements include:
 - **Dashboard Tabs** settings have been expanded to further customize Portal dashboard tab visibility and default tab access
 - Improved performance of the **Add Host Application** dialog
 - Workspace applications are now created with isolation settings set to **Inherit from Workspace**
-- Applications launched from the Portal now immediately check for application** **updates if a new image has been pushed to the Hub
+- Applications launched from the Portal now immediately check for application updates if a new image has been pushed to the Hub
 - Improved the application server profile pool allocation strategy to be more performant during periods of high launch volume
 - Images pushed from Turbo Studio or the Turbo Client no longer set the icon padding or background color by default
 - Apache Proxy logs are now located in the installation path **Logs** folder and rotate based on date and size
@@ -44,7 +44,7 @@ This update includes fixes for the following issues:
 
 - Turbo Drive filesystem mounts could encounter errors performing certain folder operations, such as creating and renaming new folders or deleting and recreating non-empty folders
 - Turbo Drive overwrite and set file size operations incorrectly reported portions of the resulting file metadata, causing application errors in rare circumstances
-- The** **OneDrive** Test** button failed for multi-tenant configurations
+- The OneDrive **Test** button failed for multi-tenant configurations
 - The **User Groups** table item count was not accurate under certain circumstances
 - The Server diagnostics uptime did not display correctly for large values
 - The **Advanced Testing** page **Auto** server assignment option did not correctly distribute loads according to the resource allocation strategy

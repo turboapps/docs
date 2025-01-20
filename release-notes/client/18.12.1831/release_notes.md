@@ -6,7 +6,7 @@
 - The Turbo for PC installer now uses HTTPS to download components.
 - The Turbo for Mac client has been updated with improved support for copy-and-paste between native and virtualized environments, support for the Windows hidden files flag, and improved diagnostic logging.
 - The Turbo for Android and Turbo for Chromebook clients now support Single Sign-On.
-- The working directory may now be specified in the image configuration. The **clean **image has been updated to maintain backwards compatibility with the new behavior.
+- The working directory may now be specified in the image configuration. The **clean** image has been updated to maintain backwards compatibility with the new behavior.
 
 **Bug Fixes**
 

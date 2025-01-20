@@ -7,7 +7,7 @@ This update to Turbo Studio includes the following new features and improvements
 - Notify when a configuration backup is present after a failed save attempt
 - Allow saving the Debugger workspace (open tabs and documents) between Debugger sessions
 - Add keyboard shortcuts in Debugger to open session logs (**Ctrl+O**), close the current tab (**Ctrl+F4**), and refresh the view (**F5**)
-- Update Debugger log DLL filters to include calls to **LdrUnloadDll **and **NtCreateFile**/**NtOpenFile **for DLL and EXE files
+- Update Debugger log DLL filters to include calls to **LdrUnloadDll** and **NtCreateFile**/**NtOpenFile** for DLL and EXE files
 - Allow Debugger **Lookup Flags** and **Compare** tool windows to be resized
 
 This update also includes fixes for the following issues:

@@ -6,7 +6,7 @@ This update to Turbo Studio includes the following improvements and bug fixes:
 - Fix error in **Print Preview** for applications based on the **Chromium Sandbox** v125+
 - Fix hang in **Autodesk Maya** 2024+ when enumerating merge isolated directories
 - Fix error in **Microsoft VSCode** when installing extensions due to incompatibility when renaming virtual directories that have files opened for write access
-- Fix **Microsoft Project** not being discovered during **Microsoft Office 365 **capture
+- Fix **Microsoft Project** not being discovered during **Microsoft Office 365** capture
 
 
 

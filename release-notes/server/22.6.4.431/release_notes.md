@@ -1,9 +1,9 @@
 The June 2022 Turbo Server release includes several major features:
 
-- New! **Federation Sources **tab provides a single location to configuration federating Hubs. Federation sources can then be referenced during workspace or repository import, simplifying setup and assuring consistent synchronization across subdomains.
+- New! **Federation Sources** tab provides a single location to configuration federating Hubs. Federation sources can then be referenced during workspace or repository import, simplifying setup and assuring consistent synchronization across subdomains.
 
 ![Federation Sources](../../../images/federation-sources.png)
-- New "Toast" **Notification Display Type **allows notifications to display as a toast message on the Portal dashboard.
+- New "Toast" **Notification Display Type** allows notifications to display as a toast message on the Portal dashboard.
 
 ![Toast Message](../../../images/toast-message-2.png)
 - Application launch performance reports are now available on the **Reports** area. Performance reports provide detailed performance metrics that can help identify and resolve performance issues.

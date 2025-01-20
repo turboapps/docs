@@ -5,7 +5,7 @@ This release of Turbo Studio includes the following new features and updates:
 
 Other bug fixes included in this release:
 
-- Removed *Save As* hotkey (CTRL+A) to avoid interference with *Select All *behavior.
+- Removed *Save As* hotkey (CTRL+A) to avoid interference with *Select All* behavior.
 
 
 

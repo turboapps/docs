@@ -1,6 +1,6 @@
 The January 2021 Turbo Server release includes the following major new features:
 
-- Support for **Moodle **and **Blackboard **Learning Management Systems (LMS).
+- Support for **Moodle** and **Blackboard** Learning Management Systems (LMS).
 
 ![Moodle](../../../images/moodle.png)
 - Learning Tools Interoperability (LTI) **User Identity** settings now supports custom LMS user fields to login and create Turbo Server internal users.

@@ -3,7 +3,7 @@ The June 2023 Turbo Server release includes several major features:
 - New! **Fleets** streamlines resource management by organizing groups of servers into a single management unit. Create on-premises fleets or use managed fleets that directly integrate with cloud infrastructures like Azure. Assign applications to fleets based on resource requirements.
 
 ![fleets-dashboard-azure](../../../images/fleets-dashboard-azure.png)
-- New! **Portal Dashboard **design has been refreshed with a new Home tab that summarizes key applications and documents as well as new visuals.
+- New! **Portal Dashboard** design has been refreshed with a new Home tab that summarizes key applications and documents as well as new visuals.
 
 ![Dashboard Home](../../../images/home.png)
 - New! (Beta) **AI Chat** feature allows end-users to talk with AI chatbots such as OpenAI's GPT-3.5 and GPT-4 directly within the workspace interface.
@@ -42,7 +42,7 @@ Other improvements include:
 This update includes fixes for the following issues:
 
 - Session reports did not accurately track session duration for HTML5 client sessions if the user closed the tab shortly after launch.
-- The **Advanced Testing **page could fail to override server assignments if the application was already running
+- The **Advanced Testing** page could fail to override server assignments if the application was already running
 - Installed workspace applications with **Inherit from Workspace** isolation settings could fail to correctly inherit
 - In rare cases users could be automatically logged out of the Portal despite having a valid ticket
 - Channel selection could be lost when navigation to and from the **Files** tab

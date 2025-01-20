@@ -25,7 +25,7 @@ This update includes fixes for the following issues:
 - Fixed an issue in T: Drive where renaming and editing a file could result in duplicate files
 - Fixed an error message when pushing a malformed image
 - Fixed an exception when running Turbo commands if the Turbo installation folder contained a client version with a malformed version string
-- Fixed a **turbo gc **error when attempting to remove malformed containers
+- Fixed a **turbo gc** error when attempting to remove malformed containers
 
 
 

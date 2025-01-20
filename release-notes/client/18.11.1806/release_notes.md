@@ -1,9 +1,9 @@
 **New and Improved**
 
-- Support for containerizing **Cygwin **(Linux environment on Windows)
+- Support for containerizing **Cygwin** (Linux environment on Windows)
 - Support for additional Security Support Providers (SSPs), enabling new authentication methods
 - Containers now respect the working directory setting from the image configuration. (Previously the working directory was based on the current directory of the **turbo.exe** process.)
-- Turbo VM honors the **SYSTEM **attribute for virtualized files.
+- Turbo VM honors the **SYSTEM** attribute for virtualized files.
 - Ability to set the minimum thread stack size in the image configuration
 
 **Bug Fixes**

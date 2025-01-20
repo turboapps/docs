@@ -2,7 +2,7 @@ This update includes the following major new features:
 
 - A new **Domain URL**s section allows configuration of public-facing Hub, Portal, and other Turbo web service URLs to be configured.
 - A new **Internal Hostname or IP Address** section displays hostnames or IP addresses used to resolve internal services such as connections to internal application servers and proxies.
-- A new **Block Storage **section in the Hub server settings allows validation and repair of block storage.
+- A new **Block Storage** section in the Hub server settings allows validation and repair of block storage.
 
 Other improvements include:
 

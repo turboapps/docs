@@ -7,7 +7,7 @@ The July 2020 update to Turbo Client includes the following new features:
 
 This update includes fixes for the following issues:
 
-- Corrected behavior of **--offline** flag when using **installi** and **run **commands.
+- Corrected behavior of **--offline** flag when using **installi** and **run** commands.
 - Allow data synchronization when exiting command prompt applications that return non-zero (failure) exit codes.
 - DLL and EXE cache settings not properly applied when running applications from Turbo Portal.
 - File and registry settings for transient components should take precedence over the primary image.

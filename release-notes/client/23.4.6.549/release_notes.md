@@ -9,8 +9,8 @@ This update includes fixes for the following issues:
 - The **turbo gci** failed under certain conditions
 - The **turbo subscribe** command failed to inherit workspace isolation settings
 - The **turbo diff** command failed if certain registry keys paths were modified
-- The** turbo subscribe --pull** command failed if a workspace application was set to inherit isolation
-- **T: Drive **failed to mount if the same user in a different Windows session had an existing T: Drive mount
+- The **turbo subscribe --pull** command failed if a workspace application was set to inherit isolation
+- **T: Drive** failed to mount if the same user in a different Windows session had an existing T: Drive mount
 - The default permissions for **c:\ProgramData\turbo** allowed write access to **Users** group
 
 

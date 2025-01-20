@@ -10,7 +10,7 @@ The December 2022 update to Turbo Client includes the following improvements:
 - Executable caching is now enabled by default for improved launch performance. New executable cache configuration options include a **turbo import --precache** flag and  **turbo config --enable=ExecutableCache** and **AutomaticPrecache** settings.
 - Updated **turbo rmi -a** and **turbo gci** commands to remove all unreferenced executable cache files
 - Improved launch performance when mounting the T: Drive
-- Removed an unsigned wrapper executable in the image install directory that could cause issues with certain antivirus** **programs
+- Removed an unsigned wrapper executable in the image install directory that could cause issues with certain antivirus programs
 - Improved various text and error messages
 
 This update includes fixes for the following issues:
@@ -25,7 +25,7 @@ This update includes fixes for the following issues:
 - Image downloads that took over an hour resulted in a timeout error when direct download was disabled
 - Failed image downloads could result in a corrupted image and cause subsequent download failures under certain circumstances
 - Image uploads could fail if all blocks already existed in the block storage
-- Launching an application with **Ask for Credentials** authentication using **Run in Cloud (Windowed) **a second time could result in an incorrect domain prefix if the workspace was configured with a default domain.
+- Launching an application with **Ask for Credentials** authentication using **Run in Cloud (Windowed)** a second time could result in an incorrect domain prefix if the workspace was configured with a default domain.
 - Mount points could fail to mount if they targeted a redirected special folder
 - T: Drive could fail to mount if the user manually installed certain drivers after installing Turbo for PC
 - T: Drive OneDrive file operations could fail for certain special characters

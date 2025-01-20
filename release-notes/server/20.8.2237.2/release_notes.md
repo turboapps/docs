@@ -1,6 +1,6 @@
 The August 2020 Turbo Server release includes the following major new features:
 
-- New **Server Log Archives **feature allows administrators to create and download log archives directly from the administration site.
+- New **Server Log Archives** feature allows administrators to create and download log archives directly from the administration site.
 
 ![Turbo Server Log Archives](../../../images/log-archives.png)
 - New Cloud Storage **Test** feature allows administrators to test their storage configurations before committing any changes.

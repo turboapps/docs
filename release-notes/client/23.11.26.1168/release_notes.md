@@ -1,15 +1,15 @@
 The November 2023 update to Turbo Client includes the following improvements:
 
-- **Turbo Sandbox Manager** can now automatically register and unregister subscribed workspaces in local user accounts against** All Users** subscriptions
+- **Turbo Sandbox Manager** can now automatically register and unregister subscribed workspaces in local user accounts against **All Users** subscriptions
 - Application fonts are now installed during image caching. This improves the speed of application registration and launches.
 - Web Applications are now installed when registering a subscription
 - Local users' Turbo Client install will now remove itself if the All Users install is present
-- The **turbo run **command now uses Write Copy isolation by default
+- The **turbo run** command now uses Write Copy isolation by default
 - **Turbo Sandbox Manager** can now automatically garbage collect session sandboxes
-- The **turbo config **command now supports setting storage path using environment variables such as **%LOCALAPPDATA%**
+- The **turbo config** command now supports setting storage path using environment variables such as **%LOCALAPPDATA%**
 - Improved download progress UI
 - Improved various error messages
-- Registered applications through **turbo installi** and **turbo subscribe** now appear in the **Windows Default **apps settings UI. This enables administrators to select registered applications as default file extension or URL protocol handler.
+- Registered applications through **turbo installi** and **turbo subscribe** now appear in the **Windows Default** apps settings UI. This enables administrators to select registered applications as default file extension or URL protocol handler.
 - Registered applications that support the same file extension can be selected using Windows Explorer right click **Open with...** context menu.
 
 This update includes fixes for the following issues:

@@ -5,11 +5,11 @@
 - Launches via **turbo://** protocol links display a security dialog for applications outside of **Turbo.net**
 - Administrators can define trusted workspaces for all users in **%PROGRAMDATA%\Turbo\Containers\trusted-sources.json**.
 - Added support for on-premises workspaces
-- Combined client toggle settings under** turbo config --enable|--disable=[option]** command.
+- Combined client toggle settings under **turbo config --enable|--disable=[option]** command.
 - Administrators can set default or override settings for the client configuration using **turbo config --as-inherit|--as-override** command.
 - Added ability to disable merge isolation using **turbo config --disable=mergeisolation** command.
 - Added **--working-dir|-w=[path]** flag to **turbo commit** for setting the working directory of an image.
-- Added the **Java **component to the Turbo for PC installer to support systems that are not connected to the Internet.
+- Added the **Java** component to the Turbo for PC installer to support systems that are not connected to the Internet.
 
 **Bug Fixes**
 
@@ -19,7 +19,7 @@
 - Certain applications may crash on application exit due to a race condition.
 - Applications may fail to start with an “Object reference not set to an instance of an object” error.
 - A new application version is downloaded even when upgrade check is disabled on application startup.
-- Running the **clean **and **base **images with incompatible isolation should display a warning message.
+- Running the **clean** and **base** images with incompatible isolation should display a warning message.
 - The **turbo config --image-path=allusers** command may fail with invalid container storage path error.
 - The **turbo-plugin.exe --app-server** command to provision application servers should detect incompatible OS versions.
 

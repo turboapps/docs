@@ -7,7 +7,7 @@
 
 **Bug Fixes**
 
-- Logs from Turbo VM are written to **OutputDebugString **if an error occurs during initialization
+- Logs from Turbo VM are written to **OutputDebugString** if an error occurs during initialization
 - Jobs sent to the print spooler from containerized applications may fail to print.
 - The Turbo Launcher is unresponve while loading a large list of application versions.
 - The **turbo commit** command fails when using old images with an incorrect error message.
