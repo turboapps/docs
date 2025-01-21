@@ -1,0 +1,12 @@
+{
+  "displayName": "Studio 21.5",
+  "version": "21.5.1490",
+  "releaseDate": "",
+  "artifacts": [
+    {
+      "type": "msi",
+      "fileName": "turbo-studio-21.5.1490.msi",
+      "downloadLink": "https://start-c.turbo.net/layers/turbo/studio/download/turbo-studio-21.5.1490.msi"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "displayName": "Server 23.10.32.1598",
+  "version": "23.10.32.1595",
+  "releaseDate": "2023-10-26T00:00-08:00",
+  "artifacts": [
+    {
+      "type": "exe",
+      "fileName": "turbo-server-23.10.32.1598.exe",
+      "downloadLink": "https://start-c.turbo.net/layers/turbo/server/Download/turbo-server-23.10.32.1598.exe"
+    }
+  ]
+}

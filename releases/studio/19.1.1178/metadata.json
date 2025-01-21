@@ -1,0 +1,12 @@
+{
+  "displayName": "Studio 19.1.1178",
+  "version": "19.1.1178",
+  "releaseDate": "",
+  "artifacts": [
+    {
+      "type": "msi",
+      "fileName": "turbo-studio-19.1.1178.msi",
+      "downloadLink": "https://start-c.turbo.net/layers/turbo/studio/download/turbo-studio-19.1.1178.msi"
+    }
+  ]
+}

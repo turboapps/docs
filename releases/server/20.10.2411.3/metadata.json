@@ -1,0 +1,12 @@
+{
+  "displayName": "Server 20.10.2411",
+  "version": "20.10.2411.3",
+  "releaseDate": "2020-11-03T00:00-08:00",
+  "artifacts": [
+    {
+      "type": "exe",
+      "fileName": "turbo-server-20.10.2411.3.exe",
+      "downloadLink": "https://start-c.turbo.net/layers/turbo/server/Download/turbo-server-20.10.2411.3.exe"
+    }
+  ]
+}

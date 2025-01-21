@@ -1,0 +1,13 @@
+{
+  "displayName": "Studio 24.12",
+  "version": "24.12.14",
+  "releaseDate": "2024-12-26T00:00-08:00",
+  "artifacts": [
+    {
+      "type": "msi",
+      "fileName": "turbo-studio-24.12.14.msi",
+      "downloadLink": "https://start-c.turbo.net/layers/turbo/studio/download/turbo-studio-24.12.14.msi",
+      "SHA256Hash": "ac664f299f6aac8994072df999a87613fc91fad90c4e27594f00a636d2dc4f00"
+    }
+  ]
+}

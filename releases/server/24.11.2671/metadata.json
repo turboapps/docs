@@ -1,0 +1,13 @@
+{
+  "displayName": "Server 24.11.2671",
+  "version": "24.11.2671",
+  "releaseDate": "2024-11-18T00:00-08:00",
+  "artifacts": [
+    {
+      "type": "exe",
+      "fileName": "turbo-server-24.11.1.2671.exe",
+      "downloadLink": "https://start-c.turbo.net/layers/turbo/server/Download/turbo-server-24.11.1.2671.exe",
+      "SHA256Hash": "bb73841835c307e0576b093c6f5ab010e655f504f2f9d78e6efd4da4477dab55"
+    }
+  ]
+}

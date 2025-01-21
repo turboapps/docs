@@ -1,0 +1,12 @@
+{
+  "displayName": "Server 23.1.19.875",
+  "version": "23.1.19.875",
+  "releaseDate": "2023-02-03T00:00-08:00",
+  "artifacts": [
+    {
+      "type": "exe",
+      "fileName": "turbo-server-23.1.19.875.exe",
+      "downloadLink": "https://start-c.turbo.net/layers/turbo/server/Download/turbo-server-23.1.19.875.exe"
+    }
+  ]
+}

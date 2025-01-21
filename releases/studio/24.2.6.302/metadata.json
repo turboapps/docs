@@ -1,0 +1,12 @@
+{
+  "displayName": "Studio 24.2",
+  "version": "24.2.6.302",
+  "releaseDate": "2024-02-09T00:00-08:00",
+  "artifacts": [
+    {
+      "type": "msi",
+      "fileName": "turbo-studio-24.2.6.302.msi",
+      "downloadLink": "https://start-c.turbo.net/layers/turbo/studio/download/turbo-studio-24.2.6.302.msi"
+    }
+  ]
+}

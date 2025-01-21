@@ -1,0 +1,12 @@
+{
+  "displayName": "Studio 20.5",
+  "version": "20.5.1337",
+  "releaseDate": "2020-05-07T00:00-07:00",
+  "artifacts": [
+    {
+      "type": "msi",
+      "fileName": "turbo-studio-20.5.1337.msi",
+      "downloadLink": "https://start-c.turbo.net/layers/turbo/studio/download/turbo-studio-20.5.1337.msi"
+    }
+  ]
+}

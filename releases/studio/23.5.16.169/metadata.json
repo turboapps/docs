@@ -1,0 +1,12 @@
+{
+  "displayName": "Studio 23.5",
+  "version": "23.5.16.169",
+  "releaseDate": "2023-05-18T00:00-08:00",
+  "artifacts": [
+    {
+      "type": "msi",
+      "fileName": "turbo-studio-23.5.16.169.msi",
+      "downloadLink": "https://start-c.turbo.net/layers/turbo/studio/download/turbo-studio-23.5.16.169.msi"
+    }
+  ]
+}

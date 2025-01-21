@@ -1,0 +1,12 @@
+{
+  "displayName": "Studio 18.4.1080.15",
+  "version": "18.4.1080.15",
+  "releaseDate": "2018-05-30T00:00-07:00",
+  "artifacts": [
+    {
+      "type": "msi",
+      "fileName": "turbo-studio-18.4.1080.15.msi",
+      "downloadLink": "https://start-c.turbo.net/layers/turbo/studio/download/turbo-studio-18.4.1080.15.msi"
+    }
+  ]
+}

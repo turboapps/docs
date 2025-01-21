@@ -1,0 +1,12 @@
+{
+  "displayName": "Studio 22.4",
+  "version": "22.4.2",
+  "releaseDate": "2022-03-24T00:00-08:00",
+  "artifacts": [
+    {
+      "type": "msi",
+      "fileName": "turbo-studio-22.4.2.msi",
+      "downloadLink": "https://start-c.turbo.net/layers/turbo/studio/download/turbo-studio-22.4.2.msi"
+    }
+  ]
+}

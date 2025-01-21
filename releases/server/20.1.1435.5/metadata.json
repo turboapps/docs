@@ -1,0 +1,12 @@
+{
+  "displayName": "Server 20.1.1435.5",
+  "version": "20.1.1435.5",
+  "releaseDate": "2020-02-03T00:00-07:00",
+  "artifacts": [
+    {
+      "type": "exe",
+      "fileName": "turbo-server-20.1.1435.5.exe",
+      "downloadLink": "https://start-c.turbo.net/layers/turbo/server/Download/turbo-server-20.1.1435.5.exe"
+    }
+  ]
+}

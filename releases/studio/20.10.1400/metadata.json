@@ -1,0 +1,12 @@
+{
+  "displayName": "Studio 20.10",
+  "version": "20.10.1400",
+  "releaseDate": "",
+  "artifacts": [
+    {
+      "type": "msi",
+      "fileName": "turbo-studio-20.10.1400.msi",
+      "downloadLink": "https://start-c.turbo.net/layers/turbo/studio/download/turbo-studio-20.10.1400.msi"
+    }
+  ]
+}

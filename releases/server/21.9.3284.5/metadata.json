@@ -1,0 +1,12 @@
+{
+  "displayName": "Server 21.9.3284.5",
+  "version": "21.9.3284.5",
+  "releaseDate": "2021-09-28T00:00-07:00",
+  "artifacts": [
+    {
+      "type": "exe",
+      "fileName": "turbo-server-21.9.3284.5.exe",
+      "downloadLink": "https://start-c.turbo.net/layers/turbo/server/Download/turbo-server-21.9.3284.5.exe"
+    }
+  ]
+}

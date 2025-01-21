@@ -1,0 +1,12 @@
+{
+  "displayName": "Studio 22.6",
+  "version": "22.6.7",
+  "releaseDate": "2022-06-13T00:00-08:00",
+  "artifacts": [
+    {
+      "type": "msi",
+      "fileName": "turbo-studio-22.6.7.msi",
+      "downloadLink": "https://start-c.turbo.net/layers/turbo/studio/download/turbo-studio-22.6.7.msi"
+    }
+  ]
+}

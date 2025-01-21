@@ -1,0 +1,12 @@
+{
+  "displayName": "Server 20.6.2050",
+  "version": "20.6.2050",
+  "releaseDate": "2020-06-05T17:00-07:00",
+  "artifacts": [
+    {
+      "type": "exe",
+      "fileName": "turbo-server-20.6.2050.0.exe",
+      "downloadLink": "https://start-c.turbo.net/layers/turbo/server/Download/turbo-server-20.6.2050.0.exe"
+    }
+  ]
+}

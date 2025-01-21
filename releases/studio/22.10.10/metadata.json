@@ -1,0 +1,12 @@
+{
+  "displayName": "Studio 22.10",
+  "version": "22.10.10",
+  "releaseDate": "2022-10-10T00:00-08:00",
+  "artifacts": [
+    {
+      "type": "msi",
+      "fileName": "turbo-studio-22.10.10.msi",
+      "downloadLink": "https://start-c.turbo.net/layers/turbo/studio/download/turbo-studio-22.10.10.msi"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "displayName": "Server 21.1.2640.2",
+  "version": "21.1.2640.2",
+  "releaseDate": "2021-02-02T00:00-08:00",
+  "artifacts": [
+    {
+      "type": "exe",
+      "fileName": "turbo-server-21.1.2640.2.exe",
+      "downloadLink": "https://start-c.turbo.net/layers/turbo/server/Download/turbo-server-21.1.2640.2.exe"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "displayName": "Studio 20.6",
+  "version": "20.6.1353",
+  "releaseDate": "2020-06-30T00:00-08:00",
+  "artifacts": [
+    {
+      "type": "msi",
+      "fileName": "turbo-studio-20.6.1353.msi",
+      "downloadLink": "https://start-c.turbo.net/layers/turbo/studio/download/turbo-studio-20.6.1353.msi"
+    }
+  ]
+}

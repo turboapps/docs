@@ -1,0 +1,12 @@
+{
+  "displayName": "Studio 19.6.1208.11",
+  "version": "19.6.1208.11",
+  "releaseDate": "2019-08-21T00:00-07:00",
+  "artifacts": [
+    {
+      "type": "msi",
+      "fileName": "turbo-studio-19.6.1208.11.msi",
+      "downloadLink": "https://start-c.turbo.net/layers/turbo/studio/download/turbo-studio-19.6.1208.11.msi"
+    }
+  ]
+}

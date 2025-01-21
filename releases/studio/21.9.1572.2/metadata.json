@@ -1,0 +1,12 @@
+{
+  "displayName": "Studio 21.9",
+  "version": "21.9.1572.2",
+  "releaseDate": "2021-10-27T00:00-08:00",
+  "artifacts": [
+    {
+      "type": "msi",
+      "fileName": "turbo-studio-21.9.1572.2.msi",
+      "downloadLink": "https://start-c.turbo.net/layers/turbo/studio/download/turbo-studio-21.9.1572.2.msi"
+    }
+  ]
+}

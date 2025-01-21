@@ -1,0 +1,12 @@
+{
+  "displayName": "Server 20.4.1835",
+  "version": "20.4.1835",
+  "releaseDate": "2020-04-09T00:00-07:00",
+  "artifacts": [
+    {
+      "type": "exe",
+      "fileName": "turbo-server-20.4.1835.0.exe",
+      "downloadLink": "https://start-c.turbo.net/layers/turbo/server/Download/turbo-server-20.4.1835.0.exe"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "displayName": "Server 23.6.6.1355",
+  "version": "23.6.6.1355",
+  "releaseDate": "2023-06-19T00:00-07:00",
+  "artifacts": [
+    {
+      "type": "exe",
+      "fileName": "turbo-server-23.6.6.1355.exe",
+      "downloadLink": "https://start-c.turbo.net/layers/turbo/server/Download/turbo-server-23.6.6.1355.exe"
+    }
+  ]
+}

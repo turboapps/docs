@@ -1,0 +1,25 @@
+{
+  "displayName": "Client 24.9.2.1590",
+  "version": "24.9.2.1590",
+  "releaseDate": "2024-12-05T00:00-08:00",
+  "artifacts": [
+    {
+      "type": "exe",
+      "fileName": "turbo-client-24.9.2.1590.exe",
+      "downloadLink": "https://start-c.turbo.net/layers/setup/24.9.2.1590/turbo-client-24.9.2.1590.exe",
+      "SHA256Hash": "11775f2572dbd1a6de9d516061de781768035e1c76828f5f4bfa61266109117a"
+    },
+    {
+      "type": "msi",
+      "fileName": "turbo-client-24.9.2.1590.msi",
+      "downloadLink": "https://start-c.turbo.net/layers/setup/24.9.2.1590/turbo-client-24.9.2.1590.msi",
+      "SHA256Hash": "c4c3829125cf49ee0f814ea97480558d9dd51ba919a8e2955dd1b4c7a6a1a518"
+    },
+    {
+      "type": "vhd",
+      "fileName": "turbo-client-24.9.2.1590.vhd",
+      "downloadLink": "https://start-c.turbo.net/layers/setup/24.9.2.1590/turbo-client-24.9.2.1590.vhd",
+      "SHA256Hash": "82f7b0a49a4ebcc4fa5140384ee2dd1045db825dcbfbdcec332cba9132ba10a5"
+    }
+  ]
+}

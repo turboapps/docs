@@ -1,0 +1,12 @@
+{
+  "displayName": "Studio 24.6",
+  "version": "24.6.3",
+  "releaseDate": "2024-06-25T00:00-08:00",
+  "artifacts": [
+    {
+      "type": "msi",
+      "fileName": "turbo-studio-24.6.3.msi",
+      "downloadLink": "https://start-c.turbo.net/layers/turbo/studio/download/turbo-studio-24.6.3.msi"
+    }
+  ]
+}

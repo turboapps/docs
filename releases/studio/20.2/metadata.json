@@ -1,0 +1,12 @@
+{
+  "displayName": "Studio 20.2",
+  "version": "20.2",
+  "releaseDate": "",
+  "artifacts": [
+    {
+      "type": "msi",
+      "fileName": "turbo-studio-20.2.msi",
+      "downloadLink": "https://start-c.turbo.net/layers/turbo/studio/download/turbo-studio-20.2.msi"
+    }
+  ]
+}

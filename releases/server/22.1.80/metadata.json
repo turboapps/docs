@@ -1,0 +1,12 @@
+{
+  "displayName": "Server 22.1.80",
+  "version": "22.1.80",
+  "releaseDate": "2022-01-21T00:00-08:00",
+  "artifacts": [
+    {
+      "type": "exe",
+      "fileName": "turbo-server-22.1.80.176.exe",
+      "downloadLink": "https://start-c.turbo.net/layers/turbo/server/Download/turbo-server-22.1.80.176.exe"
+    }
+  ]
+}

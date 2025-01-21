@@ -1,0 +1,12 @@
+{
+  "displayName": "Studio 21.2",
+  "version": "21.2.1463",
+  "releaseDate": "",
+  "artifacts": [
+    {
+      "type": "msi",
+      "fileName": "turbo-studio-21.2.1463.msi",
+      "downloadLink": "https://start-c.turbo.net/layers/turbo/studio/download/turbo-studio-21.2.1463.msi"
+    }
+  ]
+}

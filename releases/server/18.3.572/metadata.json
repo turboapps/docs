@@ -1,0 +1,12 @@
+{
+  "displayName": "Server 18.3.572",
+  "version": "18.3.572",
+  "releaseDate": "",
+  "artifacts": [
+    {
+      "type": "exe",
+      "fileName": "turbo-server-18.3.572.exe",
+      "downloadLink": "https://start-c.turbo.net/layers/turbo/server/Download/turbo-server-18.3.572.exe"
+    }
+  ]
+}

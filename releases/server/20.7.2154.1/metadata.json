@@ -1,0 +1,12 @@
+{
+  "displayName": "Server 20.7.2154.1",
+  "version": "20.7.2154.1",
+  "releaseDate": "2020-07-20T00:00-07:00",
+  "artifacts": [
+    {
+      "type": "exe",
+      "fileName": "turbo-server-20.7.2154.1.exe",
+      "downloadLink": "https://start-c.turbo.net/layers/turbo/server/Download/turbo-server-20.7.2154.1.exe"
+    }
+  ]
+}

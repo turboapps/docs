@@ -1,0 +1,12 @@
+{
+  "displayName": "Server 22.9.25.705",
+  "version": "22.9.25.705",
+  "releaseDate": "2022-09-19T00:00-07:00",
+  "artifacts": [
+    {
+      "type": "exe",
+      "fileName": "turbo-server-22.9.25.705.exe",
+      "downloadLink": "https://start-c.turbo.net/layers/turbo/server/Download/turbo-server-22.9.25.705.exe"
+    }
+  ]
+}

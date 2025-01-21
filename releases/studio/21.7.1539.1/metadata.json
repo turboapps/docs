@@ -1,0 +1,12 @@
+{
+  "displayName": "Studio 21.7",
+  "version": "21.7.1539.1",
+  "releaseDate": "",
+  "artifacts": [
+    {
+      "type": "msi",
+      "fileName": "turbo-studio-21.7.1539.1.msi",
+      "downloadLink": "https://start-c.turbo.net/layers/turbo/studio/download/turbo-studio-21.7.1539.1.msi"
+    }
+  ]
+}

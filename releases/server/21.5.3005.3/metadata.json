@@ -1,0 +1,12 @@
+{
+  "displayName": "Server 21.5.3005",
+  "version": "21.5.3005.3",
+  "releaseDate": "2021-05-27T00:00-07:00",
+  "artifacts": [
+    {
+      "type": "exe",
+      "fileName": "turbo-server-21.5.3005.3.exe",
+      "downloadLink": "https://start-c.turbo.net/layers/turbo/server/Download/turbo-server-21.5.3005.3.exe"
+    }
+  ]
+}

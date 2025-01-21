@@ -1,0 +1,12 @@
+{
+  "displayName": "Server 21.4.2896.6",
+  "version": "21.4.2896.6",
+  "releaseDate": "2021-04-30T00:00-07:00",
+  "artifacts": [
+    {
+      "type": "exe",
+      "fileName": "turbo-server-21.4.2896.6.exe",
+      "downloadLink": "https://start-c.turbo.net/layers/turbo/server/Download/turbo-server-21.4.2896.6.exe"
+    }
+  ]
+}

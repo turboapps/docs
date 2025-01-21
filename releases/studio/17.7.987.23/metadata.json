@@ -1,0 +1,12 @@
+{
+  "displayName": "Studio 17.7.987.23",
+  "version": "17.7.987.23",
+  "releaseDate": "2018-02-09T00:00-07:00",
+  "artifacts": [
+    {
+      "type": "msi",
+      "fileName": "turbo-studio-17.7.987.23.msi",
+      "downloadLink": "https://start-c.turbo.net/layers/turbo/studio/download/turbo-studio-17.7.987.23.msi"
+    }
+  ]
+}
