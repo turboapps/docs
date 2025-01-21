@@ -101,7 +101,7 @@ This update includes the following dependency updates:
 - Turbo VM has been updated to 24.10.17
 - Java has been updated to Temurin 21.0.4
 - Apache has been updated to 2.4.62
-- PsExec has been updated to 2.43
+- PsExec has been updated to 2.43.
 
 
 
