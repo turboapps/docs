@@ -1,6 +1,7 @@
 {
   "displayName": "Server 19.3.655",
   "version": "19.3.655",
+  "releaseDate": "2019-03-26T00:00-07:00",
   "artifacts": [
     {
       "type": "exe",

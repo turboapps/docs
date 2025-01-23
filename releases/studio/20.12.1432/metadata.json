@@ -1,6 +1,7 @@
 {
   "displayName": "Studio 20.12",
   "version": "20.12.1432",
+  "releaseDate": "2020-12-23T00:00-08:00",
   "artifacts": [
     {
       "type": "msi",

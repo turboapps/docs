@@ -1,6 +1,7 @@
 {
   "displayName": "Studio 18.10.1142",
   "version": "18.10.1142",
+  "releaseDate": "2018-10-04T00:00-07:00",
   "artifacts": [
     {
       "type": "msi",

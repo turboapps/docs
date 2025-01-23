@@ -1,6 +1,7 @@
 {
   "displayName": "Studio 20.10",
   "version": "20.10.1400",
+  "releaseDate": "2020-10-21T00:00-08:00",
   "artifacts": [
     {
       "type": "msi",

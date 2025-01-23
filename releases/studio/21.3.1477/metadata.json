@@ -1,6 +1,7 @@
 {
   "displayName": "Studio 21.3",
   "version": "21.3.1477",
+  "releaseDate": "2021-03-26T00:00-08:00",
   "artifacts": [
     {
       "type": "msi",
