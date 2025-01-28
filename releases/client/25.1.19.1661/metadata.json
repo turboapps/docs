@@ -1,0 +1,19 @@
+{
+  "displayName": "Client 25.1.19.1661",
+  "version": "25.1.19.1661",
+  "releaseDate": "2025-01-28T00:00-08:00",
+  "artifacts": [
+    {
+      "type": "exe",
+      "fileName": "turbo-client-25.1.19.1661.exe",
+      "downloadLink": "https://start-c.turbo.net/layers/setup/25.1.19.1661/turbo-client-25.1.19.1661.exe",
+      "SHA256Hash": "f05de2a4c61829746d84dc98c70d099b19bb80a4abbdf294a651750517a9ab41"
+    },
+    {
+      "type": "msi",
+      "fileName": "turbo-client-25.1.19.1661.msi",
+      "downloadLink": "https://start-c.turbo.net/layers/setup/25.1.19.1661/turbo-client-25.1.19.1661.msi",
+      "SHA256Hash": "dc22b33f6e3eaf2c9feb24194d2d247038d080ada8caae6262d7e3d4bd4bfc08"
+    }
+  ]
+}
