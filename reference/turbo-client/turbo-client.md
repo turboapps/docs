@@ -92,8 +92,65 @@ Running the Turbo Client installer with these command line flags can change the 
     <tr>
        <td><p><strong>turbo config flags</strong></p></td>
        <td><p>Turbo Client installs with the specified turbo config setting. See turbo config for available flags.</p></td>
-    </tr>
+      </tr>
 </table>
+
+**Exit Codes**
+
+When using the uninstall command, SandboxManager.exe will return one of the following exit codes:
+
+<table>
+      <tr>
+         <th>
+            <p>Exit Code</p>
+         </th>
+         <th>
+            <p>Description</p>
+         </th>
+      </tr>
+      <tr>
+         <td>
+            <p>0</p>
+         </td>
+         <td>
+            <p>Success - The operation completed successfully</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>1</p>
+         </td>
+         <td>
+            <p>Unknown Error - An unexpected error occurred</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>2</p>
+         </td>
+         <td>
+            <p>Elevation Error - The operation requires administrator privileges</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>3</p>
+         </td>
+         <td>
+            <p>Install Error - An error occurred during installation</p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p>4</p>
+         </td>
+         <td>
+            <p>Uninstall Error - An error occurred during uninstallation</p>
+         </td>
+      </tr>
+</table>
+
+Note: When uninstalling with administrator privileges, ensure all containers are stopped and no Turbo processes are running to avoid potential uninstallation issues.
 
 ### Uninstalling the Turbo Client
 
