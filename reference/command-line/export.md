@@ -18,14 +18,37 @@ Usage: turbo.exe export <options> <image> <path>
 
 ```
 # Export an image to the local file system
-> turbo export image C:\path\to\image.svm
+> turbo export microsoft/vscode-x64 C:\path\to\image.svm
+
+# Export the untagged version of an image to the local file system
+> turbo export microsoft/vscode-x64: C:\path\to\image.svm
+
+# Export a specific tagged version of an image
+> turbo export microsoft/vscode-x64:1.90.2 C:\path\to\image.svm
+
+# Export a specific image version using its hash prefix
+> turbo export microsoft/vscode-x64#8176cb02 C:\path\to\image.svm
 
 # Export an image to a network share
-> turbo export image \\server\folder\image.svm
+> turbo export microsoft/vscode-x64 \\server\folder\image.svm
 
 # Export an image to a portable exe
-> turbo export --type=exe image C:\path\to\image.exe
+> turbo export --type=exe microsoft/vscode-x64 C:\path\to\image.exe
 ```
+
+### Handling Multiple Matches
+
+If your export command matches multiple images, you'll see an error like this:
+
+```
+Error: vscode-x64 matched multiple images
+
+microsoft/vscode-x64:1.97
+microsoft/vscode-x64:1.90.2
+microsoft/vscode-x64
+```
+
+In this case, specify the exact image you want to export by using its full name, including the tag or hash.
 
 ### JSON output
 

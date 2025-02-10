@@ -19,9 +19,3 @@ MSI outputs simply wrap the standalone application exe into an MSI package to ad
 To build an MSI, go to the **Setup** section of Turbo Studio, enter the MSI details and click **Build MSI**. MSIs can be deployed with existing desktop management tools or directly by the end users. See the [reference](../../reference/command-line/command-line-interface.html) for details on MSI settings.
 
 An enterprise license for Turbo Studio is required to enable MSI outputs. Contact our [sales team](mailto:sales@turbo.net) for more information.
-
-### Turbo EXE
-
-A Turbo EXE is a portable executable that packages the application with the Turbo client. When an application is published as a Turbo EXE, the application is pushed to the [Hub](https://turbo.net/hub) which enables features such as deploying application updates to users. See the [hub docs](../../hub/overview/hub.html) for additional features.
-
-To produce a Turbo exe, set the **Project Type** to **Portable Application** in Turbo Studio. A [Turbo.net](https://turbo.net) account is required.
