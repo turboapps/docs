@@ -13,14 +13,16 @@ Usage: config <options>
                                       user
       --as-override                 Sets the All Users settings as the values which override the user values
       --block-trusted-source=VALUE  Add a source hub to the blocked sources list. Use * to block all hubs by default.
-      --container-path=VALUE        Overrides container storage to the specified path
+      --container-path=VALUE        Overrides session storage to the specified path
       --debug-vm-path=VALUE         Path to debug VM
       --disable=VALUE               Disables a feature: DirectDownload, MergeIsolation, TurboDrive, LocalNetworkAccess,
-                                      ExecutableCache, AutoPrecache, Subscriptions, AutoRegister
+                                      ExecutableCache, AutoPrecache, Subscriptions, AutoRegister, Offline,
+                                      RemoteSandbox, P2PDownload
       --domain=VALUE                The domain to log into
       --enable=VALUE                Enables a feature: DirectDownload, MergeIsolation, TurboDrive, LocalNetworkAccess,
-                                      ExecutableCache, AutoPrecache, Subscriptions, AutoRegister
-      --format=VALUE                Use the specified format for output. Supported values: json
+                                      ExecutableCache, AutoPrecache, Subscriptions, AutoRegister, Offline,
+                                      RemoteSandbox, P2PDownload
+      --format=VALUE                Use the specified format for output. Supported values: json, json-stream
       --gc-expiration=VALUE         The number of days a session can be unused before it can be garbage collected. Set
                                       to 0 to disable.
       --gci-expiration=VALUE        The number of days an image can be unused before it can be garbage collected. Set
@@ -35,11 +37,14 @@ Usage: config <options>
       --no-domain-verify            Disables verification of the domain. Setting the domain without verification may
                                       result in slower performance during runtime and is not recommended.
       --permission=VALUE            Specifies the permission for the affected settings. Supported values: inherit, write
+      --remote-sandbox-path=VALUE   Path to remote sandbox storage
       --remove-trusted-source=VALUE Remove a source hub from the trusted sources list. Use * to restore default
                                       behavior.
       --reset                       Reset configuration to default values
-      --storage-path=VALUE          Path to local container and image storage
+      --storage-path=VALUE          Path to local session and image storage
       --subscription-interval=VALUE The number of minutes between subscription update checks. Defaults to 20 minutes.
+      --support-contact=VALUE       Sets custom support contact text to replace the default "Please contact support@
+                                      turbo.net". Use "default" to revert or an empty string to remove the message.
       --using=VALUE                 Use specified images as temporary dependencies
       --wait-after-error            Leave session open after error
       --wait-after-exit             Leave session open after it exits
@@ -119,3 +124,36 @@ The configuration settings for Turbo can be reset to their default values by iss
 ### JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain either a `configuration` object with information about configuration or an `error` object if command failed.
+
+### Set the Remote Sandbox Path
+
+The remote sandbox path specifies the location where secured, sandboxed files are stored. This feature enhances security by storing isolated folders and files in a location inaccessible to end users, protecting important intellectual property such as software source code files.
+
+To set the remote sandbox path:
+
+```
+> turbo config --remote-sandbox-path=C:\ProgramData\Turbo\RemoteSandbox --all-users
+Remote sandbox path: C:\ProgramData\Turbo\RemoteSandbox (inherited by administrator)
+```
+
+Note: The remote sandbox feature must be enabled separately using the `--enable=RemoteSandbox` flag.
+
+### Customize Support Contact Information
+
+The support contact setting allows you to customize the error message that users see when they encounter issues. This is particularly useful for organizations that want to direct users to their own helpdesk rather than Turbo's support.
+
+To set a custom support contact message:
+
+```
+> turbo config --support-contact="Please contact your IT helpdesk for assistance."
+Support contact message: Please contact your IT helpdesk for assistance.
+```
+
+To remove the support contact message entirely:
+
+```
+turbo config --support-contact=""
+Support contact message:
+```
+
+This setting allows organizations to maintain control over their support processes and ensure that end users are directed to the appropriate resources when they need assistance.
