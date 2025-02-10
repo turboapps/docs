@@ -91,7 +91,7 @@ Image cache size: unlimited
 
 ### Configure Auto-Precache
 
-Auto-precache controls whether font and DLL caching is automatically performed when images are acquired through pull, import, or subscribe commands. As of version 25.1, this feature is disabled by default to improve initial performance. Applications should detect required fonts and DLLs from the registry or fonts folder at runtime.
+Auto-precache controls whether font and DLL caching is automatically performed when images are acquired through pull, import, or subscribe commands. As of version 25.1.19.1661, this feature is disabled by default.
 
 To enable auto-precache:
 ```
