@@ -1,0 +1,26 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "description": "This is the official Git repository for Turbo's public documentation.",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/turboapps/docs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/turboapps/docs/issues"
+  },
+  "homepage": "https://github.com/turboapps/docs#readme",
+  "devDependencies": {
+    "vitepress": "^1.6.3"
+  }
+}

@@ -1,106 +1,131 @@
-# Turbo Documentation
+## VitePress Turbo Documentation
 
-This is the official Git repository for Turbo's public documentation. 
+### Prerequisites
 
-Live version of the docs can be found at http://turbo.net/docs
+Ensure you have the following installed:
 
-## Writing the Docs
+- Node.js v22.14.0 or later
+- npm v10.9.2 or later
+
+You can check your versions by running:
+
+```bash
+node --version
+npm --version
+```
+
+### Installation
+
+Install VitePress and its dependencies:
+
+```bash
+npm install
+```
+
+### Running Locally
+
+The following npm scripts are available:
+
+```bash
+# Start the development server
+npm run docs:dev
+
+# Build the documentation site
+npm run docs:build
+
+# Preview the built site locally
+npm run docs:preview
+```
+
+The development server will be available at `http://localhost:5173` by default.
+
+## Writing Documentation
 
 ### Style Guide
 
-When contributing to the docs on Turbo, please take the following style guidelines into consideration. 
+When contributing to the Turbo documentation, please follow these style guidelines:
 
-**Code and Command-line Styling**
+#### Code and Command-line Styling
 
-- Command-line comment: All comments should have a # followed by a space and the first word should be capitalized.
+- Command-line comments should start with `#` followed by a space, with the first word capitalized
+- Use `turbo` instead of `spoon` in command-line documentation
+- Use fenced code blocks with language specification for multi-line code:
+  ```bash
+  # Example command
+  turbo run firefox
+  ```
+- Use single backticks for inline code references
 
-```
-# This is formatted properly :)
+#### VitePress Features
 
-#this is not :( 
-```
+- Use VitePress containers for tips, warnings, and notes:
+  ```md
+  ::: tip
+  This is a tip
+  :::
 
-- Command-line input
+  ::: warning
+  This is a warning
+  :::
+  ```
+- Use frontmatter for page metadata when needed:
+  ```md
+  ---
+  title: Page Title
+  description: Page description
+  ---
+  ```
 
-```
-> turbo build -n="my image" /path/to/turbo.me
-```
+### Adding Images
 
-- Command-line output
+- Place images in the `src/images` directory
+- Use relative paths from the markdown file location
+- Use standard markdown image syntax:
+  ```md
+  ![Alt text](../images/example.png)
+  ```
 
-
-- Command-line spacing
-
-
-
-```
-building "my image" from /path/to/turbo.me
-```
-
-- Always use `turbo` not `spoon` in the command line documentation.
-- All code blocks should be 'fenced' with 3 backticks (a la [GFM](http://github.com/github-flavored-markdown)). Inline code styles (i.e. this is a sample command: `turbo run`) only use 1 backtick. The syntax highlighting to use can be specified after the top 3 backticks (not available for inline code). 
-- Use inline code styles sparingly. 
-
-**Other Styling**
-
-- Inline paths should be **bolded**. --> Example: navigate to **C:\Users** 
-- Internal links to other documents should be relative paths
-	* Other doc links: /docs/[topic]/[section]/[document]
-	* To the hub: /hub
-	* To contact page: /contact
-
-### Adding images
-
-- Put the image in the same folder as the md file
-- Modify the path in the link based on the example below
-- If you need to specify image dimensions, use HTML
-- Image file names should be all lower case
+### Project Structure
 
 ```
-# GitHub location
-https://github.com/turboapps/docs/tree/master/doc/getting_started/tour/image.png
-
-# Markdown would be
-![](/docs/getting_started/tour/image.png)
+docs/
+├── src/                    # Documentation source files
+│   ├── getting-started/    # Getting started guides
+│   ├── deploying/         # Deployment documentation
+│   ├── reference/         # Reference documentation
+│   ├── server/           # Server documentation
+│   ├── studio/           # Studio documentation
+│   └── vm/               # VM documentation
+├── .vitepress/            # VitePress configuration
+│   └── config.js         # Site configuration
+└── package.json          # Project dependencies
 ```
 
-### Contributing 
+### Contributing
 
 #### How to Contribute
 
-If you are not a member of the **Turbo** org (AKA you don't work at Turbo), fork this repo, make changes, commit, and submit a pull request.
+1. Fork this repository
+2. Make your changes
+3. Commit your changes
+4. Submit a pull request
 
-Some basic terminology:
-- Topic: The horizontal items in the top navbar.
-- Section: Items on the left nav, a topic contains a list of documents
-- Document: Items listed under a section on the left nav. A document maps to a single web page.
+#### Adding New Content
 
-The directory to store your document should be /[topic]/[section]/[document]. 
-If the topic and title of the document contains illegal file system characters, it must be normalized.
-This is done by lower casing the path, replacing spaces with '_', and deleting illegal windows file system characters.
-For example, the "What is Turbo?" section under the topic "Getting Started" is stored in the directory "/getting_started/what_is_turbo". The md file names inside of the directory can be *.md
+1. Create your markdown file in the appropriate section under `src/`
+2. Update the VitePress configuration in `.vitepress/config.js` if needed:
+   - Add to navigation if it's a new section
+   - Add to sidebar if it's a new page in an existing section
 
-#### Adding a Page
+#### Navigation Structure
 
-If adding a document to an *existing section*, create the corresponding directory /[topic]/[section]/[document] and add your new **.md** file to it, then add the document to the **docs.yaml** file following existing patterns. 
+The documentation structure is defined in `.vitepress/config.js`:
+- Top-level navigation in the `nav` array
+- Sidebar navigation in the `sidebar` object
+- Each section can have its own sidebar configuration
 
-If adding a document to a new section, create a new folder under the appropriate topic. Add your new **.md** file. Then, add the new section and documents you are creating to the **docs.yaml** file, rearranging the ordering of the other sections and documents as you see fit. 
-
-#### Creating a New Topic
-
-To add a new topic to the top navbar, first create a new folder in the /doc directory corresponding to your topic. Then, edit the **docs.yaml** file, adding your new topic and rearranging the topic ordering as you see fit. Follow existing patterns when editing this file. 
-
-#### docs.yaml
-
-The overall structure of the page is dictated by the **docs.yaml** file, located at /docs.yaml.
-Each entry in the yaml file specifies a topic that will appear in the top navbar of the docs page. A topic has the following two properties:
-
-1. A `title`. This is the actual wording that will appear in the top nav bar
-2. A list of `sections`. This list is used to populate the topic's left sidebar. 
-
-Topics are rendered left-to-right in the order than the appear in the **docs.yaml** file.
-
-Each topic has an attribute called `sections`. Each section must in turn have the following attributes: 
-
-1. A `title`. This will be the text that appears for that section in the containing topic's left sidebar. The `title` is also used as the basis for forming that section's `filename`. The `filename` for a section is the `title` with spaces translated to '_' and with all special characters (not a-z, A-Z, 0-9, -, or _) trimmed out. 
-2. A list of `documents`. This list is used to populate the section's expanded items, and each of these entries links to single web page. Each `document` must be a string attribute that will be used as its `title` in the left sidebar.
+Remember to:
+- Use clear, descriptive titles
+- Maintain consistent formatting
+- Follow the existing structure
+- Test your changes locally before submitting
