@@ -334,17 +334,31 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: 'Introduction', link: '/deploying/' },
-            { text: 'AWS AppStream', link: '/deploying/aws-appstream/aws-appstream-2.0' },
-            { text: 'Citrix', link: '/deploying/citrix/citrix' },
-            { text: 'Intune', link: '/deploying/intune/intune' },
-            { text: 'Offline Mode', link: '/deploying/offline-mode/offline-mode' },
-            { text: 'Parallels RAS', link: '/deploying/parallels-ras/parallels-ras' },
-            { text: 'Portable EXEs and MSIs', link: '/deploying/portable-exes-and-msis/portable-exes-and-msis' },
-            { text: 'System Center (SCCM)', link: '/deploying/system-center-sccm/system-center-sccm' },
-            { text: 'To Desktop', link: '/deploying/to-a-desktop/to-a-desktop' },
-            { text: 'To Turbo Server', link: '/deploying/to-turbo-server/to-turbo-server' },
-            { text: 'To TurboNet', link: '/deploying/to-turbonet/to-turbonet' },
-            { text: 'Turbo Client', link: '/deploying/turbo-client/turbo-client' },
+            { text: 'AWS AppStream', link: '/deploying/aws-appstream' },
+            {
+              text: 'Citrix',
+              collapsed: true,
+              items: [
+                { text: 'Introduction', link: '/deploying/citrix-guide/' },
+                { text: 'Command Line', link: '/deploying/citrix-guide/command-line' },
+                { text: 'Scripts', link: '/deploying/citrix-guide/scripts' }
+              ]
+            },
+            {
+              text: 'Desktop',
+              collapsed: true,
+              items: [
+                { text: 'Introduction', link: '/deploying/desktop-guide/' },
+                { text: 'Default Apps', link: '/deploying/desktop-guide/default-apps' }
+              ]
+            },
+            { text: 'Intune', link: '/deploying/intune' },
+            { text: 'Offline Mode', link: '/deploying/offline-mode' },
+            { text: 'Parallels RAS', link: '/deploying/parallels-ras' },
+            { text: 'Portable EXEs', link: '/deploying/portable-exes' },
+            { text: 'System Center', link: '/deploying/system-center' },
+            { text: 'Turbo Server', link: '/deploying/turbo-server' },
+            { text: 'Turbo Client', link: '/deploying/turbo-client' },
             {
               text: 'Tips',
               collapsed: true,
