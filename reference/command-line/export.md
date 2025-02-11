@@ -9,7 +9,7 @@ Usage: turbo.exe export <options> <image> <path>
 
 <options> available:
       --format=VALUE         Use the specified format for output. Supported values: json
-      --type=VALUE           Export image type. Supported values: svm, exe
+      --type=VALUE           Export image type. Supported values: svm
       --wait-after-error     Leave process open after error
       --wait-after-exit      Leave process open after it exits
 ```
@@ -31,9 +31,6 @@ Usage: turbo.exe export <options> <image> <path>
 
 # Export an image to a network share
 > turbo export microsoft/vscode-x64 \\server\folder\image.svm
-
-# Export an image to a portable exe
-> turbo export --type=exe microsoft/vscode-x64 C:\path\to\image.exe
 ```
 
 ### Handling Multiple Matches

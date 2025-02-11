@@ -58,7 +58,7 @@ Windows Applications can be managed from the **Application Settings** page and c
   If a user installs an application while they have permission, but that permission is later revoked, an error message will be displayed when the application is launched.
 
 - **VM Version**: The VM version is a version string that specifies which Turbo VM version will be used for execution. The available VM versions are sourced from the Turbo Virtual Machine system image. See [VM Version](../../hub/repositories/repository-settings.html#vm-version).
-- **Enable Assembly cache**: Enables pre-caching of application DLL and EXE files on the Application Servers’ local disk for faster loading. See [Use DLL cache](../../hub/repositories/repository-settings.html#use-dll-cache).
+- **Enable Assembly cache**: Enables pre-caching of application assemblies for faster loading, at the cost of additional disk space. Particularly beneficial for complex applications with numerous DLLs and EXEs, but typically not required for smaller applications. See [Use DLL cache](../../hub/repositories/repository-settings.html#use-dll-cache).
 - **Launch on Install**: Automatically launch the application when it is registered onto a device, such as when running the `subscribe <workspace> --register` commands from the Turbo client.
 - **Run as Administrator**: Runs the application with administrator privileges.
 - **Container Name**: The container name that is used when launching the application. By default the image's name is used.

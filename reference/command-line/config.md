@@ -88,6 +88,20 @@ Image cache size: 2.00 GB
 > turbo config --image-cache-size=0
 Image cache size: unlimited
 ```
+
+### Configure Auto-Precache
+
+Auto-precache controls whether font and DLL caching is automatically performed when images are acquired through pull, import, or subscribe commands. As of version 25.1.19.1661, this feature is disabled by default.
+
+To enable auto-precache:
+```
+# Enable automatic font and DLL caching
+> turbo config --enable=AutoPrecache
+
+# Disable automatic font and DLL caching (default)
+> turbo config --disable=AutoPrecache
+```
+
 ### Example
 
 ```

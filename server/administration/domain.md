@@ -181,6 +181,8 @@ Administrators may manually log off users by clicking the **Close** action, whic
 
   Images in the cache are removed if the repo's revision are deleted from the Hub. Cached images may be manually removed from the server by deleting the file from the Windows Explorer.
 
+- **Peer-to-peer Image Distribution**: Enables peer-to-peer image sharing through the torrent protocol. Requires port 6881 to be open.
+
 - **Hub Storage Path**: Sets the hub storage path to a custom path. Ensure the target path is empty and not used by other applications, and has sufficient storage for storing all images and persisted data. The path can be changed later, but will require momentary downtime of the hub depending on how much data will be moved. The service user must have full access to the target path. Please see the [Backup and Recovery](../../server/backup-and-recovery/backup-and-recovery.html#backup) documentation for additional details and troubleshooting.
 
 - **Hub CDN URL**: The Hub block storage CDN URL. The Hub CDN URL must be a valid absolute http(s) URL. If the URL is not specified, blocks will be fetched from the original Hub URL.
@@ -218,6 +220,8 @@ Clicking the **Reboot Server** button will reboot the server (shutdown and resta
 The **Service Information** section displays the start time and up time of the Turbo Server service.
 
 The **Pending Windows Updates** section displays all Windows updates that require a system reboot and are pending install on the Windows server.
+
+The **Tracker Status** section displays peer-to-peer image distribution tracker status.
 
 The **Operations** table lists all operations that are managed by the Turbo service as well as their last know status. If an operation failed to complete successfully, the operations table will report an Error status and a short description of the error.
 
