@@ -126,7 +126,7 @@ export default defineConfig({
               text: 'Administration',
               collapsed: true,
               items: [
-                { text: 'Overview', link: '/server/administration/overview' },
+            { text: 'Overview', link: '/server/administration/index' },
                 { text: 'Domain', link: '/server/administration/domain' },
                 { text: 'General', link: '/server/administration/general' },
                 { text: 'Hub', link: '/server/administration/hub' },
@@ -141,7 +141,7 @@ export default defineConfig({
               text: 'Applications',
               collapsed: true,
               items: [
-                { text: 'Overview', link: '/server/applications/overview' },
+                { text: 'Overview', link: '/server/applications/index' },
                 { text: 'Access Control', link: '/server/applications/access-control' },
                 { text: 'KMS Licensing', link: '/server/applications/kms-licensing' }
               ]
@@ -162,7 +162,7 @@ export default defineConfig({
                 { text: 'SAML', link: '/server/authentication/saml' }
               ]
             },
-            { text: 'Backup and Recovery', link: '/server/backup-and-recovery/backup-and-recovery' },
+            { text: 'Backup and Recovery', link: '/server/backup-and-recovery' },
             {
               text: 'Cloud Storage',
               collapsed: true,
@@ -176,16 +176,25 @@ export default defineConfig({
                 { text: 'OneDrive', link: '/server/cloud-storage/onedrive' }
               ]
             },
-            { text: 'Image Distribution', link: '/server/image-distribution/image-distribution' },
-            { text: 'Integrations', link: '/server/integrations/integrations' },
-            { text: 'Licensing', link: '/server/licensing/licensing' },
-            { text: 'Logs', link: '/server/logs/logs' },
-            { text: 'Monitoring', link: '/server/monitoring/monitoring' },
-            { text: 'Network and Load Balancing', link: '/server/network-and-load-balancing/network-and-load-balancing' },
-            { text: 'Optimization', link: '/server/optimization/optimization' },
-            { text: 'Portal', link: '/server/portal/overview' },
-            { text: 'Security', link: '/server/security/security' },
-            { text: 'Advanced Topics', link: '/server/advanced-topics/advanced-topics' },
+            { text: 'Peer to Peer', link: '/server/peer-to-peer' },
+            {
+              text: 'Integrations',
+              collapsed: true,
+              items: [
+                { text: 'Blackboard Learn', link: '/server/integrations/blackboard-learn' },
+                { text: 'Canvas LMS', link: '/server/integrations/canvas-lms' },
+                { text: 'Moodle', link: '/server/integrations/moodle' },
+                { text: 'OpenAI', link: '/server/integrations/openai' }
+              ]
+            },
+            { text: 'Licensing', link: '/server/licensing' },
+            { text: 'Logs', link: '/server/logs' },
+            { text: 'Monitoring', link: '/server/monitoring' },
+            { text: 'Network and Load Balancing', link: '/server/network-and-load-balancing' },
+            { text: 'Optimization', link: '/server/optimization' },
+            { text: 'Portal', link: '/server/portal/index' },
+            { text: 'Security', link: '/server/security' },
+            { text: 'Advanced Topics', link: '/server/advanced-topics/index' },
             { text: 'Troubleshooting', link: '/server/troubleshooting/admininstration' },
             { text: 'Upgrading', link: '/server/upgrading/upgrading' }
           ]

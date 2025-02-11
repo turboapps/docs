@@ -10,9 +10,9 @@ Turbo Application Server allows you to run application workloads on a server for
 
 Turbo Server is available for deployment on-premises, as well as in the cloud via the Turbo Server Azure Marketplace Image (AMI).
 
-For more information on setting up Turbo Server on-premises, please refer to the [On-Premises](../../server/setup-and-deployment/deploying-on-premises.html) documentation.
+For more information on setting up Turbo Server on-premises, please refer to the [On-Premises](/server/setup-and-deployment/deploying-on-premises) documentation.
 
-For more information on setting up Turbo Server in Azure, please refer to the [Azure Marketplace Image (AMI)](../../server/setup-and-deployment/deploying-to-azure.html) documentation.
+For more information on setting up Turbo Server in Azure, please refer to the [Azure Marketplace Image (AMI)](/server/setup-and-deployment/deploying-to-azure) documentation.
 
 ### Architecture
 
@@ -30,7 +30,7 @@ If Turbo is used to deliver applications to endpoints or third-party streaming p
 
 #### Network Diagram
 
-![Turbo Network Diagram (Basic)](../../images/Turbo_Network_Diagram__Basic_.png)
+![Turbo Network Diagram (Basic)](../images/Turbo_Network_Diagram__Basic_.png)
 
 ### Technology
 
