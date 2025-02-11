@@ -32,11 +32,11 @@ export default defineConfig({
     },
     nav: [
       { text: 'Getting Started', link: '/getting-started/' },
-      { text: 'Studio', link: '/studio/overview/overview' },
-      { text: 'Server', link: '/server/overview/overview' },
-      { text: 'Deploying', link: '/deploying/overview/overview' },
-      { text: 'VM', link: '/vm/virtual-machine/virtual-machine' },
-      { text: 'Reference', link: '/reference/command-line/command-line-interface' }
+      { text: 'Studio', link: '/studio/' },
+      { text: 'Server', link: '/server/' },
+      { text: 'Deploying', link: '/deploying/' },
+      { text: 'VM', link: '/vm/' },
+      { text: 'Reference', link: '/reference/command-line/' }
     ],
     sidebar: {
       '/getting-started/': [
@@ -55,7 +55,7 @@ export default defineConfig({
           text: 'Studio',
           collapsed: false,
           items: [
-            { text: 'Overview', link: '/studio/overview/overview' },
+            { text: 'Introduction', link: '/studio/' },
             {
               text: 'Working with Turbo Studio',
               collapsed: true,
@@ -98,7 +98,7 @@ export default defineConfig({
           text: 'Server',
           collapsed: false,
           items: [
-            { text: 'Overview', link: '/server/overview/overview' },
+            { text: 'Introduction', link: '/server/' },
             { text: 'Setup and Deployment', link: '/server/setup-and-deployment/deploying-on-premises' },
             {
               text: 'Administration',
@@ -178,7 +178,7 @@ export default defineConfig({
               text: 'Command Line',
               collapsed: true,
               items: [
-                { text: 'Overview', link: '/reference/command-line/command-line-interface' },
+                { text: 'Introduction', link: '/reference/command-line/' },
                 { text: 'build', link: '/reference/command-line/build' },
                 { text: 'cache', link: '/reference/command-line/cache' },
                 { text: 'commit', link: '/reference/command-line/commit' },
@@ -287,17 +287,11 @@ export default defineConfig({
           text: 'VM',
           collapsed: false,
           items: [
-            {
-              text: 'Virtual Machine',
-              collapsed: true,
-              items: [
-                { text: 'Overview', link: '/vm/virtual-machine/virtual-machine' },
-                { text: 'Folder Variables', link: '/vm/virtual-machine/folder-variables' },
-                { text: 'Runtime Settings', link: '/vm/virtual-machine/runtime-settings' }
-              ]
-            },
-            { text: 'XML Configuration', link: '/vm/xml-configuration/xml-configuration' },
-            { text: 'Advanced Topics', link: '/vm/advanced-topics/dep-compatibility' },
+            { text: 'Introduction', link: '/vm/' },
+            { text: 'Folder Variables', link: '/vm/folder-variables' },
+            { text: 'Runtime Settings', link: '/vm/runtime-settings' },
+            { text: 'XML Configuration', link: '/vm/xml-configuration' },
+            { text: 'Advanced Topics', link: '/vm/dep-compatibility' },
             {
               text: 'Troubleshooting',
               collapsed: true,
@@ -339,7 +333,7 @@ export default defineConfig({
           text: 'Deploying',
           collapsed: false,
           items: [
-            { text: 'Overview', link: '/deploying/overview/overview' },
+            { text: 'Introduction', link: '/deploying/' },
             { text: 'AWS AppStream', link: '/deploying/aws-appstream/aws-appstream-2.0' },
             { text: 'Citrix', link: '/deploying/citrix/citrix' },
             { text: 'Intune', link: '/deploying/intune/intune' },
