@@ -36,8 +36,7 @@ export default defineConfig({
       { text: 'Server', link: '/server/overview/overview' },
       { text: 'Deploying', link: '/deploying/overview/overview' },
       { text: 'VM', link: '/vm/virtual-machine/virtual-machine' },
-      { text: 'Reference', link: '/reference/command-line/command-line-interface' },
-      { text: 'About', link: '/about/what-is-turbo/what-is-turbo' }
+      { text: 'Reference', link: '/reference/command-line/command-line-interface' }
     ],
     sidebar: {
       '/getting-started/': [
@@ -341,7 +340,7 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: 'Overview', link: '/deploying/overview/overview' },
-            { text: 'AWS AppStream', link: '/deploying/aws-appstream/aws-appstream' },
+            { text: 'AWS AppStream', link: '/deploying/aws-appstream/aws-appstream-2.0' },
             { text: 'Citrix', link: '/deploying/citrix/citrix' },
             { text: 'Intune', link: '/deploying/intune/intune' },
             { text: 'Offline Mode', link: '/deploying/offline-mode/offline-mode' },
@@ -352,7 +351,14 @@ export default defineConfig({
             { text: 'To Turbo Server', link: '/deploying/to-turbo-server/to-turbo-server' },
             { text: 'To TurboNet', link: '/deploying/to-turbonet/to-turbonet' },
             { text: 'Turbo Client', link: '/deploying/turbo-client/turbo-client' },
-            { text: 'Tips', link: '/deploying/tips/tips' }
+            {
+              text: 'Tips',
+              collapsed: true,
+              items: [
+                { text: 'API Keys', link: '/deploying/tips/api-keys' },
+                { text: 'Windows Firewall', link: '/deploying/tips/windoww-firewall' }
+              ]
+            }
           ]
         }
       ],
