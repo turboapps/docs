@@ -60,7 +60,7 @@ export default defineConfig({
               text: 'Working with Turbo Studio',
               collapsed: true,
               items: [
-                { text: 'Getting Started', link: '/studio/working-with-turbo-studio/getting-started' },
+                { text: 'Getting Started', link: '/studio/working-with-turbo-studio/' },
                 { text: 'Clean Capture System', link: '/studio/working-with-turbo-studio/clean-capture-system' },
                 { text: 'Command Line', link: '/studio/working-with-turbo-studio/command-line' },
                 { text: 'Configuration', link: '/studio/working-with-turbo-studio/configuration' },
@@ -94,6 +94,7 @@ export default defineConfig({
               text: 'Scenarios',
               collapsed: true,
               items: [
+                { text: 'Overview', link: '/studio/scenarios/' },
                 { text: 'Browser Ad Blocking', link: '/studio/scenarios/browser-ad-blocking' },
                 { text: 'Integration with Native Apps', link: '/studio/scenarios/integration-with-native-applications' },
                 { text: 'Legacy IE and Java', link: '/studio/scenarios/legacy-internet-explorer-and-java' },
@@ -108,7 +109,7 @@ export default defineConfig({
               text: 'Advanced Topics',
               collapsed: true,
               items: [
-                { text: 'Large Applications', link: '/studio/advanced-topics/large-applications' },
+                { text: 'Overview', link: '/studio/advanced-topics/' },
                 { text: 'Startup/Shutdown Scripts', link: '/studio/advanced-topics/startupshutdown-scripts-and-shims' }
               ]
             }
