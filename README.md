@@ -87,10 +87,25 @@ When contributing to the Turbo documentation, please follow these style guidelin
 
 ### Project Structure
 
+The documentation follows these file organization principles:
+
+1. **Directory Structure**
+   - Single-file content belongs directly in the parent directory (e.g., `dependencies.md`)
+   - Use directories only when organizing multiple related files
+   - The `images` and `releases` directories are exceptions to these rules
+
+2. **Index Files**
+   - Each multi-file directory must have an `index.md` that introduces the section
+   - The main content file in a directory should be `index.md` (e.g., `turbo-shell/index.md`)
+   - For guides/tutorials, use a descriptive filename and include a separate `index.md` for section overview
+
 ```
 docs/
 ├── src/                    # Documentation source files
 │   ├── getting-started/    # Getting started guides
+│   │   ├── index.md       # Section overview
+│   │   ├── guide.md       # Getting started guide
+│   │   └── advanced.md    # Advanced usage
 │   ├── deploying/         # Deployment documentation
 │   ├── reference/         # Reference documentation
 │   ├── server/           # Server documentation

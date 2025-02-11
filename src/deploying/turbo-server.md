@@ -8,7 +8,7 @@ Turbo Server also supports other application types, such as **Web Applications**
 
 #### Using Turbo Studio
 
-Turbo Studio provides a feature to deploy applications directly to your Turbo Server. After completing the build process, see the [Build](../../studio/working-with-turbo-studio/getting-started.html) section for details, click on the **Publish to Server** option on the ribbon menu.
+Turbo Studio provides a feature to deploy applications directly to your Turbo Server. After completing the build process, see the [Build](/studio/working-with-turbo-studio/getting-started) section for details, click on the **Publish to Server** option on the ribbon menu.
 
 From the publish dialog, click **change** next to the publish server and login to the your Turbo Server. Once you have published the application it will be added to your Turbo Server Hub.
 
@@ -16,19 +16,19 @@ You will now see your application in your hub list in the administration site. F
 
 #### Using Command Line
 
-![Server admin cli push image](../../images/admin-hub-push-cli.png)
+![Server admin cli push image](../images/admin-hub-push-cli.png)
 
 Complete the following steps to add a new application image to Turbo Hub Server:
 
 1. Install the Turbo Client for Windows platform.
 
-2. Connect the client to your hub server using the `turbo config` command. See [Config Command](../../reference/command-line/config.html) for more information.
+2. Connect the client to your hub server using the `turbo config` command. See [Config Command](/reference/command-line/config) for more information.
 
 ```
 > turbo config --hub=http://[hubserver]
 ```
 
-3. Log in as a hub administrator account or use a **system** API key. This is done using the `turbo login` command. See [Login Command](../../reference/command-line/login.html) for more information.
+3. Log in as a hub administrator account or use a **system** API key. This is done using the `turbo login` command. See [Login Command](/reference/command-line/login) for more information.
 
 ```
 > turbo login admin-user
@@ -36,7 +36,7 @@ Complete the following steps to add a new application image to Turbo Hub Server:
 > turbo login --api-key=6g8BwsIlU7ezl_CMIZ_0PYBwK6WVAUZdx1mxYO1WFOg
 ```
 
-4. Create your container image. See [Working with Containers](../../studio/working-with-containers/containers.html) for more information on ways to create container images.
+4. Create your container image. See [Working with Containers](/studio/working-with-containers/containers) for more information on ways to create container images.
 
 As an example, we will make a create an empty container that executes the native notepad.exe application.
 
@@ -62,7 +62,7 @@ Pushing image mozilla/firefox-base:68.0.1 to mozilla/firefox-base:68.0.1
 Error: Push failed. This user may not be authorized to push to the mozilla repository.
 ```
 
-The current logged in user may not be an administrator of the Hub server. Add the user to the administrators group. For more information refer to [Managing Users and Authentication](../../server/administration/users.html).
+The current logged in user may not be an administrator of the Hub server. Add the user to the administrators group. For more information refer to [Managing Users and Authentication](/server/administration/users).
 
 **NOTE:** If you add the user to the administrators group after already attempting to push an image to the Hub server, you may have to wait up to 5 minutes for the permissions to propagate to the Hub server. Either switch to an API key based login, or restart the Hub server process and try again.
 
@@ -74,10 +74,10 @@ Applications must first be added to the Turbo Server Hub before they can be adde
 
 If you have not yet created a workspace, you may do so by accessing the Turbo Server administration site at: `https://[server]/admin`. Navigate to the **Workspaces** tab, click **Add Workspace**, and submit your desired workspace settings.
 
-![Server admin workspaces](../../images/admin-workspaces.png)
+![Server admin workspaces](../images/admin-workspaces.png)
 
 Then open the Workspace administration site by clicking on the **Manage** link. Navigate to the **Applications** tab, click **Add > Windows Application**, and select your application.
 
-![Workspace Admin Applications](../../images/admin-applications.png)
+![Workspace Admin Applications](../images/admin-applications.png)
 
 The application will now be available on the Turbo Server Portal and on the Turbo Clients to users with sufficient permissions.

@@ -32,11 +32,11 @@ export default defineConfig({
     },
     nav: [
       { text: 'Getting Started', link: '/getting-started/' },
-      { text: 'Studio', link: '/studio/overview/overview' },
-      { text: 'Server', link: '/server/overview/overview' },
-      { text: 'Deploying', link: '/deploying/overview/overview' },
-      { text: 'VM', link: '/vm/virtual-machine/virtual-machine' },
-      { text: 'Reference', link: '/reference/command-line/command-line-interface' }
+      { text: 'Studio', link: '/studio/' },
+      { text: 'Server', link: '/server/' },
+      { text: 'Deploying', link: '/deploying/' },
+      { text: 'VM', link: '/vm/' },
+      { text: 'Reference', link: '/reference/command-line/' }
     ],
     sidebar: {
       '/getting-started/': [
@@ -55,12 +55,12 @@ export default defineConfig({
           text: 'Studio',
           collapsed: false,
           items: [
-            { text: 'Overview', link: '/studio/overview/overview' },
+            { text: 'Introduction', link: '/studio/' },
             {
               text: 'Working with Turbo Studio',
               collapsed: true,
               items: [
-                { text: 'Getting Started', link: '/studio/working-with-turbo-studio/getting-started' },
+                { text: 'Getting Started', link: '/studio/working-with-turbo-studio/' },
                 { text: 'Clean Capture System', link: '/studio/working-with-turbo-studio/clean-capture-system' },
                 { text: 'Command Line', link: '/studio/working-with-turbo-studio/command-line' },
                 { text: 'Configuration', link: '/studio/working-with-turbo-studio/configuration' },
@@ -73,12 +73,28 @@ export default defineConfig({
                 { text: 'Studio Azure', link: '/studio/working-with-turbo-studio/studio-azure' }
               ]
             },
-            { text: 'Working with Containers', link: '/studio/working-with-containers/containers' },
-            { text: 'Continuous Integration', link: '/studio/continuous-integration/continuous-integration' },
+            {
+              text: 'Working with Containers',
+              collapsed: true,
+              items: [
+                { text: 'Introduction', link: '/studio/working-with-containers/' },
+                { text: 'IP Routing', link: '/studio/working-with-containers/ip-routing' },
+                { text: 'Tips', link: '/studio/working-with-containers/tips' }
+              ]
+            },
+            {
+              text: 'Continuous Integration',
+              collapsed: true,
+              items: [
+                { text: 'Introduction', link: '/studio/continuous-integration/' },
+                { text: 'Using Turbo Studio Snapshot', link: '/studio/continuous-integration/using-turbo-studio-snapshot' }
+              ]
+            },
             {
               text: 'Scenarios',
               collapsed: true,
               items: [
+                { text: 'Overview', link: '/studio/scenarios/' },
                 { text: 'Browser Ad Blocking', link: '/studio/scenarios/browser-ad-blocking' },
                 { text: 'Integration with Native Apps', link: '/studio/scenarios/integration-with-native-applications' },
                 { text: 'Legacy IE and Java', link: '/studio/scenarios/legacy-internet-explorer-and-java' },
@@ -89,7 +105,14 @@ export default defineConfig({
                 { text: 'TurboNet Build Scripts', link: '/studio/scenarios/turbonet-build-scripts' }
               ]
             },
-            { text: 'Advanced Topics', link: '/studio/advanced-topics/large-applications' }
+            {
+              text: 'Advanced Topics',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/studio/advanced-topics/' },
+                { text: 'Startup/Shutdown Scripts', link: '/studio/advanced-topics/startupshutdown-scripts-and-shims' }
+              ]
+            }
           ]
         }
       ],
@@ -98,13 +121,13 @@ export default defineConfig({
           text: 'Server',
           collapsed: false,
           items: [
-            { text: 'Overview', link: '/server/overview/overview' },
+            { text: 'Introduction', link: '/server/' },
             { text: 'Setup and Deployment', link: '/server/setup-and-deployment/deploying-on-premises' },
             {
               text: 'Administration',
               collapsed: true,
               items: [
-                { text: 'Overview', link: '/server/administration/overview' },
+            { text: 'Overview', link: '/server/administration/index' },
                 { text: 'Domain', link: '/server/administration/domain' },
                 { text: 'General', link: '/server/administration/general' },
                 { text: 'Hub', link: '/server/administration/hub' },
@@ -119,7 +142,7 @@ export default defineConfig({
               text: 'Applications',
               collapsed: true,
               items: [
-                { text: 'Overview', link: '/server/applications/overview' },
+                { text: 'Overview', link: '/server/applications/index' },
                 { text: 'Access Control', link: '/server/applications/access-control' },
                 { text: 'KMS Licensing', link: '/server/applications/kms-licensing' }
               ]
@@ -140,7 +163,7 @@ export default defineConfig({
                 { text: 'SAML', link: '/server/authentication/saml' }
               ]
             },
-            { text: 'Backup and Recovery', link: '/server/backup-and-recovery/backup-and-recovery' },
+            { text: 'Backup and Recovery', link: '/server/backup-and-recovery' },
             {
               text: 'Cloud Storage',
               collapsed: true,
@@ -154,16 +177,25 @@ export default defineConfig({
                 { text: 'OneDrive', link: '/server/cloud-storage/onedrive' }
               ]
             },
-            { text: 'Image Distribution', link: '/server/image-distribution/image-distribution' },
-            { text: 'Integrations', link: '/server/integrations/integrations' },
-            { text: 'Licensing', link: '/server/licensing/licensing' },
-            { text: 'Logs', link: '/server/logs/logs' },
-            { text: 'Monitoring', link: '/server/monitoring/monitoring' },
-            { text: 'Network and Load Balancing', link: '/server/network-and-load-balancing/network-and-load-balancing' },
-            { text: 'Optimization', link: '/server/optimization/optimization' },
-            { text: 'Portal', link: '/server/portal/overview' },
-            { text: 'Security', link: '/server/security/security' },
-            { text: 'Advanced Topics', link: '/server/advanced-topics/advanced-topics' },
+            { text: 'Peer to Peer', link: '/server/peer-to-peer' },
+            {
+              text: 'Integrations',
+              collapsed: true,
+              items: [
+                { text: 'Blackboard Learn', link: '/server/integrations/blackboard-learn' },
+                { text: 'Canvas LMS', link: '/server/integrations/canvas-lms' },
+                { text: 'Moodle', link: '/server/integrations/moodle' },
+                { text: 'OpenAI', link: '/server/integrations/openai' }
+              ]
+            },
+            { text: 'Licensing', link: '/server/licensing' },
+            { text: 'Logs', link: '/server/logs' },
+            { text: 'Monitoring', link: '/server/monitoring' },
+            { text: 'Network and Load Balancing', link: '/server/network-and-load-balancing' },
+            { text: 'Optimization', link: '/server/optimization' },
+            { text: 'Portal', link: '/server/portal/index' },
+            { text: 'Security', link: '/server/security' },
+            { text: 'Advanced Topics', link: '/server/advanced-topics/index' },
             { text: 'Troubleshooting', link: '/server/troubleshooting/admininstration' },
             { text: 'Upgrading', link: '/server/upgrading/upgrading' }
           ]
@@ -178,7 +210,7 @@ export default defineConfig({
               text: 'Command Line',
               collapsed: true,
               items: [
-                { text: 'Overview', link: '/reference/command-line/command-line-interface' },
+                { text: 'Introduction', link: '/reference/command-line/' },
                 { text: 'build', link: '/reference/command-line/build' },
                 { text: 'cache', link: '/reference/command-line/cache' },
                 { text: 'commit', link: '/reference/command-line/commit' },
@@ -240,7 +272,7 @@ export default defineConfig({
               text: 'TurboScript',
               collapsed: true,
               items: [
-                { text: 'Overview', link: '/reference/turboscript/turboscript' },
+                { text: 'Overview', link: '/reference/turboscript/' },
                 { text: 'batch', link: '/reference/turboscript/batch' },
                 { text: 'cmd', link: '/reference/turboscript/cmd' },
                 { text: 'copy', link: '/reference/turboscript/copy' },
@@ -265,16 +297,16 @@ export default defineConfig({
                 { text: 'workdir', link: '/reference/turboscript/workdir' }
               ]
             },
-            { text: 'Dependencies', link: '/reference/dependencies/dependencies' },
-            { text: 'Examples', link: '/reference/examples/development-examples' },
-            { text: 'Turbo Client', link: '/reference/turbo-client/turbo-client' },
-            { text: 'Turbo Desktop', link: '/reference/turbo-desktop/turbo-desktop' },
-            { text: 'Turbo Play', link: '/reference/turbo-play/turbo-play' },
+            { text: 'Dependencies', link: '/reference/dependencies' },
+            { text: 'Examples', link: '/reference/examples' },
+            { text: 'Turbo Client', link: '/reference/turbo-client/' },
+            { text: 'Turbo Desktop', link: '/reference/turbo-desktop' },
+            { text: 'Turbo Play', link: '/reference/turbo-play' },
             {
               text: 'Turbo Shell',
               collapsed: false,
               items: [
-                { text: 'Turbo Shell', link: '/reference/turbo-shell/turbo-shell' },
+                { text: 'Turbo Shell', link: '/reference/turbo-shell/' },
                 { text: 'Commit', link: '/reference/turbo-shell/commit' },
                 { text: 'Push', link: '/reference/turbo-shell/push' },
               ]
@@ -287,17 +319,11 @@ export default defineConfig({
           text: 'VM',
           collapsed: false,
           items: [
-            {
-              text: 'Virtual Machine',
-              collapsed: true,
-              items: [
-                { text: 'Overview', link: '/vm/virtual-machine/virtual-machine' },
-                { text: 'Folder Variables', link: '/vm/virtual-machine/folder-variables' },
-                { text: 'Runtime Settings', link: '/vm/virtual-machine/runtime-settings' }
-              ]
-            },
-            { text: 'XML Configuration', link: '/vm/xml-configuration/xml-configuration' },
-            { text: 'Advanced Topics', link: '/vm/advanced-topics/dep-compatibility' },
+            { text: 'Introduction', link: '/vm/' },
+            { text: 'Folder Variables', link: '/vm/folder-variables' },
+            { text: 'Runtime Settings', link: '/vm/runtime-settings' },
+            { text: 'XML Configuration', link: '/vm/xml-configuration' },
+            { text: 'Advanced Topics', link: '/vm/dep-compatibility' },
             {
               text: 'Troubleshooting',
               collapsed: true,
@@ -339,18 +365,32 @@ export default defineConfig({
           text: 'Deploying',
           collapsed: false,
           items: [
-            { text: 'Overview', link: '/deploying/overview/overview' },
-            { text: 'AWS AppStream', link: '/deploying/aws-appstream/aws-appstream-2.0' },
-            { text: 'Citrix', link: '/deploying/citrix/citrix' },
-            { text: 'Intune', link: '/deploying/intune/intune' },
-            { text: 'Offline Mode', link: '/deploying/offline-mode/offline-mode' },
-            { text: 'Parallels RAS', link: '/deploying/parallels-ras/parallels-ras' },
-            { text: 'Portable EXEs and MSIs', link: '/deploying/portable-exes-and-msis/portable-exes-and-msis' },
-            { text: 'System Center (SCCM)', link: '/deploying/system-center-sccm/system-center-sccm' },
-            { text: 'To Desktop', link: '/deploying/to-a-desktop/to-a-desktop' },
-            { text: 'To Turbo Server', link: '/deploying/to-turbo-server/to-turbo-server' },
-            { text: 'To TurboNet', link: '/deploying/to-turbonet/to-turbonet' },
-            { text: 'Turbo Client', link: '/deploying/turbo-client/turbo-client' },
+            { text: 'Introduction', link: '/deploying/' },
+            { text: 'AWS AppStream', link: '/deploying/aws-appstream' },
+            {
+              text: 'Citrix',
+              collapsed: true,
+              items: [
+                { text: 'Introduction', link: '/deploying/citrix-guide/' },
+                { text: 'Command Line', link: '/deploying/citrix-guide/command-line' },
+                { text: 'Scripts', link: '/deploying/citrix-guide/scripts' }
+              ]
+            },
+            {
+              text: 'Desktop',
+              collapsed: true,
+              items: [
+                { text: 'Introduction', link: '/deploying/desktop-guide/' },
+                { text: 'Default Apps', link: '/deploying/desktop-guide/default-apps' }
+              ]
+            },
+            { text: 'Intune', link: '/deploying/intune' },
+            { text: 'Offline Mode', link: '/deploying/offline-mode' },
+            { text: 'Parallels RAS', link: '/deploying/parallels-ras' },
+            { text: 'Portable EXEs', link: '/deploying/portable-exes' },
+            { text: 'System Center', link: '/deploying/system-center' },
+            { text: 'Turbo Server', link: '/deploying/turbo-server' },
+            { text: 'Turbo Client', link: '/deploying/turbo-client' },
             {
               text: 'Tips',
               collapsed: true,

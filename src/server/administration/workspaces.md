@@ -355,113 +355,26 @@ The supported launch methods are remote HTML5, remote native, and local if the p
 
 The following table describes the match modes used by the Workspace URL handlers:
 
-<table>
-  <tr>
-    <th data-column="0" style="width: 125px;">
-      <div>
-        <p>Match Mode</p>
-      </div>
-    </th>
-    <th data-column="1">
-      <div>
-        <p>Description</p>
-      </div>
-    </th>
-  </tr>
+Here's the table converted to markdown:
 
-  <tr>
-    <td><p>Protocol</p></td>
-    <td><p>Matches if the protocol matches. If http or https, match uris with either HTTP or HTTPS schemes. Pattern should be valid uris with just the scheme e.g. https:, turbo:, magnet:</p></td>
-  </tr>
+| Match Mode   | Description                                                                                                                                                                               |
+|--------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Protocol     | Matches if the protocol matches. If http or https, match uris with either HTTP or HTTPS schemes. Pattern should be valid uris with just the scheme e.g. https:, turbo:, magnet:           |
+| Base Domain  | Matches the top level and second level doman names.                                                                                                                                       |
+| Host         | Matches the full host, including the subdomain and port.                                                                                                                                  |
+| Starts With  | URLs are matched if they start with the pattern string.                                                                                                                                   |
+| Exact        | URLs are matched if they are equal to the pattern string.                                                                                                                                 |
 
-  <tr>
-    <td><p>Base Domain</p></td>
-    <td><p>Matches the top level and second level doman names.</p></td>
-  </tr>
-
-  <tr>
-    <td><p>Host</p></td>
-    <td><p>Matches the full host, including the subdomain and port.</p></td>
-  </tr>
-
-  <tr>
-    <td><p>Starts With</p></td>
-    <td><p>URLs are matched if they start with the pattern string.</p></td>
-  </tr>
-
-  <tr>
-    <td><p>Exact</p></td>
-    <td><p>URLs are matched if they are equal to the pattern string.</p></td>
-  </tr>
-</table>
-
-<br/>
 Examples of patterns and matched URLs:
+Here's the table converted to markdown:
 
-<table>
-  <tr>
-    <th data-column="0" style="width: 125px;">
-      <div>
-        <p>Match Mode</p>
-      </div>
-    </th>
-    <th data-column="1">
-      <div>
-        <p>Pattern</p>
-      </div>
-    </th>
-    <th data-column="2">
-      <div>
-        <p>Results</p>
-      </div>
-    </th>
-  </tr>
-
-  <tr>
-    <td><p>Protocol</p></td>
-    <td><p>https:</p></td>
-    <td>
-      <p><i class="fa fa-check" aria-hidden="true"></i> http://turbo.net<br/><i class="fa fa-check" aria-hidden="true"></i> https://turbo.net</p>
-      <p><i class="fa fa-times" aria-hidden="true"></i></i> mailto:support@turbo.net</p>
-    </td>
-  </tr>
-
-  <tr>
-    <td><p>Base Domain</p></td>
-    <td><p>https://turbo.net</p></td>
-    <td
-      <p><i class="fa fa-check" aria-hidden="true"></i> http://turbo.net<br/><i class="fa fa-check" aria-hidden="true"></i> https://app.turbo.net<br/><i class="fa fa-check" aria-hidden="true"></i> https://docs.turbo.net</p>
-      <p><i class="fa fa-times" aria-hidden="true"></i></i> https://yahoo.com</p>
-    </td>
-  </tr>
-
-  <tr>
-    <td><p>Host</p></td>
-    <td><p>https://app.turbo.net</p></td>
-    <td>
-      <p><i class="fa fa-check" aria-hidden="true"></i> http://app.turbo.net<br/><i class="fa fa-check" aria-hidden="true"></i> https://app.turbo.net</p>
-      <p><i class="fa fa-times" aria-hidden="true"></i></i> https://docs.turbo.net</p>
-    </td>
-  </tr>
-
-  <tr>
-    <td><p>Starts With</p></td>
-    <td><p>https://app.turbo.net/run</p></td>
-    <td>
-      <p><i class="fa fa-check" aria-hidden="true"></i> http://app.turbo.net/run<br/><i class="fa fa-check" aria-hidden="true"></i> https://app.turbo.net/run<br/><i class="fa fa-check" aria-hidden="true"></i> https://app.turbo.net/run?id=5</p>
-      <p><i class="fa fa-times" aria-hidden="true"></i> https://app.turbo.net<br/><i class="fa fa-times" aria-hidden="true"></i></i> https://app.turbo.net/docs</p>
-    </td>
-  </tr>
-
-  <tr>
-    <td><p>Exact</p></td>
-    <td><p>https://app.turbo.net/run</p></td>
-    <td>
-      <p><i class="fa fa-check" aria-hidden="true"></i> http://app.turbo.net/run<br/><i class="fa fa-check" aria-hidden="true"></i> https://app.turbo.net/run</p>
-      <p><i class="fa fa-times" aria-hidden="true"></i></i> https://app.turbo.net/run/</br><i class="fa fa-times" aria-hidden="true"></i></i> https://app.turbo.net/run?id=5</p>
-    </td>
-  </tr>
-</table>
+| Match Mode   | Pattern                     | Results                                                                                                                                                                                                                                                                                   |
+|--------------|-----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Protocol     | https:                      | ✅ http://turbo.net<br>✅ https://turbo.net<br>❌ mailto:support@turbo.net                                                                                                                                                                                                                  |
+| Base Domain  | https://turbo.net           | ✅ http://turbo.net<br>✅ https://app.turbo.net<br>✅ https://docs.turbo.net<br>❌ https://yahoo.com                                                                                                                                                                                        |
+| Host         | https://app.turbo.net       | ✅ http://app.turbo.net<br>✅ https://app.turbo.net<br>❌ https://docs.turbo.net                                                                                                                                                                                                            |
+| Starts With  | https://app.turbo.net/run   | ✅ http://app.turbo.net/run<br>✅ https://app.turbo.net/run<br>✅ https://app.turbo.net/run?id=5<br>❌ https://app.turbo.net<br>❌ https://app.turbo.net/docs                                                                                                                               |
+| Exact        | https://app.turbo.net/run   | ✅ http://app.turbo.net/run<br>✅ https://app.turbo.net/run<br>❌ https://app.turbo.net/run/<br>❌ https://app.turbo.net/run?id=5                                                                                                                                                          |
 
 #### File Associations
 

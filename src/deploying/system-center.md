@@ -4,11 +4,11 @@ Microsoft System Center Configuration Manager (SCCM) is a wonderful tool to depl
 
 ### Distribute Standalone Executables
 
-The easiest solution is to deploy a shortcut to a standalone executable container. Standalone executable containers are single .exe files that have the full virtual machine built in. With them you can get the full application experience without installing anything to the machine. You can either point your application shortcut to a copy of the .exe in a local machine location or at shared network location. See [building standalone executables](../../studio/working-with-turbo-studio/standalone-executables.html) for more information.
+The easiest solution is to deploy a shortcut to a standalone executable container. Standalone executable containers are single .exe files that have the full virtual machine built in. With them you can get the full application experience without installing anything to the machine. You can either point your application shortcut to a copy of the .exe in a local machine location or at shared network location. See [building standalone executables](/studio/working-with-turbo-studio/standalone-executables) for more information.
 
 ### Distribute MSIs
 
-Turbo MSIs can be used as an alternative to deploy standalone executables. The benefits are that you have full control over what shortcuts get created as well as the ability to add file associations to your application. See [building MSIs](../../studio/working-with-turbo-studio/desktop.html) for more information.
+Turbo MSIs can be used as an alternative to deploy standalone executables. The benefits are that you have full control over what shortcuts get created as well as the ability to add file associations to your application. See [building MSIs](/studio/working-with-turbo-studio/desktop) for more information.
 
 ### Use application images (.svm files)
 
@@ -28,7 +28,7 @@ There are two configuration steps for the file share server:
 
 From <https://turbo.net/download> download the .msi Turbo.net Client installer and create an Application in SCCM with the .msi deployment type:
 
-![SCCM turbo app deployment type](../../images/sccm-2-turbo-app-deployment-type.png)
+![SCCM turbo app deployment type](../images/sccm-2-turbo-app-deployment-type.png)
 
 Next, create a custom Application that configures the newly installed Turbo.net Client. For this purpose, we need a simple install.bat file with the following content (replace `{file-share}` with the shared folder path from the previous point):
 
@@ -43,19 +43,19 @@ _When you have multiple sites configured in SCCM, you may want to use a separate
 
 Next, we create a custom Application:
 
-![SCCM turbo app deployment type script](../../images/sccm-2-turbo-app-deployment-type-script-0.png)
+![SCCM turbo app deployment type script](../images/sccm-2-turbo-app-deployment-type-script-0.png)
 
 Create the 'Script Installer' deployment type:
 
-![SCCM turbo app deployment type script 2](../../images/sccm-2-turbo-app-deployment-type-script-1.png)
+![SCCM turbo app deployment type script 2](../images/sccm-2-turbo-app-deployment-type-script-1.png)
 
 Specify the path to the batch file:
 
-![SCCM turbo app deployment type script 3](../../images/sccm-2-turbo-app-deployment-type-script-2.png)
+![SCCM turbo app deployment type script 3](../images/sccm-2-turbo-app-deployment-type-script-2.png)
 
 And the detection rules:
 
-![SCCM turbo app deployment type 4](../../images/sccm-2-turbo-app-deployment-type-script-3.png)
+![SCCM turbo app deployment type 4](../images/sccm-2-turbo-app-deployment-type-script-3.png)
 
 Finally, on the User Experience tab, make sure the script installs for the system and run the deployment.
 
@@ -73,11 +73,11 @@ We are now ready to prepare the SCCM package for our application. We start again
 
 And use it in a 'Script Installer' deployment:
 
-![SCCM custom app deployment type script](../../images/sccm-3-custom-app-deployment-type-script-0.png)
+![SCCM custom app deployment type script](../images/sccm-3-custom-app-deployment-type-script-0.png)
 
 The turbo installi command adds keys to the Uninstaller key, so you may use the app key in a Detection Rule configuration:
 
-![SCCM custom app deployment type script ](../../images/sccm-3-custom-app-deployment-type-script-1.png)
+![SCCM custom app deployment type script ](../images/sccm-3-custom-app-deployment-type-script-1.png)
 
 In the User Experience tab, select 'Install for user' and finish the Application wizard. We are now ready to deploy the package to Distribution Points and client devices.
 
@@ -93,4 +93,4 @@ _When you use a hub instead of the file share, it is possible to install all the
 > turbo subscribe turbo-org
 ```
 
-_See [installi](../../reference/command-line/command-line-interface.html#installi), [install](../../reference/command-line/installi.html), and [subscribe](../../reference/command-line/subscribe.html) for more information._
+_See [installi](/reference/command-line/installi), [install](/reference/command-line/install), and [subscribe](/reference/command-line/subscribe) for more information._
