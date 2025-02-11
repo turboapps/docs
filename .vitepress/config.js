@@ -73,8 +73,23 @@ export default defineConfig({
                 { text: 'Studio Azure', link: '/studio/working-with-turbo-studio/studio-azure' }
               ]
             },
-            { text: 'Working with Containers', link: '/studio/working-with-containers/containers' },
-            { text: 'Continuous Integration', link: '/studio/continuous-integration/continuous-integration' },
+            {
+              text: 'Working with Containers',
+              collapsed: true,
+              items: [
+                { text: 'Introduction', link: '/studio/working-with-containers/' },
+                { text: 'IP Routing', link: '/studio/working-with-containers/ip-routing' },
+                { text: 'Tips', link: '/studio/working-with-containers/tips' }
+              ]
+            },
+            {
+              text: 'Continuous Integration',
+              collapsed: true,
+              items: [
+                { text: 'Introduction', link: '/studio/continuous-integration/' },
+                { text: 'Using Turbo Studio Snapshot', link: '/studio/continuous-integration/using-turbo-studio-snapshot' }
+              ]
+            },
             {
               text: 'Scenarios',
               collapsed: true,
@@ -89,7 +104,14 @@ export default defineConfig({
                 { text: 'TurboNet Build Scripts', link: '/studio/scenarios/turbonet-build-scripts' }
               ]
             },
-            { text: 'Advanced Topics', link: '/studio/advanced-topics/large-applications' }
+            {
+              text: 'Advanced Topics',
+              collapsed: true,
+              items: [
+                { text: 'Large Applications', link: '/studio/advanced-topics/large-applications' },
+                { text: 'Startup/Shutdown Scripts', link: '/studio/advanced-topics/startupshutdown-scripts-and-shims' }
+              ]
+            }
           ]
         }
       ],
