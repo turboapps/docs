@@ -1,6 +1,15 @@
 ---
 title: Getting Started
 sections:
+  - title: What is Turbo?
+    documents:
+      - What is Turbo?
+  - title: Turbo and App Virtualization
+    documents:
+      - Turbo and App Virtualization
+  - title: Turbo and Docker
+    documents:
+      - Turbo and Docker
   - title: Getting Started
     documents:
       - Getting Started
@@ -32,9 +41,6 @@ sections:
       - .NET and Java
       - Web Applications
       - Servers
----
-title: Hub
-sections:
   - title: Overview
     documents:
       - Overview
@@ -273,22 +279,4 @@ sections:
   - title: Turbo Play
     documents:
       - Turbo Play
----
-title: About
-sections:
-  - title: What is Turbo?
-    documents:
-      - What is Turbo?
-  - title: Turbo and App Virtualization
-    documents:
-      - Turbo and App Virtualization
-  - title: Turbo and Docker
-    documents:
-      - Turbo and Docker
-  - title: Contribute to Turbo
-    documents:
-      - Contribute to Turbo
-  - title: Style Guide
-    documents:
-      - Style Guide
 ...
