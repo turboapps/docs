@@ -271,7 +271,7 @@ export default defineConfig({
               text: 'TurboScript',
               collapsed: true,
               items: [
-                { text: 'Overview', link: '/reference/turboscript/turboscript' },
+                { text: 'Overview', link: '/reference/turboscript/' },
                 { text: 'batch', link: '/reference/turboscript/batch' },
                 { text: 'cmd', link: '/reference/turboscript/cmd' },
                 { text: 'copy', link: '/reference/turboscript/copy' },
@@ -296,16 +296,16 @@ export default defineConfig({
                 { text: 'workdir', link: '/reference/turboscript/workdir' }
               ]
             },
-            { text: 'Dependencies', link: '/reference/dependencies/dependencies' },
-            { text: 'Examples', link: '/reference/examples/development-examples' },
-            { text: 'Turbo Client', link: '/reference/turbo-client/turbo-client' },
-            { text: 'Turbo Desktop', link: '/reference/turbo-desktop/turbo-desktop' },
-            { text: 'Turbo Play', link: '/reference/turbo-play/turbo-play' },
+            { text: 'Dependencies', link: '/reference/dependencies' },
+            { text: 'Examples', link: '/reference/examples' },
+            { text: 'Turbo Client', link: '/reference/turbo-client/' },
+            { text: 'Turbo Desktop', link: '/reference/turbo-desktop' },
+            { text: 'Turbo Play', link: '/reference/turbo-play' },
             {
               text: 'Turbo Shell',
               collapsed: false,
               items: [
-                { text: 'Turbo Shell', link: '/reference/turbo-shell/turbo-shell' },
+                { text: 'Turbo Shell', link: '/reference/turbo-shell/' },
                 { text: 'Commit', link: '/reference/turbo-shell/commit' },
                 { text: 'Push', link: '/reference/turbo-shell/push' },
               ]
