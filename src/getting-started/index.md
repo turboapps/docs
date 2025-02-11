@@ -71,7 +71,7 @@ Turbo provides powerful application delivery for VDI environments:
 ### Security and Compliance
 Turbo provides comprehensive security features:
 - Application isolation through virtualization
-- Secure sandboxes for sensitive applications and code
+- [Secure sandboxes](/reference/command-line/config.md#set-the-remote-sandbox-path) for sensitive applications and code
   - Complete isolation from user access
   - Protected execution environment
   - Configurable via remote-sandbox settings
@@ -137,5 +137,5 @@ Now that you understand what Turbo is and how it works, you can:
 2. [Learn advanced usage](advanced.md) - Create and customize virtual environments
 
 ::: tip Looking for deployment options?
-Check out our [deployment guides](../deploying/overview/deploying.md) for information on enterprise deployment scenarios.
+Check out our [deployment guides](/deploying/overview/overview.md) for information on enterprise deployment scenarios.
 :::

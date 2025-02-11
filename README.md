@@ -1,4 +1,4 @@
-## VitePress Turbo Documentation Setup Guide
+## VitePress Turbo Documentation
 
 ### Prerequisites
 
@@ -19,73 +19,113 @@ npm --version
 Install VitePress and its dependencies:
 
 ```bash
-npm install --save-dev vitepress
+npm install
 ```
 
 ### Running Locally
 
-To start the local development server:
+The following npm scripts are available:
 
 ```bash
+# Start the development server
 npm run docs:dev
+
+# Build the documentation site
+npm run docs:build
+
+# Preview the built site locally
+npm run docs:preview
 ```
 
-This will start the VitePress development server. By default, you can view your site at `http://localhost:5173`.
+The development server will be available at `http://localhost:5173` by default.
 
-## Writing the Docs
+## Writing Documentation
 
 ### Style Guide
 
-When contributing to the docs on Turbo, please follow these style guidelines:
+When contributing to the Turbo documentation, please follow these style guidelines:
 
 #### Code and Command-line Styling
 
-- Command-line comments should start with `#` followed by a space, with the first word capitalized.
-- Use `turbo` instead of `spoon` in command-line documentation.
-- Use fenced code blocks with three backticks for multi-line code.
-- Use single backticks for inline code styles (use sparingly).
+- Command-line comments should start with `#` followed by a space, with the first word capitalized
+- Use `turbo` instead of `spoon` in command-line documentation
+- Use fenced code blocks with language specification for multi-line code:
+  ```bash
+  # Example command
+  turbo run firefox
+  ```
+- Use single backticks for inline code references
 
-#### Other Styling
+#### VitePress Features
 
-- Bold inline paths using double asterisks.
-- Use relative paths for internal links.
+- Use VitePress containers for tips, warnings, and notes:
+  ```md
+  ::: tip
+  This is a tip
+  :::
+
+  ::: warning
+  This is a warning
+  :::
+  ```
+- Use frontmatter for page metadata when needed:
+  ```md
+  ---
+  title: Page Title
+  description: Page description
+  ---
+  ```
 
 ### Adding Images
 
-- Place images in the same folder as the Markdown file.
-- Use relative paths for image links.
-- Use HTML for specifying image dimensions.
-- Use lowercase for image file names.
+- Place images in the `src/images` directory
+- Use relative paths from the markdown file location
+- Use standard markdown image syntax:
+  ```md
+  ![Alt text](../images/example.png)
+  ```
+
+### Project Structure
+
+```
+docs/
+├── src/                    # Documentation source files
+│   ├── getting-started/    # Getting started guides
+│   ├── deploying/         # Deployment documentation
+│   ├── reference/         # Reference documentation
+│   ├── server/           # Server documentation
+│   ├── studio/           # Studio documentation
+│   └── vm/               # VM documentation
+├── .vitepress/            # VitePress configuration
+│   └── config.js         # Site configuration
+└── package.json          # Project dependencies
+```
 
 ### Contributing
 
 #### How to Contribute
 
-If you're not a member of the Turbo organization:
-1. Fork this repository.
-2. Make your changes.
-3. Commit your changes.
-4. Submit a pull request.
+1. Fork this repository
+2. Make your changes
+3. Commit your changes
+4. Submit a pull request
 
-#### Adding a Page
+#### Adding New Content
 
-- For existing sections: Create a directory at `/[topic]/[section]/[document]` and add your `.md` file.
-- For new sections: Create a new folder under the appropriate topic and add your `.md` file.
-- Update the `docs.yaml` file accordingly.
+1. Create your markdown file in the appropriate section under `src/`
+2. Update the VitePress configuration in `.vitepress/config.js` if needed:
+   - Add to navigation if it's a new section
+   - Add to sidebar if it's a new page in an existing section
 
-#### Creating a New Topic
+#### Navigation Structure
 
-1. Create a new folder in the `/doc` directory for your topic.
-2. Edit the `docs.yaml` file to add your new topic.
+The documentation structure is defined in `.vitepress/config.js`:
+- Top-level navigation in the `nav` array
+- Sidebar navigation in the `sidebar` object
+- Each section can have its own sidebar configuration
 
-#### docs.yaml Structure
-
-The `docs.yaml` file dictates the overall structure of the documentation:
-
-- Each entry specifies a topic for the top navbar.
-- Topics have a `title` and a list of `sections`.
-- Sections have a `title` and a list of `documents`.
-
-Ensure to follow the existing patterns when editing the `docs.yaml` file.
-
-Remember to normalize directory and file names by lowercasing, replacing spaces with underscores, and removing illegal Windows file system characters.
+Remember to:
+- Use clear, descriptive titles
+- Maintain consistent formatting
+- Follow the existing structure
+- Test your changes locally before submitting
