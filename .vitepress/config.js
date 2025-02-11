@@ -6,6 +6,10 @@ export default defineConfig({
   srcDir: './src', // Set the root directory for documentation
 
   themeConfig: {
+    // Enable the default search feature
+    search: {
+      provider: 'local'
+    },
     nav: [
       { text: 'About', link: '/about/what-is-turbo/what-is-turbo' },
       { text: 'Getting Started', link: '/getting-started/getting-started/getting-started' },
