@@ -37,11 +37,11 @@ export default defineConfig({
       { text: 'Deploying', link: '/deploying/overview/overview' },
       { text: 'VM', link: '/vm/virtual-machine/virtual-machine' },
       { text: 'Reference', link: '/reference/command-line/command-line-interface' },
+      { text: 'About', link: '/about/what-is-turbo/what-is-turbo' }
     ],
     sidebar: {
       '/getting-started/': [
         {
-          text: 'Getting Started',
           collapsed: false,
           items: [
             { text: 'Introduction', link: '/getting-started/' },
@@ -270,7 +270,15 @@ export default defineConfig({
             { text: 'Turbo Client', link: '/reference/turbo-client/turbo-client' },
             { text: 'Turbo Desktop', link: '/reference/turbo-desktop/turbo-desktop' },
             { text: 'Turbo Play', link: '/reference/turbo-play/turbo-play' },
-            { text: 'Turbo Shell', link: '/reference/turbo-shell/turbo-shell' },
+            {
+              text: 'Turbo Shell',
+              collapsed: false,
+              items: [
+                { text: 'Turbo Shell', link: '/reference/turbo-shell/turbo-shell' },
+                { text: 'Commit', link: '/reference/turbo-shell/commit' },
+                { text: 'Push', link: '/reference/turbo-shell/push' },
+              ]
+            },
           ]
         }
       ],
