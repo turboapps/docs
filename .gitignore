@@ -46,3 +46,4 @@ package-lock.json
 
 # Optional: ignore pnpm-lock.yaml if you're using pnpm
 # pnpm-lock.yaml
+/.vscode
