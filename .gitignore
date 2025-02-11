@@ -1,0 +1,48 @@
+# Dependencies
+node_modules/
+
+# Build output
+.vitepress/dist
+.vitepress/cache
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.log
+*.tmp
+*.temp
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# VitePress temp files
+.temp
+.cache
+
+# Optional: ignore package-lock.json if you're using npm
+package-lock.json
+
+# Optional: ignore yarn.lock if you're using Yarn
+# yarn.lock
+
+# Optional: ignore pnpm-lock.yaml if you're using pnpm
+# pnpm-lock.yaml
