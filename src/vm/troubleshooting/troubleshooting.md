@@ -1,4 +1,4 @@
-## Troubleshooting
+# Troubleshooting
 
 Once your container package is built, it is time to test on the platforms that you expect to encounter. When issues surface there are several things that can be done to track down the cause. 
 

@@ -1,4 +1,4 @@
-## sessions
+# sessions
 
 The sessions command lists all sessions on the local machine.  
 

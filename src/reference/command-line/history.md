@@ -1,4 +1,4 @@
-## history
+# history
 
 The `history` command lists all images used in the past. 
 

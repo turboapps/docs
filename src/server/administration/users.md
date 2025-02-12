@@ -1,4 +1,4 @@
-## Users
+# Users
 
 ![Server admin users](../../images/admin-users.png)
 

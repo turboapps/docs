@@ -1,4 +1,4 @@
-## import
+# import
 
 The `import` instruction imports content of specified file into current image. 
 

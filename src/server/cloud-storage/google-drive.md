@@ -1,4 +1,4 @@
-## Google Drive
+# Google Drive
 
 To allow users to connect their Google Drive accounts and access them while running their applications, you must first configure a Google application. This application controls the permissions, branding, and routing for the Google Drive SSO.
 

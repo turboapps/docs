@@ -1,4 +1,4 @@
-## push
+# push
 
 The `push` command syncs an image from your local registry to the remote registry. 
 

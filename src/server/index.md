@@ -1,4 +1,4 @@
-## Turbo Server
+# Turbo Server
 
 Turbo Server is an application deployment platform that enables you to launch applications instantly from websites, portals and client desktops (Windows, MacOS, iOS, Android, or any HTML5 browser).
 

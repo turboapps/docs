@@ -1,4 +1,4 @@
-## Integrations
+# Integrations
 
 The **Integrations** page provides options to configure integrations with variety of third-party services, such as Compute Infrastructures and Learning Management Systems.
 

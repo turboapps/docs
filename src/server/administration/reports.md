@@ -1,4 +1,4 @@
-## Reports
+# Reports
 
 ![Turbo Server Reports](../../images/reports.png)
 

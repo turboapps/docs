@@ -1,4 +1,4 @@
-## User Settings
+# User Settings
 
 The **Settings** pages allows users to manage a variety of user-related settings, such as their cloud storage connections and remote authentication.
 

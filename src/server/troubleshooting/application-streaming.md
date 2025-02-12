@@ -1,4 +1,4 @@
-## Application Streaming
+# Application Streaming
 
 The following documentation describes commonly encountered issues when streaming a remote application using Run In Cloud (HTML5/Native) and how to resolve them.
 

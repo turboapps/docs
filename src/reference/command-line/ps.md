@@ -1,4 +1,4 @@
-## ps
+# ps
 
 The `ps` command returns a list of all the processes running in containers on the local machine.
 

@@ -1,4 +1,4 @@
-## sync
+# sync
 
 The `sync` instruction enables or disables synchronization for a specific path.
 By default all directories except the @LOCALAPPDATA@ directories are synchronized.

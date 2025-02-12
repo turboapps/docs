@@ -1,4 +1,4 @@
-## batch
+# batch
 
 The `batch` instruction is used for joining multiple commands of the same type in TurboScript.
 

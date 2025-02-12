@@ -1,4 +1,4 @@
-## Turbo Shell
+# Turbo Shell
 
 Turbo Shell, `spsh`, is a REPL-like interactive interface that understands TurboScript syntax.
 

@@ -1,4 +1,4 @@
-## OneDrive
+# OneDrive
 
 To allow users to connect their OneDrive accounts and access them while running their applications, you must first configure a OneDrive application registration. This OneDrive application controls the permissions, branding, and routing for the OneDrive SSO.
 

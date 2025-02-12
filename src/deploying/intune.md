@@ -1,4 +1,4 @@
-## Intune
+# Intune
 
 Intune is an Azure-based device management solution by Microsoft.
 

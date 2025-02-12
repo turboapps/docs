@@ -1,4 +1,4 @@
-## release
+# release
 
 The `release` command applies a new release to an image.
 

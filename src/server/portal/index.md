@@ -1,4 +1,4 @@
-## Overview
+# Overview
 
 The Turbo Server Portal is a web portal where users can log in to view and launch applications. Applications can be streamed from the Turbo Application Server using the Turbo Clients or HTML5 client, or ran locally using Turbo for PC. Additionally, the portal provides API services allowing other client types to interact with the Turbo environment.
 

@@ -1,4 +1,4 @@
-## Peer-to-Peer Image Distribution
+# Peer-to-Peer Image Distribution
 
 ### How It Works
 

@@ -1,4 +1,4 @@
-## Turbo Play
+# Turbo Play
 Turbo Play is a command line based window wrapper application to Turbo applications.
 
 

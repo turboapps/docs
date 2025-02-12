@@ -1,4 +1,4 @@
-## Workspaces
+# Workspaces
 
 ![Server admin workspaces](../../images/admin-workspaces.png)
 

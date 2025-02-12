@@ -1,4 +1,4 @@
-## cmd
+# cmd
 
 The `cmd` instruction is used to run a command in the container. 
 

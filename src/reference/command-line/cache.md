@@ -1,4 +1,4 @@
-## cache
+# cache
 
 The `cache` command is used to populate the executable cache and install fonts for the specified image and its dependencies. This process improves the installation and launch performance. It is worth noting that the `precache` alias is deprecated.
 

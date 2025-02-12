@@ -1,4 +1,4 @@
-## new
+# new
 
 The `new` command creates new container from an image.
 

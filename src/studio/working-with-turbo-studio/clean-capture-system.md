@@ -1,4 +1,4 @@
-## Clean Capture System
+# Clean Capture System
 
 Capturing applications with Turbo Studio requires a clean system environment to ensure that all required files, registry, and dependencies for the target application are included in the final application package.
 

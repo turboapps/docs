@@ -1,4 +1,4 @@
-## Canvas LMS Integration
+# Canvas LMS Integration
 
 Configuring Turbo Server with Canvas allows students and instructors to access their Portal Dashboard with one click from Canvas. Turbo Server functionality is added to Canvas LMS as an external application from the Canvas user interface.
 

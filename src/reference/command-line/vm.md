@@ -1,4 +1,4 @@
-## vm
+# vm
 
 The `vm` command displays the most recent version of the Turbo VM which is available on the local machine. 
 

@@ -1,4 +1,4 @@
-## logs
+# logs
 
 The `logs` command displays the logs for a container. This is especially useful for debugging or inspecting containers. 
 

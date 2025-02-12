@@ -1,4 +1,4 @@
-## hosts
+# hosts
 
 The `hosts` instruction modifies host name resolution within a container. 
 

@@ -1,4 +1,4 @@
-## Configure Image Streaming from Hub
+# Configure Image Streaming from Hub
 
 By default Application Servers download the application images from Hub before running them. It is however possible to stream the images directly from Hub. To configure the streaming, follow the steps listed below.
 

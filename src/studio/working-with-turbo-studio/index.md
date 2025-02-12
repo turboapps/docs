@@ -1,4 +1,4 @@
-## Getting Started
+# Getting Started
 
 Using Turbo Studio enables you to configure the filesystem and registry of a container, embed external runtimes and components, take application snapshots, and create Turbo Virtual Machine (SVM) or executable files. The primary interface consists of a ribbon bar along the top and several panes accessed by buttons on the left.
 

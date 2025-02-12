@@ -1,4 +1,4 @@
-## installed
+# installed
 
 The `installed` command lists all images and containers that have been installed to the user on the local machine. 
 

@@ -1,4 +1,4 @@
-## Active Directory Federation Services
+# Active Directory Federation Services
 
 This section describes the steps required to configure Single Sign-On (SSO) against an ADFS server using the SAML 2.0 authentication protocol. Turbo currently supports ADFS2 and ADFS3.
 

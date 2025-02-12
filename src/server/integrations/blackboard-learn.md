@@ -1,4 +1,4 @@
-## Blackboard Learn Integration
+# Blackboard Learn Integration
 
 Configuring Turbo Server with Blackboard Learn allows students and instructors to access their Portal Dashboard with one click from Blackboard.
 

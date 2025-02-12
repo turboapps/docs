@@ -1,4 +1,4 @@
-## Google LDAP
+# Google LDAP
 
 To configure Turbo Server to authenticate against Google LDAP, add an [external directory service](../../server/administration/users.html#adding-an-external-directory-service).
 

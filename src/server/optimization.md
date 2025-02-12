@@ -1,4 +1,4 @@
-## Optimization
+# Optimization
 
 The following document describes optimizations that can be made to improve Turbo Server performance.
 

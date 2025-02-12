@@ -1,4 +1,4 @@
-## commit
+# commit
 
 The `commit` command commits the working container to an image.
 

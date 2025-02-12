@@ -1,4 +1,4 @@
-## Common Errors
+# Common Errors
 
 ### Antivirus and Security Software
 

@@ -1,4 +1,4 @@
-## Using Turbo Citrix Scripts
+# Using Turbo Citrix Scripts
 
 Turbo containers can also be deployed to XenApp using powershell helper scripts to automate the deployment.
 

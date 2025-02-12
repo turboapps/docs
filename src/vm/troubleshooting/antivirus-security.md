@@ -1,4 +1,4 @@
-## Antivirus and Security Software
+# Antivirus and Security Software
 
 Turbo applications are compatible with all major antivirus and security software vendors. However, there are many configurations of these which can cause errors, hangs, or false positives in Turbo applications. If encountering issues, a good first step is to disable any security software to rule it out as a possible cause. If disabling the security software fixes the issue, further analysis is required to determine if there is indeed a security compromise or if it is an incompatability with your application.
 

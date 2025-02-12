@@ -1,4 +1,4 @@
-## revert
+# revert
 
 The `revert` command is used to undo all changes to a container. 
 

@@ -1,4 +1,4 @@
-## Using Turbo Studio Snapshot
+# Using Turbo Studio Snapshot
 
 While many application can be installed directly into Turbo containers through a normal install process or be built using a TurboScript, some applications require the use of snapshots to create a working image.
 

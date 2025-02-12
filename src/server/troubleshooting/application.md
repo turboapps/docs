@@ -1,4 +1,4 @@
-## Application Troubleshooting
+# Application Troubleshooting
 
 If your application fails to start when launched from the Turbo Server workspace, identify what causes the failure.
 

@@ -1,4 +1,4 @@
-## OpenAI
+# OpenAI
 
 Integrating Turbo Server with OpenAI allows end-users to access an artificial intelligence chatbot on their Portal Dashboard. The chatbot will respond to text prompts with contextually relevant answers generated with the OpenAI API using a configurable chat model, such as GPT-3.5 or GPT-4.
 

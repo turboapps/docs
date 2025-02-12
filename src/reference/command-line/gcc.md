@@ -1,4 +1,4 @@
-## gcc
+# gcc
 
 The `gcc` command garbage collects cached resources.
 

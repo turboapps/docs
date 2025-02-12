@@ -1,4 +1,4 @@
-## rm
+# rm
 
 The `rm` command removes containers from the local machine. 
 

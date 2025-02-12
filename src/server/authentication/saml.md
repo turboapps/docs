@@ -1,4 +1,4 @@
-## SAML 2.0
+# SAML 2.0
 
 Turbo Server supports logging in users via Single Sign-On (SSO) using an external identity provider (IdP) that supports SAML 2.0 authentication. The SAML 2.0 authentication protocol is supported by many identity providers, such as AzureAD, ADFS, and WSO2.
 

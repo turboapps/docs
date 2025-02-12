@@ -1,4 +1,4 @@
-## netstat
+# netstat
 
 The `netstat` command displays active port mappings, name resolution information, and links for the specified container.
 

@@ -1,4 +1,4 @@
-## releases
+# releases
 
 The `releases` command returns all the available releases for an image. 
 

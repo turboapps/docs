@@ -1,4 +1,4 @@
-## Import Configuration
+# Import Configuration
 
 The following section details the **Import Configuration** feature available in Turbo Studio. Import Configuration is used to import application packages in various formats into a Turbo Studio configuration that can be built and [deployed](../../deploying/overview/overview.html) to your endpoints.
 

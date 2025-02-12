@@ -1,4 +1,4 @@
-## Deploying External Application Server
+# Deploying External Application Server
 
 Turbo Server administrators may join an external Turbo Application Server to their Turbo on-prem or SaaS Portal to enable the Run in Cloud launch options for applications.
 

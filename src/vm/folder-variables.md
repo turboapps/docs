@@ -1,4 +1,4 @@
-## Folder Variables
+# Folder Variables
 
 Turbo VM maps well known root folders such as **Documents** and **Program Files** based on the host operating system at runtime. 
 

@@ -1,4 +1,4 @@
-## Container Configuration
+# Container Configuration
 
 The following discusses the many configuration features available in Turbo Studio. These features allow you to edit and customize the settings for an image or virtual application configuration.
 

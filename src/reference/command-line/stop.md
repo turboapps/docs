@@ -1,4 +1,4 @@
-## stop
+# stop
 
 The `stop` command stops containers which are currently running. 
 

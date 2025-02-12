@@ -1,4 +1,4 @@
-## To Turbo Server
+# To Turbo Server
 
 Turbo supports deploying container images as standalone executables, MSIs, and Turbo Virtual Machines (SVMs) to Turbo Server using Turbo Studio or the Turbo Client command line tools. Images added to the Hub can then be added to Workspaces as **Windows Applications**, making the applications available to end-users.
 

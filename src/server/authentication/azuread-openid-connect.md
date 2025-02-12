@@ -1,4 +1,4 @@
-## Azure Active Directory with OpenID Connect
+# Azure Active Directory with OpenID Connect
 
 Turbo Server can be configured to allow users to log in via Azure Active Directory (Azure AD) Single Sign-On (SSO) using the OpenID Connect (OIDC) authentication protocol.
 

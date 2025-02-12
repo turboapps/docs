@@ -1,4 +1,4 @@
-## Okta with SAML 2.0
+# Okta with SAML 2.0
 
 Turbo Server can be configured to allow users to log in via Okta Single Sign-On SSO using the SAML 2.0 authentication protocol.
 

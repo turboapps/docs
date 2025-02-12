@@ -1,4 +1,4 @@
-## subscribe
+# subscribe
 
 The `subscribe` command is used to create a subscription to a workspace. Subscribing to a workspace automatically downloads and updates the workspace's applications. To remove the subscription, use the `unsubscribe` command.
 

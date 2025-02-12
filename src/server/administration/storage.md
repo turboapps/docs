@@ -1,4 +1,4 @@
-## Storage
+# Storage
 
 The **Storage** page provides options to configure storage with a variety of third-party services as well as local network storage.
 

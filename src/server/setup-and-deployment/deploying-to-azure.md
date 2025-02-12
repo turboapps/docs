@@ -1,4 +1,4 @@
-## Deploying to Azure
+# Deploying to Azure
 
 In addition to on-premises deployment, a preconfigured Turbo Server instance can be deployed via the Turbo Server Azure Marketplace Image (AMI). The Turbo Server AMI has multiple plans which are preconfigured with the following components:
 

@@ -1,4 +1,4 @@
-## install
+# install
 
 The `install` command creates a shortcut for the specified container in the **Start Menu**
 

@@ -1,4 +1,4 @@
-## gc-shortcuts
+# gc-shortcuts
 
 The `gc-shortcuts` command removes orphaned Turbo shortcuts from the desktop. Shortcuts can become orphaned when Windows profile synchronization causes desktop shortcuts to be out of sync with installed Turbo applications, particularly in virtual desktop environments.
 

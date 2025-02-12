@@ -1,4 +1,4 @@
-## kill
+# kill
 
 The `kill` command kills running Turbo processes in the current Windows session. 
 

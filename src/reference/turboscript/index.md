@@ -1,4 +1,4 @@
-## TurboScript
+# TurboScript
 
 Turbo command processor can act as an automated builder by reading instructions from a `.me` file to create a new image. Turbo Shell can act as an interactive interpreter of TurboScript.
 

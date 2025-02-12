@@ -1,4 +1,4 @@
-## gc
+# gc
 
 The `gc` command garbage collects unused containers. By default a container is considered unused if not run within the past 30 days. Installed or running containers are not deleted.
 

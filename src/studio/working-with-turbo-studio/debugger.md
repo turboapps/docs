@@ -1,4 +1,4 @@
-## Debugger
+# Debugger
 
 The Turbo Studio Debugger is a tool to aid in virtual machine log analysis. It contains many tools to filter and compare logs.
 

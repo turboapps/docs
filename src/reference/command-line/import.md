@@ -1,4 +1,4 @@
-## import
+# import
 
 The `import` command is used to add Turbo images or non-Turbo file types from your local machine to your local registry.
 

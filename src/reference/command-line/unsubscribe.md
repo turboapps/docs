@@ -1,4 +1,4 @@
-## unsubscribe
+# unsubscribe
 
 The `unsubscribe` command unsubscribes a specified subscription or all subscriptions. It uninstalls shortcuts and removes the update task.
 

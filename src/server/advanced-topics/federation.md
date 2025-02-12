@@ -1,4 +1,4 @@
-## Federation
+# Federation
 
 ### Understanding Federation
 

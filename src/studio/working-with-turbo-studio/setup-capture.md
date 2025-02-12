@@ -1,4 +1,4 @@
-## Setup Capture
+# Setup Capture
 
 The **Setup Capture** allows an application install to be recorded in order to create the container configuration. This is the recommended method of creating container configurations. The feature is only available on Windows 10+ and Windows Server 2016+ and does not support applications that are required to reboot the machine during the installation process. Use **Snapshot** if these requirements cannot be met for your application.
 

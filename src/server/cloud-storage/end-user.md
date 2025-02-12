@@ -1,4 +1,4 @@
-## End User Guide
+# End User Guide
 
 To enable cloud storage for end users, they must add their cloud storage account using the Portal interface. Applications launched in the cloud by the end users will automatically map their cloud storage folder to the T: drive.
 

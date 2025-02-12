@@ -1,4 +1,4 @@
-## Runtime Settings
+# Runtime Settings
 
 The behaviour of containers and images can be modified by changing VM settings at runtime.
 

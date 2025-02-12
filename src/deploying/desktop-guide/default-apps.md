@@ -1,4 +1,4 @@
-## Setting Default App Associations using ProgIDs
+# Setting Default App Associations using ProgIDs
 
 When a Turbo application is installed either using the `installi` command or when a Workspace is `registered`, the application will create a Turbo specific ProgID for each ProgID captured in the image.
 

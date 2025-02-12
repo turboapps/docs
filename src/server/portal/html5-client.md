@@ -1,4 +1,4 @@
-## HTML5 Client
+# HTML5 Client
 
 ### Copy Paste Functionality
 

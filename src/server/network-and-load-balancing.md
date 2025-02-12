@@ -1,4 +1,4 @@
-## Network and Load Balancing
+# Network and Load Balancing
 
 ### Installing Redundant Roles
 

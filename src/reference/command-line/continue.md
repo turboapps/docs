@@ -1,4 +1,4 @@
-## continue
+# continue
 
 The `continue` command downloads the last state of a container and then starts it.
 

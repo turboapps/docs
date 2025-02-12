@@ -1,4 +1,4 @@
-## AWS AppStream 2.0
+# AWS AppStream 2.0
 
 Turbo supports deploying applications to [Amazon AppStream 2.0](https://aws.amazon.com/appstream2/). AppStream 2.0 provides cloud-based Windows desktops hosted in the AWS cloud.
 

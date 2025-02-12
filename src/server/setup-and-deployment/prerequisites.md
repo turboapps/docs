@@ -1,4 +1,4 @@
-## Prerequisites
+# Prerequisites
 
 In this section you will learn about system and software requirements for installing the various Turbo Server components. To ensure a smooth installation process, it is important to have a clean machine. Please note that preinstalled programs such as IIS and Java may cause interference with Turbo Server, so it is recommended not to have them installed beforehand.
 

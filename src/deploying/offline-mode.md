@@ -1,4 +1,4 @@
-## Offline Deployments using Turbo Client
+# Offline Deployments using Turbo Client
 
 The Turbo Client can be used to deploy applications in offline mode without the need to set up a Turbo Server. In this scenario, the system administrator will need to add, remove, update, register, and manage the available base and application SVM packages using the client CLI.
 

@@ -1,4 +1,4 @@
-## Microsoft .NET Core
+# Microsoft .NET Core
 
 .NET Core is a free and open-source managed software framework for Windows, macOS and Linux. It allows you to build managed applications and deploy them across many different platforms. Below are the steps to create a custom .NET Core container image for use with your applications.
 

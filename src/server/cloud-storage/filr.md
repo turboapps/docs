@@ -1,4 +1,4 @@
-## Filr
+# Filr
 
 To allow users to connect their Micro Focus Filr accounts and access their My Files while running their applications, you must set up a Filr Server with accounts for your users.
 

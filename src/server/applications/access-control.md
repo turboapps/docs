@@ -1,4 +1,4 @@
-## Access Control
+# Access Control
 
 Turbo Server allows workspace administrators to control access to workspace applications according to a configurable set of access rules.
 

@@ -1,4 +1,4 @@
-## logout
+# logout
 
 The 'logout' command is used to log the current user out of the domain. Login credentials are specific to each domain, so you should log out of each domain individually.
 

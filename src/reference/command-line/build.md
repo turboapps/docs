@@ -1,4 +1,4 @@
-## build
+# build
 
 The `build` command is used to automate the creation of images. The `build` command can build images from a TurboScript or a **.xappl** configuration file.
 

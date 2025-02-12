@@ -1,4 +1,4 @@
-## Turbo Server Setup
+# Turbo Server Setup
 
 Turbo Hub Server enables you to configure settings during setup. Using this process you can control the database connection strings used by Turbo Hub Server and the domain names for the Administration and Hub Sites. Turbo Hub Server supports the use of any connection string format used by Microsoft SQL Server.
 

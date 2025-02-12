@@ -1,4 +1,4 @@
-## copyi
+# copyi
 
 The `copyi` command copies an image to another repository on your local machine. `cpi` is an alias for this command.
 

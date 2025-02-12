@@ -1,4 +1,4 @@
-## SSL Troubleshooting
+# SSL Troubleshooting
 
 ### Portal has limited functionality after installing certificates
 

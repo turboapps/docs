@@ -1,4 +1,4 @@
-## isolate
+# isolate
 
 The `isolate` instruction sets the isolation setting of a named object. 
 

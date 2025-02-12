@@ -1,4 +1,4 @@
-## Turbo Client
+# Turbo Client
 
 In the following pages you will learn about how to use the Turbo Client and Turbo Launcher.
 

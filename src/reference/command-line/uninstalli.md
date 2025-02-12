@@ -1,4 +1,4 @@
-## uninstalli
+# uninstalli
 
 The `uninstalli` removes the Start menu shortcuts for the image and disables the update process for the images registered with `installi` or `subscribe` commands.
 

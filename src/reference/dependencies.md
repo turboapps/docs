@@ -1,4 +1,4 @@
-## Dependencies
+# Dependencies
 Newly created images are usually based on a existing image.
 For example, a Wordpress image is based on a PHP, MySQL and Apache image.
 How are these dependencies handled?

@@ -1,4 +1,4 @@
-## API Keys
+# API Keys
 
 API keys allow you to login to the Turbo.net or Turbo Server hub without the use of a password. This is important for scripting and automation as it eliminates the need to hard code passwords or pass them in as parameters to your scripts. API keys can be revoked or regenerated in case they have been compromised.
 

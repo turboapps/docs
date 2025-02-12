@@ -1,4 +1,4 @@
-## Duo with SAML 2.0
+# Duo with SAML 2.0
 
 Turbo Server can be configured to allow users to log in via Duo Single Sign-On SSO using the SAML 2.0 authentication protocol.
 

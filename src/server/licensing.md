@@ -1,4 +1,4 @@
-## Licensing
+# Licensing
 
 ### Turbo Server License
 

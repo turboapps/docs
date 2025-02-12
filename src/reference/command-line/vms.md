@@ -1,4 +1,4 @@
-## vms
+# vms
 
 The `vms` command lists all the available versions of the Turbo VM. 
 

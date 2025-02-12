@@ -1,4 +1,4 @@
-## DEP Compatibility
+# DEP Compatibility
 
 ### Background
 

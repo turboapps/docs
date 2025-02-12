@@ -1,4 +1,4 @@
-## Microsoft Office 2010
+# Microsoft Office 2010
 
 Microsoft Office 2010 is commonly used with legacy plugins or line of business applications. This can be problematic as enterprises rush to migrate their users to the latest version of Office 365 or Office 2016 which are not able to run side-by-side with Office 2010.
 

@@ -1,4 +1,4 @@
-## require
+# require
 
 The `require` instruction defines a runtime requirement which should be checked and enforced before the output image is launched. If the requirement cannot be satisfied, the image will not be run.
 

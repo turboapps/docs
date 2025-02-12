@@ -1,4 +1,4 @@
-## Advanced Topics
+# Advanced Topics
 
 This section describes advanced topics you may encounter when implementing Turbo Server.
 

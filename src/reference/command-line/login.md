@@ -1,4 +1,4 @@
-## login
+# login
 
 The `login` command is used to log a user into the current remote registry. Login credentials are specific to each domain, which can be set using the command `turbo config --domain=<domain>`. Once logged in, the credentials will be saved until you choose to log out.
 

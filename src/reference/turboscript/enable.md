@@ -1,4 +1,4 @@
-## enable
+# enable
 
 The `enable` instruction enables the specified VM setting inside the container. 
 

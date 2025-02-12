@@ -1,4 +1,4 @@
-## installi
+# installi
 
 The `installi` creates Start menu shortcuts for the specified image set.
 

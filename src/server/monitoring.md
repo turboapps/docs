@@ -1,4 +1,4 @@
-## Monitoring
+# Monitoring
 
 The following document describes external services that can be used to check the health status of Turbo Server.
 

@@ -1,4 +1,4 @@
-## Portable EXEs and MSIs
+# Portable EXEs and MSIs
 
 Turbo Studio can be used to package virtual applications as portable EXEs and MSIs.
 

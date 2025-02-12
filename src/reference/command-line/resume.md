@@ -1,4 +1,4 @@
-## resume
+# resume
 
 The `resume` command resumes a paused container. 
 

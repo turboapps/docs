@@ -1,4 +1,4 @@
-## Application Server Troubleshooting
+# Application Server Troubleshooting
 
 ### Group Policy Settings
 

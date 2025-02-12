@@ -1,4 +1,4 @@
-## config
+# config
 
 The `config` command displays and allows modification of the current configuration settings.
 

@@ -1,4 +1,4 @@
-## Domain
+# Domain
 
 ![Server admin domain dashboard](../../images/admin-domain-dashboard.png)
 

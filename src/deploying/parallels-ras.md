@@ -1,4 +1,4 @@
-## To Parallels RAS
+# To Parallels RAS
 
 Parallels Remote Application Server (RAS) is a comprehensive virtual application and desktop delivery solution that allows your employees to access and use applications and data from any device.
 

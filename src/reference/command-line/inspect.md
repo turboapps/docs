@@ -1,4 +1,4 @@
-## inspect
+# inspect
 
 The `inspect` command displays contents of the image.
 

@@ -1,4 +1,4 @@
-## setworkdir
+# setworkdir
 
 The `setworkdir` instruction sets the working directory which is used by the output image at runtime.
 

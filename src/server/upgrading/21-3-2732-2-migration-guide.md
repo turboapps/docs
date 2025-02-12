@@ -1,4 +1,4 @@
-## 21.3.2732.2 Migration Guide
+# 21.3.2732.2 Migration Guide
 
 Turbo Server **21.3.2732.2** has updated Web Applications to improve customization and consistency with other application types. The follow migration guide details the process required to migrate existing Web Applications when upgrading from Turbo Server **21.1.2640** to **21.3.2732.2** or later. 
 

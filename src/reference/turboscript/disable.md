@@ -1,4 +1,4 @@
-## disable
+# disable
 
 The `disable` instruction disables the specified VM setting inside the container. 
 

@@ -1,4 +1,4 @@
-## rmi
+# rmi
 
 The `rmi` command removes images from the local registry. 
 

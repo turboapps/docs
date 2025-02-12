@@ -1,4 +1,4 @@
-## diff
+# diff
 
 The `diff` command shows changes made in a container's filesystem. 
 

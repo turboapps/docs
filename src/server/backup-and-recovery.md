@@ -1,4 +1,4 @@
-## Backup and Recovery
+# Backup and Recovery
 
 The **Backup and Recovery** page outlines the requirements for a complete backup and recovery strategy. 
 

@@ -1,4 +1,4 @@
-## fork
+# fork
 
 The `fork` command creates a copy of an existing container.
 

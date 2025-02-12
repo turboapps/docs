@@ -24,7 +24,7 @@ features:
 
 ---
 
-## Welcome to Turbo Documentation
+# Welcome to Turbo Documentation
 
 Turbo is a powerful platform for application virtualization and deployment. Whether you're an administrator, developer, or IT professional, our documentation provides comprehensive guides and references to help you make the most of Turbo.
 

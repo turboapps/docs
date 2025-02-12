@@ -1,4 +1,4 @@
-## commit
+# commit
 
 The `commit` command builds an image from a container. The image is built from the container's most recent state. 
 

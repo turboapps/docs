@@ -1,4 +1,4 @@
-## Legacy SQL Server
+# Legacy SQL Server
 
 Some legacy applications have dependencies on legacy versions of SQL Server. Here it will be shown how to create and configure a SQL Server 2005 Express Edition image using Turbo Studio and the snapshot method.
 

@@ -1,4 +1,4 @@
-## Desktop Integration
+# Desktop Integration
 
 A container image can be configured for integration into your desktop environment using custom shortcuts or file associations. Container images can be deployed to a desktop with the Turbo Client using **install**, **installi**, or **subscribe** commands or through the Turbo Server portal. Standalone executables can be deployed using a Microsoft Installer (MSI) file.
 

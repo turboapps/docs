@@ -1,4 +1,4 @@
-## Browser Ad Blocking
+# Browser Ad Blocking
 
 Ad blocking is important for improving user experience, maximizing performance, and eliminating an important source of security vulnerabilties.
 

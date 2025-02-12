@@ -1,4 +1,4 @@
-## End User Troubleshooting
+# End User Troubleshooting
 
 This section provides information to help troubleshoot common end user issues.
 

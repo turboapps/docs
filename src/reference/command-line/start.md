@@ -1,4 +1,4 @@
-## start
+# start
 
 The `start` command restarts a stopped container or starts an application inside an already running container. 
 

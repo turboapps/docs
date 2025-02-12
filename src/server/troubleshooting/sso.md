@@ -1,4 +1,4 @@
-## Single Sign On
+# Single Sign On
 
 This section provides information to help troubleshoot common Single Sign On (SSO) issues.
 

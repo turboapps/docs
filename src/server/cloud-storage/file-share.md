@@ -1,4 +1,4 @@
-## File Share
+# File Share
 
 The file system storage provider integration allows users to store their files on a local file system folder or a network share (SMB) through the T: Drive. The files under the configured path can be set to read only, or scoped to each individual user's private folder.
 

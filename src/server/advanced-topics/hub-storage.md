@@ -1,4 +1,4 @@
-## Hub Storage
+# Hub Storage
 
 The Hub Server stores repositories and sessions in a file system based database. The database is located under the path C:\ProgramData\Turbo Server\io (formerly C:\turbo-server\io). Administrators should back up that folder in case of drive failure.
 

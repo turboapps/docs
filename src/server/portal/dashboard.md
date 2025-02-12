@@ -1,4 +1,4 @@
-## Dashboard
+# Dashboard
 
 The Dashboard is the primary end user interface provided by the Portal. Once the user logs in and accepts the optional notice and consent form, they are presented the **Default Workspace**, or a list of workspaces if they have permissions to more than one.
 

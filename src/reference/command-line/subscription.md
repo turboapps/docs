@@ -1,4 +1,4 @@
-## subscription
+# subscription
 
 The `subscription` command is used to update, register, unregister, suspend, resume and print the details of a subscription. 
 

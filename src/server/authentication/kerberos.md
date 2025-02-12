@@ -1,4 +1,4 @@
-## Kerberos
+# Kerberos
 
 Turbo Server applications can be configured to allow user credential delegation using the Kerberos protocol in order to avoid multiple logins when launching a web application.
 

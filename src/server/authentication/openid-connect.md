@@ -1,4 +1,4 @@
-## OpenID Connect
+# OpenID Connect
 
 Turbo Server supports logging in users via Single Sign-On (SSO) using an external identity provider that supports OpenID Connect (OIDC) authentication. The OIDC authentication protocol is supported by many identity providers, such as Azure Active Directory or Google.
 

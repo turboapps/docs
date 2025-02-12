@@ -1,4 +1,4 @@
-## Performance
+# Performance
 
 ## Applications take too long to launch
 

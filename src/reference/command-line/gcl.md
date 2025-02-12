@@ -1,4 +1,4 @@
-## gcl
+# gcl
 
 The `gcl` command garbage collects logs.
 

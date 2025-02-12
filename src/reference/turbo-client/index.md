@@ -1,4 +1,4 @@
-## Turbo Client
+# Turbo Client
 
 ### Turbo Client Installation
 

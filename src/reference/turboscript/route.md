@@ -1,4 +1,4 @@
-## route
+# route
 
 The `route` instruction adds a route mapping.
 

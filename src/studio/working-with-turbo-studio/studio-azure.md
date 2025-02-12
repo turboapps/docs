@@ -1,4 +1,4 @@
-## Turbo Studio in Azure
+# Turbo Studio in Azure
 
 A preconfigured application capture environment can be deployed to Azure via the Turbo Studio Azure Marketplace Image (AMI). A Turbo Studio AMI deployed instance has Turbo Studio and Turbo Client preinstalled on a clean machine to allow for accurate application captures whether the Setup Capture or Snapshot method is used.
 

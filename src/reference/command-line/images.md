@@ -1,4 +1,4 @@
-## images
+# images
 
 The `images` command lists all of the images present in the local registry. 
 

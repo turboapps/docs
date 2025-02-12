@@ -1,4 +1,4 @@
-## Debugging
+# Debugging
 
 The following document describes how to obtain a .DMP file for a running application that is in an erroneous state for diagnostics.
 

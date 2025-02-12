@@ -1,4 +1,4 @@
-## containers
+# containers
 
 The containers command lists all sessions on the local machine.  
 

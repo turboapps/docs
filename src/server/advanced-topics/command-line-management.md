@@ -1,4 +1,4 @@
-## Command Line Management
+# Command Line Management
 
 The Turbo Server executable, **server.exe**, is located in the installation directory of Turbo Hub Server (usually **C:\Program Files (x86)\Turbo Server**). It has many administrative options that are accessible by using command line parameters.
 

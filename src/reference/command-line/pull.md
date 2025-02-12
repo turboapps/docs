@@ -1,4 +1,4 @@
-## pull
+# pull
 
 The `pull` command syncs an image from a remote registry to your local registry. 
 

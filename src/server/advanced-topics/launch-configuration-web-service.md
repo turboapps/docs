@@ -1,4 +1,4 @@
-## Launch Configuration Web Service
+# Launch Configuration Web Service
 
 The **launch configuration web service** provides storage for application configurations which may be used to execute applications from a custom web portal using turbo urls. If the Turbo Portal is used as your application portal, this service is not necessary.
 

@@ -1,4 +1,4 @@
-## cp
+# cp
 
 The `cp` command copies a files from one container to another or between a container and the native filesystem. 
 

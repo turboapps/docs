@@ -1,4 +1,4 @@
-## Moodle Integration
+# Moodle Integration
 
 Configuring Turbo Server with Moodle allows students and instructors to access their Portal Dashboard with one click from Moodle.
 

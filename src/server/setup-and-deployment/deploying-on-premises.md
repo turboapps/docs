@@ -1,4 +1,4 @@
-## Deploying On-Premises
+# Deploying On-Premises
 
 In this section you will learn about installing, configuring, and running an on-premises Turbo Server.
 

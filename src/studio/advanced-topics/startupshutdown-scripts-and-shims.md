@@ -1,4 +1,4 @@
-## Startup/Shutdown Scripts and Shims
+# Startup/Shutdown Scripts and Shims
 
 Turbo Studio allows for custom operations to be performed at the beginning and end of a container's life. This allows for application specific configuration steps to be performed before a container starts (ie. install a necessary driver) or clean up to be performed afterward.
 

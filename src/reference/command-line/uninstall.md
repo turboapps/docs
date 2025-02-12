@@ -1,4 +1,4 @@
-## uninstall
+# uninstall
 
 The `uninstall` command will remove the **Start Menu** shortcut for the specified container
 

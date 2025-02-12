@@ -1,4 +1,4 @@
-## search
+# search
 
 The `search` command is used to search remote hub for images.
 

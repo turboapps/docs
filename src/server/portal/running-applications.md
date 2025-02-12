@@ -1,4 +1,4 @@
-## Running Applications
+# Running Applications
 
 Turbo applications can be ran using the Turbo Server Portal or, if installed to your local machine, directly from the Start Menu or Applications folder.
 

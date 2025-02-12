@@ -1,4 +1,4 @@
-## General
+# General
 
 ![Turbo Server Admin General](../../images/admin-general.png)
 

@@ -1,4 +1,4 @@
-## Continuous Integration
+# Continuous Integration
 
 Create automated, clean, and consistent test environments with Turbo while keeping the Continuous Integration (CI) 
 server free from conflict causing dependencies.

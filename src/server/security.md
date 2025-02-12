@@ -1,4 +1,4 @@
-## Application Security
+# Application Security
 
 Application servers provide end users the ability to run Turbo applications remotely in containers. The container model provides limited security against malicious users by preventing users to modify files and registry outside of the containers isolation setting. Additional care must be taken since the user may  upload and attempt to execute arbitrary applications.
 

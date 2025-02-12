@@ -1,4 +1,4 @@
-## To a Desktop
+# To a Desktop
 
 Turbo supports deploying containers from the Turbo Hub to your desktop using the **subscribe** and **installi** features. Add the **latest** version of an application to enable auto-patching of that application. This ensures you get the latest updates to the selected applications as they are released.
 

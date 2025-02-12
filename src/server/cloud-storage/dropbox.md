@@ -1,4 +1,4 @@
-## Dropbox
+# Dropbox
 
 To allow users to connect their Dropbox accounts and access them while running their applications, you must first configure a Dropbox app registration. This Dropbox app controls the permissions, branding, and routing for the Dropbox SSO.
 

@@ -1,4 +1,4 @@
-## Large Applications
+# Large Applications
 
 ### Issues with Large Applications
 

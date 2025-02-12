@@ -1,4 +1,4 @@
-## Azure Active Directory with SAML 2.0
+# Azure Active Directory with SAML 2.0
 
 Turbo Server can be configured to allow users to log in via Azure Active Directory (Azure AD) Single Sign-On (SSO) using the SAML 2.0 authentication protocol.
 

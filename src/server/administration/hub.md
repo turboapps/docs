@@ -1,4 +1,4 @@
-## Hub
+# Hub
 
 ![Server admin hub](../../images/admin-hub.png)
 

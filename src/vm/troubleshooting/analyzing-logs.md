@@ -1,4 +1,4 @@
-## Diagnostic Logs
+# Diagnostic Logs
 
 When troubleshooting issues with containers, it is often useful to generate diagnostic logs for analysis. These logs show detailed information about system calls and error codes that were generated during the application life. 
 

@@ -1,4 +1,4 @@
-## Microsoft Office
+# Microsoft Office
 
 The following section describes how to set up application servers to run Microsoft Office in Turbo, using KMS license activation.
 

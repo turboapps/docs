@@ -1,4 +1,4 @@
-## Windows Firewall
+# Windows Firewall
 
 Sometimes it is necessary to add **Windows Firewall** rules to allow container applications access to network ports. Below are some suggestions when configuring these rules.
 
