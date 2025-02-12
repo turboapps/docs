@@ -76,7 +76,7 @@ To resolve the issue, add an exemption in the Software Restriction Policies for 
   Type: Path
   Security Level: Unrestricted
 
-![Secpol](/../images/secpol.png)
+![Secpol](/images/secpol.png)
 
 #### Windows Applocker
 
