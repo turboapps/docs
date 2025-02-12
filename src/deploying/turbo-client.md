@@ -2,7 +2,7 @@
 
 In the following pages you will learn about how to use the Turbo Client and Turbo Launcher.
 
-### Install the Plugin
+### Installation
 
 End-users must download and install the Turbo Client prior to launching Turbo applications for the first time.
 

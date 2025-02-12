@@ -1,4 +1,6 @@
-# Overview
+# Turbo Studio
+
+## Overview
 
 Turbo Studio is a desktop application that allows you to convert any Windows application into a self-contained virtual application container. Virtual applications can be delivered as Turbo images to be used by the Turbo Client or Turbo Server as well as standalone executables.
 

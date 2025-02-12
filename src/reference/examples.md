@@ -3,11 +3,31 @@
 This guide provides practical examples of using Turbo with different development frameworks and scenarios.
 
 ::: tip What you'll learn
+- How to work with dependencies and base images
 - How to containerize web applications
 - Working with .NET applications
 - Java application deployment
 - Best practices for development workflows
 :::
+
+## Dependencies
+
+### Base Images
+
+Newly created images are usually based on existing images. For example, a WordPress image is based on PHP, MySQL, and Apache images. There are two ways to handle these dependencies:
+
+#### Default Behavior
+By default, all base images are baked into the new image. The newly created image includes everything it needs.
+
+For information purposes, the used images will show up in the Hub under the Dependencies tab of the repository.
+
+#### Runtime Dependencies
+If an image is created with the `--no-base` option, the newly created image will not contain the base images. Instead, the images are downloaded and loaded when the image is used.
+
+For example, with a WordPress image based on PHP, MySQL, and Apache built with `--no-base`:
+- When launched, the PHP, MySQL, and Apache images are downloaded
+- Transitive dependencies are downloaded recursively
+- The image cannot be pushed if base images are not available on Hub
 
 ## Web Applications
 

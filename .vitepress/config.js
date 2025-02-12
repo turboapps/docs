@@ -42,7 +42,7 @@ export default defineConfig({
       { text: 'Server', link: '/server/' },
       { text: 'Deploying', link: '/deploying/' },
       { text: 'VM', link: '/vm/' },
-      { text: 'Reference', link: '/reference/command-line/' }
+      { text: 'Reference', link: '/reference/' }
     ],
     sidebar: {
       '/getting-started/': [
@@ -115,7 +115,7 @@ export default defineConfig({
               text: 'Advanced Topics',
               collapsed: true,
               items: [
-                { text: 'Overview', link: '/studio/advanced-topics/' },
+                { text: 'Large Applications', link: '/studio/advanced-topics/' },
                 { text: 'Startup/Shutdown Scripts', link: '/studio/advanced-topics/startupshutdown-scripts-and-shims' }
               ]
             }
@@ -202,8 +202,28 @@ export default defineConfig({
             { text: 'Portal', link: '/server/portal/index' },
             { text: 'Security', link: '/server/security' },
             { text: 'Advanced Topics', link: '/server/advanced-topics/index' },
-            { text: 'Troubleshooting', link: '/server/troubleshooting/admininstration' },
-            { text: 'Upgrading', link: '/server/upgrading/upgrading' }
+            {
+              text: 'Troubleshooting',
+              collapsed: true,
+              items: [
+                { text: 'Application', link: '/server/troubleshooting/application' },
+                { text: 'Application Server', link: '/server/troubleshooting/application-server' },
+                { text: 'Application Streaming', link: '/server/troubleshooting/application-streaming' },
+                { text: 'End User', link: '/server/troubleshooting/end-user' },
+                { text: 'Performance', link: '/server/troubleshooting/performance' },
+                { text: 'Single Sign On', link: '/server/troubleshooting/sso' },
+                { text: 'SSL', link: '/server/troubleshooting/ssl-troubleshooting' }
+              ]
+            },
+            {
+              text: 'Upgrading',
+              collapsed: true,
+              items: [
+                { text: 'Upgrading Guide', link: '/server/upgrading/' },
+                { text: 'Releases', link: '/server/upgrading/releases' },
+                { text: '21.3.2732.2 Migration', link: '/server/upgrading/21-3-2732-2-migration-guide' }
+              ]
+            }
           ]
         }
       ],
@@ -216,7 +236,7 @@ export default defineConfig({
               text: 'Command Line',
               collapsed: true,
               items: [
-                { text: 'Introduction', link: '/reference/command-line/' },
+                { text: 'Overview', link: '/reference/command-line/' },
                 { text: 'build', link: '/reference/command-line/build' },
                 { text: 'cache', link: '/reference/command-line/cache' },
                 { text: 'commit', link: '/reference/command-line/commit' },
@@ -274,6 +294,7 @@ export default defineConfig({
                 { text: 'vms', link: '/reference/command-line/vms' }
               ]
             },
+            { text: 'Examples', link: '/reference/examples' },
             {
               text: 'TurboScript',
               collapsed: true,
@@ -303,9 +324,14 @@ export default defineConfig({
                 { text: 'workdir', link: '/reference/turboscript/workdir' }
               ]
             },
-            { text: 'Dependencies', link: '/reference/dependencies' },
-            { text: 'Examples', link: '/reference/examples' },
-            { text: 'Turbo Client', link: '/reference/turbo-client/' },
+            {
+              text: 'Turbo Client',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/reference/turbo-client/' },
+                { text: 'Security', link: '/reference/turbo-client/turbo-client-security' }
+              ]
+            },
             { text: 'Turbo Desktop', link: '/reference/turbo-desktop' },
             { text: 'Turbo Play', link: '/reference/turbo-play' },
             {
