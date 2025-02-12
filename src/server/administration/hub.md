@@ -4,8 +4,6 @@
 
 All application repositories on Turbo Server are managed from the **Images** page of the Administration Site.
 
-For more information on adding application repositories to the Hub, see [Deploying to Turbo Server](/deploying/to-turbo-server/to-turbo-server)
-
 ### Managing Repositories
 
 ![Server admin edit repository](/images/admin-repos-edit.png)

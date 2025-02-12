@@ -377,36 +377,47 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: 'Introduction', link: '/deploying/' },
-            { text: 'AWS AppStream', link: '/deploying/aws-appstream' },
             {
-              text: 'Citrix',
+              text: 'Studio',
               collapsed: true,
               items: [
-                { text: 'Introduction', link: '/deploying/citrix-guide/' },
-                { text: 'Command Line', link: '/deploying/citrix-guide/command-line' },
-                { text: 'Scripts', link: '/deploying/citrix-guide/scripts' }
+                { text: 'Building Executables', link: '/deploying/studio/studio-builds' }
               ]
             },
             {
-              text: 'Desktop',
+              text: 'Client',
               collapsed: true,
               items: [
-                { text: 'Introduction', link: '/deploying/desktop-guide/' },
-                { text: 'Default Apps', link: '/deploying/desktop-guide/default-apps' }
+                { text: 'Using Turbo Client', link: '/deploying/client/turbo-client' }
               ]
             },
-            { text: 'Intune', link: '/deploying/intune' },
-            { text: 'Offline Mode', link: '/deploying/offline-mode' },
-            { text: 'Parallels RAS', link: '/deploying/parallels-ras' },
-            { text: 'Portable EXEs', link: '/deploying/portable-exes' },
-            { text: 'System Center', link: '/deploying/system-center' },
-            { text: 'Turbo Server', link: '/deploying/turbo-server' },
             {
-              text: 'Tips',
+              text: 'Server',
               collapsed: true,
               items: [
-                { text: 'API Keys', link: '/deploying/tips/api-keys' },
-                { text: 'Windows Firewall', link: '/deploying/tips/windoww-firewall' }
+                { text: 'Overview', link: '/deploying/server/index' },
+                { text: 'Hub Setup', link: '/deploying/server/hub-setup' },
+                { text: 'Workspaces', link: '/deploying/server/workspaces' },
+                { text: 'Subscriptions', link: '/deploying/server/subscriptions' }
+              ]
+            },
+            {
+              text: 'Platform Integrations',
+              collapsed: true,
+              items: [
+                { text: 'AWS AppStream', link: '/deploying/integrations/aws-appstream' },
+                {
+                  text: 'Citrix',
+                  collapsed: true,
+                  items: [
+                    { text: 'Overview', link: '/deploying/integrations/citrix-guide/' },
+                    { text: 'Command Line', link: '/deploying/integrations/citrix-guide/command-line' },
+                    { text: 'Scripts', link: '/deploying/integrations/citrix-guide/scripts' }
+                  ]
+                },
+                { text: 'Intune', link: '/deploying/integrations/intune' },
+                { text: 'Parallels RAS', link: '/deploying/integrations/parallels-ras' },
+                { text: 'System Center', link: '/deploying/integrations/system-center' }
               ]
             }
           ]
