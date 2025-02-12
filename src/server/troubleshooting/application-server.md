@@ -4,189 +4,37 @@
 
 A common point of failure is due to the group policy applied to the application server. In a typical enterprise scenario the administrator has applied Microsoft's security baseline group policies on Windows servers. There are some group policies that will prevent the application server from functioning. Some of these policies may not appear in your Group Policy editor if the template is missing from your Windows Policy folder, but must be changed to install correctly. Ensure the following group policies are either unconfigured or set to the following values in the table:
 
-<table>
-      <tr>
-         <th data-column="0">
-            <div>
-               <p>Path</p>
-            </div>
-         </th>
-         <th data-column="1">
-           <div>
-             <p>Setting</p>
-          </div>
-         <th data-column="2">
-            <div>
-               <p>Value</p>
-            </div>
-         </th>
-         <th data-column="3">
-           <div>
-             <p>Comment</p>
-           </div>
-         </th>
-      </tr>
-      <tr>
-        <td colspan="1">Administrative Templates > Windows Components > Remote Desktop Services > Remote Desktop Session Host > Security</td>
-        <td colspan="1">Always prompt for password upon connection</td>
-        <td colspan="1">Disabled</td>
-        <td colspan="1">A login prompt will prevent remoteapp applications from launching.</td>
-      </tr>
-      <tr>
-        <td colspan="1"></td>
-        <td colspan="1">Require use of specific security layer for remote (RDP) connections</td>
-        <td colspan="1">Enabled (SSL) or not configured</td>
-        <td colspan="1">Enhances security by requiring TLS 1.0 to authenticate the RD Session Host server during RDP connections.</td>
-      </tr>
-      <tr>
-        <td colspan="1"></td>
-        <td colspan="1">Require user authentication for remote connections by using Network Level Authentication</td>
-        <td colspan="1">Enabled or not configured</td>
-        <td colspan="1">Enhances security by requiring user authentication earlier in the remote connection process. Some clients may require NLA authentication to login.</td>
-      </tr>
-      <tr>
-        <td colspan="1">Administrative Templates > Windows Components > Remote Desktop Services > Remote Desktop Session Host > Connections</td>
-        <td colspan="1">Allow users to connect remotely by using Remote Desktop Services</td>
-        <td colspan="1">Enabled or not configured</td>
-        <td colspan="1">If this is not configured and users are able to connect then it may be left as not configured.</td>
-      </tr>
-      <tr>
-        <td colspan="1">Administrative Templates > Windows Components > Remote Desktop Services > Remote Desktop Session Host > Device and Resource Redirection</td>
-        <td colspan="1">Do no allow drive redirection</td>
-        <td colspan="1">Disabled or not configured (Recommended)</td>
-        <td colspan="1">Disables the mapping of client drives when streaming remote applications.</td>
-      </tr>
-      <tr>
-        <td colspan="1">Administrative Templates > Windows Components > Remote Desktop Services > Remote Desktop Session Host > Session Time Limits</td>
-        <td colspan="1">Set time limit for active Remote Desktop Services sessions</td>
-        <td colspan="1">21600000 (Recommended)</td>
-        <td colspan="1">The maximum amount of time that a Remote Desktop Services session can be active before it is automatically disconnected.</td>
-      </tr>
-      <tr>
-        <td colspan="1"></td>
-        <td colspan="1">Set time limit for active but idle Remote Desktop Services sessions</td>
-        <td colspan="1">21600000 (Recommended)</td>
-        <td colspan="1">The maximum amount of time that a Remote Desktop Services session can be active before it is automatically disconnected.</td>
-      </tr>
-      <tr>
-        <td colspan="1"></td>
-        <td colspan="1">Set time limit for disconnected sessions</td>
-        <td colspan="1">300000 (Recommended)</td>
-        <td colspan="1">The maximum amount of time that a disconnected session remains active on the server.</td>
-      </tr>
-      <tr>
-        <td colspan="1"></td>
-        <td colspan="1">Set time limit for logoff of RemoteApp sessions</td>
-        <td colspan="1">600000 (Recommended)</td>
-        <td colspan="1">How long a user's RemoteApp session will remain in a disconnected state after closing all RemoteApp programs before the session is logged off from the RD Session Host server.</td>
-      </tr>
-      <tr>
-        <td colspan="1">Windows Settings > Security Settings > Local Policies > User Rights Assignment</td>
-        <td colspan="1">Deny access to this computer from the network</td>
-        <td colspan="1">Remove Local account</td>
-        <td colspan="1">Local users must be able to remote into application server to run applications and configure the machine using the --app-server install. This is not required if using active directory authentication.</td>
-      </tr>
-      <tr>
-        <td colspan="1"></td>
-        <td colspan="1">Deny log on through Remote Desktop Services</td>
-        <td colspan="1">Remove Local account</td>
-        <td colspan="1">Local users must be able to remote into application server to run applications. This is not required if using active directory authentication.</td>
-      </tr>
-      <tr>
-        <td colspan="1"></td>
-        <td colspan="1">Allow log on through Remote Desktop Services</td>
-        <td colspan="1">Add Users</td>
-        <td colspan="1">Click object types and check "groups" then add the object "Users".</td>
-      </tr>
-      <tr>
-        <td colspan="1">Windows Settings > Security Settings > Application Control Policies > AppLocker > Executable Rules</td>
-        <td colspan="1">Allow Everyone</td>
-        <td colspan="1">%OSDRIVE%\PROGRAMDATA\TURBO\*</td>
-        <td colspan="1">Turbo VM images may be cached in the PROGRAMDATA folder.</td>
-      </tr>
-      <tr>
-        <td colspan="1">Windows Settings > Security Settings > Application Control Policies > AppLocker > Executable Rules</td>
-        <td colspan="1">Allow Everyone</td>
-        <td colspan="1">%OSDRIVE%\USERS\*\APPDATA\LOCAL\TURBO\*</td>
-        <td colspan="1">Turbo Container Sandboxes may be cached in the user's local AppData folder.</td>
-      </tr>
-      <tr>
-        <td colspan="1">Windows Settings > Security Settings > Local Policies > Security Options</td>
-        <td colspan="1">Interactive Logon: Machine inactivity limit</td>
-        <td colspan="1">0 or Not Defined</td>
-        <td colspan="1">Prompts user to login after idle timeout. Use Admin > General > Streaming settings instead.</td>
-      </tr>
-</table>
+| Path | Setting | Value | Comment |
+|------|---------|-------|---------|
+| Administrative Templates > Windows Components > Remote Desktop Services > Remote Desktop Session Host > Security | Always prompt for password upon connection | Disabled | A login prompt will prevent remoteapp applications from launching. |
+| | Require use of specific security layer for remote (RDP) connections | Enabled (SSL) or not configured | Enhances security by requiring TLS 1.0 to authenticate the RD Session Host server during RDP connections. |
+| | Require user authentication for remote connections by using Network Level Authentication | Enabled or not configured | Enhances security by requiring user authentication earlier in the remote connection process. Some clients may require NLA authentication to login. |
+| Administrative Templates > Windows Components > Remote Desktop Services > Remote Desktop Session Host > Connections | Allow users to connect remotely by using Remote Desktop Services | Enabled or not configured | If this is not configured and users are able to connect then it may be left as not configured. |
+| Administrative Templates > Windows Components > Remote Desktop Services > Remote Desktop Session Host > Device and Resource Redirection | Do no allow drive redirection | Disabled or not configured (Recommended) | Disables the mapping of client drives when streaming remote applications. |
+| Administrative Templates > Windows Components > Remote Desktop Services > Remote Desktop Session Host > Session Time Limits | Set time limit for active Remote Desktop Services sessions | 21600000 (Recommended) | The maximum amount of time that a Remote Desktop Services session can be active before it is automatically disconnected. |
+| | Set time limit for active but idle Remote Desktop Services sessions | 21600000 (Recommended) | The maximum amount of time that a Remote Desktop Services session can be active before it is automatically disconnected. |
+| | Set time limit for disconnected sessions | 300000 (Recommended) | The maximum amount of time that a disconnected session remains active on the server. |
+| | Set time limit for logoff of RemoteApp sessions | 600000 (Recommended) | How long a user's RemoteApp session will remain in a disconnected state after closing all RemoteApp programs before the session is logged off from the RD Session Host server. |
+| Windows Settings > Security Settings > Local Policies > User Rights Assignment | Deny access to this computer from the network | Remove Local account | Local users must be able to remote into application server to run applications and configure the machine using the --app-server install. This is not required if using active directory authentication. |
+| | Deny log on through Remote Desktop Services | Remove Local account | Local users must be able to remote into application server to run applications. This is not required if using active directory authentication. |
+| | Allow log on through Remote Desktop Services | Add Users | Click object types and check "groups" then add the object "Users". |
+| Windows Settings > Security Settings > Application Control Policies > AppLocker > Executable Rules | Allow Everyone | %OSDRIVE%\PROGRAMDATA\TURBO\* | Turbo VM images may be cached in the PROGRAMDATA folder. |
+| Windows Settings > Security Settings > Application Control Policies > AppLocker > Executable Rules | Allow Everyone | %OSDRIVE%\USERS\*\APPDATA\LOCAL\TURBO\* | Turbo Container Sandboxes may be cached in the user's local AppData folder. |
+| Windows Settings > Security Settings > Local Policies > Security Options | Interactive Logon: Machine inactivity limit | 0 or Not Defined | Prompts user to login after idle timeout. Use Admin > General > Streaming settings instead. |
 
 ### Diagnosing WinRM Errors (LEGACY)
 
 The following group policies enables WinRM for legacy (prior to version 2019.7.26) Turbo Broker:
 
-<table>
-      <tr>
-         <th data-column="0">
-            <div>
-               <p>Path</p>
-            </div>
-         </th>
-         <th data-column="1">
-           <div>
-             <p>Setting</p>
-          </div>
-         <th data-column="2">
-            <div>
-               <p>Value</p>
-            </div>
-         </th>
-         <th data-column="3">
-           <div>
-             <p>Comment</p>
-           </div>
-         </th>
-      </tr>
-	  <tr>
-         <td colspan="1">Administrative Templates > SCM: Pass the Hash Mitigations</td>
-         <td colspan="1">Apply UAC restrictions to local accounts on network logons</td>
-         <td colspan="1">Disabled or not configured</td>
-         <td colspan="1">Security baseline will enable this value. If the policy path is missing, locate the ptH.admx and add it in your group policy templates folder.</td>
-      </tr>
-      <tr>
-         <td colspan="1">Administrative Templates > Windows Components > Windows Remote Management > WinRM Client</td>
-         <td colspan="1">Allow Basic authentication</td>
-         <td colspan="1">Enabled or not configured</td>
-         <td colspan="1">Security baseline default value is not configured.</td>
-      </tr>
-      <tr>
-         <td colspan="1"></td>
-         <td colspan="1">Allow unencrypted traffic</td>
-         <td colspan="1">Enabled or not configured</td>
-         <td colspan="1">Security baseline will set this to disabled. The winrm command will test the connection using basic http.</td>
-      </tr>
-      <tr>
-         <td colspan="1">Administrative Templates > Windows Components > Windows Remote Management > WinRM Service</td>
-         <td colspan="1">Allow remote server management through WinRM</td>
-         <td colspan="1">Enabled or not configured</td>
-         <td colspan="1">Application server provision requires WinRM. If enabled, make sure you set the IPv4 and IPv6 filters correctly.</td>
-      </tr>
-      <tr>
-         <td colspan="1"></td>
-         <td colspan="1">Allow Basic authentication</td>
-         <td colspan="1">Enabled</td>
-         <td colspan="1">Application server provision requires WinRM.</td>
-      </tr>
-      <tr>
-        <td colspan="1"></td>
-        <td colspan="1">Allow unencrypted traffic</td>
-        <td colspan="1">Enabled</td>
-        <td colspan="1">Application server provision requires WinRM.</td>
-      </tr>
-	  <tr>
-        <td colspan="1">Windows Settings > Security Settings > Local Policies > User Rights Assignment</td>
-        <td colspan="1">Deny access to this computer from the network</td>
-        <td colspan="1">Remove Local account</td>
-        <td colspan="1">Application server provision requires WinRM potentially over the local administrator account.</td>
-      </tr>
-</table>
+| Path | Setting | Value | Comment |
+|------|---------|-------|---------|
+| Administrative Templates > SCM: Pass the Hash Mitigations | Apply UAC restrictions to local accounts on network logons | Disabled or not configured | Security baseline will enable this value. If the policy path is missing, locate the ptH.admx and add it in your group policy templates folder. |
+| Administrative Templates > Windows Components > Windows Remote Management > WinRM Client | Allow Basic authentication | Enabled or not configured | Security baseline default value is not configured. |
+| | Allow unencrypted traffic | Enabled or not configured | Security baseline will set this to disabled. The winrm command will test the connection using basic http. |
+| Administrative Templates > Windows Components > Windows Remote Management > WinRM Service | Allow remote server management through WinRM | Enabled or not configured | Application server provision requires WinRM. If enabled, make sure you set the IPv4 and IPv6 filters correctly. |
+| | Allow Basic authentication | Enabled | Application server provision requires WinRM. |
+| | Allow unencrypted traffic | Enabled | Application server provision requires WinRM. |
+| Windows Settings > Security Settings > Local Policies > User Rights Assignment | Deny access to this computer from the network | Remove Local account | Application server provision requires WinRM potentially over the local administrator account. |
 
 In a command prompt on the application server, issue the following command:
 
@@ -219,183 +67,37 @@ WinRM is already set up for remote management on this computer.
 
 The application server provisioner should make the required changes to enable RemoteApp execution. Ensure these registry settings were applied properly:
 
-<table>
-      <tr>
-         <th data-column="0">
-            <div>
-               <p>Path</p>
-            </div>
-         </th>
-         <th data-column="1">
-           <div>
-             <p>Setting</p>
-          </div>
-         <th data-column="2">
-            <div>
-               <p>Value</p>
-            </div>
-         </th>
-         <th data-column="3">
-           <div>
-             <p>Comment</p>
-           </div>
-         </th>
-      </tr>
-      <tr>
-         <td colspan="1">HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services</td>
-         <td colspan="1">fDenyTSConnections</td>
-         <td colspan="1">0 (DWORD)</td>
-         <td colspan="1">Enables Terminal Services.</td>
-      </tr>
-      <tr>
-         <td colspan="1"></td>
-         <td colspan="1">fResetBroken</td>
-         <td colspan="1">1 (DWORD)</td>
-         <td colspan="1"></td>
-      </tr>
-      <tr>
-         <td colspan="1"></td>
-         <td colspan="1">fDisableCam</td>
-         <td colspan="1">0 (DWORD)</td>
-         <td colspan="1">Enables audio.</td>
-      </tr>
-      <tr>
-         <td colspan="1"></td>
-         <td colspan="1">DisablePasswordSaving</td>
-         <td colspan="1">0 (DWORD)</td>
-         <td colspan="1"></td>
-      </tr>
-      <tr>
-         <td colspan="1"></td>
-         <td colspan="1">fPromptForPassword</td>
-         <td colspan="1">0 (DWORD)</td>
-         <td colspan="1"></td>
-      </tr>
-      <tr>
-         <td colspan="1"></td>
-         <td colspan="1">fEncryptRPCTraffic</td>
-         <td colspan="1">0 (DWORD)</td>
-         <td colspan="1"></td>
-      </tr>
-      <tr>
-         <td colspan="1"></td>
-         <td colspan="1">MinEncryptionLevel</td>
-         <td colspan="1">absent</td>
-         <td colspan="1">Remove this value.</td>
-      </tr>
-      <tr>
-         <td colspan="1"></td>
-         <td colspan="1">Shadow</td>
-         <td colspan="1">1</td>
-         <td colspan="1">Enable admin session shadowing.</td>
-      </tr>
-      <tr>
-         <td colspan="1"></td>
-         <td colspan="1">fSingleSessionPerUser</td>
-         <td colspan="1">0</td>
-         <td colspan="1">Allows the user to run multiple applications in separate sessions.</td>
-      </tr>
-      <tr>
-         <td colspan="1">HKLM:\SOFTWARE\Policies\Microsoft\Internet Explorer\Main</td>
-         <td colspan="1">DisableFirstRunCustomize</td>
-         <td colspan="1">1 (DWORD)</td>
-         <td colspan="1">Disable IE first run dialog</td>
-      </tr>
-      <tr>
-         <td colspan="1">HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\1</td>
-         <td colspan="1">2500</td>
-         <td colspan="1">0 (DWORD)</td>
-         <td colspan="1">Enable IE Protected mode for local intratet, avoiding warning on first use</td>
-      </tr>
-      <tr>
-         <td colspan="1">HKLM:\Software\Policies\Microsoft\Windows\Windows Error Reporting</td>
-         <td colspan="1">DontShowUI</td>
-         <td colspan="1">1 (DWORD)</td>
-         <td colspan="1">Disable crash report UI</td>
-      </tr>
-      <tr>
-         <td colspan="1">HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate</td>
-         <td colspan="1">ElevateNonAdmins</td>
-         <td colspan="1">0 (DWORD)</td>
-         <td colspan="1">Disable Windows Update UI for non-admins</td>
-      </tr>
-      <tr>
-         <td colspan="1">HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Ext</td>
-         <td colspan="1">RestrictToList</td>
-         <td colspan="1">1 (DWORD)</td>
-         <td colspan="1">Disable IE addons dialogs</td>
-      </tr>
-      <tr>
-         <td colspan="1">HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Terminal Server\TSAppAllowList</td>
-         <td colspan="1">fDisabledAllowList</td>
-         <td colspan="1">1 (DWORD)</td>
-         <td colspan="1">Enables the RemoteApp allowed program list.</td>
-      </tr>
-      <tr>
-         <td colspan="1"></td>
-         <td colspan="1">CustomRDPSettings</td>
-         <td colspan="1">authentication level:i:2 (String)</td>
-         <td colspan="1">Specifies RemoteApp custom settings such as the authentication level.</td>
-      </tr>
-      <tr>
-         <td colspan="1">HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Terminal Server\TSAppAllowList\Applications\turboplay</td>
-         <td colspan="1">Path</td>
-         <td colspan="1">C:\Program Files (x86)\Turbo\Cmd\turboplay.exe (String)</td>
-         <td colspan="1">Make sure turboplay is allowed.</td>
-      </tr>
-      <tr>
-         <td colspan="1">HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Terminal Server\TSAppAllowList\Applications\turbo</td>
-         <td colspan="1">Path</td>
-         <td colspan="1">C:\Program Files (x86)\Turbo\Cmd\turbo.exe (String)</td>
-         <td colspan="1">Make sure turbo is allowed.</td>
-      </tr>
-      <tr>
-         <td colspan="1">HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp</td>
-         <td colspan="1">SecurityLayer</td>
-         <td colspan="1">2 (DWORD)</td>
-         <td colspan="1">Require TLS 1.0 to authenticate the RD Session Host server.</td>
-      </tr>
-      <tr>
-         <td colspan="1"></td>
-         <td colspan="1">UserAuthentication</td>
-         <td colspan="1">1 (DWORD)</td>
-         <td colspan="1">Enable Network Level Authentication.</td>
-      </tr>
-</table>
+| Path | Setting | Value | Comment |
+|------|---------|-------|---------|
+| HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services | fDenyTSConnections | 0 (DWORD) | Enables Terminal Services. |
+| | fResetBroken | 1 (DWORD) | |
+| | fDisableCam | 0 (DWORD) | Enables audio. |
+| | DisablePasswordSaving | 0 (DWORD) | |
+| | fPromptForPassword | 0 (DWORD) | |
+| | fEncryptRPCTraffic | 0 (DWORD) | |
+| | MinEncryptionLevel | absent | Remove this value. |
+| | Shadow | 1 | Enable admin session shadowing. |
+| | fSingleSessionPerUser | 0 | Allows the user to run multiple applications in separate sessions. |
+| HKLM:\SOFTWARE\Policies\Microsoft\Internet Explorer\Main | DisableFirstRunCustomize | 1 (DWORD) | Disable IE first run dialog |
+| HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\1 | 2500 | 0 (DWORD) | Enable IE Protected mode for local intratet, avoiding warning on first use |
+| HKLM:\Software\Policies\Microsoft\Windows\Windows Error Reporting | DontShowUI | 1 (DWORD) | Disable crash report UI |
+| HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate | ElevateNonAdmins | 0 (DWORD) | Disable Windows Update UI for non-admins |
+| HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Ext | RestrictToList | 1 (DWORD) | Disable IE addons dialogs |
+| HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Terminal Server\TSAppAllowList | fDisabledAllowList | 1 (DWORD) | Enables the RemoteApp allowed program list. |
+| | CustomRDPSettings | authentication level:i:2 (String) | Specifies RemoteApp custom settings such as the authentication level. |
+| HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Terminal Server\TSAppAllowList\Applications\turboplay | Path | C:\Program Files (x86)\Turbo\Cmd\turboplay.exe (String) | Make sure turboplay is allowed. |
+| HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Terminal Server\TSAppAllowList\Applications\turbo | Path | C:\Program Files (x86)\Turbo\Cmd\turbo.exe (String) | Make sure turbo is allowed. |
+| HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp | SecurityLayer | 2 (DWORD) | Require TLS 1.0 to authenticate the RD Session Host server. |
+| | UserAuthentication | 1 (DWORD) | Enable Network Level Authentication. |
 
 ### Windows Updates
 
 The following Windows updates are required to establish secure connections between the client and RD Session Host. Not installing the following updates on the application server may prevent connections between the client and application server from functioning:
 
-<table>
-   <tr>
-      <th data-column="0">
-         <div>
-            <p>Operating System</p>
-         </div>
-      </th>
-      <th data-column="2">
-         <div>
-            <p>Update</p>
-         </div>
-      </th>
-      <th data-column="3">
-         <div>
-            <p>Comment</p>
-         </div>
-      </th>
-   </tr>
-   <tr>
-      <td colspan="1">Windows Server 2012</td>
-      <td colspan="1">KB4103730 or KB4103726</td>
-      <td colspan="1">Security update for Remote Desktop connections.</td>
-   </tr>
-   <tr>
-      <td colspan="1">Windows Server 2016</td>
-      <td colspan="1">KB4103723</td>
-      <td colspan="1">Security update for Remote Desktop connections.</td>
-   </tr>
-</table>
+| Operating System | Update | Comment |
+|-----------------|--------|---------|
+| Windows Server 2012 | KB4103730 or KB4103726 | Security update for Remote Desktop connections. |
+| Windows Server 2016 | KB4103723 | Security update for Remote Desktop connections. |
 
 ### Windows Update Notifications
 
