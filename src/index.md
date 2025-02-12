@@ -10,17 +10,17 @@ hero:
       link: /getting-started/
     - theme: alt
       text: View Reference
-      link: /reference/command-line/command-line-interface
+      link: /reference/
 
 features:
   - title: Application Virtualization
-    details: Run applications in isolated environments without conflicts or system modifications.
+    details: Transform Windows applications into self-contained virtual applications that run anywhere.
   - title: VDI Integration
-    details: Deploy applications efficiently in both persistent and non-persistent VDI environments.
+    details: Deploy virtualized applications efficiently in both persistent and non-persistent VDI environments.
   - title: Centralized Management
-    details: Easily manage and distribute applications across your organization with Turbo Server.
+    details: Manage and distribute virtual applications across your organization with Turbo Server workspaces.
   - title: Security and Compliance
-    details: Protect applications and data with secure sandboxes and vulnerability scanning.
+    details: Protect applications with isolated environments and built-in vulnerability scanning.
 
 ---
 
@@ -31,11 +31,11 @@ Turbo is a powerful platform for application virtualization and deployment. Whet
 ### Quick Links
 
 - [Getting Started Guide](/getting-started/)
-- [Turbo Studio](/studio/overview/overview)
-- [Turbo Server](/server/overview/overview)
-- [Deployment Options](/deploying/overview/overview)
-- [Command Line Reference](/reference/command-line/command-line-interface)
-- [VM Documentation](/vm/virtual-machine/virtual-machine)
+- [Turbo Studio](/studio/)
+- [Turbo Server](/server/)
+- [Application Deployment](/deploying/)
+- [Command Line Reference](/reference/command-line/)
+- [Turbo Virtual Machine](/vm/)
 
 ### Latest Updates
 
