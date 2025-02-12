@@ -153,6 +153,7 @@ export default defineConfig({
                 { text: 'workdir', link: '/client/turboscript/workdir' }
               ]
             },
+            { text: 'Turbo Play', link: '/client/turbo-play' },
             {
               text: 'Turbo VM',
               collapsed: true,
