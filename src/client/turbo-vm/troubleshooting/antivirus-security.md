@@ -27,7 +27,7 @@ Add the Turbo folders from the section above to the exclusions for [Real-time an
 
 If the system is encountering issues with DynamicShellcode false positive detections preventing the execution of the Turbo container, disable the **Dynamic shellcode protection setting** in your policy.
 
-![Sophos - Disable Dynamic Shellcode Protection](/../images/image.png)
+![Sophos - Disable Dynamic Shellcode Protection](/images/sophos-dynamic.png)
 
 If exclusions are not possible, the incompatibility may be mitigated by precaching the Turbo VM engine assemblies to disk rather than loading dynamically at runtime. This is done by executing the bootstrap executable with `/XPrecache=vm` (ex: "turbo-studio.exe /XPrecache=vm" or "turbo-xvm.exe /XPrecache=vm"). This will write vm.dll to the same folder as the bootstrap executable where it will be loaded on container launch. This feature is available on bootstrap executables that were built with Turbo Studio v23.6 or greater.
 
@@ -35,7 +35,7 @@ If exclusions are not possible, the incompatibility may be mitigated by precachi
 
 CylancePROTECT has a known incompatibility with Turbo when the device policy has **Memory Protection > Exploitation > System DLL Overwrite** setting enabled and set to **Block** or **Terminate**.
 
-![Cylance Memory Actions System DLL Overwrite](/../images/image.png)
+![Cylance Memory Actions System DLL Overwrite](/images/cylance-dll.png)
 
 To resolve the incompatibility, customers can disable the setting by changing it to **Alert** or **Ignore**, or add the following path exclusions in the **Memory Actions** tab:
 
@@ -44,7 +44,7 @@ To resolve the incompatibility, customers can disable the setting by changing it
 - Turbo Client repository folder for all users: `C:\ProgramData\Turbo\**\*`
 - Turbo Server installation folder: `C:\Program Files\Turbo Server\**\*`
 
-![CylancePROTECT Memory Actions Exclusions](/../images/image.png)
+![CylancePROTECT Memory Actions Exclusions](/images/cylance-exclusions.png)
 
 ### BeyondTrust Privilege Guard
 
