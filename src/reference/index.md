@@ -1,56 +1,64 @@
 # Reference Documentation
 
-This section provides detailed technical reference documentation for all Turbo components and interfaces.
+::: tip What you'll learn
+- Command-line tools and interfaces
+- Application virtualization scripting
+- Client and desktop integration features
+:::
+
+## Overview
+
+This section provides detailed technical reference documentation for all Turbo components and interfaces, helping you master application virtualization tools and workflows.
 
 ## Command Line Interface
 
-The [Command Line Interface](/reference/command-line/) provides a comprehensive set of commands for working with containers, images, and the Turbo platform. It includes commands for:
-- Building and managing containers
-- Working with images and repositories
+The [Command Line Interface](/reference/command-line/) provides comprehensive commands for:
+- Creating and managing virtual applications
+- Working with application repositories
 - Managing user sessions and subscriptions
 - Configuring the Turbo environment
 
 ## Examples
 
-The [Examples](/reference/examples) section provides practical examples and best practices for common scenarios:
-- Working with dependencies and base images
-- Framework application containerization
-- Release management workflows
-- Server application deployment
+The [Examples](/reference/examples) section demonstrates best practices for:
+- Working with dependencies
+- Application virtualization workflows
+- Release management strategies
+- Server deployment scenarios
 - Integration patterns
 
 ## TurboScript
 
-[TurboScript](/reference/turboscript/) is a declarative scripting language for automating container builds and configurations. It provides:
-- Container layering and isolation controls
-- Environment variable management
-- Network routing and host configuration
-- File system operations and synchronization
+[TurboScript](/reference/turboscript/) is a declarative scripting language for automating application virtualization:
+- Application layering and isolation
+- Environment configuration
+- Network routing settings
+- File system operations
 
-## Turbo Client
+## Desktop Integration
 
-The [Turbo Client](/reference/turbo-client/) documentation covers the desktop client application:
-- Installation and configuration
-- Security settings and policies
-- Integration with local system
+### Turbo Client
+The [Turbo Client](/reference/turbo-client/) enables:
+- Application installation and updates
+- Security and policy management
+- System integration features
 
-## Turbo Desktop
-
-[Turbo Desktop](/reference/turbo-desktop) provides information about the desktop integration features:
-- Workspace registration
+### Turbo Desktop
+[Turbo Desktop](/reference/turbo-desktop) provides:
+- Workspace management
 - Application shortcuts
-- System tray integration
+- System tray controls
 
-## Turbo Play
-
-[Turbo Play](/reference/turbo-play) documents the command-line window wrapper application:
+### Turbo Play
+[Turbo Play](/reference/turbo-play) handles:
 - Application launching
 - Window management
 - Process control
 
-## Turbo Shell
+## Development Tools
 
-The [Turbo Shell](/reference/turbo-shell/) section covers the interactive shell environment:
-- Container management
-- Image operations
+### Turbo Shell
+The [Turbo Shell](/reference/turbo-shell/) provides an interactive environment for:
+- Virtual application management
+- Image and layer operations
 - Repository interactions

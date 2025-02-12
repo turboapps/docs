@@ -232,6 +232,7 @@ export default defineConfig({
           text: 'Reference',
           collapsed: false,
           items: [
+            { text: 'Introduction', link: '/reference/' },
             {
               text: 'Command Line',
               collapsed: true,

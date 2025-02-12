@@ -1,24 +1,43 @@
 # Turbo Studio
 
+::: tip What you'll learn
+- How Turbo Studio virtualizes Windows applications
+- Methods for creating virtual applications
+- System requirements and compatibility
+:::
+
 ## Overview
 
-Turbo Studio is a desktop application that allows you to convert any Windows application into a self-contained virtual application container. Virtual applications can be delivered as Turbo images to be used by the Turbo Client or Turbo Server as well as standalone executables.
+Turbo Studio is a powerful desktop application that transforms Windows applications into self-contained virtual applications. These virtualized applications can be delivered as:
+- Standalone executable files
+- Turbo images for use with Turbo Client
+- Deployable packages for Turbo Server
 
-The GUI allows users to easily edit complex configurations for applications that may require complicated settings. Whereas Turbo's command line tool builds images from containers, Turbo Studio uses static XML files (**.xappl**) to build images. More information about the XAPPL file format is available in the [XAPPL reference](../../vm/xml-configuration/xml-configuration.html).
+The intuitive GUI interface makes it easy to:
+- Configure application settings
+- Customize virtual environments
+- Create deployment-ready packages
 
-Once created with Turbo Studio, the command-line interface builds these XAPPL files into images that you can push to the Turbo Hub. Click [here](../../deploying/to-turbonet/to-turbonet.html) for a specific example.
+## How It Works
 
-Turbo Studio provides three methods for creating images and virtual applications:
+Turbo Studio uses static XML configuration files (**.xappl**) to define virtual applications. Unlike the command-line interface that builds directly from images, Studio provides a visual environment for creating and editing these configurations. See the [XAPPL reference](../../vm/xml-configuration/xml-configuration.html) for detailed format information.
 
-1. **Setup Capture**: In this method, file and registry changes are recorded during the installation process of an application and these changes are applied to the configuration. This is the recommended method of image creation.
+Once configured, you can:
+- Build applications using the command-line interface
+- Push completed applications to Turbo Hub
+- Deploy to your preferred platform
+
+Turbo Studio provides three methods for creating virtual applications:
+
+1. **Setup Capture**: In this method, file and registry changes are recorded during the installation process of an application and these changes are applied to the configuration. This is the recommended method for virtualizing applications.
 
 2. **Snapshot an application or component**: In this method, snapshots capture the system state before and after an application is installed. Based on the observed system changes, the virtual application settings are automatically configured. 
 
-3. **Install application into a container**: With this method, you would run the application installer in a clean container environment. When the installer completes, the contents of the container will be used to generate the application configuration.
+3. **Clean Environment Install**: With this method, you run the application installer in an isolated environment. When the installer completes, the system changes are captured to generate the virtual application configuration.
 
-Turbo Studio offers a user interface to manage custom images and virtual applications as well as additional creation methods not available in the command-line interface.
+Turbo Studio offers a user interface to manage virtual applications and provides additional creation methods not available in the command-line interface.
 
-### System Requirements
+## System Requirements
 
 Turbo Studio runs on on Windows Vista and higher, including systems running within VMware and Microsoft hardware virtualization and hypervisor environments.
 

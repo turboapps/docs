@@ -1,66 +1,76 @@
 # Turbo Server
 
+::: tip What you'll learn
+- What Turbo Server is and its key benefits
+- Server architecture and components
+- Deployment options and supported platforms
+:::
+
 ## Overview
 
-Turbo Server is an application deployment platform that enables you to launch applications instantly from websites, portals and client desktops (Windows, MacOS, iOS, Android, or any HTML5 browser).
+Turbo Server is an enterprise-grade application virtualization platform that revolutionizes how applications are delivered to end users. It enables instant access to virtualized applications through:
+- Web browsers and portals
+- Desktop clients (Windows, MacOS)
 
-Unlike traditional deployment methods, applications streamed from Turbo Server do not require download, installation, rebooting, administrative privileges, or separate setup steps.
+Unlike traditional application deployment methods, Turbo Server eliminates common hurdles:
+- No application installation required
+- No system reboots needed
+- No administrative privileges necessary
+- No complex setup procedures
 
-Turbo Application Server allows you to run application workloads on a server for your users. Turbo Application Server can source applications from the Turbo.net Hub or an on-premises Turbo Hub Server.
+## Server Deployment
 
-### Getting Started
+Turbo Server is designed for on-premises deployment, providing:
+- Complete control over your environment
+- Integration with existing infrastructure
+- Enterprise-grade security and management
+- [Detailed setup guide](/server/setup-and-deployment/deploying-on-premises)
 
-Turbo Server is available for deployment on-premises, as well as in the cloud via the Turbo Server Azure Marketplace Image (AMI).
-
-For more information on setting up Turbo Server on-premises, please refer to the [On-Premises](/server/setup-and-deployment/deploying-on-premises) documentation.
-
-For more information on setting up Turbo Server in Azure, please refer to the [Azure Marketplace Image (AMI)](/server/setup-and-deployment/deploying-to-azure) documentation.
-
-### Architecture
+## Architecture
 
 There are four major server roles in a Turbo Server deployment:
 
-- The **Hub Server** stores all application images and user session data. The Hub may be hosted in the Turbo.net cloud or run in a customer managed cloud or on-premises server. On-premises Hub servers can federate containers to and from other Hubs.
+- The **Hub Server** stores all virtualized applications and user session data. The Hub runs in your on-premises environment and can share applications between different Hub servers in your organization.
 
-- The **Portal Server** hosts the application web portal where users can log in to view and launch applications, open files, and manage Turbo resources. A portal server also provides API services allowing other client types to interact with the Turbo environment.
+- The **Portal Server** hosts the web portal where users can log in to view and launch applications, open files, and manage their resources. A portal server also provides API services allowing other client types to interact with the Turbo environment.
 
-- One or more **Application Servers** runs containerized applications and streams sessions to clients. A typical deployment uses multiple application servers in a _pool_ to handle load volumes and provide redundancy. Application servers can be hosted in the cloud or on-premises.
+- One or more **Application Servers** run virtualized applications and stream sessions to clients. A typical deployment uses multiple application servers in a _pool_ to handle load volumes and provide redundancy. Application servers can be hosted on-premises.
 
-- The **Broker Service** controls how remote applications are executed in the application server pool and routes client requests to the appropriate servers.
+- The **Broker Service** manages application execution in the server pool and routes client requests to the appropriate servers.
 
-If Turbo is used to deliver applications to endpoints or third-party streaming products for execution, only the Hub Server or a standard file server is required.
+If Turbo is used to deliver applications to endpoints or third-party streaming products, only the Hub Server or a standard file server is required.
 
-#### Network Diagram
+### Network Diagram
 
 ![Turbo Network Diagram (Basic)](../images/Turbo_Network_Diagram__Basic_.png)
 
-### Technology
+## Technology
 
-#### Turbo Streaming
+### Application Streaming
 
-Turbo Application Server allows an application to be executed in an application server pool while streaming the application to the client machine.
+Turbo Application Server enables virtualized applications to run on application servers while streaming the interface to client machines.
 
-Native clients are available for Windows, Mac, iOS, and Android. An HTML5 client is also available allowing any HTML5-capable web browser to access applications.
+Native clients are available for Windows and Mac. Web browsers can access applications through RDP streaming using HTML5 technology.
 
-Using Turbo container technology on the application servers allows for increased user density and less maintenance than traditional remote desktop solutions.
+Using application virtualization on the application servers allows for increased user density and less maintenance than traditional remote desktop solutions.
 
-#### Features
+### Features
 
 Turbo Server enables you to accomplish the following goals:
 
-- Host containers on the web. You can stream Turbo containers from the Turbo Streaming Server portal site, custom external sites via HTML, or third-party collaborative web portals such as Microsoft SharePoint, IBM WebSphere, and Novell Teaming.
+- Host virtualized applications on the web. Stream applications from the Turbo Server portal, custom sites, or third-party portals like Microsoft SharePoint, IBM WebSphere, and Novell Teaming.
 
-- Provide your organization with a single access point to your application portfolio. Instead of moving desktop-to-desktop to upgrade or install software, you can publish an application to Turbo Streaming Server's portal site; this provides licensed end-users with immediate access and full functionality.
+- Provide your organization with a single access point to your application portfolio. Instead of installing software on each desktop, publish applications to the Turbo Server portal for immediate access with full functionality.
 
-- Launch applications faster over the Internet and intranets. Streamed applications launch immediately without the need to download. Turbo Streaming does not require any special ports or proprietary protocols.
+- Launch applications faster over the Internet and intranets. Applications stream instantly without downloads. Turbo streaming uses standard web protocols without special ports.
 
-- Empower a mobile workforce. Turbo containers require no installation or administrative privileges, meaning they can launch from anywhere, even on secure, locked-down desktops such as airport and hotel kiosks.
+- Empower a mobile workforce. Virtualized applications require no installation or administrative privileges, meaning they can run anywhere, even on secure, locked-down desktops like airport and hotel kiosks.
 
-- Run multiple versions of applications side-by-side without conflicts or dependencies. Turbo containers run in isolated sandboxed environments. This enables you to avoid conflicts and dependency issues associated with natively-installed applications.
+- Run multiple versions of applications side-by-side without conflicts. Applications run in isolated environments, avoiding conflicts and dependency issues common with installed software.
 
 - Migrate with confidence to Microsoft Windows 11 or Windows 10. Turbo enables you to run legacy applications as they stand on newer operating systems, including Microsoft Windows 7 and 8/8.1, without the need to recode, retest, or reinstall.
 
-#### Supported Platforms
+### Supported Platforms
 
 Turbo Server is compatible with the following platforms:
 

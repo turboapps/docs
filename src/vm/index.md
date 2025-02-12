@@ -1,53 +1,103 @@
-# Virtual Machine
+# Turbo Virtual Machine
+
+::: tip What you'll learn
+- How Turbo's lightweight virtualization works
+- Key features of the Turbo VM engine
+- Application layering and conflict resolution
+:::
 
 ## Overview
 
-Unlike other virtualization solutions that require an entire copy of the host operating system, Turbo's container technology only emulates the features required to run application. Turbo containers have the same performance characteristics as native applications, but without any changes to system infrastructure.
+Turbo's innovative virtualization technology takes a unique approach to running applications. Unlike traditional solutions that require a complete copy of the host operating system, Turbo:
+- Emulates only the essential features needed to run applications
+- Maintains native-level performance characteristics
+- Requires no changes to system infrastructure
 
-The core of Turbo virtualization technology is the Turbo Virtual Machine (VM) kernel. Occupying just a few megabytes of storage and minimal performance overhead, Turbo VM is a lightweight implementation of core operating system APIs, including file system, registry, process, and threading subsystems.
+## The Turbo VM Engine
 
-Turbo VM is implemented entirely within the user-mode space, meaning Turbo applications can run without any driver installation or administrative privileges.
+At the heart of Turbo's application virtualization technology is the Turbo Virtual Machine (VM) engine. This lightweight system:
+- Occupies only a few megabytes of storage
+- Introduces minimal performance overhead
+- Implements core operating system APIs:
+  - File system
+  - Registry
+  - Process management
+  - Threading subsystems
 
-Turbo containers interact with a virtualized file system, registry, and process environment contained in the kernel, rather than directly with the host device operating system. Requests are handled internally within the virtualized environment, but can also be redirected or overridden based on your configuration.
+The VM engine operates entirely in user-mode space, enabling applications to run without:
+- Driver installations
+- Administrative privileges
+- System modifications
 
-### Technology Change Tracking
+## How It Works
 
-A key benefit to Turbo virtualization technology is the assurance of forward compatibility of applications as new version of the underlying operating system are released.
+Virtualized applications interact with virtualized components rather than directly with the host operating system:
+- Virtual file system
+- Virtual registry
+- Isolated process environment
 
-Turbo VM provides a translation layer that mitigates incompatibilities across diverse operating system variants, providing a consistent environment for the application and its dependencies.
+All requests are handled within this contained environment, though they can be:
+- Redirected to different locations
+- Configured to override default behavior
+- Modified based on specific needs
 
-Turbo conducts continuous testing against OS builds distributed on the **Windows Insider Track** and makes VM updates as required. These updates are periodically published to Turbo.net but are *not* pushed to users. Specific VM versions may be pulled and tested by application publishers prior to general availability.
+## Forward Compatibility
 
-Upon availability of a new **Windows Semi-Annual Channel** release, Turbo validates and publishes the corresponding VM update. Unless otherwise specified by the administrator, users are automatically updated at that time to the latest Turbo VM via the Turbo.net cloud.
+Turbo virtualization ensures applications remain compatible as operating systems evolve:
 
-### Layering
+- **Translation Layer**: 
+  - Handles OS version differences
+  - Provides consistent runtime environment
+  - Maintains application stability
 
-The Turbo VM is capable of running multiple images in a single virtual machine container by layering the file system and registry of each image.
+- **Continuous Updates**:
+  - Testing against **Windows Insider Track** builds
+  - Regular VM updates published to Turbo.net
+  - Optional testing by publishers before release
 
-This allow's users to create modular components that can be reused by larger projects. 
+- **Managed Updates**:
+  - Validation with each **Windows Semi-Annual Channel**
+  - Automatic VM updates via Turbo.net cloud
+  - Administrator control over update deployment
 
-In this section, the term layer is used interchagibly with image, since a layer within a container is always created by an image.
+## Application Layering
 
-#### Layering Scenarios
+The Turbo VM engine enables running multiple virtualized applications through sophisticated layering:
 
-Layering is used to support [Turbo Studio components](../../studio/working-with-turbo-studio/configuration.html#layers-settings). It is also used when [dependencies](../../reference/dependencies/dependencies.html) are created.
+- **Modular Design**:
+  - Stack multiple application components
+  - Reuse common elements across projects
+  - Optimize resource usage
 
-#### Conflicts Between Layers
+- **Layer Management**:
+  - Each image creates a distinct layer
+  - Layers can be combined flexibly
+  - Resources are shared efficiently
 
-In most scenarios, image layers will define unique resources that do not conflict with each other. However, it is possible for the layers to have conflicting resources and settings.
+Note: The terms "layer" and "image" are used interchangeably, as each layer is created from an image.
 
-If multiple layers define different isolation modes for the same path, the first layer that defines the isolation mode will be used. 
+## Common Scenarios
 
-For example, if a container includes a **git** image with **c:\git** set to full isolation and a **nodejs** image with **c:\git** set to merge isolation, the conflict between the isolation settings will be resolved by the ordering of the layers.
+### Component Integration
+- Support for [Turbo Studio components](../../studio/working-with-turbo-studio/configuration.html#layers-settings)
+- Management of [dependencies](../../reference/dependencies/dependencies.html)
+- Custom configuration stacks
 
-The following command will create a container with the folder **c:\git** set to full isolation.
+### Handling Layer Conflicts
 
-```
-> turbo run git,nodejs
-```
+While layers typically define unique resources, conflicts can occur. Resolution follows these rules:
 
-The following command will create a container with the folder **c:\git** set to merge isolation.
+1. **Isolation Mode Conflicts**:
+   - First layer's settings take precedence
+   - Order of layers determines final configuration
 
-```
-> turbo run nodejs,git
-```
+2. **Example Scenario**:
+   When combining **git** and **nodejs** images with conflicting settings for **c:\git**:
+
+   ```bash
+   # Results in full isolation for c:\git
+   > turbo run git,nodejs
+
+   # Results in merge isolation for c:\git
+   > turbo run nodejs,git
+   ```
