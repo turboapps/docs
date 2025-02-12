@@ -22,7 +22,13 @@ export default defineConfig({
   
   // Configure asset handling
   vite: {
-    assetsInclude: ['**/*.PNG', '**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.gif', '**/*.svg']
+    assetsInclude: ['**/*.PNG', '**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.gif', '**/*.svg'],
+    server: {
+      allowedHosts: [
+        'docs-stage.turbo.net',
+        'docs.turbo.net'
+      ]
+    }
   },
 
   themeConfig: {
