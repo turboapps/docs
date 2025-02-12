@@ -1,0 +1,53 @@
+/**
+ * VitePress Custom Theme CSS
+ * Customizes layout widths and responsive behavior for documentation site
+ */
+
+:root {
+  --vp-layout-max-width: 99999px;
+}
+
+/* Ensure content container uses full available width */
+.content-container {
+  max-width: 100% !important;
+}
+
+/* Adjust sidebar and content layout for large screens (equivalent to original 960px breakpoint) */
+@media (min-width: 1440px) {
+  .VPSidebar {
+    padding-left: 32px !important;
+    width: var(--vp-sidebar-width) !important;
+  }
+  .VPContent.has-sidebar {
+    padding-left: var(--vp-sidebar-width) !important;
+    padding-right: 0 !important;
+  }
+  .VPNavBar.has-sidebar .content {
+    position: relative;
+    z-index: 1;
+    padding-right: 32px !important;
+    padding-left: var(--vp-sidebar-width) !important;
+  }
+  .VPNavBar.has-sidebar .divider {
+    padding-left: var(--vp-sidebar-width) !important;
+  }
+}
+
+/* Additional layout adjustments for extra wide screens */
+@media (min-width: 99999px) {
+  .VPSidebar {
+    padding-left: calc((100% - (var(--vp-layout-max-width) - 64px)) / 2) !important;
+    width: calc((100% - (var(--vp-layout-max-width) - 64px)) / 2 + var(--vp-sidebar-width) - 32px) !important;
+  }
+  .VPContent.has-sidebar {
+    padding-left: calc((100vw - var(--vp-layout-max-width)) / 2 + var(--vp-sidebar-width)) !important;
+    padding-right: calc((100vw - var(--vp-layout-max-width)) / 2) !important;
+  }
+  .VPNavBar.has-sidebar .content {
+    padding-right: calc((100vw - var(--vp-layout-max-width)) / 2 + 32px);
+    padding-left: calc((100vw - var(--vp-layout-max-width)) / 2 + var(--vp-sidebar-width));
+  }
+  .VPNavBar.has-sidebar .divider {
+    padding-left: calc((100vw - var(--vp-layout-max-width)) / 2 + var(--vp-sidebar-width));
+  }
+}
