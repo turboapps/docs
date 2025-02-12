@@ -19,7 +19,10 @@ This guide will walk you through installing Turbo and running your first applica
 ### Installing the Client
 
 1. Download [Turbo for Windows](https://turbo.net/download)
-2. Run the installer
+2. Run the installer with optional command line flags:
+   - `--silent`: Install silently
+   - `--all-users`: Install for all users on the machine
+
 3. If using Turbo Server, configure your domain and sign in:
    ```bash
    # Configure your Turbo Server domain
@@ -28,6 +31,8 @@ This guide will walk you through installing Turbo and running your first applica
    # Sign in to your account
    turbo login
    ```
+
+For more detailed installation options and advanced configuration, see the [Client documentation](/client/).
 
 ## Running Applications
 
@@ -134,8 +139,10 @@ turbo run nodejs,git,vscode
 Now that you're familiar with basic Turbo operations, you can:
 
 1. [Learn advanced usage](advanced.md) for creating and customizing environments
-2. Explore [deployment options](/deploying/) for enterprise scenarios
-3. Check the [command reference](/reference/command-line/) for detailed CLI documentation
+2. Explore the [Client documentation](/client/) for detailed command reference and features
+3. Learn about [Studio](/studio/) to create your own virtual applications
+4. Set up [Server](/server/) for enterprise deployment
+5. Review [deployment options](/deploying/) for various scenarios
 
 ::: tip Enterprise Deployment
 Looking to deploy Turbo in your organization? [Turbo Server](/server/) provides enterprise features like:

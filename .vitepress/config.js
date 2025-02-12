@@ -18,9 +18,8 @@ function generateReleaseVersions(product) {
 export default defineConfig({
   title: 'Turbo Documentation',
   description: 'Official documentation for Turbo',
-  srcDir: './src', // Set the root directory for documentation
+  srcDir: './src',
   
-  // Configure asset handling
   vite: {
     assetsInclude: ['**/*.PNG', '**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.gif', '**/*.svg'],
     server: {
@@ -31,18 +30,16 @@ export default defineConfig({
     }
   },
 
-
   themeConfig: {
-    // Enable the default search feature
     search: {
       provider: 'local'
     },
     nav: [
       { text: 'Getting Started', link: '/getting-started/' },
-      { text: 'Deploying', link: '/deploying/' },
+      { text: 'Client', link: '/client/' },
       { text: 'Studio', link: '/studio/' },
       { text: 'Server', link: '/server/' },
-      { text: 'Reference', link: '/reference/' }
+      { text: 'Deploying', link: '/deploying/' }
     ],
     sidebar: {
       '/getting-started/': [
@@ -53,6 +50,131 @@ export default defineConfig({
             { text: 'Introduction', link: '/getting-started/' },
             { text: 'Getting Started Guide', link: '/getting-started/guide' },
             { text: 'Advanced Usage', link: '/getting-started/advanced' }
+          ]
+        }
+      ],
+      '/client/': [
+        {
+          text: 'Client',
+          collapsed: false,
+          items: [
+            { text: 'Introduction', link: '/client/' },
+            {
+              text: 'Command Line',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/client/command-line/' },
+                { text: 'build', link: '/client/command-line/build' },
+                { text: 'cache', link: '/client/command-line/cache' },
+                { text: 'commit', link: '/client/command-line/commit' },
+                { text: 'config', link: '/client/command-line/config' },
+                { text: 'containers', link: '/client/command-line/containers' },
+                { text: 'continue', link: '/client/command-line/continue' },
+                { text: 'copyi', link: '/client/command-line/copyi' },
+                { text: 'cp', link: '/client/command-line/cp' },
+                { text: 'diff', link: '/client/command-line/diff' },
+                { text: 'export', link: '/client/command-line/export' },
+                { text: 'fork', link: '/client/command-line/fork' },
+                { text: 'gc', link: '/client/command-line/gc' },
+                { text: 'gcc', link: '/client/command-line/gcc' },
+                { text: 'gci', link: '/client/command-line/gci' },
+                { text: 'gcl', link: '/client/command-line/gcl' },
+                { text: 'help', link: '/client/command-line/help' },
+                { text: 'history', link: '/client/command-line/history' },
+                { text: 'images', link: '/client/command-line/images' },
+                { text: 'import', link: '/client/command-line/import' },
+                { text: 'inspect', link: '/client/command-line/inspect' },
+                { text: 'install', link: '/client/command-line/install' },
+                { text: 'installed', link: '/client/command-line/installed' },
+                { text: 'installi', link: '/client/command-line/installi' },
+                { text: 'kill', link: '/client/command-line/kill' },
+                { text: 'login', link: '/client/command-line/login' },
+                { text: 'logout', link: '/client/command-line/logout' },
+                { text: 'logs', link: '/client/command-line/logs' },
+                { text: 'netstat', link: '/client/command-line/netstat' },
+                { text: 'new', link: '/client/command-line/new' },
+                { text: 'ps', link: '/client/command-line/ps' },
+                { text: 'pull', link: '/client/command-line/pull' },
+                { text: 'push', link: '/client/command-line/push' },
+                { text: 'release', link: '/client/command-line/release' },
+                { text: 'releases', link: '/client/command-line/releases' },
+                { text: 'resume', link: '/client/command-line/resume' },
+                { text: 'revert', link: '/client/command-line/revert' },
+                { text: 'rm', link: '/client/command-line/rm' },
+                { text: 'rmi', link: '/client/command-line/rmi' },
+                { text: 'run', link: '/client/command-line/run' },
+                { text: 'save', link: '/client/command-line/save' },
+                { text: 'search', link: '/client/command-line/search' },
+                { text: 'sessions', link: '/client/command-line/sessions' },
+                { text: 'start', link: '/client/command-line/start' },
+                { text: 'stop', link: '/client/command-line/stop' },
+                { text: 'subscribe', link: '/client/command-line/subscribe' },
+                { text: 'subscription', link: '/client/command-line/subscription' },
+                { text: 'subscriptions', link: '/client/command-line/subscriptions' },
+                { text: 'suspend', link: '/client/command-line/suspend' },
+                { text: 'try', link: '/client/command-line/try' },
+                { text: 'uninstall', link: '/client/command-line/uninstall' },
+                { text: 'uninstalli', link: '/client/command-line/uninstalli' },
+                { text: 'unsubscribe', link: '/client/command-line/unsubscribe' },
+                { text: 'version', link: '/client/command-line/version' },
+                { text: 'vm', link: '/client/command-line/vm' },
+                { text: 'vms', link: '/client/command-line/vms' }
+              ]
+            },
+            { text: 'Examples', link: '/client/examples' },
+            { text: 'Security', link: '/client/security' },
+            { text: 'Sandbox Manager', link: '/client/sandbox-manager' },
+            {
+              text: 'TurboScript',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/client/turboscript/' },
+                { text: 'batch', link: '/client/turboscript/batch' },
+                { text: 'cmd', link: '/client/turboscript/cmd' },
+                { text: 'copy', link: '/client/turboscript/copy' },
+                { text: 'disable', link: '/client/turboscript/disable' },
+                { text: 'echo', link: '/client/turboscript/echo' },
+                { text: 'enable', link: '/client/turboscript/enable' },
+                { text: 'env', link: '/client/turboscript/env' },
+                { text: 'hosts', link: '/client/turboscript/hosts' },
+                { text: 'import', link: '/client/turboscript/import' },
+                { text: 'isolate', link: '/client/turboscript/isolate' },
+                { text: 'layer', link: '/client/turboscript/layer' },
+                { text: 'meta', link: '/client/turboscript/meta' },
+                { text: 'require', link: '/client/turboscript/require' },
+                { text: 'requires', link: '/client/turboscript/requires' },
+                { text: 'route', link: '/client/turboscript/route' },
+                { text: 'setworkdir', link: '/client/turboscript/setworkdir' },
+                { text: 'shellextension', link: '/client/turboscript/shellextension' },
+                { text: 'startup', link: '/client/turboscript/startup' },
+                { text: 'sync', link: '/client/turboscript/sync' },
+                { text: 'using', link: '/client/turboscript/using' },
+                { text: 'var', link: '/client/turboscript/var' },
+                { text: 'workdir', link: '/client/turboscript/workdir' }
+              ]
+            },
+            {
+              text: 'Turbo VM',
+              collapsed: true,
+              items: [
+                { text: 'Introduction', link: '/client/turbo-vm/' },
+                { text: 'Folder Variables', link: '/client/turbo-vm/folder-variables' },
+                { text: 'Runtime Settings', link: '/client/turbo-vm/runtime-settings' },
+                { text: 'XML Configuration', link: '/client/turbo-vm/xml-configuration' },
+                { text: 'Advanced Topics', link: '/client/turbo-vm/dep-compatibility' },
+                {
+                  text: 'Troubleshooting',
+                  collapsed: true,
+                  items: [
+                    { text: 'Overview', link: '/client/turbo-vm/troubleshooting/troubleshooting' },
+                    { text: 'Analyzing Logs', link: '/client/turbo-vm/troubleshooting/analyzing-logs' },
+                    { text: 'Antivirus & Security', link: '/client/turbo-vm/troubleshooting/antivirus-security' },
+                    { text: 'Common Errors', link: '/client/turbo-vm/troubleshooting/common-errors' },
+                    { text: 'Debugging', link: '/client/turbo-vm/troubleshooting/debugging' }
+                  ]
+                }
+              ]
+            }
           ]
         }
       ],
@@ -133,7 +255,7 @@ export default defineConfig({
               text: 'Administration',
               collapsed: true,
               items: [
-            { text: 'Overview', link: '/server/administration/index' },
+                { text: 'Overview', link: '/server/administration/index' },
                 { text: 'Domain', link: '/server/administration/domain' },
                 { text: 'General', link: '/server/administration/general' },
                 { text: 'Hub', link: '/server/administration/hub' },
@@ -227,138 +349,6 @@ export default defineConfig({
           ]
         }
       ],
-      '/reference/': [
-        {
-          text: 'Reference',
-          collapsed: false,
-          items: [
-            { text: 'Introduction', link: '/reference/' },
-            {
-              text: 'Command Line',
-              collapsed: true,
-              items: [
-                { text: 'Overview', link: '/reference/command-line/' },
-                { text: 'build', link: '/reference/command-line/build' },
-                { text: 'cache', link: '/reference/command-line/cache' },
-                { text: 'commit', link: '/reference/command-line/commit' },
-                { text: 'config', link: '/reference/command-line/config' },
-                { text: 'containers', link: '/reference/command-line/containers' },
-                { text: 'continue', link: '/reference/command-line/continue' },
-                { text: 'copyi', link: '/reference/command-line/copyi' },
-                { text: 'cp', link: '/reference/command-line/cp' },
-                { text: 'diff', link: '/reference/command-line/diff' },
-                { text: 'export', link: '/reference/command-line/export' },
-                { text: 'fork', link: '/reference/command-line/fork' },
-                { text: 'gc', link: '/reference/command-line/gc' },
-                { text: 'gcc', link: '/reference/command-line/gcc' },
-                { text: 'gci', link: '/reference/command-line/gci' },
-                { text: 'gcl', link: '/reference/command-line/gcl' },
-                { text: 'help', link: '/reference/command-line/help' },
-                { text: 'history', link: '/reference/command-line/history' },
-                { text: 'images', link: '/reference/command-line/images' },
-                { text: 'import', link: '/reference/command-line/import' },
-                { text: 'inspect', link: '/reference/command-line/inspect' },
-                { text: 'install', link: '/reference/command-line/install' },
-                { text: 'installed', link: '/reference/command-line/installed' },
-                { text: 'installi', link: '/reference/command-line/installi' },
-                { text: 'kill', link: '/reference/command-line/kill' },
-                { text: 'login', link: '/reference/command-line/login' },
-                { text: 'logout', link: '/reference/command-line/logout' },
-                { text: 'logs', link: '/reference/command-line/logs' },
-                { text: 'netstat', link: '/reference/command-line/netstat' },
-                { text: 'new', link: '/reference/command-line/new' },
-                { text: 'ps', link: '/reference/command-line/ps' },
-                { text: 'pull', link: '/reference/command-line/pull' },
-                { text: 'push', link: '/reference/command-line/push' },
-                { text: 'release', link: '/reference/command-line/release' },
-                { text: 'releases', link: '/reference/command-line/releases' },
-                { text: 'resume', link: '/reference/command-line/resume' },
-                { text: 'revert', link: '/reference/command-line/revert' },
-                { text: 'rm', link: '/reference/command-line/rm' },
-                { text: 'rmi', link: '/reference/command-line/rmi' },
-                { text: 'run', link: '/reference/command-line/run' },
-                { text: 'save', link: '/reference/command-line/save' },
-                { text: 'search', link: '/reference/command-line/search' },
-                { text: 'sessions', link: '/reference/command-line/sessions' },
-                { text: 'start', link: '/reference/command-line/start' },
-                { text: 'stop', link: '/reference/command-line/stop' },
-                { text: 'subscribe', link: '/reference/command-line/subscribe' },
-                { text: 'subscription', link: '/reference/command-line/subscription' },
-                { text: 'subscriptions', link: '/reference/command-line/subscriptions' },
-                { text: 'suspend', link: '/reference/command-line/suspend' },
-                { text: 'try', link: '/reference/command-line/try' },
-                { text: 'uninstall', link: '/reference/command-line/uninstall' },
-                { text: 'uninstalli', link: '/reference/command-line/uninstalli' },
-                { text: 'unsubscribe', link: '/reference/command-line/unsubscribe' },
-                { text: 'version', link: '/reference/command-line/version' },
-                { text: 'vm', link: '/reference/command-line/vm' },
-                { text: 'vms', link: '/reference/command-line/vms' }
-              ]
-            },
-            { text: 'Examples', link: '/reference/examples' },
-            {
-              text: 'TurboScript',
-              collapsed: true,
-              items: [
-                { text: 'Overview', link: '/reference/turboscript/' },
-                { text: 'batch', link: '/reference/turboscript/batch' },
-                { text: 'cmd', link: '/reference/turboscript/cmd' },
-                { text: 'copy', link: '/reference/turboscript/copy' },
-                { text: 'disable', link: '/reference/turboscript/disable' },
-                { text: 'echo', link: '/reference/turboscript/echo' },
-                { text: 'enable', link: '/reference/turboscript/enable' },
-                { text: 'env', link: '/reference/turboscript/env' },
-                { text: 'hosts', link: '/reference/turboscript/hosts' },
-                { text: 'import', link: '/reference/turboscript/import' },
-                { text: 'isolate', link: '/reference/turboscript/isolate' },
-                { text: 'layer', link: '/reference/turboscript/layer' },
-                { text: 'meta', link: '/reference/turboscript/meta' },
-                { text: 'require', link: '/reference/turboscript/require' },
-                { text: 'requires', link: '/reference/turboscript/requires' },
-                { text: 'route', link: '/reference/turboscript/route' },
-                { text: 'setworkdir', link: '/reference/turboscript/setworkdir' },
-                { text: 'shellextension', link: '/reference/turboscript/shellextension' },
-                { text: 'startup', link: '/reference/turboscript/startup' },
-                { text: 'sync', link: '/reference/turboscript/sync' },
-                { text: 'using', link: '/reference/turboscript/using' },
-                { text: 'var', link: '/reference/turboscript/var' },
-                { text: 'workdir', link: '/reference/turboscript/workdir' }
-              ]
-            },
-            {
-              text: 'Turbo Client',
-              collapsed: true,
-              items: [
-                { text: 'Overview', link: '/reference/turbo-client/' },
-                { text: 'Security', link: '/reference/turbo-client/turbo-client-security' }
-              ]
-            },
-            { text: 'Turbo Play', link: '/reference/turbo-play' },
-            {
-              text: 'Turbo VM',
-              collapsed: true,
-              items: [
-                { text: 'Introduction', link: '/reference/turbo-vm/' },
-                { text: 'Folder Variables', link: '/reference/turbo-vm/folder-variables' },
-                { text: 'Runtime Settings', link: '/reference/turbo-vm/runtime-settings' },
-                { text: 'XML Configuration', link: '/reference/turbo-vm/xml-configuration' },
-                { text: 'Advanced Topics', link: '/reference/turbo-vm/dep-compatibility' },
-                {
-                  text: 'Troubleshooting',
-                  collapsed: true,
-                  items: [
-                    { text: 'Overview', link: '/reference/turbo-vm/troubleshooting/troubleshooting' },
-                    { text: 'Analyzing Logs', link: '/reference/turbo-vm/troubleshooting/analyzing-logs' },
-                    { text: 'Antivirus & Security', link: '/reference/turbo-vm/troubleshooting/antivirus-security' },
-                    { text: 'Common Errors', link: '/reference/turbo-vm/troubleshooting/common-errors' },
-                    { text: 'Debugging', link: '/reference/turbo-vm/troubleshooting/debugging' }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
       '/releases/': [
         {
           text: 'Client',
@@ -411,7 +401,6 @@ export default defineConfig({
             { text: 'Portable EXEs', link: '/deploying/portable-exes' },
             { text: 'System Center', link: '/deploying/system-center' },
             { text: 'Turbo Server', link: '/deploying/turbo-server' },
-            { text: 'Turbo Client', link: '/deploying/turbo-client' },
             {
               text: 'Tips',
               collapsed: true,
@@ -422,7 +411,7 @@ export default defineConfig({
             }
           ]
         }
-      ],
+      ]
     }
   }
 })

@@ -9,8 +9,8 @@ hero:
       text: Get Started
       link: /getting-started/
     - theme: alt
-      text: View Reference
-      link: /reference/
+      text: View Client
+      link: /client/
 
 features:
   - title: Application Virtualization
@@ -28,14 +28,21 @@ features:
 
 Turbo is a powerful platform for application virtualization and deployment. Whether you're an administrator, developer, or IT professional, our documentation provides comprehensive guides and references to help you make the most of Turbo.
 
-### Quick Links
+### Documentation Sections
 
-- [Getting Started Guide](/getting-started/)
-- [Turbo Studio](/studio/)
-- [Turbo Server](/server/)
-- [Application Deployment](/deploying/)
-- [Command Line Reference](/reference/command-line/)
-- [Turbo Virtual Machine](/reference/turbo-vm/)
+- [Getting Started Guide](/getting-started/) - Learn the basics and get up and running
+- [Turbo Client](/client/) - Command-line interface and virtual machine reference
+- [Turbo Studio](/studio/) - Create and customize virtual applications
+- [Turbo Server](/server/) - Enterprise deployment and management
+- [Deployment Options](/deploying/) - Advanced deployment scenarios
+
+### Key Features
+
+- **Application Virtualization**: Package applications with dependencies into isolated containers
+- **Command Line Interface**: Powerful CLI for automation and management
+- **Enterprise Integration**: Seamless integration with existing infrastructure
+- **Workspace Management**: Centralized control of application delivery
+- **Security**: Isolated environments with built-in security features
 
 ### Latest Updates
 

@@ -22,6 +22,25 @@ Usage: turbo build <options> <path>
 
 To build an image from an existing container, use the `commit` command.
 
+## Working with Dependencies
+
+### Base Images
+
+Newly created images are usually based on existing images. For example, a WordPress image is based on PHP, MySQL, and Apache images. There are two ways to handle these dependencies:
+
+#### Default Behavior
+By default, all base images are baked into the new image. The newly created image includes everything it needs.
+
+For information purposes, the used images will show up in the Hub under the Dependencies tab of the repository.
+
+#### Runtime Dependencies
+If an image is created with the `--no-base` option, the newly created image will not contain the base images. Instead, the images are downloaded and loaded when the image is used.
+
+For example, with a WordPress image based on PHP, MySQL, and Apache built with `--no-base`:
+- When launched, the PHP, MySQL, and Apache images are downloaded
+- Transitive dependencies are downloaded recursively
+- The image cannot be pushed if base images are not available on Hub
+
 ### Using TurboScript
 
 A TurboScript is a list of instructions that Turbo will follow to create a container. After the last instruction in a script, Turbo will automatically run `turbo commit` on the recently created container, creating a new image.
@@ -99,9 +118,13 @@ The `--diagnostic` flag enables logging within the intermediate container. This 
 
 ### Merging Images
 
-The `build` command will include all images, which are referenced with the `from` statement in the script.  For example, when the script uses `from spoonbrew/git, spoonbrew/nuget`, then these two containers will be merged and stored into the newly built container.
+The `build` command will include all images, which are referenced with the `from` statement in the script. For example, when the script uses `from spoonbrew/git, spoonbrew/nuget`, then these two containers will be merged and stored into the newly built container.
 
-The `--no-base` option will not merge in the script. Instead, the images are included at runtime. 
+The `--no-base` option will not merge in the script. Instead, the images are included at runtime. This is useful when:
+- You want to reduce the final image size
+- Base images are frequently updated
+- You need flexibility in base image versions
+- Testing different dependency combinations
 
 ### JSON output
 
