@@ -16,7 +16,7 @@ For simple tasks, a .bat or .cmd script can be configured.
 
 Put the script in the container file system (a full isolated folder in `@SYSDRIVE@` such as "scripts" is recommended). Specify the full path to the script in studio. Note that the untokenized form of the path must be used here (`c:\scripts\init.cmd` rather than `@SYSDRIVE@\scripts\init.cmd`). Environment variables can also be used in the path (ex: `%systemdrive%\scripts\init.cmd`) if they are defined on the machine or in the container's custom environment variables.
 
-![Turbo Studio Scripts](../../images/scripts.png)
+![Turbo Studio Scripts](/images/scripts.png)
 
 An example startup script might look like this:
 

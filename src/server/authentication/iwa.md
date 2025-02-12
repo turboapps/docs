@@ -7,13 +7,13 @@ This authentication method is desirable in centralized and VDI environments wher
 ## Configure Turbo Server
 
 1. Join the Turbo Hub Server system to your domain.
-2. Set the service user to the [desired user](../../server/advanced-topics/advanced-topics.html#change-the-turbo-server-service-user). If the service worker is a local system user, skip step 3.
+2. Set the service user to the [desired user](/server/advanced-topics/advanced-topics.html#change-the-turbo-server-service-user). If the service worker is a local system user, skip step 3.
 3. Add an SPN record for the Turbo Server to your domain. 
   ```
   > setspn -S HTTP/hostname domain\serviceuser
   > setspn -S HTTP/hostname.domain domain\serviceuser
   ```
-5. Synchronize users from your [Active Directory](../../server/administration/users.html#adding-an-external-directory-service). When configuring the service, make sure that the __Login Prefix__ configured in the Active Directory Service matches your Active Directory.
+5. Synchronize users from your [Active Directory](/server/administration/users.html#adding-an-external-directory-service). When configuring the service, make sure that the __Login Prefix__ configured in the Active Directory Service matches your Active Directory.
 
 ## Configure Turbo Client
 
@@ -54,7 +54,7 @@ To resolve this issue, ensure that you have added the correct SPN record for you
 
 ### Integrated login fails from any system.
 
-Ensure that you are logged in Windows as a domain user that has been synchronized to Turbo Server via [Active Directory synchronization](../../server/administration/users.html#adding-an-external-directory-service).
+Ensure that you are logged in Windows as a domain user that has been synchronized to Turbo Server via [Active Directory synchronization](/server/administration/users.html#adding-an-external-directory-service).
 
 If the above condition is not met, integrated login will fail with a message similar to the following in the server API logs:
 

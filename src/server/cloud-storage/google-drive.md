@@ -12,35 +12,35 @@ We recommend that you have a G Suite account. Accessing Google Drive files from 
 
 2. Click **CREATE PROJECT** and create a new project with your desired project name.
 
-   ![Google Drive app project create](../../images/project-create.png)
+   ![Google Drive app project create](/images/project-create.png)
 
 3. Click on the **Library** tab and search for `Google Drive`. Click **Google Drive API**, then click **Enable** to add Google Drive access to your application.
 
-   ![Google Drive app library add](../../images/library-add.png)
+   ![Google Drive app library add](/images/library-add.png)
 
 4. Click on the **OAuth consent screen** tab, select the `Internal` User Type, then click **Create**.
 
    \* Internal user selection requires you to be a G Suite user. If you wish to allow external users, your application will need to go through the Google verification process.
 
-   ![Google Drive app creds consent](../../images/consent.png)
+   ![Google Drive app creds consent](/images/consent.png)
 
 5. Under **Scopes for Google APIs** add the `../auth/drive` scope.
 
-   ![Google Drive app creds consent 2](../../images/consent-scopes.png)
+   ![Google Drive app creds consent 2](/images/consent-scopes.png)
 
 6. Click on the **Credentials** tab then click **CREATE CREDENTIALS** > **OAuth client Id**.
 
-   ![Google Drive app creds create](../../images/creds-create.png)
+   ![Google Drive app creds create](/images/creds-create.png)
 
 7. For the **Application Type** select `Web application`, and for the **Authorized redirect URIs** enter `https://{Web Service Root}/oauth/googledrive/callback/login`.
 
-   ![Google Drive app creds create 2](../../images/creds-create-2.png)
+   ![Google Drive app creds create 2](/images/creds-create-2.png)
 
-   ![Google Drive app creds create 3](../../images/creds-create-3.png)
+   ![Google Drive app creds create 3](/images/creds-create-3.png)
 
 8. Once created you will receive a Client ID and Client Secret. Save these values for later as they will be used on the Turbo Server administration site.
 
-   ![Google Drive app creds create 4](../../images/creds-create-4.png)
+   ![Google Drive app creds create 4](/images/creds-create-4.png)
 
 ### Configure the Turbo Server
 

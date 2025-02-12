@@ -17,23 +17,23 @@ To split your existing application image:
 - Open `data.xappl` in Turbo Studio
 
   - Change the **Project Type** to **Layer (SVM)**
-    ![Turbo Studio Large Application Project Type](../../images/large-1.png)
+    ![Turbo Studio Large Application Project Type](/images/large-1.png)
 
   - Change the **Output File** to **data.svm**
-    ![Turbo Studio Large Application Output File](../../images/large-2.png)
+    ![Turbo Studio Large Application Output File](/images/large-2.png)
 
   - Save the file and build
 
 - Open your existing XAPPL in Turbo Studio
 
   - Add **@APPDIR@\data.svm** to the **SVM Search Pattern** and **data.svm** to the list of required layers
-    ![Turbo Studio Large Application Patch](../../images/large-3.png)
+    ![Turbo Studio Large Application Patch](/images/large-3.png)
 
   - Remove everything from **Filesystem** and **Registry** nodes. If you have multiple layers, you can remove all layers other than the **default** layer. If your application is configured to inherit metadata and icons from the startup file, then you will need to keep the startup file .exe in the **Filesystem** node, including its full directory hierarchy.
 
-  ![Turbo Studio Large Application Filesystem](../../images/large-4.png)
+  ![Turbo Studio Large Application Filesystem](/images/large-4.png)
 
-  ![Turbo Studio Large Application Registry](../../images/large-5.png)
+  ![Turbo Studio Large Application Registry](/images/large-5.png)
 
   - Save the file and build
 

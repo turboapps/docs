@@ -47,7 +47,7 @@ The Turbo Server service user is specified during the initial Turbo Server insta
 
 The service user can be set to a different account from the Services management console (**services.msc**). Locate the **Turbo Server** service and **Right-click > Properties**. In the **Log On** tab, enter the credential of the new account. Note that the service user requires the **Log On As a Service** right, which is automatically granted when you apply the change.
 
-![Switch Turbo Server service user](../../images/switch_service_user.png)
+![Switch Turbo Server service user](/images/switch_service_user.png)
 
 After changing the service user, update the security settings of the following file to grant **Read** and **Write** permissions for the new user and remove the rights of the old user:
 
@@ -59,14 +59,14 @@ Update the security settings of the following folders to grant the **Write** per
 - C:\ProgramData\Turbo Server\io (or the **Hub Storage Path** if set)
 - C:\Program Files (x86)\Turbo Server\Sandbox (or the _Turbo Server install directory\Sandbox_ folder if using a non-default install path)
 
-![Update settings.xml to grant permissions to new service user](../../images/add_perms_to_new_service_user.png)
+![Update settings.xml to grant permissions to new service user](/images/add_perms_to_new_service_user.png)
 
-The service user must also be a member of the **Performance Monitor Users** group so that it can collect and report server resource loads. For information on adding the service user to this group, see the [Performance Counters](../../server/troubleshooting/hub-server.html#performance-counters) documentation.
+The service user must also be a member of the **Performance Monitor Users** group so that it can collect and report server resource loads. For information on adding the service user to this group, see the [Performance Counters](/server/troubleshooting/hub-server.html#performance-counters) documentation.
 
 Finally restart the Turbo Server service for the changes to take effect.
 
 ### Hide System Drives on Application Servers for Cloud Launches
 
-Administrators can hide the application server's system drives to prevent users from accessing them when launching applications using the Run in Cloud launch modes by configuring the [Drive Visibility setting in the Workspace Application Settings](../../server/administration/workspaces.html#workspace-applications).
+Administrators can hide the application server's system drives to prevent users from accessing them when launching applications using the Run in Cloud launch modes by configuring the [Drive Visibility setting in the Workspace Application Settings](/server/administration/workspaces.html#workspace-applications).
 
 Note that configuring **Drive Visibility** will prevent PC Native Applications from seeing the binaries on the native filesystem if the setting is configured to hide the drive that the application is installed on. In this case, administrators may configure the following group policy to hide (but still access) the drive icons in the File Explorer dialog: **User Configuration > Administrative Templates > Windows Components > File Explorer > Hide these specified drives in My Computer**.

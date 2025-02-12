@@ -36,7 +36,7 @@ Fill in the following fields:
 - Privacy > Share the launcher’s name with tool: Always
 - Privacy > Share the launcher’s email with tool: Always
 
-![Moodle AdminConfig](../../images/Moodle_AdminConfig.png)
+![Moodle AdminConfig](/images/Moodle_AdminConfig.png)
 
 ### Activate Turbo on a Course
 
@@ -71,6 +71,6 @@ Under General, click **Show more…** and configure as follows:
 - Icon URL & Secure Icon URL: https://start-c.turbo.net/images/turboiconlarge.png
 
 Under Privacy, ensure “Share launcher’s name with tool” and “Share launcher’s email with the tool” are both checked.
-![Moodle InstrConfig](../../images/Moodle_InstrConfig.png)
+![Moodle InstrConfig](/images/Moodle_InstrConfig.png)
 
 Click **Save** and return to course.

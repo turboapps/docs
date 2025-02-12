@@ -20,7 +20,7 @@ The Turbo Virtual Machine (VM) is an application virtualization engine that oper
 - Network interfaces
 - Threading subsystems
 
-![Turbo VM diagram](../images/turbo-vm.png)
+![Turbo VM diagram](/images/turbo-vm.png)
 
 Unlike traditional hardware virtualization or OS containers, Turbo:
 - Runs in user mode without administrative privileges

@@ -4,7 +4,7 @@ Integrating Turbo Server with OpenAI allows end-users to access an artificial in
 
 The chatbot is hidden by default. Once configured, a Chat tab will appear on the Portal dashboard.
 
-![AI Chat](../../images/dashboard-chat-light-mode.png)
+![AI Chat](/images/dashboard-chat-light-mode.png)
 
 ### Create an OpenAI API key
 
@@ -18,7 +18,7 @@ You can generate an OpenAI API key for free and receive limited API tokens. Howe
 
 ### Configure Turbo Server
 
-![AI Integration](../../images/integrations-ai.png)
+![AI Integration](/images/integrations-ai.png)
 
 Turbo Server must be configured to use the newly created OneDrive application. Once configured, users may connect their OneDrive account from the portal settings.
 

@@ -79,8 +79,8 @@ Note: The terms "layer" and "image" are used interchangeably, as each layer is c
 ## Common Scenarios
 
 ### Component Integration
-- Support for [Turbo Studio components](../../studio/working-with-turbo-studio/configuration.html#layers-settings)
-- Management of [dependencies](../../reference/dependencies/dependencies.html)
+- Support for [Turbo Studio components](/studio/working-with-turbo-studio/configuration.html#layers-settings)
+- Management of [dependencies](/reference/dependencies/dependencies)
 - Custom configuration stacks
 
 ### Handling Layer Conflicts

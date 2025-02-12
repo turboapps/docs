@@ -40,7 +40,7 @@ Standalone executables have many command line options to change settings at runt
   - SuppressCollisionCheck
   - UseDllInjection
 
-See [VM Settings](../../vm/virtual-machine/runtime-settings.html) for details on the available settings.
+See [VM Settings](/reference/turbo-vm/virtual-machine/runtime-settings) for details on the available settings.
 
 - **/XCollisionCheck=FALSE** disables detection of multiple apps attempting to use the same sandbox at the same time. This should only be used to support legacy behavior.
 
@@ -52,11 +52,11 @@ When you have updates or patches that must be deployed, Turbo Studio can be used
 
 One mechanism is to specify the SVM dependencies in Turbo Studio.
 
-![Turbo Studio Patches](../../images/patches.png)
+![Turbo Studio Patches](/images/patches.png)
 
 The patch dependency editor can be accessed by going to the **Layers** panel and then clicking the **Patches...** button.
 
-![Turbo Studio Patches Dialog](../../images/patchesdlg.png)
+![Turbo Studio Patches Dialog](/images/patchesdlg.png)
 
 The **SVM Search Pattern** field specifies the complete path to where patch image layers may be located. This can be a path directly to a specific SVM file or can be a wildcard pattern to dynamically discover SVM files to load. An example of using a wildcard in the search field is `@APPDIR@\patches\*.svm`. This search pattern will load any .SVM file found in the "patches" directory where the virtual executable is located. Care must be taken to avoid loading arbitrary .SVM files which happen to reside in the same location.
 
@@ -103,7 +103,7 @@ A container package can define several startup files. These can all be activated
 
 In Turbo Studio, the startup file triggers are managed in the 'Startup Files' dialog.
 
-![Turbo Studio Startup File Triggers](../../images/triggers.png)
+![Turbo Studio Startup File Triggers](/images/triggers.png)
 
 In this example, an application package is defined with three startup files; word, excel, and access. Any startup files that don't have a specific trigger or have <b>Auto Start</b> enabled will be launched by default. Any startup file that has a trigger (but not 'auto start') will not be launched unless the trigger is specified. Multiple startup files can have the same trigger to enable grouped launching.
 
@@ -125,4 +125,4 @@ To launch a startup file by its trigger, specify its trigger as the first parame
 
 To create an easy-to-access shortcut for a trigger, right-click on your packaged executable and select **Create shortcut**. Then, right-click on the newly created shortcut and append the trigger to the **Target** field. Change the shortcut name and icon to differentiate the application entry point that will be launched when the user runs the shortcut.
 
-![Studio startup file shortcut](../../images/triggers2.png)
+![Studio startup file shortcut](/images/triggers2.png)

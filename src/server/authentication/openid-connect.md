@@ -46,6 +46,6 @@ Automatically created user groups from SSO will be created in the Single Sign-On
 
 Turbo Server supports SSO against any identity provider that supports OIDC authentication. Setup guides are available for the following identity providers:
 
-- [Azure Active Directory with OpenID Connect](../../server/authentication/azuread-openid-connect.html)
+- [Azure Active Directory with OpenID Connect](/server/authentication/azuread-openid-connect)
 
 For other identity providers, please refer to the identity provider documentation for information on configuring the claims and scopes listed in the [Identity Provider Scopes and Claims](#prerequisites-identity-provider-scopes-and-claims) section, as well as how to obtain the fields required by the Turbo Server user authentication form.

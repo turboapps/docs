@@ -4,9 +4,9 @@ The **launch configuration web service** provides storage for application config
 
 ### Enabling the Launch Configuration Web Service
 
-The launch configuration service may be configured using the [API Keys](../../server/administration/hub.html#managing-api-keys) form on the admin site.
+The launch configuration service may be configured using the [API Keys](/server/administration/hub.html#managing-api-keys) form on the admin site.
 
-![Server launch config service](../../images/hub-configsvc-0.png)
+![Server launch config service](/images/hub-configsvc-0.png)
 
 In this example, the authentication key is set to `F207AC681BBD40A0BF56ECF95B344EBC`. This value is required to be passed to all POST requests to the service in the `X-Config-Api-Key` HTTP header. The authentication key can be any string value but should be something long and randomly generated.
 
@@ -74,11 +74,11 @@ To execute a submitted configuration file, you must use a turbo protocol url. Yo
 
 The first time you attempt to open a turbo url, the browser will show a security message like the following (each browser is different). The user can choose to hide future messages for turbo urls.
 
-![Server launch config service consent](../../images/hub-configsvc-1.png)
+![Server launch config service consent](/images/hub-configsvc-1.png)
 
 After the turbo url is allowed by the browser, a security message from the Turbo Client will be shown (see below). This message is to ensure that the user trusts the hub that the container is coming from. It is important that user do not execute containers from untrusted hubs. The user can choose to run this instance or trust all instances from the same hub.
 
-![Server launch config service trust](../../images/hub-configsvc-2.png)
+![Server launch config service trust](/images/hub-configsvc-2.png)
 
 After this the user will be prompted to login if necessary. Once logged in (or if login is not necessary), the container will execute.
 

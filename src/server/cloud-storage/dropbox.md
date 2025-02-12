@@ -10,7 +10,7 @@ To allow users to connect their Dropbox accounts and access them while running t
 
 3. Set the Permission type to: `Full Dropbox`
 
-   ![Dropbox Application Registration](../../images/dropbox-app.png)
+   ![Dropbox Application Registration](/images/dropbox-app.png)
 
 ### Configure the Turbo Server
 

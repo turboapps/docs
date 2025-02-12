@@ -3,12 +3,12 @@
 The following documentation describes the Files API implemented by the Turbo Server Portal. The Files API allows users to view and manage files stored in their connected cloud storage accounts. 
 
 For more information cloud storage integrations and connecting cloud storage accounts, see:
-* [OneDrive](../../server/cloud-storage/onedrive.html)
-* [Dropbox](../../server/cloud-storage/dropbox.html)
-* [Google Drive](../../server/cloud-storage/google-drive.html)
-* [Filr](../../server/cloud-storage/filr.html)
-* [File Share (SMB)](../../server/cloud-storage/file-share.html)
-* [End User Guide](../../server/cloud-storage/end-user.html#end-user-guide) 
+* [OneDrive](/server/cloud-storage/onedrive)
+* [Dropbox](/server/cloud-storage/dropbox)
+* [Google Drive](/server/cloud-storage/google-drive)
+* [Filr](/server/cloud-storage/filr)
+* [File Share (SMB)](/server/cloud-storage/file-share)
+* [End User Guide](/server/cloud-storage/end-user.html#end-user-guide) 
 
 All request paths described in this document are relative to the base Portal URL: `https://{portal}`
 

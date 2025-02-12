@@ -1,6 +1,6 @@
 # Reports
 
-![Turbo Server Reports](../../images/reports.png)
+![Turbo Server Reports](/images/reports.png)
 
 The **Reports** page provides pre-configured, detailed analytic reports, broken-down into categories. Selecting a report takes you to the **Report** page, which consists of a **Date Range** control and the **Report Viewer**. Use the **Date Range** control to adjust the time period for the selected report.
 

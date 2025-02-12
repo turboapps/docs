@@ -35,7 +35,7 @@ Turbo is a powerful platform for application virtualization and deployment. Whet
 - [Turbo Server](/server/)
 - [Application Deployment](/deploying/)
 - [Command Line Reference](/reference/command-line/)
-- [Turbo Virtual Machine](/vm/)
+- [Turbo Virtual Machine](/reference/turbo-vm/)
 
 ### Latest Updates
 

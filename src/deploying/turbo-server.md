@@ -16,7 +16,7 @@ You will now see your application in your hub list in the administration site. F
 
 #### Using Command Line
 
-![Server admin cli push image](../images/admin-hub-push-cli.png)
+![Server admin cli push image](/images/admin-hub-push-cli.png)
 
 Complete the following steps to add a new application image to Turbo Hub Server:
 
@@ -74,10 +74,10 @@ Applications must first be added to the Turbo Server Hub before they can be adde
 
 If you have not yet created a workspace, you may do so by accessing the Turbo Server administration site at: `https://[server]/admin`. Navigate to the **Workspaces** tab, click **Add Workspace**, and submit your desired workspace settings.
 
-![Server admin workspaces](../images/admin-workspaces.png)
+![Server admin workspaces](/images/admin-workspaces.png)
 
 Then open the Workspace administration site by clicking on the **Manage** link. Navigate to the **Applications** tab, click **Add > Windows Application**, and select your application.
 
-![Workspace Admin Applications](../images/admin-applications.png)
+![Workspace Admin Applications](/images/admin-applications.png)
 
 The application will now be available on the Turbo Server Portal and on the Turbo Clients to users with sufficient permissions.

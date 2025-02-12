@@ -185,9 +185,9 @@ Protect sensitive applications and source code:
 
 ## Next Steps
 
-- Review [deployment guides](../deploying/overview/deploying.md) for enterprise scenarios
-- Explore [Turbo Server](../server/overview/overview.md) for advanced management
-- Check [command reference](../reference/command-line/run.md) for detailed options
+- Review [deployment guides](/deploying/overview/deploying.md) for enterprise scenarios
+- Explore [Turbo Server](/server/overview/overview.md) for advanced management
+- Check [command reference](/reference/command-line/run.md) for detailed options
 
 ::: tip Need More Help?
 Visit our [support resources](https://turbo.net/support) for additional assistance.

@@ -24,7 +24,7 @@ From **System Admin**, navigate to **LTI Tool Providers**, listed under Integrat
 
 Under **Provider Domain Status**, in the Provider Domain box, enter the hostname portion of the Tool Provider URL shown on the Turbo Server administrator site. Set the Provider Domain Status to Approved.
 
-![Bb ProviderDomain](../../images/Bb_ProviderDomain.png)
+![Bb ProviderDomain](/images/Bb_ProviderDomain.png)
 
 Under Default Configuration, select Set Globally. Fill in the Tool Provider Key and Secret with the values from the Turbo Server administrator site.
 
@@ -33,7 +33,7 @@ Under Institution Policies, configure the following:
 - Send user data only over SSL
 - User Fields to Send: check all boxes
 
-![Bb PrivacyConfig](../../images/Bb_PrivacyConfig.png)
+![Bb PrivacyConfig](/images/Bb_PrivacyConfig.png)
 
 Click **Submit**.
 
@@ -43,7 +43,7 @@ If your organization has any courses set to Original UI, the following steps are
 
 From the **LTI Tool Providers page**, open the Options Menu dropdown beside Turbo.
 
-![Bb ToolOptionMenu](../../images/Bb_ToolOptionMenu.png)
+![Bb ToolOptionMenu](/images/Bb_ToolOptionMenu.png)
 
 Select **Manage Placements.** Then select Create Placement. Under Placement Information, set Label to Turbo.net and Handle to something unique for your Blackboard Site.
 
@@ -58,7 +58,7 @@ The Turbo Icon can be downloaded [here](https://start-c.turbo.net/images/turboic
 
 Under Tool Provider Information, enter the **Tool Provider URL** from the Turbo Server administrator site.
 
-![Bb ToolPlacementURL](../../images/Bb_ToolPlacementURL.png)
+![Bb ToolPlacementURL](/images/Bb_ToolPlacementURL.png)
 
 Click **Submit**.
 
@@ -70,7 +70,7 @@ Navigate to the **Content** page of the desired course
 
 Open the **Tools** dropdown. Select **More tools**.
 
-![Bb ToolsDropdownMenu](../../images/Bb_ToolsDropdownMenu.png)
+![Bb ToolsDropdownMenu](/images/Bb_ToolsDropdownMenu.png)
 
 Select **Turbo.net**. Configure as desired and click **Submit**.
 
@@ -80,7 +80,7 @@ These steps require at least instructor privileges and apply only to courses wit
 
 Navigate to the Ultra course desired. Click the plus icon and select **Create** to add Course Content.
 
-![BbUltra Create](../../images/BbUltra_Create.png)
+![BbUltra Create](/images/BbUltra_Create.png)
 
 From the right sidebar, select **Teaching tools with LTI connection**.
 

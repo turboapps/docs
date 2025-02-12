@@ -127,19 +127,19 @@ Ensure that background processes such as Windows updates is disabled when the Ap
 
 To check if an application server is running and accessible, logon to the Portal server and try opening a browser tab to `http://{app-server-host}/server/`, replacing `{app-server-host}` with the internal hostname of your application server (**Internal Hostname or IP Address** in your domain server settings). A successful response will show a page listing the server version:
 
-![Application Server Status](../../images/appserver-status.png)
+![Application Server Status](/images/appserver-status.png)
 
 If this page return a **IIS 404** error page, then uninstall IIS from the server. If IIS is using the same port as the Application server, then the Application server will not be reachable.
 
 If this page returns a **Not Found (404)** response code, then the application server may be down or the internal hostname may be incorrect. To verify that the application server is running, logon to the application server and check that the **Turbo.AppServer** service is running.
 
-If this page returns a **Connection Timeout**, then there may be a Windows firewall issue. To verify your Windows firewall configuration, please refer to the [Firewall and Security](../../server/setup-and-deployment/prerequisites.html#firewall-and-security) documentation. If the firewall appears to be configured correctly, restart the Turbo service.
+If this page returns a **Connection Timeout**, then there may be a Windows firewall issue. To verify your Windows firewall configuration, please refer to the [Firewall and Security](/server/setup-and-deployment/prerequisites.html#firewall-and-security) documentation. If the firewall appears to be configured correctly, restart the Turbo service.
 
 If this page returns a **Service Unavailable (503)** response code, then the application server is most likely restarting. Please wait a few minutes and try again. If the failure persists, please contact support.
 
 ### Application Issues
 
-If the application itself is encountering errors or hangs, the first step to troubleshoot the issue is to log into the application server directly and attempt to run it there using the turbo command line interface (ie. `turbo run [app]`). If the problem reproduces in this way then see application troubleshooting suggestions [here](../../vm/troubleshooting/troubleshooting.html).
+If the application itself is encountering errors or hangs, the first step to troubleshoot the issue is to log into the application server directly and attempt to run it there using the turbo command line interface (ie. `turbo run [app]`). If the problem reproduces in this way then see application troubleshooting suggestions [here](/reference/turbo-vm/troubleshooting/troubleshooting).
 
 ### Run in Cloud launch mode shows prompt to Select a session to reconnect to
 
@@ -158,7 +158,7 @@ This issue does not apply to applications configured with a **Temporary Profile*
 
 The user may also avoid this dialog by completely exitting their applications before closing the browser tab, which closes the sessions instead of leaving them running in a disconnected state.
 
-![Select a session to reconnect to dialog](../../images/disconnected_session.png)
+![Select a session to reconnect to dialog](/images/disconnected_session.png)
 
 ### Run in Cloud launch mode shows another application in the same session
 
@@ -178,12 +178,12 @@ The user may also avoid this dialog by completely exitting their applications be
 If users report that their application window disappears when using the Run in Cloud (Windowed) launch mode or shows the lock screen when the Run in Cloud (HTML5) launch mode and the portal shows that the application is still active and connected, the application server may have the following group policy configured:
 **Windows Settings > Security Settings > Local Policies > Security Options > Interactive Logon: Machine inactivity limit**.
 
-To resolve this issue, set the Interactive Logon: Machine inactivity limit to 0 and use the [Streaming](../../server/administration/general.html#streaming) settings to control the application session length.
+To resolve this issue, set the Interactive Logon: Machine inactivity limit to 0 and use the [Streaming](/server/administration/general.html#streaming) settings to control the application session length.
 
 ### Application server is online but is not servicing application launches
 
 If an application server configured as part of your Turbo Server topology is online but is not servicing any application launches, there may be a fatal error that is preventing workloads from being assigned to that server. For example, an application server may not be properly configured to accept RDP connections.
 
-The Turbo Server administrator should check the [Server Dashboard](../../server/administration/domain.html#managing-a-server-server-dashboard) on the Turbo Server administration site to see if there are any Fatal errors under the **Alerts** section. Fatal errors indicate that the server is unable to perform its assigned role and requires manual fixes.
+The Turbo Server administrator should check the [Server Dashboard](/server/administration/domain.html#managing-a-server-server-dashboard) on the Turbo Server administration site to see if there are any Fatal errors under the **Alerts** section. Fatal errors indicate that the server is unable to perform its assigned role and requires manual fixes.
 
 If a Fatal alert is present, please follow the action recommended in Event column to repair the server then click the **Clear** action to restore server operation once you have confirmed the fix.

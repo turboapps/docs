@@ -17,13 +17,13 @@ If an MSI install fails try creating the container using [Turbo Studio](/studio/
 > turbo try --cmd msiexec /i "c:\path\to\installer.msi"
 ```
 
-![Studio MSI install](../../images/cmd1.png)
+![Studio MSI install](/images/cmd1.png)
 
-![Studio MSI install wizard](../../images/install1.png)
+![Studio MSI install wizard](/images/install1.png)
 
-![Studio MSI install wizard EULA](../../images/install2.png)
+![Studio MSI install wizard EULA](/images/install2.png)
 
-![Studio MSI install wizard output folder](../../images/install3.png)
+![Studio MSI install wizard output folder](/images/install3.png)
 
 Once you finish editing a container it can be saved and distributed in the form of images. For more information on images read on [here](/deploying/turbo-server).
 
@@ -31,11 +31,11 @@ Once you finish editing a container it can be saved and distributed in the form 
 
 The container editor allows you to modify the filesystem and registry of a container.
 
-![Studio MSI install editor](../../images/instedit1.png)
+![Studio MSI install editor](/images/instedit1.png)
 
-![Studio MSI install editor open files](../../images/instedit2.png)
+![Studio MSI install editor open files](/images/instedit2.png)
 
-![Studio MSI install editor open file](../../images/instedit3.png)
+![Studio MSI install editor open file](/images/instedit3.png)
 
 ### Publishing to Turbo.net
 
@@ -43,31 +43,31 @@ Once you have created a container you can publish it to Turbo.net.
 
 First sign in to your Turbo.net account:
 
-![Turbo.net sign in](../../images/signin1.png)
+![Turbo.net sign in](/images/signin1.png)
 
-![Turbo.net sign in dialog](../../images/signin2.png)
+![Turbo.net sign in dialog](/images/signin2.png)
 
 Then publish your container:
 
-![Studio publish to Turbo.net](../../images/publish1.png)
+![Studio publish to Turbo.net](/images/publish1.png)
 
-![Studio published image icon](../../images/publish2.png)
+![Studio published image icon](/images/publish2.png)
 
-![Studio published image description](../../images/publish3.png)
+![Studio published image description](/images/publish3.png)
 
-![Studio published image settings](../../images/publish4.png)
+![Studio published image settings](/images/publish4.png)
 
 Optionally under **Repo Information** enter a build script URL if you have one. For more information on how to create a build script read on [here](/studio/scenarios/turbonet-build-scripts).
 
-![Studio published image settings](../../images/publish5.png)
+![Studio published image settings](/images/publish5.png)
 
-![Studio published image icon settings](../../images/publish6.png)
+![Studio published image icon settings](/images/publish6.png)
 
-![Studio published image launch settings](../../images/publish7.png)
+![Studio published image launch settings](/images/publish7.png)
 
-Navigate to **Launch Configuration**. If any additional flags are required for the application to function enter these here. For a list of available flags read [here](/vm/runtime-settings).
+Navigate to **Launch Configuration**. If any additional flags are required for the application to function enter these here. For a list of available flags read [here](/reference/turbo-vm/runtime-settings).
 
-![Studio published image admin settings](../../images/publish8.png)
+![Studio published image admin settings](/images/publish8.png)
 
 ### Container States
 

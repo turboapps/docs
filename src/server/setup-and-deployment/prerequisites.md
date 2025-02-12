@@ -159,7 +159,7 @@ The Turbo Server installation automatically creates firewall rules for the selec
 </table>
 <br/>
 
-If your Turbo Server is running behind an external firewall that restricts these ports, you may need to configure the external firewall manually. For instructions on opening ports and for recommendations on how to best secure Turbo Server, refer to [Configure Turbo Server Security](../../server/advanced-topics/advanced-topics.html#configure-turbo-server-security).
+If your Turbo Server is running behind an external firewall that restricts these ports, you may need to configure the external firewall manually. For instructions on opening ports and for recommendations on how to best secure Turbo Server, refer to [Configure Turbo Server Security](/server/advanced-topics/advanced-topics.html#configure-turbo-server-security).
 
 If you have disabled outbound internet traffic from your Turbo Server but want to import the pre-built application packages available on Turbo.net Hub, the following addresses must be allowed:
 

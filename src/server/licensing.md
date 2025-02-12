@@ -6,7 +6,7 @@ The standard Turbo Server license, **Turbo Server Enterprise Edition**, offers n
 
 Administrators can activate and de-activate users from the Turbo Server administration site as needed. Additionally, the license can be upgraded to accommodate more users or devices.
 
-For more information about managing users refer to [Managing Users and Authentication](../../server/administration/users.html). For instructions on applying a new license to Turbo Server, refer to [General](../../server/administration/general.html).
+For more information about managing users refer to [Managing Users and Authentication](/server/administration/users). For instructions on applying a new license to Turbo Server, refer to [General](/server/administration/general).
 
 #### Named User Licensing
 
@@ -36,4 +36,4 @@ If using Temporary Profile login mode, the application servers must be configure
 
 ### Application License
 
-Application licenses can be implemented by the native application, such as connecting to a license server, or controlled by Turbo administrative settings. Turbo allows administrators to limit the number of concurrent and named user or devices on a per application basis. See the [Workspace Applications](../../server/administration/workspaces.html#workspace-applications) documentation for details.
+Application licenses can be implemented by the native application, such as connecting to a license server, or controlled by Turbo administrative settings. Turbo allows administrators to limit the number of concurrent and named user or devices on a per application basis. See the [Workspace Applications](/server/administration/workspaces.html#workspace-applications) documentation for details.

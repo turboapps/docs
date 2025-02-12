@@ -71,7 +71,7 @@ turbo run node --using=git
 
 Using TurboScript to build a .NET application image:
 
-```turbo
+```
 # turbo.me script
 layer microsoft/dotnet:4.5
 
@@ -174,7 +174,7 @@ turbo run ghost,ghost-db
 
 ::: tip Development Resources
 For more detailed documentation:
-- [Command Reference](../command-line/run.md)
-- [TurboScript Guide](../turboscript/turboscript.md)
-- [Deployment Options](../../deploying/overview/deploying.md)
+- [Command Reference](/reference/command-line/run)
+- [TurboScript Guide](/reference/turboscript/)
+- [Deployment Options](/deploying/)
 :::

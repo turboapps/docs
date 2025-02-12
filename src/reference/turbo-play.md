@@ -1,23 +1,30 @@
 # Turbo Play
-Turbo Play is a command line based window wrapper application to Turbo applications.
 
+Turbo Play serves two main functions:
+1. A graphical UI wrapper around turbo.exe commands, providing a user-friendly interface for launching and managing Turbo applications
+2. An RDP-based streaming client that enables users to connect to remote application servers and stream Turbo applications
 
-### Executing Turbo Commands
-Users may execute turbo commands from turboplay which will provide windows graphical interface instead of the command prompt.
+## Local Application Launching
 
-    > turboplay turbo run --format=rpc my-image
+When used locally, Turbo Play provides a graphical interface for turbo.exe commands instead of using the command prompt:
 
-User can also pass in a text file as the argument which contains a turbo command.
+```
+> turboplay turbo run --format=rpc my-image
+```
 
-    > turboplay turbo C:\Users\[user]\AppData\Local\Turbo\Containers\shortcuts\My App.txt
- 
-Additional flags:
+Users can also pass a text file containing a turbo command:
+
+```
+> turboplay turbo C:\Users\[user]\AppData\Local\Turbo\Containers\shortcuts\My App.txt
+```
+
+### Launch Options
+
 ```
       --quiet                            Hide all graphical user interfaces until the application launches
       --start-progress-ui-immediately    Shows the status dialog immediately before any events are detected from the underlying Turbo.exe
       --wait-for-window                  Status dialog remains until the application's main UI shows 
-      --delete-cmd-file                  Deletes the cmd file if specified immediately after reading it. Todo: remove 
-      --enable-full-removal              Todo: remove
+      --delete-cmd-file                  Deletes the cmd file if specified immediately after reading it
       --app-title                        Sets the title of the status dialog
       --debug-vm                         Overrides the path to the vm
       --log                              Specifies location of log file
@@ -26,15 +33,21 @@ Additional flags:
       --isolate                          Passes through isolation setting to turbo.exe
       --merge-file                       Passes through merge file setting to turbo.exe
 ```
- 
-Additional Notes:
-1. Turbo CLI flag `--wait-after-(error|exit)` is ignored because it causes the process to hang waiting for input that will never come.
-2. Turbo CLI flag `--format=rcp` is automatically passed in in order to parse the output.
-3. `--show-eula-for-rpc` is automatically passed and displayed to the user in a window if a EULA exists for an application.
-	
-### Turbo URI scheme
 
-The Turbo protocol directs Turbo Play to execute a local execution of an application, or connects to a remote application server capable of launching a Turbo application.
+**Note**: 
+- Turbo CLI flag `--wait-after-(error|exit)` is ignored as it requires input that cannot be provided through the UI
+- `--format=rcp` is automatically added to parse output
+- `--show-eula-for-rpc` is automatically added to display EULAs in a window if they exist
+
+## Application Streaming
+
+Turbo Play can connect to remote application servers to stream Turbo applications using RDP. This is handled through either the Turbo URI scheme or direct RDP connection.
+
+### Turbo URI Scheme
+
+The Turbo protocol directs Turbo Play to either:
+- Execute a local application
+- Connect to a remote application server for streaming
 
 ```
 turbo://{portalAuthority}/{configPath}?t={type}&h={hash}&v={version}
@@ -46,11 +59,11 @@ hash                                     hash of the configuration, to ensure it
 version                                  currently at 1
 ```
 
-Configuration type example:
+#### Local Configuration Example
 
 `turbo://turbo.net/config?t=config&h=sha256:e28dd1863f82e6b2f46303311540ae194045a58756cd1c4fbbbc4c778021bc84&v=1`
 
-The json format of a `config` type is
+The json format for local configuration:
 
 ```
 {
@@ -74,11 +87,11 @@ The json format of a `config` type is
 }
 ```
 
-RemoteAppConfig type example:
+#### Remote Configuration Example
 
 `turbo://turbo.net/config?t=remoteAppConfig&h=sha256:51d021ef9da4ee6c7910a4d5f19325fba77888ba94255ab67e0e4c0d8053fa6d&v=1`
 
-The json format of the `remoteAppConfig` type is
+The json format for remote configuration:
 
 ```
 {
@@ -94,26 +107,9 @@ The json format of the `remoteAppConfig` type is
 }
 ```
 
-The legacy Turbo URI scheme is in the format of turbo://[Ip]?[query].
+### Direct RDP Connection
 
-The query parameters are:
-```
-type                                     rdp or local
-rdpUsername                              the username on the remote system executing turbo 
-rdpPassword                              the password on the remote system executing turbo
-remoteAppMode                            set value to 1 for RemoteApp rdp
-remoteAppProgram                         set this to %7C%7Cturboplay
-remoteAppCmdLine                         the arguments sent to the remote TurboPlay
-tnlrUrl                                  URL of the remote tnlr service which allows the remote application to connect to the local network
-tnrlUsername                             tnlr username
-tnlrPassword                             tnlr password
-```
-
-
-
-### Turbo RDP
-
-Turbo Play can connect and execute a Turbo Play command on the remote desktop without a Turbo URI scheme.
+Turbo Play can connect directly to a remote desktop to execute commands:
 
 ```
 > turboplay rdp --rdp-host=<hostname> --rdp-program=<remoteAppProgram> --rdp-user=<rdpUsername> --rdp-password=<rdpPassword>
@@ -134,8 +130,9 @@ Optional parameters:
 --rdp-port=<rdp port, default 3389>
 ```
 
-### Turboplay Legacy Usage
-Turbo Play can execute Legacy Turbo applications from a config or model URL
+## Legacy Support
+
+Turbo Play maintains support for legacy applications through config and model URLs:
 
 ```
     /config           The URL to an application configuration to execute
@@ -143,8 +140,6 @@ Turbo Play can execute Legacy Turbo applications from a config or model URL
     /xsandboxname
     /xsandboxpath     The path to the app sandbox (required with the /model flag)
     /register
-    /cachemode        The local path where the fully streamed application is to be cached (only valid with the /model flag and is required).
+    /cachemode        The local path where the fully streamed application is to be cached (only valid with the /model flag and is required)
     /clientconfig
     /xvm
-```
-

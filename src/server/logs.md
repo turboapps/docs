@@ -12,10 +12,10 @@ User generated Turbo client logs are written to the `%localappdata%\Turbo\Logs` 
 
 ### Archiving
 
-Turbo Server automatically archives all logs on service restart. Archives can be manually deleted by the administrator, or through the [administration website](../../server/administration/domain.html#managing-a-server).
+Turbo Server automatically archives all logs on service restart. Archives can be manually deleted by the administrator, or through the [administration website](/server/administration/domain.html#managing-a-server).
 
 Both Server and client logs archives are written to the `C:\Program Files (x86)\Turbo Server\Logs\archives` folder.
 
 ### Web Interface
 
-Turbo Server logs can be managed from the [administration website](../../server/administration/domain.html#managing-a-server).
+Turbo Server logs can be managed from the [administration website](/server/administration/domain.html#managing-a-server).

@@ -2,7 +2,7 @@
 
 Turbo Server can be configured to allow users to log in via Azure Active Directory (Azure AD) Single Sign-On (SSO) using the OpenID Connect (OIDC) authentication protocol.
 
-For prerequisites and additional information about the OpenID Connect authentication protocol, please refer to the [OpenID Connect Prerequisites](../../server/authentication/openid-connect.html#prerequisites) section.
+For prerequisites and additional information about the OpenID Connect authentication protocol, please refer to the [OpenID Connect Prerequisites](/server/authentication/openid-connect.html#prerequisites) section.
 
 ### Configure Azure AD
 
@@ -13,9 +13,9 @@ To enable Azure AD SSO, a new application must be registered in your Azure AD te
 To create the application, log into your [Azure Portal](https://portal.azure.com), navigate to the **App registrations** page and click **New registration**. Enter the following fields and submit the form:
 
 - **Name**: Your desired display name for this application.
-- **Supported account types**: The account types that are allowed to login. To allow logins from multiple specific tenants, see [Azure AD Multi-Tenancy](../../server/authentication/azuread-openid-connect.html#azure-ad-multi-tenancy).
+- **Supported account types**: The account types that are allowed to login. To allow logins from multiple specific tenants, see [Azure AD Multi-Tenancy](/server/authentication/azuread-openid-connect.html#azure-ad-multi-tenancy).
 
-![Azure AD Setup Register](../../images/register.png)
+![Azure AD Setup Register](/images/register.png)
 
 Once created you will be redirected to the **Overview** page. Click on the **Endpoints** link in the header and save the **OpenID Connect metadata document** URL so that it can be added to Turbo Server later.
 
@@ -28,7 +28,7 @@ From the **Authentication** tab, click **Add a platform** and follow the setup g
 **Implicit Grant**: `ID tokens`
 **Supported account types**: Select `Accounts in this organization directory only` for single-tenant and `Accounts in any organizational directory` for multi-tenant.
 
-![Azure AD Setup Redirect URL](../../images/authentication-redirect-urls.png)
+![Azure AD Setup Redirect URL](/images/authentication-redirect-urls.png)
 
 #### API Permissions
 
@@ -43,7 +43,7 @@ The **Directory.Read.All** permission allows access control of Turbo Portal cont
 
 Click **Grant admin consent** and **Save** to grant consent on behalf of all users in this directory, ensuring that end users will not be required to consent when using the application.
 
-![Azure AD API Permissions](../../images/permissions-directory.png)
+![Azure AD API Permissions](/images/permissions-directory.png)
 
 #### Client Secret
 
@@ -63,7 +63,7 @@ Once you have configured Azure AD, you are ready to enable SSO on Turbo Server.
 
 Open the Turbo Server administration site and navigate to the Users > Authentication Method page. Change the Authentication Method to **Single Sign-On** and the Single Sign-On Method to **OpenID Connect**.
 
-![OpenID Connect Authentication Method](../../images/authentication-method-openid-connect.png)
+![OpenID Connect Authentication Method](/images/authentication-method-openid-connect.png)
 
 Fill in the following fields according to the [Azure AD configuration](#configure-azure-ad):
 
@@ -78,9 +78,9 @@ Multi-tenancy allows users from different Azure AD tenants to login to Turbo Ser
 
 To configure multi-tenancy, view the Azure AD OIDC application from **Application Registrations**. On the **Authentication** tab, go to **Supported account types** and select `Accounts in any organizational directory (Any Azure AD directory - Multitenant)`.
 
-To only allow specific Azure AD tenants, see [Administering Authentication Method](../../server/administration/users.html#authentication-method).
+To only allow specific Azure AD tenants, see [Administering Authentication Method](/server/administration/users.html#authentication-method).
 
-![oidc-multi-tenant](../../images/oidc.png)
+![oidc-multi-tenant](/images/oidc.png)
 
 ### Troubleshooting Azure AD via OpenID Connect
 
@@ -96,12 +96,12 @@ When **Assignment required?** is enabled for the Azure AD Application and the us
 AADSTS50105: Your administrator has configured the application [Application Name] ('[Application ID]') to block users unless they are specifically granted ('assigned') access to the application. The signed in user '[User ID]' is blocked because they are not a direct member of a group with access, nor had access directly assigned by an administrator. Please contact your administrator to assign access to this application.
 ```
 
-![Assignment blocks user login](../../images/blocked_user.png)
+![Assignment blocks user login](/images/blocked_user.png)
 
 To grant access to all users in your Azure AD, disable **Assignment required?** in the **Azure Portal > Enterprise Applications > _Application Name_ > Manage > Properties**.
 
-![Azure AD Enterprise Application Assignment Required](../../images/assignment_required.png)
+![Azure AD Enterprise Application Assignment Required](/images/assignment_required.png)
 
 To limit access to specified users and/or groups, use the **Add user/group** button in **Azure Portal > Enterprise Applications > _Application Name_ > Manage > Users and Groups**. When using groups, ensure that the allowed users are direct members of the specified group.
 
-![Add users and groups to Azure AD Application Assignment](../../images/assign_users_and_groups.png)
+![Add users and groups to Azure AD Application Assignment](/images/assign_users_and_groups.png)

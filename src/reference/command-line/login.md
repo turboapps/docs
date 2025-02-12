@@ -19,7 +19,7 @@ API Keys can be used to login to a user account or an organization without provi
 ### Authentication Methods
 
 - **Basic** authentication prompts the user for their username and password.
-- **Integrated** authentication method attempts to login the user their current windows credentials. The user must have [Integrated Windows Authentication](../../server/administration/users.html#authentication-method) configured, preferably with [Kerberos](../../server/authentication/kerberos.html).
+- **Integrated** authentication method attempts to login the user their current windows credentials. The user must have [Integrated Windows Authentication](/server/administration/users.html#authentication-method) configured, preferably with [Kerberos](/server/authentication/kerberos).
 - **SSO** prompts the user with the SSO provider's login webform.
 
 ### Examples

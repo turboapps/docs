@@ -8,10 +8,10 @@ Microsoft RemoteApp disconnects sessions after the initial window is shown then 
 
 If the window timeout is not the issue, follow the following diagnostics steps:
 
-1. Go to the [administration reports](../../server/administration/reports.html#administration-reports).
+1. Go to the [administration reports](/server/administration/reports.html#administration-reports).
 2. Look for the event that matches the failed launch in either the **Application Sessions** or **User Sessions** report.
 3. Sign in to the corresponding application server and inspect the client launch logs located in the user's _%LOCALAPPDATA%\Turbo\Logs_. You can identify the Windows user in the browser console logs in the HTML5 client.
-4. If the logs do not provide any useful information, try launching the application locally using the Turbo CLI with the [diagnostics flag](../../reference/command-line/run.html).
+4. If the logs do not provide any useful information, try launching the application locally using the Turbo CLI with the [diagnostics flag](/reference/command-line/run).
 5. Examine the corresponding VM logs in the sandbox located in _%LOCALAPPDATA%\Turbo\Containers\sandboxes\[sessionId]\logs_.
 6. Contact support if you cannot determine the cause of the issue.
 
@@ -27,7 +27,7 @@ To allow users to run multiple applications concurrently, ensure that this group
 
 #### Applications take a long time to start during application server user profile logon
 
-The application server generate temporary windows profiles and should be fast to logon after the temporary profile has been created. If using kerberos or ask for login mode, the application servers may attempt to load the user profile from the network using roaming profiles or user profile disks. This is unecessary since Turbo will handle the application data caching and sychronization under the [application settings](../../server/administration/workspaces.html#workspace-applications). [Disable roaming profiles](https://social.technet.microsoft.com/Forums/windows/en-US/86ba95ad-7367-4985-83d6-4b218c3a31c4/disable-roaming-profiles?forum=win10itprosetup) and [user profile disk](https://workspot.zendesk.com/hc/en-us/articles/214741786-Working-with-User-Profile-Disks-and-Best-Practices).
+The application server generate temporary windows profiles and should be fast to logon after the temporary profile has been created. If using kerberos or ask for login mode, the application servers may attempt to load the user profile from the network using roaming profiles or user profile disks. This is unecessary since Turbo will handle the application data caching and sychronization under the [application settings](/server/administration/workspaces.html#workspace-applications). [Disable roaming profiles](https://social.technet.microsoft.com/Forums/windows/en-US/86ba95ad-7367-4985-83d6-4b218c3a31c4/disable-roaming-profiles?forum=win10itprosetup) and [user profile disk](https://workspot.zendesk.com/hc/en-us/articles/214741786-Working-with-User-Profile-Disks-and-Best-Practices).
 
 #### Application launches and synchornization is slow
 
@@ -58,7 +58,7 @@ The following log indictates the failure was caused by blocking NTLM traffic on 
 12:20:15.632 000033fc [rdpConnection   ] Error: protocol security negotiation or connection failure -1
 ```
 
-To resolve the issue, configure the server according to the [Network Security](../../server/security/security.html#network) documentation.
+To resolve the issue, configure the server according to the [Network Security](/server/security/security.html#network) documentation.
 
 #### Cloud HTML5 client application launches are interrupted by a reconnection message
 
@@ -80,7 +80,7 @@ Occurs when the client machine cannot access the Application server. For example
 
 Please check your network connection and wait a few minutes, then relaunch the application. If the error persists, logon to the Application server and check that the **Turbo.AppServer** service is running.
 
-The WebSocket connection may also be blocked by your [load balancer or proxy](../../server/network-and-load-balancing/network-and-load-balancing.html#troubleshooting). To test the WebSocket connection required for the connection, open a browser console and run the following JavaScript:
+The WebSocket connection may also be blocked by your [load balancer or proxy](/server/network-and-load-balancing/network-and-load-balancing.html#troubleshooting). To test the WebSocket connection required for the connection, open a browser console and run the following JavaScript:
 
 ```
 // replace wss with ws if your domain does not use SSL
@@ -126,7 +126,7 @@ Occurs during Portal service interruptions or connection errors. Please ensure t
 
 The requested repository could not be found. Please ensure that the repository exists on the Hub server.
 
-You may manage your repositories from the administration site [Hub page](../../server/administration/hub.html).
+You may manage your repositories from the administration site [Hub page](/server/administration/hub).
 
 #### Session Creation Session Not Found
 
@@ -140,7 +140,7 @@ Occurs if the remote session is not present in the Broker cache. Please relaunch
 
 <a href="#" id="turbo-server-errors-session-creation-no-rdp-hosts-available" class="hash-link"></a>
 
-No application servers are currently available. Occurs when there are no application servers running, or when the Broker service cannot access the application servers. Please refer to the [Application Server troubleshooting](../../server/troubleshooting/application-server.html#application-server-is-unavailable) documentation to diagnose.
+No application servers are currently available. Occurs when there are no application servers running, or when the Broker service cannot access the application servers. Please refer to the [Application Server troubleshooting](/server/troubleshooting/application-server.html#application-server-is-unavailable) documentation to diagnose.
 
 #### Session Creation Bad Request
 
@@ -198,7 +198,7 @@ Please wait a few minutes for the Broker service to become available and then re
 
 The remote session could not be created due to a user creation error. To resolve this issue, please follow these troubleshooting steps:
 
-1. Check the connectivity between the Broker service and the Application Server. The Application Server might be slow or unresponsive, or there could be a network issue between the two services. Please refer to the [Application Server troubleshooting](../../server/troubleshooting/application-server.html#application-server-is-unavailable) for more information.
+1. Check the connectivity between the Broker service and the Application Server. The Application Server might be slow or unresponsive, or there could be a network issue between the two services. Please refer to the [Application Server troubleshooting](/server/troubleshooting/application-server.html#application-server-is-unavailable) for more information.
 
 2. Make sure that the Application Server service account has sufficient permissions. The user creation process requires permission to create or update user accounts for RDP access.
 
@@ -229,7 +229,7 @@ Exception Info: System.IO.FileLoadException
 
 The remote session could not be created due to an unknown server error.
 
-Occurs when the application or broker server is unavailable. Please refer to the [Application Server troubleshooting](../../server/troubleshooting/application-server.html#application-server-is-unavailable) documentation to diagnose.
+Occurs when the application or broker server is unavailable. Please refer to the [Application Server troubleshooting](/server/troubleshooting/application-server.html#application-server-is-unavailable) documentation to diagnose.
 
 #### Launch Configuration Bad Request
 
@@ -318,11 +318,11 @@ This may indicate that the Windows user does not have permission to login remote
 
 1. Log on to the application server.
 2. Open **Server Manager** and click on **Tools** > **Computer Management**.
-   ![Computer Management](../../images/computer-management.png)
+   ![Computer Management](/images/computer-management.png)
 3. From the **Computer Management** window, click on **Local Users and Groups** > **Users**.
 4. Right-click on the user that was listed in the HTML5 error details and click **Properties**.
 5. Click on the **Member Of** tab and check that the **Remote Desktop Users** group is listed.
-   ![User Properties Merber Of](../../images/user-properties-merberof.png)
+   ![User Properties Merber Of](/images/user-properties-merberof.png)
 6. If the group is not listed, click **Add** and enter `Remote Desktop Users`, then click **OK**.
 
 #### disconnectReasonLicensingFailed
@@ -357,7 +357,7 @@ The idle session limit timer on the server has elapsed.
 
 This timeout is controlled by the **Set time limit for active but idle Remote Desktop Services** Group Policy setting. The default value set by Turbo Server is `21600000` milliseconds.
 
-To configure this timeout, see [Streaming](../../server/administration/general.html#streaming) for more information.
+To configure this timeout, see [Streaming](/server/administration/general.html#streaming) for more information.
 
 #### ERRINFO_LOGON_TIMEOUT
 
@@ -367,7 +367,7 @@ The active session limit timer on the server has elapsed.
 
 This timeout is controlled by the **Set time limit for active Remote Desktop Services sessions** Group Policy setting. The default value set by Turbo Server is `21600000` milliseconds.
 
-To configure this timeout, see [Streaming](../../server/administration/general.html#streaming) for more information.
+To configure this timeout, see [Streaming](/server/administration/general.html#streaming) for more information.
 
 #### ERRINFO_DISCONNECTED_BY_OTHERCONNECTION
 
@@ -418,11 +418,11 @@ To manually remove this login requirement from a user:
 
 1. Log on to the application server.
 2. Open **Server Manager** and click on **Tools** > **Computer Management**
-   ![Computer Management](../../images/computer-management.png)
+   ![Computer Management](/images/computer-management.png)
 3. From the **Computer Management** window, click on **Local Users and Groups** > **Users**.
 4. Right-click on the user that was listed in the HTML5 error details and click **Properties**.
 5. Uncheck the **User must change password at next logon** setting.
-   ![User Properties](../../images/user-properties.png)
+   ![User Properties](/images/user-properties.png)
 
 #### SSL_ERR_ACCOUNT_DISABLED
 
@@ -434,11 +434,11 @@ To manually enable a user:
 
 1. Log on to the application server.
 2. Open **Server Manager** and click on **Tools** > **Computer Management**.
-   ![Computer Management](../../images/computer-management.png)
+   ![Computer Management](/images/computer-management.png)
 3. From the **Computer Management** window, click on **Local Users and Groups** > **Users**.
 4. Right-click on the user that was listed in the HTML5 error details and click **Properties**.
 5. Uncheck the **Account is disabled** setting.
-   ![User Properties](../../images/user-properties.png)
+   ![User Properties](/images/user-properties.png)
 
 #### SSL_ERR_ACCOUNT_LOCKED_OUT
 
@@ -448,17 +448,17 @@ The Windows account that is running the remote application session is locked out
 
 Account lockout is controlled by the **Account lockout threshold** Group Policy setting. If you wish to change your account lockout behavior, please update your Group Policy setting:
 
-![Account Lockout Policy](../../images/account-lockout-policy.png)
+![Account Lockout Policy](/images/account-lockout-policy.png)
 
 To manually update a user's lockout status:
 
 1. Log on to the application server.
 2. Open **Server Manager** and click on **Tools** > **Computer Management**.
-   ![Computer Management](../../images/computer-management.png)
+   ![Computer Management](/images/computer-management.png)
 3. From the **Computer Management** window, click on **Local Users and Groups** > **Users**.
 4. Right-click on the user that was listed in the HTML5 error details and click **Properties**.
 5. Uncheck the **Account is locked out** setting.
-   ![User Properties](../../images/user-properties.png)
+   ![User Properties](/images/user-properties.png)
 
 #### SSL_ERR_PASSWORD_EXPIRED
 
@@ -468,17 +468,17 @@ The Windows account that is running the remote application session has an expire
 
 Account password expirations are controlled by the **Maximum password age** Group Policy setting. If you wish to change your account password expiration behavior, please update your Group Policy setting:
 
-![Password Policy](../../images/password-policy.png)
+![Password Policy](/images/password-policy.png)
 
 To manually set a user's password to never expire:
 
 1. Log on to the application server.
 2. Open **Server Manager** and click on **Tools** > **Computer Management**
-   ![Computer Management](../../images/computer-management.png).
+   ![Computer Management](/images/computer-management.png).
 3. From the **Computer Management** window, click on **Local Users and Groups** > **Users**.
 4. Right-click on the user that was listed in the HTML5 error details and click **Properties**.
 5. Check the **Password never expires** setting.
-   ![User Properties](../../images/user-properties.png)
+   ![User Properties](/images/user-properties.png)
 
 #### Users are unable to see the HTML5 file upload explorer
 
@@ -497,7 +497,7 @@ Possible causes:
 - The service may fail to start on reboot due to sluggish performance.
 - The service cannot allocate the required memory.
 
-![Service Failed To Start](../../images/71d744ec-b482-416b-b29e-91b39b6407fb.png)
+![Service Failed To Start](/images/71d744ec-b482-416b-b29e-91b39b6407fb.png)
 
 Resolution:
 

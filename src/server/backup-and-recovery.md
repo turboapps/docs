@@ -28,7 +28,7 @@ It is critical to backup the Hub storage directory. This is where the applicatio
 
 There are no specific or required methods to capture a backup of the Hub storage directory. However, it is required that the Turbo Server service be stopped while the backup is captured. If the service is running when the backup is captured there is a possibility that a running transaction will cause the Hub backup to be corrupted making a successful restore impossible.
 
-If the Hub storage is low on disk space, you may find it necessary to move the Hub storage to another disk. Use the [Hub Storage Path](../../server/administration/domain.html#managing-a-server) setting to migrate the database. Ensure there are no other programs using the source and destination directories during the migration (after you save the new path setting). 
+If the Hub storage is low on disk space, you may find it necessary to move the Hub storage to another disk. Use the [Hub Storage Path](/server/administration/domain.html#managing-a-server) setting to migrate the database. Ensure there are no other programs using the source and destination directories during the migration (after you save the new path setting). 
 
 If a failure occurs during migration, the Hub server will not start. You may attempt to manually complete the migration using the following troubleshooting steps:
 
@@ -81,7 +81,7 @@ Restoring Turbo Server requires a brand new and empty installation on the new se
 
 This installation needs to be the same version and should be installed into the same directory as the previous install. The version and install directory of the previous install can be found in the **Settings.xml** file. The default location is **C:\ProgramData\Turbo Server\Settings.xml**. 
 
-Refer to the [Turbo Server Setup](../../server/setup-and-deployment/deploying-on-premises.html) document to complete the installation.
+Refer to the [Turbo Server Setup](/server/setup-and-deployment/deploying-on-premises) document to complete the installation.
 
 Stop the Turbo Server service of the new installation before moving to the next steps.
 
@@ -89,7 +89,7 @@ Stop the Turbo Server service of the new installation before moving to the next 
 
 Use native or purpose-built tools to complete the SQL database restores.
 
-Refer to the [Turbo Server Setup](../../server/setup-and-deployment/deploying-on-premises.html) document to complete the database installation.
+Refer to the [Turbo Server Setup](/server/setup-and-deployment/deploying-on-premises) document to complete the database installation.
 
 #### Hub Storage Directory
 

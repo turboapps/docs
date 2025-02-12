@@ -12,7 +12,7 @@ If the root hub is unavailable due to network outage or maintenance, the child h
 
 ### Configuring Federation
 
-Follow the [documentation](../../server/setup-and-deployment/deploying-on-premises.html) to setup a Hub Server and your repositories to the hub. The server which will contain the source of the repositories will be called the `root` server.
+Follow the [documentation](/server/setup-and-deployment/deploying-on-premises) to setup a Hub Server and your repositories to the hub. The server which will contain the source of the repositories will be called the `root` server.
 
 1. Setup an API Key
 
@@ -28,7 +28,7 @@ Follow the [documentation](../../server/setup-and-deployment/deploying-on-premis
 
 4. Use the federated repository
 
-    Once the repository has finished synchronizing, you may begin using the repository on the child server from a [workspace](../../server/administration/overview.html#managing-workspaces). 
+    Once the repository has finished synchronizing, you may begin using the repository on the child server from a [workspace](/server/administration/overview.html#managing-workspaces). 
 
     You can also install the repository image directly using the turbo cli on the user's machine.
 

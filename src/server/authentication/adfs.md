@@ -2,7 +2,7 @@
 
 This section describes the steps required to configure Single Sign-On (SSO) against an ADFS server using the SAML 2.0 authentication protocol. Turbo currently supports ADFS2 and ADFS3.
 
-For prerequisites and additional information about the SAML 2.0 authentication protocol, please refer to the [SAML 2.0 Prerequisites](../../server/authentication/saml.html#prerequisites) section.
+For prerequisites and additional information about the SAML 2.0 authentication protocol, please refer to the [SAML 2.0 Prerequisites](/server/authentication/saml.html#prerequisites) section.
 
 ### Configure ADFS
 
@@ -16,11 +16,11 @@ To create the relying party trust:
 
 1. Open the ADFS management window and go to **Trust Relationships** > **Relying Party Trusts** settings. Then right-click on the **Relying Party Trusts** and add a new Relying Party:
 
-   ![ADFS add RP](../../images/adfs-add-rp.png)
+   ![ADFS add RP](/images/adfs-add-rp.png)
 
 2. In the Wizard choose **Enter data about the relying party manually** setting and click **Next**.
 
-   ![ADFS manual](../../images/adfs-manual.png)
+   ![ADFS manual](/images/adfs-manual.png)
 
 3. Fill the Display Name with a meaningful name, for instance, `Turbo Portal`, and click **Next**.
 
@@ -28,15 +28,15 @@ To create the relying party trust:
 
 5. Leave the token encryption certificate data empty and click **Next**.
 
-   ![ADFS no cert](../../images/adfs-nocert.png)
+   ![ADFS no cert](/images/adfs-nocert.png)
 
 6. Set the URLs for WS-Federation and SAML 2.0 to `https://{Web Service Root}/auth/saml/return`, replacing `{Web Service Root}` with your Turbo Server portal host, and click **Next**.
 
-   ![ADFS URLs](../../images/ADFS-urls.png)
+   ![ADFS URLs](/images/ADFS-urls.png)
 
 7. In addition to the URL from the previous step, add a relying party trust identifier to be used by the Turbo Client, `https://{Web Service Root}/turbo-client`, and click **Add** and then **Next**.
 
-   ![ADFS Identifiers](../../images/ADFS-identifiers.png)
+   ![ADFS Identifiers](/images/ADFS-identifiers.png)
 
 8. Click **Next** through the rest of the wizard and **Close** at the end.
 
@@ -65,11 +65,11 @@ To configure how users will log into ADFS:
 
 1. Open the Global Authentication Policy settings from the **Authentication Policies** administration panel.
 
-   ![ADFS global policy](../../images/adfs-global-policy-1.png)
+   ![ADFS global policy](/images/adfs-global-policy-1.png)
 
 2. **Forms Authentication** must be enabled for both Extranet and Intranet.
 
-   ![ADFS global policy auth](../../images/adfs-global-policy-2.png)
+   ![ADFS global policy auth](/images/adfs-global-policy-2.png)
 
 #### Get the Token-Signing Certificate
 
@@ -110,8 +110,8 @@ Fill in the following fields according to the [ADFS configuration](#configure-ad
 - **Signing Certificate Thumbprint**: The ADFS Token-Signing Certificate's thumbprint, see [Get the Certificate](#configure-adfs-get-the-token-signing-certificate).
 - **Signing Certificate Common Name**: The ADFS Token-Signing Certificate's common name, see [Get the Certificate](#configure-adfs-get-the-token-signing-certificate).
 
-![ADFS Turbo Config](../../images/ADFS-turbo-config.png)
+![ADFS Turbo Config](/images/ADFS-turbo-config.png)
 
 ### Troubleshooting
 
-Please refer to the [SAML 2.0 Troubleshooting](../../server/authentication/saml.html#troubleshooting) section.
+Please refer to the [SAML 2.0 Troubleshooting](/server/authentication/saml.html#troubleshooting) section.

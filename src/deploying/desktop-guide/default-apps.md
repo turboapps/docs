@@ -4,7 +4,7 @@ When a Turbo application is installed either using the `installi` command or whe
 
 The ProgIDs created will start with `T.` and can be found in the registry under HKEY_CLASSES_ROOT.
 
-![Turbo ProgIds](../../images/image1.png)
+![Turbo ProgIds](/images/image1.png)
 
 These ProgIDs can be used to set default application associations using the following methods.
 
@@ -45,7 +45,7 @@ Dism.exe /Online /Export-DefaultAppAssociations:C:\AppAssoc.xml
 ```
 
 6. Editing the C:\AppAssoc.xml file in Notepad you can see the Turbo generated ProgIDs for the extensions:
-   ![ProgIds Xml](../../images/image2.png)
+   ![ProgIds Xml](/images/image2.png)
    These ProgIDs are specific to the workspace application so if you delete a workspace application and recreate it, you would need to update the ProgIDs.
 
 ### Setting Defaults using DISM
@@ -70,7 +70,7 @@ Dism.exe /online /get-defaultappassociations
 4. Optional: Set the group policy to prevent the user choice prompt when new apps are installed.
    **Computer\Windows Components\File Explorer\Do no show the ‘new application installed’ notification**
    Enabling this policy will prevent the User Choice prompt when users first launch files associated with Turbo applications if multiple apps share the same extensions. For example, I have set the default for .PDF to Acrobat Reader, but because the workspace also installs Chrome which has the .PDF capability, Windows sees this as a new application and will prompt me which app to use:
-   ![New Extension App](../../images/image3.png)
+   ![New Extension App](/images/image3.png)
 
 ### Setting Defaults with DEM
 

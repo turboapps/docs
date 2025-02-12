@@ -130,8 +130,8 @@ For ease, this example is already available on the Turbo.net hub: **sqlserver/sq
 
 Login to the default instance with **sa** and **password1**:
 
-![Studio SSMS login](../../images/sql1.png)
+![Studio SSMS login](/images/sql1.png)
 
 From inside the container SSMS, open **c:\sql-content\script.sql** and execute:
 
-![Studio SSMS](../../images/sql2.png)
+![Studio SSMS](/images/sql2.png)

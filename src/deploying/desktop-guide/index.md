@@ -6,13 +6,13 @@ Turbo supports deploying containers from the Turbo Hub to your desktop using the
 
 The `turbo subscribe` command allows administrators to register desktops to workspaces. A desktop registered to a workspace provides end users access to all workspace applications, application updates, and Active Directory based permissions.
 
-- Add an [API key](../../server/administration/hub.html#managing-api-keys) for a workspace.
-- Give the API key [Read Only Admin Permissions](../../server/administration/workspaces.html#workspace-users) to the workspace.
-- Configure applications in the workspace with the appropriate permissions under [Application Settings](../../server/administration/workspaces.html#workspace-applications).
+- Add an [API key](/server/administration/hub.html#managing-api-keys) for a workspace.
+- Give the API key [Read Only Admin Permissions](/server/administration/workspaces.html#workspace-users) to the workspace.
+- Configure applications in the workspace with the appropriate permissions under [Application Settings](/server/administration/workspaces.html#workspace-applications).
 - Install Turbo Client for all users on the VDI base image.
-- [Login](../../reference/command-line/login.html) with the API key which will be used to update the workspace and grant end users access `turbo login --all-users --api-key=<apiKey>`.
-- [Subscribe](../../reference/command-line/subscribe.html) to the workspace: `turbo subscribe --all-users <workspace>`. The workspace applications will be cached to the local all-users repository location. Application updates and settings are updated periodically.
-- Configure a login script to [register the workspace subscription](../../reference/command-line/subscription.html) to the user `turbo subscription register <subscription>`.
+- [Login](/reference/command-line/login) with the API key which will be used to update the workspace and grant end users access `turbo login --all-users --api-key=<apiKey>`.
+- [Subscribe](/reference/command-line/subscribe) to the workspace: `turbo subscribe --all-users <workspace>`. The workspace applications will be cached to the local all-users repository location. Application updates and settings are updated periodically.
+- Configure a login script to [register the workspace subscription](/reference/command-line/subscription) to the user `turbo subscription register <subscription>`.
 
 ### Single Repository Shell Registration
 
@@ -23,7 +23,7 @@ Containers can also be integrated with the Windows shell. The `install` or `inst
 > turbo installi --name=vlc videolan/vlc --register-extensions
 ```
 
-Configuring shortcuts and file associations for an image is done in Turbo Studio. See the [reference](../../studio/working-with-turbo-studio/desktop.html) section for more details.
+Configuring shortcuts and file associations for an image is done in Turbo Studio. See the [reference](/studio/working-with-turbo-studio/desktop) section for more details.
 
 ### Checking Installed Applications
 

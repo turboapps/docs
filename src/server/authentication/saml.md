@@ -83,20 +83,20 @@ Automatically created user groups from SSO will be created in the Single Sign-On
 
 Turbo Server supports Single Sign-On against any identity provider that supports SAML 2.0 authentication. Setup guides are available for the following identity providers:
 
-- [Azure Active Directory with SAML 2.0](../../server/authentication/azuread-saml.html)
-- [Active Directory Federation Services](../../server/authentication/adfs.html)
-- [Okta with SAML 2.0](../../server/authentication/okta-saml.html)
-- [Duo with SAML 2.0](../../server/authentication/duo-saml.html)
+- [Azure Active Directory with SAML 2.0](/server/authentication/azuread-saml)
+- [Active Directory Federation Services](/server/authentication/adfs)
+- [Okta with SAML 2.0](/server/authentication/okta-saml)
+- [Duo with SAML 2.0](/server/authentication/duo-saml)
 
 For other identity providers, please refer to the identity provider documentation for information on configuring the subject and attributes listed in the [Identity Provider Attributes and Claims](#prerequisites-identity-provider-attibutes-and-claims) section, as well as how to obtain the fields required by the Turbo Server user authentication form.
 
 ### Troubleshooting
 
-If an error is reported by the Turbo Server after logging into the external identity provider, the first place to check will be the [Hub logs](../../server/troubleshooting/hub-server.html#locating-log-files).
+If an error is reported by the Turbo Server after logging into the external identity provider, the first place to check will be the [Hub logs](/server/troubleshooting/hub-server.html#locating-log-files).
 
 #### Failed to validate SAML token
 
-Error log located in the [API log file](../../server/troubleshooting/hub-server.html#locating-log-files):
+Error log located in the [API log file](/server/troubleshooting/hub-server.html#locating-log-files):
 ```
 04/07/2020 17:44:42.6736 - Critical - 0x070C: Failed to validate SAML token: System.IdentityModel.Tokens.SecurityTokenValidationException: 
 The X.509 certificate CN=Microsoft Azure Federated SSO Certificate is not in the trusted people store. 
@@ -116,4 +116,4 @@ The Hub server did not recognize the token issuer identified by the Signing Cert
 
 #### Microsoft Azure AD with SAML group names appear as GUIDs
 
-Group claims using `sAMAccountName` are not supported for groups created in Azure AD or Office 365. Applications configured in Azure AD to synchronize on-premises group attributes will receive these attributes for synced groups only. If group names are utilized for Turbo workspace application permissions, consider configuring [Azure AD with OpenID](../../server/authentication/azuread-openid-connect.html). Alternatively, applications can use the group ID string as the permission.
+Group claims using `sAMAccountName` are not supported for groups created in Azure AD or Office 365. Applications configured in Azure AD to synchronize on-premises group attributes will receive these attributes for synced groups only. If group names are utilized for Turbo workspace application permissions, consider configuring [Azure AD with OpenID](/server/authentication/azuread-openid-connect). Alternatively, applications can use the group ID string as the permission.

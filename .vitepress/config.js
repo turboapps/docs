@@ -31,6 +31,7 @@ export default defineConfig({
     }
   },
 
+
   themeConfig: {
     // Enable the default search feature
     search: {
@@ -38,10 +39,9 @@ export default defineConfig({
     },
     nav: [
       { text: 'Getting Started', link: '/getting-started/' },
+      { text: 'Deploying', link: '/deploying/' },
       { text: 'Studio', link: '/studio/' },
       { text: 'Server', link: '/server/' },
-      { text: 'Deploying', link: '/deploying/' },
-      { text: 'VM', link: '/vm/' },
       { text: 'Reference', link: '/reference/' }
     ],
     sidebar: {
@@ -333,39 +333,27 @@ export default defineConfig({
                 { text: 'Security', link: '/reference/turbo-client/turbo-client-security' }
               ]
             },
-            { text: 'Turbo Desktop', link: '/reference/turbo-desktop' },
             { text: 'Turbo Play', link: '/reference/turbo-play' },
             {
-              text: 'Turbo Shell',
-              collapsed: false,
-              items: [
-                { text: 'Turbo Shell', link: '/reference/turbo-shell/' },
-                { text: 'Commit', link: '/reference/turbo-shell/commit' },
-                { text: 'Push', link: '/reference/turbo-shell/push' },
-              ]
-            },
-          ]
-        }
-      ],
-      '/vm/': [
-        {
-          text: 'VM',
-          collapsed: false,
-          items: [
-            { text: 'Introduction', link: '/vm/' },
-            { text: 'Folder Variables', link: '/vm/folder-variables' },
-            { text: 'Runtime Settings', link: '/vm/runtime-settings' },
-            { text: 'XML Configuration', link: '/vm/xml-configuration' },
-            { text: 'Advanced Topics', link: '/vm/dep-compatibility' },
-            {
-              text: 'Troubleshooting',
+              text: 'Turbo VM',
               collapsed: true,
               items: [
-                { text: 'Overview', link: '/vm/troubleshooting/troubleshooting' },
-                { text: 'Analyzing Logs', link: '/vm/troubleshooting/analyzing-logs' },
-                { text: 'Antivirus & Security', link: '/vm/troubleshooting/antivirus-security' },
-                { text: 'Common Errors', link: '/vm/troubleshooting/common-errors' },
-                { text: 'Debugging', link: '/vm/troubleshooting/debugging' }
+                { text: 'Introduction', link: '/reference/turbo-vm/' },
+                { text: 'Folder Variables', link: '/reference/turbo-vm/folder-variables' },
+                { text: 'Runtime Settings', link: '/reference/turbo-vm/runtime-settings' },
+                { text: 'XML Configuration', link: '/reference/turbo-vm/xml-configuration' },
+                { text: 'Advanced Topics', link: '/reference/turbo-vm/dep-compatibility' },
+                {
+                  text: 'Troubleshooting',
+                  collapsed: true,
+                  items: [
+                    { text: 'Overview', link: '/reference/turbo-vm/troubleshooting/troubleshooting' },
+                    { text: 'Analyzing Logs', link: '/reference/turbo-vm/troubleshooting/analyzing-logs' },
+                    { text: 'Antivirus & Security', link: '/reference/turbo-vm/troubleshooting/antivirus-security' },
+                    { text: 'Common Errors', link: '/reference/turbo-vm/troubleshooting/common-errors' },
+                    { text: 'Debugging', link: '/reference/turbo-vm/troubleshooting/debugging' }
+                  ]
+                }
               ]
             }
           ]

@@ -2,7 +2,7 @@
 
 Turbo Server allows workspace administrators to control access to workspace applications according to a configurable set of access rules.
 
-Access rules may be configured per workspace application on the workspace administration site. For more details on the workspace application administration, see the [Workspace Applications](../../server/administration/workspaces.html#workspace-applications).
+Access rules may be configured per workspace application on the workspace administration site. For more details on the workspace application administration, see the [Workspace Applications](/server/administration/workspaces.html#workspace-applications).
 
 ### IP Access Rules
 
