@@ -137,5 +137,5 @@ Now that you understand what Turbo is and how it works, you can:
 2. [Learn advanced usage](advanced.md) - Create and customize virtual environments
 
 ::: tip Looking for deployment options?
-Check out our [deployment guides](/deploying/overview/overview.md) for information on enterprise deployment scenarios.
+Check out our [deployment guides](/deploying/) for information on enterprise deployment scenarios.
 :::

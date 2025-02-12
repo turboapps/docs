@@ -60,7 +60,7 @@ The [Turbo.net Hub](https://hub.turbo.net) is a public repository of pre-configu
 - Regular updates and maintenance
 
 ::: tip Enterprise Users
-For enterprise deployments, [Turbo Server](../server/getting-started/getting-started.md) provides:
+For enterprise deployments, [Turbo Server](../server/) provides:
 - Web portal for flexible application delivery
   - Stream applications directly in the browser
   - Install applications locally
@@ -134,11 +134,11 @@ turbo run nodejs,git,vscode
 Now that you're familiar with basic Turbo operations, you can:
 
 1. [Learn advanced usage](advanced.md) for creating and customizing environments
-2. Explore [deployment options](../deploying/overview/deploying.md) for enterprise scenarios
-3. Check the [command reference](../reference/command-line/run.md) for detailed CLI documentation
+2. Explore [deployment options](../deploying/) for enterprise scenarios
+3. Check the [command reference](../reference/command-line/) for detailed CLI documentation
 
 ::: tip Enterprise Deployment
-Looking to deploy Turbo in your organization? [Turbo Server](../server/overview/overview.md) provides enterprise features like:
+Looking to deploy Turbo in your organization? [Turbo Server](../server/) provides enterprise features like:
 - Flexible application delivery through web portal
 - Workspace-based application management
 - Automatic updates through workspace subscriptions
