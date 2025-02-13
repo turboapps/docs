@@ -416,13 +416,6 @@ export default defineConfig({
           items: [
             { text: 'Introduction', link: '/deploying/' },
             {
-              text: 'Studio',
-              collapsed: true,
-              items: [
-                { text: 'Building Executables', link: '/deploying/studio/studio-builds' }
-              ]
-            },
-            {
               text: 'Client',
               collapsed: true,
               items: [
@@ -434,10 +427,11 @@ export default defineConfig({
               collapsed: true,
               items: [
                 { text: 'Overview', link: '/deploying/server/index' },
-                { text: 'API Keys', link: '/deploying/server/api-keys' },
                 { text: 'Hub Setup', link: '/deploying/server/hub-setup' },
+                { text: 'API Keys', link: '/deploying/server/api-keys' },
                 { text: 'Workspaces', link: '/deploying/server/workspaces' },
-                { text: 'Subscriptions', link: '/deploying/server/subscriptions' }
+                { text: 'Subscriptions', link: '/deploying/server/subscriptions' },
+                { text: 'Application Servers', link: '/deploying/server/application-servers' }
               ]
             },
             {

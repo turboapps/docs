@@ -129,25 +129,6 @@ Monitor through administration portal:
 - Server performance - See [Server Monitoring](/server/monitoring.md)
 - Error tracking - See [Troubleshooting](/server/troubleshooting/application)
 
-## Best Practices
-
-### Organization
-- Use clear naming conventions
-- Group related applications
-- Document workspace purposes
-- Regular access review
-
-### Performance
-- Monitor resource usage
-- Optimize application settings
-- Configure appropriate cache sizes
-- Regular maintenance
-
-### Security
-- Principle of least privilege
-- Regular permission audits
-- Security policy enforcement
-- Access logging
 
 ## Troubleshooting
 
@@ -167,9 +148,3 @@ Monitor through administration portal:
    - Monitor resource usage
    - Check network connectivity
    - Review cache settings
-
-## Next Steps
-
-- Set up [subscriptions](subscriptions.md)
-- Review [workspace settings](/server/administration/workspaces.md)
-- Configure [monitoring](/server/monitoring.md)

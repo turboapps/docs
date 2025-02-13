@@ -1,24 +1,53 @@
 # API Keys
 
-API keys allow you to login to the Turbo.net or Turbo Server hub without the use of a password. This is important for scripting and automation as it eliminates the need to hard code passwords or pass them in as parameters to your scripts. API keys can be revoked or regenerated in case they have been compromised.
+API keys enable automated login to Turbo Server for workspace subscriptions and other programmatic access. They are particularly useful for:
+- Automated workspace deployment
+- Scripted client configuration
+- Non-interactive authentication
 
-### Manage Your Keys
+## Overview
 
-The first step is to create an API key. To do this, go to your account or organization settings page by clicking on the account dropdown on the top right of the page, and then select **Device and API Keys** on the right menu.
+API keys provide:
+- Password-less authentication
+- Revocable access
+- Granular permissions control
+- Audit tracking capabilities
 
-![Device and API keys table](/images/apikey1.png)
+For detailed management and configuration options, see [API Key Management](/server/administration/users.md#api-keys).
 
-Once here, click **Add API Key** to generate a new key. Press the **Remove** button to remove the key and revoke its access to your organization. There is no limit to the number of keys you can generate.  You may decide to create and manage different keys for different teams or for different user access, allowing you the flexibility to revoke them independently without disrupting all key users.
+## Using API Keys with Subscriptions
 
-Click **Copy Key** and head back to the command line.
+API keys are commonly used to automate workspace deployment through subscriptions:
 
-### Turbo Login with an API Key
+```bash
+# Login using API key
+turbo login --api-key=<your-api-key> --all-users
 
-Using the API key is easy -- just include the key in the turbo login command using the **--api-key** flag.
+# Subscribe to workspace
+turbo subscribe workspace --register
 
+# Or subscribe to all available workspaces
+turbo subscribe --all --register
 ```
-> turbo login --api-key=9ZoKH_336g0MqP2yptwfrv9B1XUm8YFPnCZNugVQNr4
-turboorg logged in at 7/26/2018 3:53:31 PM
-```
 
-The session is now authenticated in the account context. The account will stay logged in until the API key is revoked or the session is closed with the turbo logout command.
+This enables:
+- Automated client setup
+- Silent installation
+- Unattended updates
+- Enterprise-wide deployment
+
+## Best Practices
+
+### Key Management
+- Create separate keys for different purposes
+- Regularly rotate keys
+- Revoke unused keys
+- Monitor key usage
+
+### Security
+- Store keys securely
+- Use environment variables when possible
+- Avoid embedding keys in scripts
+- Set appropriate permissions
+
+For more information about API key management and security, see the [Server Administration Guide](/server/administration/index.md).

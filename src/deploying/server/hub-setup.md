@@ -37,8 +37,3 @@ You can build and push custom applications using Turbo Studio:
 For details, see:
 - [Working with Turbo Studio](/studio/working-with-turbo-studio/)
 - [Pushing Images](/studio/working-with-containers/)
-
-## Next Steps
-
-- [Configure workspaces](workspaces.md) - Organize your applications
-- [Set up subscriptions](subscriptions.md) - Deploy to clients

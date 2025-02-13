@@ -86,6 +86,8 @@ turbo subscription register myworkspace --no-desktop-shortcuts
 turbo subscription register myworkspace --no-file-associations
 ```
 
+In addtion you can configure through [Workspace Shell Integration](/server/administration/workspaces.md#shell-integration).
+
 ## Best Practices
 
 ### Deployment
@@ -95,7 +97,7 @@ turbo subscription register myworkspace --no-file-associations
 - Monitor update status
 
 ### Performance
-- Use `--pull` to pre-cache applications
+- Use `--pull` to cache applications
 - Schedule updates during off-hours
 - Configure appropriate cache sizes
 - Regular maintenance
@@ -133,9 +135,3 @@ turbo subscription register myworkspace --no-file-associations
 # View subscription details
 turbo subscription print myworkspace
 ```
-
-## Next Steps
-
-- Review [workspace settings](/server/administration/workspaces.md)
-- Configure [client settings](/client/command-line/config.md)
-- Set up [server monitoring](/server/monitoring.md)

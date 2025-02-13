@@ -237,45 +237,11 @@ View container logs:
 ```bash
 # View standard logs
 turbo logs <container-id>
-
-# View diagnostic logs
-turbo logs --diagnostic <container-id>
-
-# Follow log output in real-time
-turbo logs -f <container-id>
-
-# Show timestamps
-turbo logs -t <container-id>
-
-# List available logs
-turbo logs --list <container-id>
 ```
 
 Note: For detailed diagnostic logging, use the `--diagnostic` flag when running containers:
 ```bash
 turbo run --diagnostic myapp
-```
-
-## Advanced Configuration
-
-### Custom Settings
-
-```bash
-# Configure network isolation
-turbo config --enable=NetFwBlockOutbound
-
-# Set container cleanup
-turbo config --shutdown-process-tree=always
-```
-
-### Automation
-
-Create deployment scripts:
-```batch
-@echo off
-REM Deploy application with standard configuration
-turbo config --image-path=\\server\share
-turbo installi myapp --isolate=write-copy+merge-user
 ```
 
 ## Next Steps

@@ -6,6 +6,7 @@ This section covers enterprise deployment of virtual applications using Turbo Se
 - Turbo Server overview and capabilities
 - Hub and workspace management
 - Application deployment and configuration
+- Application server deployment
 - Client subscription setup
 :::
 
@@ -31,6 +32,8 @@ Turbo Server provides enterprise-grade deployment capabilities:
 - Enable non-Windows clients to run virtual applications
 - Browser-based access through HTML5
 - Load balancing and scaling
+
+For deployment details, see [Application Server Deployment](application-servers.md).
 
 ## Key Features
 
@@ -61,9 +64,11 @@ Turbo Server provides enterprise-grade deployment capabilities:
 ## Getting Started
 
 1. Review [system requirements](/server/setup-and-deployment/deploying-on-premises.md)
-2. Configure the [Hub Server](/server/administration/hub.md)
-3. Set up [workspaces](/server/administration/workspaces.md)
-4. Deploy to clients through [subscriptions](subscriptions.md)
+2. Set up your [Hub Server](hub-setup.md)
+3. Configure [API Keys](api-keys.md) for automation
+4. Create [Workspaces](workspaces.md) for applications
+5. Deploy using [Subscriptions](subscriptions.md)
+6. Add [Application Servers](application-servers.md) for streaming
 
 ## Administration
 
@@ -94,35 +99,3 @@ Configure applications through the web interface:
 - License management
 
 For details, see [Application Settings](/server/administration/workspaces.md#workspace-applications).
-
-## Client Deployment
-
-### Subscription Setup
-1. Configure the Turbo Client:
-   ```bash
-   # Configure server domain
-   turbo config --domain=hub.company.com
-   ```
-
-2. Subscribe to workspace:
-   ```bash
-   # Subscribe and register applications
-   turbo subscribe myworkspace --register
-
-   # Subscribe for all users
-   turbo subscribe myworkspace --register --all-users
-   ```
-
-### Desktop Integration
-- Start menu shortcuts
-- File associations
-- URL handlers
-- Shell extensions
-
-Configure through [Workspace Shell Integration](/server/administration/workspaces.md#shell-integration).
-
-## Next Steps
-
-- [Hub Setup](/server/administration/hub.md) - Configure your Hub Server
-- [Workspaces](/server/administration/workspaces.md) - Create and manage workspaces
-- [Subscriptions](subscriptions.md) - Deploy workspaces to clients
