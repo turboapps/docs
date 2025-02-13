@@ -2,13 +2,13 @@ The September 2022 Turbo Server release includes several major features:
 
 - New! **SMB Network Share Storage Type** brings SMB and local file system folders to Turbo Drive. This release also introduces per-user and shared storage modes. Users may access their files from the Portal dashboard and the T: Drive.
 
-![File System Storage](../../../images/filesystem-storage.png)
+![File System Storage](/images/filesystem-storage.png)
 - New! **Analyst User Role** grants read-only permission the administration site **Reports** page.
 
-![Analyst View](../../../images/analyst-view2.png)
+![Analyst View](/images/analyst-view2.png)
 - **Performance Reports** now show launch diagnostic information, client launch performance, and additional launch details such as the Windows user and application server.
 
-![Reports Error Expanded](../../../images/reports-error-expanded2.png)
+![Reports Error Expanded](/images/reports-error-expanded2.png)
 
 Other new features include:
 

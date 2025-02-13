@@ -2,15 +2,15 @@ The November 2020 Turbo Server release includes the following major new features
 
 - HTML5 client and SSO logon errors now include additional troubleshooting details to simplify error resolution.
 
-![Service Not Licensed](../../../images/service-not-licensed.png)
+![Service Not Licensed](/images/service-not-licensed.png)
 
 - Session time limits can now be configured from the administration site **Streaming** page.
 
-![Session Time Limits](../../../images/session-time-limits.png)
+![Session Time Limits](/images/session-time-limits.png)
 
 - New **Show Launch Page** setting allows administrators to configure applications to launch directly from the dashboard or in a new browser tab.
 
-![Show Launch Page](../../../images/show-launch-page.png)
+![Show Launch Page](/images/show-launch-page.png)
 
 
 Other improvements include:

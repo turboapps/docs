@@ -2,14 +2,14 @@ The December 2020 Turbo Server release includes the following major new features
 
 - Workspace items can now be grouped into **Channels** with customizable user and group permissions. Channels are ideal for assigning entitlements to specific classes, teams or departments. Channels are listed on the Portal Dashboard to permitted users.
 
-![Workspace Admin Channels Items](../../../images/admin-users-channels-items.png)
+![Workspace Admin Channels Items](/images/admin-users-channels-items.png)
 
 - New **Web Application** and **Link** item types can now be added to workspaces, allowing users to open configurable URLs in a virtual browser sessions or in their native browser.
 
-![Add Web Application](../../../images/add-web-app.png)
+![Add Web Application](/images/add-web-app.png)
 - New **Learning Tools Interoperability (LTI)** integration allows students and instructors to access course applications directly within **Canvas** and other LTI-compliant Learning Management Systems (LMS).
 
-![Canvas](../../../images/canvas.png)
+![Canvas](/images/canvas.png)
 
 
 Other improvements include:

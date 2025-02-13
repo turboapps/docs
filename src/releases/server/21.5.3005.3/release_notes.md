@@ -2,10 +2,10 @@
 
 - **Notifications** allow administrators to notify groups of Turbo Server users with custom messages. Notifications are displayed to users on the Turbo Portal in the notifications dropdown.
 
-![Notifications](../../../images/notifications.png)
+![Notifications](/images/notifications.png)
 - **Search** is now available on the Portal Dashboard. Users can now quickly search Workspace contents by name.
 
-![Workspace Search](../../../images/search.png)
+![Workspace Search](/images/search.png)
 
 Other improvements include:
 

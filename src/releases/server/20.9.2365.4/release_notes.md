@@ -2,16 +2,16 @@ The October 2020 Turbo Server release includes the following major new features:
 
 - **Google Drive** integration is available through the T: Drive.
 
-![Google Drive HTML5](../../../images/gdrive-tdrive.png)
+![Google Drive HTML5](/images/gdrive-tdrive.png)
 - User's persisted states can be reset from the administration site **User Sessions** page.
 
-![User Sessions](../../../images/user-sessions.png)
+![User Sessions](/images/user-sessions.png)
 - The administration site can now be reached through the **Portal Gateway** when using single domain URL mode.
 
-![External Admin Access](../../../images/external-admin-access.png)
+![External Admin Access](/images/external-admin-access.png)
 - Application **Share URLs** to allow users to launch applications without logging in.
 
-![Share URLs](../../../images/apps-sharing.png)
+![Share URLs](/images/apps-sharing.png)
 
 
 Other improvements include:

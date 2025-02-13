@@ -2,14 +2,14 @@ The August 2020 Turbo Server release includes the following major new features:
 
 - New **Server Log Archives** feature allows administrators to create and download log archives directly from the administration site.
 
-![Turbo Server Log Archives](../../../images/log-archives.png)
+![Turbo Server Log Archives](/images/log-archives.png)
 - New Cloud Storage **Test** feature allows administrators to test their storage configurations before committing any changes.
 
-![Turbo Server Cloud Storage Test](../../../images/cloud-storage-test.png)
+![Turbo Server Cloud Storage Test](/images/cloud-storage-test.png)
 
 - New **Precache Applications** and **Default Domain** settings have been added to workspaces. The precache settings controls which workspaces are automatically cached to the Application Server; the Default Domain setting sets the default domain used to login when launching applications in the cloud with non-temporary profiles.
 
-![Turbo Server Workspace Settings](../../../images/workspace-settings.png)
+![Turbo Server Workspace Settings](/images/workspace-settings.png)
 
 
 Other improvements include:

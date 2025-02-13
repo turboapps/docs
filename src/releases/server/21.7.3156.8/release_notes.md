@@ -3,14 +3,14 @@
 - New! **Session Handoff** allows streaming clients to transfer sessions from one device to another. Existing sessions for the same application will automatically be disconnected. Users can also reconnect to an earlier sessions after an accidental disconnect.
 - New! Workspace administration now gathers and displays additional launch analytics, including **Type**, **Client**, and **Device**.
 
-![Client Device Analytics](../../../images/client-device-analytics.png)
+![Client Device Analytics](/images/client-device-analytics.png)
 - New! Dashboard session state indicators provide live status updates of active application sessions. Additional session details such as duration and client types may be viewed by hovering over the item.
 
-![Dashboard Session Running](../../../images/session-running.png)
+![Dashboard Session Running](/images/session-running.png)
 
 - New! **Mount Points** application UI allows paths from the host to be mapped into paths inside application containers.
 
-![Mount Points](../../../images/mount-point.png)
+![Mount Points](/images/mount-point.png)
 
 **Note:** As part of the new Session Handoff capability, temporary user profile names are now determined by a combination of the user and application. A new temporary user profile will be created when a user launches an application for the first time.
 

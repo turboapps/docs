@@ -2,10 +2,10 @@ The April 2022 Turbo Server release includes several major new features:
 
 - New! **HTML5 File Browser** lets users browse, open, and edit files directly within the Portal web interface. Users can easily interact with any connected T: drive storage provider via an associated Turbo application.
 
-![File Browser](../../../images/file-browser.png)
+![File Browser](/images/file-browser.png)
 - New! **File Associations** can be added from the administration site to configure how users open or edit files from the file browser.
 
-![File Associations](../../../images/file-associations.png)
+![File Associations](/images/file-associations.png)
 
 Other new features include:
 

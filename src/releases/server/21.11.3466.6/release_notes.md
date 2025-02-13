@@ -2,10 +2,10 @@ The November 2021 Turbo Server release includes several major new features:
 
 - New! **IP Access Rules** feature allows access control to Workspace applications based on IP addresses and countries.
 
-![IP Restrictions](../../../images/ip-restrictions.png)
+![IP Restrictions](/images/ip-restrictions.png)
 - New! **Hub CDN** feature allows Turbo images to be delivered from a configurable content delivery network (CDN).
 
-![Hub CDN](../../../images/cdn.png)
+![Hub CDN](/images/cdn.png)
 
 Other improvements include:
 
