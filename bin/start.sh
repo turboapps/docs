@@ -23,4 +23,4 @@ echo "Content of src/.vitepress/dist:"
 ls -R src/.vitepress/dist
 
 echo "Serving production build..."
-exec vitepress serve src/.vitepress/dist --port 5050 --host 0.0.0.0
+exec vitepress serve src --port 5050 --host 0.0.0.0
