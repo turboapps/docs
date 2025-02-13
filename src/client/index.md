@@ -1,5 +1,5 @@
 # Turbo Client
-build break 2 <id>
+
 The Turbo Client is the core component for managing and running virtualized applications. It provides comprehensive control over application virtualization, deployment, and management through both a command-line interface and graphical tools.
 
 ::: tip What you'll learn

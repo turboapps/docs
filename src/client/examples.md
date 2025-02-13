@@ -10,7 +10,7 @@ This guide provides practical examples of using Turbo in common scenarios. For m
 :::
 
 ## Running Applications
-build break 1 <id>
+
 ### Basic Usage
 
 ```bash
