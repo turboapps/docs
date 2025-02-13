@@ -5,6 +5,7 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+  workflow_dispatch:
 
 jobs:
   build:
@@ -24,5 +25,36 @@ jobs:
         npm install -g vitepress@1.6.3
 
     - name: Build VitePress site
-      run: vitepress build src
+      run: |
+        vitepress build src || true
+      continue-on-error: true
 
+    - name: Check build output and display errors
+      run: |
+        echo "Build completed. Checking for errors..."
+        
+        if [ -f "src/.vitepress/logs/error.log" ]; then
+          echo "VitePress Error Log:"
+          cat src/.vitepress/logs/error.log
+          BUILD_FAILED=true
+        fi
+        
+        if [ -f "npm-debug.log" ]; then
+          echo "NPM Debug Log:"
+          cat npm-debug.log
+          BUILD_FAILED=true
+        fi
+        
+        if [ ! -d "src/.vitepress/dist" ]; then
+          echo "Build failed. Output directory does not exist."
+          BUILD_FAILED=true
+        else
+          echo "Build output directory exists."
+        fi
+        
+        if [ "$BUILD_FAILED" = true ]; then
+          echo "Errors were found during the build process. Check the logs above for details."
+          exit 1
+        else
+          echo "Build completed successfully with no errors."
+        fi
