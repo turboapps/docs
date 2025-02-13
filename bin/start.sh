@@ -17,10 +17,10 @@ if [ ! -f package.json ]; then
 fi
 
 echo "Building for production..."
-vitepress build src
+npm run docs:build
 
 echo "Content of src/.vitepress/dist:"
 ls -R src/.vitepress/dist
 
 echo "Serving production build..."
-exec vitepress serve src --port 5050 --host 0.0.0.0
+exec npm run docs:serve -- --port 5050 --host 0.0.0.0
