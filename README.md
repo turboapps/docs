@@ -82,7 +82,7 @@ When contributing to the Turbo documentation, please follow these style guidelin
 - Use relative paths from the markdown file location
 - Use standard markdown image syntax:
   ```md
-  ![Alt text](../images/example.png)
+  ![Alt text](/images/example.png)
   ```
 
 ### Project Structure
