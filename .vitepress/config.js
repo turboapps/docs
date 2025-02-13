@@ -76,6 +76,7 @@ export default defineConfig({
                 { text: 'export', link: '/client/command-line/export' },
                 { text: 'fork', link: '/client/command-line/fork' },
                 { text: 'gc', link: '/client/command-line/gc' },
+                { text: 'gc shortcuts', link: '/client/command-line/gc-shortcuts' },
                 { text: 'gcc', link: '/client/command-line/gcc' },
                 { text: 'gci', link: '/client/command-line/gci' },
                 { text: 'gcl', link: '/client/command-line/gcl' },
@@ -251,7 +252,17 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: 'Introduction', link: '/server/' },
-            { text: 'Setup and Deployment', link: '/server/setup-and-deployment/deploying-on-premises' },
+            {
+              text: 'Setup and Deployment',
+              collapsed: true,
+              items: [
+                { text: 'Prerequisites', link: '/server/setup-and-deployment/prerequisites' },
+                { text: 'Deploying On-Premises', link: '/server/setup-and-deployment/deploying-on-premises' },
+                { text: 'Deploying to Azure', link: '/server/setup-and-deployment/deploying-to-azure' },
+                { text: 'External Application Server', link: '/server/setup-and-deployment/deploying-external-application-server' },
+                { text: 'VDI', link: '/server/setup-and-deployment/VDI' }
+              ]
+            },
             {
               text: 'Administration',
               collapsed: true,
@@ -322,17 +333,43 @@ export default defineConfig({
             { text: 'Monitoring', link: '/server/monitoring' },
             { text: 'Network and Load Balancing', link: '/server/network-and-load-balancing' },
             { text: 'Optimization', link: '/server/optimization' },
-            { text: 'Portal', link: '/server/portal/index' },
+            {
+              text: 'Portal',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/server/portal/index' },
+                { text: 'Dashboard', link: '/server/portal/dashboard' },
+                { text: 'HTML5 Client', link: '/server/portal/html5-client' },
+                { text: 'Running Applications', link: '/server/portal/running-applications' },
+                { text: 'User Settings', link: '/server/portal/user-settings' }
+              ]
+            },
             { text: 'Security', link: '/server/security' },
-            { text: 'Advanced Topics', link: '/server/advanced-topics/index' },
+            {
+              text: 'Advanced Topics',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/server/advanced-topics/index' },
+                { text: 'Command Line Management', link: '/server/advanced-topics/command-line-management' },
+                { text: 'Federation', link: '/server/advanced-topics/federation' },
+                { text: 'Hub Storage', link: '/server/advanced-topics/hub-storage' },
+                { text: 'Image Streaming', link: '/server/advanced-topics/image-streaming' },
+                { text: 'Launch Configuration', link: '/server/advanced-topics/launch-configuration-web-service' },
+                { text: 'Security', link: '/server/advanced-topics/security' },
+                { text: 'Setup', link: '/server/advanced-topics/setup' },
+                { text: 'SSL', link: '/server/advanced-topics/ssl' }
+              ]
+            },
             {
               text: 'Troubleshooting',
               collapsed: true,
               items: [
+                { text: 'Administration', link: '/server/troubleshooting/admininstration' },
                 { text: 'Application', link: '/server/troubleshooting/application' },
                 { text: 'Application Server', link: '/server/troubleshooting/application-server' },
                 { text: 'Application Streaming', link: '/server/troubleshooting/application-streaming' },
                 { text: 'End User', link: '/server/troubleshooting/end-user' },
+                { text: 'Hub Server', link: '/server/troubleshooting/hub-server' },
                 { text: 'Performance', link: '/server/troubleshooting/performance' },
                 { text: 'Single Sign On', link: '/server/troubleshooting/sso' },
                 { text: 'SSL', link: '/server/troubleshooting/ssl-troubleshooting' }
@@ -397,6 +434,7 @@ export default defineConfig({
               collapsed: true,
               items: [
                 { text: 'Overview', link: '/deploying/server/index' },
+                { text: 'API Keys', link: '/deploying/server/api-keys' },
                 { text: 'Hub Setup', link: '/deploying/server/hub-setup' },
                 { text: 'Workspaces', link: '/deploying/server/workspaces' },
                 { text: 'Subscriptions', link: '/deploying/server/subscriptions' }

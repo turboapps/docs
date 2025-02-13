@@ -16,53 +16,15 @@ Complete the following steps to manually configure Turbo Server:
 
 2. To manually configure Turbo Hub Server, type the command: **Server.exe /provision [ADMINISTRATOR EMAIL]**. Add any of the optional command-line arguments from the following table. Omitting any command-line arguments causes the default setting to apply.
 
-<table>
-      <tr>
-         <th data-column="0">
-            <div>
-               <p>Command Line Argument</p>
-            </div>
-         </th>
-         <th data-column="1">
-            <div>
-               <p>Setting</p>
-            </div>
-         </th>
-      </tr>
-      <tr>
-         <td style="white-space: nowrap">
-            <p><code>/dblibrary "Integrated Security=true;Data Source=[SERVER];Initial Catalog=Library;"</code></p>
-         </td>
-         <td>
-            <p>Configures the connection string for the library database where settings and user information is stored.</p>
-         </td>
-      </tr>
-      <tr>
-         <td style="white-space: nowrap">
-            <p><code>/dbmanager "Integrated Security=true;Data Source=[SERVER];Initial Catalog=Manager;"</code></p>
-         </td>
-         <td>
-            <p>Configures the connection string for the manager database where usage information is stored.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>/wwwsite <span class="nolink">http://www.[MYSITE].com:[PORT]</span></code></p>
-         </td>
-         <td>
-            <p>Assigns the port and fully qualified domain name for the hub site.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>/adminsite <span class="nolink">http://www.[MYSITE].com:[PORT]</span></code></p>
-         </td>
-         <td>
-            <p>Assigns the port and fully qualified domain name for administration site.</p>
-         </td>
-      </tr>
-</table>
-<br>
+## Command Line Arguments
+
+| Command Line Argument | Setting |
+|----------------------|---------|
+| `/dblibrary "Integrated Security=true;Data Source=[SERVER];Initial Catalog=Library;"` | Configures the connection string for the library database where settings and user information are stored. |
+| `/dbmanager "Integrated Security=true;Data Source=[SERVER];Initial Catalog=Manager;"` | Configures the connection string for the manager database where usage information is stored. |
+| `/wwwsite http://www.[MYSITE].com:[PORT]` | Assigns the port and fully qualified domain name for the hub site. |
+| `/adminsite http://www.[MYSITE].com:[PORT]` | Assigns the port and fully qualified domain name for the administration site. |
+
 The following is a sample command to set all four settings:
 
 ```

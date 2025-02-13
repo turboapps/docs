@@ -78,77 +78,20 @@ Using Turbo Server you can add an external directory service, such as Active Dir
 
 **Note**: When synchronizing external directory-services containing of over 5,000 users, the command-line administration utility should be used instead of the Administrator web site. For more information on using the administration utility, see _Manage Turbo Server from the Command Line_. Synchronizing large directory services uses up to 1 GB memory per 500,000 users and groups on the hub server. Ensure that your hub server has enough memory to handle ordinary load when the directory service sync is running.
 
-<table>
-      <tr>
-         <th data-column="0">
-            <div>
-               <p>Section</p>
-            </div>
-         </th>
-         <th data-column="1">
-            <div>
-               <p>Description</p>
-            </div>
-         </th>
-      </tr>
-      <tr>
-         <td>
-            <p><strong>Name</strong></p>
-         </td>
-         <td>
-            <p>This field indicates which service is being added or controlled by the entry. The <strong>Name</strong> field must not be the same as the service or server you are using.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><strong>Description<br></strong></p>
-         </td>
-         <td>
-            <p>(Optional) <br>Administrators can include a description of the directory service being added, which can be helpful in recording notes about the service.</p>
-         </td>
-      </tr>
-      <tr>
-         <td colspan="1"><strong>Login Prefix</strong></td>
-         <td colspan="1">
-            <p>Login prefixes are given to each user in the directory service to use when they log into the server and are helpful in distinguishing users across different directories. For example, if the directory's login prefix is "acme" and the users name is "aaron", they would log on using the full name "acme\aaron." Once this login prefix is chosen for a directory, it cannot be changed. If you must change the login prefix, the directory service can be deleted and a new one added for the same directory; settings for all users from that directory are lost.</p>
-         </td>
-      </tr>
-      <tr>
-         <td colspan="1"><strong>Type</strong></td>
-         <td colspan="1">In the <strong>Type</strong> section you can choose the type of the directory service from which to import users and groups. <br> There is variability in location, security, and schema settings for directory services. Turbo Server provides two templates: <strong>Active Directory</strong> and <strong>Other LDAP</strong>. The local Active Directory can be found by selecting <strong>Try Local.</strong> When found, working connection settings are set automatically. <br class="atl-forced-newline"> To synchronize with the local Microsoft Windows domain's Active Directory service, select <strong>Try Local</strong>. This loads default settings into the <strong>Connection</strong> and <strong>Directory Schema</strong> fields. For large directories this can take several minutes. <br class="atl-forced-newline"> If the operation is unsuccessful, continue to the <strong>Choosing Your Connection Settings</strong> section. <br class="atl-forced-newline"> If the operation is successful, continue to the <strong>Choosing the Directories to Synchronize</strong> section.</td>
-      </tr>
-      <tr>
-         <td colspan="1"><strong>Server</strong></td>
-         <td colspan="1">
-            <p>This section can be used to specify your connection settings to the LDAP directory you are trying to connect to.</p>
-            <p>For more on this section, scroll down on this page to <strong>Choosing Your Connection Settings</strong></p>
-         </td>
-      </tr>
-      <tr>
-         <td colspan="1"><strong>Binding Type</strong></td>
-         <td colspan="1">
-            <p>This field is used to specify the form of security being employed by the LDAP server you are connecting to.</p>
-            <p>If "Default" is chosen for <strong>Port</strong> in the <strong>Server</strong> section, changing the <strong>Binding Type</strong> will automatically change the port to the standard LDAP port number for that setting.</p>
-         </td>
-      </tr>
-      <tr>
-         <td colspan="1"><strong>Synchronization Account</strong></td>
-         <td colspan="1">This field specifies the account to use when synchronizing users with the directory services. For more information, scroll down on this page to <strong>Choosing Your Connection Settings</strong>.</td>
-      </tr>
-      <tr>
-         <td colspan="1"><strong>Directory Schema</strong></td>
-         <td colspan="1">&nbsp;Allows the administrator to specify which names in the LDAP directory will be imported into the Turbo Server user information. For more information, see <strong>Directory Schema</strong>, further down this page</td>
-      </tr>
-      <tr>
-         <td colspan="1"><strong>Page Size</strong></td>
-         <td colspan="1">The page size used when synchronizing the directory service. Typically, the default value for Active Directory services is 1000. Some LDAP implementations do not support the PageSize property, and should be set to 0.</td>
-      </tr>
-      <tr>
-         <td colspan="1"><strong>Synchronized Items</strong></td>
-         <td colspan="1">Used to identify items in the directory tree that should be synchronized with Turbo Hub Server. For more information, see <strong>Choosing Items to Synchronize</strong>, further down this page.</td>
-      </tr>
-</table>  
-&nbsp;
+## Directory Service Settings
+
+| Section | Description |
+|---------|------------|
+| **Name** | This field indicates which service is being added or controlled by the entry. The **Name** field must not be the same as the service or server you are using. |
+| **Description** | (Optional) Administrators can include a description of the directory service being added, which can be helpful in recording notes about the service. |
+| **Login Prefix** | Login prefixes are given to each user in the directory service to use when they log into the server and are helpful in distinguishing users across different directories. For example, if the directory's login prefix is "acme" and the user's name is "aaron", they would log on using the full name "acme\\aaron." Once this login prefix is chosen for a directory, it cannot be changed. If you must change the login prefix, the directory service can be deleted and a new one added for the same directory; settings for all users from that directory are lost. |
+| **Type** | In the **Type** section, you can choose the type of the directory service from which to import users and groups. There is variability in location, security, and schema settings for directory services. Turbo Server provides two templates: **Active Directory** and **Other LDAP**. The local Active Directory can be found by selecting **Try Local.** When found, working connection settings are set automatically. <br> To synchronize with the local Microsoft Windows domain's Active Directory service, select **Try Local**. This loads default settings into the **Connection** and **Directory Schema** fields. For large directories, this can take several minutes. <br> If the operation is unsuccessful, continue to the **Choosing Your Connection Settings** section. <br> If the operation is successful, continue to the **Choosing the Directories to Synchronize** section. |
+| **Server** | This section can be used to specify your connection settings to the LDAP directory you are trying to connect to. <br> For more on this section, scroll down on this page to **Choosing Your Connection Settings**. |
+| **Binding Type** | This field is used to specify the form of security being employed by the LDAP server you are connecting to. <br> If "Default" is chosen for **Port** in the **Server** section, changing the **Binding Type** will automatically change the port to the standard LDAP port number for that setting. |
+| **Synchronization Account** | This field specifies the account to use when synchronizing users with the directory services. For more information, scroll down on this page to **Choosing Your Connection Settings**. |
+| **Directory Schema** | Allows the administrator to specify which names in the LDAP directory will be imported into the Turbo Server user information. For more information, see **Directory Schema**, further down this page. |
+| **Page Size** | The page size used when synchronizing the directory service. Typically, the default value for Active Directory services is 1000. Some LDAP implementations do not support the PageSize property, and should be set to 0. |
+| **Synchronized Items** | Used to identify items in the directory tree that should be synchronized with Turbo Hub Server. For more information, see **Choosing Items to Synchronize**, further down this page. |
 
 **Choosing Your Connection Settings**
 

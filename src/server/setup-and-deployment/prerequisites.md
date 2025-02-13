@@ -73,91 +73,26 @@ The Turbo Server installation automatically creates firewall rules for the selec
 
 #### Hub Server
 
-<table>
-<tbody>
-<tr>
-    <th>Port</th>
-    <th>Protocol</th>
-    <th>Description</th>
-    <th>Required Externally</th>
-</tr>
-<tr>
-    <td>80</td>
-    <td>TCP</td>
-    <td>Administration Site HTTP</td>
-    <td>Optional</td>
-</tr>
-<tr>
-    <td>443</td>
-    <td>TCP</td>
-    <td>Administration Site HTTPS</td>
-    <td>Yes</td>
-</tr>
-</tbody>
-</table>
+| Port | Protocol | Description               | Required Externally |
+|------|----------|---------------------------|----------------------|
+| 80   | TCP      | Administration Site HTTP  | Optional            |
+| 443  | TCP      | Administration Site HTTPS | Yes                 |
 
 #### Portal Server
 
-<table>
-<tbody>
-<tr>
-    <th>Port</th>
-    <th>Protocol</th>
-    <th>Description</th>
-    <th>Required Externally</th>
-</tr>
-<tr>
-    <td>80</td>
-    <td>TCP</td>
-    <td>Portal Site HTTP</td>
-    <td>Optional</td>
-</tr>
-<tr>
-    <td>443</td>
-    <td>TCP</td>
-    <td>Portal Site HTTPS</td>
-    <td>Yes</td>
-</tr>
-</tbody>
-</table>
+| Port | Protocol | Description          | Required Externally |
+|------|----------|----------------------|----------------------|
+| 80   | TCP      | Portal Site HTTP     | Optional            |
+| 443  | TCP      | Portal Site HTTPS    | Yes                 |
 
 #### Application Server
 
-<table>
-<tbody>
-<tr>
-    <th>Port</th>
-    <th>Protocol</th>
-    <th>Description</th>
-    <th>Required Externally</th>
-</tr>
-<tr>
-    <td>80</td>
-    <td>TCP</td>
-    <td>HTTP Service</td>
-    <td>No</td>
-</tr>
-<tr>
-    <td>443</td>
-    <td>TCP</td>
-    <td>HTTPS Service</td>
-    <td>No</td>
-</tr>
-<tr>
-    <td>3389</td>
-    <td>TCP</td>
-    <td>Application Server RDP</td>
-    <td>No</td>
-</tr>
-<tr>
-    <td>5850</td>
-    <td>TCP</td>
-    <td>Application Server RDP Proxy</td>
-    <td>No</td>
-</tr>
-</tbody>
-</table>
-<br/>
+| Port  | Protocol | Description                      | Required Externally |
+|-------|----------|----------------------------------|----------------------|
+| 80    | TCP      | HTTP Service                    | No                   |
+| 443   | TCP      | HTTPS Service                   | No                   |
+| 3389  | TCP      | Application Server RDP         | No                   |
+| 5850  | TCP      | Application Server RDP Proxy   | No                   |
 
 If your Turbo Server is running behind an external firewall that restricts these ports, you may need to configure the external firewall manually. For instructions on opening ports and for recommendations on how to best secure Turbo Server, refer to [Configure Turbo Server Security](/server/advanced-topics/advanced-topics.html#configure-turbo-server-security).
 

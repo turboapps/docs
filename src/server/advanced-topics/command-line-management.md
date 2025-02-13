@@ -12,70 +12,14 @@ When using the Turbo Server command line administrative tools, it is important t
 
 `Server.exe` can be used with the following arguments to manage provisioning, uninstall, upgrade, and service recycling:
 
-<table>
-      <tr>
-         <th data-column="0">
-            <div>
-               <p>Option</p>
-            </div>
-         </th>
-         <th data-column="1">
-            <div>
-               <p>Description</p>
-            </div>
-         </th>
-      </tr>
-      <tr>
-         <td>
-            <p><code>Server.exe /provision</code></p>
-         </td>
-         <td>
-            <p>Creates the Turbo Hub Server data and sites. For additional details use <code>Server.exe /help</code>.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>Server.exe /uninstall</code></p>
-         </td>
-         <td>
-            <p>Uninstalls Turbo Hub Server.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>Server.exe /restart-apache-service</code> <br> <br> &nbsp;&nbsp;&nbsp;&nbsp;Required parameters:<br> &nbsp;&nbsp;&nbsp;&nbsp;[Apache process Id]</p>
-         </td>
-         <td>
-            <p>Restarts Apache web service gracefully.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>Server.exe /install-services</code> <br> <br> &nbsp;&nbsp;&nbsp;&nbsp;Required parameters:<br> 
-&nbsp;&nbsp;&nbsp;&nbsp;[comma-separated service names]</p>
-         </td>
-         <td>
-            <p>Installs native services. Valid options include: api, admin</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>Server.exe /uninstall-services</code> <br> <br> &nbsp;&nbsp;&nbsp;&nbsp;Required parameters:<br> &nbsp;&nbsp;&nbsp;&nbsp;[comma-separated service names]</p>
-         </td>
-         <td>
-            <p>Uninstalls native services. Valid options include: api, admin</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>Server.exe /?, -?, ?, /help, -help, help</code></p>
-         </td>
-         <td>
-            <p>Prints this usage information.</p>
-         </td>
-      </tr>
-</table>
-<br>
+| Option | Description |
+|--------|------------|
+| `Server.exe /provision` | Creates the Turbo Hub Server data and sites. For additional details use `Server.exe /help`. |
+| `Server.exe /uninstall` | Uninstalls Turbo Hub Server. |
+| `Server.exe /restart-apache-service` <br> **Required parameters:** <br> [Apache process Id] | Restarts Apache web service gracefully. |
+| `Server.exe /install-services` <br> **Required parameters:** <br> [comma-separated service names] | Installs native services. Valid options include: api, admin |
+| `Server.exe /uninstall-services` <br> **Required parameters:** <br> [comma-separated service names] | Uninstalls native services. Valid options include: api, admin |
+| `Server.exe /?, -?, ?, /help, -help, help` | Prints this usage information. |
 
 #### install-services command
 
@@ -91,53 +35,13 @@ Server.exe can also be used to create and update applications, as well as to man
 
 **Server.exe admin --directory-services**
 
-<table>
-      <tr>
-         <th data-column="0">
-            <div>
-               <p>Option</p>
-            </div>
-         </th>
-         <th data-column="1">
-            <div>
-               <p>Description</p>
-            </div>
-         </th>
-      </tr>
-      <tr>
-         <td>
-            <p><code>print, (none)</code></p>
-         </td>
-         <td>
-            <p>Prints the current list of directory services.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>new &lt;login prefix&gt;</code></p>
-         </td>
-         <td>
-            <p>Creates a new directory service with default settings.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>delete &lt;login prefix&gt;</code></p>
-         </td>
-         <td>
-            <p>Deletes the given service.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>help</code></p>
-         </td>
-         <td>
-            <p>Prints help information.</p>
-         </td>
-      </tr>
-</table>
-<br>
+| Option | Description |
+|--------|------------|
+| `print`, *(none)* | Prints the current list of directory services. |
+| `new <login prefix>` | Creates a new directory service with default settings. |
+| `delete <login prefix>` | Deletes the given service. |
+| `help` | Prints help information. |
+
 Examples:
 
 - **Print the current directory services**:
@@ -154,151 +58,28 @@ Examples:
 
 **Server.exe admin --directory-service**
 
-<table>
-      <tr>
-         <th data-column="0">
-            <div>
-               <p>Option</p>
-            </div>
-         </th>
-         <th data-column="1">
-            <div>
-               <p>Description</p>
-            </div>
-         </th>
-      </tr>
-      <tr>
-         <td>
-            <p><code>discover-local-ad</code></p>
-         </td>
-         <td>
-            <p>Attempts to connect to local Active Directory. If it succeeds, the connection and schema settings are printed.</p>
-         </td>
-      </tr>
-</table>
-<br>
+| Option | Description |
+|--------|------------|
+| `discover-local-ad` | Attempts to connect to local Active Directory. If it succeeds, the connection and schema settings are printed. |
 
 **Server.exe admin --directory-service &lt;login prefix&gt;**
 
-<table>
-      <tr>
-         <th data-column="0">
-            <div>
-               <p>Option</p>
-            </div>
-         </th>
-         <th data-column="1">
-            <div>
-               <p>Description</p>
-            </div>
-         </th>
-      </tr>
-      <tr>
-         <td>
-            <p><code>print, (none)</code></p>
-         </td>
-         <td>
-            <p>Prints the current settings for the directory service.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>&lt;property&gt;</code></p>
-         </td>
-         <td>
-            <p>Prints the current value of &lt;property&gt;.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>&lt;property&gt; &lt;value&gt;</code></p>
-         </td>
-         <td>
-            <p>Sets the value of &lt;property&gt; to &lt;value&gt;.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>set [&lt;file&gt;]</code></p>
-         </td>
-         <td>
-            <p>Imports the settings from a file, or standard input if no file is specified. Settings files are in the same format as the output of the print function.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>discover-local-ad</code></p>
-         </td>
-         <td>
-            <p>Attempts to connect to local Active Directory. If it succeeds, the connection and schema settings are printed.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>discover</code></p>
-         </td>
-         <td>
-            <p>Scans the directory service for recommended schema settings.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>directories</code></p>
-         </td>
-         <td>
-            <p>Prints the subdirectories within this directory service.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>groups</code></p>
-         </td>
-         <td>
-            <p>Prints the user groups within this directory service.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>sync</code></p>
-         </td>
-         <td>
-            <p>Synchronizes users and groups from the directory service.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>items</code></p>
-         </td>
-         <td>
-            <p>Prints the current synchronized items.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>items add (Group|Subdirectory) &lt;distinguished name&gt;</code></p>
-         </td>
-         <td>
-            <p>Adds an item to be synchronized.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>items clear</code></p>
-         </td>
-         <td>
-            <p>Deletes all sync items.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>help</code></p>
-         </td>
-         <td>
-            <p>Prints help information.</p>
-         </td>
-      </tr>
-</table>
-<br>
+| Option | Description |
+|--------|------------|
+| `print`, *(none)* | Prints the current settings for the directory service. |
+| `<property>` | Prints the current value of `<property>`. |
+| `<property> <value>` | Sets the value of `<property>` to `<value>`. |
+| `set [<file>]` | Imports the settings from a file, or standard input if no file is specified. Settings files are in the same format as the output of the print function. |
+| `discover-local-ad` | Attempts to connect to local Active Directory. If it succeeds, the connection and schema settings are printed. |
+| `discover` | Scans the directory service for recommended schema settings. |
+| `directories` | Prints the subdirectories within this directory service. |
+| `groups` | Prints the user groups within this directory service. |
+| `sync` | Synchronizes users and groups from the directory service. |
+| `items` | Prints the current synchronized items. |
+| `items add (Group\|Subdirectory) <distinguished name>` | Adds an item to be synchronized. |
+| `items clear` | Deletes all sync items. |
+| `help` | Prints help information. |
+
 An external directory service may have particular configurations which a directory service must accommodate. In addition to standard settings like name and description, there are the following important categories of options:
 
 - Connection settings: host, port, binding type, username, password
@@ -341,53 +122,12 @@ The following examples describe a typical set of steps to set up a directory ser
 
 **Server.exe admin --global**
 
-<table>
-      <tr>
-         <th data-column="0">
-            <div>
-               <p>Option</p>
-            </div>
-         </th>
-         <th data-column="1">
-            <div>
-               <p>Description</p>
-            </div>
-         </th>
-      </tr>
-      <tr>
-         <td>
-            <p><code>print, (none)</code></p>
-         </td>
-         <td>
-            <p>Prints the current global settings.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>&lt;property&gt;</code></p>
-         </td>
-         <td>
-            <p>Prints the current value of &lt;property&gt;.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>&lt;property&gt; &lt;value&gt;</code></p>
-         </td>
-         <td>
-            <p>Sets the value of &lt;property&gt; to &lt;value&gt;.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>help</code></p>
-         </td>
-         <td>
-            <p>Prints help information.</p>
-         </td>
-      </tr>
-</table>
-<br>
+| Option | Description |
+|--------|------------|
+| `print`, *(none)* | Prints the current global settings. |
+| `<property>` | Prints the current value of `<property>`. |
+| `<property> <value>` | Sets the value of `<property>` to `<value>`. |
+| `help` | Prints help information. |
 
 Examples:
 
@@ -405,77 +145,16 @@ Examples:
 
 **Server.exe admin --hub**
 
-<table>
-      <tr>
-         <th data-column="0">
-            <div>
-               <p>Option</p>
-            </div>
-         </th>
-         <th data-column="1">
-            <div>
-               <p>Description</p>
-            </div>
-         </th>
-      </tr>
-      <tr>
-         <td>
-            <p><code>print, (none)</code></p>
-         </td>
-         <td>
-            <p>Prints the current hub settings.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>keys</code></p>
-         </td>
-         <td>
-            <p>Prints the current set of API keys.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>key create &lt;name&gt; &lt;type&gt;</code></p>
-         </td>
-         <td>
-            <p>Creates an API key with the given name. Specify "system" or "user" for the type of key to create.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>key renew &lt;name&gt;</code></p>
-         </td>
-         <td>
-            <p>Regenerates the value of the API key with the given name.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>key delete &lt;name&gt;</code></p>
-         </td>
-         <td>
-            <p>Deletes the API key with the given name.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>import &lt;option&gt; &lt;type&gt; &lt;path&gt;</code></p>
-         </td>
-         <td>
-            <p>Builds an image from the specified file and adds it to the local repository</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>help</code></p>
-         </td>
-         <td>
-            <p>Prints help information.</p>
-         </td>
-      </tr> 
-</table>
-<br>
+| Option | Description |
+|--------|------------|
+| `print`, *(none)* | Prints the current hub settings. |
+| `keys` | Prints the current set of API keys. |
+| `key create <name> <type>` | Creates an API key with the given name. Specify "system" or "user" for the type of key to create. |
+| `key renew <name>` | Regenerates the value of the API key with the given name. |
+| `key delete <name>` | Deletes the API key with the given name. |
+| `import <option> <type> <path>` | Builds an image from the specified file and adds it to the local repository. |
+| `help` | Prints help information. |
+
 Examples:
 
 - **Print the current settings**:
@@ -488,45 +167,12 @@ Examples:
 
 **Server.exe admin --license**
 
-<table>
-      <tr>
-         <th data-column="0">
-            <div>
-               <p>Option</p>
-            </div>
-         </th>
-         <th data-column="1">
-            <div>
-               <p>Description</p>
-            </div>
-         </th>
-      </tr>
-      <tr>
-         <td>
-            <p><code>print, (none)</code></p>
-         </td>
-         <td>
-            <p>Prints the current license.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>set &lt;file&gt;</code></p>
-         </td>
-         <td>
-            <p>Sets the license to the contents of the given text file.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>help</code></p>
-         </td>
-         <td>
-            <p>Prints help information.</p>
-         </td>
-      </tr>
-</table>
-<br>
+| Option | Description |
+|--------|------------|
+| `print`, *(none)* | Prints the current license. |
+| `set <file>` | Sets the license to the contents of the given text file. |
+| `help` | Prints help information. |
+
 Examples:
 
 - **Print the current license**:
@@ -539,53 +185,13 @@ Examples:
 
 **Server.exe admin --server**
 
-<table>
-      <tr>
-         <th data-column="0">
-            <div>
-               <p>Option</p>
-            </div>
-         </th>
-         <th data-column="1">
-            <div>
-               <p>Description</p>
-            </div>
-         </th>
-      </tr>
-      <tr>
-         <td>
-            <p><code>print, (none)</code></p>
-         </td>
-         <td>
-            <p>Prints the current primary server settings.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>&lt;property&gt;</code></p>
-         </td>
-         <td>
-            <p>Prints the current value of &lt;property&gt;.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>&lt;property&gt; &lt;value&gt;</code></p>
-         </td>
-         <td>
-            <p>Sets the value of &lt;property&gt; to &lt;value&gt;.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>help</code></p>
-         </td>
-         <td>
-            <p>Prints help information.</p>
-         </td>
-      </tr>
-</table>
-<br>
+| Option | Description |
+|--------|------------|
+| `print`, *(none)* | Prints the current primary server settings. |
+| `<property>` | Prints the current value of `<property>`. |
+| `<property> <value>` | Sets the value of `<property>` to `<value>`. |
+| `help` | Prints help information. |
+
 Examples:
 
 - **Print the current primary server settings**:
@@ -606,53 +212,13 @@ Examples:
 
 **Server.exe admin --users**
 
-<table>
-      <tr>
-         <th data-column="0">
-            <div>
-               <p>Option</p>
-            </div>
-         </th>
-         <th data-column="1">
-            <div>
-               <p>Description</p>
-            </div>
-         </th>
-      </tr>
-      <tr>
-         <td>
-            <p><code>print, (none)</code></p>
-         </td>
-         <td>
-            <p>Prints the current users and groups.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>authentication-type (Anonymous|Forms)</code></p>
-         </td>
-         <td>
-            <p>Changes the current authentication type.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>ticket-timeout</code></p>
-         </td>
-         <td>
-            <p>Gets or sets the number of days that a login ticket is valid when "remember me" is selected. The default is 1 week. The minimum value is 1 day. The maximum value is 200 years (73000 days).</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>help</code></p>
-         </td>
-         <td>
-            <p>Prints help information.</p>
-         </td>
-      </tr>
-</table>
-<br>
+| Option | Description |
+|--------|------------|
+| `print`, *(none)* | Prints the current users and groups. |
+| `authentication-type (Anonymous|Forms)` | Changes the current authentication type. |
+| `ticket-timeout` | Gets or sets the number of days that a login ticket is valid when "remember me" is selected. The default is 1 week. The minimum value is 1 day. The maximum value is 200 years (73000 days). |
+| `help` | Prints help information. |
+
 Examples:
 
 - **Print information about current users and groups**:
@@ -669,53 +235,13 @@ Examples:
 
 **Server.exe admin --user-groups**
 
-<table>
-      <tr>
-         <th data-column="0">
-            <div>
-               <p>Option</p>
-            </div>
-         </th>
-         <th data-column="1">
-            <div>
-               <p>Description</p>
-            </div>
-         </th>
-      </tr>
-      <tr>
-         <td>
-            <p><code>print, (none)</code></p>
-         </td>
-         <td>
-            <p>Prints the current list of user groups.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>new &lt;name&gt;</code></p>
-         </td>
-         <td>
-            <p>Creates a new user group with default settings.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>delete &lt;id&gt;</code></p>
-         </td>
-         <td>
-            <p>Deletes the given group.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>help</code></p>
-         </td>
-         <td>
-            <p>Prints help information.</p>
-         </td>
-      </tr>
-</table>
-<br>
+| Option | Description |
+|--------|------------|
+| `print`, *(none)* | Prints the current list of user groups. |
+| `new <name>` | Creates a new user group with default settings. |
+| `delete <id>` | Deletes the given group. |
+| `help` | Prints help information. |
+
 Examples:
 
 - **Print the current groups**:
@@ -732,69 +258,14 @@ Examples:
 
 **Server.exe admin --user-group &lt;id&gt;**
 
-<table>
-      <tr>
-         <th data-column="0">
-            <div>
-               <p>Option</p>
-            </div>
-         </th>
-         <th data-column="1">
-            <div>
-               <p>Description</p>
-            </div>
-         </th>
-      </tr>
-      <tr>
-         <td>
-            <p><code>print, (none)</code></p>
-         </td>
-         <td>
-            <p>Prints the current settings for the user group.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>&lt;property&gt;</code></p>
-         </td>
-         <td>
-            <p>Prints the current value of &lt;property&gt;.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>&lt;property&gt; &lt;value&gt;</code></p>
-         </td>
-         <td>
-            <p>Sets the value of &lt;property&gt; to &lt;value&gt;.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>set [&lt;file&gt;]</code></p>
-         </td>
-         <td>
-            <p>Imports settings from a file, or standard input if no file is specified. Settings files are in the same format as the output of the print function.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>clear</code></p>
-         </td>
-         <td>
-            <p>Removes all members from the group.</p>
-         </td>
-      </tr>
-      <tr>
-         <td>
-            <p><code>help</code></p>
-         </td>
-         <td>
-            <p>Prints help information.</p>
-         </td>
-      </tr>
-</table>
-<br>
+| Option | Description |
+|--------|------------|
+| `print`, *(none)* | Prints the current settings for the user group. |
+| `<property>` | Prints the current value of `<property>`. |
+| `<property> <value>` | Sets the value of `<property>` to `<value>`. |
+| `set [<file>]` | Imports settings from a file, or standard input if no file is specified. Settings files are in the same format as the output of the print function. |
+| `clear` | Removes all members from the group. |
+| `help` | Prints help information. |
 
 Examples:
 
