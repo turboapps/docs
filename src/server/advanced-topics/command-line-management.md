@@ -730,7 +730,7 @@ Examples:
 
 	Server.exe admin --user-groups delete 2
 
-**Server.exe admin --user-group <id>**
+**Server.exe admin --user-group &lt;id&gt;**
 
 <table>
       <tr>
