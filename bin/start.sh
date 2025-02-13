@@ -19,8 +19,5 @@ fi
 echo "Building for production..."
 npm run docs:build
 
-echo "Content of src/.vitepress/dist:"
-ls -R src/.vitepress/dist
-
 echo "Serving production build..."
 exec npm run docs:serve -- --port 5050 --host 0.0.0.0
