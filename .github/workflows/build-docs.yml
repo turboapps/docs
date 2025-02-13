@@ -25,4 +25,20 @@ jobs:
         npm install -g vitepress@1.6.3
 
     - name: Build VitePress site
-      run: npm run docs:build -- --force
+      run: npm run docs:build -- --force > build_output.log 2>&1
+      continue-on-error: true
+
+    - name: Check for build errors
+      run: |
+        if grep -q "Build failed" build_output.log; then
+          echo "Build errors found. Check the build_output.log artifact for details."
+          exit 1
+        else
+          echo "Build completed successfully."
+        fi
+
+    - name: Upload build output
+      uses: actions/upload-artifact@v2
+      with:
+        name: build-output
+        path: build_output.log
