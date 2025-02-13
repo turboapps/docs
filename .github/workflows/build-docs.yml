@@ -26,31 +26,4 @@ jobs:
 
     - name: Build VitePress site
       run: |
-        vitepress build src --no-exit || true
-        if [ ! -d "src/.vitepress/dist" ]; then
-          echo "Build failed. Output directory does not exist."
-          exit 1
-        fi
-
-    - name: Display build errors
-      run: |
-        echo "Checking for build errors..."
-        
-        if [ -f "src/.vitepress/logs/error.log" ]; then
-          echo "VitePress Error Log:"
-          cat src/.vitepress/logs/error.log
-          BUILD_FAILED=true
-        fi
-        
-        if [ -f "npm-debug.log" ]; then
-          echo "NPM Debug Log:"
-          cat npm-debug.log
-          BUILD_FAILED=true
-        fi
-        
-        if [ "$BUILD_FAILED" = true ]; then
-          echo "Errors were found during the build process. Check the logs above for details."
-          exit 1
-        else
-          echo "Build completed successfully with no errors."
-        fi
+        npm run docs:build
