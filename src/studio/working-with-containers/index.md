@@ -10,7 +10,7 @@ Turbo containers can be created in several ways:
 
 The command line interface can create containers from MSI installers. This is useful for applications that are distributed as MSI files.
 
-If an MSI install fails try creating the container using [Turbo Studio](/studio/working-with-turbo-studio/getting-started).
+If an MSI install fails try creating the container using [Turbo Studio](/studio/working-with-turbo-studio/index).
 
 ```
 # Install an MSI
@@ -25,7 +25,7 @@ If an MSI install fails try creating the container using [Turbo Studio](/studio/
 
 ![Studio MSI install wizard output folder](/images/install3.png)
 
-Once you finish editing a container it can be saved and distributed in the form of images. For more information on images read on [here](/deploying/turbo-server).
+Once you finish editing a container it can be saved and distributed in the form of images. For more information on images read on [here](/server/index).
 
 ### Editing a Container
 
@@ -65,7 +65,7 @@ Optionally under **Repo Information** enter a build script URL if you have one. 
 
 ![Studio published image launch settings](/images/publish7.png)
 
-Navigate to **Launch Configuration**. If any additional flags are required for the application to function enter these here. For a list of available flags read [here](/reference/turbo-vm/runtime-settings).
+Navigate to **Launch Configuration**. If any additional flags are required for the application to function enter these here. For a list of available flags read [here](/client/turbo-vm/runtime-settings).
 
 ![Studio published image admin settings](/images/publish8.png)
 

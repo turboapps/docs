@@ -57,38 +57,38 @@ Windows Applications can be managed from the **Application Settings** page and c
 
   If a user installs an application while they have permission, but that permission is later revoked, an error message will be displayed when the application is launched.
 
-- **VM Version**: The VM version is a version string that specifies which Turbo VM version will be used for execution. The available VM versions are sourced from the Turbo Virtual Machine system image. See [VM Version](/hub/repositories/repository-settings.html#vm-version).
-- **Enable Assembly cache**: Enables pre-caching of application assemblies for faster loading, at the cost of additional disk space. Particularly beneficial for complex applications with numerous DLLs and EXEs, but typically not required for smaller applications. See [Use DLL cache](/hub/repositories/repository-settings.html#use-dll-cache).
+- **VM Version**: The VM version is a version string that specifies which Turbo VM version will be used for execution. The available VM versions are sourced from the Turbo Virtual Machine system image.
+- **Enable Assembly cache**: Enables pre-caching of application assemblies for faster loading, at the cost of additional disk space. Particularly beneficial for complex applications with numerous DLLs and EXEs, but typically not required for smaller applications.
 - **Launch on Install**: Automatically launch the application when it is registered onto a device, such as when running the `subscribe <workspace> --register` commands from the Turbo client.
 - **Run as Administrator**: Runs the application with administrator privileges.
 - **Container Name**: The container name that is used when launching the application. By default the image's name is used.
 
 ##### Isolation
 
-- **Access Local User Folders**: Allows the application to access the host device's local user folders, such as Desktop, Downloads, Documents, Music, Pictures, and Videos. See [Access local user folders](/hub/repositories/repository-settings.html#access-local-user-folders).
+- **Access Local User Folders**: Allows the application to access the host device's local user folders, such as Desktop, Downloads, Documents, Music, Pictures, and Videos.
 
   Set to **Inherit from Workspace** to inherit this setting from the corresponding workspace setting, or select a custom isolation settings to override the workspace setting.
 
-- **File Isolation**: Determines the level of file visibility and access from the vm to the host environment. By default, local launches use Full isolation and cloud launches use Write Copy isolation. See [Isolation Settings](/reference/command-line/run.html#isolation-settings).
+- **File Isolation**: Determines the level of file visibility and access from the vm to the host environment. By default, local launches use Full isolation and cloud launches use Write Copy isolation. See [Isolation Settings](/client/command-line/run#isolation-settings).
 
   Set to **Inherit from Workspace** to inherit this setting from the corresponding workspace setting, or select a custom isolation settings to override the workspace setting.
 
 ##### Network
 
-- **Isolate Network**: Isolates the virtualized network environment from the host device's network. See [Isolate network](/hub/repositories/repository-settings.html#isolate-network).
-- **Tunneling**: Tunneling allows the application to tunnel traffic from the virtual environment to the specified targets accessible from the portal server. Tunneling currently supports TCP and IP protocols and requires SSL (https) to be enabled on the domain. UDP is not supported. See [Proxy Settings](/reference/command-line/run.html#proxy-settings).
-- **Network Routes**: A whitelist or blacklist of network routes that are accessible by the virtual network environment. See [Controlling Outbound Traffic](/reference/command-line/run.html#controlling-outbound-traffic).
+- **Isolate Network**: Isolates the virtualized network environment from the host device's network.
+- **Tunneling**: Tunneling allows the application to tunnel traffic from the virtual environment to the specified targets accessible from the portal server. Tunneling currently supports TCP and IP protocols and requires SSL (https) to be enabled on the domain. UDP is not supported. See [Proxy Settings](/client/command-line/run#proxy-settings).
+- **Network Routes**: A whitelist or blacklist of network routes that are accessible by the virtual network environment. See [Controlling Outbound Traffic](/client/command-line/run#controlling-outbound-traffic).
 
 ##### Components
 
-- **Components**: A list of additional image repository IDs that are added to the base image as layers. See [Components](/hub/repositories/repository-settings.html#components).
+- **Components**: A list of additional image repository IDs that are added to the base image as layers.
 
 ##### Storage
 
 - **Sessions are persistent**: Persists the application state and settings on the host machine, enabling persistence across multiple sessions. Typically this setting should be enabled in order to prevent loss of data. This setting defaults to true.
 - **Synchronize across devices**: Automatically synchronizes the application state and settings with the Hub server, enabling persistence across multiple devices. Sessions are persistent must be enabled to change this setting. This setting defaults to false.
 - **Drive Visibility**: Controls which drives are visible in the virtualized application environment during cloud runs. This setting does not apply to local runs. By default, only the system drives and T: Drive are visible.
-- **Mount Points**: A list of mount points that mount file paths from the host into the container. Supports NTFS paths, UNC paths, and special folder variables (see [Folder Variables](/reference/turbo-vm/virtual-machine/folder-variables))
+- **Mount Points**: A list of mount points that mount file paths from the host into the container. Supports NTFS paths, UNC paths, and special folder variables (see [Folder Variables](/client/turbo-vm/folder-variables))
 
 ##### Licensing
 
@@ -128,8 +128,6 @@ The **Shell Integration** page allows administrators to enable or disable shell 
 Web applications only support the default start menu shortcut and cannot be customized.
 
 Shell integrations are configured in the application image. For more information on configuring shell integrations in Turbo Studio, see [Desktop Integration](https://hub.turbo.net/docs/studio/working-with-turbo-studio/desktop).
-
-For more information on using shell integrations, see [Shell integration](/getting-started/administrators/desktop-integration.html#shell-integration)
 
 ##### VM Settings
 

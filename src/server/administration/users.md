@@ -195,7 +195,7 @@ The **Authentication Method** page configures which Authentication Method is use
 
 - **Check for compromised passwords**: Checks the [haveibeenpwnd](https://haveibeenpwned.com/) database for compromised passwords when creating setting the password for internal users.
 
-- **Integrated Windows Authentication Host**: The IP or hostname of the domain controller for clients using [IWA](/reference/command-line/login). Select **Default** to automatically detect the domain controller's IP address.
+- **Integrated Windows Authentication Host**: The IP or hostname of the domain controller for clients using [IWA](/client/command-line/login). Select **Default** to automatically detect the domain controller's IP address.
 
 ### Device Keys
 

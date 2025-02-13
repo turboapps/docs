@@ -25,7 +25,7 @@ cmd git clone https://github.com/project/repo c:\root
 cmd cd c:\root\server & npm install
 ```
 
-Save your script as a `.me` file. See the [TurboScript reference](/reference/turboscript/turboscript) for more information on TurboScript script instructions.
+Save your script as a `.me` file. See the [TurboScript reference](/client/turboscript/) for more information on TurboScript script instructions.
 
 ### Integrate into the CI server
 
@@ -46,7 +46,7 @@ turbo export <name> c:\root\image.svm
 
 Rather than exporting the image to the host system, you can also `turbo push` the image to the hub where other users could pull it down and test.
 
-See the [Command Line Interface](/reference/command-line/command-line-interface) page for more information on `turbo` commands.
+See the [Command Line Interface](/client/command-line/) page for more information on `turbo` commands.
 
 ### Run the container
 

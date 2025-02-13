@@ -11,7 +11,7 @@ If the window timeout is not the issue, follow the following diagnostics steps:
 1. Go to the [administration reports](/server/administration/reports.html#administration-reports).
 2. Look for the event that matches the failed launch in either the **Application Sessions** or **User Sessions** report.
 3. Sign in to the corresponding application server and inspect the client launch logs located in the user's _%LOCALAPPDATA%\Turbo\Logs_. You can identify the Windows user in the browser console logs in the HTML5 client.
-4. If the logs do not provide any useful information, try launching the application locally using the Turbo CLI with the [diagnostics flag](/reference/command-line/run).
+4. If the logs do not provide any useful information, try launching the application locally using the Turbo CLI with the [diagnostics flag](/client/command-line/run).
 5. Examine the corresponding VM logs in the sandbox located in _%LOCALAPPDATA%\Turbo\Containers\sandboxes\[sessionId]\logs_.
 6. Contact support if you cannot determine the cause of the issue.
 
@@ -58,7 +58,7 @@ The following log indictates the failure was caused by blocking NTLM traffic on 
 12:20:15.632 000033fc [rdpConnection   ] Error: protocol security negotiation or connection failure -1
 ```
 
-To resolve the issue, configure the server according to the [Network Security](/server/security/security.html#network) documentation.
+To resolve the issue, configure the server according to the [Network Security](/server/security#network) documentation.
 
 #### Cloud HTML5 client application launches are interrupted by a reconnection message
 
@@ -80,7 +80,7 @@ Occurs when the client machine cannot access the Application server. For example
 
 Please check your network connection and wait a few minutes, then relaunch the application. If the error persists, logon to the Application server and check that the **Turbo.AppServer** service is running.
 
-The WebSocket connection may also be blocked by your [load balancer or proxy](/server/network-and-load-balancing/network-and-load-balancing.html#troubleshooting). To test the WebSocket connection required for the connection, open a browser console and run the following JavaScript:
+The WebSocket connection may also be blocked by your [load balancer or proxy](/server/network-and-load-balancing#troubleshooting). To test the WebSocket connection required for the connection, open a browser console and run the following JavaScript:
 
 ```
 // replace wss with ws if your domain does not use SSL

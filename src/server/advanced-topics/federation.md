@@ -28,7 +28,7 @@ Follow the [documentation](/server/setup-and-deployment/deploying-on-premises) t
 
 4. Use the federated repository
 
-    Once the repository has finished synchronizing, you may begin using the repository on the child server from a [workspace](/server/administration/overview.html#managing-workspaces). 
+    Once the repository has finished synchronizing, you may begin using the repository on the child server from a [workspace](/server/administration/workspaces). 
 
     You can also install the repository image directly using the turbo cli on the user's machine.
 

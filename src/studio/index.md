@@ -20,7 +20,7 @@ The intuitive GUI interface makes it easy to:
 
 ## How It Works
 
-Turbo Studio uses static XML configuration files (**.xappl**) to define virtual applications. Unlike the command-line interface that builds directly from images, Studio provides a visual environment for creating and editing these configurations. See the [XAPPL reference](/reference/turbo-vm/xml-configuration/xml-configuration) for detailed format information.
+Turbo Studio uses static XML configuration files (**.xappl**) to define virtual applications. Unlike the command-line interface that builds directly from images, Studio provides a visual environment for creating and editing these configurations. See the [XAPPL reference](/client/turbo-vm/xml-configuration) for detailed format information.
 
 Once configured, you can:
 - Build applications using the command-line interface

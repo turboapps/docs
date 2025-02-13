@@ -69,7 +69,7 @@ Once the deployment is complete the application server will automatically be add
 
 The **Settings** page lists allows you to configure domain-wide settings, including:
 
-- **Domain URL**: The public facing URL intended for end users to access Turbo. The firewall or load balancer should resolve this to your portal instances. For more information, see [Understanding the Domain URL](/server/network-and-load-balancing/network-and-load-balancing.html#understanding-the-domain-url).
+- **Domain URL**: The public facing URL intended for end users to access Turbo. The firewall or load balancer should resolve this to your portal instances. For more information, see [Understanding the Domain URL](/server/network-and-load-balancing#understanding-the-domain-url).
 - **Hub Domain URL**: The public facing URL for Turbo Hub web services. If this field is not specified, the Domain URL is used.
 - **Portal Domain URL**: The public facing URL for Turbo Portal web services. If this field is not specified, the Domain URL is used. Users must use this URL to access the portal and is typically the same as the Domain URL.
 - **External Administration Site**: Allows external network access to the administration site from the domain url.
@@ -183,11 +183,11 @@ Administrators may manually log off users by clicking the **Close** action, whic
 
 - **Peer-to-peer Image Distribution**: Enables peer-to-peer image sharing through the torrent protocol. Requires port 6881 to be open.
 
-- **Hub Storage Path**: Sets the hub storage path to a custom path. Ensure the target path is empty and not used by other applications, and has sufficient storage for storing all images and persisted data. The path can be changed later, but will require momentary downtime of the hub depending on how much data will be moved. The service user must have full access to the target path. Please see the [Backup and Recovery](/server/backup-and-recovery/backup-and-recovery.html#backup) documentation for additional details and troubleshooting.
+- **Hub Storage Path**: Sets the hub storage path to a custom path. Ensure the target path is empty and not used by other applications, and has sufficient storage for storing all images and persisted data. The path can be changed later, but will require momentary downtime of the hub depending on how much data will be moved. The service user must have full access to the target path. Please see the [Backup and Recovery](/server/backup-and-recovery) documentation for additional details and troubleshooting.
 
 - **Hub CDN URL**: The Hub block storage CDN URL. The Hub CDN URL must be a valid absolute http(s) URL. If the URL is not specified, blocks will be fetched from the original Hub URL.
 
-  For more information on the Hub CDN and common CDN configurations, see [Configuring Content Delivery Network (CDN)](/server/network-and-load-balancing/network-and-load-balancing.html#configuring-content-delivery-network-cdn)
+  For more information on the Hub CDN and common CDN configurations, see [Configuring Content Delivery Network (CDN)](/server/network-and-load-balancing#configuring-content-delivery-network-cdn)
 
 - **Hub CDN Max File Size**: The maximum file size supported by the CDN provider, in megabytes. Supporting clients will download files exceeding this size using the Turbo synchronization protocol.
 

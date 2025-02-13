@@ -12,7 +12,7 @@ On the repository edit page, a repository display name can be modified. This sho
 
 The **versions** list shows all available images that are available for this repository. They can be referenced by their tag or their ID (ex, "mozilla/firefox:64.0" or "mozilla/firefox#44397e23bf46a08a8a567ba13b2c215668d451c9dde41b030706779dc977cc02"). Accessing a repository without a tag or ID will use the latest available image (ex, "mozilla/firefox"). Note that any repository updates may take up to 24hrs to be automatically retrieved by the Turbo Client.
 
-The **Dependencies** and **Used By** lists shows all images referenced by and referencing this repository image. Dependencies are downloaded on-demand when creating a new session. For more information on dependencies, see [Dependencies](/reference/dependencies/dependencies)
+The **Dependencies** and **Used By** lists shows all images referenced by and referencing this repository image. Dependencies are downloaded on-demand when creating a new session.
 
 The **Pre-cache** setting specifies whether to cache the repository on application servers. Pre-cached repositories are pulled onto the application servers every 10 minutes. A [workspace](/server/administration/workspaces.html#workspace-general) may also pre-cache the repository.
 
@@ -56,7 +56,7 @@ The web application edit page has the following options available. These setting
 
 **API Keys** allow you to login to your hub with a code other than with a username/password. This is useful when configuring automation or in other scenarios where a plain text password is not desirable. If an API Key has been compromised, it can be refreshed to a new value or deleted to immediately revoke access.
 
-Additional, you can configure a **Configuration API Key** used by the [Launch Configuration Service](/server/advanced-topics/advanced-topics.html#using-the-launch-configuration-web-service) to post custom application configurations. Configurations posted with this API key are publicly accessibly. This setting is recommended if you will be using an external portal instead of the Turbo Portal.
+Additional, you can configure a **Configuration API Key** used by the [Launch Configuration Service](/server/advanced-topics/launch-configuration-web-service) to post custom application configurations. Configurations posted with this API key are publicly accessibly. This setting is recommended if you will be using an external portal instead of the Turbo Portal.
 
 The length of time (in milliseconds) that a configuration is valid after it is added to the launch configuration service can be configured with that **Configuration Cache Expiration** setting. This timeout is reset any time the application configuration is accessed, such as during an application launch.
 

@@ -6,7 +6,7 @@ The Turbo Studio Debugger is a tool to aid in virtual machine log analysis. It c
 
 ![Debugger Startup](/images/debugger-startup.png)
 
-Containers can be executed in **diagnostic** mode to produce log files of the inner workings of the virtual processes in that container session. There is one log file, **xclog\_[pid].txt**, for each virtual process in the container. These log files contain lists of all system calls that pass through the Turbo virtual machine as well as other process information. There will also be one network log file, **xcnetwork\_[pid].txt**, for each virtual process in the container. These logs files contain information about all the network communications that take place. See [Diagnostic Logs](/reference/turbo-vm/troubleshooting/analyzing-logs) for more information on enabling diagnostic mode and log file formats.
+Containers can be executed in **diagnostic** mode to produce log files of the inner workings of the virtual processes in that container session. There is one log file, **xclog\_[pid].txt**, for each virtual process in the container. These log files contain lists of all system calls that pass through the Turbo virtual machine as well as other process information. There will also be one network log file, **xcnetwork\_[pid].txt**, for each virtual process in the container. These logs files contain information about all the network communications that take place. See [Diagnostic Logs](/client/turbo-vm/troubleshooting/analyzing-logs) for more information on enabling diagnostic mode and log file formats.
 
 Open the Turbo Studio Debugger by clicking the **Debugger** button in the **Advanced** ribbon menu in Turbo Studio or from the start menu shortcut.
 

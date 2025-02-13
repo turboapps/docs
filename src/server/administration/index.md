@@ -2,7 +2,7 @@
 
 The Turbo Server Administration Site enables you to manage and control all aspects of your Turbo Server. 
 
-The default location of the Administration Site is: http://localhost:80/admin, and consists of the following links:
+The default path of the Administration Site is: `/admin`, and consists of the following links:
 
 - **Hub**: This page lists all applications repositories on your Turbo Server. From here **Federation** can be configured to source application repositories from a master hub. **API Keys** can be defined to allow access to your hub without using a password (useful for automation, tooling, federation, and other similar scenarios). For more information refer to [Managing Hub](/server/administration/hub).
 

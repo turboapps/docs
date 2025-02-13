@@ -10,7 +10,7 @@ A good example is __[npp/notepadplusplus](https://turbo.net/run/npp/notepadplusp
 
 If this application fails similarly, then the problem is likely with Turbo Server rather than the application configuration. In this case, see the [Application Server Troubleshooting](https://turbo.net/docs/server/troubleshooting/application-server) section.
 
-If the issue is isolated to your application, see the [Application Troubleshooting](https://app.turbo.net/docs/vm/troubleshooting/analyzing-logs "https://app.turbo.net/docs/vm/troubleshooting/analyzing-logs") section.
+If the issue is isolated to your application, see the [Application Troubleshooting](/client/turbo-vm/troubleshooting/analyzing-logs) section.
 
 ### Launch Modes
 
@@ -18,7 +18,7 @@ Check the application behavior in each launch mode by right-clicking on the appl
 
 If the application works in HTML5 but not Windowed mode (or vise versa), it is likely a bug in the Turbo Server or Client. Please report the issue to us.
 
-If the application works with Run in Cloud but not Run on my PC, it is probably an application issue. See the [Application Troubleshooting](https://app.turbo.net/docs/vm/troubleshooting/analyzing-logs "https://app.turbo.net/docs/vm/troubleshooting/analyzing-logs") section.
+If the application works with Run in Cloud but not Run on my PC, it is probably an application issue. See the [Application Troubleshooting](/client/turbo-vm/troubleshooting/analyzing-logs) section.
 
 If the application works with Run on my PC but not Run in Cloud, test an application that is known to work to determine if the issue is with the server or application configuration.
 
@@ -26,7 +26,7 @@ If the application works with Run on my PC but not Run in Cloud, test an applica
 
 Run the application from the command-line by opening a command prompt and executing the following to launch the application in a new temporary container: `turbo try application-image`. Perform this test on the system where the application fails to start (for example, the application server).
 
-If the application fails, then the issue is probably related to the configuration. See the [Application Troubleshooting](https://app.turbo.net/docs/vm/troubleshooting/analyzing-logs "https://app.turbo.net/docs/vm/troubleshooting/analyzing-logs") section.
+If the application fails, then the issue is probably related to the configuration. See the [Application Troubleshooting](/client/turbo-vm/troubleshooting/analyzing-logs) section.
 
 If the application works, then the issue may be caused by a corrupted sandbox or the workspace application settings, such as container isolation or components.
 
@@ -42,7 +42,7 @@ In addition, clear the local session sandbox on systems where the issue occurs b
 
 Remove all components that are not required to start the application from the __Workspace Application settings > Components__ to check if the issue is caused by a conflict with one of its component.
 
-If the application launches successfuly, see the [Application Troubleshooting](https://app.turbo.net/docs/vm/troubleshooting/analyzing-logs "https://app.turbo.net/docs/vm/troubleshooting/analyzing-logs") section to troubleshoot the component issue.
+If the application launches successfuly, see the [Application Troubleshooting](/client/turbo-vm/troubleshooting/analyzing-logs) section to troubleshoot the component issue.
 
 ### Container Isolation
 
@@ -60,7 +60,7 @@ Diagnostic Logging Enabled: __https://turboserver/run/3c3120d5-0151-41fa-9f35-bb
 
 The VM logs will be written to the container sandbox folder on the local system (when using Run on my PC) or application server (when using Run in Cloud). By default, this would be in __%LOCALAPPDATA%\Turbo\Containers\sandboxes\*sandbox-guid*\logs__.
 
-For more information on analyzing VM logs, see the [Application Troubleshooting](https://app.turbo.net/docs/vm/troubleshooting/analyzing-logs "https://app.turbo.net/docs/vm/troubleshooting/analyzing-logs") section.
+For more information on analyzing VM logs, see the [Application Troubleshooting](/client/turbo-vm/troubleshooting/analyzing-logs) section.
 
 ### Application Updates
 
@@ -76,7 +76,7 @@ If the application has this requirement, set the __Workspace Application setting
 
 ### Security Software
 
-If a particular application runs on one environment and not another, it could also be related to the security software installed on the particular system.  Please refer to the [Antivirus and Security Software documentation](https://app.turbo.net/docs/vm/troubleshooting/antivirus-security).
+If a particular application runs on one environment and not another, it could also be related to the security software installed on the particular system. Please refer to the [Antivirus and Security Software documentation](/client/turbo-vm/troubleshooting/antivirus-security).
 
 ### Internet Explorer Does Not Launch Inside Virtual Application
 

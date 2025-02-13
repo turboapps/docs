@@ -64,7 +64,7 @@ Sample commands to login to the Turbo Server with a user account or an API key:
 
 `turbo.exe login --all-users --api-key=<api-key>`
 
-[Turbo Subscribe](/reference/command-line/subscribe) is used to add all the applications from a workspase on to the local computer. Here is a sample command to subscribe to the applications in a Workspace:
+[Turbo Subscribe](/client/command-line/subscribe) is used to add all the applications from a workspase on to the local computer. Here is a sample command to subscribe to the applications in a Workspace:
 
 `turbo.exe subscribe --all-users <workspace>`
 

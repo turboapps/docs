@@ -30,7 +30,7 @@ Next, enable the `Enable Assembly Cache` setting under the workspace application
 
 Turbo Server runs an Apache reverse proxy to various web services such as APIs and the Portal site. This proxy is configured with a maximum number of request threads. If the number of concurrent connections exceeds this value, then incoming requests will hang until Apache is able to service them. For example, this may surface to an end user as a hang when accessing the external Portal URL.
 
-Each thread incurs a fixed startup memory cost in addition to a maximum runtime memory usage, which varies based on configuration and workload, so be mindful not to set this setting beyond your server's capacity. To support an even larger number of concurrent requests, we recommend looking into [Load Balancing](/server/network-and-load-balancing/network-and-load-balancing).
+Each thread incurs a fixed startup memory cost in addition to a maximum runtime memory usage, which varies based on configuration and workload, so be mindful not to set this setting beyond your server's capacity. To support an even larger number of concurrent requests, we recommend looking into [Load Balancing](/server/network-and-load-balancing).
 
 Turbo Server administrators may configure this setting through the admin command-line interface using the following command:
 

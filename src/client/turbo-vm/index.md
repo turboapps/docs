@@ -80,7 +80,7 @@ Note: The terms "layer" and "image" are used interchangeably, as each layer is c
 
 ### Component Integration
 - Support for [Turbo Studio components](/studio/working-with-turbo-studio/configuration.html#layers-settings)
-- Management of [dependencies](/client/dependencies/dependencies)
+- Management of dependencies
 - Custom configuration stacks
 
 ### Handling Layer Conflicts

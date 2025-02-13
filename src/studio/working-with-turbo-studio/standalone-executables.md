@@ -40,7 +40,7 @@ Standalone executables have many command line options to change settings at runt
   - SuppressCollisionCheck
   - UseDllInjection
 
-See [VM Settings](/reference/turbo-vm/virtual-machine/runtime-settings) for details on the available settings.
+See [VM Settings](/client/turbo-vm/runtime-settings) for details on the available settings.
 
 - **/XCollisionCheck=FALSE** disables detection of multiple apps attempting to use the same sandbox at the same time. This should only be used to support legacy behavior.
 

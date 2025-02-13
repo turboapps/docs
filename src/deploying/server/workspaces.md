@@ -127,7 +127,7 @@ Access through workspace dashboard:
 Monitor through administration portal:
 - Test workspace applications - See [Testing Workspace Applications](/server/administration/workspaces.md#testing-workspace-applications)
 - Server performance - See [Server Monitoring](/server/monitoring.md)
-- Error tracking - See [Troubleshooting](/server/troubleshooting/)
+- Error tracking - See [Troubleshooting](/server/troubleshooting/application)
 
 ## Best Practices
 

@@ -8,9 +8,9 @@ Before you install Turbo Server, please ensure that you have prepared the necess
 
 #### Prepare the server roles deployment
 
-As described in the [architecture overview](/server/overview/overview.html#architecture), there are three server roles to provision: Hub, Portal, and Application Server. Each machine hosting Turbo Server must have at least one server role installed. Typically, for medium-size workloads (less than 200 simultaneous users), Hub and Portal share a machine, and there are one or more Application Servers for streaming the applications. The minimum requirements for Hub/Portal role are listed [here](/server/setup-and-deployment/prerequisites).
+As described in the [architecture overview](/server/#architecture), there are three server roles to provision: Hub, Portal, and Application Server. Each machine hosting Turbo Server must have at least one server role installed. Typically, for medium-size workloads (less than 200 simultaneous users), Hub and Portal share a machine, and there are one or more Application Servers for streaming the applications. The minimum requirements for Hub/Portal role are listed [here](/server/setup-and-deployment/prerequisites).
 
-When you need to prepare for a bigger workload (more than 200 simultaneous users), we recommend putting Hub and Portal on separate machines. For performance and high availability reasons, you may provision multiple Portal instances (one instance is capable of handling 300 user sessions). They need to be put behind a load balancer. Such setup is described in a [separate doc](/server/network-and-load-balancing/network-and-load-balancing).
+When you need to prepare for a bigger workload (more than 200 simultaneous users), we recommend putting Hub and Portal on separate machines. For performance and high availability reasons, you may provision multiple Portal instances (one instance is capable of handling 300 user sessions). They need to be put behind a load balancer. Such setup is described in a [separate doc](/server/network-and-load-balancing).
 
 #### Prepare a Windows account for Turbo services
 
@@ -94,7 +94,7 @@ Please check the section above when we prepare the database.
 
 In this step, provide the credentials for the account the Turbo services should use. Please check the preparation steps if in doubt.
 
-The password must conform to the Turbo Server [password policy](/server/security/password-policy).
+The password must conform to the Turbo Server [password policy](/server/security#password-policy).
 
 #### Configure the Hub administrator account
 
@@ -112,7 +112,7 @@ Some of the settings are available only after the server is installed, and we de
 
 The Users tab in the administrative screen allows the administrator to manage the user accounts as well as change the way Portal authenticates the users.
 
-If you plan to use **custom or Active Directory** accounts, please visit [this page](/server/administration/overview.html#managing-users-and-authentication) in our documentation.
+If you plan to use **custom or Active Directory** accounts, please visit [this page](/server/administration/users) in our documentation.
 
 If you plan on configured Single Sign-On, Turbo Server supports identity providers that support SAML 2.0 and OpenID Connect authentication. Please visit the [SAML 2.0](/server/authentication/saml) and [OpenID Connect](/server/authentication/azuread-openid-connect) authentication pages for more information.
 

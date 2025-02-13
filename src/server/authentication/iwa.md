@@ -7,7 +7,7 @@ This authentication method is desirable in centralized and VDI environments wher
 ## Configure Turbo Server
 
 1. Join the Turbo Hub Server system to your domain.
-2. Set the service user to the [desired user](/server/advanced-topics/advanced-topics.html#change-the-turbo-server-service-user). If the service worker is a local system user, skip step 3.
+2. Set the service user to the [desired user](/server/advanced-topics/setup#change-the-turbo-server-service-user). If the service worker is a local system user, skip step 3.
 3. Add an SPN record for the Turbo Server to your domain. 
   ```
   > setspn -S HTTP/hostname domain\serviceuser
@@ -43,7 +43,7 @@ turbo subscribe default --register
 
 ### Integrated login works from Turbo Server system, but not Turbo Client system.
 
-The Turbo Client system reports Error: *Unable to login to http://turboserver.domain as domain\user, because Turbo Server is unable to decode the user’s Kerberos ticket.*
+The Turbo Client system reports Error: *Unable to login to http://turboserver.domain as domain\user, because Turbo Server is unable to decode the user's Kerberos ticket.*
 
 To resolve this issue, ensure that you have added the correct SPN record for your Turbo Server to your domain.
 
@@ -72,4 +72,3 @@ If the above condition is not met, integrated login will fail with a message sim
 08/21/2023 18:39:53.7836 - Info     - 0x0668: The user DOMAIN\User1 is attempting to log in with IWA from source IP 20.64.153.203
 08/21/2023 18:39:53.7992 - Info     - 0x0668: User.GetUser failed due to missing directory service, prefix: 'DOMAIN' name: 'DOMAIN\User1
 08/21/2023 18:39:53.7992 - Info     - 0x0668: The user DOMAIN\User1 failed to log in with IWA from source IP 20.64.153.203
-```

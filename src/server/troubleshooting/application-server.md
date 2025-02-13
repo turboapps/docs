@@ -139,7 +139,7 @@ If this page returns a **Service Unavailable (503)** response code, then the app
 
 ### Application Issues
 
-If the application itself is encountering errors or hangs, the first step to troubleshoot the issue is to log into the application server directly and attempt to run it there using the turbo command line interface (ie. `turbo run [app]`). If the problem reproduces in this way then see application troubleshooting suggestions [here](/reference/turbo-vm/troubleshooting/troubleshooting).
+If the application itself is encountering errors or hangs, the first step to troubleshoot the issue is to log into the application server directly and attempt to run it there using the turbo command line interface (ie. `turbo run [app]`). If the problem reproduces in this way then see application troubleshooting suggestions [here](/client/turbo-vm/troubleshooting/common-errors).
 
 ### Run in Cloud launch mode shows prompt to Select a session to reconnect to
 

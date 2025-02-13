@@ -33,4 +33,4 @@ Click **Browse** next to the **Output File** field and select a folder and filen
 
 Click **Build and Run** to build the application at the **Output File** location selected above and do a test launch of the application.
 
-See [Deploying](/deploying/overview/overview) for information about deploying containers on the Turbo platform.
+See [Deploying](/deploying/index) for information about deploying containers on the Turbo platform.

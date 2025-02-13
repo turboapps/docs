@@ -93,4 +93,4 @@ _When you use a hub instead of the file share, it is possible to install all the
 > turbo subscribe turbo-org
 ```
 
-_See [installi](/reference/command-line/installi), [install](/reference/command-line/install), and [subscribe](/reference/command-line/subscribe) for more information._
+_See [installi](/client/command-line/installi), [install](/client/command-line/install), and [subscribe](/client/command-line/subscribe) for more information._
