@@ -25,4 +25,4 @@ jobs:
         npm install -g vitepress@1.6.3
 
     - name: Build VitePress site
-      run: npm run docs:build -- --no-exit
+      run: npm run docs:build -- --force
