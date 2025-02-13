@@ -23,7 +23,7 @@ Azure Portal:
 
 Follow the Azure documentation to create a managed disk and be sure to set **Enable shared disk** and set the **Max shares** to an appropriate number. https://docs.microsoft.com/en-us/azure/virtual-machines/windows/attach-managed-disk-portal#add-a-data-disk
 
-![Azure Shared Disk](/images/Capture.PNG)
+![Azure Shared Disk](/images/capture.png)
 
 Note: Different disk sizes may have a different max shares limit. https://docs.microsoft.com/en-us/azure/virtual-machines/disks-shared
 
@@ -74,4 +74,4 @@ When the above steps are complete the applications from the Turbo Server workspa
 
 Refer to the Turbo Server workspace or Add/Remove Programs application on the WVD session hosts to verify which application were added.
 
-![CaptureWVD Subscribed Applications](/images/Capture.PNG)
+![CaptureWVD Subscribed Applications](/images/capture.png)
