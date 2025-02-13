@@ -50,20 +50,6 @@ The web application edit page has the following options available. These setting
 - **Open In New Tab**: Whether the URL will be opened in a new tab.
 - **Icon**: The icon that will be displayed to end-users on the Portal dashboard.
 
-### API Keys
-
-![Server admin hub api keys](/images/admin-api-keys.png)
-
-**API Keys** allow you to login to your hub with a code other than with a username/password. This is useful when configuring automation or in other scenarios where a plain text password is not desirable. If an API Key has been compromised, it can be refreshed to a new value or deleted to immediately revoke access.
-
-Additional, you can configure a **Configuration API Key** used by the [Launch Configuration Service](/server/advanced-topics/launch-configuration-web-service) to post custom application configurations. Configurations posted with this API key are publicly accessibly. This setting is recommended if you will be using an external portal instead of the Turbo Portal.
-
-The length of time (in milliseconds) that a configuration is valid after it is added to the launch configuration service can be configured with that **Configuration Cache Expiration** setting. This timeout is reset any time the application configuration is accessed, such as during an application launch.
-
-![Server admin add API key](/images/admin-api-keys-add.png)
-
-When adding an API Key, give it a name that describes the general usage of the key. It is also recommended to have distinct keys for distinct usages so that if one is compromised or updated, all usages will not require update. **Run as System** controls whether the key is given administrative privileges to push new images or delete repositories. Without this setting, the API key will only have read access to repositories.
-
 ### Federation
 
 The **Federation** page allows you to configure repository federation sources, which can be selected during repository import or applied to individual repositories to reduce setup time and keep repositories in sync across domains. Repositories that have federation enabled will periodically check the source domain for updates and pull any changes.

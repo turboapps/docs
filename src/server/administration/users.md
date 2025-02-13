@@ -1,22 +1,35 @@
 # Users
 
+Turbo Server users and user groups can be viewed and managed from the **Users** page on the Administration Site.
+
+Users and user groups can be created manually in the Internal directory, imported from LDAP/Active Directory directory services, or generated via Single Sign-On Authentication Providers.
+
+From this page, server administrators can also view and configure the current license usage and total licenses, Directory Services, Authentication Providers, Authentication Method, Device Keys, and API Keys.
+
+## Users and Groups
+
+### Creating Users
+
 ![Server admin users](/images/admin-users.png)
 
-Turbo Server users are tracked and managed via the Administration Site. Users are entered manually or via automated import from LDAP or Active Directory directory services. Users and user groups can be viewed and managed on the **Users** page. From this page you can view user directories, status, and available actions. Displayed above the user list is the total number of licenses available and the number of licenses currently in use.
+To manually create a user in the Internal directory, click on the **Add** button in the **Users** section from the **Users** page, then specify the Name, Login Name, Password, and Status for the user.
 
-Users can be internally created users, synchronized users from external directory services, or a user associated from a API key. API key users cannot be deleted unless the API key is deleted.
+For each **API Key**, an implicit users is created in the ApiKey directory. To remove the user, the associated API Key must be deleted.
 
-### Managing a User
+Users can also be automatically generated via [Directory Services](/server/administration/users.html#adding-an-external-directory-service) or [Single Sign-On](/server/administration/users.html#authentication-providers). Users generated via Directory Services will update on the next Directory Service synchronization. Users generated via Single Sign-On will update on user SSO login.
+
+### Managing Users
 
 ![Edit User](/images/user-edit.png)
 
-To manage a user, select the user name from the list on the **Users** page. The following fields are displayed on the page:
+To manage a user, click on the user name from the **Users** list on the **Users** page. The following fields are displayed on the page:
 
 - **Name**: Full name of the user.
 
 - **Login Name**: The unique login name for the user.
 
-- **Enabled**: Determines whether a user can access Turbo Server. After a user is disabled he no longer consumes a seat.
+- **Enabled**: Determines whether a user can access Turbo Server.  
+When a user is disabled, they no longer consume a license seat and cannot log in Turbo Server.
 
 #### User Permissions
 
@@ -28,19 +41,27 @@ For more user group management options, please see [Managing a User Group](/serv
 
 #### User Sessions
 
-![User Sessions](/images/image.png)
+![User Sessions](/images/user-sessions.png)
 
-The **Sessions** tab lists all persisted sessions for the user. Session persistence is enabled by the [Sessions are persistent](/server/administration/workspaces.html#editing-a-workspace-application) workspace application setting, which automatically synchronizes the user state and settings with Turbo Server.
+The **Sessions** tab lists all synchronized sessions for the user. Session synchronization is enabled by the [Synchronize across devices](/server/administration/workspaces.html#workspace-applications) workspace application setting, which automatically synchronize the user state and settings with Turbo Hub.
 
-**Reset**: Resetting a user session will delete all of the synchronized state and settings from Turbo Server. Sessions that are cached on the user's local device will be reset the next time they run with session persistence enabled.
+- **Reset**: Resetting a user session will delete all of the synchronized state and settings from Turbo Server. Sessions that are cached on the user's local device will be reset the next time they run with session synchronization enabled.
 
-**Delete**: Deleting a user session will delete all of the synchronized state and settings from Turbo Server. Sessions that are cached on the user's local device will not be deleted. To prevent the locally cached session from synchronizing to the server you may disable session persistence in the application settings.
+- **Delete**: Deleting a user session will delete all of the synchronized state and settings from Turbo Server. Sessions that are cached on the user's local device will not be deleted. To prevent the locally cached session from synchronizing to the server you may disable session synchronization in the workspace application settings.
 
-### Managing a User Group
+### Creating User Groups
+
+![Server admin users](/images/admin-user-groups.png)
+
+To manually create a user group in the Internal directory, click on the **Add** button in the **User Groups** section from the **Users** page, then specify the Name, Description, and Add Members to the group.
+
+Users groups can also be automatically generated via [Directory Services](/server/administration/users.html#adding-an-external-directory-service) or [Single Sign-On](/server/administration/users.html#authentication-providers). User group membership for groups generated via Directory Services will update on the next Directory Service synchronization. User group membership for groups generated via Single Sign-On will update on user SSO login.
+
+### Managing User Groups
 
 ![Server admin edit user group](/images/admin-user-group.png)
 
-To create a user group select **Add Group**. The **Add User Group** screen displays. This screen contains the following fields:
+To manage a user group click on the user group name from the **User Groups** list on the **Users** page. The following fields are displayed on the page:
 
 - **Name**: The group name that displayed on the user screen.
 
@@ -48,37 +69,35 @@ To create a user group select **Add Group**. The **Add User Group** screen displ
 
 - **Members**: Users and groups that are members of this group. Users and groups are inherited when including other groups as members. Add users or other groups by selecting **Add Members**.
 
-The following groups are special groups that are created automatically and cannot be deleted:
+The following groups are special groups in the Internal directory that are created automatically and cannot be deleted:
 
-- **Administrators**: This group will be able to log into the administration site and push shared images. Note that changes to the **Administrators** group will require a service restart before they are honored by the hub services. Access to the administration site will be honored immediately.
+- **Server Administrators**: This group will be able to log into the administration site and push shared images. Note that changes to the **Server Administrators** group will require a service restart before they are honored by the hub services. Access to the administration site will be honored immediately.
 
 - **Analysts**: Users in the Analysts group will have access to the [administration reports](/server/administration/reports). No other administrative permissions are granted beyond access to reports.
 
-- **Anonymous**: This group automatically includes any user discovered when the authentication mode is set to **Anonymous**.
+- **Anonymous**: This group automatically includes any user created via the **Anonymous** authentication mode.
 
 - **Everyone**: This group automatically includes all users regardless of authentication mode.
+
+## Directory Services
+
+![Server admin add directory service](/images/admin-users-directory-services.png)
+
+The Directory Services feature enables server administrators to easily import their users from their existing user directory into Turbo Server.
+
+Active Directory and LDAP services are managed at **Directory Services** on the **Users** page.
 
 ### Adding an External Directory Service
 
 ![Server admin add directory service](/images/admin-users-directory-service.png)
 
-Using Turbo Server you can add an external directory service, such as Active Directory. This enables you to manage users with the touch of a button and easily import existing users and groups into Turbo Hub Server. Complete the following steps to add an external directory service:
-
-1. Open a Turbo Server administration site page in your web browser.
-
-2. Choose the **Users** category from the top navigation bar.
-
-3. Select **Manage Directory Services**.
-
-4. Select **Add Service**. The **Add Directory Service** screen displays.
-
-5. Enter your specific settings into Turbo Server. Each section is detailed below.
+To add an external directory service, such as Active Directory or LDAP, click on the **Add** button on the **Users > Directory Services** page. The **Add Directory Service** screen will display with the configuration options, which are detailed below.
 
 **NOTE**: When identity federation is enabled from a source domain to target domain, avoid manual synchronization of directory services in the target domain. Doing so can lead to identity discrepancies, potentially preventing users from receiving updates from the source domain.
 
 **Note**: When synchronizing external directory-services containing of over 5,000 users, the command-line administration utility should be used instead of the Administrator web site. For more information on using the administration utility, see _Manage Turbo Server from the Command Line_. Synchronizing large directory services uses up to 1 GB memory per 500,000 users and groups on the hub server. Ensure that your hub server has enough memory to handle ordinary load when the directory service sync is running.
 
-## Directory Service Settings
+### Directory Service Settings
 
 | Section | Description |
 |---------|------------|
@@ -161,9 +180,9 @@ Users created by directory service synchronization are set to disabled by defaul
 
 **NOTE**: External users synchronized from active directory should not use the login prefix when logging in. User names must be unique, so if there are two users from different active directory sources, only the first one will be synchronized. Password verification is passed through to the active directory service and are not stored on Turbo Server.
 
-#### Troubleshooting
+### Troubleshooting Directory Services
 
-##### Domain identity federation did not update a user's groups
+#### Domain identity federation did not update a user's groups
 
 This issue can occur when a user that was previously created by domain identity federation is then synchronized through other means, such as manual directory synchronization in the target domain. In such cases, domain identity federation may bypass updates for the affected user, indicated by a specific log entry in the target domain's service logs:
 
@@ -173,32 +192,66 @@ This issue can occur when a user that was previously created by domain identity 
 
 To resolve this, delete the user from the target domain. Then, allow domain identity federation to re-synchronize the user from the source domain, ensuring proper update and synchronization of user group memberships.
 
-### Authentication Method
+## Authentication Providers
+
+![users-authentication-providers](/images/admin-users-authentication-providers.png)
+
+Server administrators can manage Single Sign-On authentication integrations at the **Users > Authentication Providers** page.
+
+To add a new Single Sign-On integration, click on the **Add** button on this page.
+
+To manage an existing Single Sign-On integration, click on its name under the Authentication Providers list.
+
+Single Sign-On configuration may vary by provider. See common OpenID and SAML examples in the [Authentication section](/server/authentication/azuread-openid-connect.html).
+
+## Authentication Method
 
 ![users-authentication-method](/images/authentication.png)
 
-The **Authentication Method** page configures which Authentication Method is used when an end-user logs into the Hub Site and Turbo Client. The supported methods are:
+The **Authentication Method** page configures which Authentication Method is used when an end user logs into the Turbo Portal and Turbo Client. The supported methods are:
 
 - **Anonymous**: Anonymous authentication allows users to access the Portal without logging in. All anonymous users are added to the **Anonymous Users** group.
 
-- **Username and Password**: Username and Password authentication requires users to provide their username and password in order to log in. Passwords may be managed from the user settings page.
+- **Username and Password**: Username and Password authentication requires users to provide their username and password in order to log in. This method is used when authenticating with users in the Internal directory or external directory service.
 
-- **Single Sign-On**: Single Sign-On authentication allows users to login to Turbo Server using an external directory service, such as Azure AD or ADFS. Turbo Server currently supports the following Single Sign-On Methods:
+- **Single Sign-On**: Single Sign-On authentication allows users to login using a Single Sign-On provider, such as Azure AD or ADFS. Turbo Server currently supports the following Single Sign-On Methods:
 
   - **OpenID Connect**: This option will redirect users an identity provider login page that supports OpenID Connect authentication. Upon a successful login, the user will be redirected back to Turbo Server and an account will be created using the basic profile information provided by the OpenID claims. Some example identity providers that support OpenID Connect include AzureAD and Google. For more information, refer to [OpenID Connect](/server/authentication/openid-connect).
 
   - **SAML 2.0**: This option will redirect users an identity provider login page that supports SAML 2.0 authentication. Upon a successful login, the user will be redirected back to Turbo Server and an account will be created using the basic profile information provided by the SAML response claims. Some example identity providers that support SAML 2.0 include AzureAD and ADFS. For more information, refer to [SAML 2.0](/server/authentication/saml).
 
-- **Accepted Tenants**: Restricts logins to users that belong to an accepted tenant IDs. Leave empty for no restrictions. This field only applies to multi-tenant Azure AD Single Sign-On. For more information on setting up multi-tenant Single Sign-On for Azure AD, see steps for [OpenID Connect](https://hub.turbo.net/docs/server/authentication/azuread-openid-connect#azure-ad-multi-tenancy) and [SAML](https://hub.turbo.net/docs/server/authentication/azuread-saml#azure-ad-multi-tenancy).
-
 - **Ticket Expiration Time**: The amount of time that a login ticket is valid. By default the login ticket when logging in from the Portal will be kept for 7 days if the remember me checkbox is enabled.
 
-- **Check for compromised passwords**: Checks the [haveibeenpwnd](https://haveibeenpwned.com/) database for compromised passwords when creating setting the password for internal users.
+- **Check for compromised passwords**: Checks the [haveibeenpwnd](https://haveibeenpwned.com/) database for compromised passwords when setting the password for users in the Internal directory. This setting is only available when using **Username and password** authentication.
+
+- **Authentication Provider**: Select the default Authentication Provider. This setting is only available when using **Single Sign-on** authentication.
 
 - **Integrated Windows Authentication Host**: The IP or hostname of the domain controller for clients using [IWA](/client/command-line/login). Select **Default** to automatically detect the domain controller's IP address.
 
-### Device Keys
+## Device Keys
 
 ![Server admin device keys](/images/admin-users-device-keys.png)
 
-The **Device Keys** page lists all devices that are registered to the Hub Server. Devices are automatically registered with the Hub Server when subscribing or installing applications. Device Keys may be deleted in order to immediately revoke that device's access to the Hub Server.
+The **Device Keys** page lists all devices that are registered to the Hub Server. Devices are automatically registered with the Turbo Hub when subscribing or installing applications. Device Keys may be deleted in order to immediately revoke that device's access to the Hub Server.
+
+## API Keys
+
+![Server admin hub api keys](/images/admin-api-keys.png)
+
+The **API Keys** page is used to manage the keys used to access Turbo Server.
+
+- **API Keys** allow you to log in to your Turbo Portal with a code other than with a username and password. This is useful when configuring automation or deployments where authentication via plain-text password or Single Sign-on is not desirable.  
+If an API Key has been compromised, it can be deleted to immediately revoke access.
+
+- **Configuration API Key** is used by the [Launch Configuration Service](/server/advanced-topics/launch-configuration-web-service) to post custom application configurations. Configurations posted with this API key are publicly accessible. This setting is recommended if you will be using an external portal instead of the Turbo Portal.  
+The **Configuration Cache Expiration** setting configures the length of time (in milliseconds) that a custom application configuration is valid after it is added to the launch configuration service. This timeout is reset any time the application configuration is accessed, such as during an application launch.
+
+![Server admin add API key](/images/admin-api-keys-add.png)
+
+To create a new API Key, click on the **Add** button from the **Users > API Keys** page. For each API Key, an implicit user is created in the ApiKey directory, which allows the user to be assigned to a User Group as well as given user permissions to workspaces. Deleting the API Key will delete the implicit user.
+
+- **Key Name**: the name of the API key.  
+It is recommended that the key name describes the general usage of the key and that distinct keys are used for distinct usages, so that not all usages will require an update if one key is compromised and needs to be refreshed.
+
+- **Run as System**: controls whether the key is given administrative privileges to push new images, delete repositories, and see all workspaces on the Turbo Portal.  
+Without this setting, the API key will only have read access to repositories and see only workspacess that it has explicit permissions for.

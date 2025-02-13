@@ -78,7 +78,9 @@ Multi-tenancy allows users from different Azure AD tenants to login to Turbo Ser
 
 To configure multi-tenancy, view the Azure AD OIDC application from **Application Registrations**. On the **Authentication** tab, go to **Supported account types** and select `Accounts in any organizational directory (Any Azure AD directory - Multitenant)`.
 
-To only allow specific Azure AD tenants, see [Administering Authentication Method](/server/administration/users.html#authentication-method).
+To only allow specific Azure AD tenants, configure the **Accepted Tenants** setting under the Authentication Provider settings:
+
+- **Accepted Tenants**: Restricts logins to users that belong to the specified accepted tenant IDs. Leave empty for no restrictions. This field only applies to multi-tenant Azure AD Single Sign-On.
 
 ![oidc-multi-tenant](/images/oidc.png)
 

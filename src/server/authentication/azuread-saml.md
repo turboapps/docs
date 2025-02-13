@@ -131,7 +131,9 @@ Once generated, Turbo Server must be configured with the respective **Request Si
 
 ### Azure AD Multi-Tenancy
 
-Multi-tenancy allows users from different Azure AD tenants to login to Turbo Server using the same SSO configuration. It is recommended to switch to [Azure OpenID](/server/authentication/azuread-openid-connect) to enable multitenant authentication.
+Multi-tenancy allows users from different Azure AD tenants to login to Turbo Server using the same SSO configuration. 
+
+It is recommended to switch to [Azure OpenID](/server/authentication/azuread-openid-connect) to enable multitenant authentication.
 
 ### Troubleshooting Azure AD via SAML 2.0
 
