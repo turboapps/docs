@@ -26,17 +26,4 @@ jobs:
 
     - name: Build VitePress site
       run: |
-        npm run docs:build -- --force > build_output.log 2>&1
-        echo "--- Build Output ---"
-        cat build_output.log
-        echo "--- End of Build Output ---"
-      continue-on-error: true
-
-    - name: Check for build errors
-      run: |
-        if grep -q "Build failed" build_output.log; then
-          echo "Build errors found. See the build output above for details."
-          exit 1
-        else
-          echo "Build completed successfully."
-        fi
+        npm run docs:build
