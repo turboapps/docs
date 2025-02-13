@@ -113,7 +113,7 @@ Next, login to the Windows Server machine that the Hub server is installed on as
 2. Click on **File** then click **Add/Remove Snap In**.
 3. Select the `Certificates` option then click **Add**
 4. Select **Computer account**, select **Local computer**, and then complete the dialog.
-5. Click on the new **Certificates** Snap In, then click **All Tasks** > **Import...** ![SAML Certnstall](/images/SAML-cert-install.png)
+5. Click on the new **Certificates** Snap In, then click **All Tasks** > **Import...** ![SAML Certnstall](/images/saml-cert-install.png)
 6. Select **Local Machine** and click **Next** ![SAML Cert Install 2](/images/saml-cert-install-2.png)
 7. Select your certificate and click **Next** ![SAML-cert-install-3](/images/saml-cert-install-3.png)
 8. Select **Place all certificates in the following store**, select **Trusted Root Certificate Authorities**, and then click **Next** ![SAML-cert-install-4](/images/saml-cert-install-4.png)
