@@ -38,7 +38,7 @@ jobs:
         fi
 
     - name: Upload build output
-      uses: actions/upload-artifact@latest
+      uses: actions/upload-artifact@4
       with:
         name: build-output
         path: build_output.log
