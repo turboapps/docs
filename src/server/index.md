@@ -42,7 +42,7 @@ If Turbo is used to deliver applications to endpoints or third-party streaming p
 
 ### Network Diagram
 
-![Turbo Network Diagram (Basic)](/images/Turbo_Network_Diagram__Basic_.png)
+![Turbo Network Diagram (Basic)](/images/turbo_network_diagram__basic_.png)
 
 ## Technology
 

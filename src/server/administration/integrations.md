@@ -163,6 +163,6 @@ Navigate to the settings page of the desired course.
 
 The settings page can be reached by clicking the gear icon on the course’s home page or the gear icon on the listing in **Course and category management.**
 
-![Courses-MoodleGear](/images/Courses-MoodleGear.png)
+![Courses-MoodleGear](/images/courses-moodlegear.png)
 
 The Course ID is located under General. If the course does not yet have an ID, one must be given.

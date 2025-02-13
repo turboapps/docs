@@ -32,11 +32,11 @@ To create the relying party trust:
 
 6. Set the URLs for WS-Federation and SAML 2.0 to `https://{Web Service Root}/auth/saml/return`, replacing `{Web Service Root}` with your Turbo Server portal host, and click **Next**.
 
-   ![ADFS URLs](/images/ADFS-urls.png)
+   ![ADFS URLs](/images/adfs-urls.png)
 
 7. In addition to the URL from the previous step, add a relying party trust identifier to be used by the Turbo Client, `https://{Web Service Root}/turbo-client`, and click **Add** and then **Next**.
 
-   ![ADFS Identifiers](/images/ADFS-identifiers.png)
+   ![ADFS Identifiers](/images/adfs-identifiers.png)
 
 8. Click **Next** through the rest of the wizard and **Close** at the end.
 
@@ -110,7 +110,7 @@ Fill in the following fields according to the [ADFS configuration](#configure-ad
 - **Signing Certificate Thumbprint**: The ADFS Token-Signing Certificate's thumbprint, see [Get the Certificate](#configure-adfs-get-the-token-signing-certificate).
 - **Signing Certificate Common Name**: The ADFS Token-Signing Certificate's common name, see [Get the Certificate](#configure-adfs-get-the-token-signing-certificate).
 
-![ADFS Turbo Config](/images/ADFS-turbo-config.png)
+![ADFS Turbo Config](/images/adfs-turbo-config.png)
 
 ### Troubleshooting
 

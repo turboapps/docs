@@ -51,6 +51,6 @@ Logs will be generated in the same folder. Please send the logs to support@turbo
 
 An error dialog appears with the text: The products we found in your account cannot be used to activate Office in shared computer scenarios.
 
-![Office products error](/images/officeerror.PNG)
+![Office products error](/images/officeerror.png)
 
 This is an Microsoft 365 Apps licensing error and is unrelated to Turbo Server. Please refer to the [Troubleshoot issues with shared computer activation for Microsoft 365 Apps](https://docs.microsoft.com/en-us/deployoffice/troubleshoot-shared-computer-activation) document to resolve this error.

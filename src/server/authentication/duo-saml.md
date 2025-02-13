@@ -56,7 +56,7 @@ Enter the **Name** for your application and click **Save**.
 
 Open the Turbo Server administration site and navigate to the **Users > Authentication Method page**.
 
-![Okta 9 Turbo Server Authentication Method](/images/Okta_9_Turbo_Server_Authentication_Method.png)
+![Okta 9 Turbo Server Authentication Method](/images/okta_9_turbo_server_authentication_method.png)
 
 Set the **Authentication Method** to **Single Sign-On**.
 
@@ -64,7 +64,7 @@ Set the **Single Sign-On Method** to **SAML 2.0**.
 
 Configure the following fields:
 
-![Okta 11 Turbo Server Authentication Method Fields](/images/Okta_11_Turbo_Server_Authentication_Method_Fields.png)
+![Okta 11 Turbo Server Authentication Method Fields](/images/okta_11_turbo_server_authentication_method_fields.png)
 
 - **Application ID**: Enter the Duo application ID. This value is identified in the last segment of the **Entity ID Metadata** value from Duo that was recorded earlier.  
   Example: DIABC12367890123456
@@ -76,7 +76,7 @@ Configure the following fields:
 - **Logout URL**: Enter the **Single Log-Out URL** value from Duo that was recorded earlier.  
   Example: https://sso-abc1def2.sso.duosecurity.com/saml2/sp/DIABC12367890123456/slo
 - **Signing Certificate Thumbprint**: Enter the thumbprint value that is listed in the SAML Signing Certificate under **Details > Thumbprint**.
-  ![Okta 12 Certificate Thumbprint](/images/Okta_12_Certificate_Thumbprint.png)
+  ![Okta 12 Certificate Thumbprint](/images/okta_12_certificate_thumbprint.png)
 - **Singing Certificate Common Name**: Enter the common name value that is listed in the SAML Signing Certificate under **Details > Subject > CN**.
 
 ### Install SAML Signing Certificate on Turbo Hub
@@ -90,13 +90,13 @@ Login to the system where the Turbo Hub role is installed on as an administrator
 3. Select the **Certificates** option then click **Add**.
 4. Select **Computer account**, select **Local computer**, and then complete the dialog.
 5. Click on the new **Certificates** Snap In, then click **All Tasks > Import...**
-   ![Okta 14 MMC Console](/images/Okta_14_MMC_Console.png)
+   ![Okta 14 MMC Console](/images/okta_14_mmc_console.png)
 6. Select **Local Machine** and click **Next**.
-   ![Okta 14 Certificate Import Wizard](/images/Okta_14_Certificate_Import_Wizard.png)
+   ![Okta 14 Certificate Import Wizard](/images/okta_14_certificate_import_wizard.png)
 7. Select your SAML Signing Certificate and click **Next**.
-   ![Okta 16 Certificate Import Wizard File Import](/images/Okta_16_Certificate_Import_Wizard_File_Import.png)
+   ![Okta 16 Certificate Import Wizard File Import](/images/okta_16_certificate_import_wizard_file_import.png)
 8. Select **Place all certificates in the following store**, select **Trusted Root Certificate Authorities**, and then click **Next**.
-   ![Okta 17 Certificate Import Wizard Certificate Store](/images/Okta_17_Certificate_Import_Wizard_Certificate_Store.png)
+   ![Okta 17 Certificate Import Wizard Certificate Store](/images/okta_17_certificate_import_wizard_certificate_store.png)
 9. Complete the rest of the import wizard with the default options.
 
 Once installed, Turbo Server portal logins should now complete successfully.
