@@ -17,11 +17,8 @@ COPY . .
 # Build the VitePress site
 RUN npm run docs:build
 
-# Make sure the start script is executable
-RUN chmod +x /app/bin/start.sh
-
 # Expose the port VitePress will run on
 EXPOSE 5050
 
-# Set the command to run the start script
-CMD ["/app/bin/start.sh"]
+# Set the command to run the site
+CMD ["npm", "run", "docs:serve", "--", "--port", "5050", "--host", "0.0.0.0"]
