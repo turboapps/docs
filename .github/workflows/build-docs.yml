@@ -1,4 +1,4 @@
-name: Validate VitePress Build
+name: Build, Push, and Notify Docs
 
 on:
   push:
@@ -8,22 +8,47 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
-    - name: Use Node.js
-      uses: actions/setup-node@v2
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v2
+
+    - name: Get current date
+      id: date
+      run: echo "date=$(date +'%Y.%m.%d')" >> $GITHUB_OUTPUT
+
+    - name: Build Docker image
+      uses: docker/build-push-action@v4
       with:
-        node-version: '22'
+        context: .
+        push: false
+        load: true
+        tags: |
+          turbo.azurecr.io/docs:${{ steps.date.outputs.date }}.${{ github.run_number }}
+          turbo.azurecr.io/docs:latest
 
-    - name: Install dependencies
-      run: |
-        npm install
-        npm install -g vitepress@1.6.3
+    - name: Login to Azure Container Registry
+      if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+      uses: azure/docker-login@v1
+      with:
+        login-server: turbo.azurecr.io
+        username: ${{ secrets.ACR_USERNAME }}
+        password: ${{ secrets.ACR_PASSWORD }}
 
-    - name: Build VitePress site
+    - name: Push Docker image
+      if: github.event_name == 'push' && github.ref == 'refs/heads/master'
       run: |
-        npm run docs:build
+        docker push turbo.azurecr.io/docs:${{ steps.date.outputs.date }}.${{ github.run_number }}
+        docker push turbo.azurecr.io/docs:latest
+
+    - name: Notify Private Repo
+      if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+      uses: peter-evans/repository-dispatch@v2
+      with:
+        token: ${{ secrets.CODESYSTEMS_PAT }}
+        repository: codesystems/turbonet
+        event-type: public-docs-update
+        client-payload: '{"version": "docs:${{ steps.date.outputs.date }}.${{ github.run_number }}"}'
