@@ -4,18 +4,21 @@ FROM node:22
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy all files to container
-COPY . .
+# Copy package.json and package-lock.json (if available)
+COPY package*.json ./
 
 # Install dependencies including VitePress
 RUN npm install
-RUN npm install vitepress@1.6.3
+RUN npm install -g vitepress@1.6.3
 
-# Make sure the start script is executable
-RUN chmod +x /app/bin/start.sh
+# Copy all files to container
+COPY . .
+
+# Build the VitePress site
+RUN npm run docs:build
 
 # Expose the port VitePress will run on
 EXPOSE 5050
 
-# Set the command to run the start script
-CMD ["/app/bin/start.sh"]
+# Set the command to run the site
+CMD ["npm", "run", "docs:serve", "--", "--port", "5050", "--host", "0.0.0.0"]
