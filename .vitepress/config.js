@@ -64,6 +64,7 @@ export default defineConfig({
               collapsed: true,
               items: [
                 { text: 'Overview', link: '/client/command-line/' },
+                { text: 'as', link: '/client/command-line/as' },
                 { text: 'build', link: '/client/command-line/build' },
                 { text: 'cache', link: '/client/command-line/cache' },
                 { text: 'commit', link: '/client/command-line/commit' },
@@ -414,13 +415,7 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: 'Introduction', link: '/guides/' },
-            {
-              text: 'Client',
-              collapsed: true,
-              items: [
-                { text: 'Using Turbo Client', link: '/guides/client/turbo-client' }
-              ]
-            },
+            { text: 'Deploy Using Desktop Client', link: '/guides/deploy-using-desktop-client' },
             {
               text: 'Server',
               collapsed: true,

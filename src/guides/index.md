@@ -56,7 +56,7 @@ Choose the method that best matches your needs, or combine multiple approaches i
 - [Software Distribution Integration](/guides/integrations/system-center.md)
 
 ### Desktop Management
-- [Turbo Client Guide](/guides/client/turbo-client.md)
+- [Deploy Using Desktop Client](/guides/deploy-using-desktop-client.md)
 - [Image Repository Setup](/guides/server/hub-setup.md)
 
 ### Enterprise Deployment
@@ -145,7 +145,7 @@ Both approaches provide:
 - Package version control
 - Offline execution capability
 
-For implementation details, see [Turbo Client Guide](/guides/client/turbo-client.md).
+For implementation details, see [Deploy Using Desktop Client](/guides/deploy-using-desktop-client.md).
 
 ### 3. Workspace-Based Deployment
 
