@@ -35,8 +35,8 @@ jobs:
       uses: azure/docker-login@v1
       with:
         login-server: turbo.azurecr.io
-        username: ${{ secrets.ACR_USERNAME }}
-        password: ${{ secrets.ACR_PASSWORD }}
+        username: ${{ secrets.TURBO_REGISTRY_APP_ID }}
+        password: ${{ secrets.TURBO_REGISTRY_APP_PASSWORD }}
 
     - name: Push Docker image
       if: github.event_name == 'push' && github.ref == 'refs/heads/master'
