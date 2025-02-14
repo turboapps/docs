@@ -418,7 +418,9 @@ export default defineConfig({
               text: 'Client',
               collapsed: true,
               items: [
-                { text: 'Using Turbo Client', link: '/guides/client/turbo-client' }
+                { text: 'Using Turbo Client', link: '/guides/client/turbo-client' },
+				{ text: 'Deploy Standalone Client', link: '/guides/client/deploy-standalone-client' },
+				{ text: 'Deploy Offline Client', link: '/guides/client/deploy-offline-client' }
               ]
             },
             {
