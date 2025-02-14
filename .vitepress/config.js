@@ -416,6 +416,8 @@ export default defineConfig({
           items: [
             { text: 'Introduction', link: '/guides/' },
             { text: 'Deploy Using Desktop Client', link: '/guides/deploy-using-desktop-client' },
+            { text: 'Deploy Standalone Client', link: '/guides/client/deploy-standalone-client' },
+    				{ text: 'Deploy Offline Client', link: '/guides/client/deploy-offline-client' },
             {
               text: 'Server',
               collapsed: true,
