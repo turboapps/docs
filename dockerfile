@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies including VitePress
-RUN npm ci
+RUN npm install
 RUN npm install -g vitepress@1.6.3
 
 # Copy all files to container
