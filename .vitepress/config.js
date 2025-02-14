@@ -122,7 +122,6 @@ export default defineConfig({
                 { text: 'vms', link: '/client/command-line/vms' }
               ]
             },
-            { text: 'Examples', link: '/client/examples' },
             { text: 'Security', link: '/client/security' },
             { text: 'Sandbox Manager', link: '/client/sandbox-manager' },
             {

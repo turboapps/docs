@@ -6,7 +6,7 @@ This guide covers advanced Turbo features and configuration options.
 - Desktop integration with virtual applications
 - Managing workspace subscriptions
 - Network isolation and routing
-- File system isolation modes
+- Development environments
 - Secure sandbox configuration
 :::
 
@@ -98,53 +98,58 @@ turbo run --route-block=ip --route-add=ip://10.0.0.34 firefox
 
 # Allow domain and all subdomains
 turbo run --route-block=ip --route-add=ip://*.turbo.net firefox
+
+# Allow specific domains for Git
+turbo run --route-block=ip --route-add=ip://*.github.com git
 ```
 
 ### Virtual Networks
 
 Create isolated network environments:
 ```bash
-# Run containers in virtual network
+# Run applications in virtual network
 turbo run --network=mynet --name=web nginx
 turbo run --network=mynet curl http://web
+
+# Run multiple web servers on different ports
+turbo run nginx --route-add=tcp://80:8080
+turbo run nginx --route-add=tcp://80:8081
 ```
 
-## File System Isolation
+## Development Environments
 
-Turbo supports multiple isolation modes:
+### Creating Development Environments
 
-### Full Isolation
 ```bash
-# Complete isolation from host
-turbo run --isolate=full myapp
+# Web Development Environment
+turbo run node,git,vscode
+
+# .NET Development
+turbo run microsoft/dotnet,microsoft/vs
+
+# Multiple Node.js Versions
+turbo run node:14.17 --name=node14
+turbo run node:16.13 --name=node16
+
+# Java Development with Multiple JDKs
+turbo run jdk:8,maven --name=java8
+turbo run jdk:11,maven --name=java11
 ```
 
-### Write Copy
+### File System Mounting
+
+Mount local directories to persist changes and share configurations:
+
 ```bash
-# Read from host, isolated writes
-turbo run --isolate=write-copy myapp
-```
+# Mount project directory for development
+turbo run node --mount="C:\projects"=C:\projects
 
-### Merge
-```bash
-# Full read/write access to host
-turbo run --isolate=merge myapp
-```
+# Share configuration across sessions
+turbo run node --mount=%APPDATA%\npm=%APPDATA%\npm
 
-### Merge User
-```bash
-# Isolated system, merged user folders
-turbo run --isolate=write-copy+merge-user myapp
+# Mount multiple directories
+turbo run node --mount="C:\projects"=C:\projects --mount="C:\config"=C:\config
 ```
-
-The merge-user modifier affects:
-- Desktop
-- Documents
-- Pictures
-- Downloads
-- Music
-- Videos
-- Templates
 
 ## Secure Sandboxes
 
@@ -179,15 +184,16 @@ Protect sensitive applications and source code:
 3. Implement network isolation as needed
 
 ### Network Configuration
-1. Use virtual networks for container-to-container communication
+1. Use virtual networks for session-to-session communication
 2. Implement precise routing rules
 3. Consider using route files for complex configurations
 
 ## Next Steps
 
-- Review [deployment guides](/deploying/) for enterprise scenarios
-- Explore [Turbo Server](/server/) for advanced management
-- Check [command reference](/client/command-line/) for detailed options
+1. Explore the [Client documentation](/client/) for detailed command reference and features
+2. Learn about [Studio](/studio/) to create your own virtual applications
+3. Set up [Server](/server/) for enterprise deployment
+4. Review [deployment options](/deploying/) for various scenarios
 
 ::: tip Need More Help?
 Visit our [support resources](https://turbo.net/support) for additional assistance.

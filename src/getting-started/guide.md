@@ -38,24 +38,90 @@ For more detailed installation options and advanced configuration, see the [Clie
 
 ### Using the Command Line
 
-The Turbo CLI provides powerful control over application execution. Here are some common commands:
+The Turbo CLI provides powerful control over application execution. Here's a typical workflow:
 
 ```bash
-# Run the latest version of an application
+# Pull an application image
+turbo pull firefox
+
+# Run the application
 turbo run firefox
 
+# List running sessions
+turbo ps
+
+# Stop a running session
+turbo stop <session-id>
+
+# Remove session and its sandbox
+turbo rm <session-id>
+
+# Remove the application image
+turbo rmi firefox
+```
+
+Additional command options:
+```bash
 # Run a specific version
 turbo run firefox:68.0.2
 
 # Run with custom parameters
 turbo run firefox -- -private-window
 
-# List running instances
-turbo containers
-
-# Stop an instance
-turbo stop <container-id>
+# Layers runtime dependencys
+turbo run java,firefox
 ```
+
+### File System Isolation
+
+Turbo supports multiple isolation modes to control how applications interact with the host system:
+
+```bash
+# Complete isolation from host
+turbo run --isolate=full myapp
+
+# Read from host, isolated writes
+turbo run --isolate=write-copy myapp
+
+# Full read/write access
+turbo run --isolate=merge myapp
+
+# Isolated system, merged user folders
+turbo run --isolate=write-copy+merge-user myapp
+```
+
+The merge-user modifier affects:
+- Desktop
+- Documents
+- Pictures
+- Downloads
+- Music
+- Videos
+- Templates
+
+### Troubleshooting
+1. Check running sessions:
+   ```bash
+   turbo ps
+   ```
+
+2. View application session logs:
+   ```bash
+   turbo logs <session-id>
+   ```
+
+3. View Turbo system logs:
+   ```
+   # Located in %localappdata%\Turbo\Logs
+   # Contains detailed logs about Turbo operations
+   ```
+
+4. Reset an application:
+   ```bash
+   turbo stop <session-id>
+   turbo rm <session-id>
+   turbo run <application>
+   ```
 
 ### The Turbo.net Hub
 
@@ -76,63 +142,6 @@ For enterprise deployments, [Turbo Server](/server/) provides:
 - User access controls
 - Usage analytics
 :::
-
-## Working with Virtual Environments
-
-### Version Management
-
-You can run specific versions of applications:
-
-```bash
-# Run latest version (evergreen)
-turbo run nodejs
-
-# Run specific version
-turbo run nodejs:14.17
-```
-
-This is particularly useful for:
-- Testing with different versions
-- Supporting legacy applications
-- Ensuring consistent environments
-
-### Using Multiple Applications
-
-Turbo's layering system allows you to combine multiple applications:
-
-```bash
-# Run Node.js with specific tools
-turbo run nodejs,git,vscode
-```
-
-## Best Practices
-
-### Security
-- Use secure sandboxes for sensitive applications
-- Keep the Turbo client updated
-- Follow your organization's security policies
-
-### Performance
-- Clean up unused instances regularly
-- Use local execution when possible
-- Consider resource usage in VDI environments
-
-### Troubleshooting
-1. Check application status:
-   ```bash
-   turbo containers
-   ```
-
-2. View logs:
-   ```bash
-   turbo logs <container-id>
-   ```
-
-3. Reset an application:
-   ```bash
-   turbo rm <container-id>
-   turbo run <application>
-   ```
 
 ## Next Steps
 
