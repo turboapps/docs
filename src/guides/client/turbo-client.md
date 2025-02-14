@@ -248,4 +248,4 @@ turbo run --diagnostic myapp
 
 - Review [isolation options](/client/turbo-vm/runtime-settings.md)
 - Explore [command line reference](/client/command-line/index.md)
-- Learn about [workspace subscriptions](/deploying/server/subscriptions.md)
+- Learn about [workspace subscriptions](/guides/server/workspaces.md)

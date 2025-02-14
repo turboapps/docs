@@ -1,6 +1,6 @@
 # Import Configuration
 
-The following section details the **Import Configuration** feature available in Turbo Studio. Import Configuration is used to import application packages in various formats into a Turbo Studio configuration that can be built and [deployed](/deploying/) to your endpoints.
+The following section details the **Import Configuration** feature available in Turbo Studio. Import Configuration is used to import application packages in various formats into a Turbo Studio configuration that can be built and [deployed](/guides/) to your endpoints.
 
 Supported application package formats are: Microsoft App-V package (.appv), ThinApp configuration (.ini), Microsoft Installer (.msi), and ZENworks application package (.axt).
 

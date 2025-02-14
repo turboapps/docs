@@ -193,7 +193,7 @@ Protect sensitive applications and source code:
 1. Explore the [Client documentation](/client/) for detailed command reference and features
 2. Learn about [Studio](/studio/) to create your own virtual applications
 3. Set up [Server](/server/) for enterprise deployment
-4. Review [deployment options](/deploying/) for various scenarios
+4. Review [deployment options](/guides/) for various scenarios
 
 ::: tip Need More Help?
 Visit our [support resources](https://turbo.net/support) for additional assistance.

@@ -151,7 +151,7 @@ Now that you're familiar with basic Turbo operations, you can:
 2. Explore the [Client documentation](/client/) for detailed command reference and features
 3. Learn about [Studio](/studio/) to create your own virtual applications
 4. Set up [Server](/server/) for enterprise deployment
-5. Review [deployment options](/deploying/) for various scenarios
+5. Review [deployment options](/guides/) for various scenarios
 
 ::: tip Enterprise Deployment
 Looking to deploy Turbo in your organization? [Turbo Server](/server/) provides enterprise features like:

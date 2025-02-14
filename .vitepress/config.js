@@ -36,10 +36,10 @@ export default defineConfig({
     },
     nav: [
       { text: 'Getting Started', link: '/getting-started/' },
+      { text: 'Guides', link: '/guides/' },
       { text: 'Client', link: '/client/' },
       { text: 'Studio', link: '/studio/' },
-      { text: 'Server', link: '/server/' },
-      { text: 'Deploying', link: '/deploying/' }
+      { text: 'Server', link: '/server/' }
     ],
     sidebar: {
       '/getting-started/': [
@@ -408,48 +408,48 @@ export default defineConfig({
           items: generateReleaseVersions('vm')
         }
       ],
-      '/deploying/': [
+      '/guides/': [
         {
-          text: 'Deploying',
+          text: 'Guides',
           collapsed: false,
           items: [
-            { text: 'Introduction', link: '/deploying/' },
+            { text: 'Introduction', link: '/guides/' },
             {
               text: 'Client',
               collapsed: true,
               items: [
-                { text: 'Using Turbo Client', link: '/deploying/client/turbo-client' }
+                { text: 'Using Turbo Client', link: '/guides/client/turbo-client' }
               ]
             },
             {
               text: 'Server',
               collapsed: true,
               items: [
-                { text: 'Overview', link: '/deploying/server/index' },
-                { text: 'Hub Setup', link: '/deploying/server/hub-setup' },
-                { text: 'API Keys', link: '/deploying/server/api-keys' },
-                { text: 'Workspaces', link: '/deploying/server/workspaces' },
-                { text: 'Subscriptions', link: '/deploying/server/subscriptions' },
-                { text: 'Application Servers', link: '/deploying/server/application-servers' }
+                { text: 'Overview', link: '/guides/server/index' },
+                { text: 'Hub Setup', link: '/guides/server/hub-setup' },
+                { text: 'API Keys', link: '/guides/server/api-keys' },
+                { text: 'Workspaces', link: '/guides/server/workspaces' },
+                { text: 'Subscriptions', link: '/guides/server/subscriptions' },
+                { text: 'Application Servers', link: '/guides/server/application-servers' }
               ]
             },
             {
               text: 'Platform Integrations',
               collapsed: true,
               items: [
-                { text: 'AWS AppStream', link: '/deploying/integrations/aws-appstream' },
+                { text: 'AWS AppStream', link: '/guides/integrations/aws-appstream' },
                 {
                   text: 'Citrix',
                   collapsed: true,
                   items: [
-                    { text: 'Overview', link: '/deploying/integrations/citrix-guide/' },
-                    { text: 'Command Line', link: '/deploying/integrations/citrix-guide/command-line' },
-                    { text: 'Scripts', link: '/deploying/integrations/citrix-guide/scripts' }
+                    { text: 'Overview', link: '/guides/integrations/citrix-guide/' },
+                    { text: 'Command Line', link: '/guides/integrations/citrix-guide/command-line' },
+                    { text: 'Scripts', link: '/guides/integrations/citrix-guide/scripts' }
                   ]
                 },
-                { text: 'Intune', link: '/deploying/integrations/intune' },
-                { text: 'Parallels RAS', link: '/deploying/integrations/parallels-ras' },
-                { text: 'System Center', link: '/deploying/integrations/system-center' }
+                { text: 'Intune', link: '/guides/integrations/intune' },
+                { text: 'Parallels RAS', link: '/guides/integrations/parallels-ras' },
+                { text: 'System Center', link: '/guides/integrations/system-center' }
               ]
             }
           ]

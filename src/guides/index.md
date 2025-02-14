@@ -1,6 +1,6 @@
-# Application Deployment
+# Deployment Guides
 
-This guide introduces the different ways to deploy virtualized applications using Turbo technology. Applications can be deployed as:
+This section provides comprehensive guides for deploying virtualized applications using Turbo technology. Applications can be deployed as:
 
 - Standalone executables (EXE/MSI) for traditional software distribution
 - Virtual application packages (.svm) for advanced deployment scenarios
@@ -10,7 +10,7 @@ This guide introduces the different ways to deploy virtualized applications usin
 - Contact us for custom-built applications (contact [sales@turbo.net](mailto:sales@turbo.net))
 - Build your own using [Turbo Studio](/studio/working-with-turbo-studio/)
 
-We'll explore deployment methods from simplest to most advanced, progressively adding components to enable more capabilities.
+These guides will explore deployment methods from simplest to most advanced, progressively adding components to enable more capabilities.
 
 ::: tip What you'll learn
 - Understanding deployment methods from basic to advanced
@@ -49,10 +49,48 @@ Turbo offers multiple deployment methods that build upon each other as you add c
 
 Choose the method that best matches your needs, or combine multiple approaches in hybrid deployments.
 
-## 1. Standalone Application Deployment
+## Implementation Guides
 
-For environments with existing software distribution systems, you can convert .svm packages into standalone executables:
+### Basic Deployment
+- [Building Standalone Applications](/studio/working-with-turbo-studio/standalone-executables.md)
+- [Software Distribution Integration](/guides/integrations/system-center.md)
 
+### Desktop Management
+- [Turbo Client Guide](/guides/client/turbo-client.md)
+- [Image Repository Setup](/guides/server/hub-setup.md)
+
+### Enterprise Deployment
+- [Workspace Management](/guides/server/workspaces.md)
+- [VDI Integration](/server/setup-and-deployment/VDI.md)
+- [Server Deployment](/guides/server/index.md)
+
+## Choosing Your Approach
+
+Consider these factors when selecting a deployment method:
+
+1. Infrastructure Requirements
+   - Existing deployment tools
+   - Network capabilities
+   - Management resources
+   - Security requirements
+
+2. User Needs
+   - Application access patterns
+   - Device types
+   - Offline requirements
+   - Performance expectations
+
+3. Management Requirements
+   - Update frequency
+   - Usage tracking
+   - Settings control
+   - License management
+
+## Detailed Deployment Guides
+
+### 1. Standalone Application Deployment
+
+For environments with existing software distribution systems:
 - Package applications as self-contained EXE/MSI files
 - Deploy through existing distribution tools
 - No Turbo infrastructure required
@@ -63,11 +101,11 @@ For environments with existing software distribution systems, you can convert .s
 
 For details on building standalone executables, see the [Turbo Studio documentation](/studio/working-with-turbo-studio/standalone-executables.md).
 
-## 2. Desktop-Based Deployment
+### 2. Desktop-Based Deployment
 
-Installing Turbo Client on desktops enables direct management of .svm packages. This method offers two approaches for managing your application images:
+Installing Turbo Client on desktops enables direct management of .svm packages. This method offers two approaches:
 
-### Using Custom Image Repository
+#### Using Custom Image Repository
 - Store .svm packages on a network share
 - Install Turbo Client on desktops
 - Import packages using CLI commands:
@@ -83,7 +121,7 @@ Installing Turbo Client on desktops enables direct management of .svm packages. 
   - Full control over repository
   - Offline-capable environments
 
-### Using Turbo Server Hub
+#### Using Turbo Server Hub
 - Install Turbo Client on desktops
 - Connect to centralized Hub repository
 - Pull packages directly from Hub:
@@ -107,13 +145,13 @@ Both approaches provide:
 - Package version control
 - Offline execution capability
 
-For implementation details, see [Turbo Client Deployment](/deploying/client/turbo-client.md).
+For implementation details, see [Turbo Client Guide](/guides/client/turbo-client.md).
 
-## 3. Workspace-Based Deployment
+### 3. Workspace-Based Deployment
 
-Adding Turbo Server enables organization of .svm packages into workspaces for simplified deployment and management. This builds upon the Desktop-Based Deployment by adding:
+Adding Turbo Server enables organization of .svm packages into workspaces for simplified deployment and management:
 
-### Subscribing to a Workspace
+#### Subscribing to a Workspace
 - Group related packages into workspaces
 - Manage permissions at workspace level
 - Configure standardized settings
@@ -133,7 +171,7 @@ Adding Turbo Server enables organization of .svm packages into workspaces for si
   - Role-based deployment
   - Department-specific needs
 
-### Subscribing to all Workspaces
+#### Subscribing to all Workspaces
 - Deploy all workspaces to desktops
 - Example:
   ```
@@ -147,7 +185,7 @@ Adding Turbo Server enables organization of .svm packages into workspaces for si
   - Enterprise-wide deployment
   - Automated management
 
-### VDI Integration
+#### VDI Integration
 - Non-Persistent VDI:
   - Deploy via workspace subscription
   - Update gold image
@@ -172,13 +210,13 @@ All workspace deployments provide:
 - License tracking
 - Update control
 
-Learn more about [Workspace Management](/deploying/server/workspaces.md).
+Learn more about [Workspace Management](/guides/server/workspaces.md).
 
-## 4. Application Server-Based Streaming
+### 4. Application Server-Based Streaming
 
-Adding Application Servers enables Turbo applications to run on the server rather than on user devices. This complements other deployment methods by providing:
+Adding Application Servers enables server-side execution with these benefits:
 
-### Server-Side Execution
+#### Server-Side Execution
 - Applications run directly on Turbo Application Servers
 - No package download or local installation needed
 - Consistent execution environment across all users
@@ -188,7 +226,7 @@ Adding Application Servers enables Turbo applications to run on the server rathe
   - Resource-intensive applications
   - Controlled execution environment
 
-### Universal Access
+#### Universal Access
 - HTML5 browser-based streaming
 - Native Windows streaming client
 - Cross-platform compatibility
@@ -199,7 +237,7 @@ Adding Application Servers enables Turbo applications to run on the server rathe
   - Cross-platform access
   - Mobile workforce
 
-### Enhanced Security
+#### Enhanced Security
 - .svm packages remain secured on server
 - Controlled data access and permissions
 - Centralized updates and patching
@@ -221,43 +259,4 @@ All streaming deployments provide:
 - Session monitoring
 - Usage analytics
 
-For server deployment details, see [Server Deployment](/deploying/server/index.md).
-
-## Choosing Your Approach
-
-Consider these factors when selecting a deployment method:
-
-1. Infrastructure Requirements
-   - Existing deployment tools
-   - Network capabilities
-   - Management resources
-   - Security requirements
-
-2. User Needs
-   - Application access patterns
-   - Device types
-   - Offline requirements
-   - Performance expectations
-
-3. Management Requirements
-   - Update frequency
-   - Usage tracking
-   - Settings control
-   - License management
-
-## Implementation Guides
-
-Choose your deployment approach to learn more:
-
-### Basic Deployment
-- [Building Standalone Applications](/studio/working-with-turbo-studio/standalone-executables.md)
-- [Software Distribution Integration](/deploying/integrations/system-center.md)
-
-### Desktop Management
-- [Turbo Client Deployment](/deploying/client/turbo-client.md)
-- [Image Repository Setup](/deploying/server/hub-setup.md)
-
-### Enterprise Deployment
-- [Workspace Management](/deploying/server/workspaces.md)
-- [VDI Integration](/server/setup-and-deployment/VDI.md)
-- [Server Deployment](/deploying/server/index.md)
+For server deployment details, see [Server Deployment Guide](/guides/server/index.md).

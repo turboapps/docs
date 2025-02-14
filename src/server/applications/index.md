@@ -19,13 +19,13 @@ Applications can be accessed through:
 - Run applications on application servers
 - Access through HTML5 browser or native client
 - No local installation required
-- For setup details, see [Application Server Deployment](/deploying/server/application-servers.md)
+- For setup details, see [Application Server Deployment](/guides/server/application-servers.md)
 
 ## Application Sources
 
 Applications can be obtained through multiple methods:
 - Package using [Turbo Studio](/studio/)
 - Import from the [Hub](/server/administration/hub.html#importing-repositories)
-- Install natively on [Application Servers](/deploying/server/application-servers.md)
+- Install natively on [Application Servers](/guides/server/application-servers.md)
 
 For detailed server deployment instructions, see [Deploying On-Premises](/server/setup-and-deployment/deploying-on-premises.md).
