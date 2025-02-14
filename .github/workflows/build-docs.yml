@@ -31,7 +31,7 @@ jobs:
           turbo.azurecr.io/docs:latest
 
     - name: Login to Azure Container Registry
-      if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+      if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/master'
       uses: azure/docker-login@v1
       with:
         login-server: turbo.azurecr.io
@@ -39,13 +39,13 @@ jobs:
         password: ${{ secrets.TURBO_REGISTRY_APP_PASSWORD }}
 
     - name: Push Docker image
-      if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+      if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/master'
       run: |
         docker push turbo.azurecr.io/docs:${{ steps.date.outputs.date }}.${{ github.run_number }}
         docker push turbo.azurecr.io/docs:latest
 
     - name: Notify Private Repo
-      if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+      if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/master'
       uses: peter-evans/repository-dispatch@v2
       with:
         token: ${{ secrets.CODESYSTEMS_PAT }}
