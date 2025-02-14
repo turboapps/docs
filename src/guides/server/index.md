@@ -1,86 +1,101 @@
-# Application Deployment
+# Enterprise Deployment with Turbo Server
 
-This guide introduces the different ways to deploy virtualized applications using Turbo technology. Applications can be deployed as:
+This section covers enterprise deployment of virtual applications using Turbo Server, providing centralized management and automated deployment through workspaces.
 
-- Standalone executables (EXE/MSI) for traditional software distribution
-- Virtual application packages (.svm) for advanced deployment scenarios
+::: tip What you'll learn
+- Turbo Server overview and capabilities
+- Hub and workspace management
+- Application deployment and configuration
+- Application server deployment
+- Client subscription setup
+:::
 
-.svm packages can be obtained through several methods:
-- Pull pre-packaged applications from our [public hub](https://turbo.net/hub)
-- Contact us for custom-built applications (contact [sales@turbo.net](mailto:sales@turbo.net))
-- Build your own using [Turbo Studio](/studio/working-with-turbo-studio/)
+## Overview
 
-## Server-Side Deployment
+Turbo Server provides enterprise-grade deployment capabilities:
 
-Adding Application Servers enables Turbo applications to run on the server rather than on user devices. This provides:
+### Hub Server
+- Central repository for virtual applications
+- Version management and control
+- Access control and permissions
+- Federation capabilities
 
-### Server-Side Execution
-- Applications run directly on Turbo Application Servers
-- No package download or local installation needed
-- Consistent execution environment across all users
-- Centralized resource management
-- Suitable for:
-  - High-performance needs
-  - Resource-intensive applications
-  - Controlled execution environment
+### Workspace Management
+- Organize applications by team or function
+- Configure access controls and permissions
+- Manage application settings
+- Define update policies
+- Monitor usage analytics
 
-### Universal Access
-- HTML5 browser-based streaming
-- Native Windows streaming client
-- Cross-platform compatibility
-- Mobile device support
-- Suitable for:
-  - BYOD environments
-  - Remote work scenarios
-  - Cross-platform access
-  - Mobile workforce
+### Application Servers
+- Host running applications in the cloud
+- Enable non-Windows clients to run virtual applications
+- Browser-based access through HTML5
+- Load balancing and scaling
 
-### Enhanced Security
-- .svm packages remain secured on server
-- Controlled data access and permissions
-- Centralized updates and patching
-- Complete session isolation
-- Security features:
-  - Role-based access control
-  - Session encryption
-  - Activity monitoring
-  - Data protection
-- Suitable for:
-  - High-security environments
-  - Data protection requirements
-  - Compliance needs
-  - Contractor access
+For deployment details, see [Application Server Deployment](application-servers.md).
 
-All streaming deployments provide:
-- Centralized management
-- Resource optimization
-- Session monitoring
+## Key Features
+
+### Application Management
+- Version control
+- Update management
+- License tracking
+- Usage monitoring
+
+### User Management
+- Active Directory integration
+- SAML authentication
+- Role-based access
+- Group policies
+
+### Workspace Control
+- Application grouping
+- Access permissions
+- Settings management
+- Update policies
+
+### Monitoring
 - Usage analytics
+- Performance metrics
+- Health monitoring
+- Audit logging
 
-## Implementation Requirements
+## Getting Started
 
-Consider these factors when implementing server-based deployment:
+1. Review [system requirements](/server/setup-and-deployment/deploying-on-premises.md)
+2. Set up your [Hub Server](hub-setup.md)
+3. Configure [API Keys](api-keys.md) for automation
+4. Create [Workspaces](workspaces.md) for applications
+5. Deploy using [Subscriptions](subscriptions.md)
+6. Add [Application Servers](application-servers.md) for streaming
 
-1. Infrastructure Requirements
-   - Network capabilities
-   - Server resources
-   - Storage requirements
-   - Load balancing needs
+## Administration
 
-2. User Access Patterns
-   - Peak usage times
-   - Concurrent user loads
-   - Geographic distribution
-   - Device types
+### Hub Management
+Access the Hub administration page to:
+- Manage repositories
+- Configure access controls
+- Set up federation
+- Monitor usage
 
-3. Management Requirements
-   - Update schedules
-   - Monitoring needs
-   - Backup strategies
-   - Disaster recovery plans
+For details, see [Hub Administration](/server/administration/hub.md).
 
-## Next Steps
+### Workspace Management
+Use the Workspace administration page to:
+- Add and configure applications
+- Set up user permissions
+- Configure desktop integration
+- Manage application settings
 
-- [Workspace Management](/guides/server/workspaces.md)
-- [VDI Integration](/server/setup-and-deployment/VDI.md)
-- [Hub Setup](/guides/server/hub-setup.md)
+For details, see [Workspace Administration](/server/administration/workspaces.md).
+
+### Application Configuration
+Configure applications through the web interface:
+- Launch settings
+- Isolation options
+- Network settings
+- Desktop integration
+- License management
+
+For details, see [Application Settings](/server/administration/workspaces.md#workspace-applications).
