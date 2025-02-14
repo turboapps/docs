@@ -47,23 +47,26 @@ The Turbo Client needs to be configured with an image repository location and ot
 
 Select the appropriate repository setup for your environment:
 
-1. **Local Repository**:
+1. **Local Repository** (for desktops with sufficient storage):
    ```bash
    # Configure local system-wide repository
    turbo config --image-path=allusers --all-users
    ```
-   This stores images in `C:\ProgramData\Turbo\Containers\repo`, providing system-wide read-only access to all users
+   This stores images in `C:\ProgramData\Turbo\Containers\repo`, providing:
+   - Fastest possible application launch times
+   - System-wide access to all users
+   - No network dependency for image access
 
-2. **Network Repository** (for shared storage across desktops):
+2. **Network Repository** (for shared image storage):
    ```bash
    # Create and configure network share repository
    turbo config --image-path=\\server\turbo-images --all-users
    ```
-   The network share should be:
-   - Accessible to all client machines
-   - Have sufficient storage capacity
-   - Properly secured with appropriate access controls
-   - Low latency and high throughput to ensure fast application launches
+   Using a network share enables:
+   - Multiple desktops sharing the same image cache
+   - Reduced storage requirements per desktop
+   - Support for non-persistent desktops
+   - Centralized image management
 
 #### Additional Configuration
 
@@ -79,20 +82,19 @@ turbo config --as-override
 
 The `--as-override` flag ensures settings cannot be overridden by individual users, maintaining consistency across the organization. For more configuration options, see the [config command reference](/client/command-line/config.md).
 
-### Step 3: Add Images to Repository
+## Application Deployment
 
-After configuring the repository, add application images using one of these methods:
+### Step 1: Add Application Images
+
+Before installing applications, add their images to your configured repository using one of these methods:
 
 #### For Network-Connected Environments
-Pull images directly from the Turbo Hub:
+Images are automatically pulled when needed, but you can pre-cache them:
 ```bash
-# Pull required base images
-turbo pull /xvm,windows/base,windows/clean --all-users
-
-# Pull application image(s)
+# Cache images for faster application installation (windows/clean required for full iso)
+turbo pull turbo pull /xvm,windows/base,windows/clean --all-users
 turbo pull firefox --all-users
 ```
-Images are automatically cached in your configured repository location.
 
 #### For Offline Environments
 Import images from removable media or network shares:
@@ -102,11 +104,9 @@ turbo import svm -n=/xvm:24.4.10 --all-users path\to\xvm_24.4.10.svm
 turbo import svm -n=windows/base:2 --all-users path\to\windows_base_2.svm
 turbo import svm -n=firefox --all-users path\to\firefox.svm
 ```
-This method requires pre-downloading or transferring the .svm files to your environment.
+This method requires downloading and transferring the .svm files to your environment.
 
-## Application Deployment
-
-### Step 1: Install Applications
+### Step 2: Install Applications
 
 Install applications with options appropriate for your deployment needs:
 
@@ -114,14 +114,16 @@ Install applications with options appropriate for your deployment needs:
 # Standard installation with full desktop integration
 turbo installi --all-users firefox
 
-# Installation with custom startup arguments (passed to application at launch)
+# Installation with custom startup arguments
 turbo installi --all-users firefox -- --private-window --no-remote
 turbo installi --all-users chrome -- --incognito --no-first-run
 turbo installi --all-users vscode -- --new-window --disable-gpu
 
 # Offline installation (requires pre-pulled images)
-turbo installi --all-users firefox --offline --pull
-turbo installi --all-users firefox --offline --vm=24.4.10  # With specific VM version
+turbo installi --all-users firefox --offline
+
+# Installation with specific VM version (using cached image)
+turbo installi --all-users firefox --vm=24.4.10
 
 # Control desktop integration features
 turbo installi --all-users firefox \
@@ -130,7 +132,7 @@ turbo installi --all-users firefox \
     --no-url-handlers \        # Skip URL protocol handlers
     --no-shell-extensions      # Skip shell extensions
 
-# Server application installation with Windows services
+# Install application with Windows services
 turbo installi --all-users sql-server --register-services
 
 # Application with font management
@@ -151,7 +153,7 @@ The installi command provides extensive customization options:
 
 For complete command options, see [installi command reference](/client/command-line/installi.md).
 
-### Step 2: Verify Installation
+### Step 3: Verify Installation
 
 ```bash
 # List installed applications
