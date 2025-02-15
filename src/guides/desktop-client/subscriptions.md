@@ -1,12 +1,19 @@
 # Deploy Using Subscriptions
 
-This guide covers deploying applications using Turbo Server workspaces and subscriptions. While the [Desktop Client deployment guide](/guides/deploy-using-desktop-client.md) shows how to deploy individual applications, subscriptions provide a more powerful way to manage applications across your organization.
+This guide covers deploying applications using Turbo Server workspaces and subscriptions. While the [Desktop Client deployment guide](index.md) shows how to deploy individual applications, subscriptions provide a more powerful way to manage applications across your organization.
+
+::: tip What you'll learn
+- How to configure the Turbo Client for subscriptions
+- How to subscribe to and manage workspaces
+- How to control desktop integration settings
+- How to enable offline access
+- How to troubleshoot common subscription issues
+:::
 
 ::: tip Prerequisites
-Before using subscriptions, you need:
-1. A configured Turbo Server installation
-2. Workspaces set up with your applications
-3. Turbo Desktop Client installed on end-user machines
+- Turbo Server installation
+- Configured workspaces with applications
+- Turbo Desktop Client installed on end-user machines
 :::
 
 ## Understanding Subscriptions
@@ -109,7 +116,6 @@ turbo subscription register development-tools --offline
 
 ### Standard Office Environment
 
-For typical office deployments:
 1. Create workspaces for different departments
 2. Users subscribe to their department workspace
 3. Applications automatically update when new versions are published
@@ -122,7 +128,6 @@ turbo subscribe accounting-apps --register
 
 ### Development Environment
 
-For development teams:
 1. Create workspaces with development tools
 2. Include required runtimes and SDKs
 3. Configure appropriate isolation settings
@@ -135,8 +140,6 @@ turbo subscribe development-tools \
 ```
 
 ### VDI Environment
-
-For virtual desktop infrastructure:
 
 #### Non-Persistent VDI
 Update the gold image with required applications:
