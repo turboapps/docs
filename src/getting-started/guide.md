@@ -130,19 +130,6 @@ The [Turbo.net Hub](https://hub.turbo.net) is a public repository of pre-configu
 - Multiple versions of popular software
 - Regular updates and maintenance
 
-::: tip Enterprise Users
-For enterprise deployments, [Turbo Server](/server/) provides:
-- Web portal for flexible application delivery
-  - Stream applications directly in the browser
-  - Install applications locally
-  - Run applications on-demand
-- Workspace-based application management
-- Automatic application updates through workspace subscriptions
-- Federation with the public hub for application updates
-- User access controls
-- Usage analytics
-:::
-
 ## Next Steps
 
 Now that you're familiar with basic Turbo operations, you can:
@@ -152,12 +139,3 @@ Now that you're familiar with basic Turbo operations, you can:
 3. Learn about [Studio](/studio/) to create your own virtual applications
 4. Set up [Server](/server/) for enterprise deployment
 5. Review [deployment options](/guides/) for various scenarios
-
-::: tip Enterprise Deployment
-Looking to deploy Turbo in your organization? [Turbo Server](/server/) provides enterprise features like:
-- Flexible application delivery through web portal
-- Workspace-based application management
-- Automatic updates through workspace subscriptions
-- Federation with the public hub
-- Advanced security and management features
-:::

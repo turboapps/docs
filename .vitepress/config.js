@@ -96,7 +96,8 @@ export default defineConfig({
                 },
                 { text: 'Intune', link: '/guides/integrations/intune' },
                 { text: 'Parallels RAS', link: '/guides/integrations/parallels-ras' },
-                { text: 'System Center', link: '/guides/integrations/system-center' }
+                { text: 'System Center', link: '/guides/integrations/system-center' },
+                { text: 'Windows Virtual Desktop', link: '/guides/integrations/windows-virtual-desktop' }
               ]
             }
           ]
@@ -308,8 +309,7 @@ export default defineConfig({
                 { text: 'Prerequisites', link: '/server/setup-and-deployment/prerequisites' },
                 { text: 'Deploying On-Premises', link: '/server/setup-and-deployment/deploying-on-premises' },
                 { text: 'Deploying to Azure', link: '/server/setup-and-deployment/deploying-to-azure' },
-                { text: 'External Application Server', link: '/server/setup-and-deployment/deploying-external-application-server' },
-                { text: 'VDI', link: '/server/setup-and-deployment/VDI' }
+                { text: 'External Application Server', link: '/server/setup-and-deployment/deploying-external-application-server' }
               ]
             },
             {
