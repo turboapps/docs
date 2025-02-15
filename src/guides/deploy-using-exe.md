@@ -2,6 +2,12 @@
 
 The following guide covers a deployment example where Turbo-packaged EXE applications are deployed via a network share or direct to a user's system.
 
+::: tip Prerequisites
+Before proceeding with this guide, ensure you have:
+- [Turbo Studio](/studio/) installed on your system
+- Installation files (setup.exe, MSI, etc.) for the application you want to package
+:::
+
 ## Overview
 
 The standalone application EXEs enable simple deployment of virtual applications by distributing self-contained portable EXEs. This approach is ideal for:
@@ -36,4 +42,4 @@ It is recommended to test the standalone application EXE by copying it to a test
    
 ## Troubleshooting
 
-If your standalone application EXE is not functioning properly, see the [Application Troubleshooting](/client/turbo-vm/troubleshooting/troubleshooting.html) section.
+If your standalone application EXE is not functioning properly, see the [Application Troubleshooting](/client/turbo-vm/troubleshooting/) section.

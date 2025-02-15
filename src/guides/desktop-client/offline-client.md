@@ -86,7 +86,7 @@ This is done by setting the image path to a read-only location for all users on 
    turbo import svm -n=windows/clean:42 \\networkshare\turbo\packages\windows_clean\windows_clean_42.svm --all-users
    ```
 
-4. Import the SVM packaged applications that have been created with [Turbo Studio](/studio/working-with-turbo-studio) to the client's image repository.
+4. Import the SVM packaged applications that have been created with [Turbo Studio](/studio/) to the client's image repository.
    ```bash
    # Import SVM from network folder
    # Caution: network errors or intermittent network issues may cause the command to fail and need to be re-run
@@ -286,4 +286,4 @@ When opening a case with Turbo Support, please include these logs in addition to
 
 ### Applications
 
-For Turbo-packaged applications that are not functioning properly, see the [Application Troubleshooting](/client/turbo-vm/troubleshooting/troubleshooting.html) section.
+For Turbo-packaged applications that are not functioning properly, see the [Application Troubleshooting](/client/turbo-vm/troubleshooting/) section.

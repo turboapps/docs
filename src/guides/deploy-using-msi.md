@@ -2,6 +2,12 @@
 
 The following guide covers a deployment example where Turbo-packaged MSI applications are deployed using a centralized deployment system such as SCCM or Intune.
 
+::: tip Prerequisites
+Before proceeding with this guide, ensure you have:
+- [Turbo Studio](/studio/) installed on your system
+- Installation files (setup.exe, MSI, etc.) for the application you want to package
+:::
+
 ## Overview
 
 Turbo Studio can package the standalone application EXEs in an MSI wrapper that will integrate the application shortcuts and file associations defined in the XAPPL to the user's desktop during installation, making the packaged application feel like a native install to end users. This approach is ideal for:
@@ -42,11 +48,11 @@ Then, launch the application using its shortcuts and registered file extensions 
 
 ![Output MSI Installer](/images/deploy-msi-output.png)
 
-4. Typical deployment of MSI installer outputs:
+5. Typical deployment of MSI installer outputs:
    - Use a centralized deployment system such as SCCM or Intune.
    - Copy the MSI installer to the user's system and install it.
    - Make the MSI installer available to download from a website or SharePoint page for users in BYOD environments.
    
 ## Troubleshooting
 
-If your standalone application EXE is not functioning properly, see the [Application Troubleshooting](/client/turbo-vm/troubleshooting/troubleshooting.html) section.
+If your MSI installer is not functioning properly, see the [Application Troubleshooting](/client/turbo-vm/troubleshooting/) section.

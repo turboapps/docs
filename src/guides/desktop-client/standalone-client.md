@@ -55,7 +55,7 @@ This is done by setting the image path to a read-only location for all users on 
    turbo pull /xvm,windows/base,windows/clean --all-users
    ```
 
-4. Import the SVM packaged applications that have been created with [Turbo Studio](/studio/working-with-turbo-studio) to the client's image repository.  
+4. Import the SVM packaged applications that have been created with [Turbo Studio](/studio/) to the client's image repository.
 Application SVMs can also be pulled from Turbo.net Hub.
    ```bash
    # Pull SVM from Turbo.net Hub
@@ -241,4 +241,4 @@ When opening a case with Turbo Support, please include these logs in addition to
 
 ### Applications
 
-For Turbo-packaged applications that are not functioning properly, see the [Application Troubleshooting](/client/turbo-vm/troubleshooting/troubleshooting.html) section.
+For Turbo-packaged applications that are not functioning properly, see the [Application Troubleshooting](/client/turbo-vm/troubleshooting/) section.

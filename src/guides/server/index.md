@@ -67,8 +67,7 @@ For deployment details, see [Application Server Deployment](application-servers.
 2. Set up your [Hub Server](hub-setup.md)
 3. Configure [API Keys](api-keys.md) for automation
 4. Create [Workspaces](workspaces.md) for applications
-5. Deploy using [Subscriptions](subscriptions.md)
-6. Add [Application Servers](application-servers.md) for streaming
+5. Add [Application Servers](application-servers.md) for streaming
 
 ## Administration
 

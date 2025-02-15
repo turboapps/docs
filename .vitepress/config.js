@@ -60,7 +60,7 @@ export default defineConfig({
           items: [
             { text: 'Introduction', link: '/guides/' },
             {
-              text: 'Desktop Client',
+              text: 'Deploy Using Client',
               collapsed: true,
               items: [
                 { text: 'Overview', link: '/guides/desktop-client/' },
@@ -69,19 +69,8 @@ export default defineConfig({
                 { text: 'Subscriptions', link: '/guides/desktop-client/subscriptions' }
               ]
             },
-            {
-              text: 'Server',
-              collapsed: true,
-              items: [
-                { text: 'Overview', link: '/guides/server/index' },
-                { text: 'Hub Setup', link: '/guides/server/hub-setup' },
-                { text: 'API Keys', link: '/guides/server/api-keys' },
-                { text: 'Workspaces', link: '/guides/server/workspaces' },
-                { text: 'Application Servers', link: '/guides/server/application-servers' }
-              ]
-            },
-			      { text: 'Deploy Using EXE', link: '/guides/deploy-using-exe' },
-			      { text: 'Deploy Using MSI', link: '/guides/deploy-using-msi' },
+            { text: 'Deploy Using EXE', link: '/guides/deploy-using-exe' },
+            { text: 'Deploy Using MSI', link: '/guides/deploy-using-msi' },
             {
               text: 'Platform Integrations',
               collapsed: true,
@@ -101,7 +90,18 @@ export default defineConfig({
                 { text: 'System Center', link: '/guides/integrations/system-center' },
                 { text: 'Windows Virtual Desktop', link: '/guides/integrations/windows-virtual-desktop' }
               ]
-            }
+            },            
+            {
+              text: 'Setup Server',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/guides/server/index' },
+                { text: 'Hub Setup', link: '/guides/server/hub-setup' },
+                { text: 'API Keys', link: '/guides/server/api-keys' },
+                { text: 'Workspaces', link: '/guides/server/workspaces' },
+                { text: 'Application Servers', link: '/guides/server/application-servers' }
+              ]
+            },
           ]
         }
       ],
@@ -220,7 +220,7 @@ export default defineConfig({
                   text: 'Troubleshooting',
                   collapsed: true,
                   items: [
-                    { text: 'Overview', link: '/client/turbo-vm/troubleshooting/troubleshooting' },
+                    { text: 'Overview', link: '/client/turbo-vm/troubleshooting/index' },
                     { text: 'Analyzing Logs', link: '/client/turbo-vm/troubleshooting/analyzing-logs' },
                     { text: 'Antivirus & Security', link: '/client/turbo-vm/troubleshooting/antivirus-security' },
                     { text: 'Common Errors', link: '/client/turbo-vm/troubleshooting/common-errors' },
