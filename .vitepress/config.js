@@ -53,6 +53,55 @@ export default defineConfig({
           ]
         }
       ],
+      '/guides/': [
+        {
+          text: 'Guides',
+          collapsed: false,
+          items: [
+            { text: 'Introduction', link: '/guides/' },
+            {
+              text: 'Desktop Client',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/guides/desktop-client/' },
+                { text: 'Standalone Client', link: '/guides/desktop-client/standalone-client' },
+                { text: 'Offline Client', link: '/guides/desktop-client/offline-client' },
+                { text: 'Subscriptions', link: '/guides/desktop-client/subscriptions' }
+              ]
+            },
+            {
+              text: 'Server',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/guides/server/index' },
+                { text: 'Hub Setup', link: '/guides/server/hub-setup' },
+                { text: 'API Keys', link: '/guides/server/api-keys' },
+                { text: 'Workspaces', link: '/guides/server/workspaces' },
+                { text: 'Application Servers', link: '/guides/server/application-servers' }
+              ]
+            },
+            {
+              text: 'Platform Integrations',
+              collapsed: true,
+              items: [
+                { text: 'AWS AppStream', link: '/guides/integrations/aws-appstream' },
+                {
+                  text: 'Citrix',
+                  collapsed: true,
+                  items: [
+                    { text: 'Overview', link: '/guides/integrations/citrix-guide/' },
+                    { text: 'Command Line', link: '/guides/integrations/citrix-guide/command-line' },
+                    { text: 'Scripts', link: '/guides/integrations/citrix-guide/scripts' }
+                  ]
+                },
+                { text: 'Intune', link: '/guides/integrations/intune' },
+                { text: 'Parallels RAS', link: '/guides/integrations/parallels-ras' },
+                { text: 'System Center', link: '/guides/integrations/system-center' }
+              ]
+            }
+          ]
+        }
+      ],
       '/client/': [
         {
           text: 'Client',
@@ -407,49 +456,6 @@ export default defineConfig({
           text: 'VM',
           collapsed: true,
           items: generateReleaseVersions('vm')
-        }
-      ],
-      '/guides/': [
-        {
-          text: 'Guides',
-          collapsed: false,
-          items: [
-            { text: 'Introduction', link: '/guides/' },
-            { text: 'Deploy Using Desktop Client', link: '/guides/deploy-using-desktop-client' },
-            { text: 'Deploy Standalone Client', link: '/guides/client/deploy-standalone-client' },
-            { text: 'Deploy Offline Client', link: '/guides/client/deploy-offline-client' },
-            { text: 'Deploy Using Subscriptions', link: '/guides/deploy-using-subscriptions' },
-            {
-              text: 'Server',
-              collapsed: true,
-              items: [
-                { text: 'Overview', link: '/guides/server/index' },
-                { text: 'Hub Setup', link: '/guides/server/hub-setup' },
-                { text: 'API Keys', link: '/guides/server/api-keys' },
-                { text: 'Workspaces', link: '/guides/server/workspaces' },
-                { text: 'Application Servers', link: '/guides/server/application-servers' }
-              ]
-            },
-            {
-              text: 'Platform Integrations',
-              collapsed: true,
-              items: [
-                { text: 'AWS AppStream', link: '/guides/integrations/aws-appstream' },
-                {
-                  text: 'Citrix',
-                  collapsed: true,
-                  items: [
-                    { text: 'Overview', link: '/guides/integrations/citrix-guide/' },
-                    { text: 'Command Line', link: '/guides/integrations/citrix-guide/command-line' },
-                    { text: 'Scripts', link: '/guides/integrations/citrix-guide/scripts' }
-                  ]
-                },
-                { text: 'Intune', link: '/guides/integrations/intune' },
-                { text: 'Parallels RAS', link: '/guides/integrations/parallels-ras' },
-                { text: 'System Center', link: '/guides/integrations/system-center' }
-              ]
-            }
-          ]
         }
       ]
     }

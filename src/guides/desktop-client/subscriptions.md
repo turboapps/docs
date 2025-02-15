@@ -1,6 +1,6 @@
 # Deploy Using Subscriptions
 
-This guide covers deploying applications using Turbo Server workspaces and subscriptions. While the [Desktop Client deployment guide](/guides/deploy-using-desktop-client.md) shows how to deploy individual applications, subscriptions provide a more powerful way to manage applications across your organization.
+This guide covers deploying applications using Turbo Server workspaces and subscriptions. While the [Desktop Client deployment guide](index.md) shows how to deploy individual applications, subscriptions provide a more powerful way to manage applications across your organization.
 
 ::: tip Prerequisites
 Before using subscriptions, you need:

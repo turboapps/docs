@@ -1,6 +1,6 @@
-# Standalone Client
+# Offline Client
 
-The following guide covers a deployment example where Turbo-packaged SVM applications are deployed using the Turbo Client without a Turbo Server.
+The following guide covers a deployment example where Turbo-packaged SVM applications are deployed using the Turbo Client in complete offline mode.
 
 ## Overview
 
@@ -8,21 +8,46 @@ The Turbo Client enables direct deployment of virtual applications without requi
 - Small-scale deployments
 - Environments requiring direct control
 - Development and testing environments
+- Environments with no external internet access
 
-## Standalone Client Deployment Example
+## Offline Client Deployment Example
 
-1. Download and install the [Turbo Client](https://turbo.net/download) for all users on the system.
+1. Prepare the required container base images from Turbo.net Hub on a network share using a system that has access to Turbo.net Hub.  
+The system must have the Turbo Client to pull the images.
    ```bash
-   # Silent system-wide installation using EXE installer.
-   turbo-client-installer.exe --all-users --silent
+   # Pull the SVM images from Turbo.net Hub to the client's repository.
+   turbo pull /xvm,windows/base,windows/clean
+   Pulling VM version 25.2.3
+   Pull complete
+   Pulling image base version 2
+   Pull complete
+   Pulling image clean version 42
+   Pull complete
+
+   # Export the SVM image files to a network share.
+   turbo export /xvm:25.2.3 \\networkshare\turbo\packages\xvm\xvm_25.2.3.svm
+   turbo export windows/base:2 \\networkshare\turbo\packages\windows_base\windows_base_2.svm
+   turbo export windows/clean:42 \\networkshare\turbo\packages\windows_clean\windows_clean_42.svm
+   ```
+   
+The same process may be used to pull application images from Turbo.net Hub as well.
+   ```bash
+   turbo pull adobe/photoshop:26.3.0.156
+   turbo export adobe/photoshop:26.3.0.156 \\networkshare\turbo\packages\adobe_photoshop\adobe_photoshop_26.3.0.156.svm
+   ```
+
+2. Download and install the [Turbo Client](https://turbo.net/download) for all users on the deployment system.
+   ```bash
+   # Silent system-wide installation using EXE installer in offline mode.
+   turbo-client-installer.exe --all-users --offline --silent
    
    # Silent system-wide installation using MSI installer.
-   start /wait msiexec /i "turbo-client-installer.msi" /qn 
+   start /wait msiexec /i "turbo-client-installer.msi" cmdline="--offline" /qn 
    ```
    The Turbo Client updates the **PATH** environmtne variable to include its binary folder.  
    A new command prompt with an updated **PATH** variable should be opened before executing **turbo** commands.
 
-2. (Optional) Lock down the image repository, so end users are unable to download or add new images without administrative priviledges.  
+3. (Optional) Lock down the image repository, so end users are unable to download or add new images without administrative priviledges.  
 This is done by setting the image path to a read-only location for all users on the system and locking the turbo config settings.
    ```bash
    # Set the image path to allusers (equivalent to C:\ProgramData\Turbo\Containers\repo).
@@ -38,27 +63,24 @@ This is done by setting the image path to a read-only location for all users on 
    # Lock turbo configuration.
    turbo config --as-override --all-users
    ```
-   
-3. Pull the required container base images from Turbo.net Hub to the image repository.
+
+4. Import the required container base images from the network share to the client's image repository.
    ```bash
-   turbo pull /xvm,windows/base,windows/clean --all-users
+   turbo import svm -n=/xvm:25.2.3 \\networkshare\turbo\packages\xvm\xvm_25.2.3.svm --all-users
+   turbo import svm -n=windows/base:2 \\networkshare\turbo\packages\windows_base\windows_base_2.svm --all-users
+   turbo import svm -n=windows/clean:42 \\networkshare\turbo\packages\windows_clean\windows_clean_42.svm --all-users
    ```
 
-4. Import the SVM packaged applications that have been created with [Turbo Studio](/studio/working-with-turbo-studio.html) to the client's image repository.  
-Application SVMs can also be pulled from Turbo.net Hub.
+5. Import the SVM packaged applications that have been created with [Turbo Studio](/studio/working-with-turbo-studio) to the client's image repository.
    ```bash
-   # Pull SVM from Turbo.net Hub.
-   turbo pull adobe/photoshop:26.3.0.156 --all-users
-   
-   # Import SVM from a local folder.
-   turbo import svm -n=tableau/tableaupublic-x64:2024.3.3 C:\temp\tableau_tableaupublic-x64_2024.3.3.svm --all-users
-   
    # Import SVM from network folder.
    # Caution: network errors or intermittent network issues may cause the command to fail and need to be re-run.
+   turbo import svm -n=adobe/photoshop:26.3.0.156 \\networkshare\turbo\packages\adobe_photoshop\adobe_photoshop_26.3.0.156.svm --all-users
+   turbo import svm -n=tableau/tableaupublic-x64:2024.3.3 \\networkshare\turbo\packages\tableau_tableaupublic-x64\tableau_tableaupublic-x64_2024.3.3.svm --all-users
    turbo import svm -n=mozilla/firefox-esr-x64:128.6 \\networkshare\turbo\packages\mozilla_firefox-esr-x64\mozilla_firefox-esr-x64_128.6.svm --all-users
    ```
    
-5. (Recommended) Cache the SVM images for faster application launches and smaller sandbox sizes.  
+6. (Recommended) Cache the SVM images for faster application launches and smaller sandbox sizes.  
 Caching will export the executable binaries to the assemblies folder under the image repository path.
    ```bash
    turbo cache adobe/photoshop:26.3.0.156 --all-users
@@ -66,7 +88,7 @@ Caching will export the executable binaries to the assemblies folder under the i
    turbo cache mozilla/firefox-esr-x64:128.6 --all-users
    ```
 
-6. Install the applications in offline mode as there is no Turbo Server to connect to.  
+7. Install the applications in offline mode.
 See the [turbo installi](/client/command-line/installi.html) command for more information.
 
    - Example 1: install Photoshop with merge container isolation.
@@ -101,8 +123,8 @@ Turbo Client's CLI interface can be used to fully script the process for unatten
    ```bash
    # Example Unattended Deployment Script
    
-   # Silent system-wide installation using EXE installer.
-   turbo-client-installer.exe --all-users --silent
+   # Silent system-wide installation using EXE installer in offline mode.
+   turbo-client-installer.exe --offline --all-users --silent
       
    # Set the image path to allusers (equivalent to C:\ProgramData\Turbo\Containers\repo).
    # Note: specify the full path to turbo.exe as the PATH environment will not be updated inside the script.
@@ -111,8 +133,10 @@ Turbo Client's CLI interface can be used to fully script the process for unatten
    # Lock turbo configuration.
    C:\Program Files (x86)\Turbo\Cmd\turbo.exe config --as-override --all-users
    
-   # Pull base images from Turbo.net Hub.
-   C:\Program Files (x86)\Turbo\Cmd\turbo.exe pull xvm,base,clean --all-users
+   # Import base images from network share.
+   turbo import svm -n=/xvm:25.2.3 \\networkshare\turbo\packages\xvm\xvm_25.2.3.svm --all-users
+   turbo import svm -n=windows/base:2 \\networkshare\turbo\packages\windows_base\windows_base_2.svm --all-users
+   turbo import svm -n=windows/clean:42 \\networkshare\turbo\packages\windows_clean\windows_clean_42.svm --all-users
    
    # Import application SVM packages from network share.
    C:\Program Files (x86)\Turbo\Cmd\turbo.exe import svm -n=adobe/photoshop:26.3.0.156 \\networkshare\turbo\packages\adobe_photoshop\adobe_photoshop_26.3.0.156.svm --all-users
@@ -167,9 +191,26 @@ Turbo regularly releases updates for the Turbo VM and other container base image
 - Base: https://hub.turbo.net/run/windows/base
 - Clean: https://hub.turbo.net/run/windows/clean
 
-Pull the images from Turbo.net Hub to receive the updates:
+To receive the updates, repeat the container base image prepartion.
 ```bash
-turbo pull /xvm,windows/base,windows/clean --all-users
+# Pull and export the images from a system with external internet access and Turbo Client.
+turbo pull /xvm,windows/base,windows/clean
+Pulling VM version 25.5.6
+Pulling image base version 3
+Pulling image clean version 43
+
+turbo export /xvm:25.5.6 \\networkshare\turbo\packages\xvm\xvm_25.5.6.svm
+turbo export windows/base:3 \\networkshare\turbo\packages\windows_base\windows_base_3.svm
+turbo export windows/clean:43 \\networkshare\turbo\packages\windows_clean\windows_clean_43.svm
+```
+
+After staging the images, import them to the deployment system.
+
+```bash
+# Import new container base images on the deployment system.
+turbo import svm -n=/xvm:25.5.6 \\networkshare\turbo\packages\xvm\xvm_25.5.6.svm --all-users
+turbo import svm -n=windows/base:3 \\networkshare\turbo\packages\windows_base\windows_base_3.svm --all-users
+turbo import svm -n=windows/clean:43 \\networkshare\turbo\packages\windows_clean\windows_clean_43.svm --all-users
 ```
 
 For self-packaged applications, import a new application version to update the application.
