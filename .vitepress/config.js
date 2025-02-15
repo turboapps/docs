@@ -80,6 +80,8 @@ export default defineConfig({
                 { text: 'Application Servers', link: '/guides/server/application-servers' }
               ]
             },
+			      { text: 'Deploy Using EXE', link: '/guides/deploy-using-exe' },
+			      { text: 'Deploy Using MSI', link: '/guides/deploy-using-msi' },
             {
               text: 'Platform Integrations',
               collapsed: true,
