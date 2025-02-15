@@ -417,7 +417,8 @@ export default defineConfig({
             { text: 'Introduction', link: '/guides/' },
             { text: 'Deploy Using Desktop Client', link: '/guides/deploy-using-desktop-client' },
             { text: 'Deploy Standalone Client', link: '/guides/client/deploy-standalone-client' },
-    				{ text: 'Deploy Offline Client', link: '/guides/client/deploy-offline-client' },
+            { text: 'Deploy Offline Client', link: '/guides/client/deploy-offline-client' },
+            { text: 'Deploy Using Subscriptions', link: '/guides/deploy-using-subscriptions' },
             {
               text: 'Server',
               collapsed: true,
@@ -426,7 +427,6 @@ export default defineConfig({
                 { text: 'Hub Setup', link: '/guides/server/hub-setup' },
                 { text: 'API Keys', link: '/guides/server/api-keys' },
                 { text: 'Workspaces', link: '/guides/server/workspaces' },
-                { text: 'Subscriptions', link: '/guides/server/subscriptions' },
                 { text: 'Application Servers', link: '/guides/server/application-servers' }
               ]
             },
