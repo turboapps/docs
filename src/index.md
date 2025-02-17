@@ -30,7 +30,7 @@ Turbo is a powerful platform for application virtualization and deployment. Whet
 
 ### Documentation Sections
 
-- [Getting Started Guide](/getting-started/) - Learn the basics and get up and running
+- [Getting Started](/getting-started/) - Learn the basics and get up and running
 - [Guides](/guides/) - Deployment methods from standalone executables to enterprise server, including end-user portal access
 - [Turbo Client](/client/) - Command-line interface and virtual machine reference
 - [Turbo Studio](/studio/) - Create and customize virtual applications
