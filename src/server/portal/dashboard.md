@@ -6,6 +6,8 @@ The Dashboard is the primary end user interface provided by the Portal. Once the
 
 Clicking on a workspace to navigate to the workspace Home page, which lists recommended items such as applications, files, and links that the user has access to. To navigate back, click the logo at the top of the page.
 
+## Workspace Navigation
+
 ### Home
 
 The **Home** tab provides an overview of the user's recent activity as well as recommended applications, links, files, and more. As the user uses the workspace, their recent activity and recommendations will update accordingly.
@@ -34,6 +36,8 @@ The following context options are available if the application is currently runn
 
 - **Disconnect**: Disconnects any connected client from the cloud session. The session may be reconnected by launching again via any cloud option. If the administrator logs off the session immediately on disconnect then the application may have to be relaunched from scratch.
 - **Logoff**: Logs off the user from the cloud session. The application must be relaunched and unsaved work may be lost.
+
+## File Management
 
 ### Files
 
@@ -69,6 +73,8 @@ For folders, the available actions are:
 ![File Upload](/images/file-upload.png)
 
 Users may upload files by dragging & dropping files from their local device into the file browser. Files may be dropped anywhere on the screen and will be uploaded into the current folder.
+
+## Additional Features
 
 ### Chat
 

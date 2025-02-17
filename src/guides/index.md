@@ -15,12 +15,18 @@ For more control over application delivery and updates, use the Turbo Desktop Cl
 ### Enterprise Server Deployment
 For large-scale deployments, Turbo Server provides centralized management and automated delivery. The server handles workspace organization, subscription management, and application streaming. It adds enterprise features like usage analytics, security controls, and automated updates. The [Server deployment guide](/guides/server/) covers installation, configuration, and management of the Turbo Server environment.
 
+Organizations deploying Turbo Server can choose between two primary delivery methods:
+
+**Client Subscription** provides the richest desktop integration experience, ideal for managed environments like corporate workstations, university computer labs, or VDI infrastructure. Users get seamless access to applications with full desktop integration and offline capabilities.
+
+**Portal Access** is perfect for unmanaged devices and BYOD scenarios like personal devices, remote work, or contractor access. Users can access applications through any web browser using the HTML5 client, or optionally install them locally on Windows devices. The [Introduction to Using Portal](/guides/intro-to-portal) guide helps users get started with this flexible access method.
+
 ## Platform Integration
 
 Turbo integrates seamlessly with enterprise platforms to enhance existing deployment workflows. Our integration guides cover major virtual desktop and management platforms:
 
 ### Virtual Desktop Infrastructure
-Deliver Turbo applications through your VDI platform using our guides for [Citrix Virtual Apps](/guides/integrations/citrix-guide/), [Windows Virtual Desktop](/guides/integrations/windows-virtual-desktop), [AWS AppStream](/guides/integrations/aws-appstream), and [Parallels RAS](/guides/integrations/parallels-ras). These integrations enable consistent application delivery across virtual desktop environments.
+Deliver Turbo applications through your VDI platform using our guides for [Citrix Virtual Apps](/guides/integrations/citrix-guide/), [Windows Virtual Desktop](/guides/integrations/windows-virtual-desktop), and [AWS AppStream](/guides/integrations/aws-appstream). These integrations enable consistent application delivery across virtual desktop environments.
 
 ### Management Platforms
 Deploy and manage Turbo applications through enterprise management tools using our guides for [Microsoft Intune](/guides/integrations/intune) and [System Center Configuration Manager](/guides/integrations/system-center). These integrations help incorporate Turbo into your existing management workflows.
@@ -35,4 +41,4 @@ When selecting a deployment method, consider your organization's needs:
 
 **Enterprise Server** deployment suits large organizations needing centralized management, automated updates, and detailed analytics. It provides the most comprehensive feature set but requires additional infrastructure.
 
-For most organizations, we recommend starting with Desktop Client deployment to gain familiarity with Turbo's virtualization capabilities. As your needs grow, you can transition to Enterprise Server deployment for additional management features and automation.
+For most organizations, we recommend starting with Desktop Client deployment to gain familiarity with Turbo's virtualization capabilities. As your needs grow, you can transition to Enterprise Server deployment for additional management features and automation. When deploying Turbo Server, consider your end-user environment to choose between client subscription for managed devices or portal access for BYOD scenarios.

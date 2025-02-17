@@ -71,7 +71,7 @@ export default defineConfig({
             },
             { text: 'Deploy Using EXE', link: '/guides/deploy-using-exe' },
             { text: 'Deploy Using MSI', link: '/guides/deploy-using-msi' },
-            { text: 'Deploy Using Portal', link: '/guides/deploy-using-portal' },
+            { text: 'Introduction to Using Portal', link: '/guides/intro-to-portal' },
             {
               text: 'Platform Integrations',
               collapsed: true,
@@ -87,7 +87,6 @@ export default defineConfig({
                   ]
                 },
                 { text: 'Intune', link: '/guides/integrations/intune' },
-                { text: 'Parallels RAS', link: '/guides/integrations/parallels-ras' },
                 { text: 'System Center', link: '/guides/integrations/system-center' },
                 { text: 'Windows Virtual Desktop', link: '/guides/integrations/windows-virtual-desktop' }
               ]
