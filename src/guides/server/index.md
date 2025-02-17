@@ -1,100 +1,54 @@
-# Enterprise Deployment with Turbo Server
+# Getting Started with Turbo Server
 
-This section covers enterprise deployment of virtual applications using Turbo Server, providing centralized management and automated deployment through workspaces.
+This guide walks you through the initial setup of a Turbo Server instance. Turbo Server enables centralized management and deployment of virtual applications through a self-hosted infrastructure.
 
 ::: tip What you'll learn
-- Turbo Server overview and capabilities
-- Hub and workspace management
-- Application deployment and configuration
-- Application server deployment
-- Client subscription setup
+- Basic Turbo Server installation requirements
+- Initial server setup process
+- First steps after installation
 :::
 
-## Overview
+## Prerequisites
 
-Turbo Server provides enterprise-grade deployment capabilities:
+Before beginning the installation:
 
-### Hub Server
-- Central repository for virtual applications
-- Version management and control
-- Access control and permissions
-- Federation capabilities
+- Review the [system requirements](/server/setup-and-deployment/prerequisites.md)
+- Ensure you have administrator access to the target system
+- Prepare your network environment for server deployment
 
-### Workspace Management
-- Organize applications by team or function
-- Configure access controls and permissions
-- Manage application settings
-- Define update policies
-- Monitor usage analytics
+## Installation
 
-### Application Servers
-- Host running applications in the cloud
-- Enable non-Windows clients to run virtual applications
-- Browser-based access through HTML5
-- Load balancing and scaling
+Choose your deployment method and follow the appropriate guide:
 
-For deployment details, see [Application Server Deployment](application-servers.md).
+- [On-premises deployment](/server/setup-and-deployment/deploying-on-premises.md) for local infrastructure
+- [Azure deployment](/server/setup-and-deployment/deploying-to-azure.md) for cloud hosting
 
-## Key Features
+The installation guides will walk you through:
+1. Server software installation
+2. Initial configuration
+3. Basic connectivity testing
 
-### Application Management
-- Version control
-- Update management
-- License tracking
-- Usage monitoring
+## Verifying Installation
 
-### User Management
-- Active Directory integration
-- SAML authentication
-- Role-based access
-- Group policies
+After installation, verify your setup by:
+1. Accessing the admin portal
+2. Confirming server services are running
+3. Testing basic connectivity
 
-### Workspace Control
-- Application grouping
-- Access permissions
-- Settings management
-- Update policies
+::: tip Need help?
+If you encounter any issues during installation, refer to the [Server Troubleshooting Guide](/server/troubleshooting/).
+:::
 
-### Monitoring
-- Usage analytics
-- Performance metrics
-- Health monitoring
-- Audit logging
+## Next Steps
 
-## Getting Started
+Once your server is installed and running, proceed through these guides to complete your setup:
 
-1. Review [system requirements](/server/setup-and-deployment/deploying-on-premises.md)
-2. Set up your [Hub Server](hub-setup.md)
-3. Configure [API Keys](api-keys.md) for automation
-4. Create [Workspaces](workspaces.md) for applications
-5. Add [Application Servers](application-servers.md) for streaming
+1. [User Management](user-setup.md) - Configure users, groups, and authentication
+2. [Hub Setup](hub-setup.md) - Set up your central application repository
+3. [API Keys](api-keys.md) - Generate and configure API access
+4. [Workspaces](workspaces.md) - Create and manage application workspaces
+5. [Application Servers](application-servers.md) - Deploy streaming application servers
 
-## Administration
-
-### Hub Management
-Access the Hub administration page to:
-- Manage repositories
-- Configure access controls
-- Set up federation
-- Monitor usage
-
-For details, see [Hub Administration](/server/administration/hub.md).
-
-### Workspace Management
-Use the Workspace administration page to:
-- Add and configure applications
-- Set up user permissions
-- Configure desktop integration
-- Manage application settings
-
-For details, see [Workspace Administration](/server/administration/workspaces.md).
-
-### Application Configuration
-Configure applications through the web interface:
-- Launch settings
-- Isolation options
-- Network settings
-- Desktop integration
-- License management
-
-For details, see [Application Settings](/server/administration/workspaces.md#workspace-applications).
+After completing the setup, you can deploy applications using either:
+- [Client Subscriptions](/guides/desktop-client/subscriptions.md) - Deploy to Windows clients
+- [Portal Deployment](/guides/deploy-using-portal.md) - Access through web browsers (requires application servers)

@@ -16,8 +16,7 @@ Under a named user license, there is a limit on the total number of active users
 | ---------- | ---------- | ---------- | ---------- |
 | Active       | __Yes__       | __Yes__       | __Yes__       |
 | Inactive       | No       | __Yes__ (transitions to Active)       | __Yes__       |
-| Disabled       | No       | No       | No       |  
-<br/>
+| Disabled       | No       | No       | No       |
 
 The initial activation state varies depending how the user is created:
 * For Single Sign-On (SSO), users are initially set to "active".

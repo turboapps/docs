@@ -71,6 +71,7 @@ export default defineConfig({
             },
             { text: 'Deploy Using EXE', link: '/guides/deploy-using-exe' },
             { text: 'Deploy Using MSI', link: '/guides/deploy-using-msi' },
+            { text: 'Deploy Using Portal', link: '/guides/deploy-using-portal' },
             {
               text: 'Platform Integrations',
               collapsed: true,
@@ -96,6 +97,7 @@ export default defineConfig({
               collapsed: true,
               items: [
                 { text: 'Overview', link: '/guides/server/index' },
+                { text: 'User Setup', link: '/guides/server/user-setup' },
                 { text: 'Hub Setup', link: '/guides/server/hub-setup' },
                 { text: 'API Keys', link: '/guides/server/api-keys' },
                 { text: 'Workspaces', link: '/guides/server/workspaces' },
