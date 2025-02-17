@@ -51,4 +51,4 @@ jobs:
         token: ${{ secrets.CODESYSTEMS_PAT }}
         repository: codesystems/turbonet
         event-type: public-docs-update
-        client-payload: '{"version": "docs:${{ steps.date.outputs.date }}.${{ github.run_number }}"}'
+        client-payload: '{"version": "${{ steps.date.outputs.date }}.${{ github.run_number }}"}'
