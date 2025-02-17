@@ -9,8 +9,8 @@ hero:
       text: Get Started
       link: /getting-started/
     - theme: alt
-      text: View Client
-      link: /client/
+      text: View Guides
+      link: /guides/
 
 features:
   - title: Application Virtualization
