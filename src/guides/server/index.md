@@ -35,10 +35,6 @@ After installation, verify your setup by:
 2. Confirming server services are running
 3. Testing basic connectivity
 
-::: tip Need help?
-If you encounter any issues during installation, refer to the [Server Troubleshooting Guide](/server/troubleshooting/).
-:::
-
 ## Next Steps
 
 Once your server is installed and running, proceed through these guides to complete your setup:

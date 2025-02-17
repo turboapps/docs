@@ -30,8 +30,6 @@ The following subject fields are expected to be returned in the SAML response (u
 | ---------- | ---------- |
 | saml:NameID       | Used as the Turbo account username. Recommended to be returned in email address format (urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress).       |
 
-<br/>
-
 Turbo Server accepts any name ID format the conforms to the following username requirements:
 * Maximum of 256 characters
 * Does not contain any of the following characters: `\/:*?"<>|`
@@ -46,8 +44,6 @@ The following attributes (aka claims) are expected to be returned in the SAML re
 | http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname       | The surname for the Turbo account display name.       |
 | http://schemas.xmlsoap.org/claims/group       | The user groups to which the Turbo account will be assigned.        |
 | http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier       | Optional. Used as a fallback for the Turbo account username if the nameID subject does not exist. Recommended to be returned in email address format (urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress).       |
-
-<br/>
 
 If the attribute names provided by your identity provider differ, Turbo Server offers an __Attribute Mapping__ feature. This feature allows Turbo Server to effectively map arbitrary attribute names to the corresponding Turbo user account fields, ensuring flexible and accurate data integration.
 

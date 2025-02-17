@@ -75,7 +75,7 @@ For enterprise deployments, we recommend implementing SSO. Common integration op
 - User provisioning options
 - See [Okta SAML](/server/authentication/okta-saml.md)
 
-For other authentication options, see the [Authentication Documentation](/server/authentication/).
+For other authentication options, see the [Authentication Documentation](/server/).
 
 ## Next Steps
 

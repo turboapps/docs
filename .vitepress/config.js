@@ -96,7 +96,7 @@ export default defineConfig({
               text: 'Setup Server',
               collapsed: true,
               items: [
-                { text: 'Overview', link: '/guides/server/index' },
+                { text: 'Overview', link: '/guides/server/' },
                 { text: 'User Setup', link: '/guides/server/user-setup' },
                 { text: 'Hub Setup', link: '/guides/server/hub-setup' },
                 { text: 'API Keys', link: '/guides/server/api-keys' },
@@ -222,7 +222,7 @@ export default defineConfig({
                   text: 'Troubleshooting',
                   collapsed: true,
                   items: [
-                    { text: 'Overview', link: '/client/turbo-vm/troubleshooting/index' },
+                    { text: 'Overview', link: '/client/turbo-vm/troubleshooting/' },
                     { text: 'Analyzing Logs', link: '/client/turbo-vm/troubleshooting/analyzing-logs' },
                     { text: 'Antivirus & Security', link: '/client/turbo-vm/troubleshooting/antivirus-security' },
                     { text: 'Common Errors', link: '/client/turbo-vm/troubleshooting/common-errors' },
@@ -320,7 +320,7 @@ export default defineConfig({
               text: 'Administration',
               collapsed: true,
               items: [
-                { text: 'Overview', link: '/server/administration/index' },
+                { text: 'Overview', link: '/server/administration/' },
                 { text: 'Domain', link: '/server/administration/domain' },
                 { text: 'General', link: '/server/administration/general' },
                 { text: 'Hub', link: '/server/administration/hub' },
@@ -335,7 +335,7 @@ export default defineConfig({
               text: 'Applications',
               collapsed: true,
               items: [
-                { text: 'Overview', link: '/server/applications/index' },
+                { text: 'Overview', link: '/server/applications/' },
                 { text: 'Access Control', link: '/server/applications/access-control' },
                 { text: 'KMS Licensing', link: '/server/applications/kms-licensing' }
               ]
@@ -390,7 +390,7 @@ export default defineConfig({
               text: 'Portal',
               collapsed: true,
               items: [
-                { text: 'Overview', link: '/server/portal/index' },
+                { text: 'Overview', link: '/server/portal/' },
                 { text: 'Dashboard', link: '/server/portal/dashboard' },
                 { text: 'HTML5 Client', link: '/server/portal/html5-client' },
                 { text: 'Running Applications', link: '/server/portal/running-applications' },
@@ -402,7 +402,7 @@ export default defineConfig({
               text: 'Advanced Topics',
               collapsed: true,
               items: [
-                { text: 'Overview', link: '/server/advanced-topics/index' },
+                { text: 'Overview', link: '/server/advanced-topics/' },
                 { text: 'Command Line Management', link: '/server/advanced-topics/command-line-management' },
                 { text: 'Federation', link: '/server/advanced-topics/federation' },
                 { text: 'Hub Storage', link: '/server/advanced-topics/hub-storage' },
