@@ -46,5 +46,6 @@ Once your server is installed and running, proceed through these guides to compl
 5. [Application Servers](application-servers.md) - Deploy streaming application servers
 
 After completing the setup, you can deploy applications using either:
-- [Client Subscriptions](/guides/desktop-client/subscriptions.md) - Deploy to Windows clients
-- [Portal Deployment](/guides/deploy-using-portal.md) - Access through web browsers (requires application servers)
+
+- [Client Subscriptions](/guides/desktop-client/subscriptions.md) - Deploy to managed Windows devices for seamless desktop integration and offline access
+- [Introduction to Portal](/guides/intro-to-portal.md) - Enable browser-based access from any device, ideal for BYOD and remote work scenarios (application servers required for HTML5/RDP streaming)

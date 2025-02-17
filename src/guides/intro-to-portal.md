@@ -65,8 +65,8 @@ For detailed workspace navigation, see [Workspace Navigation](/server/portal/das
 
 The HTML5 client provides browser-based access to applications:
 
-::: warning Application Server Required
-HTML5 streaming requires [properly configured application servers](/guides/server/application-servers.md). Ensure your application servers are set up before attempting to stream applications.
+::: warning Note About Application Servers
+Application servers are required for HTML5 browser streaming or remote RDP access. Windows users can alternatively install and run applications locally through the portal without requiring application servers.
 :::
 
 - No client installation needed
