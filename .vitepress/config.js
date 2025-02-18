@@ -96,8 +96,8 @@ export default defineConfig({
               collapsed: true,
               items: [
                 { text: 'Overview', link: '/guides/server/' },
-                { text: 'User Setup', link: '/guides/server/user-setup' },
-                { text: 'Hub Setup', link: '/guides/server/hub-setup' },
+                { text: 'User Management', link: '/guides/server/user-management' },
+                { text: 'Hub Repositories', link: '/guides/server/hub-repos' },
                 { text: 'API Keys', link: '/guides/server/api-keys' },
                 { text: 'Workspaces', link: '/guides/server/workspaces' },
                 { text: 'Application Servers', link: '/guides/server/application-servers' }
@@ -360,6 +360,7 @@ export default defineConfig({
               text: 'Cloud Storage',
               collapsed: true,
               items: [
+                { text: 'Overview', link: '/server/cloud-storage/' },
                 { text: 'End User Guide', link: '/server/cloud-storage/end-user' },
                 { text: 'Dropbox', link: '/server/cloud-storage/dropbox' },
                 { text: 'File Share', link: '/server/cloud-storage/file-share' },
@@ -416,6 +417,7 @@ export default defineConfig({
               text: 'Troubleshooting',
               collapsed: true,
               items: [
+                { text: 'Overview', link: '/server/troubleshooting/' },
                 { text: 'Administration', link: '/server/troubleshooting/admininstration' },
                 { text: 'Application', link: '/server/troubleshooting/application' },
                 { text: 'Application Server', link: '/server/troubleshooting/application-server' },

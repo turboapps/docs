@@ -54,7 +54,7 @@ Configure per-application settings through the web interface:
   - Update policies
   - Profile settings
   See [General Settings](/server/administration/workspaces.md#general)
-
+  
 - **Isolation Settings**:
   - File system access
   - Network isolation
@@ -72,6 +72,20 @@ Configure per-application settings through the web interface:
   - Device sync
   - Drive visibility
   See [Storage Settings](/server/administration/workspaces.md#storage)
+
+### Licensing Configuration
+
+Configure application licensing:
+
+1. For native applications:
+   - Enable Portal tunneling to connect applications to on-premises license servers
+   - Configure network routes in [Workspace Applications](/server/administration/workspaces#application-management)
+   - Required for applications that need to reach internal license servers
+
+2. For workspace applications:
+   - Set custom usage controls through Turbo's licensing system
+   - Configure user/device limits and license reservations
+   - See [Workspace Applications](/server/administration/workspaces#application-management)
 
 ## Access Control
 

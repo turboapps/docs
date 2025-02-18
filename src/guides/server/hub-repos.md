@@ -1,16 +1,11 @@
-# Hub Setup
+# Hub Repositories
 
 This section covers setting up your Turbo Server hub for enterprise deployment.
 
 ::: tip What you'll learn
-- Initial server setup
 - Adding applications to your hub
 - Configuring hub settings
 :::
-
-## Getting Started
-
-For detailed server setup instructions, see the [Turbo Server Getting Started Guide](/server/setup-and-deployment/deploying-on-premises.md).
 
 ## Adding Applications
 

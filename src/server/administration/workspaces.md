@@ -1,4 +1,6 @@
-# Workspaces
+# Workspaces Administration
+
+## Overview
 
 ![Server admin workspaces](/images/admin-workspaces.png)
 
@@ -6,7 +8,7 @@ A workspace defines a set of applications and user permissions. These workspaces
 
 Server Administrators, as well as users with Administrator permissions to the workspace, may click the **Manage** button to access the Workspace Administration site.
 
-### Workspace Dashboard
+## Dashboard and Analytics
 
 ![Server admin workspace dashboard](/images/admin-workspaces-admin.png)
 
@@ -20,7 +22,9 @@ The **Dashboard** page shows application usage analytics for the workspace. The 
 
 - **Recent Activity**: A table detailing the last 100 application launches.
 
-### Workspace Applications
+## Application Management
+
+### Overview
 
 ![Workspace Admin Applications](/images/admin-applications.png)
 
@@ -28,13 +32,13 @@ The **Applications** page lists all applications that have been added to this wo
 
 Applications are broken down into several different types:
 
-#### Windows Applications
+### Windows Applications
 
 A Windows Application is a Windows desktop application that runs in a containerized environment using the Turbo VM. These applications can be configured with a variety of launch, virtualization, and display settings.
 
 Windows Applications can be managed from the **Application Settings** page and contain the following fields:
 
-##### General
+#### General Settings
 
 - **Display Name**: The application display name shown on the portal.
 - **Icon**: The icon that will be displayed to end users on the portal. The icon must be a valid image type and at most 1MB in size. We recommend using a square icon that is at least 60px x 60px. If no icon is configured, the repository icon will be displayed.
@@ -63,7 +67,7 @@ Windows Applications can be managed from the **Application Settings** page and c
 - **Run as Administrator**: Runs the application with administrator privileges.
 - **Container Name**: The container name that is used when launching the application. By default the image's name is used.
 
-##### Isolation
+#### Isolation Settings
 
 - **Access Local User Folders**: Allows the application to access the host device's local user folders, such as Desktop, Downloads, Documents, Music, Pictures, and Videos.
 
@@ -73,24 +77,24 @@ Windows Applications can be managed from the **Application Settings** page and c
 
   Set to **Inherit from Workspace** to inherit this setting from the corresponding workspace setting, or select a custom isolation settings to override the workspace setting.
 
-##### Network
+#### Network Settings
 
 - **Isolate Network**: Isolates the virtualized network environment from the host device's network.
 - **Tunneling**: Tunneling allows the application to tunnel traffic from the virtual environment to the specified targets accessible from the portal server. Tunneling currently supports TCP and IP protocols and requires SSL (https) to be enabled on the domain. UDP is not supported. See [Proxy Settings](/client/command-line/run#proxy-settings).
 - **Network Routes**: A whitelist or blacklist of network routes that are accessible by the virtual network environment. See [Controlling Outbound Traffic](/client/command-line/run#controlling-outbound-traffic).
 
-##### Components
+#### Component Settings
 
 - **Components**: A list of additional image repository IDs that are added to the base image as layers.
 
-##### Storage
+#### Storage Settings
 
 - **Sessions are persistent**: Persists the application state and settings on the host machine, enabling persistence across multiple sessions. Typically this setting should be enabled in order to prevent loss of data. This setting defaults to true.
 - **Synchronize across devices**: Automatically synchronizes the application state and settings with the Hub server, enabling persistence across multiple devices. Sessions are persistent must be enabled to change this setting. This setting defaults to false.
 - **Drive Visibility**: Controls which drives are visible in the virtualized application environment during cloud runs. This setting does not apply to local runs. By default, only the system drives and T: Drive are visible.
 - **Mount Points**: A list of mount points that mount file paths from the host into the container. Supports NTFS paths, UNC paths, and special folder variables (see [Folder Variables](/client/turbo-vm/folder-variables))
 
-##### Licensing
+#### Licensing Settings
 
 **User and Device Limits**: Restricts the number of users or devices that can launch the application. The license counters are reset when the setting is modified. Available options are:
 
@@ -108,20 +112,20 @@ Windows Applications can be managed from the **Application Settings** page and c
 - **End Time**: Specifies when the reservation will end.
 - **Recurrence**: The frequency at which the reservation will reoccur.
 
-##### IP Restrictions
+#### IP Restriction Settings
 
 - **IP Access Rules**: A whitelist or blacklist of IPs that control access to this workspace application. Clients that access the portal dashboard from a blacklisted IP will not be able to view the application.
 
   Detailed access control information may be found at [Access Control](/server/applications/access-control).
 
-##### Server Assignment
+#### Server Assignment Settings
 
 - **Fleet**: Restrict application launches to a [fleet](/server/administration/domain.html#fleets).
 - **Server Tag Rules**: Restricts cloud application launches to application servers that satisfy the tag rules. An application server must contain the exact tag name and value for all tags in order to qualify. Comparisons are case-insensitive and empty tag values will match against any value.
 
   For information about configuring Server tags, see [Managing a Server](/server/administration/domain.html#managing-a-server)
 
-##### Shell Integration
+#### Shell Integration Settings
 
 The **Shell Integration** page allows administrators to enable or disable shell integrations that determine how installed applications interact with the host device, such as by adding shortcuts, file associations, and shell extensions. By default, all shell integrations will be enabled except for services and the default start menu shortcut.
 
@@ -129,11 +133,11 @@ Web applications only support the default start menu shortcut and cannot be cust
 
 Shell integrations are configured in the application image. For more information on configuring shell integrations in Turbo Studio, see [Desktop Integration](https://hub.turbo.net/docs/studio/working-with-turbo-studio/desktop).
 
-##### VM Settings
+#### VM Settings
 
 The **VM Settings** page lists advanced virtual machine configuration settings that affect application runtime behavior. If "Inherit from Workspace" is selected, then the value defined in the workspace settings will be used instead.
 
-#### Host Applications
+### Host Applications
 
 A Host Application is a Windows desktop application that launches an existing installed application on the application server or local client host in a containerized environment using the Turbo VM.
 
@@ -145,7 +149,7 @@ The Host Application isolation must be set to `write-copy` or `merge` in order t
 
 Host Applications offer the same launch, virtualization, and display settings as PC Applications. These settings may be managed from the **Application Settings** page.
 
-#### Web Applications
+### Web Applications
 
 A Web Application is a software program that runs on an external website that is opened in the active browser or a new virtual browser environment. Web Applications offer the same launch, virtualization, and display settings as PC Applications, in addition to the following Web Application specific fields. These settings may be managed from the **Application Settings** page:
 
@@ -153,7 +157,7 @@ A Web Application is a software program that runs on an external website that is
 - **URL**: The target URL that is opened when launching the web application.
 - **Open In New Tab**: Whether the URL will be opened in a new tab. This option only takes effect when targeting the active browser.
 
-### Workspace Startup
+## Startup Configuration
 
 ![Workspace Startup](/images/workspace-startup.png)
 
@@ -163,7 +167,7 @@ The **Startup Applications** table lists all workspace applications and and thei
 
 When an application is marked as a startup application, commands that install that application to the device such as `turbo subscribe --register` and `turbo subscription register` will run the application automatically. The application is launched by shell executing the default shortcut. If the application has no shortcuts then the application will not be launched. For more information on configuring shortcuts with Turbo Studio, see [Desktop Integration Settings](/studio/working-with-turbo-studio/configuration.html#desktop-integration-settings)
 
-### Workspace Links
+## Links Management
 
 ![Workspace Admin Links](/images/admin-applications-links.png)
 
@@ -176,7 +180,7 @@ To create a new workspace link, click the **Add Link** button and enter your pre
 - **Open in New Tab**: If enabled, the link will be opened in a new browser tab. Otherwise, the link will be opened in the current browser tab.
 - **Icon**: The icon that will be displayed to end users on the portal. The icon must be a valid image type and at most 1MB in size. We recommend using a square icon that is at least 60px x 60px. If no icon is configured, a default icon will be displayed.
 
-### Sharing a Workspace Application
+## Application Sharing
 
 ![Workspace Admin Sharing](/images/admin-applications-sharing.png)
 
@@ -197,7 +201,7 @@ To test your link, open an incognito browser window without logging into Turbo.n
 
 If you wish to modify or revoke your Share URL, you may do so by clicking **Settings** button on the appropriate Share URL.
 
-### Testing Workspace Applications
+## Application Testing
 
 The **Test** page allows administrators to perform multiple workspace applications launches simultaneous with various test configurations. Each application is launched in the HTML5 client with a unique temporary profile. These tests can, for example, simulate heavy application server loads and identify load related issues.
 
@@ -225,7 +229,7 @@ Clicking the **Run** button will execute the test, opening an HTML5 client brows
 
 **NOTE**: Some browsers may attempt to popup block the test instances. If your browser notifies you about blocked popups, please allow them for the Turbo Server administration site.
 
-#### Diagnosing Test Results
+### Diagnosing Test Results
 
 The following section describes some resolutions to common issues when testing an application.
 
@@ -237,7 +241,7 @@ Check the HTML5 client's browser console logs. If the PUT session request fails 
 
 Check the CPU and memory usage on the application server when launching a large number of instances. If the sessions are bound by the CPU, they may not start in a timely manner resulting in the RDP protocol to disconnect. Increase the number of application servers or CPU cores on the application server.
 
-### Workspace Storage
+## Storage Management
 
 The **Storage** page allows administrators to manage storage-related workspace settings, such as storage scopes.
 
@@ -245,7 +249,7 @@ The **Storage** page allows administrators to manage storage-related workspace s
 
 Currently, Turbo Drive does not support the use of scopes. Instead, it will display the root folder for each connection directly.
 
-#### Storage
+### Storage Configuration
 
 ![wsadmin-storage](/images/wsadmin-storage.png)
 
@@ -254,7 +258,7 @@ The **Storage** page allows the administrator to configure the scope type for th
 - **Inherit**: The workspace will inherit storage scopes from global storage connections. This means that for each storage provider connection, the root folder will be visible to users. Scopes cannot be customized in this mode.
 - **Custom**: The workspace will not inherit any storage scopes. Only the scopes that are explicitly added to the Scopes page will be visible to users. Global storage connections will not be displayed by default, but per-user storage connections will still be displayed by default.
 
-#### Scopes
+### Storage Scopes
 
 ![wsadmin-storage-scopes](/images/wsadmin-storage-scopes.png)
 
@@ -262,13 +266,13 @@ The **Scopes** page allows administrators to customize workspace storage scopes.
 
 The root path must be a valid, root-relative file path such as `/Courses/CSE 351`. For id-based storage providers such as Google Drive, the root path is the folder id such as `/1ns1zZkUgiU9Phjg1LR8ZEJc5Xb2yD2qy`.
 
-### Workspace Users
+## User Management
 
 The **Users** page allows administrators to manage user-related settings, assign user and group entitlements, and manage channels.
 
 Please note that changing or removing an existing workspace permission may take up to 5 minutes to be reflected on the portal site. During this time, a user that is upgraded from User to Administrator may not see the workspace listed in the account dropdown or be able to access the workspace administration site. Likewise, a user that was downgraded or removed may still see the workspace listed in their account dropdown, however they will not be able to access the workspace administration site. The user may logout then login to see the change immediately.
 
-#### General
+### General Settings
 
 ![Workspace Admin Users](/images/admin-users.png)
 
@@ -277,7 +281,7 @@ The users **General** page allows the administrator to configure the following s
 - **Default Item Permission**: The default user entitlement for workspace items. If this setting is disabled, workspace items will not be visible to users unless they have been granted access, such as through channel membership. Permission is enabled by default.
 - **Default Active Directory Domain**: Sets the default Active Directory domain used to login when launching applications in the cloud with non-temporary profiles.
 
-#### Permissions
+### Permission Settings
 
 ![Workspace Admin User Permissions](/images/admin-users-permissions.png)
 
@@ -287,7 +291,7 @@ The users **Permissions** page lists all user and user group permissions that ha
 - **Read-Only Administrator** - Grants read access to the workspace APIs, in addition to access granted by **User**.
 - **Administrator** - Grants full access the workspace administration site and workspace APIs, in addition to access granted by **Read-Only Administrator** and **User**.
 
-#### Channels
+### Channel Management
 
 ![Workspace Admin Channels](/images/admin-users-channels.png)
 
@@ -297,20 +301,20 @@ The users **Channels** page lists all channels that have been added to this work
 
 Channels can be managed from the following channel settings pages:
 
-##### General
+#### Channel General Settings
 
 The channel **General** page allows the administrator to configure the following settings:
 
 - **Display Name**: The name that will be displayed to end users on the portal.
 - **Web Path**: The web path that uniquely identifies this channel, used to form the channel URL.
 
-##### Items
+#### Channel Items
 
 The channel **Items** page lists all workspace items that have been added to the channel and allows the administrator to add and remove workspace items.
 
 To add a workspace item to a channel link, click the **Add** button and select the workspace item type that you wish to add. The add dialog will list all items of the corresponding type that exist in the workspace. Items must be added to the workspace before they can be added to a channel.
 
-##### Users
+#### Channel Users
 
 The channel **Users** page lists all user and user group permissions that have been added to the channel and provides management options such as adding and deleting permissions. Granting **User** permissions will allow that user or user group to access the channel, while granting **Administrator** permissions will allow that user or user group to access the channel administration page on the portal.
 
@@ -318,7 +322,7 @@ The **Everyone** group is automatically added with **User** permissions when the
 
 If the **Default Item Permission** workspace setting is enabled, all channel items will be visible from the workspace dashboard regardless of channel membership.
 
-### Workspace General
+## General Configuration
 
 ![Turbo Server Workspace General](/images/ws-general.png)
 
@@ -337,7 +341,7 @@ If the **Default Item Permission** workspace setting is enabled, all channel ite
 
   The **Apply to All Applications** action will reset all workspace applications in this workspace to **Inherit from Workspace** VM settings.
 
-#### URL Handlers
+### URL Handler Configuration
 
 Desktops and mobile devices handle URLs by launching an application registered to the URL's scheme (often described as a protocol handler). For example, HTTP or HTTPS URLs are opened by the device's natively installed web browser.
 
@@ -374,7 +378,7 @@ Here's the table converted to markdown:
 | Starts With  | https://app.turbo.net/run   | ✅ http://app.turbo.net/run<br>✅ https://app.turbo.net/run<br>✅ https://app.turbo.net/run?id=5<br>❌ https://app.turbo.net<br>❌ https://app.turbo.net/docs                                                                                                                               |
 | Exact        | https://app.turbo.net/run   | ✅ http://app.turbo.net/run<br>✅ https://app.turbo.net/run<br>❌ https://app.turbo.net/run/<br>❌ https://app.turbo.net/run?id=5                                                                                                                                                          |
 
-#### File Associations
+### File Association Configuration
 
 File associations allow user's files and registered desktops to open the specified file types with a workspace application.
 
