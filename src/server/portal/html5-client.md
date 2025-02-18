@@ -32,7 +32,7 @@ The **Files** button opens the file transfer dialog allowing users to transfer f
 
 This feature requires that the workspace settings for the application are configured to use **Merge** for **File Isolation** or have **Access Local User Folders** set to **Enabled**.
 
-For a better user experience, we recommend using [Turbo Drive](/server/cloud-storage/end-user.html) integrations for user document storage instead.
+For a better user experience, we recommend using [Turbo Drive](/server/cloud-storage/end-user) integrations for user document storage instead.
 
 ![HTML5 Client Files](/images/html5-client-files.png)
 
@@ -58,9 +58,9 @@ Note that if the administrator has configured the session to log off immediately
 
 ![HTML5 Client Power](/images/html5-client-power.png)
 
-### Copy Paste Functionality
+### Copy-Paste Functionality
 
-Most popular browsers, including Chrome, support direct clipboard copy and paste functionality. To enable a seamless copy and paste experience, simply grant clipboard access when prompted by your browser. However, please be aware that Safari currently has limited support for this feature and will be coming soon.
+Most popular browsers, including Chrome, support direct clipboard copy-paste functionality. To enable a seamless copy-paste experience, simply grant clipboard access when prompted by your browser. Note: Safari currently has limited clipboard support, with full functionality planned for a future update.
 
 The following table describes the supported copy and paste functionality:
 
