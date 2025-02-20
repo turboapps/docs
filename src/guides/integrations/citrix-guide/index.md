@@ -14,18 +14,14 @@ Turbo enables rapid deployment of virtualized applications on Citrix Virtual App
 - How to manage multiple application versions
 :::
 
-## Prerequisites
-
-Before starting the Citrix integration with Turbo, ensure you have the following:
-
-* **Turbo Account**: A Turbo account or organization subscription. Sign up at [Turbo.net](https://turbo.net/) if you haven't already.
-* **Turbo Hub Server**: Set up a Turbo Hub Server. For optimal performance, it should be in the same network or region as your Citrix environment.
-* **Turbo Client Installer**: The installer for Turbo Client. You can download it from [https://turbo.net/download](https://turbo.net/download).
-* **Citrix Environment**: A functioning Citrix Virtual Apps (XenApp) environment.
-* **Administrative Access**: Administrative access to Citrix servers.
-* **Network Access**: Ensure network access from your Citrix servers to the Turbo.net Hub.
-
-Once you have these prerequisites in place, you can proceed with the Citrix integration setup.
+::: tip Prerequisites
+Before proceeding with this guide, ensure you have:
+- **Turbo Hub Server**: Set up a Turbo Hub Server. For optimal performance, it should be in the same network or region as your Citrix environment.
+- **Turbo Client Installer**: The installer for Turbo Client. You can download it from [https://turbo.net/download](https://turbo.net/download).
+- **Citrix Environment**: A functioning Citrix Virtual Apps (XenApp) environment.
+- **Administrative Access**: Administrative access to Citrix servers.
+- **Network Access**: Ensure network access from your Citrix servers to the Turbo.net Hub.
+:::
 
 ## Deployment Options
 

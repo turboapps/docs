@@ -2,15 +2,12 @@
 
 Turbo supports deploying applications to [Amazon AppStream 2.0](https://aws.amazon.com/appstream2/). AppStream 2.0 provides cloud-based Windows desktops hosted in the AWS cloud.
 
-## Prerequisites
-
-Before starting the AppStream 2.0 setup with Turbo, ensure you have the following:
-
-* **AWS Account**: You need an active AWS account. If you don't have one, you can create it [here](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/)
-* **Turbo Hub Server**: Set up a Turbo Hub Server. For optimal performance, it should be in the same AWS Availability Zone as your AppStream 2.0 fleet
-* **Turbo Client VHD**: Download the Turbo Client VHD from the [Turbo Downloads page](https://turbo.net/download)
-
-Once you have these prerequisites in place, you can proceed with the AppStream 2.0 setup.
+::: tip Prerequisites
+Before proceeding with this guide, ensure you have:
+- **AWS Account**: You need an active AWS account. If you don't have one, you can create it [here](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/)
+- **Turbo Hub Server**: Set up a Turbo Hub Server. For optimal performance, it should be in the same AWS Availability Zone as your AppStream 2.0 fleet
+- **Turbo Client VHD**: Download the Turbo Client VHD from the [Turbo Downloads page](https://turbo.net/download)
+:::
 
 ## AppStream 2.0 Deployment Models
 

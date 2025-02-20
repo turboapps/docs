@@ -9,16 +9,12 @@ Microsoft Azure Virtual Desktop (AVD) provides cloud-based virtual desktop infra
 - How to manage application access through AVD Portal
 :::
 
-## Prerequisites
-
-Before starting the Azure Virtual Desktop integration with Turbo, ensure you have the following:
-
-* **Turbo Account**: A Turbo account or organization subscription. Sign up at [Turbo.net](https://turbo.net/) if you haven't already.
-* **Turbo Hub Server**: Set up a Turbo Hub Server. For optimal performance, it should be in the same Azure region as your AVD environment.
-* **Turbo Client Installer**: The installer for Turbo Client. You can download it from [https://turbo.net/download](https://turbo.net/download).
-* **Azure Subscription**: An active Azure subscription with an AVD environment set up.
-
-Once you have these prerequisites in place, you can proceed with the Azure Virtual Desktop integration setup.
+::: tip Prerequisites
+Before proceeding with this guide, ensure you have:
+- **Turbo Hub Server**: Set up a Turbo Hub Server. For optimal performance, it should be in the same Azure region as your AVD environment.
+- **Turbo Client Installer**: The installer for Turbo Client. You can download it from [https://turbo.net/download](https://turbo.net/download).
+- **Azure Subscription**: An active Azure subscription with an AVD environment set up.
+:::
 
 ## Application Image Storage
 

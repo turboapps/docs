@@ -10,16 +10,12 @@ Microsoft System Center Configuration Manager (SCCM) enables deployment of Turbo
 - How to manage application updates
 :::
 
-## Prerequisites
-
-Before starting the System Center (SCCM) integration with Turbo, ensure you have the following:
-
-* **Turbo Account**: A Turbo account or organization subscription. Sign up at [Turbo.net](https://turbo.net/) if you haven't already.
-* **Turbo Hub Server**: Set up a Turbo Hub Server. For optimal performance, it should be in the same region as your SCCM-managed devices.
-* **Turbo Client Installer**: The installer for Turbo Client. You can download it from [https://turbo.net/download](https://turbo.net/download).
-* **SCCM Environment**: A functioning System Center Configuration Manager environment.
-
-Once you have these prerequisites in place, you can proceed with the SCCM integration setup.
+::: tip Prerequisites
+Before proceeding with this guide, ensure you have:
+- **Turbo Hub Server**: Set up a Turbo Hub Server. For optimal performance, it should be in the same region as your SCCM-managed devices.
+- **Turbo Client Installer**: The installer for Turbo Client. You can download it from [https://turbo.net/download](https://turbo.net/download).
+- **SCCM Environment**: A functioning System Center Configuration Manager environment.
+:::
 
 ## Deployment Options
 
