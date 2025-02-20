@@ -88,7 +88,7 @@ export default defineConfig({
                 },
                 { text: 'Intune', link: '/guides/integrations/intune' },
                 { text: 'System Center', link: '/guides/integrations/system-center' },
-                { text: 'Azure Virtual Desktop', link: '/guides/integrations/azure-virtual-desktop.md' }
+                { text: 'Azure Virtual Desktop', link: '/guides/integrations/azure-virtual-desktop' }
               ]
             },            
             {

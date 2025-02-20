@@ -9,12 +9,16 @@ Microsoft Intune provides cloud-based device management and application deployme
 - How to deploy Turbo mobile apps for iOS and Android
 :::
 
-::: tip Prerequisites
-- Microsoft Intune subscription
-- Administrative access to Intune portal
-- Turbo account or organization subscription
-- MSI installer for Turbo Client (for PC deployment)
-:::
+## Prerequisites
+
+Before starting the Microsoft Intune integration with Turbo, ensure you have the following:
+
+* **Turbo Account**: A Turbo account or organization subscription. Sign up at [Turbo.net](https://turbo.net/) if you haven't already.
+* **Turbo Hub Server**: Set up a Turbo Hub Server. For optimal performance, it should be in the same region as your Intune-managed devices.
+* **Turbo Client MSI**: The MSI installer for Turbo Client (for PC deployment). You can download it from the [Turbo Downloads page](https://turbo.net/download)
+* **Azure Active Directory**: Your organization should be set up with Azure Active Directory for user and device management.
+
+Once you have these prerequisites in place, you can proceed with the Intune integration setup.
 
 ## Windows PC Deployment
 
