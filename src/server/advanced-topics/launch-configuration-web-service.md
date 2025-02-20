@@ -2,7 +2,7 @@
 
 The **launch configuration web service** provides storage for application configurations which may be used to execute applications from a custom web portal using turbo urls. If the Turbo Portal is used as your application portal, this service is not necessary.
 
-### Enabling the Launch Configuration Web Service
+## Enabling the Launch Configuration Web Service
 
 The launch configuration service may be configured using the [API Keys](/server/administration/hub.html#managing-api-keys) form on the admin site.
 
@@ -12,7 +12,7 @@ In this example, the authentication key is set to `F207AC681BBD40A0BF56ECF95B344
 
 **NOTE:** It is important that this authentication key be kept secret to prevent unauthorized users from generating malicious application configurations. Any usage of the key or the code to submit a configuration must be done on the web portal's **server side** code (not in the browser client where a user can retrieve the key).
 
-### Submitting a Application Configuration
+## Submitting a Application Configuration
 
 To submit an application configuration, a simple web POST such as shown in the follow example may be used:
 
@@ -62,7 +62,7 @@ You may also lookup configs from the launch configuration service by performing 
 http://[hub-server]/start/app?h=sha256:66a123724dd6f8fb5ee050644a5494795fed2a1901d0c56def4030d8a6a26175&scheme=http&v=2
 ```
 
-### Executing an Application Configuration
+## Executing an Application Configuration
 
 ```
 // open turbourl to config
@@ -82,7 +82,7 @@ After the turbo url is allowed by the browser, a security message from the Turbo
 
 After this the user will be prompted to login if necessary. Once logged in (or if login is not necessary), the container will execute.
 
-### Application Configuration JSON Format
+## Application Configuration JSON Format
 
 ```
 {

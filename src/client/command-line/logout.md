@@ -10,7 +10,7 @@ Usage: turbo logout
      --all-users            Logout from the shared user credentials. Requires admin privilege.
 ```
 
-### Examples
+## Examples
 
 ```
 # Logout the current user
@@ -29,6 +29,6 @@ turbouser logged out
 You are not currently logged into Turbo
 ```
 
-### JSON output
+## JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain only an `exitCode` value or an `error` object if command failed.

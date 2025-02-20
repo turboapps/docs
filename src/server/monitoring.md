@@ -2,7 +2,7 @@
 
 The following document describes external services that can be used to check the health status of Turbo Server.
 
-### Nagios
+## Nagios
 
 Nagios can be used to monitor the health of a Turbo Server environment.
 
@@ -59,7 +59,7 @@ define service {
 
 The check will cause Warning alerts if the free space on the C drive drops below 20% and Critical alerts if it drops below 10%.
 
-### Datadog
+## Datadog
 
 Datadog can be used to monitor the health of a Turbo Server environment.
 

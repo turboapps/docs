@@ -2,21 +2,21 @@
 
 This section provides information to help troubleshoot common end user issues.
 
-### User cannot upload files using the HTML5 client with "Send error no permissions" message.
+## User cannot upload files using the HTML5 client with "Send error no permissions" message.
 
 The service does not have permissions to upload a file on behalf of the user due to missing domain credentials when running the application in ask for domain login mode. Users must use the down-level style login (domain\username) when asked to login to the application, or have the administrator set the default domain if the end user omits it during login. To allow users to omit the domain, please set the default domain of the intended for the workspace under admin -> general section located at  https://{portal-host}/workspace/{workspace-name}/admin/general. 
 
-### User gets locked out of cloud sessions when idling after a short period of time.
+## User gets locked out of cloud sessions when idling after a short period of time.
 
 The lock screen timeout is controlled via group policy setting. To configure custom session timeouts, please refer to the [Streaming](/server/administration/general.html#streaming) section on the Turbo Server administration site.
 
 For older versions of Turbo Server, you may change the group policy setting manually. Please refer to the microsoft [documentation](https://answers.microsoft.com/en-us/windows/forum/all/remote-desktop-how-to-increase-lock-timeout/fc0f76a4-6a48-41f1-95d8-fbbc4e6a2ae9?auth=1) to disable or extend the timeouts.
 
-### Users cannot access client drives when streaming a remote application from the native client.
+## Users cannot access client drives when streaming a remote application from the native client.
 
 By default, client drives are made available when streaming a remote application from the native client. This behavior can be controlled via group policy setting. To enable or disable drive redirection, please refer to the [Streaming](/server/administration/general.html#streaming) section on the Turbo Server administration site.
 
-### Users cannot access network drives when streaming a remote application.
+## Users cannot access network drives when streaming a remote application.
 
 Network drives may be configured in the [Streaming](/server/administration/general.html#streaming) section on the Turbo Server administration site, and are only made available when streaming remote applications.
 
@@ -26,7 +26,7 @@ Network Drive changes can take up to 20 seconds to apply to the application serv
 
 Additional error details may be found in the `network-drives_*.log` log file located in the user folder in the [Server Diagnostics](/server/administration/domain.html#managing-a-server) log archive.
 
-### Users are unable to sign in to the workspace portal.
+## Users are unable to sign in to the workspace portal.
 
 If the Turbo Server with the Hub role is not running, users would not be able to sign in to the workspace portal. The Portal log will contain a message that it failed to load the public key, similar to the following:
 
@@ -36,7 +36,7 @@ If the Turbo Server with the Hub role is not running, users would not be able to
 
 To resolve the issue, start the Turbo Server with the Hub role and wait a minute for the Portal to successfuly load the public key.
 
-### Install on my PC results in error message: Failed to register application to the desktop.
+## Install on my PC results in error message: Failed to register application to the desktop.
 
 The turbo log will contain the following message:
 
@@ -46,7 +46,7 @@ Critical - 0x3E74: Failed to install image mozilla/firefox-esr:78.8.0: System.Ru
 
 The error occurs due to a corrupt Turbo Client installation. Please uninstall and reinstall the client, then try again.
 
-### Run on My PC results in error message: Image download failed. Image did not match hash.
+## Run on My PC results in error message: Image download failed. Image did not match hash.
 
 The image download failed due to network error. In newer clients, disconnected downloads will be automatically resumed. Please upgrade to the latest client. 
 

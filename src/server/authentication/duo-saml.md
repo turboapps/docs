@@ -4,7 +4,7 @@ Turbo Server can be configured to allow users to log in via Duo Single Sign-On S
 
 For prerequisites and additional information about the SAML 2.0 authentication protocol, please refer to the [SAML 2.0 Prerequisites](/server/authentication/saml.html#prerequisites) section.
 
-### Configure Duo
+## Configure Duo
 
 The following section describes how to integrate Turbo Server with Duo using SAML 2.0.
 
@@ -52,7 +52,7 @@ Enter the **Name** for your application and click **Save**.
 
 ![Duo 7 Name](/images/duo-7-name.png)
 
-### Configure Turbo Server
+## Configure Turbo Server
 
 Open the Turbo Server administration site and navigate to the **Users > Authentication Method page**.
 
@@ -79,7 +79,7 @@ Configure the following fields:
   ![Okta 12 Certificate Thumbprint](/images/okta_12_certificate_thumbprint.png)
 - **Singing Certificate Common Name**: Enter the common name value that is listed in the SAML Signing Certificate under **Details > Subject > CN**.
 
-### Install SAML Signing Certificate on Turbo Hub
+## Install SAML Signing Certificate on Turbo Hub
 
 The SAML Signing Certificate is used by Turbo Server to ensure that the SAML response is signed by the expected identity provider. This certificate was downloaded in the previous steps and must be manually installed on the Hub server.
 
@@ -101,6 +101,6 @@ Login to the system where the Turbo Hub role is installed on as an administrator
 
 Once installed, Turbo Server portal logins should now complete successfully.
 
-### Troubleshooting
+## Troubleshooting
 
 Please refer to the [SAML 2.0 Troubleshooting](/server/authentication/saml.html#troubleshooting) section.

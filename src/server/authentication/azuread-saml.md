@@ -4,7 +4,7 @@ Turbo Server can be configured to allow users to log in via Azure Active Directo
 
 For prerequisites and additional information about the SAML 2.0 authentication protocol, please refer to the [SAML 2.0 Prerequisites](/server/authentication/saml.html#prerequisites) section.
 
-### Configure Azure AD
+## Configure Azure AD
 
 The following section describes how to integrate Turbo Server with Azure AD SSO using SAML 2.0.
 
@@ -20,12 +20,12 @@ Once the application has been created, click on the **Single sign-on** tab and s
 
 Once selected, the following configuration sections will be made available. For each section, please update or make a note of the following settings:
 
-#### Basic SAML Configuration
+### Basic SAML Configuration
 
 - **Identifier (Entity ID)**: - A unique identifier used as the audience of the SAML response. For example: `https://example.turbo.net`. Update and save this value in order to configure it in Turbo Server.
 - **Reply URL (Assertion Consumer Service URL)**: The default reply URL for the SAML response. This must match the endpoint listed on the Turbo Server authentication method page. For example: `https://example.turbo.net/auth/saml/return`.
 
-#### User Attributes and Claims
+### User Attributes and Claims
 
 - **Unique User Identifier (Name ID)**: The claim that will uniquely identify the user and will be used for their Turbo Server username. This claim must have the following properties:
 
@@ -54,25 +54,25 @@ Once selected, the following configuration sections will be made available. For 
 
 ![AzureAD SSO + SAML 2.0 configration](/images/saml2-config.png)
 
-#### SAML Certificates
+### SAML Certificates
 
-##### Token signing certificate
+#### Token signing certificate
 
 - **Thumbprint**: The thumbprint of the signing certificate that will be used to verify SAML responses. Save this value in order to configure it in Turbo Server.
 - **Certificate (Base64)**: The signing certificate file that should be installed on the Turbo Server.
 
-##### Verification certificates (optional)
+#### Verification certificates (optional)
 
 - **Require verification certificates**: Enables SAML request signature verification. This setting must match the Request Signing setting on Turbo Server.
 - **Upload certificate**: Upload the SP Signing Certificate (aka Request Signing Certificate) file that corresponds to the Request Signing Private Key configured on Turbo Server. See [Configure the Service Provider Signing Certificate](/server/authentication/azuread-saml.html#configure-turbo-server-configure-the-service-provider-signing-certificate-optional) for more information.
 
-#### Users and Groups
+### Users and Groups
 
 On the **Users and groups** tab, add the users and groups that will have permissions to login with this application.
 
 ![Azure AD SSO + SAML 2.0 user and groups](/images/saml2-users-and-groups.png)
 
-### Configure Turbo Server
+## Configure Turbo Server
 
 Once you have configured Azure AD, you are ready to enable SSO on Turbo Server.
 
@@ -82,14 +82,14 @@ Open the Turbo Server administration site and navigate to the Users > Authentica
 
 Fill in the following fields according to the [Azure AD configuration](#configure-azure-ad):
 
-#### Service Provider Settings
+### Service Provider Settings
 
 - **Entity ID**: The **Identifier (Entity ID)** as configured in Azure AD **Basic SAML Configuration** section.
 - **Request Signing**: The **Require verification certificates** setting as configured in Azure AD **SAML Certificates > Verification certificates** section.
 - **Request Signing Private Key**: The private key of the SP signing certificate. See [Configure the Service Provider Signing Certificate](/server/authentication/azuread-saml.html#configure-turbo-server-configure-the-service-provider-signing-certificate).
 - **Request Signature Algorithm**: The signature algorithm of the SP signing certificate. See [Configure the Service Provider Signing Certificate](/server/authentication/azuread-saml.html#configure-turbo-server-configure-the-service-provider-signing-certificate).
 
-#### Identity Provider Settings
+### Identity Provider Settings
 
 - **Entity ID**: The **Application Id** as configured in the Azure AD **Overview** section.
 - **Entry Point**: The **Login URL** as configured in Azure AD **Set up \[Application Name\]** section.
@@ -99,7 +99,7 @@ Fill in the following fields according to the [Azure AD configuration](#configur
 
 ![Azure AD SSO + SAML 2.0 server settings 2](/images/saml2-server-settings-2.png)
 
-#### Install the Identity Provider Signing Certificate
+### Install the Identity Provider Signing Certificate
 
 The Identity Provider Signing Certificate is used by Turbo Server to ensure that the SAML response is signed by the expected identity provider. This certificate must be manually installed on the Hub server.
 
@@ -121,7 +121,7 @@ Next, login to the Windows Server machine that the Hub server is installed on as
 
 Once installed, Turbo Server portal logins should now complete successfully.
 
-#### Configure the Service Provider Signing Certificate (optional)
+### Configure the Service Provider Signing Certificate (optional)
 
 The SP Signing Certificate (aka Request Signing Certificate) and its associated private key are used by Turbo Server to sign SAML authentication requests sent during login. This signature allows the identity provider to verify that the request originates from the expected service provider.
 
@@ -129,15 +129,15 @@ To generate this certificate and private key, please refer to the [Service Provi
 
 Once generated, Turbo Server must be configured with the respective **Request Signing**, **Request Signing Private Key**, and **Request Signature Algorithm** settings. The certificate must also be uploaded to Azure AD under the **SAML Certificates > Verification certificates** section. See [SAML Certificates](/server/authentication/azuread-saml.html#configure-azure-ad-saml-certificates) for more information.
 
-### Azure AD Multi-Tenancy
+## Azure AD Multi-Tenancy
 
 Multi-tenancy allows users from different Azure AD tenants to login to Turbo Server using the same SSO configuration. 
 
 It is recommended to switch to [Azure OpenID](/server/authentication/azuread-openid-connect) to enable multitenant authentication.
 
-### Troubleshooting Azure AD via SAML 2.0
+## Troubleshooting Azure AD via SAML 2.0
 
-#### AADSTS50105: Your administrator has configured the application to block users unless specifically granted access
+### AADSTS50105: Your administrator has configured the application to block users unless specifically granted access
 
 When **Assignment required?** is enabled for the Azure AD Application and the user is not assigned access or is not part of a group with access to the application, the SSO login fails with the following error message:
 
@@ -155,6 +155,6 @@ To limit access to specified users and/or groups, use the **Add user/group** but
 
 ![Add users and groups to Azure AD Application Assignment](/images/assign_users_and_groups.png)
 
-#### General SAML 2.0 Troubleshooting
+### General SAML 2.0 Troubleshooting
 
 Please refer to the [SAML 2.0 Troubleshooting](/server/authentication/saml.html#troubleshooting) section.

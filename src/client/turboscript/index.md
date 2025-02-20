@@ -14,13 +14,13 @@ The script is read and executed top-to-bottom and is not case-sensitive.
 
 All scripts have an implicit `commit` at the end of the script. After the last instruction in the script, it executes `turbo commit` on the container. If a name was not provided to the `build` command (via the `-n` or `--name` flag) then the new image will be created with its ID as its name. 
 
-### Syntax Rules
+## Syntax Rules
 
 1. TurboScript are line-delimited and must only contain 1 instruction per line. Line continuation is not supported.
 2. All lines must follow the general structure: `instruction <args>`
 3. Inline comments are not supported. Comments must be applied at the beginning of a line and are applied to the entire line. 
 
-### Comments
+## Comments
 
 Comments are denoted by the `#` character. 
 
@@ -34,7 +34,7 @@ Comments cannot be made inline with a command. Comments must be specified at the
 layer nodejs/nodejs  # This is not a valid comment
 ```
 
-### Conditions
+## Conditions
 
 Any TurboScript instruction can have an optional `when` clause at the end of the line to specify the conditions which must be met before the instruction will be executed. The general form is `instruction when expression`.
 

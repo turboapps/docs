@@ -14,7 +14,7 @@ The **General** page provides options to configure and customize Turbo Server. T
 
 - **Notice and Consent**: Users will see a notice and consent dialog after logging into the Portal. They must accept the notice and consent dialog before using the Portal. Markdown syntax is supported for links, headers, font styles, and more.
 
-### Notifications
+## Notifications
 
 ![Add Notification Admin](/images/notifications-admin-add.png)
 
@@ -30,7 +30,7 @@ The **Notifications** page allows admins to notify groups of Turbo Server users 
 
 The end-user may view their notifications on the Turbo Portal under the notifications dropdown, which are listed in order from most recent to least recent. Notifications are sent immediately upon submit, but may be changed later on through the notifications settings page.
 
-### Streaming
+## Streaming
 
 ![Admin General Streaming](/images/admin-general-streaming.png)
 
@@ -114,7 +114,7 @@ The **Reset** button will reset the local group policies to their Turbo Server d
 
 Setting changes are applied approximately once every 20 seconds. You may need to exit and relaunch the group policy editor (gpedit.msc) to see the updated settings on the application servers if it was already opened.
 
-### Appearance
+## Appearance
 
 ![Server admin portal appearance](/images/admin-general-appearance.png)
 

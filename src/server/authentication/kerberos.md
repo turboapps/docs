@@ -4,7 +4,7 @@ Turbo Server applications can be configured to allow user credential delegation 
 
 Azure AD SSO requires all servers in the farm to use https in order to keep users data secure. Make sure SSL is enabled during installation or install SSL from the /admin/servers/ page.
 
-### Configure Turbo Server
+## Configure Turbo Server
 
 To enable Kerberos delegation during application launches, navigate to the workspace administration site and push the **Settings** button on the application for which the feature is desired. On the application's **General Settings** page, scroll down to **Profile Mode** and select **Kerberos** from the dropdown.
 
@@ -12,7 +12,7 @@ To enable Kerberos delegation during application launches, navigate to the works
 
 This feature is currently only implemented for the Windows native client. HTML5 and mobile clients will behave as if the **Ask for Credentials** profile mode is selected.
 
-### Configure Client Machines
+## Configure Client Machines
 
 Each client machine where users will connect to the Application Server requires the **Credentials Delegation** policy to be configured and the **SSL gateway** be disabled on the Turbo Client.
 

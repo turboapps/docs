@@ -1,6 +1,6 @@
 # Network and Load Balancing
 
-### Installing Redundant Roles
+## Installing Redundant Roles
 
 Turbo Server allows installing redundant roles across multiple servers. To install the role on separate servers, run the Turbo Server installer and select the role you would like to install.
 
@@ -10,11 +10,11 @@ It is recommended to install more than one Portal server for failover purposes, 
 
 For maximum redundancy, a redundant domain should be setup that uses federation to replicate the workspaces and authentication settings from the primary domain.
 
-### Configuring Network
+## Configuring Network
 
 The administrator may want to use a reverse proxy to accesss the internal Turbo Server services. The administrator can configure which URLs the services and clients will use to talk to each other. For more information refer to [Domain Addresses](/server/administration/domain#managing-a-server).
 
-### Configuring Content Delivery Network (CDN)
+## Configuring Content Delivery Network (CDN)
 
 Turbo SVM images may be delivered over standard content delivery networks. To enable CDN for the Hub block storage, set the [Hub CDN URL](/server/administration/domain.html#managing-a-server).
 
@@ -26,11 +26,11 @@ If direct download is used, be aware that certain CDN providers limit the object
 
 Be aware that images delivered over the CDN may be downloaded from the public internet. Ensure that there is no confidential data in the images when delivering them over a CDN.
 
-#### Sample CDN Configurations
+### Sample CDN Configurations
 
 Here are sample configurations for using Cloudflare, AWS CloudFront, and Azure CDNs with Turbo Server.
 
-##### Cloudflare
+#### Cloudflare
 
 Create a CNAME that resolves the URL of the Turbo Server instance and turn __Proxy status__ on. The CNAME will be the __Hub CDN URL__ in Turbo Server.
 
@@ -43,7 +43,7 @@ Set the __Hub CDN URL__ in Turbo Server to the CNAME address created in Cloudfla
 
 Cloudflare
 
-##### AWS Cloudfront
+#### AWS Cloudfront
 
 Create a CloudFront distribution with the following options:
 
@@ -54,7 +54,7 @@ Create a CloudFront distribution with the following options:
 
 Set the __Hub CDN URL__ in Turbo Server to the __Distribution domain name__. Set the __Hub CDN Max File Size__ to the maximum file size your CloudFront subscription allows.
 
-##### Azure CDN
+#### Azure CDN
 
 Create an Azure CDN resource with the following options:
 
@@ -65,13 +65,13 @@ Create an Azure CDN resource with the following options:
 
 Set the __Hub CDN URL__ in Turbo Server to the __Endpoint hostname__. Set the __Hub CDN Max File Size__ to the maximum file size your Azure subscription allows.
 
-### Load Balancing
+## Load Balancing
 
 To load balance Application Servers, install the Application Server role on the desired servers. Then, configure the load balancing strategy as described in [Domain Settings](/server/administration/domain#managing-a-server).
 
 To load balance Portals, set the Domain URL to an external load balancer.
 
-### Understanding the Domain URL
+## Understanding the Domain URL
 
 The Domain URL is the URL for any end user or client to access the Turbo Server services. The Domain URL must be accessible on the network the end user is intended to run Turbo applications from. It should map to the server with the Portal role installed. End users can access the web portal through the domain hostname using a web browser. When logging in with the android or iOS application, the end user should put in the Domain URL under the server setting. For example, if the Domain URL is **https://mydomain.com**, the administrator should assign their dns entry at **mydomain.com** to the Turbo Server farm's Portal role server. End users can then navigate to **https://mydomain.com** to view the web portal.
 
@@ -81,8 +81,8 @@ In addition to being used to accessing the web portal, the Domain URL will also 
 
 Alternatively, the administrator may leave the Domain URL setting blank to have it be defaulted to the first server with the Portal role installed.
 
-### Troubleshooting
+## Troubleshooting
 
-#### The HTML5 client fails to launch with websocket tunnel reconnect error.
+### The HTML5 client fails to launch with websocket tunnel reconnect error.
 
 Ensure your load balancer is not blocking the WebSocket path `/tunnelws/rxp`. See how to [add a WAF exception](https://developers.cloudflare.com/waf/managed-rules/waf-exceptions/define-dashboard/).

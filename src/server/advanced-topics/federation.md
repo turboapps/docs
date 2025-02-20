@@ -1,6 +1,6 @@
 # Federation
 
-### Understanding Federation
+## Understanding Federation
 
 Federation feature allows distributing hub servers across different regions to achieve faster streaming for end users and allows higher availability by redundancy. Federation works by assigning a `root` server from which the `child` hub servers to copy repositories from.
 
@@ -10,7 +10,7 @@ Federation repositories can be explicitly cached and synchronized on the child h
 
 If the root hub is unavailable due to network outage or maintenance, the child hub will continue to service requests against explicitly synchronized repositories without any downtime to the end users. Request forwarding will be temporarily unavailable. If the child hub becomes unavailable, then the end users will only be able to use their locally cached applications.
 
-### Configuring Federation
+## Configuring Federation
 
 Follow the [documentation](/server/setup-and-deployment/deploying-on-premises) to setup a Hub Server and your repositories to the hub. The server which will contain the source of the repositories will be called the `root` server.
 

@@ -4,7 +4,7 @@ The following section details the **Import Configuration** feature available in 
 
 Supported application package formats are: Microsoft App-V package (.appv), ThinApp configuration (.ini), Microsoft Installer (.msi), and ZENworks application package (.axt).
 
-### Import Wizard
+## Import Wizard
 
 ![Turbo Studio Import](/images/import.png)
 
@@ -20,7 +20,7 @@ To import an application package into Turbo Studio, please follow these steps:
 
 Once the import is complete, the configuration will be saved to your destination folder and opened in the Turbo Studio editor.
 
-### App-V Import
+## App-V Import
 
 Support for App-V packages is currently in beta and is available in Turbo Studio 22.9+.
 
@@ -33,7 +33,7 @@ Next it is recommended to open each `.xappl` file in Turbo Studio and click **Bu
 
 The following sections describe how to import dynamic configurations and how to deploy the newly built Turbo images to users.
 
-#### Dynamic Configurations
+### Dynamic Configurations
 
 Support for App-V dynamic configurations is currently in beta and is available in Turbo Studio 22.11+.
 
@@ -47,7 +47,7 @@ When importing an App-V package, the importer will look for any `.xml` files in 
 
 It is recommended to open each `.xappl` file in Turbo Studio and click **Build** to create the Turbo images.
 
-#### Deploying imported App-V images
+### Deploying imported App-V images
 
 Turbo images created from the App-V import process can be deployed by running the **installi** command. Different user and machine configurations can be achieved through the use of **layering**.
 
@@ -66,7 +66,7 @@ We recommend using the following layer combinations to simulate App-V deployment
 - **MyApp,MyApp_DeploymentConfig_Machine,app_DeploymentConfig_User**: Layers the base image with machine extensions. Equivalent to publishing the App-V package with a dynamic deployment configuration.
 - **MyApp,MyApp_DeploymentConfig_Machine,app_UserConfig**: Layers the base image with user and machine extensions. Equivalent to publishing the App-V package with a dynamic user configuration and a dynamic deployment configuration.
 
-#### App-V Import Known Issues
+### App-V Import Known Issues
 
 App-V packages may define multiple application entry points rather than a single startup file. If the App-V package defines a single application entry point then it will be set as the startup file in the Turbo configuration, otherwise no default startup file will be set and the user should select one manually in Turbo Studio after import.
 
@@ -74,7 +74,7 @@ Dynamic configurations registry key deletions are implemented in the Turbo confi
 
 UserScripts and MachineScripts are not imported automatically. Scripts with application startup and shutdown triggers may be added manually in Turbo Studio from the **Settings > Startup > Scripts** menu.
 
-### Known Issues
+## Known Issues
 
 Some application package formats may include settings that are not available in the Turbo Studio configuration or vice versa. After importing application packages, the Turbo Studio configuration should be reviewed and tested.
 

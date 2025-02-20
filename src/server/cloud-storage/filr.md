@@ -2,16 +2,16 @@
 
 To allow users to connect their Micro Focus Filr accounts and access their My Files while running their applications, you must set up a Filr Server with accounts for your users.
 
-### Prerequisites
+## Prerequisites
 
 The Filr integration requires Filr version 4.3 or higher.
 
-### Setup Filr Server
+## Setup Filr Server
 1. Follow the [Micro Focus documentation to set up a Filr Server](https://www.microfocus.com/documentation/filr/) and Filr accounts for your users.
 2. Add the following Redirect URI:
     * `https://{Web Service Root}/oauth/filr/callback/login`
 
-### Configure Turbo Server
+## Configure Turbo Server
 Next, Turbo Server must be configured to use the newly created Filr application. Once configured, users may connect their Filr account from the portal settings.
 
 1. Go to the Turbo Server Administration site __Integrations__ > __Storage Providers page__.

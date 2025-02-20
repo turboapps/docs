@@ -6,7 +6,7 @@ Note that **Setup Capture** does not capture changes to drives other than the sy
 
 Below is a walkthrough of the steps required to setup capture ShareX.
 
-#### Using Setup Capture to Capture the Application Install
+## Using Setup Capture to Capture the Application Install
 
 Launch **Turbo Studio** and open a blank configuration by clicking **File > New**.
 

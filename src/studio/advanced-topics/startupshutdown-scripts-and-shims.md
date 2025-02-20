@@ -2,7 +2,7 @@
 
 Turbo Studio allows for custom operations to be performed at the beginning and end of a container's life. This allows for application specific configuration steps to be performed before a container starts (ie. install a necessary driver) or clean up to be performed afterward.
 
-### Container Life Cycle
+## Container Life Cycle
 
 Containers are managed with a root parent process known as a "bootstrap process". This process hosts the virtual machine engine from which the rest of the container executes. In the Turbo command line environment, turbo.exe hosts a shared bootstrap process for each instance of the same container. For Turbo standalone executables ("ISV Applications"), a seperate bootsrap process is used for each invocation of the .exe.
 
@@ -10,7 +10,7 @@ Startup shims and scripts are executed when the first container bootstrap proces
 
 Shutdown shims and scripts are executed when the last process inside the container is closed.
 
-### Scripts
+## Scripts
 
 For simple tasks, a .bat or .cmd script can be configured.
 
@@ -54,7 +54,7 @@ A common use of startup scripts is to install some required component (driver, e
 
 To troubleshoot script issues, set the `__DEBUGINITSCRIPTSHIM` environment variable to `true`. This will show the command window that is executing the script so you can see output and any generated errors.
 
-### Shims
+## Shims
 
 For complex tasks, a DLL can be written to be executed. DLLs can be written in any programming language that supports them but do note any framework requirements must be configured inside the container.
 

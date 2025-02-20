@@ -4,7 +4,7 @@ The **Backup and Recovery** page outlines the requirements for a complete backup
 
 Note: The **Backup and Recovery** process also covers migrating Turbo Server to a different server.
 
-### Backup
+## Backup
 
 The following items are required to take a complete backup of Turbo Server:
 
@@ -22,7 +22,7 @@ It is not required to backup servers hosting only the Portal role.
 
 It is not required to backup the installation directory and sandbox as it will be recreated during the restore process.
 
-#### Hub Storage
+### Hub Storage
 
 It is critical to backup the Hub storage directory. This is where the application images and user session data are stored. The default location is **C:\ProgramData\Turbo Server\io**.
 
@@ -47,23 +47,23 @@ If a failure occurs during migration, the Hub server will not start. You may att
 
 If you are not confident on resolving the issue, please contact support@turbo.net for additional assistence.
 
-#### Databases
+### Databases
 
 It is critical to backup the Configuration and Analytics SQL databases. This is where the Turbo Server configuration and collected analytics data is stored.
 
 There are no specific or required methods to capture a backup of the SQL databases.  However, it is strongly recommended to use native or purpose-built tools to backup the SQL Server databases. 
 
-#### Settings.xml
+### Settings.xml
 
 It is critical to backup the **Settings.xml** file. It contains the configuration data necessary to start the Turbo Server service.  The default location is **C:\ProgramData\Turbo Server\Settings.xml**.
 
 There are no specific or required methods to capture a backup of **Settings.xml.**
 
-#### Image Cache
+### Image Cache
 
 The image cache is an optional storage location set on the Hub server. The image cache writes any images(.svm) files to the path whenever an image is pushed to the Hub. This allows clients to be configured to look at the image cache location to run images directly instead of downloading and caching the images locally. The image cache should also be backed up and restored in case the image files are lost.
 
-### Recovery
+## Recovery
 
 A successful Turbo server restore requires the following elements:
 
@@ -75,7 +75,7 @@ A successful Turbo server restore requires the following elements:
 
 - Post-restore tasks
 
-#### Turbo Server Installation
+### Turbo Server Installation
 
 Restoring Turbo Server requires a brand new and empty installation on the new server.
 
@@ -85,23 +85,23 @@ Refer to the [Turbo Server Setup](/server/setup-and-deployment/deploying-on-prem
 
 Stop the Turbo Server service of the new installation before moving to the next steps.
 
-#### SQL Databases
+### SQL Databases
 
 Use native or purpose-built tools to complete the SQL database restores.
 
 Refer to the [Turbo Server Setup](/server/setup-and-deployment/deploying-on-premises) document to complete the database installation.
 
-#### Hub Storage Directory
+### Hub Storage Directory
 
 Restore the Hub storage directory to the same location as the previous install. 
 
 Note: Skip to the next step if the previous Hub storage directory is not known.
 
-#### Image Cache Directory
+### Image Cache Directory
 
 Restore the Hug image cache directory to the same location as the previous install if necessary.
 
-#### Post Restore Tasks
+### Post Restore Tasks
 
 Update or confirm the SQL database connection strings in **Settings.xml**. The default location is **C:\ProgramData\Turbo Server\Settings.xml**.
 

@@ -2,7 +2,7 @@
 
 To allow users to connect their Dropbox accounts and access them while running their applications, you must first configure a Dropbox app registration. This Dropbox app controls the permissions, branding, and routing for the Dropbox SSO.
 
-### Setup the Dropbox Application
+## Setup the Dropbox Application
 
 1. Create a [Dropbox app registration](https://www.dropbox.com/developers/apps).
 
@@ -12,7 +12,7 @@ To allow users to connect their Dropbox accounts and access them while running t
 
    ![Dropbox Application Registration](/images/dropbox-app.png)
 
-### Configure the Turbo Server
+## Configure the Turbo Server
 
 Next, Turbo Server must be configured to use the newly created Dropbox application. Once configured, users may connect their Dropbox account from the portal settings.
 

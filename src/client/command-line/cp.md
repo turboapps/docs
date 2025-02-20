@@ -9,7 +9,7 @@ Usage: turbo cp [<source-container>:]<path-from> [<target-container>:]<path-to>
      --format=VALUE         Use json format for output
 ```
 
-### Examples
+## Examples
 
 ```
 # Copy a file from a container to the native system
@@ -27,6 +27,6 @@ ERROR
 C:\Users> turbo cp 2de7:C:\project\file.txt \Turbouser
 ```
 
-### JSON output
+## JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain only an exit code data or an `error` object if command failed.

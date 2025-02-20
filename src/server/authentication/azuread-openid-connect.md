@@ -4,7 +4,7 @@ Turbo Server can be configured to allow users to log in via Azure Active Directo
 
 For prerequisites and additional information about the OpenID Connect authentication protocol, please refer to the [OpenID Connect Prerequisites](/server/authentication/openid-connect.html#prerequisites) section.
 
-### Configure Azure AD
+## Configure Azure AD
 
 The following section describes how to configure your Azure AD using the Azure Portal for use with Turbo Server.
 
@@ -19,7 +19,7 @@ To create the application, log into your [Azure Portal](https://portal.azure.com
 
 Once created you will be redirected to the **Overview** page. Click on the **Endpoints** link in the header and save the **OpenID Connect metadata document** URL so that it can be added to Turbo Server later.
 
-#### Authentication
+### Authentication
 
 From the **Authentication** tab, click **Add a platform** and follow the setup guide using the following fields:
 
@@ -30,7 +30,7 @@ From the **Authentication** tab, click **Add a platform** and follow the setup g
 
 ![Azure AD Setup Redirect URL](/images/authentication-redirect-urls.png)
 
-#### API Permissions
+### API Permissions
 
 From the **API permissions** tab, click **Add a permission** and add the following permissions:
 
@@ -45,11 +45,11 @@ Click **Grant admin consent** and **Save** to grant consent on behalf of all use
 
 ![Azure AD API Permissions](/images/permissions-directory.png)
 
-#### Client Secret
+### Client Secret
 
 From the **Certificates & secrets** tab, click **New client secret** and enter your desired description and expiration date. Once created, save the **Client Secret** value so that it can be added to Turbo Server later.
 
-### Configure Azure AD for Mobile Clients
+## Configure Azure AD for Mobile Clients
 
 To enable SSO from mobile clients you must register a new Azure AD native client application that is separate from the Azure AD web application registration. Follow the [Configure Azure AD](#configure-azure-ad) instructions to create a new application registration, replacing the **Web** platform in the Authentication section with **Mobile and desktop applications**, and leaving the **Certificates & secrets** section blank.
 
@@ -57,7 +57,7 @@ Client applications are not configured with secrets because they run on the user
 
 To check that the application is a native application, navigate to the Azure Portal app registration manifest and verify the manifest has the field `"allowPublicClient": true`.
 
-### Configure Turbo Server
+## Configure Turbo Server
 
 Once you have configured Azure AD, you are ready to enable SSO on Turbo Server.
 
@@ -72,7 +72,7 @@ Fill in the following fields according to the [Azure AD configuration](#configur
 - **Web Application Secret**: The Client Secret from your web application registration's certificates & secrets page.
 - **Native Application ID**: The Application ID from your native client application registration overview page.
 
-### Azure AD Multi-Tenancy
+## Azure AD Multi-Tenancy
 
 Multi-tenancy allows users from different Azure AD tenants to login to Turbo Server using the same SSO configuration.
 
@@ -84,13 +84,13 @@ To only allow specific Azure AD tenants, configure the **Accepted Tenants** sett
 
 ![oidc-multi-tenant](/images/oidc.png)
 
-### Troubleshooting Azure AD via OpenID Connect
+## Troubleshooting Azure AD via OpenID Connect
 
-#### Application Registration Permissions
+### Application Registration Permissions
 
 You may review which permissions the app registration requires by forcing the consent dialog to appear during login. To do so, please consult to Microsoft docs: [https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/configure-user-consent#force-user-consent-through-a-url-request](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/configure-user-consent#force-user-consent-through-a-url-request)
 
-#### AADSTS50105: Your administrator has configured the application to block users unless specifically granted access
+### AADSTS50105: Your administrator has configured the application to block users unless specifically granted access
 
 When **Assignment required?** is enabled for the Azure AD Application and the user is not assigned access or is not part of a group with access to the application, the SSO login fails with the following error message:
 

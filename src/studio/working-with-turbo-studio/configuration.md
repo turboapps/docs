@@ -2,7 +2,7 @@
 
 The following discusses the many configuration features available in Turbo Studio. These features allow you to edit and customize the settings for an image or virtual application configuration.
 
-### Process Settings
+## Process Settings
 
 ![Turbo Studio Process Settings](/images/procsettings.png)
 
@@ -22,7 +22,7 @@ The following discusses the many configuration features available in Turbo Studi
 - **Shutdown process tree on root process exit** makes is so that all child processes of the startup file will automatically be killed when the startup file exists.
 - **Enable Chromium suport** allows support for the Chromium sandbox used by Google Chrome, Microsoft Edge, and other applications and components.
 
-### Sandbox Settings
+## Sandbox Settings
 
 ![Turbo Studio Sandbox Settings](/images/sandboxsettings.png)
 
@@ -41,14 +41,14 @@ The following discusses the many configuration features available in Turbo Studi
 - **Enable DDE message isolation** prevents Dynamic Data Exchange (DDE) messages from crossing container boundaries.
 - **Force read-share files** makes it so that all files in the container are opened in a way that doesn't block other processes from opening for read.
 
-### Metadata Settings
+## Metadata Settings
 
 ![Turbo Studio Metadata Settings](/images/metadatasettings.png)
 
 - **Standard Metadata** fields include information such as product title, publisher, description, icon, web site URL, and version. By default these values are inherited by the startup file and will be displayed here. To override any of the values, uncheck the **Inherit** checkbox. Leave the value as **@INHERIT@** for any values that should continue to be inherited.
 - **Custom Metadata** can be used by specialized external executable viewer applications, inventory scanners, and other asset and licensing management systems. For information on custom executable metadata, consult the Microsoft Windows Software Development Kit.
 
-### Startup Settings
+## Startup Settings
 
 ![Turbo Studio Startup Settings](/images/startupsettings.png)
 
@@ -65,7 +65,7 @@ The following discusses the many configuration features available in Turbo Studi
 - **Shutdown shim DLL** assigns a path to a shim DLL that is executed when the container stops.
 - **OnShutdown parameter** is a string value which is passed to the shutdown shim.
 
-### Layers Settings
+## Layers Settings
 
 ![Turbo Studio Layers](/images/layers.png)
 
@@ -79,7 +79,7 @@ External layers in the local dependency cache are loosely matched by name and ve
 
 For standalone executable project types, runtime patch layer dependencies can be set by clicking the **Patches...** button.
 
-### Desktop Integration Settings
+## Desktop Integration Settings
 
 ![Turbo Studio Desktop Settings](/images/desktop.png)
 
@@ -87,7 +87,7 @@ The **Desktop** panel allows shortcuts and file associations to be defined which
 
 See [Desktop Integration](/studio/working-with-turbo-studio/desktop) for more information on shortcut and file association configuration.
 
-### Licensing Settings
+## Licensing Settings
 
 ![Turbo Studio Licensing Settings](/images/licensing.png)
 
@@ -101,7 +101,7 @@ See [Desktop Integration](/studio/working-with-turbo-studio/desktop) for more in
 - **Disallow execution if unreachable** will prevent the container from executing if the web server clock URL cannot be reached.
 - **Warning message** sets the message that is displayed when the unreachable warning is shown.
 
-### Security Settings
+## Security Settings
 
 ![Turbo Studio Security Settings](/images/security.png)
 
@@ -116,7 +116,7 @@ See [Desktop Integration](/studio/working-with-turbo-studio/desktop) for more in
 - **Enable FIPS compatibility** hides the container from any FIPS rules enforced on the machine. Useful for legacy applications which cannot be made FIPS compliant. The application security must be ensured by other means.
 - **Enable AppLocker DLL rules compatibility** disables AppLocker DLL rules for the container applications. The application security must be ensured by other means.
 
-### Proxy Settings
+## Proxy Settings
 
 ![Turbo Studio Proxy Settings](/images/proxy.png)
 
@@ -126,14 +126,14 @@ See [Desktop Integration](/studio/working-with-turbo-studio/desktop) for more in
 - **Protocol** specifies the proxy protocol to use. Valid options are **SOCKS5**, **SOCKS4**, **HTTPS**, and **HTTP**.
 - **Authentication** specifies how the container authenticates with the proxy server. This can either be anonymous or plain-text username/password.
 
-### DNS Settings
+## DNS Settings
 
 ![Turbo Studio DNS Settings](/images/dns.png)
 
 - **Hostname or IP Address** specifies the source name/address to map to another location.
 - **Redirect** specified the target IP address where the source address is mapped to. Redirecting to IP 0.0.0.0 will make the source name/address unreachable.
 
-### IP Restriction Settings
+## IP Restriction Settings
 
 ![Turbo Studio IP Restrictions](/images/ip.png)
 

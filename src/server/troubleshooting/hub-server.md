@@ -28,7 +28,7 @@ This may occur due to:
 3. Check if Turbo Server Service is installed and running
 4. Try accessing the admin site (typically http://localhost/admin)
 
-## Common Installation Issues
+### Common Installation Issues
 
 The following table lists common installation issues and their solutions:
 
@@ -53,6 +53,7 @@ The following table lists common installation issues and their solutions:
 ## Performance Monitoring
 
 ### Performance Counters
+
 ![Server Diagnostics](/images/admin-server-diagnostics.png)
 
 Turbo Server uses performance counters to track and report server load information. These reports may be viewed on the Turbo Server administration site [Domain page](/server/administration/domain).
@@ -74,10 +75,11 @@ This group is automatically added to the service user during Turbo Server instal
 
 Debug logs help Turbo support diagnose issues:
 
-#### Client Logs
+### Client Logs
+
 Located in: `c:\users\[user]\appdata\local\turbo\logs`
 
-#### Server Debug Mode
+### Server Debug Mode
 
 1. Stop the service:
 ```powershell
@@ -132,10 +134,10 @@ Two methods to restart the Turbo Server service:
    net start turbo
    ```
 
-### Additional Diagnostic Tools
-
-#### Windows Event Viewer
+### Windows Event Viewer
 Check Event Viewer for service startup issues and other Windows-related problems.
+
+## Tips
 
 ::: warning Important Notes
 - Always check logs before making configuration changes
