@@ -39,7 +39,7 @@ b92981a3dd27  nodejs/nodejs           node app.js  9/3/2014 11:05:36 AM  Stopped
 
 If the value specified for `-n` is greater than the number of sessions present on the local machine, all of the sessions are listed (same result as running `turbo sessions`). 
 
-### Formatting Results
+## Formatting Results
 
 The table that is returned by the sessions command is space-formatted. If you wish to return the table with tabs between each column then use the `--csv` flag. 
 
@@ -62,6 +62,6 @@ The `--no-trunc` flag includes additional columns in the output, **Ports**, **Se
 
 The **Ports** column contains active port mappings. See the `turbo netstat` command for more information. The **VM version** contains version number of VM used to create and run session.
 
-### JSON output
+## JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain either a `sessions` array with information about available sessions or an `error` object if command failed.

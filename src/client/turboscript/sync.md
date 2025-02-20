@@ -8,7 +8,8 @@ The `sync` instruction is applied recursively to all sub directories.
 sync enable|diable "<path>"
 ```
 
-### Example
+## Examples
+
 ```
 # Disable synchronization for the app-settings directory
 sync disable C:\apps-settings

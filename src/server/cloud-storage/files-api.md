@@ -12,19 +12,19 @@ For more information cloud storage integrations and connecting cloud storage acc
 
 All request paths described in this document are relative to the base Portal URL: `https://{portal}`
 
-### Authorization
+## Authorization
 
 All requests expect an `X-Turbo-Ticket` header with a JWT access token value. If this token is missing or invalid, a **401** unauthorized response error is returned.
 
-### Request and response formats
+## Request and response formats
 
-#### **Date format**
+### **Date format**
 
 All dates returned by the Files API are in UTC time and ISO 8601 format:
 
 `2015-05-15T15:50:38Z`
 
-#### Resource Address Format
+### Resource Address Format
 
 File resources are uniquely located by their resource address. The resource address is formatted in standard unix path formatting (ex. `/my-onedrive/path/to/file.txt`). The root path segment is the storage provider slug, which identifies the remote storage provider that contains the resource, and the remaining path segments are the resource address within the remote storage provider.
 
@@ -32,9 +32,9 @@ The Files API metadata object include the resource’s address in its **address*
 
 The root folder is addressed by an empty string or `/`.
 
-### Endpoints
+## Endpoints
 
-#### Create Folder
+### Create Folder
 
 Creates a new folder at the given path in the storage provider.
 
@@ -48,7 +48,7 @@ Response:
 A FolderMetadata object
 ```
 
-##### Example
+#### Example
 
 ```json
 POST /rest/0.1/files/create-folder
@@ -79,7 +79,7 @@ Response Body:
 }
 ```
 
-#### Delete
+### Delete
 
 Deletes the file or folder at the given path from the storage provider.
 
@@ -93,7 +93,7 @@ Response:
 <empty>
 ```
 
-##### Example
+#### Example
 
 ```json
 DELETE /rest/0.1/files/delete
@@ -110,7 +110,7 @@ Response:
 <empty>
 ```
 
-#### Download File
+### Download File
 
 Downloads the file content for the given path from the storage provider. Response headers are passed through as-is from the storage provider.
 
@@ -124,7 +124,7 @@ Response:
 File content
 ```
 
-##### Example
+#### Example
 
 ```json
 POST /rest/0.1/files/download
@@ -141,7 +141,7 @@ Response Body:
 File content
 ```
 
-#### Get Metadata
+### Get Metadata
 
 Returns a metadata object that includes detailed information about the file or folder.
 
@@ -155,7 +155,7 @@ Response:
 A FileMetadata or FolderMetadata object
 ```
 
-##### Example
+#### Example
 
 ```json
 POST /rest/0.1/files/get-metadata
@@ -186,7 +186,7 @@ Response Body:
 }
 ```
 
-#### List Directory
+### List Directory
 
 Returns a list of file and folder metadata objects that are contained within the specified folder.
 
@@ -200,7 +200,7 @@ Response:
 A ListFolderResult object
 ```
 
-##### Example
+#### Example
 
 ```json
 POST /rest/0.1/files/list-folder
@@ -236,7 +236,7 @@ Response:
 }
 ```
 
-#### Move
+### Move
 
 Moves a file or folder from the source address to the destination address. If the destination address conflicts with an existing file, that file will be overwritten.
 
@@ -250,7 +250,7 @@ Response:
 A FileMetadata or FolderMetadata object
 ```
 
-##### Example
+#### Example
 
 ```json
 POST /rest/0.1/files/move
@@ -282,7 +282,7 @@ Response:
 }
 ```
 
-#### Rename
+### Rename
 
 Renames a file or folder from the address with the specified name. If the new name conflicts with an existing file, that file will be overwritten.
 
@@ -296,7 +296,7 @@ Response:
 A FileMetadata or FolderMetadata object
 ```
 
-##### Example
+#### Example
 
 ```json
 POST /rest/0.1/files/rename
@@ -328,7 +328,7 @@ Response:
 }
 ```
 
-#### Upload File
+### Upload File
 
 Uploads a file to the storage provider. If the upload would conflict with an existing file, that file will be overwritten.
 
@@ -349,7 +349,7 @@ Response:
 A FileMetadata object
 ```
 
-##### Example
+#### Example
 
 ```json
 POST /rest/0.1/files/upload
@@ -380,13 +380,13 @@ Response:
 }
 ```
 
-### Errors
+## Errors
 
 The Files API errors return an error status code in addition to a JSON object in the response body with additional details.
 
 The following section describes the various error responses that should be handled by consuming clients.
 
-#### 400: Bad Request
+### 400: Bad Request
 
 A 400 error response indicates that the provided arguments were invalid or the requested operation failed. For example:
 
@@ -405,7 +405,7 @@ For example, a list-folder request with an address that does not point to a file
 
 The message may also contain additional information about the error. To resolve this issue, check the error response and adjust your arguments accordingly.
 
-#### 401: Unauthorized Response
+### 401: Unauthorized Response
 
 A 401 error response indicates that the user is not authorized to access the requested file or folder. This occurs when then user did not provide a valid ticket.
 
@@ -420,13 +420,13 @@ For example, a get-metadata request with an expired ticket would return a 401 er
 
 To resolve this issue, check the error response and adjust your provided authentication header accordingly.
 
-#### 5xx: Server Error
+### 5xx: Server Error
 
 A 5xx error response indicates that an unexpected error occurred while processing the request.
 
 5xx errors are not guaranteed to return a JSON response body.
 
-#### Error Codes
+### Error Codes
 
 | Reason Code | Description | Code |
 | --- | --- | --- |
@@ -462,46 +462,46 @@ A 5xx error response indicates that an unexpected error occurred while processin
 | tooManyWriteOperations | There are too many active write operations. Please wait and try again. | 400 |
 | unauthorized | The caller is not authenticated. | 401 |
 
-### Object Models
+## Object Models
 
-#### Request Objects
+### Request Objects
 
-##### CreateFolderRequest
+#### CreateFolderRequest
 
 A JSON object sent in named resource request bodies, such as create folder.
 
 - **parentAddress** - {ResourceAddress} The address of the parent folder
 - **name** - {String} The name of the file or folder
 
-##### MoveRequest
+#### MoveRequest
 
 A JSON object sent in move request bodies.
 
 - **fromAddress** - {ResourceAddress} The address of the source file or folder
 - **toParentAddress** - {ResourceAddress} The address of the parent folder that will contain the moved file or folder
 
-##### RenameRequest
+#### RenameRequest
 
 A JSON object sent in rename request bodies.
 
 - **address** - {ResourceAddress} The address of the resource that will be renamed
 - **name** - {String} The new name of the file or folder
 
-##### ResourceRequest
+#### ResourceRequest
 
 A JSON object sent in resource request bodies, such as list folder.
 
 - **address** - {ResourceAddress} The address of the file or folder
 
-#### Response Objects
+### Response Objects
 
-##### ListFolderResult
+#### ListFolderResult
 
 A JSON object returned in the list-folder response body.
 
 - **items** - {Array of FileMetadata | FolderMetadata} A list of file or folder metadata objects
 
-##### FileMetadata
+#### FileMetadata
 
 Metadata that describes various attributes about a file.
 
@@ -516,7 +516,7 @@ Metadata that describes various attributes about a file.
 - **attributes** - {String[]} A list of strings that specify the file attributes. For example, `readonly` or `hidden`.
 - **webViewLink** - {String} A URL to view the file in an external web viewer, such as Google Sheets. Can be absent if no external web viewer exists for the file.
 
-##### FolderMetadata
+#### FolderMetadata
 
 Metadata that describes various attributes about a folder.
 
@@ -529,15 +529,15 @@ Metadata that describes various attributes about a folder.
 - **permissions** - {String[]} A list of strings that specify the user’s folder permissions. Valid values are `read`, `write`, and `delete`.
 - **attributes** - {String[]} A list of strings that specify the folder attributes. For example, `readonly` or `hidden`.
 
-#### Types
+### Types
 
-##### ResourceAddress
+#### ResourceAddress
 
 A string that uniquely locates a file resource in [Resource Address Format](#request-and-response-formats-resource-address-format).
 
-### Examples
+## Examples
 
-#### Download all files to a local folder
+### Download all files to a local folder
 
 The following C# console application demonstrates how a client can iterate through a user's connected cloud storage providers and download all files and folders to a local folder:
 

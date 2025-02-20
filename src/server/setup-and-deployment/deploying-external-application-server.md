@@ -4,7 +4,7 @@ Turbo Server administrators may join an external Turbo Application Server to the
 
 For customers using the Turbo SaaS Portal, skip to the section on how to [Configure the External Application Server](deploying-external-application-server#configure-the-external-application-server).
 
-### Configurating the Portal
+## Configurating the Portal
 
 Follow these steps to configure the Turbo Portal system.
 
@@ -16,7 +16,7 @@ Follow these steps to configure the Turbo Portal system.
 
 Note that if you use an external firewall or hosting the Turbo Portal on a cloud hosting service such as Microsoft Azure or Amazon AWS, you will need to open the ports there as well.
 
-### Configuring the Database
+## Configuring the Database
 
 Follow these steps to configure the Turbo Server database.
 
@@ -28,7 +28,7 @@ Follow these steps to configure the Turbo Server database.
 
 Note that TCP port 1433 and UDP port 1434 are the default ports for Microsoft SQL Server. Your database may be configured to use different ports and you should open those instead.
 
-### Configure the External Application Server
+## Configure the External Application Server
 
 Follow these steps to configure the Turbo Application Server.
 

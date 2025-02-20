@@ -19,7 +19,7 @@ Changes are shown relative to the base images that the container was created fro
 > turbo diff <container id>
 ```
 
-### Interpreting Results
+## Interpreting Results
 
 The leading character of each line denotes the type of change made at that path. 
 
@@ -39,7 +39,7 @@ C C:\Users\Turbouser
 A C:\Users\Turbouser\file.txt
 ```
 
-### Filtering Results
+## Filtering Results
 
 The diff command will show changes in the virtual filesystem and registry. To change this behavior use the `--subsystems` flag.
 
@@ -61,6 +61,6 @@ To only show changes beneath a certain node in the filesystem or registry direct
 > turbo diff --path=C:\Windows\system32
 ```
 
-### JSON output
+## JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain either a `diff` object with information about differences or an `error` object if command failed.

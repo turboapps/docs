@@ -22,6 +22,8 @@ Only the standard streams for a container are recorded and logged. To enable mor
 
 Previous logs are kept until the next start of a given container instance. Logs can be viewed at any time. To see available logs, use the `--list` flag. 
 
+## Examples
+
 ```
 # Show only stdout or stderr logs
 > turbo logs --stdout 2de7fda8
@@ -50,6 +52,6 @@ Previous logs are kept until the next start of a given container instance. Logs 
 > turbo logs --list 2de7fda8
 ```
 
-### JSON output
+## JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It can contain `streamLogs` and `diagnosticLogs` arrays if asked for list of logs, a `log` string if asked for specific log, or an `error` object if command failed.

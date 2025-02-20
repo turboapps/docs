@@ -4,7 +4,7 @@ The command-line version of Turbo Studio is called **XStudio.exe** and can be fo
 
 **Note:** If running XStudio displays the error `<SandboxCollision> is missing from the string table` the XStudio application cannot be run while Turbo Studio is also running. Turbo Studio must be closed before running XStudio via the command line.
 
-#### Build
+## Build
 
 Build the specified container configuration.
 
@@ -21,7 +21,7 @@ Optional parameters:
 - **/v [version]** assigns the **Version** of the output exe.
 - **/startupfile [path]** overrides the **Startup File** of the output file.
 
-#### Setup Capture
+## Setup Capture
 
 Start the capture recording.
 
@@ -61,7 +61,7 @@ Function StartTurboCapture() {
 
 **Note:** Configuration files that are generated from the capture will not have an output file specified in the **XAPPL** configuration file. When using scripting for captures, it may be necessary to apply changes to the generated **XAPPL** file, either manually or programmatically.
 
-#### Snapshot
+## Snapshot
 
 Take a before snapshot.
 
@@ -80,7 +80,7 @@ Parameters:
 
 **Note:** Configuration files that are generated from the command-line after using the **/after** flag do not have an output file specified in the **XAPPL** configuration file. When using scripting for snapshots, it may be necessary to apply changes to the generated **XAPPL** file, either manually or programmatically.
 
-#### Import
+## Import
 
 Import MSI, AXT, or ThinApp configurations as well as opening Turbo .SVM and .EXE configurations to produce .xappl and files.
 
@@ -91,7 +91,8 @@ Parameters:
 - **/o [path]** specifies the path to where the resulting container configuration file is to be saved.
 - **/importmode [XapplAndFiles|XapplOnly]** specifies the way in which Turbo .SVM and .EXE configurations are imported. This is an optional parameter which defaults to include both .xappl and files. Use **XapplOnly** for very large configurations when only the .xappl is required.
 
-#### Merge Configs
+## Merge Configs
+
 Combine two or more configurations into a single file. Configurations can be in the form of a **.xappl**, **.svm**, or **.exe** file.
 
 `> xstudio.exe /merge [path-to-config1] [path-to-config2] ... /o [path] [optional]`
@@ -110,7 +111,7 @@ Optional parameters:
 
 **Note:** If merging a **XAPPL** configuration file with a binary configuration file (**SVM** or **EXE**), the output file cannot be a **XAPPL**, and must be one of the other two.
 
-#### Sandbox Merge
+## Sandbox Merge
 
 Merge the contents of a sandbox into a container configuration.
 
@@ -120,7 +121,7 @@ Parameters:
 - **/i [path]** specifies the path to source configuration file.
 - **/o [path]** specifies the path to output merged configuration file.
 
-#### Dump Settings
+## Dump Settings
 
 Dump a list of all configuration settings in the specified configuration file, container image, or standalone executable.
 
@@ -131,7 +132,7 @@ Parameters:
 - **/i [path]** specifies a path to a .xappl, .svm, or .exe.
 - **/nologo** is an optional flag that specifies that the Turbo Studio copyright and logo information is to be suppressed. Useful when consuming the output in scripts.
 
-#### Transform Path
+## Transform Path
 
 Transform a path to its tokenized form or back from its tokenized form. For example, to convert "c:\program files\internet explorer\iexplore.exe" to "@PROGRAMFILES@\internet explorer\iexplore.exe". This tool can also be used for registry paths.
 
@@ -142,7 +143,7 @@ Optional parameters:
 - **/revert** specifies that the path is tokenized and is to be converted back to native machine path. 
 - **/nologo** specifies that the Turbo Studio copyright and logo information is to be suppressed. Useful when consuming the output in scripts.
 
-#### Apply Configuration
+## Apply Configuration
 
 Apply the contents of a configuration to a host device. This will take all of the files and registry entries from a configuration, as well as environment variables and services, and put them onto the native host machine that XStudio is being executed on.
 

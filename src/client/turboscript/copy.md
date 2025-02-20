@@ -13,7 +13,8 @@ The source path may point to an inner subdirectory of the one mentioned above, b
 
 The destination may either be an absolute path, or a relative path. In the latter case, the file is copied into a location relative to the current working directory.
 
-Examples:
+## Examples
+
 ```
 copy turbo.me .
 copy setup\installer.msi C:\setup\

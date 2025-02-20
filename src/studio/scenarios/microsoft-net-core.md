@@ -2,7 +2,7 @@
 
 .NET Core is a free and open-source managed software framework for Windows, macOS and Linux. It allows you to build managed applications and deploy them across many different platforms. Below are the steps to create a custom .NET Core container image for use with your applications.
 
-### Building
+## Building
 
 Download the **.NET Core Binaries** from [https://www.microsoft.com/net/download/dotnet-core/2.1](https://www.microsoft.com/net/download/dotnet-core/2.1). These instructions are the same whether you are producing a build for **x86** or **x64** versions of either **SDK** or **Runtime**. Select the variants required for your scenario.
 
@@ -26,7 +26,7 @@ Depending on where this image is deployed, the **Microsoft Visual C++ 2015 Redis
 
 Save your configuration and build the image.
 
-### Testing
+## Testing
 
 To test your new container image, first import into your local Turbo repository:
 

@@ -41,7 +41,7 @@ For example, with a WordPress image based on PHP, MySQL, and Apache built with `
 - Transitive dependencies are downloaded recursively
 - The image cannot be pushed if base images are not available on Hub
 
-### Using TurboScript
+## Using TurboScript
 
 A TurboScript is a list of instructions that Turbo will follow to create a container. After the last instruction in a script, Turbo will automatically run `turbo commit` on the recently created container, creating a new image.
 
@@ -54,11 +54,11 @@ When building from a **.me** script, Turbo will take the following steps:
 
 If there are any conflicts between a TurboScript instruction and a command-line flag then the TurboScript instruction will take precedence.
 
-### Using .xappl Files
+## Using .xappl Files
 
 A **.xappl** file is an XML file that contains all of the filesystem, registry, and configuration information for a given image. A **.xappl** file can be built using Turbo Studio.
 
-### Environment Variables
+## Environment Variables
 
 Environment variables can be added to the container through the `-e` or `--env-file` flags. These environment variables are initialized at container creation and thus may be overridden by variables created with the `env` instruction in the build script. 
 
@@ -83,7 +83,7 @@ VAR2=2
 
 **Note**: If the `--env-file` and `-e` flags are used in the same command, the `env-file` flag is always processed before the `-e` flag. In the case of a conflict, the `-e` flag always takes precedence. 
 
-### Other Command Line Flags
+## Other Command Line Flags
 
 Name images using the `-n` flag and overwrite existing images with the same name using the `--overwrite` flag. 
 
@@ -116,7 +116,7 @@ The build command will create the intermediate container and output image using 
 
 The `--diagnostic` flag enables logging within the intermediate container. This flag does not create diagnostic-mode images.
 
-### Merging Images
+## Merging Images
 
 The `build` command will include all images, which are referenced with the `from` statement in the script. For example, when the script uses `from spoonbrew/git, spoonbrew/nuget`, then these two containers will be merged and stored into the newly built container.
 
@@ -126,6 +126,6 @@ The `--no-base` option will not merge in the script. Instead, the images are inc
 - You need flexibility in base image versions
 - Testing different dependency combinations
 
-### JSON output
+## JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain either an `image` object with information about result image or an `error` object if command failed.

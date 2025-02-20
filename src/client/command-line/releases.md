@@ -11,6 +11,8 @@ Usage: turbo releases <image>
 
 All the available releases are displayed.
 
+## Examples
+
 ```
 > turbo releases my-image
 All available releases of my-image:
@@ -19,6 +21,6 @@ head (local)
 0.1.29
 ```
 
-### JSON output
+## JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain either `releases` array with list of available releases or an `error` object if command failed.

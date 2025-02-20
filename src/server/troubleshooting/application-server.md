@@ -1,6 +1,6 @@
 # Application Server Troubleshooting
 
-### Group Policy Settings
+## Group Policy Settings
 
 A common point of failure is due to the group policy applied to the application server. In a typical enterprise scenario the administrator has applied Microsoft's security baseline group policies on Windows servers. There are some group policies that will prevent the application server from functioning. Some of these policies may not appear in your Group Policy editor if the template is missing from your Windows Policy folder, but must be changed to install correctly. Ensure the following group policies are either unconfigured or set to the following values in the table:
 
@@ -22,7 +22,7 @@ A common point of failure is due to the group policy applied to the application 
 | Windows Settings > Security Settings > Application Control Policies > AppLocker > Executable Rules | Allow Everyone | %OSDRIVE%\USERS\*\APPDATA\LOCAL\TURBO\* | Turbo Container Sandboxes may be cached in the user's local AppData folder. |
 | Windows Settings > Security Settings > Local Policies > Security Options | Interactive Logon: Machine inactivity limit | 0 or Not Defined | Prompts user to login after idle timeout. Use Admin > General > Streaming settings instead. |
 
-### Diagnosing WinRM Errors (LEGACY)
+## Diagnosing WinRM Errors (LEGACY)
 
 The following group policies enables WinRM for legacy (prior to version 2019.7.26) Turbo Broker:
 
@@ -63,7 +63,7 @@ WinRM service is already running on this machine.
 WinRM is already set up for remote management on this computer.
 ```
 
-### RemoteApp Registry Settings
+## RemoteApp Registry Settings
 
 The application server provisioner should make the required changes to enable RemoteApp execution. Ensure these registry settings were applied properly:
 
@@ -90,7 +90,7 @@ The application server provisioner should make the required changes to enable Re
 | HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp | SecurityLayer | 2 (DWORD) | Require TLS 1.0 to authenticate the RD Session Host server. |
 | | UserAuthentication | 1 (DWORD) | Enable Network Level Authentication. |
 
-### Windows Updates
+## Windows Updates
 
 The following Windows updates are required to establish secure connections between the client and RD Session Host. Not installing the following updates on the application server may prevent connections between the client and application server from functioning:
 
@@ -99,7 +99,7 @@ The following Windows updates are required to establish secure connections betwe
 | Windows Server 2012 | KB4103730 or KB4103726 | Security update for Remote Desktop connections. |
 | Windows Server 2016 | KB4103723 | Security update for Remote Desktop connections. |
 
-### Windows Update Notifications
+## Windows Update Notifications
 
 Disable Automatic Updates if Windows Update notifications are being shown on remote sessions:
 
@@ -111,7 +111,7 @@ First open the Local Group Policy Editor:
 
 Set **Configure Automatic Updates** to disabled under **Computer Configuration/Administrative Templates/Windows Components/Windows Update**.
 
-### Application Launch Issues
+## Application Launch Issues
 
 **The remote application failed to launch**
 
@@ -121,7 +121,7 @@ There is a 20 second interval when the Turbo Server service is starting where th
 
 Ensure that background processes such as Windows updates is disabled when the Application Server is expected to be in use. Log in as administrator and open Task Manager. If the TiWorker.exe is running with high CPU usage then it indicates that a Windows update is in progress.
 
-### Application Server is unavailable
+## Application Server is unavailable
 
 **The broker logs indicate the application server is unavailable**
 
@@ -137,11 +137,11 @@ If this page returns a **Connection Timeout**, then there may be a Windows firew
 
 If this page returns a **Service Unavailable (503)** response code, then the application server is most likely restarting. Please wait a few minutes and try again. If the failure persists, please contact support.
 
-### Application Issues
+## Application Issues
 
 If the application itself is encountering errors or hangs, the first step to troubleshoot the issue is to log into the application server directly and attempt to run it there using the turbo command line interface (ie. `turbo run [app]`). If the problem reproduces in this way then see application troubleshooting suggestions [here](/client/turbo-vm/troubleshooting/common-errors).
 
-### Run in Cloud launch mode shows prompt to Select a session to reconnect to
+## Run in Cloud launch mode shows prompt to Select a session to reconnect to
 
 Users will encounter the **Select a session to reconnect to** dialog when they use a Run in Cloud launch mode and the following conditions are met:
 
@@ -160,7 +160,7 @@ The user may also avoid this dialog by completely exitting their applications be
 
 ![Select a session to reconnect to dialog](/images/disconnected_session.png)
 
-### Run in Cloud launch mode shows another application in the same session
+## Run in Cloud launch mode shows another application in the same session
 
 Users may see another application when they use a Run in Cloud launch mode and the following conditions are met:
 
@@ -173,14 +173,14 @@ This issue does not apply to applications configured with a **Temporary Profile*
 
 The user may also avoid this dialog by completely exitting their applications before closing the browser tab, which closes the sessions instead of leaving them running in a disconnected state.
 
-### Application window disappears (Windowed) or shows lock screen (HTML5) after idling
+## Application window disappears (Windowed) or shows lock screen (HTML5) after idling
 
 If users report that their application window disappears when using the Run in Cloud (Windowed) launch mode or shows the lock screen when the Run in Cloud (HTML5) launch mode and the portal shows that the application is still active and connected, the application server may have the following group policy configured:
 **Windows Settings > Security Settings > Local Policies > Security Options > Interactive Logon: Machine inactivity limit**.
 
 To resolve this issue, set the Interactive Logon: Machine inactivity limit to 0 and use the [Streaming](/server/administration/general.html#streaming) settings to control the application session length.
 
-### Application server is online but is not servicing application launches
+## Application server is online but is not servicing application launches
 
 If an application server configured as part of your Turbo Server topology is online but is not servicing any application launches, there may be a fatal error that is preventing workloads from being assigned to that server. For example, an application server may not be properly configured to accept RDP connections.
 

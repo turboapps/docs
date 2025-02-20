@@ -176,7 +176,7 @@ When the `--diagnostic` flag is used, the container will generate diagnostic log
 
 Please note that `turbo.exe` always runs outside of the container on the host even if executed from within the container.
 
-### Environment Variables
+## Environment Variables
 
 Environment variables from the host system will be seen inside the container, unless they were isolated or set image in which the image's value will be used over the host systems. Add or override them in the container with the `-e` or `--env-file` flags. Setting evironment variables in the container will persist them in the container but not on the host system regardless of the isolation mode.
 
@@ -209,7 +209,7 @@ C:\Windows\system32;C:\Windows;
 C:\Windows\system32;C:\Windows;C:\Users	
 ```
 
-### Virtual Networks
+## Virtual Networks
 
 By default, containers run in the host network, meaning that any services exposed by a container can be accessible to the outside world just as if the application was running natively on the host. However, it is possible to run containers in virtualized network environments by specifying a network name other than "host" with the `--network` flag. Running a container in virtualized network environment prevents it from exposing services to the outside world (unless `--route-add` flag is used appropriately) while allowing for easy communication between containers running in the same virtualized network environment. In a virtual network, containers can connect to each other using their names as specified with the `--name` flag if there was any or auto-generated from the image name otherwise.
 
@@ -230,7 +230,7 @@ webbrowser#dd73e48a
 
 **Note:** When connecting, always use the container name and not the network name. After all, what should your application connect to if there were two separate containers exposing the same services on the same virtual network if you connected by network name instead of container name?
 
-### Proxy Settings
+## Proxy Settings
 
 Proxy settings allows the virtual application to route network traffic to the  specified proxy server `--proxy-server` with `--proxy-password` as the proxy password (if required). You may also specify addresses using the `--proxy-targets` to proxy only the specified addresses within the application.
 
@@ -238,7 +238,7 @@ If the user omits the `--proxy-server` flag when executing in a Turbo Server dom
 
 For example, `turbo run firefox --proxy-targets=https://internaladdress.com` will attempt to proxy any connections to internaladdr.com to the Portal domain's network. The equivalent command is `turbo run firefox --proxy-server=tnrl://<PortalDomain>/tnrl --proxy-targets=http://internaladdress.com`
 
-### Port Mapping
+## Port Mapping
 
 All network operations (opening/closing ports, for example) are passed through to the local machine when running in the host network context. To remap container ports to other ports on the local machine, use the `--route-add` flag. This flag also works when running in a virtualized network environment (by specifying the `--network` flag).
 
@@ -265,7 +265,7 @@ The default policy of allowing containers to bind to any port on the local machi
 > turbo run --route-block=tcp,udp --route-add=tcp://3486:80 <image>
 ```
 
-### Container-to-Container Links
+## Container-to-Container Links
 
 If you decided to not expose any services running in a container to the public by specifying the `--route-block` flag and not `--route-add`, you may still want to be able to connect to the services in your container from another container on the same machine. Although this is best achieved by running the containers in the same virtual network using the `--network` flag, container linking can be used for this purpose as well.
 
@@ -275,7 +275,7 @@ With each link, an alias name must be specified. Name resolution overrides are a
 
 Container links also work between containers running in different virtual networks.
 
-#### Example
+### Example
 
 First create two containers, each exposing web sites on private port 80, but with no services exposed outside the containers. Run them in detached mode.
 
@@ -297,7 +297,7 @@ Then create a web browser container linked to the previously created containers.
 
 You will be able to browse websites served by the linked containers even though they are not publically available.
 
-### Controlling Outbound Traffic
+## Controlling Outbound Traffic
 
 The `--route-add` and `--route-block` not only provide a way to create rules that apply to inbound network traffic with the `tcp` and `udp` protocols, but also rules that apply to outbound network traffic. For the outbound rules, the `ip` protocol is used. The rules can be implemented using a whitelist or a blacklist approach. It is also possible to reroute traffic from one IP address/host to another, effectively defining an IP address alias.
 
@@ -305,7 +305,7 @@ Routes can be defined using IPv4, IPv6 addresses, or based on hostnames. Note ho
 
 If your container requires several routing rules then we recommend creating a **route-file**. A **route-file** is an INI based, line-delimited text file that lists all the routing rules to add to the container. It can be added with `--route-file` flag.
 
-#### Examples
+### Examples
 
 Create a PuTTY container with all outbound access blocked except to IP address 10.0.0.34 (whitelist approach):
 
@@ -399,7 +399,7 @@ adserver2.com
 ...
 ```
 
-### Adding Custom Name Resolution Entries
+## Adding Custom Name Resolution Entries
 
 All containers use name resolution provided by the host operating system. You can add specific name resolution overrides using the `--hosts` flag. The syntax is similar to that of the `hosts` file of the operating system.
 
@@ -413,7 +413,7 @@ All containers use name resolution provided by the host operating system. You ca
 > turbo run --hosts=127.0.0.1:mysite.net --hosts=::1:ipv6.mysite.net <image>
 ```
 
-### Using Startup Triggers
+## Using Startup Triggers
 
 Images can be created with TurboScript that have multiple startup files. Collections of startup files can be linked together by a trigger name and executed together.
 
@@ -431,7 +431,8 @@ startup file doc=[("c:\windows\system32\notepad.exe", "c:\doc\welcome.txt"), ("c
 > turbo run test-trigger --trigger=doc
 ```
 
-### Using Mount
+## Using Mount
+
 The `mount` option provides a way to mount folders from the host into the container, giving access to resources from the host system.
 The mounted folder's content is not committed to the image nor synchronized to the Turbo Hub and therefore is not available when using the `continue` command.
 If the source folder doesn't exist, the `mount` option is ignored. If the target folder doesn't exist, it is created.
@@ -459,7 +460,7 @@ It is also possible to mount a folder from another container:
 turbo run --mount <containerid>:"C:\FolderInSourceContainer=C:\FolderInTargetContainer" clean
 ```
 
-### Isolation Settings
+## Isolation Settings
 
 The `isolate` parameter enables different levels of visibility and access from the vm to the host environment. The `full` isolation setting prevents read and write to the host system and registry. This is the preferred setting if you want the vm to run like a clean, completely isolated system.
 
@@ -475,7 +476,7 @@ The well-known root folders affected by the `+merge-user` modifier are: `@DESKTO
 
 As a separate convenience feature, if the startup verb is not empty, the startup file of the container is set to merge isolation, regardless of the isolation level that it would otherwise have. This way, when executing a shell operation like opening a file on the host system through a Turbo application that has host system file associations set, it is possible for the virtualized application to access and make changes to the file. The `MergeStartupDir` vm flag takes this feature one step further and sets the isolation level to merge for the whole parent folder of the startup file and all its subfolders except well-known root folders. For example, if the startup file was `C:\myproject.proj` and the flag was enabled, the folder `C:\myproject-files` would have merge isolation, but e.g., `C:\Windows` or `C:\Program Files`, being well-known root folders, would have isolation level unchanged.
 
-### Exit Code
+## Exit Code
 
 When the container stops, the exit code of startup file is displayed as the process exit code. The error code will also be return as the Turbo Command's process exit code. If there was an internal Turbo error that was not the result of the virtual application, a negative error code (int32) will be returned. The following exit codes are reserved for Turbo:
 
@@ -489,20 +490,21 @@ public const int GenericErrorCode = -1;
 public const int DrmErrorCode = -2;
 ```
 
-### Selecting VM version
+## Selecting VM version
 
 A specific VM version can be selected by using the `--vm=version` flag. This version will persist through subsequent launches within the same session. To unset the VM, use the `--vm=` flag with an empty string.
 
-### JSON Output
+## JSON Output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain either a `container` array with information about created container or an `error` object if command failed.
 
-### Auto Update
+## Auto Update
+
 The `run` command checks once a day for new image releases. Specify the `--pull` option to force checking for the latest release.
 Updates are download within the specified release: `turbo run firefox` updates to the latest Firefox. 
 `turbo run firefox:42` updates to the Firefox within release 42, like 42.0, 42.1 42.2 etc.
 
-### Remote vs. Local Image Usage
+## Remote vs. Local Image Usage
 
 The behavior is to prioritize locally cached images over remote, unless the update check triggers an update of the repositories image.
 
@@ -544,7 +546,7 @@ Using image clean:26 from local
 Using image firefox:3.5 from local
 Running new container firefox:3.5#a524349c
 ```
-### Run In Existing Session
+## Run In Existing Session
 
 If the user issues a run or start command targeting an already running virtual application session, then the process will start under the existing virtual session.
 

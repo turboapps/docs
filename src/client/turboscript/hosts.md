@@ -10,6 +10,9 @@ The syntax for this command matches that of the hosts file in Windows where the 
 
 This setting is persisted to the output image so that any containers created from that image will have these DNS settings applied. 
 
+## Examples
+
+
 ```
 # Make the loopback ip resolve to mydomain.net
 hosts 127.0.0.1 mydomain.net

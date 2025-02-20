@@ -2,7 +2,7 @@
 
 Turbo applications can be ran using the Turbo Server Portal or, if installed to your local machine, directly from the Start Menu or Applications folder.
 
-### Portal
+## Portal
 
 To run an application, go to the Turbo Server Portal and click on the application you want to run.
 

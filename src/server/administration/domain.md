@@ -4,24 +4,24 @@
 
 The **Dashboard** page shows real-time graphs detailing the total CPU, memory, number of sessions, and other resource usage information for the application servers.
 
-### Fleets
+## Fleets
 
 The **Fleets** page displays a list of all the fleets in the domain. A fleet is a group of application servers. Fleets can be deleted, but not modified. The default fleet comprises all Application Servers in the domain and cannot be deleted. Clicking a fleet will navigate to the fleet dashboard page.
 
-#### Add Fleet
+### Add Fleet
 
 The **Add Fleet** page allows administrators to add additional fleets to the current Turbo Server farm. [Applications](/server/administration/workspaces.html#workspace-applications) can be assigned to launch on a specific fleets.
 
 - **Fleet Type**: Manual or Managed. Selecting "Manual" allows the addition of any application server in the domain. Choosing "Managed" will include all servers in a [Compute Infrastructure](/server/administration/integrations.html#compute-infrastructure) to the fleet.
 - **Name**: A unique name must be given for the fleet.
 
-#### Fleet Dashboard
+### Fleet Dashboard
 
 This page provides a comprehensive view of the servers' status within the fleet.
 
 For compute infrastructures that are supported, it is possible to turn servers on or off from the fleet dashboard page.
 
-#### Fleet Schedule
+### Fleet Schedule
 
 The Fleet Schedule page enables administrators to establish a schedule for turning on and off the fleet computers (excluding the Hub server). This feature is only available for compute infrastructures.
 
@@ -29,17 +29,17 @@ The Fleet Schedule page enables administrators to establish a schedule for turni
 - **End Time**: Specifies when fleet servers will power off.
 - **Recurrence**: The frequency at which the schedule will reoccur.
 
-### Domain Servers
+## Domain Servers
 
 The **Server** page lists all servers that are included as part of the current Turbo Server installation, along with their current status. Clicking a server name will navigate to the server configuration page.
 
-#### Add Server
+### Add Server
 
 ![Add Server](/images/add-server.png)
 
 The **Add Server** page allows administrators to add additional application servers to the current Turbo Server farm.
 
-##### Prerequisites
+#### Prerequisites
 
 The **Add Server** feature allows you to deploy application servers to Azure environments. However, please note that it currently only supports Azure environments unless you have set up an external SQL connection.
 
@@ -47,7 +47,7 @@ If you have not set up an external SQL connection, you must ensure that the Turb
 
 In order to add a server you must first setup a [Compute Infrastructure](/server/administration/integrations.html#compute-infrastructure) and follow the [Setup Guide](/server/administration/integrations.html#compute-infrastructure-azure-setup-guide). This feature is only available in Turbo Server 23.1 and above.
 
-##### Deploying an Application Server
+#### Deploying an Application Server
 
 To deploy an application server, complete the Add Server form with the following values:
 
@@ -63,7 +63,7 @@ Once you have completed the form, click **Add** to deploy the application server
 
 Once the deployment is complete the application server will automatically be added to the Domain server list and start accepting application loads.
 
-### Domain Settings
+## Domain Settings
 
 ![Server admin domain settings](/images/external-admin-access.png)
 
@@ -88,7 +88,7 @@ The **Settings** page lists allows you to configure domain-wide settings, includ
 
 - **URL Redirects**: Redirects requests from the host name to the target URL with a permanent redirect response (301). The host name must resolve to the domain in order for the redirect to occur.
 
-### Domain Federation
+## Domain Federation
 
 ![Server admin domain federation](/images/admin-domain-federation.png)
 
@@ -123,9 +123,9 @@ The available configurations are described below:
 
 - **Revision History Length**: Number of application revisions to pull from the remote repository.
 
-### Managing a Server
+## Managing a Server
 
-#### Server Dashboard
+### Server Dashboard
 
 ![Server Dashboard](/images/server-dashboard.png)
 
@@ -135,7 +135,7 @@ The **Alerts** table lists important status alerts such as server health warning
 
 The **Pending Changes** table list server setting changes that have been saved but have not yet been applied to the server. The **Recent Changes** table lists server setting changes that have been applied in the last 10 minutes. Setting changes that occurred more than 10 minutes ago are located in the audit logs under **Reports > Events**.
 
-#### Server Sessions
+### Server Sessions
 
 ![Server Sessions](/images/sessions.png)
 
@@ -143,7 +143,7 @@ The **Sessions** section lists all user sessions that are running on the server 
 
 Administrators may manually log off users by clicking the **Close** action, which will issue a log off command from the Turbo service user. In order for this action to succeed, the Turbo service user must have permission to log off the user. Please be aware that logging off users may result in the loss of unsaved data.
 
-#### Server Settings
+### Server Settings
 
 ![Server admin domain server](/images/admin-domain-server.png)
 
@@ -169,7 +169,7 @@ Administrators may manually log off users by clicking the **Close** action, whic
   - **Heap Space**: Configures the maximum JVM heap space allocated for the Hub and Broker Java processes. This setting is only available for servers with the Hub or Portal roles enabled.
   - **Proxy Server**: Configures the JVM proxy server for all outgoing http(s) requests from the Hub Java process. This setting is only available for servers with the Hub role enabled.
 
-#### Server Storage
+### Server Storage
 
 - **Application Image Path**: The path where the application server will store SVM images. The default value is 'allusers'. Leave blank to prevent the service from setting the value. If the value is changed to a different folder such as 'E:\turbo-images', it must be changed to 'allusers' to restore the default value. Clearing the textbox will leave the value to 'E:\turbo-images'. Multiple application servers may share the same folder.
 
@@ -195,7 +195,7 @@ Administrators may manually log off users by clicking the **Close** action, whic
 
 - **Optimize Storage**: Scans and deletes unreferenced blocks from the block storage. This action is only available for servers with the Hub role enabled. Optimize storage requires free space equal to the current size of the block storage size to complete successfully.
 
-#### Server Security
+### Server Security
 
 ![Server Security](/images/server-security.png)
 
@@ -209,7 +209,7 @@ The **Server Security** page displays the required Windows Firewall configuratio
 
   NOTE: If you downgrade your server to HTTP, the HSTS setting must be cleared from the client browser in order to re-enable access the server.
 
-#### Server Diagnostics
+### Server Diagnostics
 
 ![Server Diagnostics](/images/admin-server-diagnostics.png)
 
@@ -233,7 +233,7 @@ Clicking the **Archive** button will gather all of the logs across the various T
 
 The **Diagnostic Logging Level** setting allows administrators to configure level of diagnostic information that will be included in the server logs. For example, the Portal logs will include additional information about memory usage and active connections.
 
-#### Server Tags
+### Server Tags
 
 ![Server Tags](/images/server-tags.png)
 

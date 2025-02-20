@@ -9,7 +9,7 @@ With Turbo no installed dependencies are required on the CI server. All dependen
 
 The basic steps for integrating Turbo into a CI server are to create a TurboScript, integrate it into an automated build on a CI server, and finally run and test the container.
 
-### Create TurboScript
+## Create TurboScript
 
 The TurboScript contains all the steps necessary to build the container.
 
@@ -27,7 +27,7 @@ cmd cd c:\root\server & npm install
 
 Save your script as a `.me` file. See the [TurboScript reference](/client/turboscript/) for more information on TurboScript script instructions.
 
-### Integrate into the CI server
+## Integrate into the CI server
 
 The next step is to configure an automated build on the CI server that will execute the TurboScript and create an image.  You'll need to configure the necessary triggers, schedules, notifications, etc., which will vary between CI servers.
 
@@ -48,7 +48,7 @@ Rather than exporting the image to the host system, you can also `turbo push` th
 
 See the [Command Line Interface](/client/command-line/) page for more information on `turbo` commands.
 
-### Run the container
+## Run the container
 
 ```
 # First import the image to your local registry
@@ -65,7 +65,7 @@ If you alternately pushed to the hub then use these commands to pull and run:
 > turbo run <account name>/<name> <command>
 ```
 
-#### Example use case: running tests inside a container on the CI server
+### Example use case: running tests inside a container on the CI server
 
 We would like to run the tests of a project inside a turbo container, all within a CI server job.
 

@@ -2,11 +2,11 @@
 
 The **Integrations** page provides options to configure integrations with variety of third-party services, such as Compute Infrastructures and Learning Management Systems.
 
-### Compute Infrastructure
+## Compute Infrastructure
 
 The **Compute Infrastructure** page allows administrators to view and manage connections with various compute infrastructures such as Azure. These connections may be used to deploy additional applications servers and join them to the Turbo Server farm.
 
-#### Prerequisites
+### Prerequisites
 
 Compute Infrastructure currently only supports Azure environments. Support for other compute infrastructures may be added in the future.
 
@@ -14,7 +14,7 @@ The Turbo Server farm must be running in Azure with an Azure SQL Database connec
 
 For more information on setting up an Azure Turbo Server farm, see the Turbo Server AMI setup docs: [/docs/server/setup-and-deployment/deploying-to-azure#hub-and-portal-role-deployment](/server/setup-and-deployment/deploying-to-azure.html#hub-and-portal-role-deployment).
 
-#### Azure Setup Guide
+### Azure Setup Guide
 
 Before any application servers can be deployed to Azure, the Azure tenant must be configured with an application registration that has permissions to create new resources.
 
@@ -42,7 +42,7 @@ Next, the application registration must be granted the Contributor role. This wi
 7. Click **Select Members** and add the application registration that you created in the previous section
 8. Click **Review + Assign**
 
-#### Compute Infrastructure Settings
+### Compute Infrastructure Settings
 
 ![Compute Infrastructure](/images/compute-infrastructure.png)
 
@@ -60,13 +60,13 @@ Next, the application registration must be granted the Contributor role. This wi
 
 The above configurations can be tested by clicking the **Test** button. This will verify that the Client ID, Secret, Directory ID, Subscription ID are present and configured correctly in Azure. It will also check that the Region is available in the subscription.
 
-### Artificial Intelligence (AI)
+## Artificial Intelligence (AI)
 
 The **Artificial Intelligence** page allows administrators to view and manage connections with various artificial intelligence services, such as OpenAI. The chatbot is hidden by default and must be enabled from the [Dashboard Tabs](https://hub.turbo.net/docs/server/administration/general#appearance) appearance setting. Once configured, end-users may access the chatbot from the Chat tab on their Portal dashboard.
 
 For more information, see our [OpenAI](https://hub.turbo.net/docs/server/integrations/openai) integration documentation.
 
-### Learning Management Systems (LMS)
+## Learning Management Systems (LMS)
 
 ![LMS Connections](/images/lms-connections.png)
 
@@ -76,7 +76,7 @@ Instructions for setting up an LMS connection are available for [Canvas](/server
 
 The following sections describe the available LMS configurations:
 
-#### Show in Course Navigation
+### Show in Course Navigation
 
 When the LTI Configuration URL is used, Turbo Server sends user interface instructions to the LMS Platform. These UI instructions include a Turbo icon, description and the following fields:
 
@@ -91,7 +91,7 @@ When **Show in Course Navigation** is disabled, the **Default** setting changes 
 
 **Turbo must be removed and then re-added to the LMS platform for changes to these settings to take effect.**
 
-#### User Identity
+### User Identity
 
 Upon receiving a LTI 1.0/1.1 Launch Request from the LMS platform, Turbo Server must determine the user identity requesting access. Turbo identifies users with two values, both of which must be unique and immutable:
 
@@ -111,23 +111,23 @@ If your organization has modified the platforms’ identity settings, you may co
 
 Navigate to the LTI page of the Turbo administrator site. Under the relevant value, check Custom to override the default field, then type in the name of the LTI Launch Request field for Turbo Server to use.
 
-#### Workspace
+### Workspace
 
 Associating a workspace with the LMS integration allows configuration of where end users will be redirected to when launching Turbo from the LMS. Additionally, this determines the workspace to which channels will be added when **Automatically Create Channels** is enabled.
 
 Selecting "None" will redirect users to the Turbo Portal homepage. If the user has access to exactly one workspace then that workspace will be displayed, otherwise a list of available workspaces will be displayed.
 
-#### Automatically Create channels
+### Automatically Create channels
 
 Automatically creates a new channel in the specified workspace for unknown courses. A workspaces must be selected to enable this setting.
 
 If the role of the user is an instructor, content developer, or administrator, grant the user administrative permissions to the channel when the channel is created. The instructor will be able to add users and applications to the channel from the portal.
 
-#### Automatically Grant Permissions
+### Automatically Grant Permissions
 
 Automatically grants user level permissions for the user to the target workspace.
 
-#### Courses
+### Courses
 
 Adding a Course to the Turbo Server allows configuration of a custom link to a particular Workspace or Channel. When a user launches Turbo from a known course, they are routed directly to the configured view.
 
@@ -143,7 +143,7 @@ Renaming or deleting a course does not affect the LMS itself; these properties a
 
 The following section describes how to locate the course ID for supported LMS.
 
-##### CANVAS
+#### CANVAS
 
 Navigate to any page of the desired course in Canvas. The URL will take a form similar to:
 
@@ -151,13 +151,13 @@ Navigate to any page of the desired course in Canvas. The URL will take a form s
 
 The number immediately after /courses/ is the Course ID. In this example, that number is 2307642.
 
-##### BLACKBOARD LEARN
+#### BLACKBOARD LEARN
 
 Navigate to the Blackboard Administrator Panel. Under the section **Courses**, click on the **Courses** link.
 
 Locate your course in the table. The Course ID is shown for the course.
 
-##### MOODLE
+#### MOODLE
 
 Navigate to the settings page of the desired course.
 

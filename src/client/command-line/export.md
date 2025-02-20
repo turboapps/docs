@@ -14,7 +14,7 @@ Usage: turbo.exe export <options> <image> <path>
       --wait-after-exit      Leave process open after it exits
 ```
 
-### Examples
+## Examples
 
 ```
 # Export an image to the local file system
@@ -33,7 +33,7 @@ Usage: turbo.exe export <options> <image> <path>
 > turbo export microsoft/vscode-x64 \\server\folder\image.svm
 ```
 
-### Handling Multiple Matches
+## Handling Multiple Matches
 
 If your export command matches multiple images, you'll see an error like this:
 
@@ -47,6 +47,6 @@ microsoft/vscode-x64
 
 In this case, specify the exact image you want to export by using its full name, including the tag or hash.
 
-### JSON output
+## JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain either a `file` object with information about export file or an `error` object if command failed.

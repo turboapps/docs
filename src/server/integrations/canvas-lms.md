@@ -4,7 +4,7 @@ Configuring Turbo Server with Canvas allows students and instructors to access t
 
 Turbo Server uses the open Learning Tools Interoperability (LTI) specification (version 1.0) to communicate with Canvas.
 
-### Getting Started
+## Getting Started
 
 Canvas requires the following to connect to Turbo Server Application:
 
@@ -16,7 +16,7 @@ The values can be obtained from the Turbo Server administration site. Navigate t
 
 The Turbo Server must be publically accessible for the Canvas service to connect to it.
 
-### Adding Turbo to Canvas
+## Adding Turbo to Canvas
 
 A canvas account can be created at [https://canvas.instructure.com](https://canvas.instructure.com/ "canvas.instructure.com").
 
@@ -40,7 +40,7 @@ Enter the information from the Turbo Server administrator site:
 
 Click on Submit and refresh the page (**F5** in browser). The Turbo application will now be available in the course navigation tab.
 
-### Enabling Turbo in the Course Navigation
+## Enabling Turbo in the Course Navigation
 
 Turbo can be enabled or disabled for each individual course. Whether the Turbo application is enabled by default is controlled by the **Show in Course Navigation** setting in the LMS provider settings in Turbo Server (default is enabled).
 

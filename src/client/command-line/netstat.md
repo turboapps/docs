@@ -9,7 +9,7 @@ Usage: turbo netstat <container>
      --format=VALUE         Use json format for output
 ```
 
-### Examples
+## Examples
 
 ```
 > turbo run --route-add=tcp://80:0 --route-add=tcp://8081:0 --hosts=localhost:lhost --link=0218:service -d <image> 63621076457c4b4fb7fff3fcbfda06b1
@@ -27,6 +27,6 @@ Container links:
 
 **Note**: only active port mappings are printed. Since the container in the example did not expose any service on tcp port 8081, the mapping corresponding to flag `--route-add=tcp://8081:0` was not present in the output.
 
-### JSON output
+## JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain `ports`, `dns` and `containerLinks` arrays with information about container or an `error` object if command failed.

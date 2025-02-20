@@ -163,7 +163,7 @@ A Web Application is a software program that runs on an external website that is
 
 The **Startup** page allows administrators to configure the startup behavior for installed workspace applications.
 
-The **Startup Applications** table lists all workspace applications and and their startup settings. Applications with startup enabled will run automatically when the application is installed to the device. This setting is disabled by default.
+The **Startup Applications** table lists all workspace applications and their startup settings. Applications with startup enabled will run automatically when the application is installed to the device. This setting is disabled by default.
 
 When an application is marked as a startup application, commands that install that application to the device such as `turbo subscribe --register` and `turbo subscription register` will run the application automatically. The application is launched by shell executing the default shortcut. If the application has no shortcuts then the application will not be launched. For more information on configuring shortcuts with Turbo Studio, see [Desktop Integration Settings](/studio/working-with-turbo-studio/configuration.html#desktop-integration-settings)
 

@@ -11,6 +11,6 @@ Usage: turbo revert <container>
 
 Configuration settings and metadata will be maintained but all changes to the container's filesystem and registery will be reverted.
 
-### JSON output
+## JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain either a `container` array with information about reverted container or an `error` object if command failed.

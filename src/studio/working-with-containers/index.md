@@ -6,7 +6,7 @@ Turbo containers can be created in several ways:
 2. Using the command line interface to create a container from a Dockerfile
 3. Using the command line interface to create a container from an MSI installer
 
-### Creating a Container from an MSI
+## Creating a Container from an MSI
 
 The command line interface can create containers from MSI installers. This is useful for applications that are distributed as MSI files.
 
@@ -27,7 +27,7 @@ If an MSI install fails try creating the container using [Turbo Studio](/studio/
 
 Once you finish editing a container it can be saved and distributed in the form of images. For more information on images read on [here](/server/index).
 
-### Editing a Container
+## Editing a Container
 
 The container editor allows you to modify the filesystem and registry of a container.
 
@@ -37,7 +37,7 @@ The container editor allows you to modify the filesystem and registry of a conta
 
 ![Studio MSI install editor open file](/images/instedit3.png)
 
-### Publishing to Turbo.net
+## Publishing to Turbo.net
 
 Once you have created a container you can publish it to Turbo.net.
 
@@ -69,7 +69,7 @@ Navigate to **Launch Configuration**. If any additional flags are required for t
 
 ![Studio published image admin settings](/images/publish8.png)
 
-### Container States
+## Container States
 
 Containers can be in one of several states:
 

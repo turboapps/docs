@@ -8,7 +8,7 @@ When using the Turbo Server command line administrative tools, it is important t
 
 - When working in the command window place quotation marks around parameters and paths that include a space.
 
-### Server.exe Command Format
+## Server.exe Command Format
 
 `Server.exe` can be used with the following arguments to manage provisioning, uninstall, upgrade, and service recycling:
 
@@ -21,7 +21,7 @@ When using the Turbo Server command line administrative tools, it is important t
 | `Server.exe /uninstall-services` <br> **Required parameters:** <br> [comma-separated service names] | Uninstalls native services. Valid options include: api, admin |
 | `Server.exe /?, -?, ?, /help, -help, help` | Prints this usage information. |
 
-#### install-services command
+## install-services command
 
 The install-services command installs the specified services, such as the API and Admin site IIS Express servers, onto the native environment. By default these services run in the virtual environment, however they can be installed natively to resolve certain issues such as antivirus incompatibility.
 
@@ -29,7 +29,7 @@ When a service is installed, the files required to run the service are copied ou
 
 Please note that it may take a couple minutes for these changes to take affect.
 
-### Server.exe admin Command Format
+## Server.exe admin Command Format
 
 Server.exe can also be used to create and update applications, as well as to manage other server settings. This is done by specifying any of the given topics after the Server.exe admin command.
 

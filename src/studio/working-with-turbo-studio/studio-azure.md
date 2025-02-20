@@ -11,7 +11,7 @@ The Remote Desktop Protocol (port 3389) is open by default once the Turbo Studio
 
 Note: While there are no extra charges to deploy the Turbo Studio AMI, the Azure subscription will still be charged for any usage.
 
-#### Deployment
+## Deployment
 
 To deploy the Turbo Studio AMI go to [portal.azure.com](https://portal.azure.com "Azure Portal"), click **Create a resource**, search for "Turbo Studio", select the desired plan, and click **Create**.
 

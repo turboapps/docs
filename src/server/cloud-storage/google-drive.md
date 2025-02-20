@@ -2,11 +2,11 @@
 
 To allow users to connect their Google Drive accounts and access them while running their applications, you must first configure a Google application. This application controls the permissions, branding, and routing for the Google Drive SSO.
 
-### Prerequisites
+## Prerequisites
 
 We recommend that you have a G Suite account. Accessing Google Drive files from Turbo Server requires a restricted scope that is only available to internal G Suite users by default. If you wish to allow integration with public Google accounts, this application will need to go through the Google verification process.
 
-### Setup the Google Application
+## Setup the Google Application
 
 1. Go to the [Google API Console](https://console.developers.google.com/) and log in as your G Suite user.
 
@@ -42,7 +42,7 @@ We recommend that you have a G Suite account. Accessing Google Drive files from 
 
    ![Google Drive app creds create 4](/images/creds-create-4.png)
 
-### Configure the Turbo Server
+## Configure the Turbo Server
 
 Next, Turbo Server must be configured to use the newly created Google application. Once configured, users may connect their Google Drive account from the portal settings.
 

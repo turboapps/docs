@@ -1,13 +1,13 @@
 # Large Applications
 
-### Issues with Large Applications
+## Issues with Large Applications
 
 Large applications, particularly those over 1GB in size, pose special deployment and performance issues:
 
 - Windows has a hard-coded limit of 4GB for EXE type files. Attempting to execute a virtual standalone EXE over 4GB will result in an error.
 - The Windows loader performs preprocessing on EXE files prior to execution. A very large EXE file may introduce undesired startup latency. Minimizing the executable file size also minimizes application startup time.
 
-### Factoring Large Applications
+## Factoring Large Applications
 
 It is recommended to factor large applications into two or more pieces consisting of a single small EXE file and one more larger SVM files. Turbo can then combine these layers at runtime. This can be done using the **Factor Configuration** tool in Turbo Studio or manually using the steps below.
 
