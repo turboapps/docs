@@ -1,4 +1,6 @@
-# Microsoft Office
+# KMS Licensing
+
+## Microsoft Office
 
 The following section describes how to set up application servers to run Microsoft Office in Turbo, using KMS license activation.
 
@@ -33,7 +35,7 @@ setup.exe /configure installation-config.xml
 4. Build the application stub and use the Publish to Turbo Server wizard to push to Turbo Server.
 5. Add the application stub to a workspace and test.
 
-### Troubleshooting
+## Troubleshooting
 
 An error dialog appears with the text: The application has encountered an error.
 

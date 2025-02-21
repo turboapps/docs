@@ -1,4 +1,6 @@
-### Testing HTTPS (SSL) with a Self-Signed Certificate
+# SSL
+
+## Testing HTTPS (SSL) with a Self-Signed Certificate
 
 Follow these steps to test Turbo Hub Server with SSL enabled using a self-signed certificate.
 
@@ -20,7 +22,7 @@ Follow these steps to test Turbo Hub Server with SSL enabled using a self-signed
 
 3. Access the hub using the Turbo Client command line tools, Turbo Launcher, or connected Turbo Streaming Server portal.
 
-### Disabling TLS/SSL certificate validation on Portal requests
+## Disabling TLS/SSL certificate validation on Portal requests
 
 The Portal performs TLS/SSL certificate validation when making TLS connections, rejecting connections with expired or otherwise invalid certificates.
 

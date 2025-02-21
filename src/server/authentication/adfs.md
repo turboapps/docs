@@ -4,11 +4,11 @@ This section describes the steps required to configure Single Sign-On (SSO) agai
 
 For prerequisites and additional information about the SAML 2.0 authentication protocol, please refer to the [SAML 2.0 Prerequisites](/server/authentication/saml.html#prerequisites) section.
 
-### Configure ADFS
+## Configure ADFS
 
 The following section describes how to integrate Turbo Server with ADFS SSO using SAML 2.0.
 
-#### Create a Relying Party Trust
+### Create a Relying Party Trust
 
 A relying party trust object specifies identifiers, claims, and rules that allow Turbo Server to interact with the local Federation Service.
 
@@ -40,7 +40,7 @@ To create the relying party trust:
 
 8. Click **Next** through the rest of the wizard and **Close** at the end.
 
-#### Create new claims
+### Create new claims
 
 Once the relying party trust is created, a few claim rules will need to be added to pass the user's name and AD groups to the Turbo Portal.
 
@@ -59,7 +59,7 @@ To add the claims:
    | E-Mail-Addresses                        | E-Mail Address      |
    | Token-Groups - Qualified by Domain Name | Group               |
 
-#### Set the Authentication Policy
+### Set the Authentication Policy
 
 To configure how users will log into ADFS:
 
@@ -71,13 +71,13 @@ To configure how users will log into ADFS:
 
    ![ADFS global policy auth](/images/adfs-global-policy-2.png)
 
-#### Get the Token-Signing Certificate
+### Get the Token-Signing Certificate
 
 1. From the ADFS management window go to **Service** > **Certificates**.
 2. Double-click on the Token-signing certificate.
 3. Click **Details** and copy the thumbprint and common name. These values will be used when configuring the Turbo Server.
 
-### Configure ADFS for Native Clients
+## Configure ADFS for Native Clients
 
 Native Client App access can be configured on ADFS using the **Add-AdfsClient** command in an elevated powershell cmdlet.
 
@@ -95,7 +95,7 @@ Example command:
 (ps)> Add-AdfsClient -ClientId 54707E09-E6A2-4F22-9C73-638610AFE38A -Name Turbo-Client -RedirectUri http://turbo.net
 ```
 
-### Configure Turbo Server
+## Configure Turbo Server
 
 Once you have configured ADFS, you are ready to enable SSO on Turbo Server.
 
@@ -112,6 +112,6 @@ Fill in the following fields according to the [ADFS configuration](#configure-ad
 
 ![ADFS Turbo Config](/images/adfs-turbo-config.png)
 
-### Troubleshooting
+## Troubleshooting
 
 Please refer to the [SAML 2.0 Troubleshooting](/server/authentication/saml.html#troubleshooting) section.

@@ -31,7 +31,7 @@ Usage: installi <options> <image> -- [run flags...]
 
 Any supplied run flags after `--` are passed to the run command when an installed application is executed. For example, `turbo installi 7-zip -- --vm=1.2.3.4 --diagnostics` will result in shortcuts that have a run command like `turbo run 7-zip --vm=1.2.3.4 --diagnostics [additional installation params]`. These can be used to customize the installation behavior.
 
-### Offline
+## Offline
 
 It is sometimes desired to configure your installed containers to execute completely offline to manage deployment and updates manually. Special planning must be considered if this is your goal.
 
@@ -75,7 +75,7 @@ If this is for a multi-user workstation, then additional steps are required to m
 > turbo installi [application] --offline --all-users
 ```
 
-### Services
+## Services
 
 Virtual services defined in the images are not installed by default as they will be executed from the user's container automatically or on-demand as configured in the image. Virtual services will be installed to the Windows Service Control Manager and will be run as SYSTEM account by default. 
 
@@ -84,11 +84,11 @@ There are a couple ways to organize your images with virtual services:
 - Client application with services that are shared - If the services are to be shared by all users on the machine then the services in the images will need to be installed but must be configured in such a way that they are not automatically started when the user's container is executed. Otherwise when a user runs from an installed container's shortcut, the user container will try to spawn the service as well and fail. 
 - Shared services without a client application - If an image contains a service without a client (for example, a web server or SQL database), then can install with the services without changes as no shortcuts will be created. 
 
-### Specifying an Image Cache Path
+## Specifying an Image Cache Path
 
 To specify a custom image cache path for a particular installation, use the flag `--TURBOREPO=<path>`. The application will treat the path as the local repository root (the image will be stored in `<path>\repo\images`). Use `--pull` to ensure the image is pulled into the location on install.
 
-### Fonts
+## Fonts
 
 If the image includes fonts that should be installed to the operating system, the `installi` will automatically install them. The location of the fonts for local user install will be installed to the following registry key and file folder:
 - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts

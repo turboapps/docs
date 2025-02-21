@@ -25,18 +25,23 @@ The subscription ensures that the install is periodically updated to the latest 
 
 To manage the subscription, you can use the `subscription` command. To view all subscriptions, you can use the `subscriptions` command. If you want to remove a subscription, you can use the `unsubscribe` command.
 
-### Subscribe All
+## Subscribe All
+
 When the `--all` option is specified, the device will subscribe to all available workspaces for the current user. It's important to note that if any workspaces are deleted or removed from the user's view, the corresponding subscription will also be removed.
 
-### Subscribe All Users
+## Subscribe All Users
+
 When `--all-users` is specified, the subscription will be installed for all users on the machine. This command requires Administrator privileges and that the Turbo client is installed for all users. See the install options for the Turbo installer for more information on how to install for all users.
 
-### Automatic Updates
+
+## Automatic Updates
+
 When you subscribe to a workspace, any changes to application versions and configurations will be automatically updated. If you included the `--register` flag in the initial subscription command, installed applications will also be updated automatically.
 
 If you wish to avoid automatic updates, you can disable subscriptions by using the `turbo config --disable=subscriptions` command. In legacy clients, you can use the `subscribe` command with the `--update-interval` set to 0. Additionally, you can use the `subscription suspend` command to disable specific subscriptions.
 
 Please note that when a subscription is installed for all users, it does not automatically update for each user by default. To enable automatic updates, you can include a Windows logon script that executes the command `turbo subscription register <workspace>` for each user. This command will install the current state of the subscription at the time of login. It's important to ensure that the user is logged into the desired Hub server in order to successfully subscribe to the workspace.
 
-### Register
+## Register
+
 The `--register` flag will automatically install applications after the subscription is added or updated. Applications set to auto launch will launch immediately.

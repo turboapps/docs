@@ -18,6 +18,6 @@ The latest local version of the Turbo VM is 11.6.213
 The latest version of the Turbo VM is 11.6.215
 ```
 
-### JSON output
+## JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain either `vms` array with one tag item for local VM and one for latest VM available on hub or an `error` object if command failed.

@@ -26,6 +26,12 @@ vm            turbo vm
 
 You can optionally specify a name for the newly-imported image. Use the `--overwrite` flag to overwrite an existing image.
 
+If the image name is not specified during an import, the imported image will default to using the file name as the image name and the embedded application version as the release tag. For virtual machines (VM), the image name will always be '/xvm'.
+
+**Turbo Studio** users can use this command to import their existing components.
+
+## Examples
+
 ```
 # Import a thinapp config
 turbo import -n=my-thinapp-image thinapp C:\s\package.ini
@@ -34,10 +40,6 @@ turbo import -n=my-thinapp-image thinapp C:\s\package.ini
 turbo import -n=my-svm-image svm C:\s\my-image.svm
 ```
 
-If the image name is not specified during an import, the imported image will default to using the file name as the image name and the embedded application version as the release tag. For virtual machines (VM), the image name will always be '/xvm'.
-
-**Turbo Studio** users can use this command to import their existing components.
-
-### JSON output
+## JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain either an `image` object with information about imported image or an `error` object if command failed.

@@ -22,12 +22,14 @@ Usage: subscription <options> [action] <workspace>...
 
 The available actions are `update`, `register`, `suspend`, `resume` and `print`.
 
-### Update a Subscription
+## Update a Subscription
+
 The `update` action updates all of the images in the subscription to the latest version.  
 
 Use the `--no-pull` option to update the subscription without pulling new image versions. This will use locally cached images without checking online for updates. Only if an image is completely missing will it be pulled from the hub.
 
-### Register a Subscription
+## Register a Subscription
+
 The `register` action registers all applications in the subscription. The applications are registered via `installi` with `--no-pull` flag, which means it will always use locally cached images without checking online for updates. Only if an image is completely missing will it be pulled from the hub. Application AD group restrictions are applied to the end user's Windows identity. An all users context subscription may be registered from a user context, which will give the user read access to the registered applications. If an application is set to auto-launch, it will launch immediately after it is installed or updated.
 
 When registering subscriptions in offline scenarios (when the hub is unreachable):
@@ -46,10 +48,12 @@ To enable automatic registration and unregistration of all available subscriptio
 
 The user's currently configured domain must the same as the subscription's domain otherwise the registration will fail.
 
-### Suspend and Resume a Subscription
+## Suspend and Resume a Subscription
+
 The `suspend` action suspends updates for the specified subscription. The `resume` command will resume updates.
 
-### Listing Details
+## Listing Details
+
 The `print` action shows details about the subscription.
 
 ```

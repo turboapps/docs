@@ -4,11 +4,11 @@ Turbo Server **21.3.2732.2** has updated Web Applications to improve customizati
 
 If you do not have any Web Applications, do not wish to migrate your Web Applications, or are upgrading from an earlier version, no changes are required.
 
-### Migrating Web Applications using a Virtual Browser
+## Migrating Web Applications using a Virtual Browser
 
 To migrate your existing Web Applications that are configured to use a virtual browser, you must first collect the Web Application information before upgrade, and then create new Web Applications using that information post upgrade. 
 
-#### Before upgrade
+### Before upgrade
 
 Please perform the following steps before upgrading:
 
@@ -20,7 +20,7 @@ Please perform the following steps before upgrading:
 
 Repeat this process for each of your Web Applications. Once complete, you may upgrade your Turbo Server.
 
-#### After upgrade
+### After upgrade
 
 Once your upgrade is complete, please update the repositories used by your browsers. This will allow the repositories to be selected when creating Web Applications.
 
@@ -39,11 +39,11 @@ Finally, please recreate your Web Applications:
 
 Repeat this process for each of your Web Applications.
 
-### Migrating Web Applications using a Local System Browser
+## Migrating Web Applications using a Local System Browser
 
 To migrate your existing Web Applications that are configured to use a local system browser, you must create a Link with equivalent settings to your Web Application. Links are availables from the **Links** tab on the dashboard.
 
-#### Before upgrade
+### Before upgrade
 
 Please perform the following steps before upgrading:
 

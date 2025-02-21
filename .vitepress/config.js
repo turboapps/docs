@@ -19,7 +19,7 @@ export default defineConfig({
   title: 'Turbo Documentation',
   description: 'Official documentation for Turbo',
   srcDir: './src',
-  
+  head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
   vite: {
     assetsInclude: ['**/*.PNG', '**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.gif', '**/*.svg'],
     server: {
@@ -88,7 +88,7 @@ export default defineConfig({
                 },
                 { text: 'Intune', link: '/guides/integrations/intune' },
                 { text: 'System Center', link: '/guides/integrations/system-center' },
-                { text: 'Windows Virtual Desktop', link: '/guides/integrations/windows-virtual-desktop' }
+                { text: 'Azure Virtual Desktop', link: '/guides/integrations/azure-virtual-desktop' }
               ]
             },            
             {

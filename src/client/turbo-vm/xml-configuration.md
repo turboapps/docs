@@ -4,15 +4,15 @@
 
 Here is a list that describes the purpose of each of the tags you see in **XAPPL** files created with Turbo Studio:
 
-### OutputLocation
+## OutputLocation
 
 Path to the folder where the output is saved after a successful build. This can be a local path, a UNC path, or a mapped drive.
 
-### OutputFile
+## OutputFile
 
 Name of the image file output (ie. image.svm or application.exe).
 
-### ProjectType
+## ProjectType
 
 The type of output that is created when built.  
 
@@ -22,7 +22,7 @@ Possible values:
 * **Application** - A Turbo standalone executable is a **.exe** file which can run without any additional Turbo.net components.
 * **TurboApplication** - A Turbo portable executable is also a **.exe** but requires the Turbo Client Runtime to be installed on the machine as a prerequisite.
 
-### Expiration
+## Expiration
 
 The expiration settings for the output image.  
 
@@ -36,7 +36,7 @@ Attributes:
 
 The child elements **ExpiredMessage**, **ExpirationWarning**, and **UnreachableWarning** are the text messages that are displayed.
 
-### Output
+## Output
 
 The output options for the application build.  
 
@@ -55,7 +55,7 @@ Attributes applicable to portable applications:
 * **hub** - The hub where the package images are located. This can be **https://turbo.net** or the url of a Turbo Hub Server.
 * **isolationOptions** - Additional isolation options to use in the application container. Currently the only available option is **MergeUser** which makes the user folders (desktop, documents, etc) merge isolated no matter the container's isolation settings.
 
-### Msi
+## Msi
 
 The output settings for the MSI setup file.  
 
@@ -80,11 +80,11 @@ Attributes:
 * **upgradeCode** - The value of MSI upgrade code property.
 * **componentId** - The value of the MSI component id property.
 
-### Network
+## Network
 
 Contains a **Proxy** element.
 
-### Proxy
+## Proxy
 
 The network proxy settings for the container image.  
 
@@ -100,7 +100,7 @@ Attributes:
 * **password** - The password to authenticate the proxy.
 * **useSpoonTicket** - Whether the currently logged in Turbo user ticket is passed for authentication. Used for Turbo Tnlr.
 
-### Clipboard
+## Clipboard
 
 The clipboard settings for the container (ie. copy-paste operations).  
 
@@ -109,7 +109,7 @@ Attributes:
 * **isolationMode** - The isolation mode which separates the container clipboard from native. Possible values are: **Merge** and **Full**. If fully isolated, will only be able to paste things that were copied inside the container. 
 Inheritance: when multiple layers with a different isolationMode setting are present, the container will use the highest isolationMode.
 
-### EnvironmentVariableExGlobalSettings
+## EnvironmentVariableExGlobalSettings
 
 The global environment variable settings.  
 
@@ -117,11 +117,11 @@ Attributes:
 
 * **isolationMode** - The isolation mode for environment variables. Possible values are: **Inherit**, **Full**, and **WriteCopy**. **Inherit** uses whatever isolation settings are specified on the environment variable registry keys (**HKCU\Environment** or **HKLM\System\CurrentControlSet\Control\Session Manager\Environment**).
 
-### Dependencies
+## Dependencies
 
 Contains a collection of **Dependency** elements. These only affect container environments run through the Turbo.net Client Runtime platform and have no effect on standalone executable builds.
 
-### Dependency
+## Dependency
 
 Specifies a Turbo.net Hub dependency for the image.  
 
@@ -131,11 +131,11 @@ Attributes:
 * **Hash** - The hash of the dependency image (ex: **d54de61a9fd54a5467e5bb084e0dcabacb0689cab5c329558d2916d7d3f1bf38**).
 * **BakedIn** - Whether the dependency image configuration has already been merged into the current image configuration or if it is to be merged at runtime.
 
-### Requirements
+## Requirements
 
 Contains a collection of **Requirement** elements. These only affect container environments run through the Turbo.net Client Runtime platform and have no effect on standalone executable builds.
 
-### Requirement
+## Requirement
 
 Specify various requirements that are enforced at runtime.  
 
@@ -144,7 +144,7 @@ Attributes:
 * **type** - The type of runtime requirement. At this time this value can only be **minosver** which specifies a minimum required Microsoft Windows version.
 * **value** - The value to pass to the type handler. Currently this can be the minimum version of Microsoft Windows to allow execution (Win7 is "6.1", Win8 is "6.2", Win8.1 is "6.3", and Win10 is "10.0")
 
-### Packages
+## Packages
 
 Configuration settings of runtime packages which are included in the image. Contains **Java** and a collection of **Package** elements.  
 
@@ -152,7 +152,7 @@ Attributes:
 
 * **trimDotNet** - Performs a build-time process to attempt to trim included .NET packages to the minimum set of binaries required. This only works for .NET packages added from Turbo Studio runtimes. Custom .NET packages added in **Layers** panel are not subject to trimming operations.
 
-### Package
+## Package
 
 Indicates that a layer is to be merged into the image at build-time. Turbo Studio searches the local **Layers** cache for matching packages. The **Layers** cache is in **C:\Users\[user]\Documents\Turbo.net\Components** and is configured in the Turbo Studio **Layers** panel.  
 
@@ -162,11 +162,11 @@ Attributes:
 * **platform** - The system architecture where the package is configured. This is deprecated and always **x86** now.
 * **version** - The version of the layer package. This comes from the layer standard metadata if present or else is **1.0.0.0** by default.
 
-### Java
+## Java
 
 Configuration settings for the virtual java runtime. Contains **Runtime** and **Settings** elements.
 
-### Runtime
+## Runtime
 
 Configuration settings for the virtual java runtime.  
 
@@ -176,7 +176,7 @@ Attributes:
 * **platform** - The target platform for the java package. In this context it will always be **x86**.
 * **version** - The version of the java package to use.
 
-### Settings
+## Settings
 
 Configuration settings for the virtual java runtime.  
 
@@ -187,7 +187,7 @@ Attributes:
 * **classpath** - The path to search for the class files to execute. Only used with type **Class**.
 * **options** - Additional command line parameters which are passed to java.exe.
 
-### VirtualizationSettings
+## VirtualizationSettings
 
 Virtual machine configuration settings which affect runtime behavior. Also contains a **ChildProcessVirtualization** element.  
 
@@ -238,7 +238,7 @@ Attributes:
 * **extendedAppLockerCompatibility** - Prevents some application errors when using AppLocker DLL Rules technology. Default is **False**.
 * **chromiumSupport** - Enables support for the Chromium sandbox. This is automatically enabled for Google Chrome and Microsoft Edge browsers. Default is **False**.
 
-### ChildProcessVirtualization
+## ChildProcessVirtualization
 
 Settings for how child processes are handled in the container. Contains a collection of **ChildProcessException** elements.  
 
@@ -247,7 +247,7 @@ Attributes:
 * **spawnVm** - Indicates that by default child processes should be spawned inside the container. Processes named in **ChildProcessException** will be the opposite behavior of this setting. Default is **True**.
 * **spawnExternalComServers** - COM servers will be accessible to other native processes. Default is **False**.
 
-### ChildProcessException
+## ChildProcessException
 
 Indicates a child process that is to have different **spawnVm** settings than the default specified in **ChildProcessVirtualization**.  
 
@@ -255,7 +255,7 @@ Attributes:
 
 * **name** - The name of the process to exclude (ex: **splwow64.exe**).
 
-### XLayers
+## XLayers
 
 Allows a container to search for additional layers to load at runtime. Contains a collection of **RequiredXLayer** elements.  
 
@@ -263,7 +263,7 @@ Attributes:
 
 * **xlayerSearchPattern** - A path pattern that is used at runtime to search for layers to load. Layers discovered are loaded in alphabetical order. For example: **@APPDIR@\patches_*.svm** and **\\networkshare\patches\*.svm**.
 
-### RequiredXLayer
+## RequiredXLayer
 
 Specifies which layers are required to be present in order for the container to launch. The search pattern in **XLayers** element must be specified.  
 
@@ -271,7 +271,7 @@ Attributes:
 
 * **name** - The name of a required layer which is to be discovered in the **xlayerSearchPattern** (ex: **shared.svm**). If the layer is not discovered then an error will occur and the container will not start.
 
-### NamedObjectIsolation
+## NamedObjectIsolation
 
 Allows isolation of specific named objects in the container (such as events, mutexes, and semaphores). Contains a collection of **Exception** elements.  
 
@@ -279,7 +279,7 @@ Attributes:
 
 * **enabled** - Whether named object isolation is enabled by default. This can be overwritten with **Exception** elements. Default is **False**.
 
-### Exception
+## Exception
 
 Specifies exceptions to the default named object isolation rules.  
 
@@ -288,11 +288,11 @@ Attributes:
 * **regex** - The regular expression pattern to match named object names. For example, "ieframe" will match any named object with "ieframe" anywhere in the name and "\\RPC Control\\OSPPC.*" will match objects with names such as "machine\rpc control\osppc0123".
 * **replacement** - Optional value used to rename matching named objects. For example, if **regex** were set to "NAMEDOBJ\d+" and **replacement** was set to "NAMEDOBJ" then an object with a name "NAMEDOBJ25" would be renamed to "NAMEDOBJ". Default is empty so no replacement operation is performed.
 
-### Dns
+## Dns
 
 Specifies DNS mappings inside the container environment. Contains a collection of **Entry** elements.
 
-### Entry
+## Entry
 
 Specifies a mapping for hostnames and IPs from one to another.  
 
@@ -301,27 +301,27 @@ Attributes:
 * **name** - The source hostname or IP to map (ex: google.com).
 * **redirect** - The target hostname or IP to map to.
 
-### Device
+## Device
 
 Overwrites device characteristics of the machine where the container is executed. Contains elements for **MachineName**, **MachineSid**, **NetworkAdapters**, and **ComputerSystemProduct**. Use `xstudio.exe /capture-device` to fill in the information.
 
-### MachineName
+## MachineName
 
 Overwrites the name of the machine which is returned from `GetComputerNameEx` and `GetComputerName` system APIs. Does not change the **COMPUTERNAME** environment variable.
 
-### MachineSid
+## MachineSid
 
 Overwrites the SID (Security Identifier) of the machine.
 
-### NetworkAdapters
+## NetworkAdapters
 
 Replaces the network adapters which appear available to the container. Contains a collection of **NetworkAdapter** elements which contain a **PhysicalAddress** element. The **PhysicalAddress** element accepts the MAC address of the adapter that will be returned by the `GetAdaptersAddresses` system API (ex: **000d83b1c08e**).
 
-### ComputerSystemProduct
+## ComputerSystemProduct
 
 Overwrites the machine system product UUID returned from Win32_ComputerSystemProduct WMI. Contains a **UUID** element (ex: FAF76B96-798C-11D2-AAD1-006008C78BC7).
 
-### EnvironmentStats
+## EnvironmentStats
 
 Contains information about the snapshot machine where the application configuration was created. For non-snapshot scenarios, this element is empty.  
 
@@ -331,7 +331,7 @@ Attributes:
 * **x64** - True if was a 64-bit operating system.
 * **ieVersion** - The version of Microsoft Internet Explorer
 
-### WorkingDirectory
+## WorkingDirectory
 
 Specifies which directory the virtual application will execute from.  
 
@@ -340,11 +340,11 @@ Attributes:
 * **option** - The working directory mode used. Possible values are **StartupFileDirectory** (the directory where the startup file resides), **CurrentDirectory** (the directory where the virtual application is launched from), or **SpecificDirectory** (uses the value from the **specifiedDirectory** attribute). Default is **StartupFileDirectory**.
 * **specifiedDirectory** - Sets the working directory to a specific directory. Only applicable if the **option** mode is set to **SpecificDirectory**.
 
-### DisabledVmSettings
+## DisabledVmSettings
 
 A list of VM settings which are to be disabled in the Turbo.net Client Runtime environment (including portable executables). Not applicable to standalone executables or their dependencies. Contains a collection of **DisabledVmSetting** elements.
 
-### DisabledVmSetting
+## DisabledVmSetting
 
 Specifies a VM setting to be disabled in the Turbo.net Client Runtime environment.  
 
@@ -352,15 +352,15 @@ Attributes:
 
 * **name** - The name of the VM setting to disable.
 
-### StartupShims
+## StartupShims
 
 A list of user defined shims that will be executed on container startup. Contains a collection of **Shim** elements.
 
-### ShutdownShims
+## ShutdownShims
 
 A list of user defined shims that will be executed on container shutdown. Contains a collection of **Shim** elements.
 
-### Shim
+## Shim
 
 A user defined DLL that contains custom functionality to be executed before or after a container's life.  
 
@@ -369,7 +369,7 @@ Attributes:
 * **path** - The path to where the shim DLL is located. At build time the shim will be copied into the container where it will be executed from at runtime.
 * **param** - A string parameter that is passed to the shim DLL.
 
-### Scripts
+## Scripts
 
 A user defined shell script file (.bat or .cmd) that is executed before or after a container's life.  
 
@@ -380,7 +380,7 @@ Attributes:
 * **runAsAdmin** - The scripts will be executed in an elevated user context.
 * **exitOnNonZeroReturnValue** - Whether the startup script can abort the application launch by returning a non-zero exit code.
 
-### ActiveDirectory
+## ActiveDirectory
 
 Specifies launch restrictions based on Active Directory group or domain membership.  
 
@@ -389,11 +389,11 @@ Attributes:
 * **domain** - The name of an Active Directory domain that is required.
 * **group** - The name of a an Active Directory group that the current user must be a member of.
 
-### StandardMetadata
+## StandardMetadata
 
 Configures standard metadata properties. For standalone executables, these values show up in .exe properties. For layers, these values will be used when displaying information when imported in the **Layers** panel in Turbo Studio. Contains a collection of **StandardMetadataItem** elements.
 
-### StandardMetadataIte
+## StandardMetadataIte
 
 Standard metadata which is applied to the image.  
 
@@ -402,11 +402,11 @@ Attributes:
 * **property** - The name of the standard metadata field. Possible values are **Title**, **Publisher**, **Description**, **Website**, and **Version**.
 * **value** - The value of the standard metadata field. This can be set to **@INHERIT@** to get the value automatically from the startup file (if only one is specified).
 
-### CustomMetadata
+## CustomMetadata
 
 Configures custom metadata properties. For standalone executables, these values show up in .exe properties. Contains a collection of **CustomMetadataItem** elements.
 
-### CustomMetadataItem
+## CustomMetadataItem
 
 Custom metadata which is applied to the image.  
 
@@ -415,7 +415,7 @@ Attributes:
 * **property** - The name of the custom metadata field.
 * **value** - The value of the custom metadata field.
 
-### SplashImage
+## SplashImage
 
 Defines a splash image that is displayed while the startup file is being executed.  
 
@@ -425,11 +425,11 @@ Attributes:
 * **transparency** - The color used to indicate transparent pixels. This is the name of a system-defined color. The default is **Magenta** (#FFFF00FF).
 * **seconds** - The length of time (in seconds) the splash image is displayed. Configure this to be less than the startup time for your application.
 
-### StartupFiles
+## StartupFiles
 
 Defines the available files that can be executed to start the container. Contains a collection of **StartupFile** elements.
 
-### StartupFile
+## StartupFile
 
 Defines a file that can be used to start the container.  
 
@@ -441,11 +441,11 @@ Attributes:
 * **default** - If this startup file is executed by default when no other **tag** value is specified.
 * **architecture** - The architecture where the startup file is valid. Possible values are **x64**, **x86**, or **AnyCpu** (ex: **x64** startup files are only launched on 64-bit operating systems).
 
-### Layers
+## Layers
 
 Defines layers of virtual operating system settings which are merged together at runtime. Layers are loaded in the order that they are defined in the xappl. Conflicting settings (ie. a file defined in multiple layers with different isolation settings) are won by the layer that is loaded first. Containers a collection of **Layer** elements.
 
-### Layer
+## Layer
 
 Defines a layer of the virtual operating system. Contains elements for **Condition**, **Filesystem**, **Registry**, **EnvironmentVariables**, **EnvironmentVariablesEx**, **PortMaps**, **ObjectMaps**, **Services**, **Shortcuts**, **ProgIds**, **Extensions**, **DefaultPrograms**, **SnapshotDirectories**, and **ShellExtensions**.  
 
@@ -453,7 +453,7 @@ Attributes:
 
 * **name** - The name of the layer. The name **Default** defines the main layer which is the foundation for all other layers. There can only be one **Default** layer. The names for the other layers should be set to convey the reason for the layer's existance.
 
-### Condition
+## Condition
 
 Defines a condition that must pass at runtime for the layer to be applied.  
 
@@ -472,7 +472,7 @@ Attributes:
 * **operator** - The operator used in the condition. Possible values are context specific and include **Less**, **LessEqual**, **Equal**, **NotEqual**, **GreaterEqual**, **Greater**, **AND**, **OR**, **NOT**, **Exists**, and **DoesNotExist**.
 * **value** - The comparison value for the condition. Acceptable values are context specific.
 
-### Filesystem
+## Filesystem
 
 Defines the virtual filesystem. Contains a collection of root **Directory** elements.  
 
@@ -514,7 +514,7 @@ Root directory elements include:
 * **@VIDEOS@** - Resolves to the user's video folder (ex: **c:\users\turbouser\videos**).
 * **@WINDIR@** - Resolves to the Windows folder (ex: **c:\windows**).
 
-### Directory
+## Directory
 
 Defines a directory in the virtual filesystem. Contains a collection of **Directory** and **File** elements.  
 
@@ -527,7 +527,7 @@ Attributes:
 * **noSync** - If the directory should use the **local** sandbox. The local sandbox contains changes that will only be persisted on the local machine and not get sync to other sessions.
 * **source** - If defined, files from the source path will be added to the folder at build time.
 
-### File
+## File
 
 Defines a file in the virtual filesystem.  
 
@@ -544,7 +544,7 @@ Attributes:
 * **system** - An optional value that indicates that a file should have the SYSTEM file attribute applied.
 * **privatize** - An optional value that can be used for .DLL files which causes all references to the file in the virtual filesystem from other fils to be rewritten. This can be used to isolate references to low level system .DLLs for compatibility with old applications on new operating systems.
 
-### Registry
+## Registry
 
 Defines the virtual registry. Contains a collection of root **Key** elements.  
 
@@ -555,7 +555,7 @@ Root registry key elements include:
 * **@HKLM@** - Resolves to the local machine root registry key.
 * **@HKU@** - Resolves to the all users root registry key.
 
-### Key
+## Key
 
 Defines a registry key in the virtual registry.  
 
@@ -565,7 +565,7 @@ Attributes:
 * **isolation** - The isolation level of the registry key. Possible values are **Full**, **WriteCopy**, and **Merge**.
 * **noSync** - If the key and its values are stored in the **local** sandbox. The local sandbox is only stored on the local machine and will not follow the session to other machines.
 
-### Value
+## Value
 
 Defines a registry key value in the virtual registry.  
 
@@ -589,15 +589,15 @@ Attributes:
   * The start index of where in the string the replacement occurs.
   * The length of the replacement.
 
-### EnvironmentVariables
+## EnvironmentVariables
 
 Deprecated. See **EnvironmentVariablesEx**.
 
-### EnvironmentVariablesEx
+## EnvironmentVariablesEx
 
 Defines virtual environment variables. Contains a collection of **VariableEx** elements.
 
-### VariableEx
+## VariableEx
 
 Defines a virtual environment variable.  
 
@@ -609,11 +609,11 @@ Attributes:
 * **mergeMode** - The manner in which the the environment variable value is merged with the native value at runtime. Possible values are **Replace**, **Host**, **Prepend**, and **Append**.
 * **mergeString** - The string that separates the virtual value from the native value if they are to be merged. The default is ";".
 
-### PortMaps
+## PortMaps
 
 Defines mappings between virtual network ports and native ports. Contains a collection of **PortMap** elements.
 
-### PortMap
+## PortMap
 
 Defines a mappings between a virtual network port and a native port.  
 
@@ -621,11 +621,11 @@ Attributes:
 
 * **value** - The mapping value in the format: **[to port]:[from port]/[protocol]**, where all occurrences of [to port] are mapped to [from port] for the given protocol. The protocol can be **tcp** or **udp** but can omit **/[protocol]** to target both protocols.
 
-### ObjectMaps
+## ObjectMaps
 
 Defines name mappings for various Windows objects. Contains a collection of **ObjectMap** elements.
 
-### ObjectMap
+## ObjectMap
 
 Defines a name mapping for various Windows objects.  
 
@@ -642,11 +642,11 @@ Possible values:
 |**host** - Maps requests to the specified host name to another host or IP address.|The host name to map from. A wildcard character is supported at the beginning (ex: **\*** or **\*.google.com**).|The IP address or host name to map to. To deny access to the named IP/host, set this value to **0.0.0.0**. This value can be made identical to the name to map to allow the host if there are other generic mappings to deny it (ex: **host://\*.google.com:\*.google.com** if **host://\*:0.0.0.0** also exists).|
 |**window** - Indicates that a window class name should be isolated from the native system.|The name of the window class to be isolated.|Unused. Must be assigned to the value "0" (ex: **window://IEFrame:0** will isolate Microsoft Internet Explorer's main window from the native environment).|
 
-### Services
+## Services
 
 Defines virtual services. Contains a collection of **Service** elements.  
 
-### Service
+## Service
 
 Defines a virtual service.  
 
@@ -665,7 +665,7 @@ Attributes:
 * **serviceSidType** - Unused, leave **0**.
 * **wow64** - Unused, leave **False**.
 
-### Shortcuts
+## Shortcuts
 
 Defines shortcuts that will be added with desktop registration or MSI deployments. Contains a collection of root **Folder** elements.  
 
@@ -675,7 +675,7 @@ Root shortcut folders include:
 * **Programs Menu** - Resolves the user's startup menu programs folder (ex: **c:\users\turbouser\appdata\roaming\microsoft\windows\start menu\programs**).
 * **SendTo** - Resolves the user's sendto folder (ex: **c:\users\turbouser\appdata\roaming\microsoft\windows\sendto**).
 
-### Folder
+## Folder
 
 Defines a folder where shortcuts will reside that will be added with desktop registration or MSI deployments. Contains a collection of **Folder** and **Shortcut** elements.  
 
@@ -683,7 +683,7 @@ Attributes:
 
 * **name** - The name of the folder.
 
-### Shortcut
+## Shortcut
 
 Defines a shortcut that will be added with desktop registration or MSI deployments. The shortcut must point to an existing startup file. Optionally contains an **IconResource** element.  
 
@@ -696,7 +696,7 @@ Attributes:
 * **showCmd** - Controls how the target is launched. Possible values are **1** (normal), **3** (maximized), or **7** (minimmized).
 * **description** - The description of the shortcut.
 
-#### IconResource
+### IconResource
 
 The icon to use for the shortcut.  
 
@@ -704,11 +704,11 @@ Attributes:
 
 * **data** - The icon image data in hexidecimal format (ex: **0001000000ffffffff01000000000000000c0200000049547572626f2...**). Set this in Turbo Studio.
 
-### ProgIds
+## ProgIds
 
 Defines virtual COM ProgIDs that will be added with desktop registration or MSI deployments. Contains a collection of **ProgId** elements. 
 
-### ProgId
+## ProgId
 
 Defines a virtual COM ProgID that will be added with desktop registration or MSI deployments. This is used for file associations. Contains a collection of **Verb** and **IconResource** elements.
 
@@ -718,7 +718,7 @@ Attributes:
 - **description** - The description of the ProgID.
 - **urlProtocol** - Whether the ProgID is a URL Protocol.
 
-### Verb
+## Verb
 
 Defines shell verbs that can be used with associated files.  
 
@@ -730,7 +730,7 @@ Attributes:
 * **arguments** - The command line arguments to pass to the target handler (if defined). Use **%1** to use the path to the associated file.
 * **default** - If the verb is the default behavior in the shell (ie. used when double clicking an associated file).
 
-#### IconResource
+### IconResource
 
 The icon to use for the Verb.
 
@@ -738,11 +738,11 @@ Attributes:
 
 - **data** - The icon image data in hexadecimal format (ex: **0001000000ffffffff01000000000000000c0200000049547572626f2...**). Set this in Turbo Studio.
 
-### Extensions
+## Extensions
 
 Defines the file associations which will be added with desktop registration or MSI deployments. Contains a collection of **Extension** elements.
 
-### Extension
+## Extension
 
 Defines a file association which will be added with desktop registration or MSI deployments.
 
@@ -752,11 +752,11 @@ Attributes:
 - **progId** - The virtual ProgID to use to handle file operations.
 - **mimeType** - The MIME type of the file extension (ex: **text/xml**).
 
-### DefaultPrograms
+## DefaultPrograms
 
 Defines registered applications' file and URL associations that will be added with desktop registration. Contains a collection of **DefaultProgram** elements.
 
-### DefaultProgram
+## DefaultProgram
 
 Defines a registered application's file and URL associations that will be added with desktop registration. These file and URL associations are used when determining the default program to open a file or URL with. Contains a collection of **Extension** and **Protocol** elements. Optionally contains an **IconResource** element.
 
@@ -766,7 +766,7 @@ Attributes:
 - **description** - The description of the registered application.
 - **hidden** - Whether the registered application's associations are displayed in the Windows Shell for choosing default programs for associations.
 
-#### Extension
+### Extension
 
 Defines a relationship between a file extension and a ProgID.
 
@@ -775,7 +775,7 @@ Attributes:
 - **name** - The extension (ex: **.html**).
 - **progId** - The virtual ProgID to use to handle file operations.
 
-#### Protocol
+### Protocol
 
 Defines a relationship between a URL protocol and a ProgID.
 
@@ -784,7 +784,7 @@ Attributes:
 - **name** - The URL protocol (ex: **http**).
 - **progId** - The virtual ProgID to use to handle URL operations.
 
-#### IconResource
+### IconResource
 
 The icon to use for the default program.
 
@@ -792,11 +792,11 @@ Attributes:
 
 - **data** - The icon image data in hexadecimal format (ex: **0001000000ffffffff01000000000000000c0200000049547572626f2...**). Set this in Turbo Studio.
 
-### SnapshotDirectories
+## SnapshotDirectories
 
 Records the native environment where a snapshot was taken. These mappings are used at runtime to resolve paths in opaque data structure (ie. application files) that couldn't be resolved at build time (like can be done for registry key values). Contains a collection of **Directory** elements.
 
-### Directory
+## Directory
 
 Records a mapping for root filesystem directory nodes. These are used instead of the standard mappings.  
 
@@ -806,11 +806,11 @@ Attributes:
 * **path** - The path where the root folder node was pointing on the machine where a snapshot occurred.
 * **enabled** - If the mapping is enabled at runtime or is just recorded for information. Enabling system folder mappings (ex. **@WINDIR@**, **@SYSTEM@**, etc) will often break applications if the mappings are not consistent with the execution machine.
 
-### ShellExtensions
+## ShellExtensions
 
 Defines shell extensions that will be added with desktop registration. Contains a collection of **ShellExtension** elements. For internal use only.
 
-### ShellExtension
+## ShellExtension
 
 Defines a shell extension that will be added with desktop registration.  
 
@@ -820,15 +820,15 @@ Attributes:
 * **IID** - The IID of the shell extension COM object.
 * **additionalFiles** - A semi-colon seperated list of paths to additional required files.
 
-### Publishers
+## Publishers
 
 Unused. Leave empty.
 
-### HarvestSettings
+## HarvestSettings
 
 Deprecated. Leave empty.
 
-### Id
+## Id
 
 A unique GUID for the configuration.   
 

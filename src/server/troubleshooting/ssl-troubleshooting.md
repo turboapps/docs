@@ -1,6 +1,6 @@
 # SSL Troubleshooting
 
-### Portal has limited functionality after installing certificates
+## Portal has limited functionality after installing certificates
 
 Unable to login to the portal after installing SSL certificates. Unable to launch applications remotely on application server. Please check the portal logs. The logs contain the following error(s):
 
@@ -42,7 +42,7 @@ IMPORTANT: The chain file should be in crt format. If the cert extension is .p7b
 openssl pkcs7 -print_certs -in old.p7b -out new.crt
 ```
 
-### Portal does not load web pages after installing SSL certificates
+## Portal does not load web pages after installing SSL certificates
 
 Check the proxy-apache.log file in the C:\ProgramData\Turbo\Logs folder.
 
@@ -76,7 +76,7 @@ Remove the encryption from the KEY file to resolve this error.
 > openssl rsa -in encrypted-key.key  -out key.key
 ```
 
-### Admin portal does not load after installing SSL certificates
+## Admin portal does not load after installing SSL certificates
 
 Attempting to access the Admin portal shows the following error message:
 
@@ -104,7 +104,7 @@ Temporarily disable HTTPS to access the admin site and make configuration change
 > Server.exe admin --server <hub-name> http://<hub-web-root>
 ```
 
-### Images fail to push and containers fail to upload
+## Images fail to push and containers fail to upload
 
 Check the corresponding log in %LOCALAPPDATA%\turbo\logs\. If the logs indicate an SSL failure during sync:
 
@@ -117,7 +117,7 @@ Check the corresponding log in %LOCALAPPDATA%\turbo\logs\. If the logs indicate 
 
 Trouble shoot your SSL certificate using [ssllabs.com](https://www.ssllabs.com/ssltest/analyze.html).
 
-### Server does not start after changing certificate or after installation / upgrade 
+## Server does not start after changing certificate or after installation / upgrade 
 
 Check the Proxy-apache.log file in C:\ProgramData\Turbo\Logs folder. The following logs indicate a failure to load the certificate file due to DER file format:
 ```
@@ -134,11 +134,11 @@ Open the certificate files using notepad and look for the certificate file which
 openssl x509 -inform der -in certificate.crt -out certificate.pem.crt
 ```
 
-### Self-signed certificate disappears from Windows certificate store
+## Self-signed certificate disappears from Windows certificate store
 
 Self-signed certificates added to the Third-Party Root Certification Authorities are periodically deleted when Windows updates its certificate store. To avoid this issue, install self-signed certificates to the Trusted Root Certification Authorities store.
 
-### Generating a self-signed certificate
+## Generating a self-signed certificate
 
 Self-signed certificates, typically used in testing environments, may be generated using OpenSSL. Use the Subject Alternative Name field to specify the web service roots and Domain URLs for your Turbo Server farm. When prompted for the Common Name, specify the Domain URL or portal web serivce root, if Domain URL is not configured.
 

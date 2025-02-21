@@ -4,7 +4,7 @@ Configuring Turbo Server with Blackboard Learn allows students and instructors t
 
 Turbo Server uses the open Learning Tools Interoperability (LTI) specification (version 1.0) to communicate with Blackboard.
 
-### Getting Started
+## Getting Started
 
 Obtain a blackboard license from [https://www.blackboard.com/](https://www.blackboard.com/).
 
@@ -16,7 +16,7 @@ Blackboard requires the following to connect to Turbo Server Application:
 
 The values can be obtained from the Turbo Server administrator site. Navigate to **General > Learning Management System**.
 
-### Adding Turbo to Blackboard Learn
+## Adding Turbo to Blackboard Learn
 
 Before adding Turbo to an individual course, an administrator account must configure Turbo site-wide from the Blackboard administration site.
 
@@ -37,7 +37,7 @@ Under Institution Policies, configure the following:
 
 Click **Submit**.
 
-### Add a Turbo Placement (Original UI)
+## Add a Turbo Placement (Original UI)
 
 If your organization has any courses set to Original UI, the following steps are required for instructors of those courses to see Turbo. Administrator privileges are required.
 
@@ -62,7 +62,7 @@ Under Tool Provider Information, enter the **Tool Provider URL** from the Turbo 
 
 Click **Submit**.
 
-### Activate Turbo on a Course (Original UI)
+## Activate Turbo on a Course (Original UI)
 
 These steps require at least instructor privileges and do not apply to courses with the Ultra UI. An administrator must have already added Turbo site-wide and created a Course Placement. The administrator and end users must also be enrolled in the course to access Turbo.net.
 
@@ -74,7 +74,7 @@ Open the **Tools** dropdown. Select **More tools**.
 
 Select **Turbo.net**. Configure as desired and click **Submit**.
 
-### Activate Turbo on a Course (Ultra UI)
+## Activate Turbo on a Course (Ultra UI)
 
 These steps require at least instructor privileges and apply only to courses with the Ultra UI. An administrator must have already added Turbo site-wide. The administrator and end users must also be enrolled in the course to access Turbo.net.
 
@@ -88,16 +88,16 @@ Set as Visible to students.
 
 Under **Configuration URL**, enter the Tool Provider URL from the Turbo Server administrator site.
 
-### Troubleshooting
+## Troubleshooting
 
-#### Accessing Turbo.net from course content page fails with error "The specified object was not found."
+### Accessing Turbo.net from course content page fails with error "The specified object was not found."
 
 The error occurs after Turbo.net has been added to Blackboard by an administrator and activated on the course.
 
 Solution:
 Ensure your user is enrolled in the course. Blackboard prevents unenrolled users (including administrative users) from accessing LTI apps.
 
-#### Accessing Turbo.net from course content page fails with "401 Unauthorized"
+### Accessing Turbo.net from course content page fails with "401 Unauthorized"
 
 The error occurs when the secret does not match.
 

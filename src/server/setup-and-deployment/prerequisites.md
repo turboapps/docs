@@ -2,7 +2,7 @@
 
 In this section you will learn about system and software requirements for installing the various Turbo Server components. To ensure a smooth installation process, it is important to have a clean machine. Please note that preinstalled programs such as IIS and Java may cause interference with Turbo Server, so it is recommended not to have them installed beforehand.
 
-### System Requirements
+## System Requirements
 
 Minimum system requirements:
 - 64-bit 2.6 GHz CPU with 4 cores or better
@@ -53,13 +53,13 @@ For high availability and redundancy:
 
 For additional sizing and technical guidance, contact Turbo at support@turbo.net.
 
-### Database Requirements
+## Database Requirements
 
 For production and farm install scenarios, an external database is required. It is recommended to use Microsoft SQL Server or Azure SQL. Microsoft SQL Server Express is also supported, but will require pruning because the Analytics database grows with usage and may exceed the 10GB limit over a very long period of time.
 
 For demonstration and testing scenarios, Turbo Server is installed with an embedded Microsoft SQL 2017 Express database when selecting the standalone install mode.
 
-### Disk Space Requirements
+## Disk Space Requirements
 
 The initial installation of Turbo Server requires 1.05 GB of free space on your hard drive.
 
@@ -67,25 +67,25 @@ The amount of disk space required varies based on how many applications your ser
 
 Turbo DB uses data deduplication to minimize storage consumption when multiple copies of the same data are stored on the server, so your exact needs may vary based on the content being stored.
 
-### Firewall and Security
+## Firewall and Security
 
 The Turbo Server installation automatically creates firewall rules for the selected roles. These rules allow external connections to access the Turbo Server sites and services. The opened ports are listed below:
 
-#### Hub Server
+### Hub Server
 
 | Port | Protocol | Description               | Required Externally |
 |------|----------|---------------------------|----------------------|
 | 80   | TCP      | Administration Site HTTP  | Optional            |
 | 443  | TCP      | Administration Site HTTPS | Yes                 |
 
-#### Portal Server
+### Portal Server
 
 | Port | Protocol | Description          | Required Externally |
 |------|----------|----------------------|----------------------|
 | 80   | TCP      | Portal Site HTTP     | Optional            |
 | 443  | TCP      | Portal Site HTTPS    | Yes                 |
 
-#### Application Server
+### Application Server
 
 | Port  | Protocol | Description                      | Required Externally |
 |-------|----------|----------------------------------|----------------------|

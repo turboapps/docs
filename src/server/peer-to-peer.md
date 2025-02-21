@@ -1,6 +1,6 @@
 # Peer-to-Peer Image Distribution
 
-### How It Works
+## How It Works
 
 Peer-to-Peer Image Distribution in Turbo uses torrent technology to efficiently distribute images across your network. Here's how the system works:
 
@@ -26,9 +26,9 @@ Peer-to-Peer Image Distribution in Turbo uses torrent technology to efficiently 
    - After completing downloads, clients can become seeds
    - Seeds contribute to the network by only uploading
 
-### Enabling Peer-to-Peer Image Distribution
+## Enabling Peer-to-Peer Image Distribution
 
-#### Server Configuration
+### Server Configuration
 
 1. Access the Turbo Server Admin UI
 2. Navigate to **Domain > Servers > [Your Hub server] > Storage**
@@ -38,7 +38,7 @@ Peer-to-Peer Image Distribution in Turbo uses torrent technology to efficiently 
 4. Save the changes
 5. If the hub cache was not previously enabled, use the **Update Cache** button to populate existing hub images into the cache
 
-#### Client Configuration
+### Client Configuration
 
 To enable Peer-to-Peer Image Distribution on a Turbo client:
 
@@ -52,7 +52,7 @@ turbo config --all
 
 Look for "Torrent download: Enabled" in the output to confirm the setting.
 
-### Network Requirements
+## Network Requirements
 
 The Turbo Server image seeder uses ports 6881-6889. Ensure these ports are properly configured:
 
@@ -66,9 +66,9 @@ The Turbo Server image seeder uses ports 6881-6889. Ensure these ports are prope
    - Set the source to the appropriate IP range for your clients
    - Set the destination to your Turbo Server's IP address
 
-### Troubleshooting
+## Troubleshooting
 
-#### Server-Side Issues
+### Server-Side Issues
 
 If you're experiencing issues with image torrent downloads hanging, slow distribution speeds, or other peer-to-peer related errors:
 
@@ -97,7 +97,7 @@ If you're experiencing issues with image torrent downloads hanging, slow distrib
    - `repository-torrent_YYYYMMDD_HHMMSS.log`
    - `repository-tracker_YYYYMMDD_HHMMSS.log`
 
-#### Client-Side Issues
+### Client-Side Issues
 
 If clients are having trouble with peer-to-peer downloads:
 
@@ -123,7 +123,7 @@ If clients are having trouble with peer-to-peer downloads:
 4. **Review Client Logs**
    Check logs in `%LOCALAPPDATA%\Turbo\Logs` for error messages
 
-#### Common Issues
+### Common Issues
 
 1. **Firewall Blocks**
    - Verify Windows Firewall settings
@@ -140,21 +140,21 @@ If clients are having trouble with peer-to-peer downloads:
    - Check process permissions
    - Ensure sufficient system resources
 
-### Security and Privacy
+## Security and Privacy
 
 - Only Turbo images are distributed via the peer-to-peer network
 - Peer connections are strictly limited to other authenticated Turbo clients
 - A private tracker hosted by the Turbo server is used exclusively
 - No external trackers or Distributed Hash Table (DHT) are used
 
-### Best Practices
+## Best Practices
 
 - Enable Peer-to-Peer Image Distribution on all clients in your network
 - Use `--wait-after-exit` with `turbo pull` to continue seeding
 - Keep clients and server software up to date
 - Monitor network performance and adjust firewall rules as needed
 
-### Limitations
+## Limitations
 
 - Performance benefits vary with network conditions and peer count
 - Manual `turbo pull` commands only seed while running

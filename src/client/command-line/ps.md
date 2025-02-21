@@ -12,7 +12,7 @@ Usage: turbo ps <options> [<container>]
       --no-trunc             Don't truncate output
 ```
 
-### Examples
+## Examples
 
 ```
 # View all processes running in containers
@@ -34,6 +34,6 @@ The **UTime** is the amount of CPU time the process spent in user-mode code.
 
 The **KTime** is the amount of time spent in system calls within the kernel. 
 
-### JSON output
+## JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain `processes` array with information about running processes or an `error` object if command failed.

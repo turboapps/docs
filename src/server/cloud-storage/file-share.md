@@ -2,13 +2,13 @@
 
 The file system storage provider integration allows users to store their files on a local file system folder or a network share (SMB) through the T: Drive. The files under the configured path can be set to read only, or scoped to each individual user's private folder.
 
-### Configure the File Share
+## Configure the File Share
 
 The SMB file share must be accessable by each Portal server via a UNC path such as `\\SERVERNAME\path`. The Portal service user must have full control access to the SMB file share.
 
 If you are using a single portal solution, the storage path can be a local drive path, such as `D:\shared`.
 
-#### Quota Enforcement
+### Quota Enforcement
 
 Storage quotas can be enforced via the underlying OS's quota enforcement tools. A quota error message will be displayed to the user when they upload a file that exceeds the configured quota to the Portal files shell or T: Drive with Background Sync disabled.
 
@@ -33,7 +33,7 @@ If you are using Per User storage it is recommended to select **Auto apply templ
 
 6. Complete the dialog making any desired changes then click **Create**.
 
-### Configure Turbo Server
+## Configure Turbo Server
 
 1. Go to the Turbo Server Administration site **Integrations** > **Storage Providers** page.
 2. Click on **Add**.

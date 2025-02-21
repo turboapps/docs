@@ -1,8 +1,10 @@
-#### Administration site login results in the same login form
+# Administration
+
+## Administration site login results in the same login form
 
 The server may have had its clock changed causing the credentials to be invalid. Ensure the clock is accurate and restart the server.
 
-#### Unable to connect to SQL Server instance
+## Unable to connect to SQL Server instance
 
 Connecting to SQL Server remotely requires the following:
 - Enable remote connections for the database through SSMS

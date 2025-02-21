@@ -43,7 +43,7 @@ Users can also pass a text file containing a turbo command:
 
 Turbo Play can connect to remote application servers to stream Turbo applications using RDP. This is handled through either the Turbo URI scheme or direct RDP connection.
 
-### Turbo URI Scheme
+## Turbo URI Scheme
 
 The Turbo protocol directs Turbo Play to either:
 - Execute a local application
@@ -59,7 +59,7 @@ hash                                     hash of the configuration, to ensure it
 version                                  currently at 1
 ```
 
-#### Local Configuration Example
+### Local Configuration Example
 
 `turbo://turbo.net/config?t=config&h=sha256:e28dd1863f82e6b2f46303311540ae194045a58756cd1c4fbbbc4c778021bc84&v=1`
 
@@ -87,7 +87,7 @@ The json format for local configuration:
 }
 ```
 
-#### Remote Configuration Example
+### Remote Configuration Example
 
 `turbo://turbo.net/config?t=remoteAppConfig&h=sha256:51d021ef9da4ee6c7910a4d5f19325fba77888ba94255ab67e0e4c0d8053fa6d&v=1`
 
@@ -107,7 +107,7 @@ The json format for remote configuration:
 }
 ```
 
-### Direct RDP Connection
+## Direct RDP Connection
 
 Turbo Play can connect directly to a remote desktop to execute commands:
 

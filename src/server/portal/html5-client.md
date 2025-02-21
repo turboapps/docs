@@ -58,7 +58,7 @@ Note that if the administrator has configured the session to log off immediately
 
 ![HTML5 Client Power](/images/html5-client-power.png)
 
-### Copy-Paste Functionality
+## Copy-Paste Functionality
 
 Most popular browsers, including Chrome, support direct clipboard copy-paste functionality. To enable a seamless copy-paste experience, simply grant clipboard access when prompted by your browser. Note: Safari currently has limited clipboard support, with full functionality planned for a future update.
 

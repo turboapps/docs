@@ -54,13 +54,13 @@ If `turbo config` is executed without command line parameters then the current s
 
 To modify any settings, specify them as command line flags and assign a value to the flag. This value will then be applied to that setting. 
 
-### Change the Server
+## Change the Server
 
 The server that Turbo will connect to, and thus push to and pull from, can be configured with the `--domain` flag.
 
 By default, Turbo is configured to connect to `https://turbo.net`.
 
-### Change the Storage Path
+## Change the Storage Path
 
 The storage path points to the directory where images and containers are saved. By default, images and containers are saved in `%LOCALAPPDATA%\Turbo\Containers`.  Use the `--storage-path` flag to set the storage path to a different location.
 
@@ -72,7 +72,7 @@ Use the `--container-path` flag to specify a new location for container storage.
 
 Finally, the storage path can also be overwritten by the `TURBOREPO` environment variable which may be useful for testing an alternate location quickly without updating the client configuration.
 
-### Set the Image Cache Size
+## Set the Image Cache Size
 
 The image cache size flag will set the amount of disk space local images will consume before deleting lesser prioritized images. Set the value to 0 for unlimited cache size. The default value unlimited. 
 
@@ -89,7 +89,7 @@ Image cache size: 2.00 GB
 Image cache size: unlimited
 ```
 
-### Configure Auto-Precache
+## Configure Auto-Precache
 
 Auto-precache controls whether font and DLL caching is automatically performed when images are acquired through pull, import, or subscribe commands. As of version 25.1.19.1661, this feature is disabled by default.
 
@@ -102,7 +102,7 @@ To enable auto-precache:
 > turbo config --disable=AutoPrecache
 ```
 
-### Example
+## Example
 
 ```
 # Set container and image root path to C:\ProgramData\Turbo\Containers
@@ -125,21 +125,21 @@ Browser redirection: enabled
 > turbo config --image-path=allusers --all-users
 ```
 
-### Enable Turbo Drive
+## Enable Turbo Drive
 
 Turbo Drive is a special drive (T:) mounted in your system, which allows you to access your cloud storage accounts. Turbo Drive requires WinFSP to be installed in the system, and a Cloud Storage accounts to be configured in the Turbo Server. Turbo Drive uses a persistent cache to make working with the cloud files faster. The cache is located in the encrypted (EFS) folder at `%TEMP%\TURBO\cmd\turbo-drive`.
 
 To enable Turbo Drive, run `turbo config --enable=TurboDrive`.
 
-### Resetting Config Settings
+## Resetting Config Settings
 
 The configuration settings for Turbo can be reset to their default values by issuing the config command with the `--reset` flag.
 
-### JSON output
+## JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain either a `configuration` object with information about configuration or an `error` object if command failed.
 
-### Set the Remote Sandbox Path
+## Set the Remote Sandbox Path
 
 The remote sandbox path specifies the location where secured, sandboxed files are stored. This feature enhances security by storing isolated folders and files in a location inaccessible to end users, protecting important intellectual property such as software source code files.
 
@@ -152,7 +152,7 @@ Remote sandbox path: C:\ProgramData\Turbo\RemoteSandbox (inherited by administra
 
 Note: The remote sandbox feature must be enabled separately using the `--enable=RemoteSandbox` flag.
 
-### Customize Support Contact Information
+## Customize Support Contact Information
 
 The support contact setting allows you to customize the error message that users see when they encounter issues. This is particularly useful for organizations that want to direct users to their own helpdesk rather than Turbo's support.
 

@@ -2,27 +2,27 @@
 
 Turbo Server supports logging in users via Single Sign-On (SSO) using an external identity provider (IdP) that supports SAML 2.0 authentication. The SAML 2.0 authentication protocol is supported by many identity providers, such as AzureAD, ADFS, and WSO2.
 
-### Prerequisites
+## Prerequisites
 
 The following section describes the requirements to use SAML 2.0 with Turbo Server.
 
-#### Identity Provider Account
+### Identity Provider Account
 
 You must have access to an identity provider (IdP) that supports the SAML 2.0 protocol and an account that has permission to create and configure an application with that IdP.
 
-#### Turbo Server Configuration
+### Turbo Server Configuration
 
 Single Sign-On requires all servers in the farm to use https in order to keep users data secure. Make sure SSL is enabled during installation or install SSL from the __Domain > Servers > Server__ page.
 
 Turbo Server must be configured to use SAML 2.0 authentication from the __Users > Authentication Method__ page using information provided by the IdP.
 
-#### Identity Provider Subject and Attributes
+### Identity Provider Subject and Attributes
 
 During the authentication process, SAML 2.0 obtains a response from the identity provider containing information about the user. This information is used by Turbo Server to create or log into the associated Turbo account.
 
 The following section describes the required subject fields and attributes that are expected to be returned in the SAML response.
 
-##### Subject Fields
+#### Subject Fields
 
 The following subject fields are expected to be returned in the SAML response (under `saml:Subject`):
 
@@ -34,7 +34,7 @@ Turbo Server accepts any name ID format the conforms to the following username r
 * Maximum of 256 characters
 * Does not contain any of the following characters: `\/:*?"<>|`
 
-##### Attributes
+#### Attributes
 
 The following attributes (aka claims) are expected to be returned in the SAML response (under `saml:AttributeStatement`):
 
@@ -47,7 +47,7 @@ The following attributes (aka claims) are expected to be returned in the SAML re
 
 If the attribute names provided by your identity provider differ, Turbo Server offers an __Attribute Mapping__ feature. This feature allows Turbo Server to effectively map arbitrary attribute names to the corresponding Turbo user account fields, ensuring flexible and accurate data integration.
 
-#### Service Provider Signing Certificate
+### Service Provider Signing Certificate
 
 Turbo Server uses an SP Signing Certificate (aka Request Signing Certificate) and its associated private key to sign SAML authentication requests sent during login. This signature allows the identity provider to verify that the request originates from the expected service provider.
 
@@ -63,19 +63,19 @@ This command will create a new self-signed X.509 certificate (cert.pem) and priv
 
 For detailed instructions on this configuration process, please refer to the documentation specific to your identity provider.
 
-#### Identity Provider Signing Certificate
+### Identity Provider Signing Certificate
 
 Turbo Server uses the Identity Provider Signing Certificate (aka Signing Certificate) to verify that the SAML response received during login is signed by the expected identity provider. 
 
 This certificate file is provided by your identity provider and must be manually installed on the Hub server. Please refer to the provider-specific documentation for more information on locating and installing this certificate.
 
-### How Turbo Users and Groups are created
+## How Turbo Users and Groups are created
 
 When SSO is configured, a Turbo Server user will be created on a successful login if the user does not already exist. Users are created using the name identifier, given name, and sur name attributes and claims as specified in the [Identity Provider Attributes and Claims](#prerequisites-identity-provider-subject-and-attributes) section. User groups received in the groups claim will be created and the user assigned to them on each login. Users must be manually removed from the Turbo Server if removed in the external identity provider.
 
 Automatically created user groups from SSO will be created in the Single Sign-On directory service. The user's group membership will be automatically removed from the group if removed in the external identity provider on the next sucessful login. If the SSO user is manually added to an internal group, then the user's group membership must also be manually removed.
 
-### Supported Identity Providers
+## Supported Identity Providers
 
 Turbo Server supports Single Sign-On against any identity provider that supports SAML 2.0 authentication. Setup guides are available for the following identity providers:
 
@@ -86,11 +86,11 @@ Turbo Server supports Single Sign-On against any identity provider that supports
 
 For other identity providers, please refer to the identity provider documentation for information on configuring the subject and attributes listed in the [Identity Provider Attributes and Claims](#prerequisites-identity-provider-attibutes-and-claims) section, as well as how to obtain the fields required by the Turbo Server user authentication form.
 
-### Troubleshooting
+## Troubleshooting
 
 If an error is reported by the Turbo Server after logging into the external identity provider, the first place to check will be the [Hub logs](/server/troubleshooting/hub-server.html#locating-log-files).
 
-#### Failed to validate SAML token
+### Failed to validate SAML token
 
 Error log located in the [API log file](/server/troubleshooting/hub-server.html#locating-log-files):
 ```
@@ -110,6 +110,6 @@ The Hub server failed to validate the SAML token. This can be caused by a missin
 
 The Hub server did not recognize the token issuer identified by the Signing Certificate Thumbprint and Signing Certificate Common Name. This can be caused by missing or invalid Signing Certificate values. Please ensure that the correct values were configured in Turbo Server, and that the Signing Certificate has been added to the certificate store.
 
-#### Microsoft Azure AD with SAML group names appear as GUIDs
+### Microsoft Azure AD with SAML group names appear as GUIDs
 
 Group claims using `sAMAccountName` are not supported for groups created in Azure AD or Office 365. Applications configured in Azure AD to synchronize on-premises group attributes will receive these attributes for synced groups only. If group names are utilized for Turbo workspace application permissions, consider configuring [Azure AD with OpenID](/server/authentication/azuread-openid-connect). Alternatively, applications can use the group ID string as the permission.

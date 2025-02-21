@@ -4,7 +4,7 @@ Configuring Turbo Server with Moodle allows students and instructors to access t
 
 Turbo Server uses the open Learning Tools Interoperability (LTI) specification (version 1.0) to communicate with Moodle.
 
-### Getting Started
+## Getting Started
 
 Download Moodle from [moodle.org](https://moodle.org/) then follow the [installation instructions](https://docs.moodle.org/310/en/Installation).
 
@@ -16,7 +16,7 @@ Moodle requires the following to connect to Turbo Server Application:
 
 The values can be obtained from the Turbo Server administrator site. Navigate to **General > Learning Management System**.
 
-### Adding Turbo to Moodle
+## Adding Turbo to Moodle
 
 Instructors will be able to add Turbo to their courses with a few clicks. Administrator privileges within Moodle are required.
 
@@ -38,7 +38,7 @@ Fill in the following fields:
 
 ![Moodle AdminConfig](/images/moodle_adminconfig.png)
 
-### Activate Turbo on a Course
+## Activate Turbo on a Course
 
 Turbo must already be configured by a Moodle administrator. Instructor level privileges are required for the course.
 
@@ -52,7 +52,7 @@ Under General, select Turbo.net from the **Preconfigured tool** dropdown. Set **
 
 Click **Save** and return to course.
 
-### Configure Turbo for a specific Course
+## Configure Turbo for a specific Course
 
 If Turbo has not been configured site-wide by a Moodle administrator, instructors can configure Turbo specifically for their course. Instructor level privileges are required for the course.
 

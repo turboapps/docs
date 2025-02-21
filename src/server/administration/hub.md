@@ -4,7 +4,7 @@
 
 All application repositories on Turbo Server are managed from the **Images** page of the Administration Site.
 
-### Managing Repositories
+## Managing Repositories
 
 ![Server admin edit repository](/images/admin-repos-edit.png)
 
@@ -18,7 +18,7 @@ The **Pre-cache** setting specifies whether to cache the repository on applicati
 
 The **Federation** section allows enabling or disabling repository federation from a configured federation source. The selected federation source's settings will be used to determine the federation behavior. If you wish to create a new federation source, please see [Federation](/server/administration/hub.html#federation).
 
-### Importing Repositories
+## Importing Repositories
 
 ![Server admin import repository](/images/import-repo.png)
 
@@ -37,7 +37,7 @@ After setting the properties, click **Import**. The import may take a few minute
 
 Imported repositories will enable federation from the import source URL by default. Federation may be disabled from the repository settings page.
 
-### Managing Web Applications
+## Managing Web Applications
 
 ![web apps](/images/web_apps.png)
 
@@ -50,7 +50,7 @@ The web application edit page has the following options available. These setting
 - **Open In New Tab**: Whether the URL will be opened in a new tab.
 - **Icon**: The icon that will be displayed to end-users on the Portal dashboard.
 
-### Federation
+## Federation
 
 The **Federation** page allows you to configure repository federation sources, which can be selected during repository import or applied to individual repositories to reduce setup time and keep repositories in sync across domains. Repositories that have federation enabled will periodically check the source domain for updates and pull any changes.
 

@@ -19,7 +19,7 @@ The following network ports are open by default once the Turbo Server AMI is dep
 
 Note: While there are no extra charges to deploy the Turbo Server AMI, the Azure subscription will still be charged for any usage.
 
-### Hub and Portal Role Deployment
+## Hub and Portal Role Deployment
 
 To deploy a Turbo Server AMI that includes the hub and portal roles go to [portal.azure.com](https://portal.azure.com "Azure Portal"), click **Create a resource**, search for "Turbo Server", select a desired plan which includes the hub and portal roles, and click **Create**.
 
@@ -44,7 +44,7 @@ Click **Create** when all the required information is added to the deployment an
 
 It takes about 10 minutes to complete the deployment. When it is complete, go to the administrative URL of the deployed Turbo Server AMI. This is the **DNS name** from the **Overview** page of the deployed Turbo Server AMI VM in the Azure Portal.
 
-#### Configure administrative user
+### Configure administrative user
 
 Note: This step is not needed if deploying version 21.7+ of the Turbo Server AMIs.
 
@@ -74,7 +74,7 @@ This will add the administrator user to the **Server Administrators** group. Thi
 
 The required post deployment steps for the hub and portal roles are complete if the sign-in was successful. However, for security reasons, it is strongly recommended to switch the portal to HTTPS. Please check the [Managing a Server](/server/administration/domain.html#managing-a-server) section to setup HTTPS.
 
-### App Role Deployment
+## App Role Deployment
 
 To deploy a Turbo Server App AMI go to [portal.azure.com](https://portal.azure.com "Azure Portal"), click **Create a resource**, search for "Turbo Server", select the App plan, and click **Create**.
 

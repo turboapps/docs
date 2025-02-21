@@ -18,7 +18,7 @@ The default path of the Administration Site is: `/admin`, and consists of the fo
 
 - **General**: This page contains a summary of your Turbo Server license, and information and options for configuring Turbo Server. For more information refer to [General](/server/administration/general).
 
-### Browser Support
+## Browser Support
 
 The Turbo Server administration site supports the latest versions of modern browsers. For the best experience, we recommend using one of the following browsers:
 

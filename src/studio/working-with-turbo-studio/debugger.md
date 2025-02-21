@@ -2,7 +2,7 @@
 
 The Turbo Studio Debugger is a tool to aid in virtual machine log analysis. It contains many tools to filter and compare logs.
 
-### Getting Started
+## Getting Started
 
 ![Debugger Startup](/images/debugger-startup.png)
 
@@ -18,7 +18,7 @@ After the session logs are loaded, a tree view of the processes in the session w
 
 After the process log is loaded, the full log is shown with options to filter and resolve the timestamps.
 
-### Options
+## Options
 
 ![Debugger Options](/images/debuggeroptions.png)
 
@@ -32,7 +32,7 @@ There are several options that can be configured for the Turbo Studio Debugger.
 
 **Save Workspace** sets whether the current tabs are maintained between debugger sessions. Values include **Never**, **Always**, and **Ask**. The default is **Never**.
 
-### Session Log View
+## Session Log View
 
 ![Session Log Tree](/images/session-log-tree.png)
 
@@ -58,7 +58,7 @@ Right-clicking on a node in the tree view will show a menu of additional functio
 
 **Refresh** will reload the session log folder.
 
-### Process Log View
+## Process Log View
 
 ![Process Log](/images/process-log.png)
 
@@ -70,7 +70,7 @@ Selecting a line of the log will display a parsed view of the trace at the botto
 
 In this example, the trace for **NtOpenFile** is shown. The access flags, **0x100020** are shown as FILE_EXECUTE, FILE_TRAVERSE, and SYNCHRONIZE. These are constants defined in the Windows SDK that are documented on the [Microsoft Developer Network](https://docs.microsoft.com/) website. When hovering the mouse over these constants, their values are shown.
 
-#### Filters
+### Filters
 
 ![Process Log Filters](/images/process-log-filters.png)
 
@@ -104,7 +104,7 @@ Relative time can be useful when comparing to logs in other sessions or when inv
 
 ![Process Log Relative Time](/images/process-log-relative-time.png)
 
-### Process Log Reports
+## Process Log Reports
 
 If a process log is being displayed or if a log is selected in the session log tree, the **Create Reports** button is available to generate reports on that log.
 
@@ -124,7 +124,7 @@ Three reports are available: path inventory, error inventory, and DLL inventory.
 
 ![Process Log DLL Inventory](/images/process-log-dll-inventory.png)
 
-### Session Log Comparison View
+## Session Log Comparison View
 
 Often the easiest way to discover the source of a problem is by comparing two session log sets with each other. If one session log set is from a working environment and another is from a failing environment, the logs can be compared to see how they differ to bring to light the reason for difference in behavior. Another way to compare session logs is to copy the logs from before and after errant behavior occurs. This makes it possible to see what happened in between the two events to narrow down the scope of logs that require analysis.
 
@@ -136,11 +136,11 @@ This will bring up a new view with the session log trees side-by-side and show a
 
 ![Session Log Compare View](/images/session-log-compare-view.png)
 
-### Session Log Comparison Tools
+## Session Log Comparison Tools
 
 When a session log comparison view is selected, many new ribbon menu options become available: **View Differences**, **Inventory Report**, and **Create Delta Log**.
 
-#### View Differences
+### View Differences
 
 The **View Differences** menu shows a number of different ways to filter and compare two logs. These differences will be displayed in text comparison tool which is specified in the debugger options (default is using WinMerge from the turbo.net hub). In all cases the logs will be normalized to make them more comparable (lower cased, remove transient data such as process ID, thread ID, time stamps, memory addresses, user names and IDs, etc). Because of this normalization there will be a loss of information in the text compare tool that may need to be cross referenced with the original logs.
 
@@ -172,7 +172,7 @@ The **View Differences** menu shows a number of different ways to filter and com
 
 **Search** compares the search results from the two logs.
 
-#### Inventory Report
+### Inventory Report
 
 The **Inventory Comparison Report** can be used to quickly see relevant differences in how paths are accessed in two different logs. When the two log sets compared are from working and failing cases, this may be the most useful tool in quickly determining the source of a problem.
 
@@ -180,7 +180,7 @@ The **Inventory Comparison Report** can be used to quickly see relevant differen
 
 In the report, paths and their return codes are shown. The paths are sorted into buckets of "differences" (those where the paths are in both but have different return codes), "in both" (those where the paths and the return codes are the same in both), "in only left" (those paths that are only in the left log), and "in only right" (those paths that are only in the right log). For paths to DLL files, the comparison will also take into account their version if available. Focus should be in the section highlighting "differences" where one log has a success code and the other log has an error code. These can often be problematic and are worth analysis. These lines in the report will have an asterisk (\*) next to them.
 
-#### Create Delta Log
+### Create Delta Log
 
 A **Delta Log** is the log file that is produced by removing the traces that are shared in the two log files, leaving only traces for VM initialization and those that are only present in the later version of the log. This is only useful when comparing the same log file at two points in time, like before and after when an error occurs. This can be an incredibly useful tool in order to narrow the scope of the log that requires analysis. To further the utility, two delta logs (one from working set and one from failing set) can be compared with the other comparison tools. This can produce the easiest to analyze logs.
 
@@ -188,7 +188,7 @@ A **Delta Log** is the log file that is produced by removing the traces that are
 
 When a delta log is created, it will be placed in the session log folder where the largest version of the log file resides. It will appear in the tree view as a child of the log from which it was produced.
 
-### Log Tools
+## Log Tools
 
 There are several tools which are specific to logs. They can be found in the ribbon menu: **Lookup Flags** and **Resources**.
 
@@ -200,13 +200,13 @@ The **Resources** menu has a collection of links to Microsoft documentation that
 
 ![Log Resources](/images/tools-resources.png)
 
-### General Tools
+## General Tools
 
 In the **Tools** ribbon menu, there are some additional tools which can be useful depending on the situation.
 
 ![Tools](/images/tools.png)
 
-#### Compare
+### Compare
 
 The **Compare** tool is a simple tool to compare two sets of text. The tool will normalize the text depending on how the text is to be interpreted. It is then passed to the configured text compare tool.
 
@@ -220,24 +220,24 @@ The **Compare** tool is a simple tool to compare two sets of text. The tool will
 
 **As Process Monitor XML** is used to compare two XML files which were produced from Process Monitor (procmon) traces. This can be useful if trying to compare behavior between a native application and a virtual application since a native application will not have vm logs).
 
-#### CLSID Lookup
+### CLSID Lookup
 
 The **CLSID Lookup** tool is used to quickly see what a CLSID is configured to be on the current system. When the CLSID is entered, press the **Find** button. The description field will be shown and all occurrences of the CLSID in the registry will be displayed. Press the **Open Key** button to open the registry editor to the selected key.
 
 ![CLSID Lookup Tool](/images/tool-clsid-lookup.png)
 
-#### Thread Security Descriptor
+### Thread Security Descriptor
 
 The **Thread Security Descriptor** tool will look up the security descriptor of the specified thread object (not the thread user's security descriptor) and display the Security Descriptor Definition Language (SDDL) string. The string can be copied from the message box with CTRL+C.
 
 ![Thread Security Descriptor Tool](/images/tools-thread-sd.png)
 
-#### File and Folder Attributes
+### File and Folder Attributes
 
 The **File Attributes** and **Folder Attributes** tools show the file system attributes of the file or folder selected. For more information on file system attributes, see [File System Attributes](https://docs.microsoft.com/en-us/windows/win32/fileio/file-attribute-constants).
 
 ![File Attributes Tool](/images/tool-file-attrib.png)
 
-#### Apply Configuration
+### Apply Configuration
 
 The **Apply Configuration** tool will copy the contents of the specified configuration to the host machine, including both registry and filesystem. This can be useful for troubleshooting issues where the installation media is not available. **This operation cannot be undone** so it is strongly encouraged to only use this on a virtual machine that can be restored and not on desktop system.
