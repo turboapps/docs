@@ -53,7 +53,7 @@ Application SVMs can also be pulled from Turbo.net Hub.
 	turbo import svm -n=mozilla/firefox-esr \\networkshare\turbo\packages\mozilla_firefox-esr\mozilla_firefox-esr.svm --all-users
 	```
 	
-	![Citrix installi start menu](/images/turbo-pull-from-hub.png)
+	![Citrix installi start menu](/images/citrix13.png)
 	
 2.	Install the images using the `turbo installi` command
 	```
