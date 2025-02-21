@@ -6,7 +6,7 @@ The **Reports** page provides pre-configured, detailed analytic reports, broken-
 
 Note that if the server uses Anonymous login mode, the user name in the reports will display the Windows login profile name. This applies even for logged in users with cached credentials.
 
-### Administration Reports
+## Administration Reports
 
 - **Events**: Presents a record of all Turbo Server alerts. Common events include errors and administrative changes.
 - **Application Sessions**: Presents a detailed record of each application session.

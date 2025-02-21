@@ -13,7 +13,7 @@ Usage: gc-shortcuts <options>
       --wait-after-exit      Leave session open after it exits
 ```
 
-### Understanding Orphaned Shortcuts
+## Understanding Orphaned Shortcuts
 
 Shortcuts can become orphaned in scenarios like:
 
@@ -31,13 +31,13 @@ Shortcuts can become orphaned in scenarios like:
    - When applications are removed from a subscription
    - Profile sync may restore shortcuts for removed applications
 
-### Options
+## Options
 
 - `--all-users`: Clean up shortcuts for all users on the system
 - `--trial`: Preview which shortcuts would be removed without actually deleting them
 - `--format`: Output results in JSON format
 
-### Examples
+## Examples
 
 ```
 # Remove orphaned shortcuts for current user
@@ -53,7 +53,7 @@ Shortcuts can become orphaned in scenarios like:
 > turbo gc-shortcuts --format=json
 ```
 
-### Usage with Auto-registration
+## Usage with Auto-registration
 
 When using auto-registration in environments with profile synchronization, the gc-shortcuts command helps maintain a clean desktop by removing outdated shortcuts. This is particularly useful in:
 - Virtual desktop environments

@@ -2,7 +2,7 @@
 
 This section describes advanced topics you may encounter when implementing Turbo Server.
 
-### Extending Portal request timeouts
+## Extending Portal request timeouts
 
 The Portal has a global request timeout that aborts HTTP requests after a certain amount of time. In Turbo Server 21.9.3284.5 and earlier, the Portal was configured with a default 30s request timeout. Future versions of the Portal are configured with a default 120s request timoeut.
 
@@ -20,7 +20,7 @@ If you wish to extend this default request timeout in Turbo Server 21.9.3284.5 a
 
 **WARNING:** This change will be lost when upgrading your Turbo Server. Please reapply the change after upgrade.
 
-### Override Single Sign-On Authentication Method
+## Override Single Sign-On Authentication Method
 
 Internal Turbo Servers users may sign in to a Portal configured to use the single sign-on authentication method by appending the **?mode=forms** URL parameter to the login page:
 
@@ -30,7 +30,7 @@ http://my-turbo-server/login?mode=forms
 
 This override can be used when testing and troubleshooting the Turbo Server configuration.
 
-### Locale Settings
+## Locale Settings
 
 Turbo Server uses the service user's language and region settings to format user-facing dates, times, and other locale-sensitive data.
 
@@ -41,7 +41,7 @@ To update your locale settings:
 3. Open the **Region** control panel and select your desired **Format**.
 4. Restart the Turbo Server service to apply your changes.
 
-### Change the Turbo Server Service User
+## Change the Turbo Server Service User
 
 The Turbo Server service user is specified during the initial Turbo Server install.
 
@@ -65,7 +65,7 @@ The service user must also be a member of the **Performance Monitor Users** grou
 
 Finally restart the Turbo Server service for the changes to take effect.
 
-### Hide System Drives on Application Servers for Cloud Launches
+## Hide System Drives on Application Servers for Cloud Launches
 
 Administrators can hide the application server's system drives to prevent users from accessing them when launching applications using the Run in Cloud launch modes by configuring the [Drive Visibility setting in the Workspace Application Settings](/server/administration/workspaces.html#workspace-applications).
 

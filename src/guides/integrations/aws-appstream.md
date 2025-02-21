@@ -2,13 +2,22 @@
 
 Turbo supports deploying applications to [Amazon AppStream 2.0](https://aws.amazon.com/appstream2/). AppStream 2.0 provides cloud-based Windows desktops hosted in the AWS cloud.
 
+::: tip Prerequisites
+Before proceeding with this guide, ensure you have:
+- **AWS Account**: You need an active AWS account. If you don't have one, you can create it [here](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/)
+- **Turbo Hub Server**: Set up a Turbo Hub Server. For optimal performance, it should be in the same AWS Availability Zone as your AppStream 2.0 fleet
+- **Turbo Client VHD**: Download the Turbo Client VHD from the [Turbo Downloads page](https://turbo.net/download)
+:::
+
+## AppStream 2.0 Deployment Models
+
 AppStream 2.0 offers two deployment models: **Always-On/On-Demand** and **Elastic** fleets.
 
 With Always-On and On-Demand fleets, one creates a golden image that includes the Turbo client configured as you would any other VDI environment. In this case, Turbo allows applications to be dynamically deployed without modifications to the base image.
 
 With Elastic fleets, it is necessary to have a way to rapidly provision applications on the clean base image provided by AWS as well as run applications that may not originally be designed for portable use or for execution in the specific Windows environment provided by AWS. Turbo containers address all of these issues in a single, efficient solution.
 
-### Before Starting
+## Before Starting
 
 Before starting the AppStream 2.0 setup, please note the following information:
 
@@ -19,9 +28,9 @@ The API key can be generated from the Turbo Server administration console under 
 
 It is strongly recommended that a dedicated API key be used for the AppStream 2.0 fleet.
 
-For the best performance, it is recommended that the Hub Server run in the same AWS Availability Zone as the AppStream 2.0 fleet. This also minimizes costs associated with data transfer. If necessary, the AWS Hub instance can federate respositories from an external Turbo Hub such as an on-premises Hub.
+For the best performance, it is recommended that the Hub Server run in the same AWS Availability Zone as the AppStream 2.0 fleet. This also minimizes costs associated with data transfer. If necessary, the AWS Hub instance can federate repositories from an external Turbo Hub such as an on-premises Hub.
 
-### AppStream 2.0 Setup
+## AppStream 2.0 Setup
 
 Turbo AppStream 2.0 setup consists of:
 
@@ -29,8 +38,8 @@ Turbo AppStream 2.0 setup consists of:
 2. Setting up the Turbo App Block
 3. Adding applications
 
-#### Stack and Fleet Setup
-Prior to configuring Turbo in AppStream, it is necessary to create an AppStream 2.0 **Stack** and **Fleet**. These provide the computate infrastructure that will run applications.
+### Stack and Fleet Setup
+Prior to configuring Turbo in AppStream, it is necessary to create an AppStream 2.0 **Stack** and **Fleet**. These provide the compute infrastructure that will run applications.
 
 Instructions on configuration can be found in the AWS AppStream 2.0 documentation:
 
@@ -38,7 +47,7 @@ Instructions on configuration can be found in the AWS AppStream 2.0 documentatio
 
 AppStream 2.0 includes the ability to use **Elastic Fleets** which are a very cost effective way to launch and stream Turbo applications to end users. Since elastic fleet VMs are provisioned from a ready-to-use pool of instances, provisioning is fast, yet customers are only charged for actual time used, exclusive of "standby" time. 
 
-#### App Block
+### App Block
 An AppStream **App Block** provides shared setup for a set of AppStream applications. When using Turbo to deploy on AppStream, a single App Block is used to deploy the Turbo Client, which can then run any Turbo-packaged application.
 
 For convenience, the Turbo Client is available in VHD form from the Turbo Downloads page:
@@ -67,7 +76,7 @@ The following App Block settings should be used:
 | Setup script executable       | ``C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe``       |
 | Setup script executable arguments       | ``C:\AppStream\AppBlocks\turbo-client\setup-turbo-client.ps1 https://your.hub.url``       |
 
-### Adding Applications
+## Adding Applications
 
 Once the App Block is configured, any Turbo application can be launched within the AppStream 2.0 interface.
 
@@ -84,5 +93,5 @@ The following Application settings should be used:
 
 Note that each application must be associated to a fleet before the application will be available.
 
-### Launching Applications
+## Launching Applications
 To test applications, select the applicable AppStream 2.0 Stack and press **Action** / **Create Streaming URL**. This creates a one-time URL that will launch AppStream as the specified user.

@@ -13,10 +13,11 @@ Usage: uninstalli <options> <image>
       --wait-after-exit      Leave process open after it exits
 ```
 
-### Uninstalling an Image that is Part of a Subscription
+## Uninstalling an Image that is Part of a Subscription
+
 An image removed by `uninstalli` will not be updated or reinstalled during the subscription update process. However, it can be reinstalled by running the `subscribe` command again.
 
-### Manually Removing Installation
+## Manually Removing Installation
 
 If an installi becomes corrupted and is unable to uninstall from Windows Settings or `uninstalli` command you may choose to manually remove the data and entries.
 

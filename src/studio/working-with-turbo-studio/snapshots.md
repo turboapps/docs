@@ -6,7 +6,7 @@ If possible, the **Setup Capture** method of container creation should be used i
 
 Note that **Snapshot** does not capture changes to drives other than the system drive.
 
-### Process
+## Process
 
 Snapshots use before and after images of the host machine to determine configuration:
 
@@ -28,7 +28,7 @@ Complete the following steps to use the Snapshot feature:
 
 6. Review the filesystem and registry entries:  Remove any files or settings not required for proper execution. Removing unused entries will reduce image size. Be careful to avoid removal of required resources, as it will cause your image to fail to function properly.
 
-### Capture Application Updates via Snapshot
+## Capture Application Updates via Snapshot
 
 Container updates can be captured within Turbo Studio via snapshots.
 
@@ -46,7 +46,7 @@ Complete the following steps to capture an update via snapshots:
 
 This process only captures changes between the original executable and installed updates. You can then apply the resulting SVM to the original virtual package.
 
-### Best Practices
+## Best Practices
 
 - Performing the snapshot on a clean machine ensures that all dependencies are installed by the application setup. Installing on a machine with existing components can inadvertently include dependencies in the before snapshot and exclude them from the final output.
 

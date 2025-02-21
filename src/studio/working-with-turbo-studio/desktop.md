@@ -4,7 +4,7 @@ A container image can be configured for integration into your desktop environmen
 
 If the configuration was created using **Setup Capture** or **Snapshot** then shortcuts and file associations will automatically be defined from the values that were discovered.
 
-### MSI Configuration
+## MSI Configuration
 
 ![Turbo Studio Desktop MSI Settings](/images/msi.png)
 
@@ -19,7 +19,7 @@ The **MSI** panel allows configuration of Microsoft Installer output files. This
 - **Allow side-by-side versions of the same application** will append to the installation record, shortcuts, and file associations that were created with previous versions of the MSI. The **Product Version** field must be updated for this to be applied.
 - **Extended Properties** specifies additional property values that are displayed in the installation record.
 
-### Shortcuts
+## Shortcuts
 
 ![Turbo Studio Desktop Shortcuts](/images/shortcuts.png)
 
@@ -33,7 +33,7 @@ Defines that shortcuts that are created when the container is installed to a dev
 - **Description** specifies the description of the shortcut that is displayed on hover.
 - **Browse** button allows the selection of an icon file to be assigned.
 
-### ProgIDs
+## ProgIDs
 
 ![Turbo Studio Desktop ProgIDs](/images/progid.png)
 
@@ -43,7 +43,7 @@ A ProgID (short for PROgrammatic IDentifier) is the mechanism in Microsoft Windo
 - **Description** specifies the friendly name of the ProgID (ex: "Text Document").
 - **Icon...** assigns the associated icon file.
 
-### Verbs
+## Verbs
 
 ![Turbo Studio Desktop Verbs](/images/verb.png)
 
@@ -56,7 +56,7 @@ A ProgID (short for PROgrammatic IDentifier) is the mechanism in Microsoft Windo
 - **Target** is the application from the startup file list that is executed.
 - **Arguments** is the additional parameters to pass to the target application. The "%1" token is replaced by the path to the file being acted upon. Take care to quote this token appropriately so that paths that contain spaces will be handled correctly.
 
-### Extensions
+## Extensions
 
 ![Turbo Studio Desktop File Extensions](/images/extension.png)
 
@@ -66,7 +66,7 @@ The **Extensions** list defines file types and their associated ProgIDs.
 - **ProgID** specifies the name of the ProgID that was defined with associated verbs to act on the file type.
 - **MIME Type** specifies the MIME type label to apply to the file extension. This field is optional.
 
-### MSI Example
+## MSI Example
 
 Here we will show the steps required to configure a simple container to be deployed via MSI with shortcuts and file associations.
 

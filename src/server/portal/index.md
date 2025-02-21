@@ -2,7 +2,7 @@
 
 The Turbo Server Portal is a web portal where users can log in to view and launch applications. Applications can be streamed from the Turbo Application Server using the Turbo Clients or HTML5 client, or ran locally using Turbo for PC. Additionally, the portal provides API services allowing other client types to interact with the Turbo environment.
 
-### Logging In
+## Logging In
 
 Portal user authentication is determined by the **Authentication Type** configured in the Turbo Server administration site.
 
@@ -10,7 +10,7 @@ If the server has an Authentication Type that requires users to log in with a us
 
 If you are a user and need to log in but do not know your username and password, contact your Administrator to retrieve your credentials.
 
-### Installing the Turbo Client
+## Installing the Turbo Client
 
 For the best experience, it is recommended to install and use one of the native Turbo.net clients on your device. Turbo.net provides clients for all major desktop and mobile platforms.
 
@@ -23,7 +23,7 @@ If you do not use one of Turbo.net client applications, you can still use Turbo 
 
 If you are on a device issued by your organization, your system administrator may already have installed the necessary Turbo Client on your device.
 
-### Browser Support
+## Browser Support
 
 The Turbo Portal supports the latest versions of modern browsers. For the best experience, we recommend using one of the following browsers:
 

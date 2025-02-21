@@ -18,11 +18,11 @@ Security issues are treated as major defects and may be immediately patched in t
 
 Dependencies included as part of the Turbo Server installation will also be patched and upgraded when appropriate. End users does not need to worry about patching as they are upgraded during installation or upgrade. The SQL Server instance used in conjunction with Turbo Server should be patched by the administrator, and not by Turbo. The operating system should also be patched by the responsible party of the machine.
 
-# Turbo Client Releases
+## Turbo Client Releases
 
 Turbo Client releases follow the server release schedule. Turbo Clients will automatically upgrade to the latest release when installed on end user devices using the standard software upgrade process for the device's operating system.
 
-# Turbo VM Releases
+## Turbo VM Releases
 
 Turbo VM updates are published regularly to the [Turbo.net Hub](https://app.turbo.net/run-global/xvm/releases) to provide bug fixes, new features, and compatbility support for new Windows releases.
 

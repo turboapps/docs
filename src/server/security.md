@@ -4,7 +4,7 @@ Application servers provide end users the ability to run Turbo applications remo
 
 AppLocker can be used to prevent malicious applications from executing. Please refer to the [documentation](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview). You may also choose any off the shelf software that can perform application whitelisting. 
 
-### Network
+## Network
 
 Application server users may attempt to probe the network using tools that can be run in the Turbo virtual runtime. Ensure that application servers do not have network access to resources that are not intended for the target end user. 
 
@@ -12,7 +12,7 @@ In addition, a user could attempt to download and run Wireshark in the virtual r
 
 If the application server is isolated in their own virtual network, make sure to configure two way https access to the Hub server and SQL server.
 
-#### Securing Remote Access
+### Securing Remote Access
 
 Turbo uses temporary profiles for running applications on application servers. Temporary profiles are anonymized local machine accounts with randomized passwords that do not require domain authentication, and so application servers are not required to join the domain and will keep the domain secure by design. NTLM is the default authentication method for local machine accounts connecting via RDS.
 
@@ -55,7 +55,7 @@ If require NLA is not set, EnableCredSSPSupport is true because modern operating
 
 *If you do not configure this policy setting, the local setting on the target computer will be enforced. On Windows Server 2012 and Windows 8, Network Level Authentication is enforced by default.*
 
-### Securing Execution using AppLocker
+## Securing Execution using AppLocker
 
 AppLocker can be used to enforce that only Turbo runs on the application server. The following configuration allows only the Turbo Client to execute on the application server.
 

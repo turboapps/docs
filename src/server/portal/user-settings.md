@@ -4,7 +4,7 @@ The **Settings** pages allows users to manage a variety of user-related settings
 
 This page is accessible from the Portal via the **Settings** link in the user dropdown.
 
-### Storage
+## Storage
 
 ![Storage](/images/storage.png)
 
@@ -12,7 +12,7 @@ The **Storage** page allows users to manage their cloud storage connections. Onc
 
 For more information on connecting storage services and accessing files, see the [End User Guide](/server/cloud-storage/end-user.html#end-user)
 
-### Authentication
+## Authentication
 
 ![Authentication](/images/authentication.png)
 

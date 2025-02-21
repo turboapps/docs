@@ -2,7 +2,7 @@
 
 There are several ways to control how virtual applications can be run on your machine.
 
-### Trusted Sources
+## Trusted Sources
 
 Trusted sources control which hub locations are allowed to have virtual applications be started from web locations. By default, only https://turbo.net is trusted. A new hub can be added to the list with `turbo config --add-trusted-source=[hub-authority]`.
 
@@ -43,7 +43,7 @@ Blocked Hub Sources:
   dangerous-hub.net
 ```
 
-### Local Resource Requests
+## Local Resource Requests
 
 Virtual applications which are executed remotely may require access to local resources (such as local network). If the application requires access but is not allowed globally then a security dialog will be shown to request permission.
 

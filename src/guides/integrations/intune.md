@@ -10,10 +10,10 @@ Microsoft Intune provides cloud-based device management and application deployme
 :::
 
 ::: tip Prerequisites
-- Microsoft Intune subscription
-- Administrative access to Intune portal
-- Turbo account or organization subscription
-- MSI installer for Turbo Client (for PC deployment)
+Before proceeding with this guide, ensure you have:
+- **Turbo Hub Server**: Set up a Turbo Hub Server. For optimal performance, it should be in the same region as your Intune-managed devices.
+- **Turbo Client MSI**: The MSI installer for Turbo Client (for PC deployment). You can download it from the [Turbo Downloads page](https://turbo.net/download)
+- **Azure Active Directory**: Your organization should be set up with Azure Active Directory for user and device management.
 :::
 
 ## Windows PC Deployment

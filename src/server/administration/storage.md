@@ -10,13 +10,13 @@ Turbo Server currently supports the following storage providers:
 - [Filr](/server/cloud-storage/filr)
 - [File Share (SMB)](/server/cloud-storage/file-share)
 
-### Providers
+## Providers
 
 ![storage-providers](/images/storage-providers.png)
 
 The **Providers** page allows administrators to view and manage integrations with a variety of third-party services as well as local network storage. Administrators or end-users may then create connections using these integrations to login to their cloud storage accounts and access their files while running applications.
 
-#### Provider Settings
+### Provider Settings
 
 - **Storage Type**: The storage type you are integrating with Turbo Server. Instructions for setting up a Storage Provider connection are available for:
 
@@ -35,7 +35,7 @@ The **Providers** page allows administrators to view and manage integrations wit
 - **Supported Account Types**: The account types that are allowed to login and access their files with this storage integration. Multitenant allows users from any tenant to login, while Single tenant restricts users to a single tenant.
 - **Test**: Storage provider configurations may be tested before committing any changes by clicking on the **Test** button. Common errors such as invalid or missing credentials or application registration misconfigurations will be reported during the testing process.
 
-### Connections
+## Connections
 
 ![Global Storage Connections](/images/global-storage-connections.png)
 
@@ -43,13 +43,13 @@ The **Connections** page allows administrators to view and manage global connect
 
 Users with access to these connections will see the files on their Portal dashboard as well as while launching applications with Turbo Drive.
 
-#### Connection Settings
+### Connection Settings
 
 - **Storage Provider**: The storage provider integration to which the connection will be created. Only storage providers set to "Global" connection mode will be listed.
 - **Permission**: The file permissions granted to end users using this connection. Currently supports "Read-Only" and "Read, Write".
 - **Groups**: The user groups that will have access to this connection
 
-#### OneDrive Support
+### OneDrive Support
 
 When creating a OneDrive connection, it is important to note that OneDrive uses additive scopes. This means that any scopes you have previously consented to will be applied to all future connections. For example, creating a "Read, Write" connection and then a "Read-Only" connection will grant "Read, Write" access to both connections.
 
@@ -59,6 +59,6 @@ During the connection process, you will encounter a consent screen. Please caref
 
 If you do not see the consent screen, it is possible that the scope has been implicitly granted by an administrator. To address this, follow the [OneDrive setup guide](/server/cloud-storage/onedrive) and ensure that admin consent is not granted.
 
-#### Dropbox Support
+### Dropbox Support
 
 Creating a Dropbox connection with file permission scopes requires your Dropbox application registration to be a "Scoped Application". If you Dropbox application registration was created before Dropbox introduced scopes, then you may need to update your application following their [migration guide](https://dropbox.tech/developers/migrating-app-permissions-and-access-tokens).

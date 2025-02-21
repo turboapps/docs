@@ -8,7 +8,7 @@ In addition, the **ip** protocol is supported which applies routing to _all_ IP-
 
 It is also possible to map a container port to a random high host port for security purposes or to avoid binding conflicts. This port can subsequently be queried with the **turbo netstat** command. To map container TCP port 4321 to a high random host port, use the flag `--route-add=tcp://4321:0`. The **0** here represents a randomly assigned high port.
 
-### Sample: PuTTY Whitelisting
+## Sample: PuTTY Whitelisting
 
 PuTTY is a popular free Telnet client for Windows. To create a PuTTY container with all outbound access blocked except to IP address 10.0.0.34:
 
@@ -36,7 +36,7 @@ To disallow connection to a set of specific set of IP addresses or ranges (“bl
 
 The **--route-add** and **--route-block** command flags are also supported within the **commit** command, so it is easy to save custom network stacks into deployable images.
 
-### Host Name-based IP Restrictions
+## Host Name-based IP Restrictions
 
 This syntax also allows specifying host names instead of IP addresses. Often using a human-readable domain name is easier to setup, more readable, and is automatically maintained across IP address changes. When a host name is specified, it is treated as if its IP address had been specified. Cases where multiple IP addresses are resolved — including IPv6 — are handled properly. Note however that you cannot specify a host name on the right side of a route-add mapping since the result would be ambiguous if the host name resolved to multiple IP addresses.
 
@@ -58,7 +58,7 @@ Taking this a step further, to run a Chrome container disallowing access to the 
 > turbo new --route-block=ip://*.facebook.com chrome
 ```
 
-### Creating IP Routing Layers
+## Creating IP Routing Layers
 
 If you need to apply the same set of IP routing rules across multiple applications, it is inconvenient to repeat them each time you create a container. In this situation, you can create a layer containing the appropriate IP routing rules and apply it to all of the applicable containers.
 
@@ -88,7 +88,7 @@ These applications can in turn be committed to a new image that is ready for dep
 > turbo run firefox-restricted
 ```
 
-### IPv6 Routing
+## IPv6 Routing
 
 IPv6 address are also supported by this network syntax. The colons in IPv6 addresses causes conflicts with this syntax however. To solve this, IPv6 addresses in Turbo commands are enclosed in square brackets.
 
@@ -110,7 +110,7 @@ To redirect traffic from a specific IPv6 address to localhost:
 > turbo new putty --route-block=ip --route-add=ip://[2001:cdba::3257:9652]:[::1]
 ```
 
-### Routing Files
+## Routing Files
 
 While working with long routing lists (eg to block advertising or other undesired sites) it is inconvenient to add many **--route-block** and **--route-add** flags to command line or TurboScript file. To simplify this, we use the **--route-file** flag.
 
@@ -154,7 +154,7 @@ And can be included in a TurboScript build command:
 > turbo build turbo.me --route-file=routes.txt
 ```
 
-### Blocked Site Routing
+## Blocked Site Routing
 
 IP routing can also be used to reroute traffic from blocked sites to an internal network. As an example, we will reroute all traffic from **nytimes.com** to an internal containerized web server.
 
@@ -175,7 +175,7 @@ After typing nytimes.com in browser it shows our custom page, instead of origina
 
 ![Studio blocked sites](/images/network1.png)
 
-### Sample: Creating Single Site Browsers
+## Sample: Creating Single Site Browsers
 
 Turbo’s IP routing capabilities can be used to create custom browsers that allow access only to a specific site or set of sites. A simple solution was shown in previous articles, eg:
 

@@ -1,4 +1,4 @@
-### Configure Turbo Server Security
+# Configure Turbo Server Security
 
 This section explains how to manually configure Turbo Server's security settings on common Microsoft Windows platforms. These settings restrict external connections to the Turbo Server sites and services.
 

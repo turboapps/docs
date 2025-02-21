@@ -6,7 +6,7 @@ The chatbot is hidden by default. Once configured, a Chat tab will appear on the
 
 ![AI Chat](/images/dashboard-chat-light-mode.png)
 
-### Create an OpenAI API key
+## Create an OpenAI API key
 
 To create an OpenAI API key, first visit [OpenAI's official website](https://platform.openai.com/). If you do not already have an account, click **Sign Up** and complete the account creation process.
 
@@ -16,7 +16,7 @@ Optionally, you can create an OpenAI organization by clicking your name in the t
 
 You can generate an OpenAI API key for free and receive limited API tokens. However, for production usage you will need to set up billing with OpenAI.
 
-### Configure Turbo Server
+## Configure Turbo Server
 
 ![AI Integration](/images/integrations-ai.png)
 

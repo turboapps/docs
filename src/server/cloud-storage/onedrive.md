@@ -4,9 +4,9 @@ To allow users to connect their OneDrive accounts and access them while running 
 
 If you are using [Azure Active Directory with OpenID Connect](/server/authentication/azuread-openid-connect) Authentication, you may configure OneDrive to automatically connect on login by using the same application registration. See [Automatically Connect OneDrive](#setup-the-onedrive-application-update-an-existing-application)
 
-### Setup the OneDrive Application
+## Setup the OneDrive Application
 
-#### Create a new OneDrive Application
+### Create a new OneDrive Application
 
 The following section describes how to create a new OneDrive application that can be integrated with Turbo Server.
 
@@ -25,7 +25,7 @@ The following section describes how to create a new OneDrive application that ca
 
    ![onedrive-api-permissions](/images/onedrive-api-permissions.png)
 
-#### Update an Existing Application
+### Update an Existing Application
 
 The following section describes how to update an existing [Azure Active Directory with OpenID Connect](/server/authentication/azuread-openid-connect) application to automatically connect OneDrive when users login to the Portal using Single Sign-On.
 
@@ -42,7 +42,7 @@ The following section describes how to update an existing [Azure Active Director
 
    ![oidc-onedrive-permissions](/images/oidc-onedrive-permissions.png)
 
-### Configure Turbo Server
+## Configure Turbo Server
 
 Next, Turbo Server must be configured to use the newly created OneDrive application. Once configured, users may connect their OneDrive account from the portal settings.
 
@@ -54,7 +54,7 @@ Next, Turbo Server must be configured to use the newly created OneDrive applicat
 6. Select the **Supported account types** you selected when creating the application registration. If you selected single tenant, enter the OneDrive **Directory ID** into the corresponding **Directory ID** field.
 7. **Save** your settings. Setting changes may take a couple minutes to take affect.
 
-### Troubleshooting
+## Troubleshooting
 
 The following section contains solutions for issues with regards to setting up cloud storage.
 

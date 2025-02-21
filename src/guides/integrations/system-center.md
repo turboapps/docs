@@ -11,10 +11,10 @@ Microsoft System Center Configuration Manager (SCCM) enables deployment of Turbo
 :::
 
 ::: tip Prerequisites
-- SCCM environment
-- Administrative access to SCCM console
-- Network file share (for SVM deployment)
-- Turbo Client installer
+Before proceeding with this guide, ensure you have:
+- **Turbo Hub Server**: Set up a Turbo Hub Server. For optimal performance, it should be in the same region as your SCCM-managed devices.
+- **Turbo Client Installer**: The installer for Turbo Client. You can download it from [https://turbo.net/download](https://turbo.net/download).
+- **SCCM Environment**: A functioning System Center Configuration Manager environment.
 :::
 
 ## Deployment Options

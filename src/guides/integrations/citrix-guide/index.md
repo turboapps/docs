@@ -16,7 +16,6 @@ Turbo enables rapid deployment of virtualized applications on Citrix Virtual App
 ::: tip Prerequisites
 - Citrix Virtual Apps and Desktops environment
 - Administrative access to Citrix servers
-
 :::
 
 ## Deployment Options

@@ -6,7 +6,7 @@ A clean environment is one where the base OS is installed, then the latest updat
 
 It is recommended to use a virtual machine with snapshot capability for this purpose because it is easy to reset it back to a snapshot with a clean state in order to capture multiple applications quickly.
 
-#### Preparing a Clean System
+## Preparing a Clean System
 
 1. Install the Windows OS.  
 In most cases, this would be the latest build of Windows 10, unless your applications can only be installed on an earlier operating system such as Windows 7 or XP.  

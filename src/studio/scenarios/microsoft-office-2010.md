@@ -4,7 +4,7 @@ Microsoft Office 2010 is commonly used with legacy plugins or line of business a
 
 Fortunately it is possible to run Office 2010 applications inside a Turbo container allowing them to be isolated from existing installations. Below are the steps required to build your own Office 2010 image.
 
-### Building
+## Building
 
 In order to make an Office 2010 build, you will need to use Turbo Studio to perform a snapshot. You will need a **clean** machine or VM to do this on (no other applications installed, Office not previously installed). For maximum compatibility it is recommended to use a Windows 7 x64 snapshot machine and Office 2010 x86 installer.
 
@@ -36,6 +36,6 @@ After the snapshot is complete, the **Microsoft Office Snapshot** wizard will pr
 
 Set the **Project Type** to **Standalone/ISV Application (EXE)**, save the configuration, and build.
 
-### Testing
+## Testing
 
 To test your Office 2010 build, copy the output .exe to a new machine. You will have to install the **Microsoft Office 2010 Deployment Kit for App-V** in the same manner as you did on the snapshot machine.

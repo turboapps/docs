@@ -4,7 +4,7 @@ To configure Turbo Server to authenticate against Google LDAP, add an [external 
 
 Refer to the [Google LDAP documentation](https://support.google.com/a/topic/9048334?hl=en&ref_topic=7556686) to set up the Google LDAP service for your Google Workspace.
 
-### Connection Details
+## Connection Details
 
 Google requires client side certificate to validate the connection over SSL. Obtain the client certificate and key files as described in the [Google LDAP documentation](https://support.google.com/a/answer/9100660?hl=en&ref_topic=9173976).
 

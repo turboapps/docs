@@ -50,7 +50,7 @@ ID            Name                Tag  Created                Size
 Image chocolatey-forked:1.0 was removed
 ```
 
-### Image Matching Behavior
+## Image Matching Behavior
 
 When specifying an image for removal, Turbo will attempt to match the image name against all versions in your local registry, including both tagged and untagged images. The matching behavior is as follows:
 
@@ -58,7 +58,7 @@ If no release is specified (e.g., `turbo rmi image-name`), it will match all rel
 If an empty release is specified (e.g., `turbo rmi image-name:`), it will match only untagged versions.
 If a specific release is specified (e.g., `turbo rmi image-name:1.0`), it will match only that specific release.
 
-### Examples
+## Examples
 
 Remove a specific tagged version of an image
 ```
@@ -109,6 +109,6 @@ ID            Name                Tag  Created                Size
 Image chocolatey-forked:1.0 was removed
 ```
 
-### JSON output
+## JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain either an `images` array with information about removed images or an `error` object if command failed.

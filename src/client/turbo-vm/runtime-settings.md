@@ -2,10 +2,28 @@
 
 The behaviour of containers and images can be modified by changing VM settings at runtime.
 
-Effect the settings below using the `--enable=VALUE` or `--disable=VALUE` flags with the `turbo run` or `turbo build` command. For standalone executables, use the `/XEnable=VALUE` and `/XDisable=VALUE` flags.
+For Turbo Client launches via the `turbo run`, `new`, `try`, or `build` commands, use the `--enable=VALUE` or `--disable=VALUE` flags with the settings below.
 
-    # Example
-    turbo run --enable=IsolateWindowsClasses nodejs cmd
+For standalone executables, use the `/XEnable=VALUE` and `/XDisable=VALUE` flags.
+
+## Examples
+
+Turbo Client launches use the `--enable` or `--disable` flag to enable or disable a setting.
+```
+turbo run --enable=IsolateWindowsClasses nodejs cmd
+```
+
+For client launches, multiple settings can be specified by using a comma-delimited list.
+```
+turbo run --enable=UseDllInjection,ChromiumSupport chrome
+```
+
+Standalone executables use the `/XEnable` and `/XDisable` flags.
+```
+PackagedApp.exe /XEnable=UseDllInjection /XEnable=ChromiumSupport /XDisable=SpawnComServers
+```
+
+## Runtime Settings List
 
 Altering VM settings for a container will override the settings of the base image(s).
 

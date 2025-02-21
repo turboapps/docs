@@ -4,7 +4,7 @@ Turbo Server can be configured to allow users to log in via Okta Single Sign-On 
 
 For prerequisites and additional information about the SAML 2.0 authentication protocol, please refer to the [SAML 2.0 Prerequisites](/server/authentication/saml.html#prerequisites) section.
 
-### Configure Okta
+## Configure Okta
 
 The following section describes how to integrate Turbo Server with Okta using SAML 2.0.
 
@@ -67,7 +67,7 @@ From the **Assignments** tab, grant access to users or groups who should be able
 
 ![Okta 19 Assignments](/images/okta_19_assignments.png)
 
-### Configure Turbo Server
+## Configure Turbo Server
 
 Open the Turbo Server administration site and navigate to the **Users > Authentication Method page**.
 
@@ -93,7 +93,7 @@ Configure the following fields:
 - **Singing Certificate Common Name**: Enter the common name value that is listed in the SAML Signing Certificate under **Details > Subject > CN**.
   ![Okta 13 Certificate Subject Common Name](/images/okta_13_certificate_subject_common_name.png)
 
-### Install SAML Signing Certificate on Turbo Hub
+## Install SAML Signing Certificate on Turbo Hub
 
 The SAML Signing Certificate is used by Turbo Server to ensure that the SAML response is signed by the expected identity provider. This certificate was downloaded in the previous steps and must be manually installed on the Hub server.
 
@@ -115,6 +115,6 @@ Login to the system where the Turbo Hub role is installed on as an administrator
 
 Once installed, Turbo Server portal logins should now complete successfully.
 
-### Troubleshooting
+## Troubleshooting
 
 Please refer to the [SAML 2.0 Troubleshooting](/server/authentication/saml.html#troubleshooting) section.

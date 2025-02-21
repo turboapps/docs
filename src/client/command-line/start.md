@@ -78,6 +78,6 @@ To temporarily alter the startup file, specify it with `--startup-file` paramete
 
 When the container stops, the exit code of startup file is displayed in decimal form.
 
-### JSON output
+## JSON output
 
 When `--format=json` option was passed this command will provide output in JSON format. It will contain `container` object with information about started container or an `error` object if command failed.

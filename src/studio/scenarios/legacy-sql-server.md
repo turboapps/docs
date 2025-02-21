@@ -2,13 +2,13 @@
 
 Some legacy applications have dependencies on legacy versions of SQL Server. Here it will be shown how to create and configure a SQL Server 2005 Express Edition image using Turbo Studio and the snapshot method.
 
-### Prerequisites
+## Prerequisites
 
 Perform the snapshot on a clean Windows 7 x64 system that has all the latest Windows Updates. It is important to ensure that no Microsoft Visual C++ Redistributable packages are installed as they will be missed during the snapshot. Note that uninstalling the packages will leave behind files and registry keys that will render the resulting snapshot incomplete so they must never have been installed on the machine.
 
 Install Turbo Studio. See [downloads](https://turbo.net/download) for the latest version.
 
-### The Build
+## The Build
 
 1. In Turbo Studio, press the _Capture Before_ snapshot button.
 
@@ -42,6 +42,6 @@ Install Turbo Studio. See [downloads](https://turbo.net/download) for the latest
 </NamedObjectIsolation>
 ```
 
-### Troubleshooting
+## Troubleshooting
 
 The SQL Server service logs are stored in the following location inside the container **C:\Program Files (x86)\Microsoft SQL Server\MSSQL.1\MSSQL\LOG**.
