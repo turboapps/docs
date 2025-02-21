@@ -82,8 +82,8 @@ export default defineConfig({
                   collapsed: true,
                   items: [
                     { text: 'Overview', link: '/guides/integrations/citrix-guide/' },
-                    { text: 'Command Line', link: '/guides/integrations/citrix-guide/command-line' },
-                    { text: 'Scripts', link: '/guides/integrations/citrix-guide/scripts' }
+                    { text: 'Citrix Virtual Apps', link: '/guides/integrations/citrix-guide/citrix-apps' },
+                    { text: 'Citrix Virtual Desktops', link: '/guides/integrations/citrix-guide/citrix-desktops' }
                   ]
                 },
                 { text: 'Intune', link: '/guides/integrations/intune' },
