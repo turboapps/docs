@@ -77,15 +77,7 @@ export default defineConfig({
               collapsed: true,
               items: [
                 { text: 'AWS AppStream', link: '/guides/integrations/aws-appstream' },
-                {
-                  text: 'Citrix',
-                  collapsed: true,
-                  items: [
-                    { text: 'Overview', link: '/guides/integrations/citrix-guide/' },
-                    { text: 'Citrix Virtual Apps', link: '/guides/integrations/citrix-guide/citrix-apps' },
-                    { text: 'Citrix Virtual Desktops', link: '/guides/integrations/citrix-guide/citrix-desktops' }
-                  ]
-                },
+                { text: 'Citrix', link: '/guides/integrations/citrix' },
                 { text: 'Intune', link: '/guides/integrations/intune' },
                 { text: 'System Center', link: '/guides/integrations/system-center' },
                 { text: 'Azure Virtual Desktop', link: '/guides/integrations/azure-virtual-desktop' }
