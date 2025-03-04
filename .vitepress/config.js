@@ -249,15 +249,6 @@ export default defineConfig({
               ]
             },
             {
-              text: 'Working with Containers',
-              collapsed: true,
-              items: [
-                { text: 'Introduction', link: '/studio/working-with-containers/' },
-                { text: 'IP Routing', link: '/studio/working-with-containers/ip-routing' },
-                { text: 'Tips', link: '/studio/working-with-containers/tips' }
-              ]
-            },
-            {
               text: 'Continuous Integration',
               collapsed: true,
               items: [
@@ -270,6 +261,7 @@ export default defineConfig({
               collapsed: true,
               items: [
                 { text: 'Overview', link: '/studio/scenarios/' },
+		{ text: 'IP Routing', link: '/studio/scenarios/ip-routing' },
                 { text: 'Browser Ad Blocking', link: '/studio/scenarios/browser-ad-blocking' },
                 { text: 'Integration with Native Apps', link: '/studio/scenarios/integration-with-native-applications' },
                 { text: 'Legacy IE and Java', link: '/studio/scenarios/legacy-internet-explorer-and-java' },
