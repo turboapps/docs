@@ -2,7 +2,7 @@
 
 Turbo container IP routing can be used to map container network ports to those on the native machine. This is possible using the **--route-add** flag.
 
-The syntax for the **--route-add** flag is **&lt;protocol&gt;://&lt;containerPort&gt;:&lt;hostPort&gt;**. For example, to map container TCP port 8080 to host port 80, you would use the command flag `--route-add=tcp://8080:80`.
+The syntax for the **--route-add** flag is **&lt;protocol&gt;\://&lt;containerPort&gt;:&lt;hostPort&gt;**. For example, to map container TCP port 8080 to host port 80, you would use the command flag `--route-add=tcp://8080:80`.
 
 In addition, the **ip** protocol is supported which applies routing to _all_ IP-based communication. For example, the command `--route-block=ip` blocks all IP traffic. Subsequent **--route-add** flags can be appended to whitelist specific IP addresses.
 

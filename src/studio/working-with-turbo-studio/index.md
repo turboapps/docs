@@ -61,8 +61,8 @@ For more information on the snapshot process, see **Snapshot** documentation.
 
 ### Publish
 
-- **Publish to Turbo Server** button allows an output container image to be pushed directly to the Turbo.net Hub or a Turbo Server instance.
-- **Publish to Local Repository** button allows an output container image to be pushed to the local Turbo.net Client Runtime repository.
+- [Publish to Turbo Server](/studio/working-with-turbo-studio/publishing.html#publish-to-turbo-server) button allows an output container image to be pushed directly to the Turbo.net Hub or a Turbo Server instance.
+- [Publish to Local Repository](/studio/working-with-turbo-studio/publishing.html#publish-to-local-turbo-repository) button allows an output container image to be pushed to the local Turbo.net Client Runtime repository.
 
 ## Advanced Ribbon Bar
 
