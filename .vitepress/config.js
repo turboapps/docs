@@ -245,6 +245,7 @@ export default defineConfig({
                 { text: 'Setup Capture', link: '/studio/working-with-turbo-studio/setup-capture' },
                 { text: 'Snapshots', link: '/studio/working-with-turbo-studio/snapshots' },
                 { text: 'Standalone Executables', link: '/studio/working-with-turbo-studio/standalone-executables' },
+		{ text: 'Publishing', link: '/studio/working-with-turbo-studio/publishing' },
                 { text: 'Studio Azure', link: '/studio/working-with-turbo-studio/studio-azure' }
               ]
             },
