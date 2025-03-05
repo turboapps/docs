@@ -66,7 +66,7 @@ User sign in results in error message "[The Azure Application] is not configured
 
 This error occurs when the OneDrive integration is configured with **Multitenant** supported account types, but the OneDrive application registration was created with **Single tenant** supported account types.
 
-Open the [OneDrive storage provider settings page](/server/administration/integrations.html#storage-providers) and ensure that the **Single tenant** supported account type was selected.
+Open the [OneDrive storage provider settings page](/server/administration/domain.html#storage-providers) and ensure that the **Single tenant** supported account type was selected.
 
 In server 22.4 an earlier, only multitenant application registrations were supported.
 

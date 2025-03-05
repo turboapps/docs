@@ -357,7 +357,7 @@ The idle session limit timer on the server has elapsed.
 
 This timeout is controlled by the **Set time limit for active but idle Remote Desktop Services** Group Policy setting. The default value set by Turbo Server is `21600000` milliseconds.
 
-To configure this timeout, see [Streaming](/server/administration/general.html#streaming) for more information.
+To configure this timeout, see [Streaming](/server/administration/domain.html#streaming) for more information.
 
 ## ERRINFO_LOGON_TIMEOUT
 
@@ -367,7 +367,7 @@ The active session limit timer on the server has elapsed.
 
 This timeout is controlled by the **Set time limit for active Remote Desktop Services sessions** Group Policy setting. The default value set by Turbo Server is `21600000` milliseconds.
 
-To configure this timeout, see [Streaming](/server/administration/general.html#streaming) for more information.
+To configure this timeout, see [Streaming](/server/administration/domain.html#streaming) for more information.
 
 ## ERRINFO_DISCONNECTED_BY_OTHERCONNECTION
 

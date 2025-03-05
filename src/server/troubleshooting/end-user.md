@@ -8,17 +8,17 @@ The service does not have permissions to upload a file on behalf of the user due
 
 ## User gets locked out of cloud sessions when idling after a short period of time.
 
-The lock screen timeout is controlled via group policy setting. To configure custom session timeouts, please refer to the [Streaming](/server/administration/general.html#streaming) section on the Turbo Server administration site.
+The lock screen timeout is controlled via group policy setting. To configure custom session timeouts, please refer to the [Streaming](/server/administration/domain.html#streaming) section on the Turbo Server administration site.
 
 For older versions of Turbo Server, you may change the group policy setting manually. Please refer to the microsoft [documentation](https://answers.microsoft.com/en-us/windows/forum/all/remote-desktop-how-to-increase-lock-timeout/fc0f76a4-6a48-41f1-95d8-fbbc4e6a2ae9?auth=1) to disable or extend the timeouts.
 
 ## Users cannot access client drives when streaming a remote application from the native client.
 
-By default, client drives are made available when streaming a remote application from the native client. This behavior can be controlled via group policy setting. To enable or disable drive redirection, please refer to the [Streaming](/server/administration/general.html#streaming) section on the Turbo Server administration site.
+By default, client drives are made available when streaming a remote application from the native client. This behavior can be controlled via group policy setting. To enable or disable drive redirection, please refer to the [Streaming](/server/administration/domain.html#streaming) section on the Turbo Server administration site.
 
 ## Users cannot access network drives when streaming a remote application.
 
-Network drives may be configured in the [Streaming](/server/administration/general.html#streaming) section on the Turbo Server administration site, and are only made available when streaming remote applications.
+Network drives may be configured in the [Streaming](/server/administration/domain.html#streaming) section on the Turbo Server administration site, and are only made available when streaming remote applications.
 
 If a configured network drive is not visible, please check that the network drive letter does not conflict with an existing local or network drive. Also check that the network drive path is correct and accessible to the remote user. Paths such as `\\tsclient\{path}` that map to local drives are only available when streaming the application with a client that redirect drives.
 

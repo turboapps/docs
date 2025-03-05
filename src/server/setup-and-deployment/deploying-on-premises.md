@@ -118,7 +118,7 @@ If you plan on configured Single Sign-On, Turbo Server supports identity provide
 
 ### Cloud Storage and other settings
 
-To enable OneDrive mounting in user sessions, you need to register a OneDrive client ID and secret in the Cloud Storage section. The steps how to do that are described [here](/server/administration/general).
+To enable OneDrive mounting in user sessions, you need to register a OneDrive client ID and secret in the Cloud Storage section. The steps how to do that are described [here](/server/administration/domain.html#general).
 
 ### Licensing servers
 

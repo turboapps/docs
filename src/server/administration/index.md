@@ -14,10 +14,6 @@ The default path of the Administration Site is: `/admin`, and consists of the fo
 
 - **Reports**: This page provides preconfigured customizable analytics reports, sorted according to Administration, Hub, and Users. For more information refer to [Reports](/server/administration/reports).
 
-- **Integrations**: This page provides options to configure integrations with variety of third-party services, such as cloud storage providers and Learning Management Systems. For more information refer to [Integrations](/server/administration/integrations).
-
-- **General**: This page contains a summary of your Turbo Server license, and information and options for configuring Turbo Server. For more information refer to [General](/server/administration/general).
-
 ## Browser Support
 
 The Turbo Server administration site supports the latest versions of modern browsers. For the best experience, we recommend using one of the following browsers:

@@ -497,7 +497,7 @@ Creating a Dropbox connection with file permission scopes requires your Dropbox 
 
 ## AI Models
 
-The **Artificial Intelligence** section allows administrators to view and manage connections with various artificial intelligence services, such as OpenAI. The chatbot is hidden by default and must be enabled from the [Dashboard Tabs](https://hub.turbo.net/docs/server/administration/general#appearance) appearance setting. Once configured, end-users may access the chatbot from the Chat tab on their Portal dashboard.
+The **Artificial Intelligence** section allows administrators to view and manage connections with various artificial intelligence services, such as OpenAI. The chatbot is hidden by default and must be enabled from the [Dashboard Tabs](/server/administration/domain.html#appearance) appearance setting. Once configured, end-users may access the chatbot from the Chat tab on their Portal dashboard.
 
 For more information, see our [OpenAI](https://hub.turbo.net/docs/server/integrations/openai) integration documentation.
 
