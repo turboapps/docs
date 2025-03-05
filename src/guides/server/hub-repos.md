@@ -31,4 +31,4 @@ You can build and push custom applications using Turbo Studio:
 
 For details, see:
 - [Working with Turbo Studio](/studio/working-with-turbo-studio/)
-- [Publishing Images](/studio/working-with-turbo-studio/publishing/)
+- [Publishing Images](/studio/working-with-turbo-studio/publishing.html)
