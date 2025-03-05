@@ -8,11 +8,11 @@ The default path of the Administration Site is: `/admin`, and consists of the fo
 
 - **Users**: This page list all users and groups on your Turbo Server. From here **Directory Services** can be configured to import users from LDAP or Active Directory. **Authentication Method** allows you to configure how users will authenticate with the Turbo Server. **Device Keys** allows you to manage all registered devices. For more information refer to [Managing Users and Authentication](/server/administration/users).
 
-- **Domain**: This page lists all servers that are included as part of the current Turbo Server installation. Server settings such as roles, web service bindings, and SSL certificates may be configured here. For more information refer to [Managing the Domain](/server/administration/domain).
-
 - **Workspaces**: This page lists all workspaces on your Turbo Server. From here workspaces may be added, configured, and deleted. For more information refer to [Managing Workspaces](/server/administration/workspaces).
 
 - **Reports**: This page provides preconfigured customizable analytics reports, sorted according to Administration, Hub, and Users. For more information refer to [Reports](/server/administration/reports).
+
+- **Domain**: This page lists all servers that are included as part of the current Turbo Server installation. Server settings such as roles, web service bindings, and SSL certificates may be configured here. For more information refer to [Managing the Domain](/server/administration/domain).
 
 ## Browser Support
 

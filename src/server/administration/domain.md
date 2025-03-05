@@ -18,16 +18,16 @@ The default fleet comprises all Application Servers in the domain and cannot be 
 
 ### Add Fleet
 
-![Server admin domain fleets](/images/admin-domain-fleets-add-fleet.png)
+![Server admin domain fleets add](/images/admin-domain-fleets-add-fleet.png)
 
-The **Add Fleet** page allows administrators to add additional fleets to the current Turbo Server farm. [Applications](/server/administration/workspaces.html#workspace-applications) can be assigned to launch on a specific fleets.
+The **Add Fleet** page allows administrators to add additional fleets to the current Turbo Server farm. Applications can be [assigned](/server/administration/workspaces.html#server-assignment-settings) to launch on a specific fleets.
 
 - **Fleet Type**: Manual or Managed. Selecting "Manual" allows the addition of any application server in the domain. Choosing "Managed" will include all servers in a [Cloud Infrastructure](/server/administration/domain.html#cloud-infrastructures) to the fleet.
 - **Name**: A unique name must be given for the fleet.
 
 ### Fleet Dashboard
 
-![Server admin domain fleets](/images/admin-domain-fleets-fleet-dashboard.png)
+![Server admin domain fleets dashboard](/images/admin-domain-fleets-fleet-dashboard.png)
 
 This page provides a comprehensive view of the servers' status within the fleet.
 
@@ -35,7 +35,7 @@ For cloud infrastructures that are supported, it is possible to turn servers on 
 
 ### Fleet Schedule
 
-![Server admin domain fleets](/images/admin-domain-fleets-fleet-schedule.png)
+![Server admin domain fleets schedule](/images/admin-domain-fleets-fleet-schedule.png)
 The Fleet Schedule page enables administrators to establish a schedule for turning on and off the fleet computers (excluding the Hub server). This feature is only available for compute infrastructures.
 
 - **Start Time**: Specifies when fleet servers will power on.
@@ -44,7 +44,7 @@ The Fleet Schedule page enables administrators to establish a schedule for turni
 
 ## Servers
 
-![Server admin domain fleets](/images/admin-domain-servers.png)
+![Server admin domain servers](/images/admin-domain-servers.png)
 
 The **Server** page lists all servers that are included as part of the current Turbo Server installation, along with their current status. Clicking a server name will navigate to the server configuration page.
 
@@ -205,7 +205,7 @@ Cloud Infrastructure currently only supports Azure environments. Support for oth
 
 The Turbo Server farm must be running in Azure with an Azure SQL Database connection. Adding Azure application servers to a on-premises Turbo Server installation is not supported.
 
-For more information on setting up an Azure Turbo Server farm, see the Turbo Server AMI setup docs: [/docs/server/setup-and-deployment/deploying-to-azure#hub-and-portal-role-deployment](/server/setup-and-deployment/deploying-to-azure.html#hub-and-portal-role-deployment).
+For more information on setting up an Azure Turbo Server farm, see the [Turbo Server AMI setup docs](/server/setup-and-deployment/deploying-to-azure.html#hub-and-portal-role-deployment).
 
 ### Azure Setup Guide
 
@@ -290,7 +290,7 @@ If an existing workspace with the same url friendly ID exists on the subdomain, 
 The available configurations are described below:
 
 - **Source Domain URL**: A federation source URL from which domain resources will be replicated.
-- **System API Key**: The API key used to access federation resources from the federation source. This API key must be configured as a system-level key on the source server. See [Managing API Keys](/server/administration/hub.html#managing-api-keys) for information on configured API keys.
+- **System API Key**: The API key used to access federation resources from the federation source. This API key must be configured as a system-level key on the source server. See [Managing API Keys](/server/administration/users.html#api-keys) for information on configured API keys.
 - **Default Synchronization Frequency**: The frequency at which this server will check the federation source for updates.
 - **Identity**
   - **Enable**: Federate identity data from the source domain, including users, groups, directory services, and authentication settings.
