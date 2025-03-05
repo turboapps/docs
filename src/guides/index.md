@@ -26,7 +26,7 @@ Organizations deploying Turbo Server can choose between two primary delivery met
 Turbo integrates seamlessly with enterprise platforms to enhance existing deployment workflows. Our integration guides cover major virtual desktop and management platforms:
 
 ### Virtual Desktop Infrastructure
-Deliver Turbo applications through your VDI platform using our guides for [Citrix Virtual Apps](/guides/integrations/citrix-guide/), [Azure Virtual Desktop](/guides/integrations/azure-virtual-desktop), and [AWS AppStream](/guides/integrations/aws-appstream). These integrations enable consistent application delivery across virtual desktop environments.
+Deliver Turbo applications through your VDI platform using our guides for [Citrix Virtual Apps](/guides/integrations/citrix.html), [Azure Virtual Desktop](/guides/integrations/azure-virtual-desktop), and [AWS AppStream](/guides/integrations/aws-appstream). These integrations enable consistent application delivery across virtual desktop environments.
 
 ### Management Platforms
 Deploy and manage Turbo applications through enterprise management tools using our guides for [Microsoft Intune](/guides/integrations/intune) and [System Center Configuration Manager](/guides/integrations/system-center). These integrations help incorporate Turbo into your existing management workflows.

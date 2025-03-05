@@ -312,14 +312,11 @@ export default defineConfig({
               collapsed: true,
               items: [
                 { text: 'Overview', link: '/server/administration/' },
-                { text: 'Domain', link: '/server/administration/domain' },
-                { text: 'General', link: '/server/administration/general' },
                 { text: 'Hub', link: '/server/administration/hub' },
-                { text: 'Integrations', link: '/server/administration/integrations' },
-                { text: 'Reports', link: '/server/administration/reports' },
-                { text: 'Storage', link: '/server/administration/storage' },
                 { text: 'Users', link: '/server/administration/users' },
-                { text: 'Workspaces', link: '/server/administration/workspaces' }
+                { text: 'Workspaces', link: '/server/administration/workspaces' },
+                { text: 'Reports', link: '/server/administration/reports' },
+                { text: 'Domain', link: '/server/administration/domain' }
               ]
             },
             {

@@ -207,5 +207,4 @@ turbo subscription registered development-tools
 ## Next Steps
 
 1. Learn about [workspace management](/server/administration/workspaces.md)
-2. Configure [update policies](/server/administration/general.md#updates)
-3. Set up [usage analytics](/server/administration/reports.md)
+2. Set up [usage analytics](/server/administration/reports.md)

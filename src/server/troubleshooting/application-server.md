@@ -178,7 +178,7 @@ The user may also avoid this dialog by completely exitting their applications be
 If users report that their application window disappears when using the Run in Cloud (Windowed) launch mode or shows the lock screen when the Run in Cloud (HTML5) launch mode and the portal shows that the application is still active and connected, the application server may have the following group policy configured:
 **Windows Settings > Security Settings > Local Policies > Security Options > Interactive Logon: Machine inactivity limit**.
 
-To resolve this issue, set the Interactive Logon: Machine inactivity limit to 0 and use the [Streaming](/server/administration/general.html#streaming) settings to control the application session length.
+To resolve this issue, set the Interactive Logon: Machine inactivity limit to 0 and use the [Streaming](/server/administration/domain.html#streaming) settings to control the application session length.
 
 ## Application server is online but is not servicing application launches
 
