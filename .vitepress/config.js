@@ -245,16 +245,8 @@ export default defineConfig({
                 { text: 'Setup Capture', link: '/studio/working-with-turbo-studio/setup-capture' },
                 { text: 'Snapshots', link: '/studio/working-with-turbo-studio/snapshots' },
                 { text: 'Standalone Executables', link: '/studio/working-with-turbo-studio/standalone-executables' },
+		{ text: 'Publishing', link: '/studio/working-with-turbo-studio/publishing' },
                 { text: 'Studio Azure', link: '/studio/working-with-turbo-studio/studio-azure' }
-              ]
-            },
-            {
-              text: 'Working with Containers',
-              collapsed: true,
-              items: [
-                { text: 'Introduction', link: '/studio/working-with-containers/' },
-                { text: 'IP Routing', link: '/studio/working-with-containers/ip-routing' },
-                { text: 'Tips', link: '/studio/working-with-containers/tips' }
               ]
             },
             {
@@ -270,6 +262,7 @@ export default defineConfig({
               collapsed: true,
               items: [
                 { text: 'Overview', link: '/studio/scenarios/' },
+		{ text: 'IP Routing', link: '/studio/scenarios/ip-routing' },
                 { text: 'Browser Ad Blocking', link: '/studio/scenarios/browser-ad-blocking' },
                 { text: 'Integration with Native Apps', link: '/studio/scenarios/integration-with-native-applications' },
                 { text: 'Legacy IE and Java', link: '/studio/scenarios/legacy-internet-explorer-and-java' },
@@ -312,14 +305,11 @@ export default defineConfig({
               collapsed: true,
               items: [
                 { text: 'Overview', link: '/server/administration/' },
-                { text: 'Domain', link: '/server/administration/domain' },
-                { text: 'General', link: '/server/administration/general' },
                 { text: 'Hub', link: '/server/administration/hub' },
-                { text: 'Integrations', link: '/server/administration/integrations' },
-                { text: 'Reports', link: '/server/administration/reports' },
-                { text: 'Storage', link: '/server/administration/storage' },
                 { text: 'Users', link: '/server/administration/users' },
-                { text: 'Workspaces', link: '/server/administration/workspaces' }
+                { text: 'Workspaces', link: '/server/administration/workspaces' },
+                { text: 'Reports', link: '/server/administration/reports' },
+                { text: 'Domain', link: '/server/administration/domain' }
               ]
             },
             {

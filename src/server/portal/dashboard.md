@@ -45,7 +45,7 @@ The following context options are available if the application is currently runn
 
 The **Files** tab allows users to browse and open files from their connected cloud storage providers.
 
-Cloud storage providers may be connected by users from the user settings [Storage](/server/portal/user-settings.html#storage) page, or connected by administrators from the administration site [Storage Connections](/server/administration/storage.html#connections) page.
+Cloud storage providers may be connected by users from the user settings [Storage](/server/portal/user-settings.html#storage) page, or connected by administrators from the administration site [Storage Connections](/server/administration/domain.html#storage-connections) page.
 
 Clicking on a folder will navigate into that folder. Users may navigate out of a folder by using the breadcrumb at the top of the page.
 

@@ -1,6 +1,6 @@
 # Introduction to Using Portal
 
-This guide is intended for end users accessing applications through the Turbo Server portal, particularly in environments where devices are not under organizational control (such as personal devices, BYOD workstations, or remote work scenarios). The portal provides flexible access to applications and files through any web browser, without requiring pre-configured devices or managed infrastructure. For administrators setting up and managing the portal, refer to the [Workspace Administration](/server/administration/workspaces.html) and [Portal Appearance](/server/administration/general.html#appearance) documentation.
+This guide is intended for end users accessing applications through the Turbo Server portal, particularly in environments where devices are not under organizational control (such as personal devices, BYOD workstations, or remote work scenarios). The portal provides flexible access to applications and files through any web browser, without requiring pre-configured devices or managed infrastructure. For administrators setting up and managing the portal, refer to the [Workspace Administration](/server/administration/workspaces.html) and [Portal Appearance](/server/administration/domain.html#appearance) documentation.
 
 ::: tip Note to Administrators
 This is an end-user guide that you can share with your users once you have:

@@ -6,7 +6,7 @@ The standard Turbo Server license, **Turbo Server Enterprise Edition**, offers n
 
 Administrators can activate and de-activate users from the Turbo Server administration site as needed. Additionally, the license can be upgraded to accommodate more users or devices.
 
-For more information about managing users refer to [Managing Users and Authentication](/server/administration/users). For instructions on applying a new license to Turbo Server, refer to [General](/server/administration/general).
+For more information about managing users refer to [Managing Users and Authentication](/server/administration/users). For instructions on applying a new license to Turbo Server, refer to [General](/server/administration/domain.html#general).
 
 ### Named User Licensing
 

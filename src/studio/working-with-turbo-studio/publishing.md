@@ -34,4 +34,3 @@ Turbo Studio can also publish SVM images to both **Turbo Server** as well as the
 
 4. Verify the image is imported into the local repository by running the `turbo images` command:
 ![Turbo Studio Publish to Server](/images/studio-publish9.png)
-

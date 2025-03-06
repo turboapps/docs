@@ -4,6 +4,7 @@ This section provides detailed guides for common use cases and scenarios when wo
 
 ## Available Scenarios
 
+- **IP Routing**: Turbo IP routing can be used to map session network ports to those on the native machine.
 - **Browser Ad Blocking**: Learn how to configure browsers with ad blocking capabilities using Turbo Studio.
 - **Integration with Native Applications**: Understand how to integrate virtualized applications with native system applications.
 - **Legacy IE and Java**: Guide for virtualizing legacy Internet Explorer versions and Java environments.
