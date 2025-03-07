@@ -1,0 +1,13 @@
+{
+  "displayName": "Studio 25.3",
+  "version": "25.3.1",
+  "releaseDate": "2025-03-6T00:00-08:00",
+  "artifacts": [
+    {
+      "type": "msi",
+      "fileName": "turbo-studio-25.3.1.msi",
+      "downloadLink": "https://start-c.turbo.net/layers/turbo/studio/download/turbo-studio-25.3.1.msi",
+      "SHA256Hash": "CFC0BA2F7FA0E93A4F85A35A79185593013B4311D671BD63410D96CF83445D04"
+    }
+  ]
+}
