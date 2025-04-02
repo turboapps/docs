@@ -52,6 +52,17 @@ turbo config --all
 
 Look for "Torrent download: Enabled" in the output to confirm the setting.
 
+Customers worried about network congestion may enable upload and download limits on the clients.
+
+```cmd
+# Limit maximum download speed to 50 MB/s
+# Value is set in KB/s with 0 for unlimited
+turbo config --p2p-max-download-speed=400000
+
+# Limit maximum upload speed to 50 MB/s
+turbo config --p2p-max-upload-speed=400000
+```
+
 ## Network Requirements
 
 The Turbo Server image seeder uses ports 6881-6889. Ensure these ports are properly configured:
