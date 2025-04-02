@@ -151,6 +151,10 @@ If clients are having trouble with peer-to-peer downloads:
    - Check process permissions
    - Ensure sufficient system resources
 
+4. **Manual Subscribe Command and Sandbox Manager**
+   - Executing a turbo subscribe or subscription update command while the Sandbox Manager is in the process of automatically updating the subscription may result in an image download failed error due to a hash mismatch.
+   - Environments that are configured for automatic subscription updates via the Sandbox Manager service should avoid executing the turbo subscribe or subscription update command manually.
+
 ## Security and Privacy
 
 - Only Turbo images are distributed via the peer-to-peer network
