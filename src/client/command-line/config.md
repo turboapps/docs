@@ -36,6 +36,8 @@ Usage: config <options>
                                       allusers" to use the system wide shared folder.
       --no-domain-verify            Disables verification of the domain. Setting the domain without verification may
                                       result in slower performance during runtime and is not recommended.
+      --p2p-max-download-speed=VALUE Maximum P2P download speed in KB/s (0 for unlimited)
+      --p2p-max-upload-speed=VALUE  Maximum P2P upload speed in KB/s (0 for unlimited)
       --permission=VALUE            Specifies the permission for the affected settings. Supported values: inherit, write
       --remote-sandbox-path=VALUE   Path to remote sandbox storage
       --remove-trusted-source=VALUE Remove a source hub from the trusted sources list. Use * to restore default
