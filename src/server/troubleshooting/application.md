@@ -46,9 +46,11 @@ If the application launches successfuly, see the [Application Troubleshooting](/
 
 ## Container Isolation
 
-The default container isolation mode is set to __Full__ isolation, which would hide most applications installed on the system and may cause launch failures in some cases. Decrease the container isolation mode to __Write-Copy__ or __Merge__ to check if this is the cause for the failure.
+The default container isolation mode is set to __Write-Copy__ isolation, which allows the virtual application to see and interact with other native applications on the system.
 
-If the application launches successfully after changing the isolation, review the application configuration for missing dependencies.
+Try increasing the container isolation to __Full__ to hide the native applications from the container if there is a conflict with a native application.
+
+Try decreasing the container isolation to __Merge__ to allow the virtual application to write files to the native filesystem if other native applications consume the output files.
 
 ## Generate VM Diagnostic Logs
 
