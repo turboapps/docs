@@ -1,0 +1,13 @@
+{
+  "displayName": "Studio 25.4",
+  "version": "25.4.4",
+  "releaseDate": "2025-04-25T00:00-08:00",
+  "artifacts": [
+    {
+      "type": "msi",
+      "fileName": "turbo-studio-25.4.4.msi",
+      "downloadLink": "https://start-c.turbo.net/layers/turbo/studio/download/turbo-studio-25.4.4.msi",
+      "SHA256Hash": "5D71AEAB546FE976013AB7E55CB388BF7FB7D1E065DA101CF2290BE837524B46"
+    }
+  ]
+}
