@@ -22,7 +22,7 @@ Complete the following steps to use the Snapshot feature:
 
 3. (Optional) Save the Before Snapshot: Saving the before snapshot enables you to skip this step in subsequent applications from the same clean machine. Select the down arrow underneath **Capture Before** and choose **Save Snapshot**. Turbo Studio automatically saves the most recently captured before snapshot. This snapshot is reset once the **Capture and Diff** is complete.
 
-4. Install your application: Install the appication as you would normally. If the application setup requests a reboot, save the Before Snapshot, then proceed with the reboot.
+4. Install your application: Install the application as you would normally. If the application setup requests a reboot, save the Before Snapshot, then proceed with the reboot.
 
 5. Capture the after image: On the **Virtual Application** tab on the ribbon bar, select **Capture and Diff**.  This captures the After Snapshot, computes the deltas between the two snapshots, and populates the image with the delta entries.
 
