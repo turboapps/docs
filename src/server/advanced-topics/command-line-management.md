@@ -17,13 +17,15 @@ When using the Turbo Server command line administrative tools, it is important t
 | `Server.exe /provision` | Creates the Turbo Hub Server data and sites. For additional details use `Server.exe /help`. |
 | `Server.exe /uninstall` | Uninstalls Turbo Hub Server. |
 | `Server.exe /restart-apache-service` <br> **Required parameters:** <br> [Apache process Id] | Restarts Apache web service gracefully. |
-| `Server.exe /install-services` <br> **Required parameters:** <br> [comma-separated service names] | Installs native services. Valid options include: api, admin |
-| `Server.exe /uninstall-services` <br> **Required parameters:** <br> [comma-separated service names] | Uninstalls native services. Valid options include: api, admin |
+| `Server.exe /install-services` <br> **Required parameters:** <br> [comma-separated service names] | Installs native services. Valid options include: api, admin, proxy |
+| `Server.exe /uninstall-services` <br> **Required parameters:** <br> [comma-separated service names] | Uninstalls native services. Valid options include: api, admin, proxy |
 | `Server.exe /?, -?, ?, /help, -help, help` | Prints this usage information. |
 
 ## install-services command
 
-The install-services command installs the specified services, such as the API and Admin site IIS Express servers, onto the native environment. By default these services run in the virtual environment, however they can be installed natively to resolve certain issues such as antivirus incompatibility.
+The install-services command installs the specified services, such as the API and Admin site IIS Express servers as well as the Apache proxy service, onto the native environment. By default these services run in the virtual environment, however they can be installed natively to resolve certain issues such as antivirus incompatibility. 
+
+Installing the proxy service native resolves an issue where SVM transfer speeds are capped around 3 Gbps in high-speed network environments. This requires that Microsoft Visual C++ Redistributable 2015+ is installed on the system. 
 
 When a service is installed, the files required to run the service are copied out of the virtual environment and into a native service installation folder parallel to the Turbo Server installation folder. For example, if Turbo Server is installed at `E:\Turbo Server`, the native services will be installed at `E:\Turbo Server Native`.
 
