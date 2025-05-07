@@ -1,0 +1,19 @@
+{
+  "displayName": "Client 25.5.4.1712",
+  "version": "25.5.4.1712",
+  "releaseDate": "2025-05-06T00:00-07:00",
+  "artifacts": [
+    {
+      "type": "exe",
+      "fileName": "turbo-client-25.5.4.1712.exe",
+      "downloadLink": "https://start-c.turbo.net/layers/setup/25.5.4.1712/turbo-client-25.5.4.1712.exe",
+      "SHA256Hash": "c3c184002c0d5146866b603150f3491e74ec5474512cd892b56634b6cc775de7"
+    },
+    {
+      "type": "msi",
+      "fileName": "turbo-client-25.5.4.1712.msi",
+      "downloadLink": "https://start-c.turbo.net/layers/setup/25.5.4.1712/turbo-client-25.5.4.1712.msi",
+      "SHA256Hash": "3b2d25028fe7d362615c9120592ee7d34e35c3bfe2d22e5e149f80a10bf5424f"
+    }
+  ]
+}
