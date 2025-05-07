@@ -1,0 +1,13 @@
+{
+  "displayName": "Server 25.5.5.2866",
+  "version": "25.5.5.2866",
+  "releaseDate": "2025-05-07T00:00-07:00",
+  "artifacts": [
+    {
+      "type": "exe",
+      "fileName": "turbo-server-25.5.5.2866.exe",
+      "downloadLink": "https://start-c.turbo.net/layers/turbo/server/Download/turbo-server-25.5.5.2866.exe",
+      "SHA256Hash": "493dab57c5f22a30a081dee7df9b6019233f1eedff628504101ca001e4bb13c5"
+    }
+  ]
+}
