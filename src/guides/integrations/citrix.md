@@ -147,3 +147,9 @@ These guides cover deployment methods that work across various VDI platforms.
 Visit the [Turbo Hub](https://hub.turbo.net/hub) to browse available applications.
 
 For additional support or custom deployment scenarios, contact [Turbo Support](https://turbo.net/support).
+
+## Troubleshooting
+
+### Packaged applications hang or show not responding message when dragging their window
+
+Starting with Citrix Virtual Delivery Agent 7 2402, isolating the `C:\Windows` folder results in the application's window hanging or showing a not responding message when the window is dragged. This behavior occurs because a file written to the path is written to the sandbox, which is isolating communication between the sandbox and the native Citrix service. To resolve the issue, set `C:\Windows` to **Merge** isolation and use **Merge** container isolation to write the file to the native filesystem and allow successful communication between the sandbox and native Citrix service.
