@@ -1,7 +1,7 @@
 {
   "displayName": "Studio 25.2",
   "version": "25.2.4",
-  "releaseDate": "2025-03-3T00:00-08:00",
+  "releaseDate": "2025-03-03T00:00-08:00",
   "artifacts": [
     {
       "type": "msi",
