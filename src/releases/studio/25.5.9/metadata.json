@@ -1,0 +1,13 @@
+{
+  "displayName": "Studio 25.5",
+  "version": "25.5.9",
+  "releaseDate": "2025-05-27T00:00-08:00",
+  "artifacts": [
+    {
+      "type": "msi",
+      "fileName": "turbo-studio-25.5.9.msi",
+      "downloadLink": "https://start-c.turbo.net/layers/turbo/studio/download/turbo-studio-25.5.9.msi",
+      "SHA256Hash": "4FCBC6689656544B7F61A670DAA4C296B92301CD2880F566BF5E17B5CEF13BA2"
+    }
+  ]
+}
