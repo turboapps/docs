@@ -106,8 +106,8 @@ The clipboard settings for the container (ie. copy-paste operations).
 
 Attributes:
 
-* **isolationMode** - The isolation mode which separates the container clipboard from native. Possible values are: **Merge** and **Full**. If fully isolated, will only be able to paste things that were copied inside the container. 
-Inheritance: when multiple layers with a different isolationMode setting are present, the container will use the highest isolationMode.
+* **mode** - The direction mode which separates the container clipboard from native. Possible values are: **Bidirectional** and **Isolated**. If isolated, a user will only be able to paste content which was copied from inside the container. 
+Inheritance: when multiple layers with a different isolationMode setting are present, the container will use the most isolated mode.
 
 ## EnvironmentVariableExGlobalSettings
 
