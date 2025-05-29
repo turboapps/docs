@@ -1,34 +1,82 @@
 # Peer-to-Peer Image Distribution
 
+## Overview
+
+Peer-to-Peer Image Distribution in Turbo leverages distributed networking technology to efficiently share images across your network. Instead of downloading images solely from the server, clients can share image data directly with each other, reducing server load and improving distribution speed.
+
+### Benefits
+- **Increased Throughput**: When total client download demand exceeds server upload capacity
+- **Reduced Server Load**: Distributes bandwidth requirements across peers
+- **Network Efficiency**: Optimizes bandwidth usage when many clients download simultaneously
+- **Best for Bulk Operations**: Ideal for subscription updates that populate images before end-user access
+
+## Quick Start
+
+**Enable P2P in 3 steps:**
+
+1. **Server Setup**: Enable P2P in Admin UI under Domain > Servers > Storage
+2. **Client Setup**: Run `turbo config --enable=p2pdownload` on each client
+3. **Verify**: Check `turbo config --all` shows "Peer-to-peer download: Enabled"
+
 ## How It Works
 
-Peer-to-Peer Image Distribution in Turbo uses torrent technology to efficiently distribute images across your network. Here's how the system works:
+### Peer-to-Peer Fundamentals
 
-1. **Peer-to-Peer Network Structure**
-   - Each client can both download and upload simultaneously
-   - Clients that complete downloads can become "seeds" and continue sharing
-   - Clients can download from both seeds and other downloading clients
+**Distributed Downloading**
+Traditional downloads use a single source (the server), creating a bottleneck. P2P technology allows clients to download from multiple sources simultaneously. Instead of everyone competing for the server's bandwidth, clients share the load by downloading different pieces from different peers.
 
-2. **Tracker System**
-   - The Turbo Server acts as a private tracker
-   - Clients must announce themselves to participate in the network
-   - Only authenticated clients can participate in the network
+**Chunk-Based Transfer**
+Images are divided into small, fixed-size pieces (chunks). Clients can download these chunks in any order from any available peer. This enables:
+- Parallel downloads from multiple sources
+- Efficient bandwidth utilization
+- Resilience if some peers disconnect
+- Faster overall transfer speeds
 
-3. **Seeding Behavior**
-   - The server seeds all images in its image cache
-   - Client machines continue seeding when:
-     - The `--wait-after-exit` flag is used with `turbo pull`
-     - The Sandman service keeps the process running
+**Swarm Networks**
+A "swarm" is the group of all peers (downloaders and seeds) sharing the same image. The larger the swarm, the more sources available for downloading. Each peer in the swarm can contribute, creating a collaborative distribution network that scales with demand.
 
-4. **Download Process**
-   - Clients join the network and begin downloading
-   - While downloading, clients also upload to other peers
-   - After completing downloads, clients can become seeds
-   - Seeds contribute to the network by only uploading
+**Seeding Concept**
+Seeds are peers that have complete copies of an image and only upload to others. Seeding is crucial for network health because:
+- Seeds provide reliable sources for new downloaders
+- More seeds mean faster downloads for everyone
+- Seeds keep popular images available even when the server is busy
+- The network becomes more resilient and self-sustaining
 
-## Enabling Peer-to-Peer Image Distribution
+### Network Architecture
+
+**Peer-to-Peer Network Structure**
+- Each client can simultaneously download from and upload to other clients
+- Clients that complete downloads become "seeds" and continue sharing
+- Multiple peers can contribute different parts of the same image
+- The network becomes more efficient as more peers participate
+
+**Tracker Coordination**
+- The Turbo Server acts as a private coordination hub
+- The tracker helps peers find each other within the swarm
+- Clients must authenticate to participate in the network
+- Only authorized clients can join the distribution network
+- The tracker maintains swarm health by monitoring peer status
+
+**Seeding Behavior**
+- The server automatically seeds all images in its cache
+- Client seeding behavior depends on configuration:
+  - **Default**: No automatic seeding after individual downloads
+  - **Configured Seeding**: P2P downloaded images are seeded indefinitely through the Turbo Client Sandman service
+  - **Manual Seeding**: Use `--wait-after-exit` flag with `turbo pull` for temporary seeding
+
+**Download Process**
+1. Client requests an image and joins the swarm
+2. Tracker provides a list of available peers in the swarm
+3. Client begins downloading chunks from multiple peers simultaneously
+4. While downloading, client also uploads completed chunks to other peers
+5. After completing download, client becomes a seed
+6. Seeds contribute by sharing the complete image with new downloaders
+
+## Configuration
 
 ### Server Configuration
+
+**Enable P2P Distribution:**
 
 1. Access the Turbo Server Admin UI
 2. Navigate to **Domain > Servers > [Your Hub server] > Storage**
@@ -36,11 +84,16 @@ Peer-to-Peer Image Distribution in Turbo uses torrent technology to efficiently 
    - Enable **Hub Image Cache**
    - Enable **Peer-to-Peer Image Distribution**
 4. Save the changes
-5. If the hub cache was not previously enabled, use the **Update Cache** button to populate existing hub images into the cache
+5. If the Hub cache was not previously enabled, click **Update Cache** to populate existing images
+
+**Verify Server Configuration:**
+- Check that required services are running
+- Confirm network ports are accessible
+- Review server logs for any initialization errors
 
 ### Client Configuration
 
-To enable Peer-to-Peer Image Distribution on a Turbo client:
+**Enable P2P Downloads:**
 
 ```cmd
 # Enable peer-to-peer downloads
@@ -50,127 +103,236 @@ turbo config --enable=p2pdownload
 turbo config --all
 ```
 
-Look for "Torrent download: Enabled" in the output to confirm the setting.
+Look for "Peer-to-peer download: Enabled" in the output to confirm the setting.
 
-Customers worried about network congestion may enable upload and download limits on the clients.
+**Bandwidth Management:**
+
+Control network usage to prevent congestion:
 
 ```cmd
 # Limit maximum download speed to 50 MB/s
-# Value is set in KB/s with 0 for unlimited
+# Values are set in KB/s (0 = unlimited)
 turbo config --p2p-max-download-speed=400000
 
 # Limit maximum upload speed to 50 MB/s
 turbo config --p2p-max-upload-speed=400000
 ```
 
+**Optimize Seeding:**
+
+```cmd
+# Keep client seeding after download completes
+turbo pull <image> --wait-after-exit
+
+# Check current seeding status
+turbo config --show-p2p-status
+```
+
 ## Network Requirements
 
-The Turbo Server image seeder uses ports 6881-6889. Ensure these ports are properly configured:
+### Port Configuration
 
-1. Configure Windows Firewall:
-   - Open Windows Defender Firewall with Advanced Security
-   - Create a new Inbound Rule for ports 6881-6889 (TCP)
-   - Allow the connection for all profiles (Domain, Private, Public)
+The Turbo Server P2P coordinator uses **hardcoded ports 6881-6889**. These ports cannot be changed and must be properly configured:
 
-2. Configure external firewalls (if applicable):
-   - Add an inbound security rule for TCP traffic on ports 6881-6889
-   - Set the source to the appropriate IP range for your clients
-   - Set the destination to your Turbo Server's IP address
+**Windows Firewall:**
+1. Open Windows Defender Firewall with Advanced Security
+2. Create a new Inbound Rule for ports 6881-6889 (TCP)
+3. Allow the connection for all profiles (Domain, Private, Public)
+
+**External Firewalls:**
+1. Add inbound rules for TCP traffic on ports 6881-6889
+2. Set source to your client IP ranges
+3. Set destination to your Turbo Server's IP address
+
+**Network Policies:**
+- Ensure corporate proxies allow P2P protocols (proxies commonly block P2P traffic)
+- Verify Quality of Service (QoS) rules don't block P2P ports
+- Check that network segmentation allows client-to-client communication
+- **Cross-Subnet Support**: P2P works across subnets/VLANs with proper firewall configuration
+- **VPN/NAT Considerations**: Clients behind VPNs or NAT must have P2P ports accessible for seeding
+
+## Monitoring and Performance
+
+### Performance Metrics
+
+Monitor these key indicators:
+- **Throughput Comparison**: Compare total network throughput vs. server-only downloads
+- **Server Load**: CPU and bandwidth usage on Turbo Server during peak download periods
+- **Concurrent Downloads**: Number of simultaneous client downloads
+- **Network Utilization**: Whether total client demand exceeds server upload capacity
+
+**Performance Expectations:**
+- P2P provides benefits when total client download bandwidth exceeds server upload capacity
+- Image size does not determine P2P effectiveness - throughput demand does
+- Greatest benefits occur during bulk operations like subscription updates
+
+### Health Checks
+
+**Server Health:**
+```cmd
+# Check P2P service status
+netstat -ano | findstr :688
+
+# Verify coordinator processes
+tasklist | findstr Turbo.Repository
+```
+
+**Client Health:**
+```cmd
+# Test server connectivity
+Test-NetConnection -ComputerName SERVER_IP -Port 6881
+
+# Check P2P configuration
+turbo config --show-p2p-details
+```
 
 ## Troubleshooting
 
 ### Server-Side Issues
 
-If you're experiencing issues with image torrent downloads hanging, slow distribution speeds, or other peer-to-peer related errors:
+**Service Verification:**
+Ensure these processes are running:
+- `Turbo.Repository.Tracker.exe` (P2P coordinator)
+- `Turbo.Repository.Api.exe` (API service)
+- `Turbo.Repository.Cli.exe` (CLI service)
 
-1. **Verify Required Processes**
-   Check if these processes are running:
-   - `Turbo.Repository.Tracker.exe`
-   - `Turbo.Repository.Api.exe`
-   - `Turbo.Repository.Cli.exe`
+**Network Connectivity:**
+```cmd
+# Check if P2P coordinator is listening
+netstat -ano | findstr :688
+```
 
-2. **Check Network Ports**
-   Verify the image seeder is listening on the correct ports:
-   ```cmd
-   netstat -ano | findstr :688
-   ```
-   You should see entries for ports in the range 6881-6889.
-
-3. **Test Network Connectivity**
-   From an endpoint device, test the connection:
-   ```powershell
-   Test-NetConnection -ComputerName SERVER_IP -Port 6881
-   ```
-   Look for `TcpTestSucceeded : True` in the output.
-
-4. **Review Server Logs**
-   Check the logs in the Turbo installation directory's Logs folder:
-   - `repository-torrent_YYYYMMDD_HHMMSS.log`
-   - `repository-tracker_YYYYMMDD_HHMMSS.log`
+**Log Analysis:**
+Review logs in the Turbo installation directory's Logs folder:
+- **Server**: `Turbo.Repository.*.log` files contain P2P seed and tracker events
+- **Client**: P2P events are logged in Turbo CLI and Sandman logs
 
 ### Client-Side Issues
 
-If clients are having trouble with peer-to-peer downloads:
+**Configuration Check:**
+```cmd
+# Verify P2P is enabled
+turbo config --all | findstr "peer-to-peer"
 
-1. **Verify Client Configuration**
-   Run `turbo config --all` and check for "Peer-to-peer download: Enabled"
+# Test server connectivity
+Test-NetConnection -ComputerName SERVER_IP -Port 6881
+```
 
-2. **Test Server Connectivity**
-   ```powershell
-   Test-NetConnection -ComputerName SERVER_IP -Port 6881
-   ```
+**Peer Connectivity Testing:**
+1. On Peer A: `turbo pull <image> --wait-after-exit`
+2. On Peer B: `Test-NetConnection -ComputerName PEER_A_IP -Port 6881`
 
-3. **Check Peer Connectivity**
-   To test peer-to-peer connections:
-   1. On Peer A, run:
-      ```cmd
-      turbo pull <image> --wait-after-exit
-      ```
-   2. On Peer B, test the connection:
-      ```powershell
-      Test-NetConnection -ComputerName PEER_A_IP -Port 6881
-      ```
+**Log Review:**
+Check client logs in `%LOCALAPPDATA%\Turbo\Logs`:
+- **Turbo CLI logs**: Contains P2P download events and errors
+- **Sandman logs**: Contains P2P seeding activity and issues
 
-4. **Review Client Logs**
-   Check logs in `%LOCALAPPDATA%\Turbo\Logs` for error messages
+### Common Issues and Solutions
 
-### Common Issues
+**Firewall and Proxy Blocks**
+- Verify Windows Firewall exceptions for ports 6881-6889
+- Check corporate firewall policies allow P2P protocols
+- **Most Common Issue**: Proxies and firewalls that block P2P protocols
+- Ensure antivirus software allows P2P connections on required ports
 
-1. **Firewall Blocks**
-   - Verify Windows Firewall settings
-   - Check corporate firewall policies
-   - Ensure antivirus software isn't blocking connections
+**Network Configuration**
+- Confirm correct IP addresses and DNS resolution
+- Test proxy server compatibility
+- Verify network policies allow required ports
 
-2. **Network Configuration**
-   - Verify IP addresses are correct
-   - Check if proxy servers allow peer-to-peer traffic
-   - Ensure network policies don't block required ports
+**Service Issues**
+- Restart Turbo services if server processes aren't running
+- **Note**: Clients do not run additional P2P executables - P2P functionality is built into existing Turbo client processes
+- Check service account permissions
+- Verify adequate system resources (CPU, memory, disk)
 
-3. **Process Issues**
-   - Verify all required services are running
-   - Check process permissions
-   - Ensure sufficient system resources
-
-4. **Manual Subscribe Command and Sandbox Manager**
-   - Executing a turbo subscribe or subscription update command while the Sandbox Manager is in the process of automatically updating the subscription may result in an image download failed error due to a hash mismatch.
-   - Environments that are configured for automatic subscription updates via the Sandbox Manager service should avoid executing the turbo subscribe or subscription update command manually.
+**Subscription Conflicts**
+- Avoid manual `turbo subscribe` commands during automatic updates
+- Configure update schedules to prevent conflicts
+- Monitor Sandbox Manager service for update status
 
 ## Security and Privacy
 
-- Only Turbo images are distributed via the peer-to-peer network
-- Peer connections are strictly limited to other authenticated Turbo clients
-- A private tracker hosted by the Turbo server is used exclusively
-- No external trackers or Distributed Hash Table (DHT) are used
+**Network Security**
+- Only Turbo images are distributed via P2P
+- Peer connections limited to authenticated Turbo clients
+- Private coordination server prevents external access
+- No external trackers or distributed hash tables used
+
+**Data Protection**
+- Image integrity verified through cryptographic hashes
+- Encrypted client authentication prevents unauthorized access
+- Network traffic can be monitored and logged
 
 ## Best Practices
 
-- Enable Peer-to-Peer Image Distribution on all clients in your network
-- Use `--wait-after-exit` with `turbo pull` to continue seeding
-- Keep clients and server software up to date
-- Monitor network performance and adjust firewall rules as needed
+### Optimal Use Cases
+- **Subscription Updates**: Enable P2P for `turbo subscription` commands to populate SVM images before end-user access
+- **Bulk Downloads**: Most effective when many clients download the same images simultaneously
+- **Peak Load Scenarios**: Deploy when client download demand exceeds server upload capacity
 
-## Limitations
+### When NOT to Use P2P
+- **Sufficient Server Bandwidth**: When hub server bandwidth can satisfy all client downloads
+- **On-Demand Applications**: Not recommended for "on demand" application launch downloads due to potential higher initialization latency
+- **Simple Network Requirements**: P2P requires more complex network setup - avoid if unnecessary
 
-- Performance benefits vary with network conditions and peer count
-- Manual `turbo pull` commands only seed while running
-- Initial metadata download may add overhead for less popular images
+### Deployment Strategy
+- Start with subscription-based downloads where P2P provides clear benefits
+- Monitor server throughput vs. client demand to determine P2P necessity
+- Consider network complexity vs. performance benefits before organization-wide rollout
+
+### Operational Excellence
+- Use `--wait-after-exit` with `turbo pull` to maximize seeding
+- Schedule regular health checks for P2P services
+- Keep client and server software updated
+- Document network configuration for troubleshooting
+
+### Performance Optimization
+- Adjust bandwidth limits based on network capacity
+- Coordinate with network team on QoS policies
+- Monitor and tune based on usage patterns
+- Consider geographic distribution of clients
+
+## Limitations and Considerations
+
+**Performance Factors**
+- Benefits occur when total client download demand exceeds server upload capacity
+- Initial P2P connection setup may add latency compared to direct server downloads
+- Image size does not determine P2P effectiveness - concurrent download volume does
+
+**Network Requirements**
+- Requires more complex network configuration than server-only downloads
+- **Hardcoded Ports**: Cannot change port range 6881-6889
+- Clients behind NAT/VPN must have accessible ports for effective seeding
+
+**Operational Constraints**
+- **Default Behavior**: Clients do not automatically seed after individual downloads
+- **Seeding Configuration**: Requires specific configuration for ongoing seeding
+- Manual `turbo pull` commands only seed while process is running (with `--wait-after-exit`)
+
+**Use Case Limitations**
+- Most beneficial for bulk operations, not on-demand single application launches
+- Requires sufficient concurrent demand to justify network complexity
+
+## FAQ
+
+**Q: When does P2P provide performance benefits?**
+A: When total client download bandwidth demand exceeds the hub server's upload capacity. Benefits are most noticeable during bulk operations like subscription updates.
+
+**Q: Does image size affect P2P performance?**
+A: No. P2P benefits depend on concurrent download volume, not individual image size.
+
+**Q: Does P2P work across different network subnets?**
+A: Yes, P2P works across subnets/VLANs with proper firewall configuration allowing traffic on ports 6881-6889.
+
+**Q: Do clients automatically seed after downloads?**
+A: By default, no. Clients only seed if specifically configured, or when using `--wait-after-exit` with manual pulls.
+
+**Q: Can I change the P2P port range?**
+A: No, ports 6881-6889 are hardcoded and cannot be modified.
+
+**Q: Should I enable P2P for on-demand application launches?**
+A: No, P2P is not recommended for on-demand launches due to potential higher initialization latency. Use it for subscription updates instead.
+
+**Q: When should I avoid P2P entirely?**
+A: When your hub server bandwidth can satisfy all client downloads without P2P, since P2P requires more complex network setup.

@@ -85,4 +85,4 @@ Turbo Server supports x64 (64-bit) processor architectures.
 
 End users can access Turbo Server from Microsoft Windows 11, Microsoft Windows 10, Microsoft Windows 8.1, Microsoft Windows 8, and Microsoft Windows 7 platforms. Turbo Portal Server supports Microsoft Edge, Chrome, Safari, Firefox, Opera, and other HTML5-compliant browsers.
 
-**Note:** Internet Explorer 11 is partially supported by the server administration site and is not supported by the portal dashboard. If you are experiencing problems with Internet Explorer 11 on the sever administration site, be sure to disable compatibility mode. This feature is enabled automatically for intranet sites and serves to emulate Internet Explorer 7 which is not supported by the administration site.
+**Note:** Internet Explorer 11 is partially supported by the server administration site and is not supported by the Portal dashboard. If you are experiencing problems with Internet Explorer 11 on the sever administration site, be sure to disable compatibility mode. This feature is enabled automatically for intranet sites and serves to emulate Internet Explorer 7 which is not supported by the administration site.

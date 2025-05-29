@@ -352,7 +352,7 @@ export default defineConfig({
                 { text: 'OneDrive', link: '/server/cloud-storage/onedrive' }
               ]
             },
-            { text: 'Peer to Peer', link: '/server/peer-to-peer' },
+            { text: 'Peer-to-Peer', link: '/server/peer-to-peer' },
             {
               text: 'Integrations',
               collapsed: true,
